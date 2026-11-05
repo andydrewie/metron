@@ -1,52 +1,70 @@
-# Metron roadmap — honest capabilities before broad distribution
+# Metron — a living map of questions
 
-**Project:** Metron: Daily Energy, Readiness, & Caloric Allowance. **Repository package:** 0.2.0-alpha.3 (local pre-publication package). **Model:** 0.1.0 (current deterministic engine). **Public repo and Pages:** not yet verified live.
+> **No deadlines, growth targets, or promises.** Metron is open homework: a beautiful, headless instrument for testing what we think we know about energy, training readiness, and nutrition. This document is a map of considerations, **not** a committed feature schedule.
 
-## North star
+**Snapshot:** 2026-11-05 · **Current status:** Public MIT-licensed exploratory source and GitHub Pages app; Energy / Readiness / Body UI; deterministic JavaScript core + JSON CLI. **Not shipped:** personalized calibration, Caloric Allowance, wearable imports, injury prediction, scientifically validated training prescription.
 
-*A personal exercise in applied physiology: collect what is observed, calculate what can be estimated, explain what is uncertain, and let people decide.*
+**The premise:** I wanted to understand how sleep, body composition, physical activity, and training volume interact. So I built a calculator, documented my assumptions, and open-sourced the homework.
 
-The product interface follows **Energy / Readiness / Allowance**, with Body as a shared settings layer. Current implemented UI is **Energy / Readiness / Body**; **Allowance is planned** and should not be presented as available.
+## The one invariant
 
-## Priorities and release gates
+**Observe → Infer → Decide → Evaluate.**
 
-| Priority | Work | Acceptance criterion | Current status |
-| --- | --- | --- | --- |
-| P0 | Retire old identity, align brand, clean docs | No legacy branding, code/tests/links consistent | Completed locally; publication pending |
-| P0 | Headless core and JSON CLI | Runs without UI/network; same calculations across clients | Implemented |
-| P0 | Honest Energy + Readiness UI | Mobile-first, accessible, caveats visible | Implemented preview; external accessibility audit pending |
-| P0 | External scientific transparency | Equations, assumptions, warnings, evidence levels | Documented; not empirically validated |
-| P0 | Public publishing | GitHub repo/CI/Pages verified live | Pending manual creation/deployment |
-| P1 | Energy accounting ledger | No silent overlapping walking/workout intervals | Proposed |
-| P1 | Caloric Allowance | Smoothed TDEE, goals, constraints, nonpunitive safety rails | Proposed |
-| P1 | Provenance-aware wearable imports | Synthetic fixture coverage; no raw personal data in repo | Proposed |
-| P1 | Longitudinal evaluation | Leakage-safe prospective protocol + held-out metrics | Research proposal |
-| P2 | Bayesian calibration / uncertainty | Clear priors, measurement error, coverage evaluation | Research proposal |
-| P2 | Optional agent adapters / MCP | Validated contract over existing core; no duplicated physiology | Proposed |
+- **Observe:** data with definitions, units, time intervals, provenance, and known limitations.
+- **Infer:** estimates with methods, assumptions, and evidence levels.
+- **Decide:** options conditional on human goals and constraints; not disguised measurements.
+- **Evaluate:** prospective outcomes compared with previously frozen predictions, including negative results.
 
-## Data and science architecture
+The three user-facing concepts are **Daily Energy**, **Readiness**, and eventually **Caloric Allowance**. **Body** is currently a third UI tab and shared model input, not a new physiological claim. No redesign is necessary to research the underlying engine.
 
-**Observe → Infer → Decide → Learn.** Time alignment and provenance belong to observations; equations and uncertainty to inference; user goals to decisions; longitudinal outcomes to learning. The same architecture should work without wearables or an LLM.
+## Now: v0.3 — Trust before personalization
 
-A wearable adapter must preserve definition, unit, time interval, source, processing status, and measurement method. Example: WHOOP RMSSD and Apple Health SDNN HRV are distinct metrics. Daily intake targets should use smoothed expenditure, not simply chase every day's step count.
+We begin with *correctness, provenance, and uncertainty honesty*, not extra inputs or AI branding.
 
-## Release checklist
+| Question | Smallest useful experiment | Exit condition |
+| --- | --- | --- |
+| Are we counting energy twice? | Reproduce a day where walking steps include a treadmill workout also entered as exercise | Distinguish known overlap, unknown overlap, and disjoint activity; no silent double addition once a reconciled mode is enabled |
+| How honest is our sedentary baseline? | Compare zero-, 2k-, 10k-, and 20k-step synthetic days and alternative baseline choices | Document and test low-step behavior; explain what 1.2 × RMR includes |
+| Are activity estimates reproducible? | Fixed synthetic fixtures for weight, step length, workout minutes, and whole-session MET choices | Same well-defined units and outputs across SDK, CLI, and browser |
+| Do our outputs tell the truth about evidence? | Audit warnings, machine manifest, README, and model response semantics | Never imply measured TDEE, validated recovery thresholds, or personal uncertainty intervals |
+| Can a novice still use the instrument? | Narrow-screen and keyboard regression checks; verify labeled slate/blue/copper charts in grayscale | Preserve V4.1 usability without requiring additional onboarding |
 
-- [x] Single reusable pure JavaScript core and JSON CLI
-- [x] Current API schemas, types, three synthetic examples and automated unit tests
-- [x] Mobile-first static interactive reference app
-- [x] Evidence/limitation documentation and research invitation
-- [x] Human README and agent-specific documentation routes
-- [ ] Independent browser and screen-reader verification of the **Metron-branded** build
-- [ ] Overlapping activity resolution (or more explicit UI caveat)
-- [ ] Caloric Allowance feature and validation of behavioral safeguards
-- [ ] Public repository, CI runs, Pages live URL, social preview and metadata confirmed
-- [ ] Research measurement study / independent benchmark
+**Policy for ambiguous overlap:** first *surface the ambiguity*, with explicit assumptions or conservative scenarios. Do not manufacture precision or automatically subtract exercise calories without enough information. Retain the current simple API until a versioned, tested alternative earns inclusion.
 
-**Public release choice:** we can publish a clearly marked *exploratory Energy + Readiness preview* before Allowance is ready, but we must not call it a complete three-pillar release.
+**First concrete issue:** `Energy accounting: model overlap and baseline assumptions`. Do this before adding a wearable or intake goal to the core.
 
-## Ownership and publish steps
+## Next investigation: personal calibration, if the foundation warrants it
 
-The intended remote is `andydrewie/metron`; this is a **target**, not a verified public repository. Review the bundle and run `bash scripts/publish.sh` manually after authenticating GitHub CLI. The script must refuse an existing repo. Configure Pages to deploy via Actions and verify it from a phone. Check project-name confusion/trademark risks before broad distribution. Attach `og.png` as GitHub's social preview via repository settings and set About topics explicitly.
+Question: *Can longitudinal intake and weight observations improve an individual's TDEE estimate over a simple population baseline?*
 
-Candidate topics: `tdee`, `fitness`, `body-composition`, `strength-training`, `recovery`, `wearables`, `headless`, `javascript`, `open-source`, `research-software`.
+1. Design a **local-first, opt-in** protocol using synthetic examples before asking for any human data.
+2. Define units, recording frequency, missing data, likely intake error, fluid-weight shifts, and minimum history needed for a meaningful comparison.
+3. Compare a **fixed baseline** with a plainly described correction model. Never call a range calibrated or Bayesian without independent validation.
+4. Hold back later observations for a **forward-time evaluation**. Report bias and error, and be prepared for *no improvement*.
+5. Keep exported observations under the user's control; no account, cloud upload, analytics, or model training by default.
+
+A calibration feature is an **experiment**, not a promised next release.
+
+## Possible later branches, chosen by curiosity and evidence
+
+| Exploration | What must be true first | Avoid |
+| --- | --- | --- |
+| **Caloric Allowance** | Explainable, goal-aware intake planning that uses smoothed energy estimates and reasonable safeguards | Equating today's TDEE with how much one *must* eat |
+| **Wearable inputs** | Provenance-aware schema and transparent temporal mapping of sleep, steps, RHR, HRV, workouts | Treating WHOOP, Garmin and Apple Health vendor scores or HRV definitions as interchangeable |
+| **Training-readiness research** | Prespecified performance outcomes, honest human-reported context, future-session evaluation | Calling chosen sleep/set thresholds clinical or injury-safe |
+| **Bayesian updating** | Real likelihood model, documented priors, measurement-error assumptions and tested predictive coverage | "AI" or confidence-score theater |
+| **MCP / agent adapters** | Stable headless contracts and useful agent workflows, independent of vendor APIs | Duplicating physics or giving autonomous diet/medical instructions |
+| **UI refinements** | Real usability friction, accessibility evidence, or a concrete information need | Redesigning our already useful compact cockpit for novelty |
+
+**The right to stop:** a negative experiment, a maintained simple baseline, or no new feature can all be successful outcomes. No schedule is implied by ordering.
+
+## How we work in this repository
+
+- **Human entrance:** [README](../README.md), [live instrument](https://andydrewie.github.io/metron/), [science](./SCIENCE.md). Let visitors understand the tool before the mathematics.
+- **Agent entrance:** [AGENTS.md](../AGENTS.md), [machine manifest](../metron.manifest.json), [schemas](../schemas/), [CLI](../bin/metron.mjs), [fixtures](../examples/). Never infer implemented features from this roadmap.
+- **Scientific entrance:** [research questions](./RESEARCH.md), [prospective protocol](./RESEARCH_PROTOCOL.md), [implemented architecture](./ARCHITECTURE.md), [future design](./FUTURE_ARCHITECTURE.md).
+- **Issue discipline:** open an issue for a specific falsifiable question, reproducible defect, or well-defined design decision; don't generate dozens of speculative tickets. Link the evidence and say what a negative finding would mean.
+- **Code discipline:** preserve pure calculations and deterministic JSON, version behavior changes, update types/schema/examples/tests together, and distinguish mathematical tests from biological validation.
+- **Privacy & safety:** no wearable credentials or private health exports in issues, commits, examples or telemetry. No harsh intake targets or claims of medical safety.
+
+**When to revisit this map:** whenever an experiment changes what we believe, or a compelling new question emerges. Not on a calendar.

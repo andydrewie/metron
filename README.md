@@ -56,6 +56,8 @@ The desktop image captures the entire browser viewport; open it full size to ins
 
 **WHOOP, Garmin, Apple Health, direct wearable synchronization, MCP, and Bayesian calibration are also planned—not shipped.** See the [research agenda](./docs/RESEARCH.md) and [future architecture](./docs/FUTURE_ARCHITECTURE.md).
 
+**[What's next? Explore the living roadmap](./docs/ROADMAP.md)** — open questions, experiments, trade-offs and honest non-goals. No deadlines or growth targets.
+
 ## Try it in 60 seconds
 
 Clone the public repository, then run these commands:

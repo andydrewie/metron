@@ -49,7 +49,11 @@ Node >=20. **No `npm install` required.** Do not fetch private health data, inst
 6. **No false clinical confidence.** Unit test success != measured accuracy. Recovery set counts are illustrative coaching heuristics, not safe-dose thresholds. Avoid aggressive nutrition and medical prescriptions.
 7. **Wearable semantics matter.** Do not merge HRV SDNN and RMSSD, midnight calendar steps and physiological-cycle steps, or vendor scores without explicit mapping, intervals and source identifiers.
 8. **Private by default.** No health uploads, trackers, access tokens, logging of sensitive inputs, or real personal health datasets in commits.
-9. **UX invariants.** V4 is a single compact monochrome instrument—not a marketing landing page. A centered text-only Metron wordmark, immediate energy estimate, three obvious controls, contextual explanations, optional depth, keyboard accessibility, and excellent 320px mobile rendering. Beginners aren't forced into an "expert mode". Avoid decorative colors, fake logo glyphs, and bundled proprietary fonts.
+9. **UX invariants.** V4.1 is a compact white-first instrument with limited, labeled slate/blue/copper data colors—not a marketing landing page. A centered text-only Metron wordmark, immediate energy estimate, three obvious controls, contextual explanations, optional depth, keyboard accessibility, and excellent 320px mobile rendering. Beginners aren't forced into an "expert mode". Avoid decorative color, color-only meaning, fake logo glyphs, and bundled proprietary fonts.
+
+## Current questions, not future features
+
+Read [docs/ROADMAP.md](./docs/ROADMAP.md) for the current investigation and open questions. It is deliberately non-binding; `metron.manifest.json` and working tests, not prose, define implementation truth. No feature timelines, growth targets, or synthetic research results.
 
 ## Editing loop
 

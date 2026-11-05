@@ -6,12 +6,12 @@
     "description": "An open-source, headless-first instrument for transparent fitness energy estimates and exploratory recovery decisions.",
     "license": "MIT",
     "repositoryTarget": "https://github.com/andydrewie/metron",
-    "repositoryPublished": false,
+    "repositoryPublished": true,
     "pagesTarget": "https://andydrewie.github.io/metron/",
-    "pagesVerifiedLive": false,
+    "pagesVerifiedLive": true,
     "packageVersion": "0.2.0-alpha.3",
     "modelVersion": "0.1.0",
-    "maturity": "pre-publication-exploratory"
+    "maturity": "public-exploratory-alpha"
   },
   "runtime": {
     "language": "JavaScript",
@@ -34,7 +34,8 @@
     "researchProtocol": "./research/protocol.json",
     "researchOverview": "./research/README.md",
     "designTokens": "./design/tokens.json",
-    "designCss": "./design/tokens.css"
+    "designCss": "./design/tokens.css",
+    "roadmap": "./docs/ROADMAP.md"
   },
   "implemented": {
     "energyEstimate": true,

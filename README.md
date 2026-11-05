@@ -20,18 +20,22 @@ An open-source fitness instrument with an independently usable, headless calcula
 
 ## One project. Two front doors.
 
-| For people | For agents, builders & researchers |
-| --- | --- |
-| A mobile-first instrument. Adjust steps or workout time and see the estimate change immediately; open the method only when you want more depth. | A pure JavaScript module, deterministic CLI, typed interfaces, JSON Schemas, runnable examples and research documentation. **No browser needed.** |
-| [Open the UI guide](./docs/DESIGN.md) · [View screenshots](#the-instrument) | [Read AGENTS.md](./AGENTS.md) · [Machine manifest](./metron.manifest.json) · [API](./docs/API.md) |
+**For people.** Explore the mobile-first instrument: adjust steps or workout time and see the estimate change immediately. Open the method only when you want more depth. [UI guide](./docs/DESIGN.md) · [Full-size screenshots](#the-instrument)
+
+**For agents, builders & researchers.** Use a pure JavaScript module, deterministic CLI, typed interfaces, JSON Schemas, runnable examples, and research documentation. **No browser needed.** [AGENTS.md](./AGENTS.md) · [Machine manifest](./metron.manifest.json) · [API](./docs/API.md)
 
 ### The instrument
 
-<p align="center"><img src="./docs/assets/desktop.png" alt="Actual Metron desktop UI with white canvas, energy breakdown, step and workout controls" width="100%" /></p>
+**Mobile-first preview.** This is the actual app at phone size—not a desktop screenshot shrunk into a mobile screen. Tap the image to open it at full resolution.
 
-<details><summary><strong>See the mobile experience</strong></summary>
-<br/>
-<p align="center"><img src="./docs/assets/mobile.png" alt="Actual Metron mobile UI with accessible sliders, energy breakdown and three connected views" width="360" /></p>
+<p align="center"><a href="./docs/assets/mobile.png"><img src="./docs/assets/mobile.png" alt="Actual Metron mobile instrument with Energy, Readiness and Body tabs, steps slider and workout controls" width="400" /></a></p>
+
+<details><summary><strong>See the full desktop experience</strong></summary>
+
+The desktop image captures the entire browser viewport; open it full size to inspect the instrument.
+
+<p align="center"><a href="./docs/assets/desktop.png"><img src="./docs/assets/desktop.png" alt="Actual Metron desktop experience" width="100%" /></a></p>
+
 </details>
 
 ## What exists today
@@ -47,9 +51,11 @@ An open-source fitness instrument with an independently usable, headless calcula
 
 ## Try it in 60 seconds
 
-**Before GitHub publication:** unzip the release archive and run these commands from its `metron/` folder. Once the public repo exists, `git clone https://github.com/andydrewie/metron.git` will work as well.
+Clone the public repository, then run these commands:
 
 ```bash
+git clone https://github.com/andydrewie/metron.git
+cd metron
 npm run dev                  # http://127.0.0.1:4173
 npm run ci                   # syntax, software tests, static Pages build
 npm run release:check        # package/design/deployment preflight
@@ -119,6 +125,6 @@ MIT-licensed and open to corrections. Share reproducible counterexamples, better
 
 **[Contributing](./CONTRIBUTING.md)** · **[Research questions](./research/README.md)** · **[Design tokens](./design/tokens.json)** · **[Deployment instructions](./docs/DEPLOYMENT.md)** · **[Release QA](./docs/QA.md)**
 
-**Publication status:** local pre-publication package. The GitHub URL and Pages deployment must be independently verified before being called live. **Source package:** `0.2.0-alpha.3`; **underlying calculation model:** `0.1.0`.
+**Publication status:** Public source repository. The live Pages URL is available only once deployment completes successfully. **Source package:** `0.2.0-alpha.3`; **underlying calculation model:** `0.1.0`.
 
 <div align="center"><sub>Complexity in the engine. Clarity in the cockpit. · MIT</sub></div>

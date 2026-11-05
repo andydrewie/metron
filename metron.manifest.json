@@ -35,7 +35,9 @@
     "researchOverview": "./research/README.md",
     "designTokens": "./design/tokens.json",
     "designCss": "./design/tokens.css",
-    "roadmap": "./docs/ROADMAP.md"
+    "roadmap": "./docs/ROADMAP.md",
+    "informationDesign": "./docs/INFORMATION_DESIGN.md",
+    "navigationIndex": "./docs/navigation.json"
   },
   "implemented": {
     "energyEstimate": true,

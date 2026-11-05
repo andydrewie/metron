@@ -1,5 +1,15 @@
 # Metron — a living map of questions
 
+## At a glance
+
+**What works:** Metron's free Energy / Readiness / Body instrument, deterministic JavaScript model, and JSON CLI.
+
+**What we're questioning:** Whether baseline, step, and workout energy can double count activity. [See the reproducible research question](https://github.com/andydrewie/metron/issues/1).
+
+**What might follow:** A personal-calibration experiment, but only if it adds useful evidence. Caloric Allowance and wearable integrations remain possibilities, not promises.
+
+**How to use this roadmap:** Read the decision flow, then explore details only when relevant. [Information design principles](./INFORMATION_DESIGN.md).
+
 > **No deadlines, growth targets, or promises.** Metron is open homework: a beautiful, headless instrument for testing what we think we know about energy, training readiness, and nutrition. This document is a map of considerations, **not** a committed feature schedule.
 
 **Snapshot:** 2026-11-05 · **Current status:** Public MIT-licensed exploratory source and GitHub Pages app; Energy / Readiness / Body UI; deterministic JavaScript core + JSON CLI. **Not shipped:** personalized calibration, Caloric Allowance, wearable imports, injury prediction, scientifically validated training prescription.
@@ -16,6 +26,25 @@
 - **Evaluate:** prospective outcomes compared with previously frozen predictions, including negative results.
 
 The three user-facing concepts are **Daily Energy**, **Readiness**, and eventually **Caloric Allowance**. **Body** is currently a third UI tab and shared model input, not a new physiological claim. No redesign is necessary to research the underlying engine.
+
+## The decision in one picture
+
+```mermaid
+flowchart TD
+    A["Could Metron count activity twice?"]
+    B["Reproduce with synthetic examples"]
+    C{"Do we know whether intervals overlap?"}
+    D["Yes: test a versioned accounting method"]
+    E["No: show assumptions and conditional scenarios"]
+    F["Possible later question: does calibration improve predictions?"]
+    A --> B --> C
+    C -->|Known| D
+    C -->|Unknown| E
+    D -.-> F
+    E -.-> F
+```
+
+**Text equivalent:** Reproduce overlap with known examples. When overlap is identifiable, test a corrected model. When it is not, show transparent alternative scenarios instead of claiming a precise number. Either result may motivate calibration research, but neither commits us to a feature.
 
 ## Now: v0.3 — Trust before personalization
 

@@ -12,6 +12,19 @@ node bin/metron.mjs --example
 
 Node >=20. **No `npm install` required.** Do not fetch private health data, install a dependency, or add network access merely to run this project. For CLI integrations, stdin accepts JSON; stdout contains JSON on success, stderr a JSON error on failure with nonzero status.
 
+## Find the right path in one hop
+
+For structured discovery, read `docs/navigation.json` (stable route IDs, exact relative paths, intended audience, and documentation status). For human-facing clarity, read `docs/INFORMATION_DESIGN.md`. The `implemented` flags in `metron.manifest.json` remain the authority for shipped capabilities, not the roadmap or navigation entries.
+
+| Need | Go here first |
+| --- | --- |
+| Run a calculation | `schemas/input.schema.json` → `core/model.js` → `examples/` |
+| Challenge physiology | `docs/SCIENCE.md` → `docs/ROADMAP.md` → `tests/` |
+| Extend the interface | `docs/INFORMATION_DESIGN.md` → `docs/DESIGN.md` → `design/tokens.json` |
+| Explore unimplemented research | `docs/RESEARCH.md` → `docs/RESEARCH_PROTOCOL.md` |
+
+**Writing rule:** precise, direct, nurturing. Explain the answer first, make detailed evidence optional but easy to find, and place necessary limitations next to the relevant claim. Diagrams are for comprehension, not decoration. Do not imply a human must read everything or an agent must guess file semantics.
+
 ## Source map and capability truth
 
 | Path | Truth it owns |

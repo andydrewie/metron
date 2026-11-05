@@ -1,0 +1,121 @@
+{
+  "schemaVersion": "1.0.0",
+  "documentType": "metron.documentation.navigation",
+  "project": "Metron",
+  "audience": [
+    "human",
+    "agent",
+    "researcher"
+  ],
+  "sourceOfTruth": {
+    "capabilities": "metron.manifest.json",
+    "implementation": "core/model.js",
+    "inputs": "schemas/input.schema.json",
+    "outputs": "schemas/output.schema.json",
+    "safety": "AGENTS.md"
+  },
+  "conventions": {
+    "paths": "repository-relative",
+    "links": "relative",
+    "routeIdSemantics": "stable across additive releases; do not silently repurpose",
+    "implementationStatus": "route status is documentation availability, not feature availability",
+    "futureCompatibility": "schemaVersion changes for incompatible field semantics; unknown fields ignored by consumers where safe"
+  },
+  "routes": [
+    {
+      "id": "try-instrument",
+      "label": "Try the instrument",
+      "intent": "use the web interface",
+      "audience": [
+        "human"
+      ],
+      "entry": "index.html",
+      "next": [
+        "docs/DESIGN.md",
+        "docs/SCIENCE.md"
+      ],
+      "status": "implemented"
+    },
+    {
+      "id": "run-headless",
+      "label": "Run a calculation without a browser",
+      "intent": "invoke the model as an agent, CLI or JavaScript module",
+      "audience": [
+        "agent",
+        "researcher"
+      ],
+      "entry": "AGENTS.md",
+      "next": [
+        "docs/API.md",
+        "schemas/input.schema.json",
+        "schemas/output.schema.json",
+        "examples/beginner.json",
+        "core/model.js"
+      ],
+      "status": "implemented"
+    },
+    {
+      "id": "audit-methods",
+      "label": "Understand assumptions and limitations",
+      "intent": "inspect evidence for metabolic and training estimates",
+      "audience": [
+        "human",
+        "researcher",
+        "agent"
+      ],
+      "entry": "docs/SCIENCE.md",
+      "next": [
+        "docs/RESEARCH.md",
+        "tests/model.test.js"
+      ],
+      "status": "documented"
+    },
+    {
+      "id": "investigate-energy-overlap",
+      "label": "Investigate double counting",
+      "intent": "reproduce steps and workout overlap and evaluate fixes",
+      "audience": [
+        "researcher",
+        "agent"
+      ],
+      "entry": "docs/ROADMAP.md",
+      "next": [
+        "docs/SCIENCE.md",
+        "core/model.js",
+        "tests/model.test.js"
+      ],
+      "status": "research-question"
+    },
+    {
+      "id": "contribute",
+      "label": "Challenge or improve the homework",
+      "intent": "prepare a reproducible contribution",
+      "audience": [
+        "human",
+        "agent",
+        "researcher"
+      ],
+      "entry": "CONTRIBUTING.md",
+      "next": [
+        "AGENTS.md",
+        "docs/RESEARCH_PROTOCOL.md"
+      ],
+      "status": "documented"
+    },
+    {
+      "id": "understand-ux",
+      "label": "Follow Metron's visual and writing contract",
+      "intent": "edit UI or reader-facing documentation",
+      "audience": [
+        "human",
+        "agent"
+      ],
+      "entry": "docs/INFORMATION_DESIGN.md",
+      "next": [
+        "docs/DESIGN.md",
+        "design/tokens.json"
+      ],
+      "status": "documented"
+    }
+  ]
+}

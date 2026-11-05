@@ -18,6 +18,10 @@ An open-source fitness instrument with an independently usable, headless calcula
 
 **Use it. Fork it. Disagree with it. Improve it.** Metron is an exercise in applied physiology and software design—not a claim to know someone's true calorie burn or how recovered they are.
 
+### Metron in 20 seconds
+
+**Try it:** A free, interactive instrument for daily energy and training readiness. **Know its limits:** Estimates are not measurements; training-set guidance remains experimental. **Explore further when curious:** [See the research questions](./docs/ROADMAP.md) or [inspect the methodology](./docs/SCIENCE.md).
+
 ## One project. Two front doors.
 
 **For people.** Explore the mobile-first instrument: adjust steps or workout time and see the estimate change immediately. Open the method only when you want more depth. [UI guide](./docs/DESIGN.md) · [Full-size screenshots](#the-instrument)
@@ -57,6 +61,8 @@ The desktop image captures the entire browser viewport; open it full size to ins
 **WHOOP, Garmin, Apple Health, direct wearable synchronization, MCP, and Bayesian calibration are also planned—not shipped.** See the [research agenda](./docs/RESEARCH.md) and [future architecture](./docs/FUTURE_ARCHITECTURE.md).
 
 **[What's next? Explore the living roadmap](./docs/ROADMAP.md)** — open questions, experiments, trade-offs and honest non-goals. No deadlines or growth targets.
+
+**[Why this is designed for humans and agents](./docs/INFORMATION_DESIGN.md)** · [Structured navigation map](./docs/navigation.json). Detail is always available, not a prerequisite.
 
 ## Try it in 60 seconds
 

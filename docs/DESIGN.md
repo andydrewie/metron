@@ -1,38 +1,47 @@
-# Metron visual contract — V4 / Monochrome instrument
+# Metron visual contract — V4.1 / Research Instrument
 
-**Status:** locked for the next deployable alpha. The website must resemble the compact V4 instrument designed in chat, not a marketing landing page. Its interface is original Metron work informed by familiar ChatGPT interaction conventions.
+**Status:** Soft Slate / Scientific Blue / Copper selected. Preserve the compact V4 instrument, not a marketing landing page.
 
 > Complexity in the engine. Clarity in the cockpit.
 
 ## Visual rules
 
-1. **One centered instrument:** a 660px total-width canvas, small centered text-only wordmark, a concise title, and the Energy / Readiness / Body tabs. No two-column promotional hero, decorative metrics, colored promotional graphics, or off-center logo glyph.
-2. **Monochrome only:** white background, charcoal text, light-gray secondary surfaces and hairline borders. Three shades of gray distinguish expenditure components and remain explicitly labeled.
-3. **Immediate utility:** energy result first; steps, duration and average session intensity next. Resting models, body composition and training details remain progressively disclosed.
-4. **Native typography:** the CSS font stack references `OpenAI Sans` *only if installed on the viewer's device*, otherwise uses system UI sans-serif. OpenAI font binaries are not bundled or redistributed. OpenAI's published ChatGPT plugin guidance recommends platform-native fonts; this repository is independently branded and is not endorsed by OpenAI.
-5. **True headlessness:** visual changes must never affect the core engine, typed API, JSON schemas or CLI. The website is only one client of `core/model.js`.
-6. **Accessible:** native controls, keyboard-friendly tabs, focus indication, reduced-motion preferences and 44px mobile targets; all important information is conveyed through text, not hue.
+1. **One centered instrument:** 660px maximum, centered wordmark, Energy / Readiness / Body tabs, immediate result.
+2. **Nearly monochrome:** white canvas, neutral gray surfaces, thin borders, deep ink for primary text.
+3. **Three data colors:** Soft Slate `#586674` = baseline, Scientific Blue `#0072B2` = walking, Copper `#B45309` = workout. Main text remains `#252A30`.
+4. **Meaningful controls:** steps use blue; workout duration and sets use copper; tabs and recovery decisions stay neutral.
+5. **System typography:** use OpenAI Sans if already installed on the device, then system sans-serif; don't bundle proprietary fonts or imply OpenAI endorsement.
+6. **Headlessness:** presentation changes never alter `core/model.js`, schemas, CLI, or the agent contract.
+7. **Accessible:** persistent labels and values, fixed chart order, visible keyboard focus, reduced-motion support; never rely on hue alone.
 
-## Canonical source
+## Canonical tokens
 
-`design/tokens.json` is the single source of truth. Run `node scripts/build-tokens.mjs` to generate `design/tokens.css`. The browser loads generated tokens before `styles.css`. Do not introduce an external UI component dependency merely to copy familiar visuals.
+`design/tokens.json` is authoritative. Run `node scripts/build-tokens.mjs` to generate `design/tokens.css`.
 
 | Role | Token | Value |
 | --- | --- | --- |
-| Background | `--background` | `#ffffff` |
-| Main text | `--foreground` | `#171717` |
-| Quiet cards | `--muted-surface` | `#f7f7f7` |
-| Supporting copy | `--muted-foreground` | `#525252` |
-| Borders | `--border` | `#e5e5e5` |
-| Baseline / walking / gym | `--chart-*` | `#2a2a2a` / `#8a8a8a` / `#c7c7c7` |
+| Canvas | `--background` | `#ffffff` |
+| Text | `--foreground` | `#252A30` |
+| Secondary surface | `--muted-surface` | `#f7f7f7` |
+| Borders | `--border` | `#E4E7EB` |
+| Baseline | `--chart-baseline` | `#586674` |
+| Walking | `--chart-walk` | `#0072B2` |
+| Workout | `--chart-workout` | `#B45309` |
+| Focus | `--ring` | `#0072B2` |
 
-## Human and machine attention
+## Color-accessibility contract
 
-- **People:** the live number, easy sliders, visible model limitations and simple disclosure controls.
-- **Agents:** `AGENTS.md`, `metron.manifest.json`, JSON schemas, deterministic examples, CLI, pure functions and explicit implementation flags.
+- Every graph segment keeps a visible text label, numerical value, and stable order. Meaning must survive grayscale.
+- Never communicate readiness as red versus green alone.
+- Aim for at least WCAG AA contrast: 4.5:1 for normal text and 3:1 for meaningful UI graphics.
+- Validate actual screens with color-vision simulations (protanopia, deuteranopia, tritanopia) before claiming comprehensive color-blind accessibility.
+- Support keyboard navigation, reduced motion, and 320px, 390px, 768px and desktop layouts.
 
-No duplicate calculation logic may enter the HTML, CSS or docs. The logo and social preview are independently authored typographic assets, not OpenAI brand marks. The published UI should not imply affiliation.
+## Two forms of attention
 
-## Acceptance gate
+- **Humans:** immediate usable number, straightforward sliders and deeper methods on demand.
+- **Agents:** `AGENTS.md`, `metron.manifest.json`, schemas, deterministic examples, CLI and pure calculation functions.
 
-Check 320px, 390px, 768px and desktop widths, visit every tab, modify every basic input, inspect advanced panels, verify JSON export and run `npm run ci && npm run release:check`. Regenerate actual browser screenshots in `docs/assets/` before shipping. **Software tests do not validate exercise science.**
+## Release gate
+
+Run `npm run ci && npm run release:check`; inspect real screenshots after changes; confirm charts and controls remain understandable in grayscale. Software tests do not validate physiological accuracy.

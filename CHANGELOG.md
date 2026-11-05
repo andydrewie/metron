@@ -1,3 +1,9 @@
+## V4.1 visual update · 2026-11-05
+
+- Adopt Soft Slate, Scientific Blue and Copper for baseline, walking and workout signals, with persistent labels and values.
+- Keep white-first V4 layout and headless calculation engine unchanged; add automated contrast checks.
+- Update design documentation and explanatory README palette preview.
+
 ## 0.2.0-alpha.3 — V4 monochrome instrument (unpublished)
 
 - Rebuilt the public-facing experience as a single centered V4 calculator rather than a branded landing page.

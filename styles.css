@@ -1,4 +1,4 @@
-/* Metron · V4 instrument. Native, monochrome, dependency-free. */
+/* Metron · V4 instrument. Native, color-vision-aware, dependency-free. */
 *{box-sizing:border-box}
 :root{font-family:var(--font-sans);font-synthesis:none;color-scheme:light}
 html{scroll-behavior:smooth}
@@ -24,7 +24,7 @@ button:focus-visible,input:focus-visible,summary:focus-visible,a:focus-visible{o
 .instrument-top{display:flex;justify-content:space-between;gap:10px;align-items:center;padding:20px 20px 0}
 .instrument-name,.instrument-mode{font-size:11px;font-weight:540;color:var(--subtle-foreground);letter-spacing:.025em}
 .tabs{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:4px;border-radius:11px;background:var(--muted-surface);padding:4px;margin:15px 20px 0}
-.tab{border:0;border-radius:8px;min-height:42px;background:transparent;color:#6b6b6b;font-size:14px;font-weight:500}
+.tab{border:0;border-radius:8px;min-height:42px;background:transparent;color:var(--muted-foreground);font-size:14px;font-weight:500}
 .tab:hover{color:var(--foreground)}
 .tab.active{background:#fff;color:var(--foreground);box-shadow:0 1px 3px rgba(0,0,0,.08),0 0 0 1px rgba(0,0,0,.035);font-weight:610}
 .panels{padding:18px 20px 22px}.panel{min-width:0}
@@ -33,7 +33,7 @@ button:focus-visible,input:focus-visible,summary:focus-visible,a:focus-visible{o
 .result-number{display:flex;justify-content:center;align-items:baseline;gap:9px;padding:11px 0 22px;flex-wrap:wrap}
 .result-number strong{font-size:clamp(42px,9vw,53px);letter-spacing:-1.9px;font-weight:650;line-height:1.08;font-variant-numeric:tabular-nums;overflow-wrap:anywhere}
 .result-number span{font-size:14px;color:var(--muted-foreground)}
-.stack-bar{height:10px;display:flex;overflow:hidden;border-radius:99px;gap:2px;background:#e8e8e8}
+.stack-bar{height:10px;display:flex;overflow:hidden;border-radius:99px;gap:2px;background:var(--border)}
 .stack-bar span{display:block;min-width:0;height:100%;transition:width .15s ease}
 .bar-base{background:var(--chart-baseline)}.bar-walk{background:var(--chart-walk)}.bar-gym{background:var(--chart-workout)}
 .energy-split{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px;margin-top:14px}
@@ -44,7 +44,7 @@ button:focus-visible,input:focus-visible,summary:focus-visible,a:focus-visible{o
 .control{margin-top:23px}.control-top{display:flex;align-items:center;justify-content:space-between;gap:8px;font-size:14px;font-weight:550;margin-bottom:13px}
 .control-top label{cursor:default}.control output{font-weight:630;font-size:17px;font-variant-numeric:tabular-nums}
 .info-symbol{font-size:13px;font-weight:400;color:var(--subtle-foreground);cursor:help}
-.control input[type=range]{-webkit-appearance:none;appearance:none;width:100%;height:5px;background:#e9e9e9;border-radius:100px;cursor:pointer;display:block;margin:0;accent-color:var(--foreground)}
+.control input[type=range]{-webkit-appearance:none;appearance:none;width:100%;height:5px;background:var(--border);border-radius:100px;cursor:pointer;display:block;margin:0;accent-color:var(--accent)}
 .control input[type=range]::-webkit-slider-thumb{-webkit-appearance:none;appearance:none;width:18px;height:18px;border-radius:50%;background:var(--foreground);border:3px solid white;box-shadow:0 0 0 1px var(--foreground)}
 .control input[type=range]::-moz-range-thumb{width:14px;height:14px;border-radius:50%;background:var(--foreground);border:3px solid white;box-shadow:0 0 0 1px var(--foreground)}
 .under{display:flex;justify-content:space-between;align-items:center;gap:5px;margin-top:12px;font-size:11px;color:var(--subtle-foreground)}
@@ -94,3 +94,11 @@ footer a{text-decoration:none}
 @media(max-width:530px){.shell{padding:0 16px}.topbar{height:64px}.version-label{font-size:10px}.brand{font-size:21px}.topgithub{font-size:12px}.layout{padding-top:23px}.page-intro{padding:0 2px 19px}.instrument{border-radius:16px}.instrument-top{padding:17px 16px 0}.tabs{margin:13px 16px 0}.panels{padding:15px 16px 17px}.result{padding:18px 16px}.energy-split strong{font-size:16px}.control{margin-top:22px}.instrument-bottom{padding:13px 16px}.panel-foot{align-items:flex-start}.profile-grid{gap:7px}.profile-grid input{padding:9px 7px}}
 @media(max-width:350px){.shell{padding:0 11px}.version-label{display:none}.result-number strong{font-size:42px}.result-number span{font-size:12px}.energy-split small{font-size:11px}.energy-split strong{font-size:15px}.tabs{margin-inline:12px}.panels{padding-inline:12px}.instrument-top{padding-inline:12px}.instrument-bottom{padding-inline:12px}}
 @media(prefers-reduced-motion:reduce){*,*::before,*::after{scroll-behavior:auto!important;transition:none!important}}
+
+/* V4.1 purpose-driven controls. Labels and numbers carry meaning without hue. */
+#steps,#usual-steps,#bodyfat{accent-color:var(--chart-walk)}
+#minutes,#sets,#smm{accent-color:var(--chart-workout)}
+#steps::-webkit-slider-thumb,#usual-steps::-webkit-slider-thumb,#bodyfat::-webkit-slider-thumb{background:var(--chart-walk);box-shadow:0 0 0 1px var(--chart-walk)}
+#minutes::-webkit-slider-thumb,#sets::-webkit-slider-thumb,#smm::-webkit-slider-thumb{background:var(--chart-workout);box-shadow:0 0 0 1px var(--chart-workout)}
+#steps::-moz-range-thumb,#usual-steps::-moz-range-thumb,#bodyfat::-moz-range-thumb{background:var(--chart-walk);box-shadow:0 0 0 1px var(--chart-walk)}
+#minutes::-moz-range-thumb,#sets::-moz-range-thumb,#smm::-moz-range-thumb{background:var(--chart-workout);box-shadow:0 0 0 1px var(--chart-workout)}

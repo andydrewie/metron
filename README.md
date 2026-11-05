@@ -1,6 +1,6 @@
 <div align="center">
 
-<img src="./og.png" width="100%" alt="Metron — a monochrome, open-source energy and recovery instrument" />
+<img src="./og.svg" width="100%" alt="Metron — a white-first, color-vision-aware, open-source energy and recovery instrument" />
 
 # Metron
 
@@ -25,6 +25,13 @@ An open-source fitness instrument with an independently usable, headless calcula
 **For agents, builders & researchers.** Use a pure JavaScript module, deterministic CLI, typed interfaces, JSON Schemas, runnable examples, and research documentation. **No browser needed.** [AGENTS.md](./AGENTS.md) · [Machine manifest](./metron.manifest.json) · [API](./docs/API.md)
 
 ### The instrument
+
+**[Open the live Metron instrument](https://andydrewie.github.io/metron/)** — V4.1 adds subtle, labeled data colors while preserving the white-first layout.
+
+<p align="center"><img src="./docs/assets/v41-palette.svg" width="100%" alt="Metron V4.1 colors: soft slate baseline, blue walking and copper workout, each with text labels and numeric values" /></p>
+
+<sub>UI screenshots below document the preceding monochrome V4 layout; the live site is authoritative for the updated V4.1 palette.</sub>
+
 
 **Mobile-first preview.** This is the actual app at phone size—not a desktop screenshot shrunk into a mobile screen. Tap the image to open it at full resolution.
 
@@ -117,7 +124,7 @@ metron/
 └── docs/                    # Science, methods, design, research, deployment
 ```
 
-The compact, monochrome **V4 Research Instrument** visual language—guided by native ChatGPT interaction conventions, not OpenAI branding—is documented in [DESIGN.md](./docs/DESIGN.md). It uses semantic CSS tokens and standard browser controls without making React, shadcn/ui or Tailwind dependencies of the engine.
+The compact, restrained-color **V4.1 Research Instrument** visual language—guided by native ChatGPT interaction conventions, not OpenAI branding—is documented in [DESIGN.md](./docs/DESIGN.md). It uses semantic CSS tokens and standard browser controls without making React, shadcn/ui or Tailwind dependencies of the engine.
 
 ## Fork the homework
 

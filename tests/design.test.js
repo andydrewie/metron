@@ -7,8 +7,8 @@ test('Research Instrument theme has stable semantic values and generated CSS',as
  const css=await read('design/tokens.css');
  assert.equal(tokens.name,'Metron / Research Instrument');
  assert.equal(tokens.cssVariables['--background'],'#ffffff');
- assert.equal(tokens.cssVariables['--foreground'],'#171717');
- assert.equal(tokens.cssVariables['--accent'],'#171717');
+ assert.equal(tokens.cssVariables['--foreground'],'#252A30');
+ assert.equal(tokens.cssVariables['--accent'],'#0072B2');
  for(const [name,value] of Object.entries(tokens.cssVariables))assert.ok(css.includes(`${name}: ${value};`),name);
 });
 test('README links source diagrams and describes actual vs planned features',async()=>{
@@ -29,7 +29,7 @@ test('website uses source-generated tokens before interface styles',async()=>{
  assert.ok(html.indexOf('design/tokens.css')<html.indexOf('styles.css'));
 });
 
-test('V4 is a centered monochrome instrument with no promotional hero or bundled proprietary font',async()=>{
+test('V4.1 is a centered color-vision-aware instrument with no promotional hero or bundled proprietary font',async()=>{
  const html=await read('index.html');
  const css=await read('styles.css');
  const tokens=JSON.parse(await read('design/tokens.json'));
@@ -41,10 +41,16 @@ test('V4 is a centered monochrome instrument with no promotional hero or bundled
  assert.match(html,/id="tab-body"/);
  assert.match(css,/grid-template-columns:1fr auto 1fr/);
  assert.match(tokens.cssVariables['--font-sans'],/system-ui/);
- for(const [key,value] of Object.entries(tokens.cssVariables)){
-  if(/^#[0-9a-f]{6}$/i.test(value)){
-   const rgb=[value.slice(1,3),value.slice(3,5),value.slice(5,7)];
-   assert.deepEqual(rgb,[rgb[0],rgb[0],rgb[0]],`${key} must be grayscale`);
-  }
- }
+ assert.deepEqual([tokens.cssVariables['--chart-baseline'],tokens.cssVariables['--chart-walk'],tokens.cssVariables['--chart-workout']],['#586674','#0072B2','#B45309']);
+ assert.match(css,/--chart-walk/);
+ assert.match(css,/--chart-workout/);
+ assert.match(await read('docs/DESIGN.md'),/Never communicate readiness as red versus green alone/);
+});
+
+test('V4.1 semantic data colors meet AA text contrast against white',async()=>{
+ const t=JSON.parse(await read('design/tokens.json')).cssVariables;
+ const rgb=x=>[1,3,5].map(i=>parseInt(x.slice(i,i+2),16)/255).map(v=>v<=.04045?v/12.92:((v+.055)/1.055)**2.4);
+ const lum=x=>{const c=rgb(x);return .2126*c[0]+.7152*c[1]+.0722*c[2]};
+ for(const k of ['--foreground','--chart-baseline','--chart-walk','--chart-workout'])
+  assert.ok(1.05/(lum(t[k])+.05)>=4.5,`${k} requires AA normal text contrast on white`);
 });

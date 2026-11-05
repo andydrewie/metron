@@ -87,6 +87,8 @@ A calibration feature is an **experiment**, not a promised next release.
 
 **The right to stop:** a negative experiment, a maintained simple baseline, or no new feature can all be successful outcomes. No schedule is implied by ordering.
 
+**Public reasoning culture:** [Collaboration policy](./COLLABORATION.md) · [Vocabulary](./VOCABULARY.md) · [Accepted decisions](./adr/README.md). The roadmap presents questions, not a mandate to generate artifacts or pursue every possible feature.
+
 ## How we work in this repository
 
 - **Human entrance:** [README](../README.md), [live instrument](https://andydrewie.github.io/metron/), [science](./SCIENCE.md). Let visitors understand the tool before the mathematics.

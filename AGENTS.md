@@ -68,6 +68,12 @@ For structured discovery, read `docs/navigation.json` (stable route IDs, exact r
 
 Read [docs/ROADMAP.md](./docs/ROADMAP.md) for the current investigation and open questions. It is deliberately non-binding; `metron.manifest.json` and working tests, not prose, define implementation truth. No feature timelines, growth targets, or synthetic research results.
 
+## Public reasoning and terminology
+
+Follow [docs/COLLABORATION.md](./docs/COLLABORATION.md), and use [docs/VOCABULARY.md](./docs/VOCABULARY.md) for stable semantics. For consequential choices, inspect [docs/adr/index.json](./docs/adr/index.json) and any superseding ADR **before** proposing conflicting behavior. Use [the ADR template](./docs/adr/TEMPLATE.md) sparingly. The provisional publication gate applies to agents too; don't open a new issue or ADR for every implementation detail.
+
+Separate measured quantities, assumptions, deterministic test results, empirical validation and judgment-based decision confidence. Percent confidence without an evaluation protocol is misleading; don't invent it.
+
 ## Editing loop
 
 1. Confirm whether a feature is implemented vs proposed; read relevant documentation.

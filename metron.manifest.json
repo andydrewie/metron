@@ -37,7 +37,11 @@
     "designCss": "./design/tokens.css",
     "roadmap": "./docs/ROADMAP.md",
     "informationDesign": "./docs/INFORMATION_DESIGN.md",
-    "navigationIndex": "./docs/navigation.json"
+    "navigationIndex": "./docs/navigation.json",
+    "collaborationPolicy": "./docs/COLLABORATION.md",
+    "decisionIndex": "./docs/adr/index.json",
+    "vocabulary": "./docs/VOCABULARY.md",
+    "decisionTemplate": "./docs/adr/TEMPLATE.md"
   },
   "implemented": {
     "energyEstimate": true,

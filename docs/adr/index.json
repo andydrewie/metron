@@ -1,0 +1,32 @@
+{
+  "schemaVersion": "1.0.0",
+  "documentType": "metron.architecture-decision-index",
+  "sourceOfTruth": "docs/adr/*.md",
+  "statusVocabulary": [
+    "Proposed",
+    "Accepted",
+    "Rejected",
+    "Superseded"
+  ],
+  "decisionConfidenceVocabulary": [
+    "low",
+    "medium",
+    "high",
+    "not-assessed"
+  ],
+  "entries": [
+    {
+      "id": "ADR-0001",
+      "title": "Preserve public reasoning without requiring paperwork",
+      "path": "docs/adr/0001-lightweight-public-reasoning.md",
+      "status": "Accepted",
+      "decisionDate": "2026-11-05",
+      "domain": "collaboration",
+      "decisionConfidence": "medium",
+      "confidenceKind": "qualitative-judgment",
+      "softwareVerification": "not-applicable",
+      "empiricalValidation": "none",
+      "supersededBy": null
+    }
+  ]
+}

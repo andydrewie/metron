@@ -22,6 +22,8 @@ An open-source fitness instrument with an independently usable, headless calcula
 
 **Try it:** A free, interactive instrument for daily energy and training readiness. **Know its limits:** Estimates are not measurements; training-set guidance remains experimental. **Explore further when curious:** [See the research questions](./docs/ROADMAP.md) or [inspect the methodology](./docs/SCIENCE.md).
 
+**[How we reason in public](./docs/COLLABORATION.md)** · [Working vocabulary](./docs/VOCABULARY.md) · [Decision records](./docs/adr/README.md) — questions, evidence, reversals, and code; detail by choice.
+
 ## One project. Two front doors.
 
 **For people.** Explore the mobile-first instrument: adjust steps or workout time and see the estimate change immediately. Open the method only when you want more depth. [UI guide](./docs/DESIGN.md) · [Full-size screenshots](#the-instrument)

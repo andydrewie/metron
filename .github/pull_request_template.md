@@ -1,12 +1,21 @@
-## What changed and why?
+## At a glance
 
-## How to reproduce or evaluate
+**What changed?** [One or two sentences.]
 
-## Scientific assumptions / citations (if applicable)
+**Why should someone care?** [Who benefits, or what was wrong?]
 
-## Validation evidence
+## Evidence and trade-offs (only as relevant)
 
-- [ ] `npm run ci` passes
-- [ ] Documentation, types, and schema updated as needed
-- [ ] No unsupported physiological accuracy or clinical claims
-- [ ] Browser usability/accessibility checked if UI changed
+- **Linked question / ADR:** [issue or record, if consequential]
+- **Reproduce / verify:** [exact commands, synthetic case, screenshots, or "docs-only"]
+- **Result:** [what was observed; no results invented]
+- **Limitation / risk:** [what remains uncertain]
+
+## Optional maintainer checklist
+
+- [ ] Public behavior, tests, contracts and docs updated together where applicable.
+- [ ] Scientific claims have evidence and distinguish software from empirical validation.
+- [ ] A consequential decision has a short ADR or a link to an existing one.
+- [ ] No real personal wearable exports, sensitive information, secrets or needless dependencies.
+
+**Small fixes need not fill every section.** Keep the main narrative short; link deeper methodology.

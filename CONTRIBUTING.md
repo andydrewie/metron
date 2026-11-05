@@ -9,6 +9,14 @@
 - **Developer / coding agent:** can you reproduce the calculation from JSON, add deterministic tests, or improve type/schema compatibility?
 - **Researcher:** which assumptions fail under independently measured data? Provide testable hypotheses, protocols, negative results, or benchmark designs.
 
+## Collaboration in one minute
+
+**Questions → Experiments → Decisions → Code** is our reasoning lifecycle, **not four mandatory documents for every change**.
+
+A reproducible question belongs in an Issue; a reviewable change belongs in a PR; a consequential decision merits a short [ADR](./docs/adr/README.md). Otherwise, no extra document is required. A negative experiment is a useful result.
+
+Before writing, check [the provisional publication gate](./docs/COLLABORATION.md) and [shared technical vocabulary](./docs/VOCABULARY.md). When possible, quantify evidence with units, population, sample, uncertainty and a comparison baseline. A subjective decision confidence is **not** a medical or statistical probability.
+
 ## Development
 
 ```bash

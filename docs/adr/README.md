@@ -1,0 +1,23 @@
+# Architecture Decision Records
+
+## In brief
+
+An **ADR** preserves the reason behind one consequential, reversible or historically important choice. It records context, alternatives, decision, trade-offs and what would make us reconsider. An ADR is **not** a ticket, an experiment transcript, or a requirement that every code change needs a new document.
+
+Read [the collaboration policy](../COLLABORATION.md) before proposing new records.
+
+| Record | Decision | Status |
+| --- | --- | --- |
+| [ADR-0001](./0001-lightweight-public-reasoning.md) | Adopt a lightweight, inspectable public reasoning protocol | Accepted |
+
+**Machine index:** [`index.json`](./index.json), with stable IDs, file paths, status, confidence type and decision domain. Do not treat the index as a substitute for reading an ADR's rationale.
+
+### Lifecycle
+
+`Proposed → Accepted` or `Rejected`; an accepted ADR may later become `Superseded` by a new ADR. Keep the original reasoning visible. Only correct formatting/links in historical records, not their substantive decisions.
+
+### Creating an ADR
+
+Copy [TEMPLATE.md](./TEMPLATE.md) to the next `NNNN-short-description.md` filename. Keep a readable summary at the top. Include a responsible alternative and its trade-offs, and link the motivating issue and implementing PR if they exist. Update this index and `index.json` together.
+
+**Default size:** a few short paragraphs, generally one screen of summary and one optional deeper section. External research belongs in linked references rather than pasted walls of text.

@@ -12,7 +12,8 @@
     "implementation": "core/model.js",
     "inputs": "schemas/input.schema.json",
     "outputs": "schemas/output.schema.json",
-    "safety": "AGENTS.md"
+    "safety": "AGENTS.md",
+    "decisionIndex": "docs/adr/index.json"
   },
   "conventions": {
     "paths": "repository-relative",
@@ -114,6 +115,39 @@
       "next": [
         "docs/DESIGN.md",
         "design/tokens.json"
+      ],
+      "status": "documented"
+    },
+    {
+      "id": "review-decisions",
+      "label": "Review the reasoning behind a consequential choice",
+      "intent": "find the applicable ADR, tradeoffs, status and replacement history",
+      "audience": [
+        "human",
+        "agent",
+        "researcher"
+      ],
+      "entry": "docs/COLLABORATION.md",
+      "next": [
+        "docs/adr/index.json",
+        "docs/adr/README.md",
+        "docs/adr/0001-lightweight-public-reasoning.md"
+      ],
+      "status": "documented"
+    },
+    {
+      "id": "resolve-terminology",
+      "label": "Find shared precise terms",
+      "intent": "understand the semantic difference between evidence, assumptions, inference, and decisions",
+      "audience": [
+        "human",
+        "agent",
+        "researcher"
+      ],
+      "entry": "docs/VOCABULARY.md",
+      "next": [
+        "docs/SCIENCE.md",
+        "docs/INFORMATION_DESIGN.md"
       ],
       "status": "documented"
     }

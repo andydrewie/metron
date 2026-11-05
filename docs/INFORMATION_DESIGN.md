@@ -48,6 +48,10 @@ No fake measurements, synthetic "research results" presented as real, arbitrary 
 
 Agents must be able to **skip the presentation and find the right contract immediately**. Humans must be able to **skip the contracts and still understand the important answer**.
 
+## Public reasoning policy
+
+Read [Open collaboration](./COLLABORATION.md) for our publication threshold, [working vocabulary](./VOCABULARY.md) for precise labels, and [ADRs](./adr/README.md) for durable architectural decisions. Human-facing documents summarize what changed and why before linking the full trail; agents use stable IDs and explicit versioned navigation.
+
 ## Change review checklist
 
 - Does the first screen answer why a person should care, without compulsory reading?

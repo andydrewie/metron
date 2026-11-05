@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1080 360" width="1080" height="360" role="img" aria-labelledby="title desc">
+<title id="title">Metron headless architecture</title>
+<desc id="desc">Human app and programmatic clients both call the same calculation engine, which depends on typed observations, model assumptions, and returns structured outcomes. Optional future adapters are separate.</desc>
+<rect width="1080" height="360" rx="16" fill="#ffffff"/>
+<rect x="16" y="16" width="1048" height="328" rx="13" fill="#fafafa" stroke="#e5e5e5"/>
+<g font-family="Arial, Helvetica, sans-serif" text-anchor="middle">
+<rect x="48" y="54" width="273" height="87" rx="10" fill="#ffffff" stroke="#d4d4d4"/>
+<text x="184" y="88" font-size="19" font-weight="700" fill="#171717">Human instrument</text><text x="184" y="114" font-size="13" fill="#525252">TDEE · Readiness · Body</text>
+<rect x="759" y="54" width="273" height="87" rx="10" fill="#ffffff" stroke="#d4d4d4"/>
+<text x="896" y="88" font-size="19" font-weight="700" fill="#171717">Agents &amp; builders</text><text x="896" y="114" font-size="13" fill="#525252">ESM · CLI · JSON Schema</text>
+<rect x="381" y="173" width="318" height="93" rx="11" fill="#f7f7f8" stroke="#525252" stroke-width="2"/>
+<text x="540" y="208" font-size="23" font-weight="700" fill="#525252">Headless core</text><text x="540" y="236" font-size="13" fill="#525252">Deterministic · inspectable · offline</text>
+<path d="M185 141V161H460V173M896 141V161H620V173" fill="none" stroke="#737373" stroke-width="2"/>
+<rect x="48" y="280" width="292" height="42" rx="8" fill="#ffffff" stroke="#e5e5e5"/>
+<text x="194" y="306" font-size="13" font-weight="600" fill="#525252">Input schema + provenance</text>
+<rect x="394" y="280" width="292" height="42" rx="8" fill="#ffffff" stroke="#e5e5e5"/>
+<text x="540" y="306" font-size="13" font-weight="600" fill="#525252">Equations + disclosed limits</text>
+<rect x="740" y="280" width="292" height="42" rx="8" fill="#ffffff" stroke="#e5e5e5"/>
+<text x="886" y="306" font-size="13" font-weight="600" fill="#525252">JSON results + status</text>
+<path d="M381 219H340V301M699 219H740V301M540 266V280" stroke="#999999" stroke-width="1.4" fill="none" stroke-dasharray="4 4"/>
+</g>
+</svg>

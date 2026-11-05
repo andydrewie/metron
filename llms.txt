@@ -1,0 +1,29 @@
+# Metron — Daily Energy, Readiness, & Caloric Allowance
+
+> Open-source, headless-first fitness computation. An exploratory TDEE estimator and unvalidated recovery coaching heuristic with a responsive static web interface. Caloric Allowance and direct wearable integrations are planned, not shipped.
+
+## Start here
+- [README](./README.md): public premise, feature status, and local demo
+- [Agent instructions](./AGENTS.md): build commands and non-negotiable invariants
+- [Machine manifest](./metron.manifest.json): structured capabilities and paths
+- [API](./docs/API.md): executable ESM/CLI examples and contracts
+- [Science and limits](./docs/SCIENCE.md): equations, assumptions, citations
+
+## Research and contribution
+- [Research Lab](./research/README.md): study proposals, no performance results
+- [Machine-readable study plan](./research/protocol.json): planned A/B/C comparator and evaluation criteria
+- [Research agenda](./docs/RESEARCH.md): falsifiable questions
+- [Research protocol](./docs/RESEARCH_PROTOCOL.md): wearable prediction study proposal
+- [Future architecture](./docs/FUTURE_ARCHITECTURE.md): proposals, not current capabilities
+- [Contributing](./CONTRIBUTING.md): how to challenge or improve models
+- [Documentation index](./docs/INDEX.md): complete navigation
+
+## Key technical locations
+- `core/model.js` — source-of-truth implementation
+- `core/model.d.ts` — TypeScript declaration
+- `schemas/input.schema.json` and `schemas/output.schema.json` — machine-readable I/O
+- `bin/metron.mjs` — JSON CLI
+- `examples/` — nonpersonal fixtures
+- `tests/` — deterministic software tests
+
+Note: llms.txt is an informal community proposal, not an official guarantee that any agent or search engine will read this file. This file is a curated pointer map; read linked source contracts for exact behavior.

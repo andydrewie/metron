@@ -1,0 +1,22 @@
+{
+ "$schema":"https://json-schema.org/draft/2020-12/schema",
+ "$id":"https://github.com/andydrewie/metron/blob/main/schemas/output.schema.json",
+ "title":"METRON evaluate() output v0.1",
+ "type":"object","additionalProperties":false,"required":["energy","recovery"],
+ "properties":{
+  "energy":{"type":"object","required":["modelVersion","units","restingModel","components","estimatedTdeeKcal","derived","assumptions","warnings"],"properties":{
+    "modelVersion":{"type":"string"},"units":{"const":"kcal/day"},"restingModel":{"enum":["mifflin","cunningham"]},
+    "estimatedTdeeKcal":{"type":"number"},
+    "components":{"type":"object","required":["baselineKcal","walkingKcal","workoutKcal"],"properties":{"baselineKcal":{"type":"number"},"walkingKcal":{"type":"number"},"workoutKcal":{"type":"number"}}},
+    "derived":{"type":"object","required":["restingKcal","mifflinKcal","cunninghamKcal","fatFreeMassKg","strideMeters","incrementalSteps","incrementalWalkingKm","sessionMet"],"properties":{"restingKcal":{"type":"number"},"mifflinKcal":{"type":"number"},"cunninghamKcal":{"type":["number","null"]},"fatFreeMassKg":{"type":["number","null"]},"strideMeters":{"type":"number"},"incrementalSteps":{"type":"number"},"incrementalWalkingKm":{"type":"number"},"sessionMet":{"type":"number"}}},
+    "assumptions":{"type":"object","required":["sedentaryMultiplier","includedBaselineSteps","walkingNetKcalPerKgKm","strideHeightRatio","metPreset"],"properties":{"sedentaryMultiplier":{"type":"number"},"includedBaselineSteps":{"type":"number"},"walkingNetKcalPerKgKm":{"type":"number"},"strideHeightRatio":{"type":"number"},"metPreset":{"enum":["light","typical","hard"]}}},
+    "warnings":{"type":"array","items":{"type":"string"}}
+  }},
+  "recovery":{"type":"object","required":["modelVersion","classification","status","recommendation","notes","disclaimer"],"properties":{
+    "modelVersion":{"type":"string"},"classification":{"type":"object","required":["daily","weekly"],"properties":{"daily":{"type":"string"},"weekly":{"type":"string"}}},
+    "status":{"type":"string"},
+    "recommendation":{"type":"object","required":["minSets","maxSets","unit","restRecommended"],"properties":{"minSets":{"type":"number"},"maxSets":{"type":"number"},"unit":{"type":"string"},"restRecommended":{"type":"boolean"}}},
+    "notes":{"type":"array","items":{"type":"string"}},"disclaimer":{"type":"string"}
+  }}
+ }
+}

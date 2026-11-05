@@ -1,0 +1,14 @@
+name: Design and accessibility feedback
+description: Improve the instrument for beginners and experts
+title: "ux: "
+body:
+  - type: textarea
+    id: problem
+    attributes:
+      label: What felt confusing or inaccessible?
+    validations:
+      required: true
+  - type: textarea
+    id: evidence
+    attributes:
+      label: Screen size, steps, and evidence (optional)

@@ -1,0 +1,10 @@
+cff-version: 1.2.0
+message: "If you use Metron in software or research, cite the repository and version. This software is an exploratory estimator, not a peer-reviewed validation study."
+title: "Metron: Daily Energy, Readiness, & Caloric Allowance"
+type: software
+authors:
+  - name: "Metron contributors"
+repository-code: "https://github.com/andydrewie/metron"
+url: "https://github.com/andydrewie/metron"
+version: "0.2.0-alpha.3"
+license: MIT

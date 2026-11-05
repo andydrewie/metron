@@ -1,0 +1,23 @@
+name: Bug report
+description: Report a reproducible software or interface defect
+title: "bug: "
+labels: [bug]
+body:
+  - type: textarea
+    id: problem
+    attributes:
+      label: What happened?
+      description: Include expected and observed behavior; do not include personal health information.
+    validations:
+      required: true
+  - type: textarea
+    id: steps
+    attributes:
+      label: Reproduction steps or JSON example
+      description: Prefer synthetic input and exact commands.
+    validations:
+      required: true
+  - type: input
+    id: version
+    attributes:
+      label: Version or commit

@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1080 270" width="1080" height="270" role="img" aria-labelledby="title desc">
+<title id="title">Metron reasoning loop</title>
+<desc id="desc">Observe, infer, decide, and evaluate outcomes. Each stage is separated so data and model predictions are not confused.</desc>
+<rect width="1080" height="270" rx="16" fill="#fff"/>
+<g font-family="Arial, Helvetica, sans-serif">
+<text x="28" y="37" fill="#737373" font-size="14" font-weight="700" letter-spacing="1.5">AN OPEN, TESTABLE LOOP</text>
+<g>
+<rect x="28" y="63" width="226" height="149" rx="11" fill="#fafafa" stroke="#e5e5e5"/>
+<text x="48" y="98" fill="#525252" font-weight="700" font-size="12">01 / OBSERVE</text>
+<text x="48" y="132" fill="#171717" font-weight="700" font-size="20">Measurements</text>
+<text x="48" y="157" fill="#525252" font-size="14">Sleep, steps, workouts</text>
+<text x="48" y="179" fill="#525252" font-size="14">Source, unit, timestamp</text>
+</g>
+<g>
+<rect x="293" y="63" width="226" height="149" rx="11" fill="#fafafa" stroke="#e5e5e5"/>
+<text x="313" y="98" fill="#525252" font-weight="700" font-size="12">02 / INFER</text>
+<text x="313" y="132" fill="#171717" font-weight="700" font-size="20">Estimates</text>
+<text x="313" y="157" fill="#525252" font-size="14">TDEE, trends, limits</text>
+<text x="313" y="179" fill="#525252" font-size="14">Method + uncertainty</text>
+</g>
+<g>
+<rect x="558" y="63" width="226" height="149" rx="11" fill="#fafafa" stroke="#e5e5e5"/>
+<text x="578" y="98" fill="#525252" font-weight="700" font-size="12">03 / DECIDE</text>
+<text x="578" y="132" fill="#171717" font-weight="700" font-size="20">Choices</text>
+<text x="578" y="157" fill="#525252" font-size="14">Train, rest, adjust</text>
+<text x="578" y="179" fill="#525252" font-size="14">Goals + tradeoffs</text>
+</g>
+<g>
+<rect x="823" y="63" width="229" height="149" rx="11" fill="#fafafa" stroke="#e5e5e5"/>
+<text x="843" y="98" fill="#525252" font-weight="700" font-size="12">04 / EVALUATE</text>
+<text x="843" y="132" fill="#171717" font-weight="700" font-size="20">Outcomes</text>
+<text x="843" y="157" fill="#525252" font-size="14">Did it predict well?</text>
+<text x="843" y="179" fill="#525252" font-size="14">Re-test, don't assume</text>
+</g>
+</g>
+<g stroke="#737373" fill="none" stroke-width="2" stroke-linecap="round"><path d="M263 138H284m-6-5 6 5-6 5"/><path d="M528 138H549m-6-5 6 5-6 5"/><path d="M793 138H814m-6-5 6 5-6 5"/></g>
+<text x="28" y="246" font-family="Arial, Helvetica, sans-serif" font-size="13" fill="#737373">Proposed longitudinal validation is future work. Implemented calculations and exploratory heuristics are labelled separately.</text>
+</svg>

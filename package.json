@@ -1,0 +1,46 @@
+{
+  "name": "metron-energy-readiness",
+  "version": "0.2.0-alpha.3",
+  "private": true,
+  "description": "Open, headless energy and recovery estimates with an inspectable mobile-first fitness instrument.",
+  "type": "module",
+  "license": "MIT",
+  "engines": {
+    "node": ">=20"
+  },
+  "exports": {
+    ".": {
+      "types": "./core/model.d.ts",
+      "import": "./core/model.js"
+    }
+  },
+  "bin": {
+    "metron": "./bin/metron.mjs"
+  },
+  "scripts": {
+    "test": "node --test",
+    "check": "node --check app.js && node --check core/model.js && node --check bin/metron.mjs",
+    "build": "node scripts/build-tokens.mjs && node scripts/build-site.mjs",
+    "dev": "node scripts/serve.mjs",
+    "ci": "npm run check && npm test && npm run build",
+    "release:check": "node scripts/release-check.mjs"
+  },
+  "files": [
+    "core",
+    "bin",
+    "schemas",
+    "README.md",
+    "LICENSE"
+  ],
+  "keywords": [
+    "metron",
+    "tdee",
+    "daily-energy-expenditure",
+    "training-readiness",
+    "body-composition",
+    "open-source",
+    "headless",
+    "fitness",
+    "reproducibility"
+  ]
+}

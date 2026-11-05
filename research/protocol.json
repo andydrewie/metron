@@ -1,0 +1,46 @@
+{
+  "protocolVersion": "0.1.0-draft",
+  "project": "Metron",
+  "status": "proposed-not-run",
+  "dataCollected": false,
+  "resultsAvailable": false,
+  "question": "Does longitudinal wearable information improve held-out next-session resistance training performance prediction over a simple human-context baseline?",
+  "population": "Consenting adults engaged in repeatable resistance training sessions; eligibility not finalized",
+  "predictionTime": "Before the next planned training session",
+  "candidateTarget": "Predefined normalized performance change on a repeated reference lift or matched session",
+  "baselines": [
+    {
+      "id": "A",
+      "name": "human-context",
+      "features": ["prior_training_performance", "planned_session", "prior_night_sleep_duration", "subjective_energy", "subjective_fatigue"]
+    },
+    {
+      "id": "B",
+      "name": "wearable-augmented",
+      "includes": "A",
+      "features": ["source_specific_hrv_with_metric_method", "resting_heart_rate", "sleep_regularities", "vendor_score_with_source_and_algorithm_version"]
+    },
+    {
+      "id": "C",
+      "name": "personalized-history",
+      "includes": "B",
+      "features": ["historical_outcomes_observed_before_prediction"],
+      "warning": "Model fitting must use past-only personal observations"
+    }
+  ],
+  "primaryComparison": "B versus A",
+  "secondaryComparison": "C versus B",
+  "validation": {
+    "split": "forward-time-held-out",
+    "leakageChecksRequired": true,
+    "resultsToReport": ["sample_size", "missingness", "mae", "calibration_when_applicable", "uncertainty_intervals", "individual_and_subgroup_variation", "negative_results"],
+    "preRegistrationRequiredBeforeResults": true
+  },
+  "safety": {
+    "noPersonalHealthDataInRepository": true,
+    "notAnInjuryPrediction": true,
+    "noCausalSleepClaimsFromObservationalData": true,
+    "participantConsentRequired": true
+  },
+  "documentation": "../docs/RESEARCH_PROTOCOL.md"
+}

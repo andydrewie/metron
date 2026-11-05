@@ -1,0 +1,78 @@
+{
+  "manifestVersion": "1.0.0",
+  "project": {
+    "name": "Metron",
+    "subtitle": "Daily Energy, Readiness, & Caloric Allowance",
+    "description": "An open-source, headless-first instrument for transparent fitness energy estimates and exploratory recovery decisions.",
+    "license": "MIT",
+    "repositoryTarget": "https://github.com/andydrewie/metron",
+    "repositoryPublished": false,
+    "pagesTarget": "https://andydrewie.github.io/metron/",
+    "pagesVerifiedLive": false,
+    "packageVersion": "0.2.0-alpha.3",
+    "modelVersion": "0.1.0",
+    "maturity": "pre-publication-exploratory"
+  },
+  "runtime": {
+    "language": "JavaScript",
+    "moduleFormat": "ESM",
+    "nodeMinimumMajor": 20,
+    "runtimeDependencies": 0,
+    "requiresNetworkToCalculate": false,
+    "requiresAccountsToCalculate": false
+  },
+  "entrypoints": {
+    "core": "./core/model.js",
+    "types": "./core/model.d.ts",
+    "cli": "./bin/metron.mjs",
+    "web": "./index.html",
+    "inputSchema": "./schemas/input.schema.json",
+    "outputSchema": "./schemas/output.schema.json",
+    "agentInstructions": "./AGENTS.md",
+    "apiDocumentation": "./docs/API.md",
+    "scientificMethods": "./docs/SCIENCE.md",
+    "researchProtocol": "./research/protocol.json",
+    "researchOverview": "./research/README.md",
+    "designTokens": "./design/tokens.json",
+    "designCss": "./design/tokens.css"
+  },
+  "implemented": {
+    "energyEstimate": true,
+    "energyComponents": [
+      "baselineKcal",
+      "walkingKcal",
+      "workoutKcal"
+    ],
+    "restingModels": [
+      "mifflin",
+      "cunningham"
+    ],
+    "readinessHeuristic": true,
+    "bodyCompositionInputs": [
+      "bodyFatPercent",
+      "skeletalMuscleKg"
+    ],
+    "cliJson": true,
+    "esmSdk": true,
+    "interactiveStaticWeb": true,
+    "caloricAllowance": false,
+    "wearableParsers": false,
+    "wearableOAuth": false,
+    "bayesianCalibration": false,
+    "mcpServer": false,
+    "empiricallyValidatedReadiness": false,
+    "calibratedIndividualUncertainty": false,
+    "activityOverlapReconciliation": false
+  },
+  "methodCaveats": [
+    "population-estimation-not-individual-measurement",
+    "walking-and-workout-estimates-may-overlap",
+    "readiness-set-ranges-are-unvalidated-coaching-heuristics",
+    "unit-tests-are-not-biological-validation"
+  ],
+  "agentQuickstart": {
+    "check": "npm run ci",
+    "example": "node bin/metron.mjs --file examples/beginner.json",
+    "stdin": "cat examples/beginner.json | node bin/metron.mjs"
+  }
+}

@@ -1,0 +1,22 @@
+name: Scientific method proposal
+description: Propose a falsifiable method improvement or validation study
+title: "research: "
+body:
+  - type: textarea
+    id: hypothesis
+    attributes:
+      label: Hypothesis and intended population
+    validations:
+      required: true
+  - type: textarea
+    id: sources
+    attributes:
+      label: Primary sources and/or licensed datasets
+    validations:
+      required: true
+  - type: textarea
+    id: evaluation
+    attributes:
+      label: Reproducible evaluation plan, metrics and expected limitations
+    validations:
+      required: true

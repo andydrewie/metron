@@ -1,0 +1,32 @@
+{
+ "$schema":"https://json-schema.org/draft/2020-12/schema",
+ "$id":"https://github.com/andydrewie/metron/blob/main/schemas/input.schema.json",
+ "title":"METRON calculation input v0.1",
+ "description":"Partial fields use documented defaults. Unknown fields are not processed. All units are metric except hours and steps.",
+ "type":"object", "additionalProperties":false,
+ "properties":{
+  "profile":{"type":"object","additionalProperties":false,"properties":{
+    "weightKg":{"type":"number","minimum":25,"maximum":350},
+    "heightCm":{"type":"number","minimum":100,"maximum":250},
+    "ageYears":{"type":"number","minimum":18,"maximum":105},
+    "equationSex":{"enum":["male","female"]},
+    "bodyFatPercent":{"type":["number","null"],"minimum":2,"maximum":75},
+    "skeletalMuscleKg":{"type":["number","null"],"minimum":5,"maximum":150}
+  }},
+  "activity":{"type":"object","additionalProperties":false,"properties":{
+    "steps":{"type":"number","minimum":0,"maximum":100000},
+    "workoutMinutes":{"type":"number","minimum":0,"maximum":360},
+    "intensity":{"enum":["light","typical","hard"]},
+    "restingModel":{"enum":["mifflin","cunningham"]}
+  }},
+  "recovery":{"type":"object","additionalProperties":false,"properties":{
+    "sleepHours":{"type":"number","minimum":0,"maximum":24},
+    "energy":{"enum":["low","okay","good"]},
+    "weekly":{"enum":["fresh","mixed","fatigued"]},
+    "musculoskeletal":{"enum":["fine","sore","pain"]},
+    "usualMuscleSets":{"type":"number","minimum":1,"maximum":60},
+    "focus":{"enum":["chest","back","legs","other"]},
+    "usualSteps":{"type":"number","minimum":500,"maximum":100000}
+  }}
+ }
+}

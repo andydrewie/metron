@@ -10,7 +10,9 @@ const [pkg,manifest,tokens,html,css,generated,pages,readme,agent]=await Promise.
   read('design/tokens.json').then(JSON.parse),read('index.html'),read('styles.css'),
   read('design/tokens.css'),read('.github/workflows/pages.yml'),read('README.md'),read('AGENTS.md')]);
 check(pkg.version===manifest.project.packageVersion,'package and manifest versions disagree');
-check(manifest.project.repositoryPublished===false&&manifest.project.pagesVerifiedLive===false,'unverified publication flags must remain false');
+check(typeof manifest.project.repositoryPublished==='boolean' && typeof manifest.project.pagesVerifiedLive==='boolean','publication flags must be explicit booleans');
+check(!manifest.project.pagesVerifiedLive || manifest.project.repositoryPublished,'Pages cannot be marked live before repository publication');
+check(manifest.project.maturity === (manifest.project.repositoryPublished ? 'public-exploratory-alpha' : 'pre-publication-exploratory'),'maturity must reflect declared publication state');
 check(tokens.name==='Metron / Research Instrument','unexpected visual theme');
 check(Object.keys(tokens.cssVariables).length>=30,'shared design tokens missing');
 for(const [key,value] of Object.entries(tokens.cssVariables))check(generated.includes(`${key}: ${value};`),`generated CSS out of sync: ${key}`);
@@ -31,4 +33,4 @@ for(const path of ['dist/index.html','dist/styles.css','dist/design/tokens.css',
 const allText=[readme,agent,html,pages,await read('docs/DESIGN.md'),await read('docs/DEPLOYMENT.md')].join('\n').toLowerCase();
 check(!allText.includes(['set','state'].join('')),'retired project name appears in release-facing text');
 console.log(`Metron ${pkg.version} — release preflight PASS (${Object.keys(manifest.entrypoints).length} manifest paths, ${Object.keys(tokens.cssVariables).length} tokens, GitHub Pages build complete).`);
-console.log('Publication still pending: create public repo, push main, activate GitHub Pages, verify URLs and CI.');
+console.log('Manifest publication status checked locally; independently verify remote GitHub and Pages deployment.');

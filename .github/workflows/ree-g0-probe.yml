@@ -1,0 +1,19 @@
+name: G0 · public RMR file schema probe
+on:
+  pull_request:
+    paths:
+      - 'research/ree-validation/tools/probe_zenodo.py'
+      - '.github/workflows/ree-g0-probe.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  public-dataset-probe:
+    runs-on: ubuntu-latest
+    timeout-minutes: 6
+    steps:
+      - uses: actions/checkout@v4
+      - name: Verify schema probe integrity with synthetic data
+        run: python3 -m unittest discover -s research/ree-validation/tools -p 'test_*.py' -v
+      - name: Inspect Zenodo public-release schema in ephemeral runner memory
+        run: python3 research/ree-validation/tools/probe_zenodo.py

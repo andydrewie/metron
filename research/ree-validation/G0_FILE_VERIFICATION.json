@@ -1,0 +1,86 @@
+{
+  "schemaVersion": "1.0.0",
+  "inspectedAt": "2026-11-06",
+  "source": "https://zenodo.org/records/17735477",
+  "recordId": 17735477,
+  "version": "v1",
+  "license": "cc-by-4.0",
+  "licenseScope": "record-level",
+  "authorAttribution": "Brandl B. et al. Predicting resting metabolic rate in healthy adults: a comparative analysis using the enable cohort. DOI: 10.1152/ajpendo.00375.2025; Zenodo DOI: 10.5281/zenodo.17735477.",
+  "verificationRun": "https://github.com/andydrewie/metron/actions/runs/42161770901",
+  "runnerScript": "research/ree-validation/tools/probe_zenodo.py",
+  "operation": "ephemeral download; checksums + field/count metadata only; no participant values published",
+  "privateRowDataStored": false,
+  "predictionsComputed": false,
+  "measuredPredictionErrorsComputed": false,
+  "files": [
+    {
+      "name": "enable_column_groups.tsv",
+      "bytes": 1824,
+      "sha256": "0ec27fd3ef79b1d6bdbe5e8d6d33249026265bce31a9a58d7cc59d32f2557c80",
+      "zenodoMd5Verified": true
+    },
+    {
+      "name": "enable_data.tsv",
+      "bytes": 179824,
+      "sha256": "d91d7c609de5b90b7282afc36071c67cdbf8f7362f8d6fae82126f93c8d8ba61",
+      "zenodoMd5Verified": true
+    },
+    {
+      "name": "enable_Datensatz_RMR._Erwachsene 1.xlsx",
+      "bytes": 237253,
+      "sha256": "5e75b24f2732344c7b28a9cb463b4651bc5f532a0cc319bc10e401e378966e92",
+      "zenodoMd5Verified": true
+    },
+    {
+      "name": "KIEL_REE Datenbank TUM_Januar 2025tf QM.xlsx",
+      "bytes": 93345,
+      "sha256": "401cb44d78337c4b342b3a2829fea4fda4814cb147c7e94f6ded8fc0a4f9605c",
+      "zenodoMd5Verified": true
+    }
+  ],
+  "admittedDataset": {
+    "name": "enable_data.tsv",
+    "status": "eligible-for-G1-protocol-design-not-final-analysis-inclusion",
+    "actualDelimiter": "comma",
+    "misleadingFileExtension": ".tsv",
+    "headerFieldCount": 52,
+    "nonblankDataRows": 459,
+    "uniqueParticipantIdCount": 459,
+    "distinctSites": 2,
+    "siteCodes": [
+      "freising",
+      "nuernber"
+    ],
+    "recordedSexCodes": [
+      "männlich",
+      "weiblich"
+    ],
+    "measuredRmrField": "RMR.KJ",
+    "measuredRmrFieldUnit": "kJ/day per field code and publication; confirm conversion in frozen G1 protocol",
+    "rmrsPositiveNumericCount": 454,
+    "rmrsMissingCount": 5,
+    "weightField": "GEWICHt_SECA, kg",
+    "heightField": "GROESSE, cm",
+    "ageField": "Alter, Jahre",
+    "ffmField": "FFM_SECA,kg",
+    "ffmMethod": "SECA 515 bioimpedance-derived FFM estimate, not direct gold-standard FFM",
+    "basicFullInputCountMifflin": 454,
+    "basicFullInputCountCunninghamWithBiaFfm": 454,
+    "provisionalPairedCompleteCount": 454,
+    "caution": "Provisional field-only count; G1 must freeze exclusion, validity, duplicate and cohort rules before computing errors. Do not treat 454 as final analytical N or a physiological measurement error statistic."
+  },
+  "otherSources": {
+    "enableWorkbook": "Potential duplicate content with enable_data.tsv, do not pool without record-identity mapping",
+    "kielWorkbook": "Separately measured cohort with sex/age/height/weight/REE field labels and differing calorimetry and body-composition methods; do not pool without a distinct protocol",
+    "navalta": "Not inspected at file level",
+    "bath": "Request-only; not inspected"
+  },
+  "gateDecision": {
+    "g0": "passed-for-enable-data-tsv-only",
+    "g1": "not-started",
+    "dataAccessedForStructuralChecks": true,
+    "accuracyBenchmarksRun": false,
+    "modelChangesMade": false
+  }
+}

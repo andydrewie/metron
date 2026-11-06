@@ -11,8 +11,8 @@ test('resting-energy plan labels itself prospective, not completed validation',(
  assert.equal(plan.studyId,'RMR-EXT-001');
  assert.ok(['proposed-not-run','protocol-locked','benchmark-implemented','analysis-in-progress','published','blocked'].includes(plan.status));
  if(plan.status==='proposed-not-run'){
-  assert.equal(plan.measuredDataAccessed,false);
   assert.equal(plan.resultsAvailable,false);
+  assert.equal(plan.measurementOutcomesAnalyzed,false);
  }
  if(plan.status==='published')assert.equal(plan.resultsAvailable,true);
  assert.equal(plan.unmodifiedProductionDefault,true);
@@ -40,7 +40,7 @@ test('evidence gates have unique IDs, trackable issues, ordered prerequisites an
 
 test('dataset candidates are transparently unverified rather than analyzed',()=>{
  const x=read('research/ree-validation/candidate-sources.json');
- assert.ok(['unverified-source-register','metadata-reviewed-source-register','verified-source-register'].includes(x.kind));
+ assert.ok(['unverified-source-register','metadata-reviewed-source-register','verified-source-register','source-admission-register'].includes(x.kind));
  assert.ok(x.records.length>=3);
  for(const r of x.records){
   assert.ok(r.datasetDoi);
@@ -97,4 +97,26 @@ test('G0 source audit distinguishes reviewed metadata from uninspected measured 
  const route=nav.routes.find(r=>r.id==='plan-resting-energy-validation');
  assert.ok(route.next.includes('research/ree-validation/G0_SOURCE_AUDIT.md'));
  assert.ok(exists('research/ree-validation/G0_SOURCE_AUDIT.md'));
+});
+
+test('verified G0 evidence qualifies real source schema but never fabricates prediction accuracy',()=>{
+ const report=read('research/ree-validation/G0_FILE_VERIFICATION.json');
+ const plan=read('research/ree-validation/plan.json');
+ const source=read('research/ree-validation/candidate-sources.json').records.find(x=>x.id==='enable-rmr');
+ assert.equal(report.gateDecision.g0,'passed-for-enable-data-tsv-only');
+ assert.equal(report.privateRowDataStored,false);
+ assert.equal(report.predictionsComputed,false);
+ assert.equal(report.measuredPredictionErrorsComputed,false);
+ assert.equal(report.admittedDataset.nonblankDataRows,459);
+ assert.equal(report.admittedDataset.rmrsPositiveNumericCount,454);
+ assert.equal(report.admittedDataset.basicFullInputCountMifflin,454);
+ assert.equal(report.files.length,4);
+ assert.ok(report.files.every(x=>x.zenodoMd5Verified===true && /^[0-9a-f]{64}$/.test(x.sha256)));
+ assert.equal(source.decision,'eligible');
+ assert.equal(source.fileContentsInspected,true);
+ assert.equal(source.variablesMapped,true);
+ assert.equal(plan.phases[0].state,'complete');
+ assert.equal(plan.phases[1].state,'not-started');
+ assert.equal(plan.resultsAvailable,false);
+ assert.equal(plan.measurementOutcomesAnalyzed,false);
 });

@@ -1,12 +1,12 @@
 {
   "schemaVersion": "1.0.0",
-  "kind": "metadata-reviewed-source-register",
+  "kind": "source-admission-register",
   "lastReviewed": "2026-11-06",
-  "warning": "Metadata inspection only; no participant-level files have been opened; all cohorts remain unadmitted. Catalog licenses are record-level reports, not independent verification of every source file.",
+  "warning": "Primary enable_data.tsv qualified for G1 by verified public license, actual file checksums and field completeness. Other candidates unadmitted. No observed-vs-predicted errors calculated.",
   "records": [
     {
       "id": "enable-rmr",
-      "priority": "primary-to-audit",
+      "priority": "primary-admitted-for-G1",
       "title": "Predicting resting metabolic rate in healthy adults: a comparative analysis using the enable cohort",
       "recordUrl": "https://zenodo.org/records/17735477",
       "datasetDoi": "10.5281/zenodo.17735477",
@@ -18,20 +18,21 @@
         "enable_Datensatz_RMR._Erwachsene 1.xlsx",
         "KIEL_REE Datenbank TUM_Januar 2025tf QM.xlsx"
       ],
-      "rights": "NLM catalog lists CC BY 4.0 for Zenodo record; file-specific reuse terms not independently checked",
-      "access": "public-file-listing",
-      "fileContentsInspected": false,
-      "variablesMapped": false,
+      "rights": "Zenodo API record explicitly declares cc-by-4.0; attribution required; no separate file-level license observed",
+      "access": "public-record-file-downloaded-and-verified",
+      "fileContentsInspected": true,
+      "variablesMapped": true,
       "independentCohortsConfirmed": false,
       "risks": [
-        "Multiple cohorts and spreadsheet/TSV data could overlap; do not combine without unique record provenance",
-        "Missing/derived variables and actual analytical N must be checked",
-        "Record-specific file license must be independently confirmed"
+        "The five missing-RMR records and other field validity/exclusions must be addressed by the G1 frozen protocol, not post-hoc accuracy",
+        "FFM_SECA,kg is bioimpedance-estimated FFM, not direct reference FFM; Cunningham subgroup analysis must disclose error",
+        "The sex-equation parameter's source coding must be explicitly mapped to the published binary equation and verified",
+        "Do not pool enable TSV with workbook(s) or Kiel records without proving record-level independence"
       ],
-      "decision": "candidate-not-admitted",
+      "decision": "eligible",
       "metadataReviewed": true,
       "licenseEvidence": "https://datasetcatalog.nlm.nih.gov/dataset?q=0002212869",
-      "fileManifestEvidence": "https://zenodo.org/records/17735477",
+      "fileManifestEvidence": "https://github.com/andydrewie/metron/blob/main/research/ree-validation/G0_FILE_VERIFICATION.json",
       "observedFileManifest": [
         {
           "name": "enable_data.tsv",
@@ -49,7 +50,23 @@
           "sourceMd5": "5470fd1af5970bef9c74f6df620a45f4"
         }
       ],
-      "accessAudit": "Open record-level file names and checksums verified in public listing; actual file bytes not retrieved in this environment"
+      "accessAudit": "Actual Zenodo release files downloaded in ephemeral GitHub Actions runner; verified publisher MD5 and computed SHA-256; enable_data.tsv field schema and 459-row completeness audited",
+      "analysisFile": "enable_data.tsv",
+      "analysisFileDelimiter": "comma",
+      "analysisFileSha256": "d91d7c609de5b90b7282afc36071c67cdbf8f7362f8d6fae82126f93c8d8ba61",
+      "provisionalCompleteRows": 454,
+      "rawRows": 459,
+      "actualMeasuredRmrField": "RMR.KJ",
+      "measuredRmrUnit": "kJ/day",
+      "experimentalValidationPerformed": false,
+      "measurementMethod": "Indirect calorimetry (COSMED Quark RMR canopy); source study methods",
+      "ffmMethod": "SECA 515 bioimpedance-derived estimate",
+      "provenanceEvidence": "https://github.com/andydrewie/metron/actions/runs/42161770901",
+      "nextGate": "G1 protocol freeze before computing any prediction error",
+      "reviewedMethods": [
+        "enable RMR measured by indirect calorimetry COSMED Quark RMR canopy",
+        "enable fat-free mass is SECA 515 bioimpedance-derived estimate, not direct body-composition reference"
+      ]
     },
     {
       "id": "navalta-inclusive",
@@ -129,5 +146,6 @@
       "reason": "A derived basal metabolic rate field is not independent indirect-calorimetry measurement; comparing another equation to it would validate agreement between models, not physiology."
     }
   ],
-  "metadataAudit": "research/ree-validation/G0_SOURCE_AUDIT.md"
+  "metadataAudit": "research/ree-validation/G0_SOURCE_AUDIT.md",
+  "measuredSourceVerification": "research/ree-validation/G0_FILE_VERIFICATION.json"
 }

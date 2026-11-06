@@ -53,6 +53,19 @@
       "softwareVerification": "tests-passed",
       "empiricalValidation": "none",
       "supersededBy": null
+    },
+    {
+      "id": "ADR-0004",
+      "title": "Keep temporal overlap separate from step inclusion",
+      "path": "docs/adr/0004-provenance-before-automatic-reconciliation.md",
+      "status": "Accepted",
+      "decisionDate": "2026-11-06",
+      "domain": "interoperability",
+      "decisionConfidence": "medium",
+      "confidenceKind": "qualitative-judgment",
+      "softwareVerification": "tests-passed",
+      "empiricalValidation": "none",
+      "supersededBy": null
     }
   ]
 }

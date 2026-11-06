@@ -87,7 +87,12 @@
         "research/energy-accounting/README.md",
         "research/energy-accounting/scenarios.json",
         "research/energy-accounting/run.mjs",
-        "tests/energy-accounting.test.js"
+        "tests/energy-accounting.test.js",
+        "research/activity-events/README.md",
+        "research/activity-events/contract.schema.json",
+        "research/activity-events/fixtures.json",
+        "research/activity-events/run.mjs",
+        "tests/activity-events.test.js"
       ],
       "status": "research-question"
     },

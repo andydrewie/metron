@@ -1,0 +1,241 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/andydrewie/metron/blob/main/research/activity-events/contract.schema.json",
+  "title": "Metron experimental activity provenance v0.1 (research only)",
+  "description": "Two records and an independent membership assertion. No calorie estimate or public core integration.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schemaVersion",
+    "studyStatus",
+    "stepSummary",
+    "workout",
+    "membership"
+  ],
+  "properties": {
+    "schemaVersion": {
+      "const": "0.1.0"
+    },
+    "studyStatus": {
+      "const": "synthetic-only"
+    },
+    "stepSummary": {
+      "$ref": "#/$defs/stepSummary"
+    },
+    "workout": {
+      "$ref": "#/$defs/workout"
+    },
+    "membership": {
+      "oneOf": [
+        {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "status"
+          ],
+          "properties": {
+            "status": {
+              "const": "unknown"
+            }
+          }
+        },
+        {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "status",
+            "includedSteps",
+            "evidence"
+          ],
+          "properties": {
+            "status": {
+              "const": "included"
+            },
+            "includedSteps": {
+              "type": "integer",
+              "minimum": 1
+            },
+            "evidence": {
+              "$ref": "#/$defs/evidence"
+            }
+          }
+        },
+        {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "status",
+            "includedSteps",
+            "evidence"
+          ],
+          "properties": {
+            "status": {
+              "const": "excluded"
+            },
+            "includedSteps": {
+              "const": 0
+            },
+            "evidence": {
+              "$ref": "#/$defs/evidence"
+            }
+          }
+        }
+      ]
+    }
+  },
+  "$defs": {
+    "source": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "provider",
+        "recordType",
+        "recordId",
+        "acquisition"
+      ],
+      "properties": {
+        "provider": {
+          "type": "string",
+          "minLength": 1
+        },
+        "recordType": {
+          "type": "string",
+          "minLength": 1
+        },
+        "recordId": {
+          "type": "string",
+          "minLength": 1
+        },
+        "acquisition": {
+          "enum": [
+            "device-derived",
+            "provider-derived",
+            "self-reported",
+            "synthetic"
+          ]
+        }
+      }
+    },
+    "window": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "start",
+        "end",
+        "basis",
+        "timeZone"
+      ],
+      "properties": {
+        "start": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "end": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "basis": {
+          "enum": [
+            "calendar-day",
+            "physiological-cycle",
+            "activity-session",
+            "custom-interval"
+          ]
+        },
+        "timeZone": {
+          "type": "string",
+          "minLength": 1
+        }
+      }
+    },
+    "stepSummary": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "id",
+        "steps",
+        "unit",
+        "window",
+        "source"
+      ],
+      "properties": {
+        "id": {
+          "type": "string",
+          "minLength": 1
+        },
+        "steps": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "unit": {
+          "const": "steps"
+        },
+        "window": {
+          "$ref": "#/$defs/window"
+        },
+        "source": {
+          "$ref": "#/$defs/source"
+        }
+      }
+    },
+    "workout": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "id",
+        "activityType",
+        "window",
+        "source"
+      ],
+      "properties": {
+        "id": {
+          "type": "string",
+          "minLength": 1
+        },
+        "activityType": {
+          "enum": [
+            "walking",
+            "resistance-training",
+            "running",
+            "mixed",
+            "unknown"
+          ]
+        },
+        "window": {
+          "$ref": "#/$defs/window"
+        },
+        "source": {
+          "$ref": "#/$defs/source"
+        },
+        "stepsDuringWorkout": {
+          "type": [
+            "integer",
+            "null"
+          ],
+          "minimum": 0
+        }
+      }
+    },
+    "evidence": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "basis",
+        "reference"
+      ],
+      "properties": {
+        "basis": {
+          "enum": [
+            "synthetic-hypothesis",
+            "user-attestation",
+            "provider-explicit-link"
+          ]
+        },
+        "reference": {
+          "type": "string",
+          "minLength": 1
+        }
+      }
+    }
+  }
+}

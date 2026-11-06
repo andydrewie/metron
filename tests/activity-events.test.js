@@ -1,0 +1,61 @@
+import test from 'node:test';
+import assert from 'node:assert/strict';
+import {readFileSync} from 'node:fs';
+import {execFileSync} from 'node:child_process';
+import {inspectEventContext} from '../research/activity-events/inspect.mjs';
+const fixture=JSON.parse(readFileSync(new URL('../research/activity-events/fixtures.json',import.meta.url),'utf8'));
+const schema=JSON.parse(readFileSync(new URL('../research/activity-events/contract.schema.json',import.meta.url),'utf8'));
+const get=id=>JSON.parse(JSON.stringify(fixture.cases.find(x=>x.id===id).input));
+test('research-only schema explicitly enumerates provenance, time, and membership states',()=>{
+ assert.equal(schema.$schema,'https://json-schema.org/draft/2020-12/schema');
+ assert.equal(schema.properties.schemaVersion.const,'0.1.0');
+ assert.deepEqual(schema.properties.membership.oneOf.map(x=>x.properties.status.const),['unknown','included','excluded']);
+ assert.ok(schema.$defs.source.required.includes('recordId'));
+ assert.ok(schema.$defs.window.required.includes('timeZone'));
+});
+test('time overlap does not imply inclusion, nor does time overlap contradict exclusion',()=>{
+ const included=inspectEventContext(get('included-explicit'));
+ const unknown=inspectEventContext(get('temporal-overlap-unknown'));
+ const excluded=inspectEventContext(get('time-overlap-excluded'));
+ assert.equal(included.temporalRelation,'workout-contained');
+ assert.equal(included.stepMembership.includedSteps,6000);
+ assert.equal(unknown.temporalRelation,'workout-contained');
+ assert.equal(unknown.stepMembership.status,'unknown');
+ assert.equal(unknown.stepMembership.includedSteps,null);
+ assert.equal(unknown.conclusion,'unresolved-membership');
+ assert.equal(excluded.temporalRelation,'workout-contained');
+ assert.equal(excluded.stepMembership.status,'excluded');
+ assert.equal(excluded.stepMembership.includedSteps,0);
+});
+test('cycles, local midnight, and null step counts remain separately interpretable',()=>{
+ const cycle=inspectEventContext(get('different-provider-cycle'));
+ const midnight=inspectEventContext(get('partial-midnight'));
+ const missing=inspectEventContext(get('missing-workout-steps'));
+ assert.equal(cycle.temporalRelation,'disjoint');
+ assert.equal(cycle.stepSummary.periodBasis,'physiological-cycle');
+ assert.equal(midnight.temporalRelation,'partial');
+ assert.equal(midnight.temporalOverlapMinutes,30);
+ assert.equal(missing.stepMembership.status,'unknown');
+ assert.ok(missing.warnings.some(x=>x.includes('unknown, not zero')));
+});
+test('impossible assignments, unknown leakage, and invalid time intervals are rejected',()=>{
+ let a=get('included-explicit');a.membership.includedSteps=6001;assert.throws(()=>inspectEventContext(a),RangeError);
+ a=get('included-explicit');a.stepSummary.steps=5000;assert.throws(()=>inspectEventContext(a),RangeError);
+ a=get('included-explicit');a.stepSummary.window.start='2026-02-30T00:00:00+08:00';assert.throws(()=>inspectEventContext(a),RangeError);
+ a=get('included-explicit');a.stepSummary.window.start='2026-11-06T00:00:00';assert.throws(()=>inspectEventContext(a),TypeError);
+ a=get('included-explicit');a.workout.window.end=a.workout.window.start;assert.throws(()=>inspectEventContext(a),RangeError);
+ a=get('included-explicit');a.workout.window.start='2026-11-07T08:00:00+08:00';a.workout.window.end='2026-11-07T09:00:00+08:00';
+ assert.throws(()=>inspectEventContext(a),RangeError);
+ a=get('temporal-overlap-unknown');a.membership.includedSteps=2;assert.throws(()=>inspectEventContext(a),TypeError);
+ a=get('included-explicit');a.stepSummary.source.recordId='';assert.throws(()=>inspectEventContext(a),TypeError);
+ a=get('included-explicit');a.workout.id=a.stepSummary.id;assert.throws(()=>inspectEventContext(a),RangeError);
+});
+test('headless JSON runner reports only synthetic logical conclusions',()=>{
+ const output=execFileSync(process.execPath,[new URL('../research/activity-events/run.mjs',import.meta.url).pathname],{encoding:'utf8'});
+ const parsed=JSON.parse(output);
+ assert.equal(parsed.status,'synthetic-only');
+ assert.equal(parsed.doesNotChangeProductionTdee,true);
+ assert.equal(parsed.results.length,6);
+ assert.equal(parsed.results.find(x=>x.id==='temporal-overlap-unknown').inspection.stepMembership.includedSteps,null);
+ assert.ok(parsed.results.every(x=>x.inspection.modifiesTdee===false));
+});

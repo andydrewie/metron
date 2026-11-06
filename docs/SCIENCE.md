@@ -45,6 +45,8 @@ Default illustrative whole-session intensity presets: Light = 2.5 MET; Typical =
 
 Without interval-level activity provenance, the existing daily step and workout totals are insufficient to infer which activity calories overlap. Bounded hypothetical endpoints are **not calibrated prediction intervals**; the default public model remains untouched. Even with explicit intervals, uncertainty in baseline allocation, strides, gross-versus-net activity intensity and estimated MET can remain.
 
+**Follow-up provenance research:** [Activity-event evidence contract](../research/activity-events/README.md) demonstrates that coincident time windows do not prove step-summary membership. The experimental parser preserves reporting periods (including physiological cycles), sources and explicit evidence for inclusion. No physiological accuracy has been validated, and the public calculator is unchanged.
+
 ## 4. Training readiness (independent of TDEE)
 
 METRON takes sleep hours, present energy, musculoskeletal comfort, and past-week fatigue, then uses a transparent 3×3 heuristic to suggest an *illustrative fraction of the user's usual session sets*. A warning is triggered by sleep below five hours, pain, or combined low daily and fatigued weekly recovery. Step count adds contextual notes but is **not an automatic penalty**.

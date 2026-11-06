@@ -39,17 +39,17 @@ test('reference source is immutable admitted enable v1 data and kJ/day is explic
   assert.match(p.variables.measuredRmrConversion,/4\.184/);
   assert.equal(p.variables.measuredRmrKjDay,'RMR.KJ');
   assert.equal(p.source.license,'CC BY 4.0');
-  assert.equal(p.population.noOutcomeBasedExclusion,true);
+  assert.equal(p.primaryEligibility.noOutcomeBasedExclusion,true);
 });
 
 test('participant inclusion rules explicitly preserve model domain and prevent post hoc exclusions',()=>{
-  assert.deepEqual(p.population.orderedRules.map(x=>x.id),['file-integrity','headers','id','sex','age','height','weight','reference']);
+  assert.deepEqual(p.primaryEligibility.orderedRules.map(x=>x.id),['file-integrity','headers','id','sex','age','height','weight','reference']);
   assert.deepEqual(p.variables.equationSexMapping,{'männlich':'male','weiblich':'female'});
   assert.match(p.variables.mappingMeaning,/never inferred gender identity/);
-  assert.equal(p.population.noImputation,true);
-  assert.equal(p.population.noWinsorization,true);
-  assert.match(p.population.duplicatePolicy,/Abort/);
-  assert.match(p.population.outcomeValidity,/retained/);
+  assert.equal(p.primaryEligibility.noImputation,true);
+  assert.equal(p.primaryEligibility.noWinsorization,true);
+  assert.match(p.primaryEligibility.duplicatePolicy,/Abort/);
+  assert.match(p.primaryEligibility.outcomeValidity,/retained/);
 });
 
 test('matched Mifflin and Cunningham use same cohort with BIA measurement caveat',()=>{

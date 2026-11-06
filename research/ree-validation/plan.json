@@ -1,0 +1,186 @@
+{
+  "schemaVersion": "1.0.0",
+  "documentType": "metron.research.execution-plan",
+  "studyId": "RMR-EXT-001",
+  "asOf": "2026-11-06",
+  "status": "proposed-not-run",
+  "resultsAvailable": false,
+  "measuredDataAccessed": false,
+  "question": "How accurately do Metron's fixed RMR equation outputs agree with independently measured indirect-calorimetry RMR in eligible adult cohorts?",
+  "scope": {
+    "endpoint": "RMR/REE in kcal/day",
+    "exclude": [
+      "TDEE",
+      "workout energy",
+      "readiness",
+      "caloric allowance"
+    ],
+    "kind": "observational-external-equation-validation",
+    "population": "Adults with appropriately measured RMR; cohort-specific inclusion/exclusions to be frozen at G1"
+  },
+  "humanDashboard": "https://github.com/andydrewie/metron/issues/9",
+  "sourceRegistry": "research/ree-validation/candidate-sources.json",
+  "headlessCore": "core/model.js",
+  "unmodifiedProductionDefault": true,
+  "phases": [
+    {
+      "id": "G0",
+      "name": "Source eligibility and rights audit",
+      "issue": 10,
+      "state": "not-started",
+      "dependsOn": [],
+      "evidenceNeeded": [
+        "file-level license/permissions",
+        "download+version+checksum",
+        "indirect-calorimetry outcome verified",
+        "participant-level input fields and units",
+        "measurement protocol and duplicate checks"
+      ],
+      "goNoGo": "At least one lawfully analyzable cohort; otherwise report blocker"
+    },
+    {
+      "id": "G1",
+      "name": "Freeze statistical analysis protocol",
+      "issue": 11,
+      "state": "not-started",
+      "dependsOn": [
+        "G0"
+      ],
+      "evidenceNeeded": [
+        "cohort-specific exclusion decisions",
+        "valid equationSex field mapping",
+        "FFM rules",
+        "metrics/uncertainty/analysis seed",
+        "population and subgroup reporting rules",
+        "no outcome-informed tuning"
+      ],
+      "goNoGo": "Versioned, prospective-in-relation-to-analysis preregistered plan"
+    },
+    {
+      "id": "G2",
+      "name": "Implement and audit benchmark CLI",
+      "issue": 12,
+      "state": "not-started",
+      "dependsOn": [
+        "G1"
+      ],
+      "evidenceNeeded": [
+        "unit conversion tests",
+        "row-flow validation",
+        "paired metric audit",
+        "repeated measurement cluster rules",
+        "deterministic output and hashes",
+        "no private source rows committed"
+      ],
+      "goNoGo": "Reproducible passing tests and independent numeric verification"
+    },
+    {
+      "id": "G3",
+      "name": "Run empirical benchmark and publish evidence",
+      "issue": 13,
+      "state": "not-started",
+      "dependsOn": [
+        "G2"
+      ],
+      "evidenceNeeded": [
+        "actual N and exclusions",
+        "absolute errors and biases",
+        "uncertainty and missingness",
+        "subgroup caveats",
+        "source and model versions",
+        "negative-result reporting"
+      ],
+      "goNoGo": "Reproducible report or explicit irreducible data blocker"
+    },
+    {
+      "id": "G4",
+      "name": "Review model implications without automatic adoption",
+      "issue": 13,
+      "state": "not-started",
+      "dependsOn": [
+        "G3"
+      ],
+      "evidenceNeeded": [
+        "matched-comparison analysis",
+        "contextual generalizability",
+        "counterevidence",
+        "reversal trigger",
+        "ADR only if consequential code/claim changes"
+      ],
+      "goNoGo": "Keep default unless changes are supported and independently reviewed"
+    }
+  ],
+  "comparisons": {
+    "primary": {
+      "model": "Mifflin–St Jeor",
+      "implementation": "core/model.js:mifflinStJeor",
+      "needs": [
+        "measured RMR",
+        "body mass kg",
+        "height cm",
+        "age years",
+        "legitimate equation-sex parameter"
+      ],
+      "metric": "MAE kcal/day"
+    },
+    "conditional": {
+      "model": "Cunningham",
+      "implementation": "core/model.js:cunninghamRmr",
+      "needs": [
+        "measured RMR",
+        "measured FFM kg or documented legitimate BF estimate"
+      ],
+      "pairedEligibility": "Only compare Mifflin and Cunningham on identical eligible participant rows"
+    },
+    "restrictions": [
+      "Do not infer equation-sex from gender identity",
+      "Do not treat estimated RMR as independent reference",
+      "Do not train on or tune against benchmark outcomes",
+      "Do not confuse measured RMR with doubly labeled water TDEE"
+    ]
+  },
+  "reporting": {
+    "summary": [
+      "measured participant count",
+      "eligible count",
+      "exclusion and missingness counts",
+      "MAE",
+      "mean signed error (predicted - measured)",
+      "RMSE",
+      "median absolute error",
+      "fraction within ±10% of measured",
+      "unit definitions"
+    ],
+    "confidence": "95% bootstrap confidence intervals for dataset-level metrics, seed and resampling unit preregistered at G1; not individual prediction intervals",
+    "subgroupExamples": [
+      "age",
+      "BMI or mass",
+      "equation-sex category",
+      "source cohort"
+    ],
+    "subgroupsRequireAdequateN": true,
+    "inputProvenanceRequired": true,
+    "negativeResultsRequired": true,
+    "plausibilityOutcomesProhibited": true
+  },
+  "protections": {
+    "noHumanHealthUploadsToRepository": true,
+    "noPrivateDataInIssues": true,
+    "noPhysiologyChangeUntilNewDecision": true,
+    "noFictitiousScores": true,
+    "noKpiOrDeadline": true
+  },
+  "trackedStatusMeaning": {
+    "not-started": "no gate evidence has been submitted",
+    "in-progress": "documented reproducible work underway",
+    "blocked": "cannot proceed without specific missing evidence/permission",
+    "complete": "all defined acceptance criteria verified"
+  },
+  "references": [
+    "https://zenodo.org/records/17735477",
+    "https://doi.org/10.1152/ajpendo.00375.2025",
+    "https://dataverse.harvard.edu/dataset.xhtml?persistentId=doi:10.7910/DVN/MIOESN",
+    "https://researchportal.bath.ac.uk/en/datasets/dataset-for-are-there-sex-differences-in-the-variability-of-fasti/",
+    "https://www.dlwdatabase.org/"
+  ]
+}

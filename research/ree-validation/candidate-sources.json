@@ -1,0 +1,94 @@
+{
+  "schemaVersion": "1.0.0",
+  "kind": "unverified-source-register",
+  "lastReviewed": "2026-11-06",
+  "warning": "Published sample size is not an analyzed sample count. Listed dataset rights do not establish file-level reusable participant records. Do not report validation until reviewed.",
+  "records": [
+    {
+      "id": "enable-rmr",
+      "priority": "primary-to-audit",
+      "title": "Predicting resting metabolic rate in healthy adults: a comparative analysis using the enable cohort",
+      "recordUrl": "https://zenodo.org/records/17735477",
+      "datasetDoi": "10.5281/zenodo.17735477",
+      "methodsUrl": "https://doi.org/10.1152/ajpendo.00375.2025",
+      "publicationReportedN": 454,
+      "referenceOutcomeClaim": "Indirect-calorimetry resting metabolic rate",
+      "filesListed": [
+        "enable_data.tsv",
+        "enable_Datensatz_RMR._Erwachsene 1.xlsx",
+        "KIEL_REE Datenbank TUM_Januar 2025tf QM.xlsx"
+      ],
+      "rights": "unverified-specific-record-license",
+      "access": "public-file-listing",
+      "fileContentsInspected": false,
+      "variablesMapped": false,
+      "independentCohortsConfirmed": false,
+      "risks": [
+        "Multiple cohorts and spreadsheet/TSV data could overlap; do not combine without unique record provenance",
+        "Missing/derived variables and actual analytical N must be checked",
+        "Record-specific file license must be independently confirmed"
+      ],
+      "decision": "candidate-not-admitted"
+    },
+    {
+      "id": "navalta-inclusive",
+      "priority": "secondary-to-audit",
+      "title": "A Gender-agnostic Inclusive Estimation for Resting Metabolic Rate",
+      "recordUrl": "https://dataverse.harvard.edu/dataset.xhtml?persistentId=doi:10.7910/DVN/MIOESN",
+      "datasetDoi": "10.7910/DVN/MIOESN",
+      "methodsUrl": "https://intjexersci.com/ijes/vol19/iss2/19/",
+      "publicationReportedN": 94,
+      "referenceOutcomeClaim": "Indirect-calorimetry resting metabolic rate",
+      "filesListed": [
+        "Excel file described by NLM dataset catalog; precise filename unverified"
+      ],
+      "rights": "CC0-1.0-listed-by-NLM-catalog-file-level-unverified",
+      "access": "public-catalog-and-dataverse-record",
+      "fileContentsInspected": false,
+      "variablesMapped": false,
+      "independentCohortsConfirmed": false,
+      "risks": [
+        "Catalog fields list age/height/mass/resting heart rate/RMR but not a sex-equation parameter",
+        "Do not impute equationSex from participant gender; cohort may support only non-Mifflin research until mapping confirmed",
+        "Study's equation was derived on these participants; do not call its in-sample fit independent validation"
+      ],
+      "decision": "candidate-not-admitted"
+    },
+    {
+      "id": "bath-fasting",
+      "priority": "fallback-request-path",
+      "title": "Are there sex differences in the variability of fasting metabolism? dataset",
+      "recordUrl": "https://researchportal.bath.ac.uk/en/datasets/dataset-for-are-there-sex-differences-in-the-variability-of-fasti/",
+      "datasetDoi": "10.15125/BATH-01393",
+      "methodsUrl": "https://journals.physiology.org/doi/full/10.1152/japplphysiol.00053.2024",
+      "publicationReportedN": 208,
+      "referenceOutcomeClaim": "Resting metabolic rate and body mass in crossover studies",
+      "filesListed": [],
+      "rights": "requires-source-terms-verification",
+      "access": "request-to-bona-fide-researchers",
+      "fileContentsInspected": false,
+      "variablesMapped": false,
+      "independentCohortsConfirmed": false,
+      "risks": [
+        "Access requires a bona fide researcher request",
+        "Repeated measures possible; sex, age and height fields may not be available for model validation"
+      ],
+      "decision": "not-currently-usable"
+    }
+  ],
+  "deferred": [
+    {
+      "id": "dlw-tee",
+      "url": "https://www.dlwdatabase.org/",
+      "target": "Total daily energy expenditure measured using doubly labeled water",
+      "reason": "Separate TDEE endpoint; cannot substitute for measured resting metabolic rate. Free-use wording does not bypass management-group/data-governance restrictions."
+    }
+  ],
+  "explicitlyUnsuitableAsGroundTruth": [
+    {
+      "id": "model-derived-bmr",
+      "exampleUrl": "https://biobank.ndph.ox.ac.uk/ukb/field.cgi?id=23105",
+      "reason": "A derived basal metabolic rate field is not independent indirect-calorimetry measurement; comparing another equation to it would validate agreement between models, not physiology."
+    }
+  ]
+}

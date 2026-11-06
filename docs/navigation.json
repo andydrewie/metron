@@ -215,6 +215,25 @@
         "tests/apple-healthkit-pilot.test.js"
       ],
       "status": "documented"
+    },
+    {
+      "id": "audit-model-sensitivity",
+      "label": "Quantify coefficient sensitivity without wearables",
+      "intent": "reproduce how current model kcal outputs respond to explicit synthetic coefficient stress tests with zero health records",
+      "audience": [
+        "human",
+        "researcher",
+        "agent"
+      ],
+      "entry": "research/assumption-sensitivity/README.md",
+      "next": [
+        "research/assumption-sensitivity/fixtures.json",
+        "research/assumption-sensitivity/run.mjs",
+        "research/assumption-sensitivity/sensitivity.mjs",
+        "tests/assumption-sensitivity.test.js",
+        "docs/SCIENCE.md"
+      ],
+      "status": "documented"
     }
   ]
 }

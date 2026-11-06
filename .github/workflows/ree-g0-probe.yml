@@ -2,7 +2,7 @@ name: G0 · public RMR file schema probe
 on:
   pull_request:
     paths:
-      - 'research/ree-validation/tools/probe_zenodo.py'
+      - 'research/ree-validation/tools/**'
       - '.github/workflows/ree-g0-probe.yml'
   workflow_dispatch:
 permissions:

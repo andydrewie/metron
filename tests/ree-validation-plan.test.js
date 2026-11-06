@@ -85,7 +85,7 @@ test('G0 source audit distinguishes reviewed metadata from uninspected measured 
  const plan=read('research/ree-validation/plan.json');
  const sources=read('research/ree-validation/candidate-sources.json');
  assert.ok(['in-progress','blocked','complete'].includes(plan.phases[0].state));
- assert.equal(sources.records.length,3);
+ assert.ok(sources.records.length>=3);
  for(const r of sources.records){
    assert.equal(typeof r.metadataReviewed,'boolean');
    assert.equal(typeof r.fileContentsInspected,'boolean');

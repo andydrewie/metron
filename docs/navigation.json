@@ -234,6 +234,25 @@
         "docs/SCIENCE.md"
       ],
       "status": "documented"
+    },
+    {
+      "id": "plan-resting-energy-validation",
+      "label": "Track externally measured resting-metabolism validation",
+      "intent": "inspect prospective cohort eligibility, statistical protocol, benchmark methods and study progress without accessing private health data",
+      "audience": [
+        "human",
+        "researcher",
+        "agent"
+      ],
+      "entry": "research/ree-validation/README.md",
+      "next": [
+        "research/ree-validation/plan.json",
+        "research/ree-validation/candidate-sources.json",
+        "docs/RESEARCH.md",
+        "docs/SCIENCE.md",
+        "core/model.js"
+      ],
+      "status": "research-question"
     }
   ]
 }

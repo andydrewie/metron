@@ -64,6 +64,8 @@ The desktop image captures the entire browser viewport; open it full size to ins
 
 **[What's next? Explore the living roadmap](./docs/ROADMAP.md)** — open questions, experiments, trade-offs and honest non-goals. No deadlines or growth targets.
 
+**Current measured-science workstream:** [Resting energy validation program](./research/ree-validation/README.md) · [GitHub tracking dashboard](https://github.com/andydrewie/metron/issues/9). This is a proposal; **no measured accuracy results yet**.
+
 **Research-only iPhone pilot:** [Read-only Apple HealthKit sample attribution](./research/apple-healthkit-pilot/README.md) (requires Xcode and your device's separate Health permission; not an existing web feature).
 
 **[Why this is designed for humans and agents](./docs/INFORMATION_DESIGN.md)** · [Structured navigation map](./docs/navigation.json). Detail is always available, not a prerequisite.

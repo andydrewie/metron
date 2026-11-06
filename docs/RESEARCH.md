@@ -5,6 +5,8 @@
 ## Research questions
 
 **R1 · REE equation performance**
+[Tracked execution proposal](../research/ree-validation/README.md) · [Human dashboard](https://github.com/andydrewie/metron/issues/9) · [Agent-readable gates](../research/ree-validation/plan.json). **No measured benchmark has been run.**
+
 Compare predicted resting metabolic rates (Mifflin–St Jeor and Cunningham) against indirect calorimetry measurements using an appropriately licensed, documented adult dataset. Report MAE, mean bias, 95% intervals, calibration plots, and subgroup performance. Report sample inclusion criteria; don't silently claim one equation wins for all users.
 
 **R2 · Activity expenditure**

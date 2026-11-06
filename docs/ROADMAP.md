@@ -12,6 +12,8 @@
 
 **Device-free research:** [Coefficient sensitivity audit](../research/assumption-sensitivity/README.md) tests how changes to stated assumptions move the modeled output. It requires no equipment or personal records. The optional HealthKit pilot is **not** a prerequisite for future work.
 
+**Current empirical research program:** [Metron RMR equation validation](../research/ree-validation/README.md) is organized into [four trackable evidence phases](https://github.com/andydrewie/metron/issues/9). **The plan exists, but measured-data analysis has not started**. This validates resting metabolism only, not TDEE or training-readiness heuristics.
+
 **What might follow:** A personal-calibration experiment, but only if it adds useful evidence. Caloric Allowance and wearable integrations remain possibilities, not promises.
 
 **How to use this roadmap:** Read the decision flow, then explore details only when relevant. [Information design principles](./INFORMATION_DESIGN.md).

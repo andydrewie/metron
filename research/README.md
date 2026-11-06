@@ -22,6 +22,8 @@ This research diagnostic is **not** integrated into the consumer calculation. It
 
 **No-device path:** [Coefficient sensitivity audit](./assumption-sensitivity/README.md) uses fabricated profiles to quantify how the *mathematical model* responds to changed parameters; it does not measure physiological accuracy.
 
+**Measured resting-metabolism validation program:** [G0–G4 protocol and source candidates](./ree-validation/README.md) · [GitHub progress board](https://github.com/andydrewie/metron/issues/9). This new **not-yet-run** program examines real calorimetry data, separate from the wearable-performance research protocol below.
+
 ## The central experiment
 
 **Does adding longitudinal wearable data improve held-out next-session resistance training performance predictions beyond a simple model using previous performance, sleep and subjective recovery?**

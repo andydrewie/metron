@@ -32,9 +32,23 @@ Published validation studies have reported meaningful population differences: co
 
 Statuses in this document reflect the initial proposal; **GitHub Issues** are the living progress record. No deadline or velocity KPI. Code/research advancement requires evidence, not arbitrary completion percentages.
 
+## How decisions advance
+
+```mermaid
+flowchart TD
+  A["G0 · Is usable measured data available?"] --> B{"Rights, fields and methods verified?"}
+  B -->|No| X["Publish blocker; keep model unchanged"]
+  B -->|Yes| C["G1 · Freeze evaluation protocol"]
+  C --> D["G2 · Implement audited benchmark"]
+  D --> E["G3 · Publish measured error and limitations"]
+  E --> F["G4 · Keep or reconsider current defaults"]
+```
+
+**Text equivalent:** No qualified data means publish the blocker and stop. Qualified data enables a frozen analysis protocol, audited benchmark, empirical report and a separate decision; no model change is automatic.
+
 ## Data candidates, ranked by immediate investigative value
 
-<text equivalent: table below is more useful than a chart before measured results exist.>
+**Why a table here?** These are source-admission judgments, not empirical outcomes; a comparison chart would imply a degree of measurement we don't yet have.
 
 | Source | What the publication/catalog says | Current blocker | Study relevance |
 | --- | --- | --- | --- |

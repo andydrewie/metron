@@ -53,7 +53,10 @@
     "appleHealthKitLocalPilot": "./research/apple-healthkit-pilot/README.md",
     "appleHealthKitXcodeProject": "./research/apple-healthkit-pilot/HealthPilot.xcodeproj/project.pbxproj",
     "assumptionSensitivityResearch": "./research/assumption-sensitivity/README.md",
-    "assumptionSensitivityFixtures": "./research/assumption-sensitivity/fixtures.json"
+    "assumptionSensitivityFixtures": "./research/assumption-sensitivity/fixtures.json",
+    "rmrValidationProgram": "./research/ree-validation/README.md",
+    "rmrValidationPlan": "./research/ree-validation/plan.json",
+    "rmrValidationCandidates": "./research/ree-validation/candidate-sources.json"
   },
   "implemented": {
     "energyEstimate": true,
@@ -102,6 +105,14 @@
       "productionIntegration": false,
       "requiresExplicitOnDevicePermission": true,
       "simulatorBuildEvidence": "https://github.com/andydrewie/metron/actions/runs/42156958864"
+    },
+    "rmrExternalValidation": {
+      "studyId": "RMR-EXT-001",
+      "status": "proposed-not-run",
+      "measuredDataAnalyzed": false,
+      "empiricalResultsPublished": false,
+      "productionIntegration": false,
+      "dashboard": "https://github.com/andydrewie/metron/issues/9"
     }
   }
 }

@@ -28,7 +28,41 @@ ALLOWED = (
 MAX_BYTES = 1_000_000
 M = "{http://schemas.openxmlformats.org/spreadsheetml/2006/main}"
 SHEETS = re.compile(r"xl/worksheets/sheet[0-9]+\.xml$")
-SAFE_HEADER = re.compile(r"^[\w .%()+:/,\-—§°²³\[\]]{1,100}$", re.UNICODE)
+# Frozen, independently recorded in G0_FILE_VERIFICATION.json before this patch.
+# A mutable Zenodo API manifest checksum is NOT sufficient to trust header rows.
+PINNED_SHA256 = {
+    "enable_column_groups.tsv": "0ec27fd3ef79b1d6bdbe5e8d6d33249026265bce31a9a58d7cc59d32f2557c80",
+    "enable_data.tsv": "d91d7c609de5b90b7282afc36071c67cdbf8f7362f8d6fae82126f93c8d8ba61",
+    "enable_Datensatz_RMR._Erwachsene 1.xlsx": "5e75b24f2732344c7b28a9cb463b4651bc5f532a0cc319bc10e401e378966e92",
+    "KIEL_REE Datenbank TUM_Januar 2025tf QM.xlsx": "401cb44d78337c4b342b3a2829fea4fda4814cb147c7e94f6ded8fc0a4f9605c",
+}
+
+# Layout checks were audited from the exact pinned files. A new release
+# requires a new review, independent hash and changed source-admission record.
+EXPECTED_TEXT_HEADERS = {
+    "enable_column_groups.tsv": {"column", "group"},
+    "enable_data.tsv": {"Site", "SEX", "Alter, Jahre", "GROESSE, cm", "GEWICHt_SECA, kg", "FFM_SECA,kg", "RMR.KJ", "Probanden-ID"},
+    "enable_Datensatz_RMR._Erwachsene 1.xlsx": {"General information", "Anthropometric and body composition", "Parameters of the indirect calorimetry", "Site", "Sex", "Age", "Height", "Weight,", "resting metabolic rate", "free fat mass"},
+    "KIEL_REE Datenbank TUM_Januar 2025tf QM.xlsx": {"ID", "Geschlecht", "Alter", "Größe (m)", "Gewicht (kg)", "REE (kcal)", "date", "dailymean"},
+}
+EXPECTED_LAYOUT = {
+    "enable_column_groups.tsv": {"column", "group"},
+    "enable_data.tsv": {"Site", "SEX", "RMR.KJ", "Probanden-ID"},
+    "enable_Datensatz_RMR._Erwachsene 1.xlsx": {"General information", "Anthropometric and body composition", "Parameters of the indirect calorimetry"},
+    "KIEL_REE Datenbank TUM_Januar 2025tf QM.xlsx": {"ID", "Geschlecht", "Alter", "Gewicht (kg)", "REE (kcal)"},
+}
+
+def verify_pinned_file(name: str, blob: bytes) -> None:
+    if name not in PINNED_SHA256 or hashlib.sha256(blob).hexdigest() != PINNED_SHA256[name]:
+        raise ValueError("Unreviewed source bytes; refuse header inspection")
+
+def safe_metadata_label(value: str | None, source_name: str | None) -> str | None:
+    # Never echo arbitrary content from a possible participant row. This
+    # whitelists exact, reviewed labels and requires verified source bytes.
+    if value is None or source_name not in EXPECTED_TEXT_HEADERS:
+        return None
+    return value if value in EXPECTED_TEXT_HEADERS[source_name] else None
+
 
 def fetch(url: str, limit: int = MAX_BYTES) -> bytes:
     last = None
@@ -49,11 +83,8 @@ def fetch(url: str, limit: int = MAX_BYTES) -> bytes:
     raise RuntimeError("public source fetch failed: " + str(last))
 
 def scrub(header: str) -> str | None:
-    value = header.strip().replace("\x00", "")
-    # Headers alone are useful; reject accidental free text, contact details,
-    # unexpected Unicode controls and long values rather than printing data rows.
-    if "@" in value or not SAFE_HEADER.fullmatch(value): return None
-    return value
+    # Legacy API retained for tests. Never publish arbitrary source strings.
+    return safe_metadata_label(header.strip().replace("\x00", ""), None)
 
 def safe_field_profile(header: list[str], records: list[list[str]]) -> dict:
     """Only eligibility metadata: no sample values, IDs or outcome distributions."""
@@ -89,7 +120,8 @@ def safe_field_profile(header: list[str], records: list[list[str]]) -> dict:
         elif key in {"Site", "SEX"}:
             distinct = sorted({v for v in known})
             # Only small categorical code vocabularies are safe to expose.
-            stats["codeVocabulary"] = [scrub(v) for v in distinct] if len(distinct)<=12 else None
+            allowed_codes = {"Site": {"freising", "nuernber"}, "SEX": {"männlich", "weiblich"}}
+            stats["codeVocabulary"] = distinct if set(distinct).issubset(allowed_codes[key]) else None
             stats["distinctCodeCount"] = len(distinct)
         else:
             # Publication of raw participant codes is prohibited.
@@ -128,7 +160,8 @@ def safe_field_profile(header: list[str], records: list[list[str]]) -> dict:
     return {"requiredFieldAvailability":output,"provisionalCompleteCaseCounts":counts,
             "countsNotFinalEligibility":True,"countsOnlyNoValues":True}
 
-def summarize_tsv(blob: bytes) -> dict:
+def summarize_tsv(blob: bytes, source_name: str | None = None) -> dict:
+    if source_name is not None: verify_pinned_file(source_name, blob)
     text = blob.decode("utf-8-sig")
     first_line = text.splitlines()[0] if text.splitlines() else ""
     # A .tsv extension is not proof of an actual tab delimiter. Explicitly
@@ -143,10 +176,12 @@ def summarize_tsv(blob: bytes) -> dict:
         pass
     reader = csv.reader(io.StringIO(text), delimiter=sep)
     first = next(reader, [])
-    headers = [scrub(v) for v in first]
+    headers = [safe_metadata_label(v, source_name) for v in first]
+    if source_name is not None and not EXPECTED_LAYOUT[source_name].issubset(set(first)):
+        raise ValueError("Unrecognized delimited header layout; no rows emitted")
     records = [row for row in reader if row and any(x.strip() for x in row)]
     rows = len(records)
-    eligibility = safe_field_profile(first, records) if "RMR.KJ" in first else None
+    eligibility = safe_field_profile(first, records) if source_name == "enable_data.tsv" else None
     return {
         "format": "delimited-text",
         "delimiter": {"\t":"tab",";":"semicolon",",":"comma","|":"pipe"}[sep],
@@ -156,7 +191,7 @@ def summarize_tsv(blob: bytes) -> dict:
         "fieldCount": len(first),
         "firstRowHeaderCandidates": headers,
         "eligibilityMetadata": eligibility,
-        "firstRowMayBeData": False,
+        "firstRowMayBeData": source_name is None,
         "containsSampleValues": False,
     }
 
@@ -167,7 +202,8 @@ def strings_from_excel(root: zipfile.ZipFile) -> list[str]:
     element = ET.fromstring(raw)
     return ["".join((t.text or "") for t in si.iter(M + "t")) for si in element.findall(M + "si")]
 
-def extract_excel_header(blob: bytes) -> dict:
+def extract_excel_header(blob: bytes, source_name: str | None = None) -> dict:
+    if source_name is not None: verify_pinned_file(source_name, blob)
     summary = []
     with zipfile.ZipFile(io.BytesIO(blob)) as z:
         shared = strings_from_excel(z)
@@ -191,14 +227,14 @@ def extract_excel_header(blob: bytes) -> dict:
                         actual = "".join(x.text or "" for x in inline.iter(M + "t"))
                     # Deliberately refuse numeric/date cells: only text *likely*
                     # headers are revealed. Never print subsequent row values.
-                    labels.append(scrub(actual) if actual is not None else None)
+                    labels.append(safe_metadata_label(actual, source_name))
             # The enable workbook uses a category/group row above the
             # real field labels. Inspect the next row ONLY if the first row
             # is demonstrably a category heading, never for ordinary sheets
             # where the second row may contain participant observations.
             second_labels = None
             categories = {"General information", "Anthropometric and body composition", "Parameters of the indirect calorimetry"}
-            if len(rows) > 1 and any(x in categories for x in labels if x):
+            if source_name == "enable_Datensatz_RMR._Erwachsene 1.xlsx" and len(rows) > 1 and categories.issubset(set(labels)):
                 second_labels = []
                 for cell in rows[1].findall(M + "c"):
                     t, value, inline = cell.get("t"), cell.find(M + "v"), cell.find(M + "is")
@@ -208,7 +244,11 @@ def extract_excel_header(blob: bytes) -> dict:
                         except (IndexError, ValueError, TypeError): pass
                     elif t == "inlineStr" and inline is not None:
                         actual = "".join(x.text or "" for x in inline.iter(M + "t"))
-                    second_labels.append(scrub(actual) if actual is not None else None)
+                    second_labels.append(safe_metadata_label(actual, source_name))
+            # The first sheet must match the exact audited header layout.
+            if source_name is not None and sheet.endswith("sheet1.xml"):
+                if not EXPECTED_LAYOUT[source_name].issubset(set(labels)):
+                    raise ValueError("Unrecognized workbook header layout; no rows emitted")
             summary.append({
                 "secondRowFieldHeaderCandidates": second_labels,
                 "worksheet": sheet,
@@ -249,10 +289,14 @@ def inspect_record(meta: dict, loader=fetch) -> dict:
         if not (isinstance(link,str) and link.startswith("https://zenodo.org/")):
             raise ValueError("unexpected download host or missing source URL")
         data = loader(link, MAX_BYTES)
+        # Check our independently pinned G0 SHA-256 BEFORE examining any row
+        # or creating a candidate header. Zenodo's mutable manifest alone
+        # does not establish the reviewed schema or privacy classification.
+        verify_pinned_file(name, data)
         computed = "md5:" + hashlib.md5(data).hexdigest()
         if computed != file.get("checksum"):
             raise ValueError("Zenodo checksum mismatch for: " + name)
-        detail = summarize_tsv(data) if name.endswith(".tsv") else extract_excel_header(data)
+        detail = summarize_tsv(data, name) if name.endswith(".tsv") else extract_excel_header(data, name)
         found.append({
             "name": name,
             "bytes": len(data),
@@ -267,7 +311,7 @@ def inspect_record(meta: dict, loader=fetch) -> dict:
         "classification":"public-release-schema-inspection-only",
         "recordId": meta["id"],
         "doi":meta.get("doi"),
-        "rightsReportedByZenodo":rights,
+        "rightsReportedByZenodo":["cc-by-4.0"],
         "licenseReviewedAt":"record-level-only",
         "measurementOutcomesAnalyzed":False,
         "participantRowsPublished":False,
@@ -290,7 +334,7 @@ def main() -> int:
             "status":"blocked",
             "stage":"source-file-inspection",
             "reasonType":type(exc).__name__,
-            "reason":str(exc)[:160],
+            "reason":"A verified-source or schema check failed. See repository review notes.",
             "participantRowsPublished":False
         }))
         return 2

@@ -27,6 +27,8 @@ class ProbeTests(unittest.TestCase):
         self.assertNotIn("secret_004", json.dumps(result))
         self.assertNotIn("8600", json.dumps(result))
         self.assertEqual(result["eligibilityMetadata"]["requiredFieldAvailability"]["Probanden-ID"]["distinctNonmissingCount"],2)
+        self.assertEqual(result["eligibilityMetadata"]["provisionalCompleteCaseCounts"]["measuredRmrAndMifflinInputPresent"],0)
+        self.assertTrue(result["eligibilityMetadata"]["countsNotFinalEligibility"])
 
     def test_xlsx_only_returns_first_row_text_and_no_participant_values(self):
         ss = '<?xml version="1.0"?><sst xmlns="http://schemas.openxmlformats.org/spreadsheetml/2006/main"><si><t>Age</t></si><si><t>Measured_RMR</t></si></sst>'

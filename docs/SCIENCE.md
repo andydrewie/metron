@@ -39,6 +39,12 @@ Default illustrative whole-session intensity presets: Light = 2.5 MET; Typical =
 
 **Sets count is a training-load variable, not a calorie-burning unit.** We intentionally use whole-session duration and intensity for the activity estimate instead of assigning fixed calories to 20/30/40 sets.
 
+### Research-only sensitivity check: overlapping walking and workout steps
+
+[Issue #1 experiment](../research/energy-accounting/README.md) reproduces the ambiguity with synthetic inputs. A known-workout-step assignment of 6,000 incremental steps changes a synthetic model calculation from 2,523.46 to 2,349.16 kcal/day **under explicitly chosen conditions**. The 174.30 kcal difference is an *arithmetic sensitivity*, not an empirically measured error or validated new TDEE.
+
+Without interval-level activity provenance, the existing daily step and workout totals are insufficient to infer which activity calories overlap. Bounded hypothetical endpoints are **not calibrated prediction intervals**; the default public model remains untouched. Even with explicit intervals, uncertainty in baseline allocation, strides, gross-versus-net activity intensity and estimated MET can remain.
+
 ## 4. Training readiness (independent of TDEE)
 
 METRON takes sleep hours, present energy, musculoskeletal comfort, and past-week fatigue, then uses a transparent 3×3 heuristic to suggest an *illustrative fraction of the user's usual session sets*. A warning is triggered by sleep below five hours, pain, or combined low daily and fatigued weekly recovery. Step count adds contextual notes but is **not an automatic penalty**.

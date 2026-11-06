@@ -83,7 +83,11 @@
       "next": [
         "docs/SCIENCE.md",
         "core/model.js",
-        "tests/model.test.js"
+        "tests/model.test.js",
+        "research/energy-accounting/README.md",
+        "research/energy-accounting/scenarios.json",
+        "research/energy-accounting/run.mjs",
+        "tests/energy-accounting.test.js"
       ],
       "status": "research-question"
     },

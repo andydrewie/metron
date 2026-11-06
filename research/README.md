@@ -4,6 +4,16 @@ This folder exists to make **falsifiable research a first-class contributor surf
 
 **No published validation benchmarks or collected wearable research dataset currently exist in this repo.** The implemented source is deterministic software; unit tests establish software correctness under selected fixtures, not accuracy against human metabolic or training outcomes.
 
+## Current investigation: Energy accounting
+
+[Issue #1 synthetic experiment](./energy-accounting/README.md) shows that daily steps and workout duration cannot identify overlapping activity. The runner prints structured JSON without accessing any personal health data:
+
+```bash
+node research/energy-accounting/run.mjs
+```
+
+This research diagnostic is **not** integrated into the consumer calculation. It is not a metabolic validation result.
+
 ## The central experiment
 
 **Does adding longitudinal wearable data improve held-out next-session resistance training performance predictions beyond a simple model using previous performance, sleep and subjective recovery?**

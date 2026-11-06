@@ -108,7 +108,7 @@ The browser and CLI import the **same model**. Agents should read [`AGENTS.md`](
 
 ## What is and isn't established
 
-Metron separates **observations**, **inferences**, **decisions**, and **future outcomes**. A vendor's recovery score is not ground truth. WHOOP RMSSD and Apple Health SDNN, for example, must not be silently treated as the same HRV measurement. Steps already counted during a workout can also be counted again in the walking estimate; the current engine **warns** about possible overlap but does **not** reconcile it.
+Metron separates **observations**, **inferences**, **decisions**, and **future outcomes**. A vendor's recovery score is not ground truth. WHOOP RMSSD and Apple Health SDNN, for example, must not be silently treated as the same HRV measurement. Steps already counted during a workout can also be counted again in the walking estimate; the current engine **warns** about possible overlap but does **not** reconcile it. [Reproduce this ambiguity with synthetic cases](./research/energy-accounting/README.md).
 
 <p align="center"><img src="./docs/assets/evidence-loop.svg" width="100%" alt="Observe, infer, decide, evaluate: Metron's openly testable research loop" /></p>
 

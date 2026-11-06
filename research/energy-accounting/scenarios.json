@@ -1,0 +1,80 @@
+{
+  "schemaVersion": "1.0.0",
+  "kind": "synthetic",
+  "modelVersion": "0.1.0",
+  "title": "Issue #1: walking/workout double-accounting sensitivity",
+  "description": "Cases share the same 80 kg / 175 cm / age 30 profile. The labels describe hypothetical assumptions, not wearable observations.",
+  "profile": {
+    "weightKg": 80,
+    "heightCm": 175,
+    "ageYears": 30,
+    "equationSex": "male"
+  },
+  "defaultActivity": {
+    "steps": 10000,
+    "workoutMinutes": 60,
+    "intensity": "typical"
+  },
+  "cases": [
+    {
+      "id": "disjoint-resistance",
+      "label": "10k daily steps and low-step lifting (assumed disjoint)",
+      "overlap": {
+        "kind": "known",
+        "stepsAssignedToWorkoutBeyondBaseline": 0
+      }
+    },
+    {
+      "id": "known-treadmill",
+      "label": "6k of 10k daily steps occur inside the recorded workout",
+      "overlap": {
+        "kind": "known",
+        "stepsAssignedToWorkoutBeyondBaseline": 6000
+      }
+    },
+    {
+      "id": "bounded-unknown",
+      "label": "Unknown overlap, hypothetically anywhere from zero to 6k incremental steps",
+      "overlap": {
+        "kind": "bounded-unknown",
+        "maximumStepsAssignedToWorkoutBeyondBaseline": 6000
+      }
+    },
+    {
+      "id": "zero-steps",
+      "label": "0 daily steps, no workout",
+      "activity": {
+        "steps": 0,
+        "workoutMinutes": 0
+      },
+      "overlap": {
+        "kind": "known",
+        "stepsAssignedToWorkoutBeyondBaseline": 0
+      }
+    },
+    {
+      "id": "baseline-steps",
+      "label": "2k daily steps, no workout",
+      "activity": {
+        "steps": 2000,
+        "workoutMinutes": 0
+      },
+      "overlap": {
+        "kind": "known",
+        "stepsAssignedToWorkoutBeyondBaseline": 0
+      }
+    },
+    {
+      "id": "high-steps",
+      "label": "20k daily steps, no workout",
+      "activity": {
+        "steps": 20000,
+        "workoutMinutes": 0
+      },
+      "overlap": {
+        "kind": "known",
+        "stepsAssignedToWorkoutBeyondBaseline": 0
+      }
+    }
+  ]
+}

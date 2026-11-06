@@ -40,6 +40,19 @@
       "softwareVerification": "tests-passed",
       "empiricalValidation": "not-applicable",
       "supersededBy": null
+    },
+    {
+      "id": "ADR-0003",
+      "title": "Don't silently infer overlapping activity",
+      "path": "docs/adr/0003-explicit-overlap-assumptions.md",
+      "status": "Accepted",
+      "decisionDate": "2026-11-06",
+      "domain": "scientific-method",
+      "decisionConfidence": "medium",
+      "confidenceKind": "qualitative-judgment",
+      "softwareVerification": "tests-passed",
+      "empiricalValidation": "none",
+      "supersededBy": null
     }
   ]
 }

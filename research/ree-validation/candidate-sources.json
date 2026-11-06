@@ -32,7 +32,7 @@
       "decision": "eligible",
       "metadataReviewed": true,
       "licenseEvidence": "https://datasetcatalog.nlm.nih.gov/dataset?q=0002212869",
-      "fileManifestEvidence": "https://zenodo.org/records/17735477",
+      "fileManifestEvidence": "https://github.com/andydrewie/metron/blob/main/research/ree-validation/G0_FILE_VERIFICATION.json",
       "observedFileManifest": [
         {
           "name": "enable_data.tsv",
@@ -50,7 +50,7 @@
           "sourceMd5": "5470fd1af5970bef9c74f6df620a45f4"
         }
       ],
-      "accessAudit": "Open record-level file names and checksums verified in public listing; actual file bytes not retrieved in this environment",
+      "accessAudit": "Actual Zenodo release files downloaded in ephemeral GitHub Actions runner; verified publisher MD5 and computed SHA-256; enable_data.tsv field schema and 459-row completeness audited",
       "analysisFile": "enable_data.tsv",
       "analysisFileDelimiter": "comma",
       "analysisFileSha256": "d91d7c609de5b90b7282afc36071c67cdbf8f7362f8d6fae82126f93c8d8ba61",
@@ -62,7 +62,11 @@
       "measurementMethod": "Indirect calorimetry (COSMED Quark RMR canopy); source study methods",
       "ffmMethod": "SECA 515 bioimpedance-derived estimate",
       "provenanceEvidence": "https://github.com/andydrewie/metron/actions/runs/42161770901",
-      "nextGate": "G1 protocol freeze before computing any prediction error"
+      "nextGate": "G1 protocol freeze before computing any prediction error",
+      "reviewedMethods": [
+        "enable RMR measured by indirect calorimetry COSMED Quark RMR canopy",
+        "enable fat-free mass is SECA 515 bioimpedance-derived estimate, not direct body-composition reference"
+      ]
     },
     {
       "id": "navalta-inclusive",

@@ -47,7 +47,9 @@
     "energyAccountingResearch": "./research/energy-accounting/README.md",
     "energyAccountingFixtures": "./research/energy-accounting/scenarios.json",
     "activityEventsResearch": "./research/activity-events/README.md",
-    "activityEventsSchema": "./research/activity-events/contract.schema.json"
+    "activityEventsSchema": "./research/activity-events/contract.schema.json",
+    "providerStepSemanticsResearch": "./research/provider-step-semantics/README.md",
+    "providerStepSemanticsMatrix": "./research/provider-step-semantics/matrix.json"
   },
   "implemented": {
     "energyEstimate": true,

@@ -6,6 +6,8 @@
 
 **What we've reproduced:** Synthetic steps and workout inputs admit different overlap interpretations. [Explore the research-only arithmetic audit](../research/energy-accounting/README.md). The consumer model is unchanged; [source-aware activity-event contract research](../research/activity-events/README.md) now tests period provenance separately from step inclusion. [Issue #1](https://github.com/andydrewie/metron/issues/1) remains open for actual accounting evidence.
 
+**Provider evidence:** [WHOOP, Garmin and Apple HealthKit review](../research/provider-step-semantics/README.md) found no universal workout-step-inclusion guarantee in the official public sources examined. Researching Apple sample-level attribution comes before any real integration.
+
 **What might follow:** A personal-calibration experiment, but only if it adds useful evidence. Caloric Allowance and wearable integrations remain possibilities, not promises.
 
 **How to use this roadmap:** Read the decision flow, then explore details only when relevant. [Information design principles](./INFORMATION_DESIGN.md).

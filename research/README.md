@@ -16,6 +16,8 @@ This research diagnostic is **not** integrated into the consumer calculation. It
 
 **Next:** [Experimental activity-event contract](./activity-events/README.md) tests whether record intervals and provenance can prevent unwarranted assumptions about overlapping daily steps. No production energy correction is implemented.
 
+**Official-source review:** [WHOOP, Garmin and Apple HealthKit step semantics](./provider-step-semantics/README.md), including Garmin's documented Personal API. Evidence is source-linked, synthetic-only and does not change production estimates.
+
 ## The central experiment
 
 **Does adding longitudinal wearable data improve held-out next-session resistance training performance predictions beyond a simple model using previous performance, sleep and subjective recovery?**

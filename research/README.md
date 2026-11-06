@@ -20,6 +20,8 @@ This research diagnostic is **not** integrated into the consumer calculation. It
 
 **Read-only pilot:** [Apple HealthKit local experiment](./apple-healthkit-pilot/README.md) includes source and Xcode project for comparing workout-associated and day-query step sample IDs. No personal data is uploaded; real-device operation is not yet verified.
 
+**No-device path:** [Coefficient sensitivity audit](./assumption-sensitivity/README.md) uses fabricated profiles to quantify how the *mathematical model* responds to changed parameters; it does not measure physiological accuracy.
+
 ## The central experiment
 
 **Does adding longitudinal wearable data improve held-out next-session resistance training performance predictions beyond a simple model using previous performance, sleep and subjective recovery?**

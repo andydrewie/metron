@@ -51,7 +51,9 @@
     "providerStepSemanticsResearch": "./research/provider-step-semantics/README.md",
     "providerStepSemanticsMatrix": "./research/provider-step-semantics/matrix.json",
     "appleHealthKitLocalPilot": "./research/apple-healthkit-pilot/README.md",
-    "appleHealthKitXcodeProject": "./research/apple-healthkit-pilot/HealthPilot.xcodeproj/project.pbxproj"
+    "appleHealthKitXcodeProject": "./research/apple-healthkit-pilot/HealthPilot.xcodeproj/project.pbxproj",
+    "assumptionSensitivityResearch": "./research/assumption-sensitivity/README.md",
+    "assumptionSensitivityFixtures": "./research/assumption-sensitivity/fixtures.json"
   },
   "implemented": {
     "energyEstimate": true,

@@ -49,6 +49,8 @@ Without interval-level activity provenance, the existing daily step and workout 
 
 **Local sample-identity experiment:** An optional [Apple HealthKit read-only pilot](../research/apple-healthkit-pilot/README.md) can compare UUIDs returned by workout-associated and calendar-day step-sample queries, once an individual grants permission on their device. Identical UUIDs do **not** establish contributions to a merged daily Health statistic or a validated energy adjustment. No real-device results have yet been recorded or published.
 
+**Device-free arithmetic sensitivity:** A separate [synthetic research harness](../research/assumption-sensitivity/README.md) perturbs model coefficients by **arbitrarily selected ±10% factors**. Resulting kcal changes are exact within that artificial stress test, but are **not measured parameter error, a statistically calibrated interval, or an empirical validation of energy expenditure**.
+
 ## 4. Training readiness (independent of TDEE)
 
 METRON takes sleep hours, present energy, musculoskeletal comfort, and past-week fatigue, then uses a transparent 3×3 heuristic to suggest an *illustrative fraction of the user's usual session sets*. A warning is triggered by sleep below five hours, pain, or combined low daily and fatigued weekly recovery. Step count adds contextual notes but is **not an automatic penalty**.

@@ -10,6 +10,8 @@
 
 **New opt-in research tool:** [Apple HealthKit sample-attribution pilot](../research/apple-healthkit-pilot/README.md) is a local-only Xcode/iPhone experiment. It is not part of the live website and cannot be run against real data without on-device Health permission.
 
+**Device-free research:** [Coefficient sensitivity audit](../research/assumption-sensitivity/README.md) tests how changes to stated assumptions move the modeled output. It requires no equipment or personal records. The optional HealthKit pilot is **not** a prerequisite for future work.
+
 **What might follow:** A personal-calibration experiment, but only if it adds useful evidence. Caloric Allowance and wearable integrations remain possibilities, not promises.
 
 **How to use this roadmap:** Read the decision flow, then explore details only when relevant. [Information design principles](./INFORMATION_DESIGN.md).

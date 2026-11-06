@@ -1,0 +1,52 @@
+{
+  "schemaVersion": "1.0.0",
+  "kind": "synthetic-only",
+  "description": "Three fixed profiles to compare model sensitivity to arbitrary +/-10% coefficient changes; not observations.",
+  "cases": [
+    {
+      "id": "typical",
+      "description": "80kg person, 10k steps, 60min whole-session typical resistance example",
+      "profile": {
+        "weightKg": 80,
+        "heightCm": 175,
+        "ageYears": 30,
+        "equationSex": "male"
+      },
+      "activity": {
+        "steps": 10000,
+        "workoutMinutes": 60,
+        "intensity": "typical"
+      }
+    },
+    {
+      "id": "no-walk-no-workout",
+      "description": "Same profile with 0 steps and 0 workout to expose sedentary baseline behavior",
+      "profile": {
+        "weightKg": 80,
+        "heightCm": 175,
+        "ageYears": 30,
+        "equationSex": "male"
+      },
+      "activity": {
+        "steps": 0,
+        "workoutMinutes": 0,
+        "intensity": "typical"
+      }
+    },
+    {
+      "id": "higher-activity",
+      "description": "Same profile, 20k steps and 90min illustrative hard session",
+      "profile": {
+        "weightKg": 80,
+        "heightCm": 175,
+        "ageYears": 30,
+        "equationSex": "male"
+      },
+      "activity": {
+        "steps": 20000,
+        "workoutMinutes": 90,
+        "intensity": "hard"
+      }
+    }
+  ]
+}

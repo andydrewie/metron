@@ -8,7 +8,7 @@
 
 **Privacy:** you explicitly grant HealthKit access on your own iPhone. The pilot does not upload, log, persist, export, or modify Health data. It displays aggregate diagnostic values in memory and offers a Clear button.
 
-This is **research-only code**, not a distributed iOS app or a feature in [Metron's website](https://andydrewie.github.io/metron/). Its actual operation with a person's authorized Health records is **not yet verified**.
+This is **research-only code**, not a distributed iOS app or a feature in [Metron's website](https://andydrewie.github.io/metron/). Its native code **compiled successfully in a macOS GitHub Actions iOS Simulator build** ([verification run](https://github.com/andydrewie/metron/actions/runs/42156958864)). Real-device operation with authorized personal Health records is **not yet verified**.
 
 ## See the experience
 

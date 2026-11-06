@@ -35,7 +35,7 @@ test('public collaboration policy and agent navigation stay discoverable',()=>{
 
 test('decision index covers every numbered ADR and preserves statuses',()=>{
   const data=JSON.parse(content('docs/adr/index.json'));
-  const actual=readdirSync(root+'docs/adr').filter(n=>/^\\d{4}-[a-z0-9-]+\\.md$/.test(n)).map(n=>'docs/adr/'+n).sort();
+  const actual=readdirSync(root+'docs/adr').filter(n=>/^[0-9]{4}-[a-z0-9-]+[.]md$/.test(n)).map(n=>'docs/adr/'+n).sort();
   const indexed=data.entries.map(e=>e.path).sort();
   assert.deepEqual(indexed,actual,'numbered ADR files must match machine index');
   const ids=new Set();
@@ -46,7 +46,7 @@ test('decision index covers every numbered ADR and preserves statuses',()=>{
     assert.equal(d.confidenceKind,'qualitative-judgment');
     assert.ok(['not-tested','tests-passed','not-applicable'].includes(d.softwareVerification));
     assert.ok(['none','external-retrospective','prospective-held-out','not-applicable'].includes(d.empiricalValidation));
-    assert.match(content(d.path),new RegExp('\\\\*\\\\*Status:\\\\*\\\\* '+d.status));
+    assert.ok(content(d.path).includes('**Status:** '+d.status),'ADR status mismatch: '+d.id);
     if(d.status==='Superseded')assert.ok(d.supersededBy,'Superseded ADR needs successor');
     if(d.supersededBy)assert.ok(data.entries.some(other=>other.id===d.supersededBy),'Missing ADR successor');
   }

@@ -2,9 +2,14 @@
 /** G2 runner. Real-data invocation is an explicit G3-only action. No network. */
 import {readFileSync} from 'node:fs';
 import {loadLockedProtocol,evaluateCsv,sha256,G1_COMMIT} from './benchmark.mjs';
+import {renderExecutive} from './render.mjs';
 
 function main(args){
-  const isSynthetic=args.length===1&&args[0]==='--synthetic';
+  const markdown=args.includes('--format') && args[args.indexOf('--format')+1]==='markdown';
+  if(args.includes('--format') && !markdown)throw new Error('Only --format markdown supported');
+  const positional=markdown ? args.filter((_,i)=>i!==args.indexOf('--format')&&i!==args.indexOf('--format')+1) : args;
+  const isSynthetic=positional.length===1&&positional[0]==='--synthetic';
+  args=positional;
   const fileIndex=args.indexOf('--file');
   const real=fileIndex!==-1;
   if(!isSynthetic&&!real)throw new Error('Specify --synthetic or --file PATH with explicit G3 authorization');
@@ -23,7 +28,10 @@ function main(args){
   const report=evaluateCsv(bytes.toString('utf8'),{
     protocol,lock,synthetic:isSynthetic,sourceSha256:digest
   });
-  console.log(JSON.stringify(report,null,2));
+  if(markdown){
+    // Human-readable aggregates from the same validated result object.
+    console.log(renderExecutive(report));
+  }else console.log(JSON.stringify(report,null,2));
 }
 try{main(process.argv.slice(2));}
 catch(error){

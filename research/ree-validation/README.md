@@ -6,7 +6,7 @@
 
 **Plan:** Qualify eligible datasets → freeze methodology → build deterministic benchmark → report actual error and uncertainty → decide whether findings warrant changing anything.
 
-**Status:** **G0 source admitted, G1 frozen, G2 benchmark implemented against synthetic fixtures.** The headless CLI verifies frozen source/model/protocol identities, computes deterministic synthetic metrics and provides audit outputs. [Read the engine methodology](./G2_BENCHMARK.md) · [Frozen protocol](./protocol.v1.json). **No measured-cohort accuracy results have been computed or published.** The production calculator is unchanged.
+**Status: G3 measured results published.** The frozen evaluation includes 454 eligible participants: Mifflin MAE **165.7 kcal/day**, Cunningham **129.5**, with paired difference **−36.2** (95% bootstrap CI −49.5 to −22.6). [Read the results and limitations](./G3_RESULTS.md) · [Aggregate JSON](./results/g3-enable-v1.json). This single-source RMR reanalysis does not validate TDEE or readiness. **G4 is next; production calculations are unchanged.**
 
 **One place to track:** [GitHub research dashboard — #9](https://github.com/andydrewie/metron/issues/9) · [Machine plan](./plan.json) · [Source candidates](./candidate-sources.json) · [Current science](../../docs/SCIENCE.md)
 
@@ -27,7 +27,7 @@ Published validation studies have reported meaningful population differences: co
 | **G0** | Dataset eligibility and rights | [#10](https://github.com/andydrewie/metron/issues/10) | **Passed · enable TSV** | Verified license, hashes, field availability and source methodology |
 | **G1** | Freeze study methodology | [#11](https://github.com/andydrewie/metron/issues/11) | **Frozen · v1** | [Prespecified, versioned protocol](./G1_FROZEN_PROTOCOL.md) |
 | **G2** | Build benchmark pipeline | [#12](https://github.com/andydrewie/metron/issues/12) | **Implemented · synthetic tests** | [Independent G2 audit](./G2_BENCHMARK.md) |
-| **G3** | Analyze measured errors | [#13](https://github.com/andydrewie/metron/issues/13) | Not started | Published reproducible error report or blocker |
+| **G3** | Analyze measured errors | [#13](https://github.com/andydrewie/metron/issues/13) | **Complete · 454 eligible** | [Results, intervals and independent calculation audit](./G3_RESULTS.md) |
 | **G4** | Calibrate our decision | [#13](https://github.com/andydrewie/metron/issues/13) | Not started | Keep model or justify an explicit new ADR |
 
 Statuses reflect the latest documented audit; **GitHub Issues** are the living progress record. No deadline or velocity KPI. Code/research advancement requires evidence, not arbitrary completion percentages.
@@ -52,12 +52,12 @@ flowchart TD
 
 | Source | What the publication/catalog says | Current blocker | Study relevance |
 | --- | --- | --- | --- |
-| [enable cohort · Zenodo](https://zenodo.org/records/17735477) | Study reports **454** participants and indirect-calorimetry RMR. Files listed include `enable_data.tsv` plus Excel cohort tables. | **Actual participant fields, reuse rights, uniqueness and eligible row count unverified.** | First source to inspect |
+| [enable cohort · Zenodo](https://zenodo.org/records/17735477) | Study reports **454** participants and indirect-calorimetry RMR. Files listed include `enable_data.tsv` plus Excel cohort tables. | **Admitted and evaluated under frozen G1; final N=454.** | [G3 results](./G3_RESULTS.md) |
 | [Navalta inclusive cohort · Dataverse](https://dataverse.harvard.edu/dataset.xhtml?persistentId=doi:10.7910/DVN/MIOESN) | Study reports **94** people; NLM catalog lists **CC0** dataset with measured RMR, age, height, mass, resting heart rate. | Catalog description doesn't list the sex-equation input. Must audit actual file; cannot manufacture that input. | Potential independent check, subject to valid model mapping |
 | [University of Bath · BATH-01393](https://researchportal.bath.ac.uk/en/datasets/dataset-for-are-there-sex-differences-in-the-variability-of-fasti/) | Study reports **208** participant records with RMR and body mass. | Access on researcher request; other required fields and repeat structure unverified. | Fallback, not assumed accessible |
 | [IAEA DLW](https://www.dlwdatabase.org/) | Over **7,000** full-day energy-expenditure measurements. | **Different measurement endpoint**, plus access governance. | Separate future TDEE study, not G0 |
 
-**As of November 6, 2026, one file—enable_data.tsv—is qualified for protocol design; the other candidates remain unadmitted.** [G0 evidence audit](./G0_SOURCE_AUDIT.md) distinguishes verified data fields from untested predictive accuracy. **Data admission is conditional.** Published N is not analyzed N. "Open" or "downloadable" doesn't alone establish a suitable file-level license or inclusion protocol. We must independently confirm each candidate's actual usable fields and permission terms. The [machine-readable source register](./candidate-sources.json) intentionally records unknowns.
+**As of November 6, 2026, one file, enable_data.tsv, has completed frozen G3 evaluation; the other candidates remain unadmitted.** [G0 evidence audit](./G0_SOURCE_AUDIT.md) distinguishes verified data fields from untested predictive accuracy. **Data admission is conditional.** Published N is not analyzed N. "Open" or "downloadable" doesn't alone establish a suitable file-level license or inclusion protocol. We must independently confirm each candidate's actual usable fields and permission terms. The [machine-readable source register](./candidate-sources.json) intentionally records unknowns.
 
 Avoid an attractive trap: a large dataset's **model-derived basal metabolic rate** is not ground-truth calorimetry. Comparing one equation to another derived output measures agreement between models, not accuracy against humans.
 

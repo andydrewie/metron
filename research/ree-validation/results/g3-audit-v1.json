@@ -1,0 +1,16 @@
+{
+  "status": "passed",
+  "audit": "independent-python-stdlib-implementation",
+  "sourceSha256": "d91d7c609de5b90b7282afc36071c67cdbf8f7362f8d6fae82126f93c8d8ba61",
+  "reportSha256": "16b5e8cda5b097f3e1b18a5822932b05797743b008b20de0d40507536f50ca94",
+  "eligible": 454,
+  "pairedEligible": 454,
+  "subgroupsAudited": 10,
+  "pointMetricsAndAllReportedIntervals": "matched",
+  "absoluteTolerance": 1e-08,
+  "replicates": 5000,
+  "seed": 20261106,
+  "methodChanged": false,
+  "participantRecordsExported": false,
+  "scope": "Independent calculation, not independent-person review or new-cohort replication."
+}

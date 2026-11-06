@@ -12,7 +12,7 @@
 
 **Device-free research:** [Coefficient sensitivity audit](../research/assumption-sensitivity/README.md) tests how changes to stated assumptions move the modeled output. It requires no equipment or personal records. The optional HealthKit pilot is **not** a prerequisite for future work.
 
-**Current empirical research program:** [Metron RMR validation](../research/ree-validation/README.md) has qualified the public cohort, [frozen G1 methodology](../research/ree-validation/G1_FROZEN_PROTOCOL.md), and [implemented an auditable G2 benchmark](../research/ree-validation/G2_BENCHMARK.md) verified on synthetic people only. G3 measured-cohort evaluation is the next separate gate. [Track evidence](https://github.com/andydrewie/metron/issues/9). No measured accuracy claims yet.
+**Current empirical research program:** [G3 measured-RMR results](../research/ree-validation/G3_RESULTS.md) are published for 454 eligible participants under the frozen G1 protocol. Mifflin MAE is 165.7 kcal/day; Cunningham is 129.5 in the same people. This is one cohort with BIA-estimated FFM, not TDEE or readiness validation. **G4 is the next separate evidence decision; the production model is unchanged.** [Track evidence](https://github.com/andydrewie/metron/issues/9).
 
 **What might follow:** A personal-calibration experiment, but only if it adds useful evidence. Caloric Allowance and wearable integrations remain possibilities, not promises.
 

@@ -1,0 +1,533 @@
+{
+  "schemaVersion": "1.0.0",
+  "studyId": "RMR-EXT-001",
+  "protocolId": "RMR-EXT-001-G1-v1",
+  "engineVersion": "1.0.0",
+  "prng": "mulberry32-v1",
+  "evidenceType": "measured-RMR-dataset-analysis",
+  "empiricalValidation": "single-source-reanalysis",
+  "endpoint": "RMR/REE",
+  "unit": "kcal/day",
+  "sourceSha256": "d91d7c609de5b90b7282afc36071c67cdbf8f7362f8d6fae82126f93c8d8ba61",
+  "frozenModelVersion": "0.1.0",
+  "cohortFlow": {
+    "rawRows": 459,
+    "excludedByFirstReason": {
+      "sex": 0,
+      "age": 1,
+      "height": 0,
+      "weight": 0,
+      "reference": 4
+    },
+    "invalidByReason": {
+      "sex": 0,
+      "age": 1,
+      "height": 1,
+      "weight": 1,
+      "reference": 5
+    },
+    "eligible": 454,
+    "pairedEligible": 454,
+    "pairedExcludedForFfm": 0,
+    "unknownSiteParticipants": 0
+  },
+  "fieldQuality": {
+    "SEX": {
+      "available": 459,
+      "invalidOrMissing": 0
+    },
+    "Alter, Jahre": {
+      "available": 458,
+      "invalidOrMissing": 1
+    },
+    "GROESSE, cm": {
+      "available": 458,
+      "invalidOrMissing": 1
+    },
+    "GEWICHt_SECA, kg": {
+      "available": 458,
+      "invalidOrMissing": 1
+    },
+    "RMR.KJ": {
+      "available": 454,
+      "invalidOrMissing": 5
+    },
+    "FFM_SECA,kg": {
+      "available": 458,
+      "invalidOrMissing": 1
+    }
+  },
+  "primary": {
+    "summary": {
+      "n": 454,
+      "mae": 165.6976003613515,
+      "bias": -134.70139602513441,
+      "rmse": 210.79618028405756,
+      "medianAbsError": 136.63886233269602,
+      "within10Percent": 54.84581497797357
+    },
+    "ci95": {
+      "mae": {
+        "lower": 154.32797941181437,
+        "upper": 177.89477450019376
+      },
+      "bias": {
+        "lower": -149.07635606800815,
+        "upper": -120.1222411946917
+      },
+      "rmse": {
+        "lower": 196.79060696775804,
+        "upper": 224.91424872859199
+      },
+      "medianAbsError": {
+        "lower": 124.66168738049691,
+        "upper": 148.94120458891007
+      },
+      "within10Percent": {
+        "lower": 50.440528634361236,
+        "upper": 59.25110132158591
+      }
+    }
+  },
+  "paired": {
+    "n": 454,
+    "mifflin": {
+      "n": 454,
+      "mae": 165.6976003613515,
+      "bias": -134.70139602513441,
+      "rmse": 210.79618028405756,
+      "medianAbsError": 136.63886233269602,
+      "within10Percent": 54.84581497797357
+    },
+    "cunningham": {
+      "n": 454,
+      "mae": 129.51194578044314,
+      "bias": 34.05458415107694,
+      "rmse": 160.53696296604542,
+      "medianAbsError": 110.02849904397726,
+      "within10Percent": 65.85903083700441
+    },
+    "cunninghamMinusMifflinMae": -36.18565458090836,
+    "ci95": {
+      "mae": {
+        "lower": 154.32797941181437,
+        "upper": 177.89477450019376
+      },
+      "bias": {
+        "lower": -149.07635606800815,
+        "upper": -120.1222411946917
+      },
+      "rmse": {
+        "lower": 196.79060696775804,
+        "upper": 224.91424872859199
+      },
+      "medianAbsError": {
+        "lower": 124.66168738049691,
+        "upper": 148.94120458891007
+      },
+      "within10Percent": {
+        "lower": 50.440528634361236,
+        "upper": 59.25110132158591
+      },
+      "pairedMaeDelta": {
+        "lower": -49.517971929987226,
+        "upper": -22.641680401950772
+      }
+    }
+  },
+  "age19To78Sensitivity": {
+    "n": 390,
+    "status": "exploratory",
+    "metrics": {
+      "n": 390,
+      "mae": 159.15289993626507,
+      "bias": -125.6577793302935,
+      "rmse": 203.14920876955534,
+      "medianAbsError": 133.46916826003826,
+      "within10Percent": 57.43589743589744
+    },
+    "ci95": {
+      "mae": {
+        "lower": 147.1503097728833,
+        "upper": 171.19126591839472
+      },
+      "bias": {
+        "lower": -140.8680334117762,
+        "upper": -110.44560629320475
+      },
+      "rmse": {
+        "lower": 188.34599116896902,
+        "upper": 217.46711833696213
+      },
+      "medianAbsError": {
+        "lower": 120.0540152963672,
+        "upper": 142.92519120458883
+      },
+      "within10Percent": {
+        "lower": 52.56410256410256,
+        "upper": 62.30769230769231
+      }
+    }
+  },
+  "subgroups": {
+    "Site": {
+      "freising": {
+        "n": 351,
+        "status": "exploratory",
+        "metrics": {
+          "n": 351,
+          "mae": 148.04900094240443,
+          "bias": -111.14327678907014,
+          "rmse": 187.32899677161276,
+          "medianAbsError": 125.69096558317392,
+          "within10Percent": 60.3988603988604
+        },
+        "ci95": {
+          "mae": {
+            "lower": 135.84789983072127,
+            "upper": 160.22513198087395
+          },
+          "bias": {
+            "lower": -126.81191304004399,
+            "upper": -94.65619050391392
+          },
+          "rmse": {
+            "lower": 172.6126884008878,
+            "upper": 201.9066573464785
+          },
+          "medianAbsError": {
+            "lower": 110.64005736137665,
+            "upper": 138.03107074569812
+          },
+          "within10Percent": {
+            "lower": 55.27065527065527,
+            "upper": 65.52706552706553
+          }
+        }
+      },
+      "nuernber": {
+        "n": 103,
+        "status": "exploratory",
+        "metrics": {
+          "n": 103,
+          "mae": 225.83991488611255,
+          "bias": -214.98197711113997,
+          "rmse": 276.1763495724223,
+          "medianAbsError": 210.91467495219877,
+          "within10Percent": 35.922330097087375
+        },
+        "ci95": {
+          "mae": {
+            "lower": 194.85593082292226,
+            "upper": 257.4434453256974
+          },
+          "bias": {
+            "lower": -249.03324946861827,
+            "upper": -181.2674406314392
+          },
+          "rmse": {
+            "lower": 243.16155165850392,
+            "upper": 307.51463044724784
+          },
+          "medianAbsError": {
+            "lower": 158.02987571701715,
+            "upper": 241.66658699808795
+          },
+          "within10Percent": {
+            "lower": 26.21359223300971,
+            "upper": 45.63106796116505
+          }
+        }
+      }
+    },
+    "equationSex": {
+      "male": {
+        "n": 227,
+        "status": "exploratory",
+        "metrics": {
+          "n": 227,
+          "mae": 164.95727167055517,
+          "bias": -126.52184954641552,
+          "rmse": 213.96675817934155,
+          "medianAbsError": 133.51673040152968,
+          "within10Percent": 61.67400881057269
+        },
+        "ci95": {
+          "mae": {
+            "lower": 147.74194903386925,
+            "upper": 181.96300586037844
+          },
+          "bias": {
+            "lower": -147.17068355114085,
+            "upper": -105.48369959821765
+          },
+          "rmse": {
+            "lower": 192.91540042411586,
+            "upper": 234.2025880789847
+          },
+          "medianAbsError": {
+            "lower": 107.22872848948373,
+            "upper": 153.93594646271504
+          },
+          "within10Percent": {
+            "lower": 55.50660792951542,
+            "upper": 67.84140969162996
+          }
+        }
+      },
+      "female": {
+        "n": 227,
+        "status": "exploratory",
+        "metrics": {
+          "n": 227,
+          "mae": 166.43792905214735,
+          "bias": -142.8809425038535,
+          "rmse": 207.57717995704874,
+          "medianAbsError": 141.2970841300189,
+          "within10Percent": 48.01762114537445
+        },
+        "ci95": {
+          "mae": {
+            "lower": 150.80044092346756,
+            "upper": 181.75699662970325
+          },
+          "bias": {
+            "lower": -161.3277261131138,
+            "upper": -123.75096126106583
+          },
+          "rmse": {
+            "lower": 189.26507947997717,
+            "upper": 224.47883655261398
+          },
+          "medianAbsError": {
+            "lower": 125.37571701720844,
+            "upper": 155.9541108986616
+          },
+          "within10Percent": {
+            "lower": 41.85022026431718,
+            "upper": 54.62555066079295
+          }
+        }
+      }
+    },
+    "ageYears": {
+      "18-39": {
+        "n": 94,
+        "status": "exploratory",
+        "metrics": {
+          "n": 94,
+          "mae": 140.4661781457222,
+          "bias": -90.99905414751223,
+          "rmse": 175.8728437561345,
+          "medianAbsError": 119.14196940726595,
+          "within10Percent": 62.765957446808514
+        },
+        "ci95": {
+          "mae": {
+            "lower": 119.51472847422804,
+            "upper": 163.14049545380564
+          },
+          "bias": {
+            "lower": -122.27224399688781,
+            "upper": -60.52962431603671
+          },
+          "rmse": {
+            "lower": 151.76970928900053,
+            "upper": 199.22496123842288
+          },
+          "medianAbsError": {
+            "lower": 91.95936902485664,
+            "upper": 142.70554493307827
+          },
+          "within10Percent": {
+            "lower": 52.12765957446808,
+            "upper": 72.34042553191489
+          }
+        }
+      },
+      "40-59": {
+        "n": 165,
+        "status": "exploratory",
+        "metrics": {
+          "n": 165,
+          "mae": 139.8753157772757,
+          "bias": -102.80629381771823,
+          "rmse": 182.51516428265393,
+          "medianAbsError": 116.6720841300189,
+          "within10Percent": 66.06060606060606
+        },
+        "ci95": {
+          "mae": {
+            "lower": 122.61480379801843,
+            "upper": 158.27853953010026
+          },
+          "bias": {
+            "lower": -125.96325467871816,
+            "upper": -80.00384614548923
+          },
+          "rmse": {
+            "lower": 159.18585928485868,
+            "upper": 206.83354559253425
+          },
+          "medianAbsError": {
+            "lower": 96.07911089866161,
+            "upper": 139.67017208412994
+          },
+          "within10Percent": {
+            "lower": 58.78787878787879,
+            "upper": 72.72727272727273
+          }
+        }
+      },
+      "60-105": {
+        "n": 195,
+        "status": "exploratory",
+        "metrics": {
+          "n": 195,
+          "mae": 199.71006520566735,
+          "bias": -182.756329362161,
+          "rmse": 245.67563269606356,
+          "medianAbsError": 184.96725621414907,
+          "within10Percent": 41.53846153846154
+        },
+        "ci95": {
+          "mae": {
+            "lower": 180.45740482669024,
+            "upper": 220.8486603115654
+          },
+          "bias": {
+            "lower": -206.87742520346129,
+            "upper": -160.71557324606562
+          },
+          "rmse": {
+            "lower": 224.548607440032,
+            "upper": 268.1213297979876
+          },
+          "medianAbsError": {
+            "lower": 147.54827915869964,
+            "upper": 210.91467495219877
+          },
+          "within10Percent": {
+            "lower": 34.87179487179487,
+            "upper": 48.205128205128204
+          }
+        }
+      }
+    },
+    "BMI": {
+      "<25": {
+        "n": 203,
+        "status": "exploratory",
+        "metrics": {
+          "n": 203,
+          "mae": 158.93176562838485,
+          "bias": -129.57427897973986,
+          "rmse": 200.289339623406,
+          "medianAbsError": 130.86352772466535,
+          "within10Percent": 52.216748768472904
+        },
+        "ci95": {
+          "mae": {
+            "lower": 142.83610387683777,
+            "upper": 175.33762468328783
+          },
+          "bias": {
+            "lower": -149.85099923235595,
+            "upper": -109.46591263104105
+          },
+          "rmse": {
+            "lower": 181.66429473027057,
+            "upper": 218.3701377133247
+          },
+          "medianAbsError": {
+            "lower": 109.49784894837467,
+            "upper": 149.70554493307827
+          },
+          "within10Percent": {
+            "lower": 45.320197044334975,
+            "upper": 59.11330049261084
+          }
+        }
+      },
+      "25-<30": {
+        "n": 153,
+        "status": "exploratory",
+        "metrics": {
+          "n": 153,
+          "mae": 166.3296763893575,
+          "bias": -138.57889532486027,
+          "rmse": 214.3173990717566,
+          "medianAbsError": 143.9612810707456,
+          "within10Percent": 56.209150326797385
+        },
+        "ci95": {
+          "mae": {
+            "lower": 146.20469470532,
+            "upper": 187.77898585023544
+          },
+          "bias": {
+            "lower": -163.91213785944586,
+            "upper": -113.551828667254
+          },
+          "rmse": {
+            "lower": 188.98648656268304,
+            "upper": 238.28021755676957
+          },
+          "medianAbsError": {
+            "lower": 116.45578393881442,
+            "upper": 162.27700764818337
+          },
+          "within10Percent": {
+            "lower": 48.36601307189542,
+            "upper": 63.415032679738324
+          }
+        }
+      },
+      ">=30": {
+        "n": 98,
+        "status": "exploratory",
+        "metrics": {
+          "n": 98,
+          "mae": 178.72573116244578,
+          "bias": -139.2682058961251,
+          "rmse": 225.93127233205652,
+          "medianAbsError": 140.4747848948374,
+          "within10Percent": 58.16326530612245
+        },
+        "ci95": {
+          "mae": {
+            "lower": 153.57190268076636,
+            "upper": 205.54694633589577
+          },
+          "bias": {
+            "lower": -173.1721743059077,
+            "upper": -106.55168681956523
+          },
+          "rmse": {
+            "lower": 194.27099826218944,
+            "upper": 258.8712474575501
+          },
+          "medianAbsError": {
+            "lower": 121.59321223709367,
+            "upper": 184.355760038241
+          },
+          "within10Percent": {
+            "lower": 48.97959183673469,
+            "upper": 67.34693877551021
+          }
+        }
+      }
+    }
+  },
+  "provenance": {
+    "frozenG1Commit": "6028a80fb7070b354dec68feeb7153ce0a4cbef9",
+    "protocolGitBlobSha": "2a40beada8abfec0c778e1c64da256836ed735db",
+    "modelGitBlobSha": "228a8032b503f37d7b90b421f425b2225143226d",
+    "sourceVersion": "v1",
+    "sourceDoi": "10.5281/zenodo.17735477",
+    "modelReestimated": false,
+    "personalizedUncertainty": false,
+    "clinicalClaims": false,
+    "inferenceLimit": "Cohort-level resting-rate error only; never a TDEE or individual prediction interval."
+  }
+}

@@ -1,0 +1,30 @@
+{
+  "studyId": "RMR-EXT-001",
+  "analysisDate": "2026-11-06",
+  "analysisCheckout": "3e7dc61d95e6f52d9c7410309d7f30de5f68c150",
+  "protocolId": "RMR-EXT-001-G1-v1",
+  "frozenG1Commit": "6028a80fb7070b354dec68feeb7153ce0a4cbef9",
+  "benchmarkGitBlobSha": "d3e3216d39852d1de7c7edfa365d777386b708eb",
+  "node": "v24.22.1",
+  "python": "Python 3.12.14",
+  "sourceFetch": {
+    "record": 17735477,
+    "version": null,
+    "license": {
+      "id": "cc-by-4.0"
+    },
+    "source_url": "https://zenodo.org/api/records/17735477/files/enable_data.tsv/content",
+    "bytes": 179824,
+    "sha256": "d91d7c609de5b90b7282afc36071c67cdbf8f7362f8d6fae82126f93c8d8ba61",
+    "publisher_checksum": "md5:99d1cfa3b6d1620e4da113f0cc93bf22",
+    "md5_matches": true
+  },
+  "sourceDisplayedVersion": "v1",
+  "sourceApiVersionField": null,
+  "reportSha256": "16b5e8cda5b097f3e1b18a5822932b05797743b008b20de0d40507536f50ca94",
+  "protocolAmendment": null,
+  "calculationAudit": "tools/audit_g3.py",
+  "privacy": "Aggregate outputs only; no participant records committed",
+  "productionModelChanged": false,
+  "nextGate": "G4"
+}

@@ -5,7 +5,7 @@ const root=new URL('../',import.meta.url);
 const read=path=>JSON.parse(readFileSync(new URL(path,root),'utf8'));
 const exists=path=>existsSync(new URL(path,root));
 
-test('resting-energy plan labels itself prospective, not completed validation',()=>{
+test('resting-energy plan distinguishes prospective gates from published scoped results',()=>{
  const plan=read('research/ree-validation/plan.json');
  assert.equal(plan.schemaVersion,'1.0.0');
  assert.equal(plan.studyId,'RMR-EXT-001');
@@ -122,5 +122,5 @@ test('verified G0 evidence qualifies real source schema but never fabricates pre
  assert.equal(plan.phases[2].state,'complete');
  assert.equal(plan.phases[2].g1MergeCommit,'6028a80fb7070b354dec68feeb7153ce0a4cbef9');
  if(plan.status==='benchmark-implemented')assert.equal(plan.resultsAvailable,false);
- assert.equal(plan.measurementOutcomesAnalyzed,false);
+ assert.equal(plan.measurementOutcomesAnalyzed,plan.phases[3].state==='complete');
 });

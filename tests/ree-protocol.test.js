@@ -45,7 +45,7 @@ test('reference source is immutable admitted enable v1 data and kJ/day is explic
 test('participant inclusion rules explicitly preserve model domain and prevent post hoc exclusions',()=>{
   assert.deepEqual(p.population.orderedRules.map(x=>x.id),['file-integrity','headers','id','sex','age','height','weight','reference']);
   assert.deepEqual(p.variables.equationSexMapping,{'männlich':'male','weiblich':'female'});
-  assert.equal(p.variables.mappingMeaning.includes('not inferred gender identity'),false);
+  assert.match(p.variables.mappingMeaning,/never inferred gender identity/);
   assert.equal(p.population.noImputation,true);
   assert.equal(p.population.noWinsorization,true);
   assert.match(p.population.duplicatePolicy,/Abort/);

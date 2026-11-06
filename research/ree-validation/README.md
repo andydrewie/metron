@@ -1,12 +1,12 @@
 # Metron · External resting-energy validation
 
-## In 20 seconds
+## At a glance
 
 **Research question:** How closely do Metron's **resting-metabolism equations** match measured resting energy expenditure obtained by **indirect calorimetry**?
 
 **Plan:** Qualify eligible datasets → freeze methodology → build deterministic benchmark → report actual error and uncertainty → decide whether findings warrant changing anything.
 
-**Status:** **Proposed, not run. No participant rows have been analyzed, no validation results exist, and the production TDEE calculator is unchanged.** The first gate is confirming that usable, lawfully reusable individual measurements are really available.
+**Status:** **G0 metadata audit under way; measured analysis not run.** Record-level licenses, published measurement methods and file listings have been inspected, but no participant file has been admitted for analysis. [See what is verified—and what is missing](./G0_SOURCE_AUDIT.md). Production TDEE remains unchanged.
 
 **One place to track:** [GitHub research dashboard — #9](https://github.com/andydrewie/metron/issues/9) · [Machine plan](./plan.json) · [Source candidates](./candidate-sources.json) · [Current science](../../docs/SCIENCE.md)
 
@@ -24,13 +24,13 @@ Published validation studies have reported meaningful population differences: co
 
 | Gate | Task | Issue | Status | Exit evidence |
 | --- | --- | --- | --- | --- |
-| **G0** | Dataset eligibility and rights | [#10](https://github.com/andydrewie/metron/issues/10) | Not started | Data/license/units/measurement verified |
+| **G0** | Dataset eligibility and rights | [#10](https://github.com/andydrewie/metron/issues/10) | Metadata review in progress | Dataset rights/variables/files verified |
 | **G1** | Freeze study methodology | [#11](https://github.com/andydrewie/metron/issues/11) | Not started | Reproducible preregistered comparison |
 | **G2** | Build benchmark pipeline | [#12](https://github.com/andydrewie/metron/issues/12) | Not started | Passing code/quality/metric tests |
 | **G3** | Analyze measured errors | [#13](https://github.com/andydrewie/metron/issues/13) | Not started | Published reproducible error report or blocker |
 | **G4** | Calibrate our decision | [#13](https://github.com/andydrewie/metron/issues/13) | Not started | Keep model or justify an explicit new ADR |
 
-Statuses in this document reflect the initial proposal; **GitHub Issues** are the living progress record. No deadline or velocity KPI. Code/research advancement requires evidence, not arbitrary completion percentages.
+Statuses reflect the latest documented audit; **GitHub Issues** are the living progress record. No deadline or velocity KPI. Code/research advancement requires evidence, not arbitrary completion percentages.
 
 ## How decisions advance
 
@@ -57,7 +57,7 @@ flowchart TD
 | [University of Bath · BATH-01393](https://researchportal.bath.ac.uk/en/datasets/dataset-for-are-there-sex-differences-in-the-variability-of-fasti/) | Study reports **208** participant records with RMR and body mass. | Access on researcher request; other required fields and repeat structure unverified. | Fallback, not assumed accessible |
 | [IAEA DLW](https://www.dlwdatabase.org/) | Over **7,000** full-day energy-expenditure measurements. | **Different measurement endpoint**, plus access governance. | Separate future TDEE study, not G0 |
 
-**Data admission is conditional.** Published N is not analyzed N. "Open" or "downloadable" doesn't alone establish a suitable file-level license or inclusion protocol. We must independently confirm each candidate's actual usable fields and permission terms. The [machine-readable source register](./candidate-sources.json) intentionally records unknowns.
+**As of November 6, 2026, all candidates remain unadmitted.** [G0 evidence audit](./G0_SOURCE_AUDIT.md) distinguishes published metadata from uninspected data. **Data admission is conditional.** Published N is not analyzed N. "Open" or "downloadable" doesn't alone establish a suitable file-level license or inclusion protocol. We must independently confirm each candidate's actual usable fields and permission terms. The [machine-readable source register](./candidate-sources.json) intentionally records unknowns.
 
 Avoid an attractive trap: a large dataset's **model-derived basal metabolic rate** is not ground-truth calorimetry. Comparing one equation to another derived output measures agreement between models, not accuracy against humans.
 

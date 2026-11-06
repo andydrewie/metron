@@ -27,7 +27,7 @@
       "id": "G0",
       "name": "Source eligibility and rights audit",
       "issue": 10,
-      "state": "not-started",
+      "state": "in-progress",
       "dependsOn": [],
       "evidenceNeeded": [
         "file-level license/permissions",
@@ -36,7 +36,12 @@
         "participant-level input fields and units",
         "measurement protocol and duplicate checks"
       ],
-      "goNoGo": "At least one lawfully analyzable cohort; otherwise report blocker"
+      "goNoGo": "At least one lawfully analyzable cohort; otherwise report blocker",
+      "evidenceReviewed": [
+        "Public source records, dataset catalog licenses, published measurement protocols and listed file hashes",
+        "G0 field-level audit still outstanding"
+      ],
+      "remainingBlocker": "Participant-level files not retrievable in this research environment; eligible model input fields and independently checked file-level usage rights remain unverified"
     },
     {
       "id": "G1",
@@ -182,5 +187,6 @@
     "https://dataverse.harvard.edu/dataset.xhtml?persistentId=doi:10.7910/DVN/MIOESN",
     "https://researchportal.bath.ac.uk/en/datasets/dataset-for-are-there-sex-differences-in-the-variability-of-fasti/",
     "https://www.dlwdatabase.org/"
-  ]
+  ],
+  "metadataAudit": "research/ree-validation/G0_SOURCE_AUDIT.md"
 }

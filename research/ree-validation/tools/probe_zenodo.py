@@ -55,6 +55,49 @@ def scrub(header: str) -> str | None:
     if "@" in value or not SAFE_HEADER.fullmatch(value): return None
     return value
 
+def safe_field_profile(header: list[str], records: list[list[str]]) -> dict:
+    """Only eligibility metadata: no sample values, IDs or outcome distributions."""
+    fields = [
+        "Site", "SEX", "Alter, Jahre", "GROESSE, cm", "GEWICHt_SECA, kg",
+        "FFM_SECA,kg", "RMR.KJ", "Label", "Probanden-ID"
+    ]
+    position = {name:i for i,name in enumerate(header)}
+    normalized_missing = {"", "na", "n/a", "null", "nan", "missing", "none", "-"}
+    numeric = {"Alter, Jahre", "GROESSE, cm", "GEWICHt_SECA, kg", "FFM_SECA,kg", "RMR.KJ"}
+    output = {}
+    for key in fields:
+        if key not in position:
+            output[key] = {"exists": False}
+            continue
+        idx = position[key]
+        vals = [(row[idx] if idx < len(row) else "").strip() for row in records]
+        known = [v for v in vals if v.lower() not in normalized_missing]
+        stats = {"exists": True, "nonmissing": len(known), "missing": len(vals)-len(known)}
+        if key in numeric:
+            parseable = 0
+            positive = 0
+            for v in known:
+                try:
+                    import math
+                    number = float(v.replace(",", "."))
+                    if math.isfinite(number):
+                        parseable += 1
+                        if number > 0: positive += 1
+                except ValueError:
+                    pass
+            stats.update({"numericParseable":parseable,"positiveNumeric":positive})
+        elif key in {"Site", "SEX"}:
+            distinct = sorted({v for v in known})
+            # Only small categorical code vocabularies are safe to expose.
+            stats["codeVocabulary"] = [scrub(v) for v in distinct] if len(distinct)<=12 else None
+            stats["distinctCodeCount"] = len(distinct)
+        else:
+            # Publication of raw participant codes is prohibited.
+            stats["distinctNonmissingCount"] = len(set(known))
+            stats["repeatedCodeCount"] = len(known)-len(set(known))
+        output[key] = stats
+    return {"requiredFieldAvailability":output,"countsOnlyNoValues":True}
+
 def summarize_tsv(blob: bytes) -> dict:
     text = blob.decode("utf-8-sig")
     first_line = text.splitlines()[0] if text.splitlines() else ""
@@ -71,7 +114,9 @@ def summarize_tsv(blob: bytes) -> dict:
     reader = csv.reader(io.StringIO(text), delimiter=sep)
     first = next(reader, [])
     headers = [scrub(v) for v in first]
-    rows = sum(1 for row in reader if row and any(x.strip() for x in row))
+    records = [row for row in reader if row and any(x.strip() for x in row)]
+    rows = len(records)
+    eligibility = safe_field_profile(first, records) if "RMR.KJ" in first else None
     return {
         "format": "delimited-text",
         "delimiter": {"\t":"tab",";":"semicolon",",":"comma","|":"pipe"}[sep],
@@ -80,6 +125,7 @@ def summarize_tsv(blob: bytes) -> dict:
         "recordCountExcludingFirstRow": rows,
         "fieldCount": len(first),
         "firstRowHeaderCandidates": headers,
+        "eligibilityMetadata": eligibility,
         "firstRowMayBeData": False,
         "containsSampleValues": False,
     }

@@ -4,7 +4,7 @@
 
 **What works:** Metron's free Energy / Readiness / Body instrument, deterministic JavaScript model, and JSON CLI.
 
-**What we're questioning:** Whether baseline, step, and workout energy can double count activity. [See the reproducible research question](https://github.com/andydrewie/metron/issues/1).
+**What we've reproduced:** Synthetic steps and workout inputs admit different overlap interpretations. [Explore the research-only arithmetic audit](../research/energy-accounting/README.md). The consumer model is unchanged; [Issue #1](https://github.com/andydrewie/metron/issues/1) remains open for a scientifically defensible contract.
 
 **What might follow:** A personal-calibration experiment, but only if it adds useful evidence. Caloric Allowance and wearable integrations remain possibilities, not promises.
 

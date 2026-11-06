@@ -43,7 +43,9 @@
     "vocabulary": "./docs/VOCABULARY.md",
     "decisionTemplate": "./docs/adr/TEMPLATE.md",
     "claudeAgentInstructions": "./CLAUDE.md",
-    "copilotAgentInstructions": "./.github/copilot-instructions.md"
+    "copilotAgentInstructions": "./.github/copilot-instructions.md",
+    "energyAccountingResearch": "./research/energy-accounting/README.md",
+    "energyAccountingFixtures": "./research/energy-accounting/scenarios.json"
   },
   "implemented": {
     "energyEstimate": true,

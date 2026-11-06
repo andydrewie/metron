@@ -1,0 +1,109 @@
+{
+  "schemaVersion": "1.0.0",
+  "documentType": "metron.research.provider-step-semantics",
+  "reviewedOn": "2026-11-06",
+  "evidenceBasis": "public-official-provider-documentation",
+  "researchQuestion": "Does an official provider surface establish that a workout's steps are included in an aggregate step total?",
+  "verdict": "not-established-across-reviewed-surfaces",
+  "productionModelChanged": false,
+  "comparison": [
+    {
+      "id": "whoop-v2",
+      "provider": "WHOOP",
+      "aggregateSurface": "cycle.step_count",
+      "aggregatePeriod": "physiological-cycle",
+      "workoutSurface": "workout start/end, sport and scored measurements",
+      "workoutLinkedStepCountDocumented": false,
+      "sampleLevelAssociationDocumented": false,
+      "automaticDailyStepInclusionProven": false,
+      "supportedObservation": "Cycle optionally reports step_count in a physiological period, rather than a midnight-to-midnight day. Public workout fields include timestamps and activity measures, but not a documented relation to included cycle steps.",
+      "caveat": "A null cycle step_count means missing data, not zero; active cycles are not complete periods.",
+      "publicDocumentationCoverage": "cycle and workout resource models reviewed",
+      "sourceIds": [
+        "whoopCycle",
+        "whoopWorkout",
+        "whoopChangelog"
+      ],
+      "sourceUrls": [
+        "https://developer.whoop.com/docs/developing/user-data/cycle/",
+        "https://developer.whoop.com/docs/developing/user-data/workout/",
+        "https://developer.whoop.com/docs/api-changelog/"
+      ],
+      "nextEvidence": "Documented step-level or explicit workout-to-cycle step membership, if ever exposed.",
+      "experimentalMembership": "unknown"
+    },
+    {
+      "id": "garmin-connect",
+      "provider": "Garmin",
+      "aggregateSurface": "Health API all-day steps / summary metrics",
+      "aggregatePeriod": "all-day summaries; verify actual record windows per dataset",
+      "workoutSurface": "Activity API summaries plus detailed FIT/GPX/TCX activity files",
+      "workoutLinkedStepCountDocumented": null,
+      "sampleLevelAssociationDocumented": null,
+      "automaticDailyStepInclusionProven": false,
+      "supportedObservation": "Garmin describes health step summaries and separate detailed activity data, but the public overview doesn't state a general workout-step inclusion rule across these surfaces.",
+      "caveat": "Garmin now documents a Personal API for a user's own data, separate from multi-user developer integration; access does not prove reconciliation semantics. Full definitions and field availability may require account/approved access.",
+      "publicDocumentationCoverage": "public overview and access paths reviewed; authenticated payload definitions not independently validated",
+      "sourceIds": [
+        "garminHealth",
+        "garminActivity",
+        "garminPersonal",
+        "garminOverview"
+      ],
+      "sourceUrls": [
+        "https://developer.garmin.com/gc-developer-program/enterprise/health-api/",
+        "https://developer.garmin.com/gc-developer-program/enterprise/activity-api/",
+        "https://developer.garmin.com/gc-developer-program/personal/personal-faq",
+        "https://developer.garmin.com/gc-developer-program/overview/"
+      ],
+      "nextEvidence": "Field-level and FIT record documentation establishing exact scope, units, identifiers, time windows and whether all-day totals include activity steps.",
+      "experimentalMembership": "unknown"
+    },
+    {
+      "id": "apple-healthkit",
+      "provider": "Apple HealthKit",
+      "aggregateSurface": "HKStatistics for cumulative stepCount; HKStatisticsCollectionQuery for day-aligned periods",
+      "aggregatePeriod": "caller-selected query intervals; aggregation merges sources by default",
+      "workoutSurface": "HKWorkout and associated HKSample objects via workout predicate",
+      "workoutLinkedStepCountDocumented": true,
+      "sampleLevelAssociationDocumented": true,
+      "automaticDailyStepInclusionProven": false,
+      "supportedObservation": "HealthKit can associate step-count samples with workouts and query samples from a workout. Statistical queries support per-period sums and optional per-source separation.",
+      "caveat": "Workout sample association does not by itself prove what a particular multi-source daily statistic contains; matching actual samples, query options, authorizations and deduplication semantics still require evaluation.",
+      "publicDocumentationCoverage": "official workout, query and aggregation semantics reviewed; no end-to-end membership proof with actual authorized records",
+      "sourceIds": [
+        "appleWorkout",
+        "appleAssociation",
+        "appleStats",
+        "appleCollections"
+      ],
+      "sourceUrls": [
+        "https://developer.apple.com/documentation/healthkit/hkworkout",
+        "https://developer.apple.com/documentation/healthkit/hkquery/predicateforobjects%28from%3A%29-5irg9",
+        "https://developer.apple.com/documentation/healthkit/hkstatistics",
+        "https://developer.apple.com/documentation/healthkit/executing-statistics-collection-queries"
+      ],
+      "nextEvidence": "In a privacy-safe local native test, compare workout-associated step sample identifiers and source-specific daily-statistic input population; never assume statistical merged total equals a naive sum.",
+      "experimentalMembership": "unknown"
+    }
+  ],
+  "researchDecision": {
+    "status": "complete-public-documentation-review",
+    "nearTerm": "Keep automatic reconciliation disabled; preserve unknown membership when evidence is missing.",
+    "experimentOrder": [
+      "apple-healthkit",
+      "garmin-connect",
+      "whoop-v2"
+    ],
+    "orderIs": "qualitative research-priority only, not a product launch sequence or validation ranking",
+    "rationale": "Apple documents workout-associated step samples and source-separated statistics, making a focused sample identity experiment most testable without inventing provider link semantics. Garmin offers detailed FIT and a Personal API but field-level cross-surface reconciliation remains unverified. WHOOP provides physiological-cycle steps but no documented per-workout included-step relationship in reviewed public models.",
+    "requiresHumanDataNow": false,
+    "ethicalConstraints": [
+      "No credentials or private records in repository",
+      "No vendor API requests needed for synthetic tests",
+      "No source-specific claim is evidence of a corrected human TDEE"
+    ],
+    "nextQuestion": "Can permission-cleared sample IDs or provenance establish exact inclusion within a particular aggregate total?",
+    "policyReference": "docs/adr/0004-provenance-before-automatic-reconciliation.md"
+  }
+}

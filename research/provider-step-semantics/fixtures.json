@@ -1,0 +1,144 @@
+{
+  "schemaVersion": "1.0.0",
+  "kind": "synthetic-public-doc-inspired-not-provider-payloads",
+  "cases": [
+    {
+      "id": "whoop-cycle",
+      "description": "Fabricated record inspired by the provider's documented data surface; not a real provider response.",
+      "providerRef": "whoop-v2",
+      "record": {
+        "schemaVersion": "0.1.0",
+        "studyStatus": "synthetic-only",
+        "stepSummary": {
+          "id": "whoop-cycle-summary",
+          "steps": 10000,
+          "unit": "steps",
+          "window": {
+            "start": "2026-11-05T13:00:00+08:00",
+            "end": "2026-11-06T13:00:00+08:00",
+            "basis": "physiological-cycle",
+            "timeZone": "Asia/Taipei"
+          },
+          "source": {
+            "provider": "synthetic-whoop-v2",
+            "recordType": "aggregate-steps",
+            "recordId": "whoop-cycle-steps",
+            "acquisition": "synthetic"
+          }
+        },
+        "workout": {
+          "id": "whoop-cycle-workout",
+          "activityType": "walking",
+          "window": {
+            "start": "2026-11-06T18:00:00+08:00",
+            "end": "2026-11-06T19:00:00+08:00",
+            "basis": "activity-session",
+            "timeZone": "Asia/Taipei"
+          },
+          "source": {
+            "provider": "synthetic-whoop-v2",
+            "recordType": "activity-session",
+            "recordId": "whoop-cycle-activity",
+            "acquisition": "synthetic"
+          },
+          "stepsDuringWorkout": null
+        },
+        "membership": {
+          "status": "unknown"
+        }
+      }
+    },
+    {
+      "id": "garmin-all-day",
+      "description": "Fabricated record inspired by the provider's documented data surface; not a real provider response.",
+      "providerRef": "garmin-connect",
+      "record": {
+        "schemaVersion": "0.1.0",
+        "studyStatus": "synthetic-only",
+        "stepSummary": {
+          "id": "garmin-all-day-summary",
+          "steps": 10000,
+          "unit": "steps",
+          "window": {
+            "start": "2026-11-06T00:00:00+08:00",
+            "end": "2026-11-07T00:00:00+08:00",
+            "basis": "calendar-day",
+            "timeZone": "Asia/Taipei"
+          },
+          "source": {
+            "provider": "synthetic-garmin-connect",
+            "recordType": "aggregate-steps",
+            "recordId": "garmin-all-day-steps",
+            "acquisition": "synthetic"
+          }
+        },
+        "workout": {
+          "id": "garmin-all-day-workout",
+          "activityType": "walking",
+          "window": {
+            "start": "2026-11-06T18:00:00+08:00",
+            "end": "2026-11-06T19:00:00+08:00",
+            "basis": "activity-session",
+            "timeZone": "Asia/Taipei"
+          },
+          "source": {
+            "provider": "synthetic-garmin-connect",
+            "recordType": "activity-session",
+            "recordId": "garmin-all-day-activity",
+            "acquisition": "synthetic"
+          },
+          "stepsDuringWorkout": 6000
+        },
+        "membership": {
+          "status": "unknown"
+        }
+      }
+    },
+    {
+      "id": "apple-mixed-sources",
+      "description": "Fabricated record inspired by the provider's documented data surface; not a real provider response.",
+      "providerRef": "apple-healthkit",
+      "record": {
+        "schemaVersion": "0.1.0",
+        "studyStatus": "synthetic-only",
+        "stepSummary": {
+          "id": "apple-mixed-sources-summary",
+          "steps": 10000,
+          "unit": "steps",
+          "window": {
+            "start": "2026-11-06T00:00:00+08:00",
+            "end": "2026-11-07T00:00:00+08:00",
+            "basis": "calendar-day",
+            "timeZone": "Asia/Taipei"
+          },
+          "source": {
+            "provider": "synthetic-apple-healthkit",
+            "recordType": "aggregate-steps",
+            "recordId": "apple-mixed-sources-steps",
+            "acquisition": "synthetic"
+          }
+        },
+        "workout": {
+          "id": "apple-mixed-sources-workout",
+          "activityType": "walking",
+          "window": {
+            "start": "2026-11-06T18:00:00+08:00",
+            "end": "2026-11-06T19:00:00+08:00",
+            "basis": "activity-session",
+            "timeZone": "Asia/Taipei"
+          },
+          "source": {
+            "provider": "synthetic-apple-healthkit",
+            "recordType": "activity-session",
+            "recordId": "apple-mixed-sources-activity",
+            "acquisition": "synthetic"
+          },
+          "stepsDuringWorkout": 6000
+        },
+        "membership": {
+          "status": "unknown"
+        }
+      }
+    }
+  ]
+}

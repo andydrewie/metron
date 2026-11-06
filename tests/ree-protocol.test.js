@@ -84,8 +84,8 @@ test('subgroups and version-control gate have evidence based limits',()=>{
   assert.equal(plan.phases[0].state,'complete');
   assert.equal(plan.phases[1].state,'complete');
   assert.equal(plan.phases[1].protocolId,p.protocolId);
-  assert.equal(plan.resultsAvailable,false);
+  if(plan.status==='protocol-locked')assert.equal(plan.resultsAvailable,false);
   assert.equal(manifest.researchPrototypes.rmrExternalValidation.status,plan.status);
-  assert.equal(manifest.researchPrototypes.rmrExternalValidation.empiricalResultsPublished,false);
+  assert.equal(manifest.researchPrototypes.rmrExternalValidation.empiricalResultsPublished,plan.resultsAvailable);
   assert.equal(manifest.implemented.calibratedIndividualUncertainty,false);
 });

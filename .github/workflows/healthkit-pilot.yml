@@ -1,0 +1,31 @@
+name: HealthKit Pilot · iOS build
+on:
+  pull_request:
+    paths:
+      - 'research/apple-healthkit-pilot/**'
+      - '.github/workflows/healthkit-pilot.yml'
+  push:
+    branches: [main]
+    paths:
+      - 'research/apple-healthkit-pilot/**'
+      - '.github/workflows/healthkit-pilot.yml'
+permissions:
+  contents: read
+jobs:
+  ios-simulator-build:
+    runs-on: macos-15
+    steps:
+      - uses: actions/checkout@v4
+      - name: Native toolchain
+        run: xcodebuild -version
+      - name: Compile local-only iOS app (no signing or Health access)
+        run: |
+          xcodebuild \
+            -project research/apple-healthkit-pilot/HealthPilot.xcodeproj \
+            -scheme HealthPilot \
+            -configuration Debug \
+            -sdk iphonesimulator \
+            -destination 'generic/platform=iOS Simulator' \
+            -derivedDataPath /tmp/metron-healthpilot-build \
+            CODE_SIGNING_ALLOWED=NO build > /tmp/metron-ios-build.log 2>&1 || { tail -n 140 /tmp/metron-ios-build.log; exit 1; }
+          tail -n 8 /tmp/metron-ios-build.log

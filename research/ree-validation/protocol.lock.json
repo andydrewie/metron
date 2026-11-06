@@ -1,0 +1,19 @@
+{
+  "schemaVersion": "1.0.0",
+  "kind": "metron.study-protocol-lock",
+  "studyId": "RMR-EXT-001",
+  "protocolId": "RMR-EXT-001-G1-v1",
+  "immutablePath": "research/ree-validation/protocol.v1.json",
+  "protocolGitBlobSha": "2a40beada8abfec0c778e1c64da256836ed735db",
+  "sourceDataSha256": "d91d7c609de5b90b7282afc36071c67cdbf8f7362f8d6fae82126f93c8d8ba61",
+  "g0EvidenceGitBlobSha": "8e466eed798d142ba292e86bc62529be870e2dc1",
+  "modelImplementationFile": "core/model.js",
+  "modelGitBlobSha": "228a8032b503f37d7b90b421f425b2225143226d",
+  "created": "2026-11-06",
+  "stage": "G1-locked-before-G2",
+  "preOutcomeErrorAnalysis": true,
+  "resultsAvailable": false,
+  "changePolicy": "Do not edit protocol.v1.json after merge. Amend by creating protocol.v2.json and a new lock entry with an explicit timestamp, rationale and whether errors had already been examined. G2 must pin the merged G1 commit as its immutable protocol reference.",
+  "humanDashboard": "https://github.com/andydrewie/metron/issues/9",
+  "gateIssue": "https://github.com/andydrewie/metron/issues/11"
+}

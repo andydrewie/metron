@@ -15,6 +15,19 @@ class ProbeTests(unittest.TestCase):
         self.assertNotIn("2222", json.dumps(out))
         self.assertNotIn("3333", json.dumps(out))
 
+    def test_comma_delimited_file_with_tsv_extension_and_safe_eligibility(self):
+        from probe_zenodo import summarize_tsv
+        payload = b"SEX,Alter, Jahre,RMR.KJ,Probanden-ID\nm,31,8600,secret_004\nw,26,7100,secret_005\n"
+        # Dataset headers containing commas should be properly CSV-quoted.
+        payload = b'SEX,"Alter, Jahre",RMR.KJ,Probanden-ID\nm,31,8600,secret_004\nw,26,7100,secret_005\n'
+        result = summarize_tsv(payload)
+        self.assertEqual(result["delimiter"],"comma")
+        self.assertEqual(result["fieldCount"],4)
+        self.assertEqual(result["eligibilityMetadata"]["requiredFieldAvailability"]["RMR.KJ"]["numericParseable"],2)
+        self.assertNotIn("secret_004", json.dumps(result))
+        self.assertNotIn("8600", json.dumps(result))
+        self.assertEqual(result["eligibilityMetadata"]["requiredFieldAvailability"]["Probanden-ID"]["distinctNonmissingCount"],2)
+
     def test_xlsx_only_returns_first_row_text_and_no_participant_values(self):
         ss = '<?xml version="1.0"?><sst xmlns="http://schemas.openxmlformats.org/spreadsheetml/2006/main"><si><t>Age</t></si><si><t>Measured_RMR</t></si></sst>'
         sheet = '<?xml version="1.0"?><worksheet xmlns="http://schemas.openxmlformats.org/spreadsheetml/2006/main"><sheetData><row r="1"><c r="A1" t="s"><v>0</v></c><c r="B1" t="s"><v>1</v></c></row><row r="2"><c r="A2"><v>30</v></c><c r="B2"><v>2555</v></c></row></sheetData></worksheet>'

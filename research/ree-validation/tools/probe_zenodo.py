@@ -96,7 +96,37 @@ def safe_field_profile(header: list[str], records: list[list[str]]) -> dict:
             stats["distinctNonmissingCount"] = len(set(known))
             stats["repeatedCodeCount"] = len(known)-len(set(known))
         output[key] = stats
-    return {"requiredFieldAvailability":output,"countsOnlyNoValues":True}
+    # Completeness of *inputs*, never outcome magnitudes or equation error.
+    # These provisional counts aren't final study exclusions: G1 still needs
+    # to freeze the cohort protocol and unit/coding interpretation.
+    def positive_numeric(row: list[str], key: str) -> bool:
+        index = position.get(key)
+        if index is None or index >= len(row): return False
+        value = row[index].strip()
+        if value.lower() in normalized_missing: return False
+        try:
+            import math
+            number = float(value.replace(",", "."))
+            return math.isfinite(number) and number > 0
+        except ValueError:
+            return False
+    def recognized_binary_equation_code(row: list[str]) -> bool:
+        index = position.get("SEX")
+        return index is not None and index < len(row) and row[index].strip().lower() in {"männlich", "weiblich"}
+    keys_mifflin = ["Alter, Jahre", "GROESSE, cm", "GEWICHt_SECA, kg", "RMR.KJ"]
+    counts = {
+        "measuredRmrAndMifflinInputPresent": sum(
+            1 for r in records if recognized_binary_equation_code(r) and all(positive_numeric(r,k) for k in keys_mifflin)
+        ),
+        "measuredRmrAndFfmPresent": sum(
+            1 for r in records if all(positive_numeric(r,k) for k in ["RMR.KJ","FFM_SECA,kg"])
+        ),
+        "measuredRmrAndBothEquationInputsPresent": sum(
+            1 for r in records if recognized_binary_equation_code(r) and all(positive_numeric(r,k) for k in keys_mifflin+["FFM_SECA,kg"])
+        ),
+    }
+    return {"requiredFieldAvailability":output,"provisionalCompleteCaseCounts":counts,
+            "countsNotFinalEligibility":True,"countsOnlyNoValues":True}
 
 def summarize_tsv(blob: bytes) -> dict:
     text = blob.decode("utf-8-sig")

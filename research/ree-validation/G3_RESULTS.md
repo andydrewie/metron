@@ -2,7 +2,7 @@
 
 ## In 20 seconds
 
-**On the same 454 eligible adults, Mifflin's mean absolute RMR error was 165.7 kcal/day; Cunningham's was 129.5.** The paired difference was −36.2 kcal/day (95% bootstrap CI −49.5 to −22.6), favoring Cunningham descriptively in this cohort. Mifflin underpredicted by 134.7 kcal/day on average. A separate Python calculation reproduced all reported metrics and intervals. **This is one released cohort, with BIA-estimated fat-free mass, not validation of TDEE or individual calorie targets.** G4 will separately consider implications; production calculations are unchanged.
+**On the same 454 eligible adults, Mifflin's mean absolute RMR error was 165.7 kcal/day; Cunningham's was 129.5.** The paired difference was −36.2 kcal/day (95% bootstrap CI −49.5 to −22.6), favoring Cunningham descriptively in this cohort. Mifflin underpredicted by 134.7 kcal/day on average. A separate Python calculation reproduced all reported metrics and intervals. **This is one released cohort, with BIA-estimated fat-free mass, not validation of TDEE or individual calorie targets.** The subsequent [G4 decision](./G4_DECISION.md) retains the default with scoped guidance; production calculations are unchanged.
 
 ---
 
@@ -140,6 +140,6 @@ Attribution: **Brandl B., Keppner G.-M., Manz Q., and colleagues.** *Predicting 
 
 Equation references: [Mifflin et al. (1990)](https://doi.org/10.1093/ajcn/51.2.241); [Cunningham (1980)](https://doi.org/10.1093/ajcn/33.11.2372).
 
-## Next: G4, a separate decision
+## Subsequent decision: G4
 
-Review applicability, the practical cost of obtaining FFM, independent-cohort evidence, counterevidence and reversal conditions before deciding whether to keep the current default, add population notes, or investigate a versioned change. **No product decision is implied by completing G3.** Issue #13 stays open for G4; a new ADR is warranted only for a consequential decision.
+The [separate G4 review](./G4_DECISION.md), dated 7 November 2026, retains the default and explicit Cunningham option with population and input-quality guidance. [ADR-0005](../../docs/adr/0005-retain-resting-default-pending-replication.md) records alternatives and reversal conditions. This navigation update does not change G3 methodology, results or provenance.

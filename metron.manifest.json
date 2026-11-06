@@ -65,7 +65,9 @@
     "rmrValidationHeadlessCli": "./research/ree-validation/run.mjs",
     "rmrValidationG2Guide": "./research/ree-validation/G2_BENCHMARK.md",
     "rmrValidationResults": "./research/ree-validation/G3_RESULTS.md",
-    "rmrValidationAggregateResults": "./research/ree-validation/results/g3-enable-v1.json"
+    "rmrValidationAggregateResults": "./research/ree-validation/results/g3-enable-v1.json",
+    "rmrValidationDecision": "./research/ree-validation/G4_DECISION.md",
+    "restingModelDecisionRecord": "./docs/adr/0005-retain-resting-default-pending-replication.md"
   },
   "implemented": {
     "energyEstimate": true,
@@ -125,8 +127,12 @@
       "frozenProtocol": "research/ree-validation/protocol.v1.json",
       "syntheticEngineAvailable": true,
       "realDataRequiresExplicitG3": true,
-      "nextGate": "G4",
-      "empiricalValidationScope": "single-source-reanalysis-of-fixed-RMR-equations"
+      "nextGate": null,
+      "empiricalValidationScope": "single-source-reanalysis-of-fixed-RMR-equations",
+      "decisionGateComplete": true,
+      "decision": "retain-default-with-population-and-input-quality-guidance",
+      "decisionArtifact": "research/ree-validation/G4_DECISION.md",
+      "independentCohortReplicationCompleted": false
     }
   }
 }

@@ -1,8 +1,8 @@
 {
   "schemaVersion": "1.0.0",
   "kind": "source-admission-register",
-  "lastReviewed": "2026-11-06",
-  "warning": "Primary enable_data.tsv qualified for G1 by verified public license, actual file checksums and field completeness. Other candidates unadmitted. No observed-vs-predicted errors calculated.",
+  "lastReviewed": "2026-11-07",
+  "warning": "Only enable_data.tsv has completed frozen G3 evaluation. G4 retains the default with scoped guidance. Other candidates, including the publisher-described ten Haaf Dataset S1, remain unadmitted; metadata is not file verification.",
   "records": [
     {
       "id": "enable-rmr",
@@ -62,7 +62,7 @@
       "measurementMethod": "Indirect calorimetry (COSMED Quark RMR canopy); source study methods",
       "ffmMethod": "SECA 515 bioimpedance-derived estimate",
       "provenanceEvidence": "https://github.com/andydrewie/metron/actions/runs/42161770901",
-      "nextGate": "G4: separate implications decision after the frozen G3 evaluation",
+      "nextGate": "RMR-EXT-001 G0–G4 complete; any new cohort requires separate admission and protocol",
       "reviewedMethods": [
         "enable RMR measured by indirect calorimetry COSMED Quark RMR canopy",
         "enable fat-free mass is SECA 515 bioimpedance-derived estimate, not direct body-composition reference"
@@ -130,6 +130,29 @@
       "metadataReviewed": true,
       "licenseEvidence": "https://researchportal.bath.ac.uk/en/datasets/dataset-for-are-there-sex-differences-in-the-variability-of-fasti/",
       "accessAudit": "Portal describes seven crossover studies; no file rights or individual fields inspected"
+    },
+    {
+      "id": "ten-haaf-2014",
+      "priority": "next-source-admission",
+      "title": "Recreational athlete REE Dataset S1",
+      "recordUrl": "https://doi.org/10.1371/journal.pone.0108460.s001",
+      "datasetDoi": "10.1371/journal.pone.0108460.s001",
+      "methodsUrl": "https://doi.org/10.1371/journal.pone.0108460",
+      "publicationReportedN": 90,
+      "referenceOutcomeClaim": "Indirect-calorimetry REE; publisher-described participant supplement",
+      "rights": "Article is CC BY; supplementary file-level conditions unverified",
+      "access": "publisher-linked-SPSS-SAV; bytes not retrieved",
+      "fileContentsInspected": false,
+      "variablesMapped": false,
+      "independentCohortsConfirmed": false,
+      "metadataReviewed": true,
+      "licenseEvidence": "https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0108460",
+      "decision": "candidate-not-admitted",
+      "risks": [
+        "Verify codebook and legitimate equation-sex mapping; do not infer from a gender field",
+        "Published outcomes already known; freeze separate reanalysis and disclose prior knowledge",
+        "New ten Haaf equations were developed in this cohort; it cannot independently validate them"
+      ]
     }
   ],
   "deferred": [

@@ -66,6 +66,19 @@
       "softwareVerification": "tests-passed",
       "empiricalValidation": "none",
       "supersededBy": null
+    },
+    {
+      "id": "ADR-0005",
+      "title": "Retain the resting-model default pending relevant replication",
+      "path": "docs/adr/0005-retain-resting-default-pending-replication.md",
+      "status": "Accepted",
+      "decisionDate": "2026-11-07",
+      "domain": "scientific-method",
+      "decisionConfidence": "medium",
+      "confidenceKind": "qualitative-judgment",
+      "softwareVerification": "tests-passed",
+      "empiricalValidation": "external-retrospective",
+      "supersededBy": null
     }
   ]
 }

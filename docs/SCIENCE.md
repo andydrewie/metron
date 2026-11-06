@@ -1,6 +1,6 @@
 # Science, provenance & limitations
 
-> **Status: exploratory modeling, not empirical validation.** METRON's core combines published resting-expenditure equations with simplifying assumptions and a separate, nonvalidated training-readiness heuristic. Neither numerical correctness nor test coverage proves accuracy for real humans.
+> **Status: exploratory whole-product modeling; limited external RMR evidence is published.** [G3](../research/ree-validation/G3_RESULTS.md) evaluated two fixed resting equations in one 454-person cohort. The combined daily-energy estimator and training-readiness heuristic remain unvalidated. Neither that cohort result nor software tests establish individual accuracy.
 
 ## 1. Resting energy (RMR / REE)
 
@@ -12,6 +12,14 @@
 Originally derived from indirect calorimetry data (n=498, ages 19–78); a population estimate with notable unexplained variation, not a measurement of the user's metabolism. Paper: Mifflin et al., *American Journal of Clinical Nutrition* (1990). DOI: [10.1093/ajcn/51.2.241](https://doi.org/10.1093/ajcn/51.2.241).
 
 **Cunningham (optional, requires body fat percentage):** `RMR = 500 + 22 × FFMkg`, with `FFMkg = weightKg × (1−bodyFatPercent/100)`. Original Cunningham equation: *AJCN* (1980), DOI: [10.1093/ajcn/33.11.2372](https://doi.org/10.1093/ajcn/33.11.2372). Body composition readings introduce their own measurement error. The app permits an explicit model choice instead of silently treating one as an accurate correction to the other.
+
+### G4 decision and choosing a resting equation
+
+**Keep Mifflin as the default and Cunningham as an explicit option.** [G4](../research/ree-validation/G4_DECISION.md) and [ADR-0005](./adr/0005-retain-resting-default-pending-replication.md) explain why Cunningham's better G3 result does not establish a universal replacement. Independent studies differ by population and measurement method. Retaining Mifflin is a provisional deployment decision, not evidence that it is always more accurate.
+
+Cunningham depends on the quality of the body-fat estimate used to calculate FFM. The software checks numeric bounds, not device accuracy or measurement conditions. At fixed weight, each percentage-point change in body fat shifts Cunningham by `0.22 × weightKg` kcal/day in the opposite direction. This is arithmetic sensitivity, not an error interval. Unknown or poorly characterized body composition is a practical reason to use the default; a documented measurement can support explicitly comparing Cunningham, without promising individual accuracy.
+
+The overall cohort result does not identify a winner for every age, body size, athletic background or equation-sex group. Do not convert it into a personalized calorie target or silently add the cohort bias to predictions.
 
 **SMM is not FFM.** Skeletal muscle mass is a subset of fat-free mass; FFM also includes organs, bone, fluids, and other nonfat tissues. Thus SMM by itself cannot determine body-fat percentage. We never add SMM as a caloric multiplier.
 
@@ -65,7 +73,7 @@ Designed as an **educational adult fitness estimator** for generally healthy adu
 
 1. **Mathematical tests — implemented:** Known-formula examples, boundary checks, invariants, and deterministic output.
 2. **Usability checks — initial prototype only:** Manual desktop/mobile rendering and interaction inspection. Formal accessibility testing is pending.
-3. **Measurement calibration — not done:** Measured indirect calorimetry vs predicted RMR with a clearly defined external dataset.
+3. **External resting-equation comparison — limited scope completed:** [G3](../research/ree-validation/G3_RESULTS.md) compares fixed equations with indirect-calorimetry RMR in one released cohort; [G4](../research/ree-validation/G4_DECISION.md) records the separate deployment decision. Independent cohort replication, prospective individual calibration and reference-instrument recalibration have not been performed by Metron.
 4. **External outcomes — not done:** Compare multiweek weight/intake data with model predictions, accounting for water fluctuations and intake misreporting.
 5. **Recovery validation — not done:** The readiness heuristic requires prospective evaluation; claims about injury prediction or optimal sets are explicitly prohibited pending such evidence.
 

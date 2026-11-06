@@ -5,7 +5,7 @@
 ## Research questions
 
 **R1 · REE equation performance**
-[Validated release admission](../research/ree-validation/G0_SOURCE_AUDIT.md) · [Frozen G1 protocol](../research/ree-validation/G1_FROZEN_PROTOCOL.md) · [Human dashboard](https://github.com/andydrewie/metron/issues/9) · [Agent-readable gates](../research/ree-validation/plan.json). **No measured benchmark has been run.**
+[Validated release admission](../research/ree-validation/G0_SOURCE_AUDIT.md) · [Frozen G1 protocol](../research/ree-validation/G1_FROZEN_PROTOCOL.md) · [Human dashboard](https://github.com/andydrewie/metron/issues/9) · [Agent-readable gates](../research/ree-validation/plan.json). **G0–G4 complete:** [G3](../research/ree-validation/G3_RESULTS.md) reports fixed-equation RMR errors in 454 adults; [G4](../research/ree-validation/G4_DECISION.md) retains the default with scoped guidance. Independent cohort replication remains open.
 
 Compare predicted resting metabolic rates (Mifflin–St Jeor and Cunningham) against indirect calorimetry measurements using an appropriately licensed, documented adult dataset. Report MAE, mean bias, 95% intervals, calibration plots, and subgroup performance. Report sample inclusion criteria; don't silently claim one equation wins for all users.
 
@@ -38,6 +38,8 @@ Compare numeric display formats (point estimate, rounded estimate, credible rang
 
 These labels are intentionally different. A project can be well engineered without its physiological estimates being accurate for every person.
 
-## Proposed benchmark interface (future, not implemented)
+## Current benchmark and proposed generic interface
+
+The [implemented frozen-study CLI](../research/ree-validation/G2_BENCHMARK.md) has published [G3 results](../research/ree-validation/G3_RESULTS.md). The broader interface below remains a proposal, not supported CLI syntax.
 
 `benchmark --dataset <licensed.csv> --target measuredRmrKcal --group sex` should produce machine-readable metrics and provenance. We won't publish fabricated benchmarks or use private health data without explicit consent.

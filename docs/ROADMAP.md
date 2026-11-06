@@ -12,7 +12,7 @@
 
 **Device-free research:** [Coefficient sensitivity audit](../research/assumption-sensitivity/README.md) tests how changes to stated assumptions move the modeled output. It requires no equipment or personal records. The optional HealthKit pilot is **not** a prerequisite for future work.
 
-**Current empirical research program:** [G3 measured-RMR results](../research/ree-validation/G3_RESULTS.md) are published for 454 eligible participants under the frozen G1 protocol. Mifflin MAE is 165.7 kcal/day; Cunningham is 129.5 in the same people. This is one cohort with BIA-estimated FFM, not TDEE or readiness validation. **G4 is the next separate evidence decision; the production model is unchanged.** [Track evidence](https://github.com/andydrewie/metron/issues/9).
+**Current empirical research program:** [G3 measured-RMR results](../research/ree-validation/G3_RESULTS.md) are published for 454 eligible participants under the frozen G1 protocol. Mifflin MAE is 165.7 kcal/day; Cunningham is 129.5 in the same people. This is one cohort with BIA-estimated FFM, not TDEE or readiness validation. **[G4 is complete](../research/ree-validation/G4_DECISION.md): retain Mifflin as default and Cunningham as an explicit option with population/input-quality guidance.** Next is qualifying an independent athlete cohort before a new frozen reanalysis; the production model is unchanged. [Track evidence](https://github.com/andydrewie/metron/issues/9).
 
 **What might follow:** A personal-calibration experiment, but only if it adds useful evidence. Caloric Allowance and wearable integrations remain possibilities, not promises.
 
@@ -20,7 +20,7 @@
 
 > **No deadlines, growth targets, or promises.** Metron is open homework: a beautiful, headless instrument for testing what we think we know about energy, training readiness, and nutrition. This document is a map of considerations, **not** a committed feature schedule.
 
-**Snapshot:** 2026-11-05 · **Current status:** Public MIT-licensed exploratory source and GitHub Pages app; Energy / Readiness / Body UI; deterministic JavaScript core + JSON CLI. **Not shipped:** personalized calibration, Caloric Allowance, wearable imports, injury prediction, scientifically validated training prescription.
+**Snapshot:** 2026-11-07 · **Current status:** Public MIT-licensed exploratory source and GitHub Pages app; Energy / Readiness / Body UI; deterministic JavaScript core + JSON CLI. **Not shipped:** personalized calibration, Caloric Allowance, wearable imports, injury prediction, scientifically validated training prescription.
 
 **The premise:** I wanted to understand how sleep, body composition, physical activity, and training volume interact. So I built a calculator, documented my assumptions, and open-sourced the homework.
 

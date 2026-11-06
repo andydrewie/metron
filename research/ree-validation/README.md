@@ -6,7 +6,7 @@
 
 **Plan:** Qualify eligible datasets → freeze methodology → build deterministic benchmark → report actual error and uncertainty → decide whether findings warrant changing anything.
 
-**Status:** **G0 passed and G1 protocol frozen; G2 benchmark engineering is next.** Dataset eligibility, reference conversion, model comparisons, exclusion rules, 5,000-replicate bootstrap, and reporting restrictions were locked **before computing errors**. [Read the frozen protocol](./G1_FROZEN_PROTOCOL.md) · [Machine v1 contract](./protocol.v1.json). **No measured accuracy results exist.** Production TDEE remains unchanged.
+**Status:** **G0 source admitted, G1 frozen, G2 benchmark implemented against synthetic fixtures.** The headless CLI verifies frozen source/model/protocol identities, computes deterministic synthetic metrics and provides audit outputs. [Read the engine methodology](./G2_BENCHMARK.md) · [Frozen protocol](./protocol.v1.json). **No measured-cohort accuracy results have been computed or published.** The production calculator is unchanged.
 
 **One place to track:** [GitHub research dashboard — #9](https://github.com/andydrewie/metron/issues/9) · [Machine plan](./plan.json) · [Source candidates](./candidate-sources.json) · [Current science](../../docs/SCIENCE.md)
 
@@ -26,7 +26,7 @@ Published validation studies have reported meaningful population differences: co
 | --- | --- | --- | --- | --- |
 | **G0** | Dataset eligibility and rights | [#10](https://github.com/andydrewie/metron/issues/10) | **Passed · enable TSV** | Verified license, hashes, field availability and source methodology |
 | **G1** | Freeze study methodology | [#11](https://github.com/andydrewie/metron/issues/11) | **Frozen · v1** | [Prespecified, versioned protocol](./G1_FROZEN_PROTOCOL.md) |
-| **G2** | Build benchmark pipeline | [#12](https://github.com/andydrewie/metron/issues/12) | Not started | Passing code/quality/metric tests |
+| **G2** | Build benchmark pipeline | [#12](https://github.com/andydrewie/metron/issues/12) | **Implemented · synthetic tests** | [Independent G2 audit](./G2_BENCHMARK.md) |
 | **G3** | Analyze measured errors | [#13](https://github.com/andydrewie/metron/issues/13) | Not started | Published reproducible error report or blocker |
 | **G4** | Calibrate our decision | [#13](https://github.com/andydrewie/metron/issues/13) | Not started | Keep model or justify an explicit new ADR |
 

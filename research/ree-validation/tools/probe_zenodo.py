@@ -57,12 +57,26 @@ def scrub(header: str) -> str | None:
 
 def summarize_tsv(blob: bytes) -> dict:
     text = blob.decode("utf-8-sig")
-    reader = csv.reader(io.StringIO(text), delimiter="\t")
+    first_line = text.splitlines()[0] if text.splitlines() else ""
+    # A .tsv extension is not proof of an actual tab delimiter. Explicitly
+    # identify separators before deciding which cells are candidate labels.
+    delimiters = {name: first_line.count(name) for name in ["\t", ";", ",", "|"]}
+    sep = max(delimiters, key=delimiters.get)
+    if delimiters[sep] == 0: sep = "\t"
+    try:
+        sniffed = csv.Sniffer().sniff(text[:min(len(text), 8192)], delimiters="\t,;|")
+        sep = sniffed.delimiter
+    except csv.Error:
+        pass
+    reader = csv.reader(io.StringIO(text), delimiter=sep)
     first = next(reader, [])
     headers = [scrub(v) for v in first]
     rows = sum(1 for row in reader if row and any(x.strip() for x in row))
     return {
-        "format": "tsv",
+        "format": "delimited-text",
+        "delimiter": {"\t":"tab",";":"semicolon",",":"comma","|":"pipe"}[sep],
+        "firstLineLength": len(first_line),
+        "delimiterCountsInFirstLine": {"tab":delimiters["\t"],"semicolon":delimiters[";"],"comma":delimiters[","],"pipe":delimiters["|"]},
         "recordCountExcludingFirstRow": rows,
         "fieldCount": len(first),
         "firstRowHeaderCandidates": headers,
@@ -102,7 +116,25 @@ def extract_excel_header(blob: bytes) -> dict:
                     # Deliberately refuse numeric/date cells: only text *likely*
                     # headers are revealed. Never print subsequent row values.
                     labels.append(scrub(actual) if actual is not None else None)
+            # The enable workbook uses a category/group row above the
+            # real field labels. Inspect the next row ONLY if the first row
+            # is demonstrably a category heading, never for ordinary sheets
+            # where the second row may contain participant observations.
+            second_labels = None
+            categories = {"General information", "Anthropometric and body composition", "Parameters of the indirect calorimetry"}
+            if len(rows) > 1 and any(x in categories for x in labels if x):
+                second_labels = []
+                for cell in rows[1].findall(M + "c"):
+                    t, value, inline = cell.get("t"), cell.find(M + "v"), cell.find(M + "is")
+                    actual = None
+                    if t == "s" and value is not None:
+                        try: actual = shared[int(value.text)]
+                        except (IndexError, ValueError, TypeError): pass
+                    elif t == "inlineStr" and inline is not None:
+                        actual = "".join(x.text or "" for x in inline.iter(M + "t"))
+                    second_labels.append(scrub(actual) if actual is not None else None)
             summary.append({
+                "secondRowFieldHeaderCandidates": second_labels,
                 "worksheet": sheet,
                 "declaredRows": len(rows),
                 "firstRowCellCount": len(labels),

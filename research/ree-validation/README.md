@@ -6,7 +6,7 @@
 
 **Plan:** Qualify eligible datasets → freeze methodology → build deterministic benchmark → report actual error and uncertainty → decide whether findings warrant changing anything.
 
-**Status: G3 measured results published.** The frozen evaluation includes 454 eligible participants: Mifflin MAE **165.7 kcal/day**, Cunningham **129.5**, with paired difference **−36.2** (95% bootstrap CI −49.5 to −22.6). [Read the results and limitations](./G3_RESULTS.md) · [Aggregate JSON](./results/g3-enable-v1.json). This single-source RMR reanalysis does not validate TDEE or readiness. **G4 is next; production calculations are unchanged.**
+**Status: G3 measured results published.** The frozen evaluation includes 454 eligible participants: Mifflin MAE **165.7 kcal/day**, Cunningham **129.5**, with paired difference **−36.2** (95% bootstrap CI −49.5 to −22.6). [Read the results and limitations](./G3_RESULTS.md) · [Aggregate JSON](./results/g3-enable-v1.json). This single-source RMR reanalysis does not validate TDEE or readiness. **G4 is complete:** retain the default and explicit alternative, with population and input-quality guidance. [Decision and reversal conditions](./G4_DECISION.md). Production calculations are unchanged.
 
 **One place to track:** [GitHub research dashboard — #9](https://github.com/andydrewie/metron/issues/9) · [Machine plan](./plan.json) · [Source candidates](./candidate-sources.json) · [Current science](../../docs/SCIENCE.md)
 
@@ -28,7 +28,7 @@ Published validation studies have reported meaningful population differences: co
 | **G1** | Freeze study methodology | [#11](https://github.com/andydrewie/metron/issues/11) | **Frozen · v1** | [Prespecified, versioned protocol](./G1_FROZEN_PROTOCOL.md) |
 | **G2** | Build benchmark pipeline | [#12](https://github.com/andydrewie/metron/issues/12) | **Implemented · synthetic tests** | [Independent G2 audit](./G2_BENCHMARK.md) |
 | **G3** | Analyze measured errors | [#13](https://github.com/andydrewie/metron/issues/13) | **Complete · 454 eligible** | [Results, intervals and independent calculation audit](./G3_RESULTS.md) |
-| **G4** | Calibrate our decision | [#13](https://github.com/andydrewie/metron/issues/13) | Not started | Keep model or justify an explicit new ADR |
+| **G4** | Calibrate our decision | [#13](https://github.com/andydrewie/metron/issues/13) | **Complete · retain default** | [Evidence review](./G4_DECISION.md) and [ADR-0005](../../docs/adr/0005-retain-resting-default-pending-replication.md) |
 
 Statuses reflect the latest documented audit; **GitHub Issues** are the living progress record. No deadline or velocity KPI. Code/research advancement requires evidence, not arbitrary completion percentages.
 
@@ -88,7 +88,9 @@ Avoid an attractive trap: a large dataset's **model-derived basal metabolic rate
 
 A participant-independent report must include data source/version and checksums, sample flow from raw rows to analysis rows, equation version, reference method, and warnings. The code and synthetic tests must be reproducible without publishing unauthorized individual health records.
 
-### G4 · Interpret, then decide
+### G4 · Completed decision
+
+[The evidence review](./G4_DECISION.md) retains Mifflin as default and Cunningham as an explicit option. The next independent investigation is source admission for ten Haaf & Weijs Dataset S1; no new cohort has been analysed. The original decision rule remains:
 
 Our default equation is **not automatically replaced** because another formula wins a single cohort. We must examine paired errors, effect sizes, uncertainty, applicability of the population, practical value, and counterevidence. A real consequential change merits an ADR and versioned model contract; otherwise preserve the original and publish the negative or inconclusive finding.
 

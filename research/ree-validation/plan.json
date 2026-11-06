@@ -2,7 +2,7 @@
   "schemaVersion": "1.0.0",
   "documentType": "metron.research.execution-plan",
   "studyId": "RMR-EXT-001",
-  "asOf": "2026-11-06",
+  "asOf": "2026-11-07",
   "status": "published",
   "resultsAvailable": true,
   "measuredDataAccessed": true,
@@ -124,7 +124,7 @@
       "id": "G4",
       "name": "Review model implications without automatic adoption",
       "issue": 13,
-      "state": "not-started",
+      "state": "complete",
       "dependsOn": [
         "G3"
       ],
@@ -135,7 +135,12 @@
         "reversal trigger",
         "ADR only if consequential code/claim changes"
       ],
-      "goNoGo": "Keep default unless changes are supported and independently reviewed"
+      "goNoGo": "Keep default unless changes are supported and independently reviewed",
+      "evidenceArtifact": "research/ree-validation/G4_DECISION.md",
+      "decisionRecord": "docs/adr/0005-retain-resting-default-pending-replication.md",
+      "decision": "Retain Mifflin default and explicit Cunningham option; add population/input-quality guidance; require relevant independent replication before adoption changes",
+      "completedOn": "2026-11-07",
+      "newParticipantDataAnalyzed": false
     }
   ],
   "comparisons": {
@@ -214,9 +219,18 @@
   "metadataAudit": "research/ree-validation/G0_SOURCE_AUDIT.md",
   "admittedSource": "enable-rmr:enable_data.tsv",
   "measurementOutcomesAnalyzed": true,
-  "nextGate": "G4",
+  "nextGate": null,
   "frozenProtocol": "research/ree-validation/protocol.v1.json",
   "frozenProtocolStatus": "frozen-before-model-error-analysis",
   "resultsArtifact": "research/ree-validation/results/g3-enable-v1.json",
-  "humanResults": "research/ree-validation/G3_RESULTS.md"
+  "humanResults": "research/ree-validation/G3_RESULTS.md",
+  "decisionArtifact": "research/ree-validation/G4_DECISION.md",
+  "decisionRecord": "docs/adr/0005-retain-resting-default-pending-replication.md",
+  "nextInvestigation": {
+    "id": "ten-haaf-2014-source-admission",
+    "state": "not-started",
+    "scope": "Qualify Dataset S1 rights, file identity, codebook, equation-sex mapping and cohort independence before a separate frozen reanalysis",
+    "candidate": "ten-haaf-2014",
+    "requiresNewProtocol": true
+  }
 }

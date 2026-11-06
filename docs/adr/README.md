@@ -12,6 +12,7 @@ Read [the collaboration policy](../COLLABORATION.md) before proposing new record
 | [ADR-0002](./0002-repository-based-continuity.md) | Keep collaboration rules durable across agents and sessions | Accepted |
 | [ADR-0003](./0003-explicit-overlap-assumptions.md) | Preserve default TDEE; require explicit overlap evidence for research adjustments | Accepted |
 | [ADR-0004](./0004-provenance-before-automatic-reconciliation.md) | Separate clock overlap from step-summary inclusion | Accepted |
+| [ADR-0005](./0005-retain-resting-default-pending-replication.md) | Retain the resting-model default pending relevant replication | Accepted |
 
 **Machine index:** [`index.json`](./index.json), with stable IDs, file paths, status, confidence type and decision domain. Do not treat the index as a substitute for reading an ADR's rationale.
 

@@ -260,7 +260,9 @@
         "research/ree-validation/run.mjs",
         "research/ree-validation/fixtures/synthetic-rmr.csv",
         "research/ree-validation/render.mjs",
-        "tests/ree-benchmark.test.js"
+        "tests/ree-benchmark.test.js",
+        "research/ree-validation/G3_RESULTS.md",
+        "research/ree-validation/results/g3-enable-v1.json"
       ],
       "status": "research-question"
     }

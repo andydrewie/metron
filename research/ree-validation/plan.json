@@ -3,8 +3,8 @@
   "documentType": "metron.research.execution-plan",
   "studyId": "RMR-EXT-001",
   "asOf": "2026-11-06",
-  "status": "benchmark-implemented",
-  "resultsAvailable": false,
+  "status": "published",
+  "resultsAvailable": true,
   "measuredDataAccessed": true,
   "question": "How accurately do Metron's fixed RMR equation outputs agree with independently measured indirect-calorimetry RMR in eligible adult cohorts?",
   "scope": {
@@ -100,7 +100,7 @@
       "id": "G3",
       "name": "Run empirical benchmark and publish evidence",
       "issue": 13,
-      "state": "not-started",
+      "state": "complete",
       "dependsOn": [
         "G2"
       ],
@@ -112,7 +112,13 @@
         "source and model versions",
         "negative-result reporting"
       ],
-      "goNoGo": "Reproducible report or explicit irreducible data blocker"
+      "goNoGo": "Reproducible report or explicit irreducible data blocker",
+      "evidenceArtifact": "research/ree-validation/results/g3-enable-v1.json",
+      "humanEvidence": "research/ree-validation/G3_RESULTS.md",
+      "auditArtifact": "research/ree-validation/results/g3-audit-v1.json",
+      "actualEligibleN": 454,
+      "pairedEligibleN": 454,
+      "decision": "Frozen fixed-equation evaluation published; G4 implications remain a separate decision"
     },
     {
       "id": "G4",
@@ -207,8 +213,10 @@
   ],
   "metadataAudit": "research/ree-validation/G0_SOURCE_AUDIT.md",
   "admittedSource": "enable-rmr:enable_data.tsv",
-  "measurementOutcomesAnalyzed": false,
-  "nextGate": "G3",
+  "measurementOutcomesAnalyzed": true,
+  "nextGate": "G4",
   "frozenProtocol": "research/ree-validation/protocol.v1.json",
-  "frozenProtocolStatus": "frozen-before-model-error-analysis"
+  "frozenProtocolStatus": "frozen-before-model-error-analysis",
+  "resultsArtifact": "research/ree-validation/results/g3-enable-v1.json",
+  "humanResults": "research/ree-validation/G3_RESULTS.md"
 }

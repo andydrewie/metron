@@ -62,11 +62,12 @@
       "measurementMethod": "Indirect calorimetry (COSMED Quark RMR canopy); source study methods",
       "ffmMethod": "SECA 515 bioimpedance-derived estimate",
       "provenanceEvidence": "https://github.com/andydrewie/metron/actions/runs/42161770901",
-      "nextGate": "G1 protocol freeze before computing any prediction error",
+      "nextGate": "G4: separate implications decision after the frozen G3 evaluation",
       "reviewedMethods": [
         "enable RMR measured by indirect calorimetry COSMED Quark RMR canopy",
         "enable fat-free mass is SECA 515 bioimpedance-derived estimate, not direct body-composition reference"
-      ]
+      ],
+      "empiricalEvaluation": "fixed-equation single-source reanalysis, 454 eligible, G3_RESULTS.md"
     },
     {
       "id": "navalta-inclusive",

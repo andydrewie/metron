@@ -251,7 +251,8 @@
         "docs/RESEARCH.md",
         "docs/SCIENCE.md",
         "core/model.js",
-        "research/ree-validation/G0_SOURCE_AUDIT.md"
+        "research/ree-validation/G0_SOURCE_AUDIT.md",
+        "research/ree-validation/G0_FILE_VERIFICATION.json"
       ],
       "status": "research-question"
     }

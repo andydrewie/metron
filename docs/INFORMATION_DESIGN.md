@@ -14,7 +14,7 @@
 
 1. **An executive orientation at the top:** what this page answers, why it matters, what is working versus hypothetical, and the natural next action. Aim for 2–4 sentences, not a wall of text.
 
-**Do not promise a reading duration.** Use `At a glance` or `Executive summary` instead of `In 20 seconds`. Clarity is a communication obligation, not a stopwatch imposed on the reader.
+**Flexible executive label:** `In 20 seconds` is welcome for genuinely concise, scannable first-glance summaries; `At a glance` and `Executive summary` work too. Treat twenty seconds as an editorial design aspiration, **never an imposed time limit or a guarantee of individual reading speed**.
 2. **Visual explanation when earned:** make sequence, comparison, uncertainty, or dependency easier to grasp than prose alone. Give the visual a short takeaway above and a text equivalent below.
 3. **Optional depth:** detailed methods, assumptions, equations, citations, source code, counterexamples, and experiment protocols are linked or progressively disclosed. Do not hide crucial warnings, eligibility limits, or what is unvalidated.
 4. **Respect mobile attention:** one readable column, large meaningful values, accessible labels, restrained color, no horizontal labyrinth or gratuitous decorative diagrams.

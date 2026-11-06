@@ -5,7 +5,7 @@
   "asOf": "2026-11-06",
   "status": "proposed-not-run",
   "resultsAvailable": false,
-  "measuredDataAccessed": false,
+  "measuredDataAccessed": true,
   "question": "How accurately do Metron's fixed RMR equation outputs agree with independently measured indirect-calorimetry RMR in eligible adult cohorts?",
   "scope": {
     "endpoint": "RMR/REE in kcal/day",
@@ -27,7 +27,7 @@
       "id": "G0",
       "name": "Source eligibility and rights audit",
       "issue": 10,
-      "state": "in-progress",
+      "state": "complete",
       "dependsOn": [],
       "evidenceNeeded": [
         "file-level license/permissions",
@@ -38,10 +38,14 @@
       ],
       "goNoGo": "At least one lawfully analyzable cohort; otherwise report blocker",
       "evidenceReviewed": [
-        "Public source records, dataset catalog licenses, published measurement protocols and listed file hashes",
-        "G0 field-level audit still outstanding"
+        "Zenodo cc-by-4.0 record rights and direct public file downloads",
+        "Four actual release files inspected; all MD5 matched and SHA-256 recorded",
+        "enable_data.tsv 459 distinct participant IDs, 454 positive numeric measured RMR and joint available fields",
+        "Source article documents enable indirect-calorimetry procedure, separate Kiel method and SECA bioimpedance FFM"
       ],
-      "remainingBlocker": "Participant-level files not retrievable in this research environment; eligible model input fields and independently checked file-level usage rights remain unverified"
+      "remainingBlocker": null,
+      "evidenceArtifact": "research/ree-validation/G0_FILE_VERIFICATION.json",
+      "decision": "Qualified enable_data.tsv for G1 protocol design; other sources not admitted"
     },
     {
       "id": "G1",
@@ -188,5 +192,8 @@
     "https://researchportal.bath.ac.uk/en/datasets/dataset-for-are-there-sex-differences-in-the-variability-of-fasti/",
     "https://www.dlwdatabase.org/"
   ],
-  "metadataAudit": "research/ree-validation/G0_SOURCE_AUDIT.md"
+  "metadataAudit": "research/ree-validation/G0_SOURCE_AUDIT.md",
+  "admittedSource": "enable-rmr:enable_data.tsv",
+  "measurementOutcomesAnalyzed": false,
+  "nextGate": "G1"
 }

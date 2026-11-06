@@ -257,6 +257,7 @@ def inspect_record(meta: dict, loader=fetch) -> dict:
             "name": name,
             "bytes": len(data),
             "md5MatchesZenodo": True,
+            "sha256ComputedByMetron": hashlib.sha256(data).hexdigest(),
             "reportedFileSizeMatches": len(data) == file.get("size"),
             "structure": detail,
         })

@@ -56,7 +56,8 @@
     "assumptionSensitivityFixtures": "./research/assumption-sensitivity/fixtures.json",
     "rmrValidationProgram": "./research/ree-validation/README.md",
     "rmrValidationPlan": "./research/ree-validation/plan.json",
-    "rmrValidationCandidates": "./research/ree-validation/candidate-sources.json"
+    "rmrValidationCandidates": "./research/ree-validation/candidate-sources.json",
+    "rmrValidationG0Audit": "./research/ree-validation/G0_SOURCE_AUDIT.md"
   },
   "implemented": {
     "energyEstimate": true,

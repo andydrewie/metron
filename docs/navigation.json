@@ -250,7 +250,8 @@
         "research/ree-validation/candidate-sources.json",
         "docs/RESEARCH.md",
         "docs/SCIENCE.md",
-        "core/model.js"
+        "core/model.js",
+        "research/ree-validation/G0_SOURCE_AUDIT.md"
       ],
       "status": "research-question"
     }

@@ -80,3 +80,21 @@ test('human and machine routing remain available and production remains explorat
  assert.equal(m.implemented.empiricallyValidatedReadiness,false);
  assert.equal(m.implemented.calibratedIndividualUncertainty,false);
 });
+
+test('G0 source audit distinguishes reviewed metadata from uninspected measured records',()=>{
+ const plan=read('research/ree-validation/plan.json');
+ const sources=read('research/ree-validation/candidate-sources.json');
+ assert.ok(['in-progress','blocked','complete'].includes(plan.phases[0].state));
+ assert.equal(sources.records.length,3);
+ for(const r of sources.records){
+   assert.equal(typeof r.metadataReviewed,'boolean');
+   assert.equal(typeof r.fileContentsInspected,'boolean');
+   assert.ok(r.licenseEvidence.startsWith('https://'));
+   if(!r.fileContentsInspected)assert.notEqual(r.decision,'eligible');
+ }
+ assert.ok(sources.records.find(r=>r.id==='enable-rmr').observedFileManifest.length>=3);
+ const nav=read('docs/navigation.json');
+ const route=nav.routes.find(r=>r.id==='plan-resting-energy-validation');
+ assert.ok(route.next.includes('research/ree-validation/G0_SOURCE_AUDIT.md'));
+ assert.ok(exists('research/ree-validation/G0_SOURCE_AUDIT.md'));
+});

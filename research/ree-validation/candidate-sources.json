@@ -1,8 +1,8 @@
 {
   "schemaVersion": "1.0.0",
-  "kind": "unverified-source-register",
+  "kind": "metadata-reviewed-source-register",
   "lastReviewed": "2026-11-06",
-  "warning": "Published sample size is not an analyzed sample count. Listed dataset rights do not establish file-level reusable participant records. Do not report validation until reviewed.",
+  "warning": "Metadata inspection only; no participant-level files have been opened; all cohorts remain unadmitted. Catalog licenses are record-level reports, not independent verification of every source file.",
   "records": [
     {
       "id": "enable-rmr",
@@ -18,7 +18,7 @@
         "enable_Datensatz_RMR._Erwachsene 1.xlsx",
         "KIEL_REE Datenbank TUM_Januar 2025tf QM.xlsx"
       ],
-      "rights": "unverified-specific-record-license",
+      "rights": "NLM catalog lists CC BY 4.0 for Zenodo record; file-specific reuse terms not independently checked",
       "access": "public-file-listing",
       "fileContentsInspected": false,
       "variablesMapped": false,
@@ -28,7 +28,28 @@
         "Missing/derived variables and actual analytical N must be checked",
         "Record-specific file license must be independently confirmed"
       ],
-      "decision": "candidate-not-admitted"
+      "decision": "candidate-not-admitted",
+      "metadataReviewed": true,
+      "licenseEvidence": "https://datasetcatalog.nlm.nih.gov/dataset?q=0002212869",
+      "fileManifestEvidence": "https://zenodo.org/records/17735477",
+      "observedFileManifest": [
+        {
+          "name": "enable_data.tsv",
+          "sizeApprox": "179.8 kB",
+          "sourceMd5": "99d1cfa3b6d1620e4da113f0cc93bf22"
+        },
+        {
+          "name": "enable_Datensatz_RMR._Erwachsene 1.xlsx",
+          "sizeApprox": "237.3 kB",
+          "sourceMd5": "63be73c1d11e38b563abbdc87dc152b4"
+        },
+        {
+          "name": "KIEL_REE Datenbank TUM_Januar 2025tf QM.xlsx",
+          "sizeApprox": "93.3 kB",
+          "sourceMd5": "5470fd1af5970bef9c74f6df620a45f4"
+        }
+      ],
+      "accessAudit": "Open record-level file names and checksums verified in public listing; actual file bytes not retrieved in this environment"
     },
     {
       "id": "navalta-inclusive",
@@ -42,7 +63,7 @@
       "filesListed": [
         "Excel file described by NLM dataset catalog; precise filename unverified"
       ],
-      "rights": "CC0-1.0-listed-by-NLM-catalog-file-level-unverified",
+      "rights": "NLM catalog lists CC0 1.0 for Harvard Dataverse record; file-specific terms not independently checked",
       "access": "public-catalog-and-dataverse-record",
       "fileContentsInspected": false,
       "variablesMapped": false,
@@ -52,7 +73,21 @@
         "Do not impute equationSex from participant gender; cohort may support only non-Mifflin research until mapping confirmed",
         "Study's equation was derived on these participants; do not call its in-sample fit independent validation"
       ],
-      "decision": "candidate-not-admitted"
+      "decision": "candidate-not-admitted",
+      "metadataReviewed": true,
+      "licenseEvidence": "https://datasetcatalog.nlm.nih.gov/dataset?q=0000108113",
+      "catalogFieldNames": [
+        "Age (years)",
+        "Height (cm)",
+        "Mass (kg)",
+        "Waist Girth (cm)",
+        "Hip Girth (cm)",
+        "W-H-Ratio",
+        "Resting HR (bpm)",
+        "RMR (kcal/day)"
+      ],
+      "sexEquationParameterListed": false,
+      "accessAudit": "Metadata and listed fields only; Excel workbook bytes not independently retrieved or audited"
     },
     {
       "id": "bath-fasting",
@@ -64,7 +99,7 @@
       "publicationReportedN": 208,
       "referenceOutcomeClaim": "Resting metabolic rate and body mass in crossover studies",
       "filesListed": [],
-      "rights": "requires-source-terms-verification",
+      "rights": "Access by researcher request; data reuse terms not established",
       "access": "request-to-bona-fide-researchers",
       "fileContentsInspected": false,
       "variablesMapped": false,
@@ -73,7 +108,10 @@
         "Access requires a bona fide researcher request",
         "Repeated measures possible; sex, age and height fields may not be available for model validation"
       ],
-      "decision": "not-currently-usable"
+      "decision": "not-currently-usable",
+      "metadataReviewed": true,
+      "licenseEvidence": "https://researchportal.bath.ac.uk/en/datasets/dataset-for-are-there-sex-differences-in-the-variability-of-fasti/",
+      "accessAudit": "Portal describes seven crossover studies; no file rights or individual fields inspected"
     }
   ],
   "deferred": [
@@ -90,5 +128,6 @@
       "exampleUrl": "https://biobank.ndph.ox.ac.uk/ukb/field.cgi?id=23105",
       "reason": "A derived basal metabolic rate field is not independent indirect-calorimetry measurement; comparing another equation to it would validate agreement between models, not physiology."
     }
-  ]
+  ],
+  "metadataAudit": "research/ree-validation/G0_SOURCE_AUDIT.md"
 }

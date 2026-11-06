@@ -95,10 +95,11 @@
   "researchPrototypes": {
     "appleHealthKitOnDevicePilot": {
       "sourceAvailable": true,
-      "simulatorBuildVerified": false,
+      "simulatorBuildVerified": true,
       "realDeviceDataCollected": false,
       "productionIntegration": false,
-      "requiresExplicitOnDevicePermission": true
+      "requiresExplicitOnDevicePermission": true,
+      "simulatorBuildEvidence": "https://github.com/andydrewie/metron/actions/runs/42156958864"
     }
   }
 }

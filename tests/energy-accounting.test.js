@@ -1,6 +1,7 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import { readFileSync } from 'node:fs';
+import { execFileSync } from 'node:child_process';
 import { auditOverlap } from '../research/energy-accounting/audit.mjs';
 import { estimateEnergy } from '../core/model.js';
 const fixtures=JSON.parse(readFileSync(new URL('../research/energy-accounting/scenarios.json',import.meta.url),'utf8'));
@@ -58,4 +59,14 @@ test('experiment refuses overlap without evidence-consistent model allocations',
   assert.throws(()=>auditOverlap({...input,overlap:{kind:'bounded-unknown',maximumStepsAssignedToWorkoutBeyondBaseline:9000}}),RangeError);
   assert.throws(()=>auditOverlap({...input,overlap:{kind:'unqualified'}}),TypeError);
   assert.throws(()=>auditOverlap({...input,activity:{steps:10000,workoutMinutes:0},overlap:{kind:'known',stepsAssignedToWorkoutBeyondBaseline:1}}),RangeError);
+});
+
+test('headless research runner prints navigable, synthetic JSON',()=>{
+  const script=new URL('../research/energy-accounting/run.mjs',import.meta.url);
+  const json=execFileSync(process.execPath,[script.pathname],{encoding:'utf8'});
+  const result=JSON.parse(json);
+  assert.equal(result.schemaVersion,'1.0.0');
+  assert.equal(result.status,'synthetic-only');
+  assert.equal(result.results.length,6);
+  assert.equal(result.results.find(x=>x.id==='bounded-unknown').diagnostic.conditionalScenario.isCalibratedInterval,false);
 });

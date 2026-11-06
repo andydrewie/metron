@@ -1,0 +1,268 @@
+{
+  "schemaVersion": "1.0.0",
+  "documentType": "metron.research.locked-analysis-protocol",
+  "studyId": "RMR-EXT-001",
+  "protocolId": "RMR-EXT-001-G1-v1",
+  "protocolVersion": "1.0.0",
+  "freezeDate": "2026-11-06",
+  "status": "frozen-before-model-error-analysis",
+  "resultsAvailable": false,
+  "observedVsPredictedErrorsExamined": false,
+  "registrationScope": "Frozen within Metron before its own error analysis; not a clinical-trial registry or proof the source researchers never compared equations.",
+  "parentIssue": "https://github.com/andydrewie/metron/issues/9",
+  "protocolIssue": "https://github.com/andydrewie/metron/issues/11",
+  "source": {
+    "recordId": 17735477,
+    "doi": "10.5281/zenodo.17735477",
+    "version": "v1",
+    "sourceUrl": "https://zenodo.org/records/17735477",
+    "license": "CC BY 4.0",
+    "licenseScope": "Zenodo record metadata; attribution required",
+    "file": "enable_data.tsv",
+    "actualDelimiter": "comma",
+    "encoding": "utf-8-sig",
+    "fileSha256": "d91d7c609de5b90b7282afc36071c67cdbf8f7362f8d6fae82126f93c8d8ba61",
+    "g0Evidence": "research/ree-validation/G0_FILE_VERIFICATION.json",
+    "reportedRawRows": 459,
+    "reportedProvisionalCompleteRows": 454,
+    "expectedCountsNotEnforced": "Final eligible N must come from prespecified filtering, not hardcoded G0 summary.",
+    "excludedFiles": [
+      "enable_Datensatz_RMR._Erwachsene 1.xlsx",
+      "KIEL_REE Datenbank TUM_Januar 2025tf QM.xlsx",
+      "other unadmitted cohorts"
+    ],
+    "referenceMeasurement": "Published fasting indirect calorimetry, COSMED Quark RMR; RMR.KJ measured energy, not model-derived BMR.",
+    "access": "Read publicly released file transiently, verify SHA-256 before parsing, never commit rows/IDs or print individual values."
+  },
+  "variables": {
+    "participantId": "Probanden-ID",
+    "site": "Site",
+    "sexCode": "SEX",
+    "ageYears": "Alter, Jahre",
+    "heightCm": "GROESSE, cm",
+    "weightKg": "GEWICHt_SECA, kg",
+    "measuredRmrKjDay": "RMR.KJ",
+    "ffmKg": "FFM_SECA,kg",
+    "equationSexMapping": {
+      "männlich": "male",
+      "weiblich": "female"
+    },
+    "mappingMeaning": "Recorded study sex category mapped only to published equation's binary parameter, never inferred gender identity.",
+    "missingTokens": [
+      "",
+      "na",
+      "n/a",
+      "null",
+      "nan",
+      "missing",
+      "none",
+      "-"
+    ],
+    "parse": "CSV comma-delimited; trim Unicode; numeric finite decimal dot or unambiguous comma as decimal, no thousands separators; reject ambiguous malformed forms.",
+    "measuredRmrConversion": "kcal/day = RMR.KJ / 4.184",
+    "ffmMethod": "SECA 515 bioimpedance-estimated FFM, not laboratory reference fat-free mass."
+  },
+  "primaryEligibility": {
+    "target": "Adult participants within Metron core input domain, measured positive finite RMR, source equation parameter available.",
+    "orderedRules": [
+      {
+        "id": "file-integrity",
+        "action": "Abort if release SHA-256 mismatch, don't substitute data."
+      },
+      {
+        "id": "headers",
+        "action": "Abort if required headers missing/ambiguous or malformed CSV rows; don't guess columns."
+      },
+      {
+        "id": "id",
+        "action": "Abort if any participant code blank/duplicated; don't choose a favorable repeat."
+      },
+      {
+        "id": "sex",
+        "action": "Keep only exact source männlich/weiblich mapped to model equation parameter; count excluded invalid/absent."
+      },
+      {
+        "id": "age",
+        "action": "Age finite and 18<=age<=105 years (Metron input support)."
+      },
+      {
+        "id": "height",
+        "action": "Height finite and 100<=height<=250 cm (Metron input support)."
+      },
+      {
+        "id": "weight",
+        "action": "Mass finite and 25<=weight<=350 kg (Metron input support)."
+      },
+      {
+        "id": "reference",
+        "action": "RMR.KJ finite and >0; no upper cutoff or exclusions based on agreement with a model."
+      }
+    ],
+    "noImputation": true,
+    "noWinsorization": true,
+    "noOutcomeBasedExclusion": true,
+    "reporting": "Counts by raw input missing/invalid; exclusion flow counts using first-failed rule; preserve multi-reason counts too. Final N not assumed to equal 454.",
+    "sitePolicy": "Retain source Site codes and their sample sizes; do not pool workbook/Kiel records.",
+    "duplicatePolicy": "Abort unexpected duplicate participant ID and amend before any model error is evaluated.",
+    "outcomeValidity": "Positive finite measured RMR only; outlying valid positives retained and their influence described, not silently excluded."
+  },
+  "models": {
+    "originalCoreBlobSha": "228a8032b503f37d7b90b421f425b2225143226d",
+    "implementation": "core/model.js",
+    "modelVersion": "0.1.0",
+    "noRefitting": true,
+    "mifflin": {
+      "export": "mifflinStJeor",
+      "formula": "male:10*kg+6.25*cm-5*age+5; female:10*kg+6.25*cm-5*age-161",
+      "comparisonRole": "primary baseline on all primary eligible people"
+    },
+    "cunningham": {
+      "export": "cunninghamRmr",
+      "formula": "500+22*FFMkg",
+      "role": "secondary, conditional paired comparison",
+      "eligibleFfm": "Finite 5–150 kg inclusive and FFM<=weight in participants already primary eligible.",
+      "limitation": "Cunningham historically described basal expenditure using lean mass; present source FFM is BIA-estimated. Compare against measured RMR with caveats."
+    },
+    "pairedComparison": "Use exact same eligible IDs for Mifflin and Cunningham on FFM-complete subset; never compare unequal-population MAEs."
+  },
+  "metrics": {
+    "referenceUnit": "kcal/day",
+    "errorSign": "predicted - measured",
+    "primary": {
+      "name": "MAE",
+      "formula": "mean(abs(predicted-measured))",
+      "units": "kcal/day"
+    },
+    "secondary": [
+      {
+        "name": "mean signed bias",
+        "formula": "mean(predicted-measured)",
+        "units": "kcal/day"
+      },
+      {
+        "name": "RMSE",
+        "formula": "sqrt(mean((predicted-measured)^2))",
+        "units": "kcal/day"
+      },
+      {
+        "name": "median absolute error",
+        "formula": "median(abs(predicted-measured))",
+        "units": "kcal/day"
+      },
+      {
+        "name": "within ±10%",
+        "formula": "100 * share(abs(predicted-measured)/measured <= 0.10)",
+        "units": "percent"
+      }
+    ],
+    "conditionalPairedDelta": {
+      "name": "Cunningham minus Mifflin MAE",
+      "formula": "MAE_C - MAE_M on same people; positive means Mifflin lower MAE",
+      "units": "kcal/day"
+    },
+    "noUniversalPassThreshold": true,
+    "noPValueOrSuperiorityClaim": true,
+    "numericPrecision": "No intermediate rounding; JSON unrounded and human display one decimal kcal/day and one decimal percent.",
+    "sensitivitySubset": "Age 19–78, the original Mifflin development age range, reported as secondary without switching the main cohort after seeing results."
+  },
+  "resampling": {
+    "replicateCount": 5000,
+    "seed": 20261106,
+    "method": "Nonparametric participant-level bootstrap stratified by recorded Site",
+    "sampleUnit": "Probanden-ID",
+    "pooledStrata": "Within each Site sample as many participant IDs with replacement as observed to preserve site share; not generalizability across laboratories.",
+    "pairedRule": "Resample identical IDs for paired Cunningham and Mifflin analysis, without separate independent draws.",
+    "interval": "95% percentile interval, 2.5th/97.5th empirical quantiles via linear interpolation at index (B-1)*q after sorting.",
+    "metricsWithIntervals": [
+      "MAE",
+      "mean signed bias",
+      "RMSE",
+      "median absolute error",
+      "within ±10%",
+      "paired MAE delta"
+    ],
+    "algorithmNote": "G2 must declare/version PRNG algorithm and prove repeatability with seed; seed alone insufficient.",
+    "interpretation": "Confidence intervals describe sampling variability in this study's aggregate metrics, not individual prediction uncertainty or new-laboratory transportability."
+  },
+  "subgroups": {
+    "purpose": "Exploratory descriptive heterogeneity, not causal inference or confirmatory claim.",
+    "dimensions": [
+      {
+        "name": "Site",
+        "categories": [
+          "freising",
+          "nuernber"
+        ]
+      },
+      {
+        "name": "equationSex",
+        "categories": [
+          "male",
+          "female"
+        ]
+      },
+      {
+        "name": "ageYears",
+        "categories": [
+          "18-39",
+          "40-59",
+          "60-105"
+        ],
+        "boundaries": [
+          18,
+          40,
+          60,
+          106
+        ]
+      },
+      {
+        "name": "BMI",
+        "categories": [
+          "<25",
+          "25-<30",
+          ">=30"
+        ],
+        "definition": "kg/(cm/100)^2",
+        "cutpoints": [
+          25,
+          30
+        ]
+      }
+    ],
+    "minimumNForAccuracy": 30,
+    "smallNRule": "Show n but suppress subgroup accuracy and confidence interval if n<30; don't merge groups after looking at error.",
+    "uncertainty": "Within each eligible subgroup, participant bootstrap with 5000 replicates, preserve sites as strata where applicable.",
+    "multiplicity": "No subgroup winner declarations, p-value fishing or causal interpretation."
+  },
+  "safeguards": {
+    "useG0OnlyForStructuralMetadata": true,
+    "noModelErrorBeforeFreeze": true,
+    "noCalibrationOrCoefficientTraining": true,
+    "noOutcomeDependentExclusions": true,
+    "noParticipantRecordsOrIdsInGitHub": true,
+    "noTdeeOrReadinessAccuracyClaims": true,
+    "noProductionChange": true,
+    "negativeResultsPublish": true,
+    "pinFrozenMergeCommitInG2": true,
+    "amendmentPolicy": "Keep protocol.v1.json unchanged after freeze. Subsequent changes create protocol.v2.json with linked reason and are labelled exploratory when outcomes have been seen."
+  },
+  "reporting": {
+    "cohortFlow": true,
+    "missingness": true,
+    "referenceMethod": true,
+    "datasetHash": true,
+    "siteAndSexPopulationComposition": true,
+    "aggregateMetricsAndIntervals": true,
+    "noIndividualPredictionsOrRawRows": true,
+    "subgroupNRequired": true,
+    "limitationsRequired": true,
+    "decisionRule": "No automatic change to Metron default; separate documented decision with counterevidence and replication considerations."
+  },
+  "references": [
+    "https://zenodo.org/records/17735477",
+    "https://doi.org/10.1152/ajpendo.00375.2025",
+    "https://doi.org/10.1093/ajcn/51.2.241",
+    "https://doi.org/10.1093/ajcn/33.11.2372",
+    "https://www.strobe-statement.org/fileadmin/Strobe/uploads/checklists/STROBE_checklist_v4_combined.pdf"
+  ]
+}

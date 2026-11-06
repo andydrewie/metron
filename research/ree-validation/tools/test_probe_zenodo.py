@@ -49,7 +49,7 @@ class ProbeTests(unittest.TestCase):
 
 
     def test_unknown_header_and_xlsx_participant_string_never_leak(self):
-        self.assertEqual(summarize_tsv(b"Participant-123,secret@example.com\\nP-1,9999\\n")["firstRowHeaderCandidates"],[None,None])
+        self.assertEqual(summarize_tsv(b"Participant-123,secret@example.com\nP-1,9999\n")["firstRowHeaderCandidates"],[None,None])
         ss = '<?xml version="1.0"?><sst xmlns="http://schemas.openxmlformats.org/spreadsheetml/2006/main"><si><t>Participant-123</t></si><si><t>2555</t></si><si><t>secret@example.com</t></si></sst>'
         sheet = '<?xml version="1.0"?><worksheet xmlns="http://schemas.openxmlformats.org/spreadsheetml/2006/main"><sheetData><row r="1"><c r="A1" t="s"><v>0</v></c><c r="B1" t="s"><v>1</v></c><c r="C1" t="s"><v>2</v></c></row><row r="2"><c r="A2"><v>45</v></c></row></sheetData></worksheet>'
         target=io.BytesIO()

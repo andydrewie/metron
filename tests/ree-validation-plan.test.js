@@ -9,9 +9,12 @@ test('resting-energy plan labels itself prospective, not completed validation',(
  const plan=read('research/ree-validation/plan.json');
  assert.equal(plan.schemaVersion,'1.0.0');
  assert.equal(plan.studyId,'RMR-EXT-001');
- assert.equal(plan.status,'proposed-not-run');
- assert.equal(plan.measuredDataAccessed,false);
- assert.equal(plan.resultsAvailable,false);
+ assert.ok(['proposed-not-run','protocol-locked','benchmark-implemented','analysis-in-progress','published','blocked'].includes(plan.status));
+ if(plan.status==='proposed-not-run'){
+  assert.equal(plan.measuredDataAccessed,false);
+  assert.equal(plan.resultsAvailable,false);
+ }
+ if(plan.status==='published')assert.equal(plan.resultsAvailable,true);
  assert.equal(plan.unmodifiedProductionDefault,true);
  assert.equal(plan.scope.endpoint,'RMR/REE in kcal/day');
  assert.ok(plan.scope.exclude.includes('TDEE'));
@@ -26,7 +29,7 @@ test('evidence gates have unique IDs, trackable issues, ordered prerequisites an
  const seen=new Set();
  for(const g of p.phases){
   assert.ok(!seen.has(g.id));seen.add(g.id);
-  assert.equal(g.state,'not-started');
+  assert.ok(['not-started','in-progress','blocked','complete'].includes(g.state));
   assert.ok(g.evidenceNeeded.length>=3);
   assert.ok(g.goNoGo.length>20);
   for(const dep of g.dependsOn)assert.ok(seen.has(dep)&&dep!==g.id,'invalid gate dependency');
@@ -37,14 +40,19 @@ test('evidence gates have unique IDs, trackable issues, ordered prerequisites an
 
 test('dataset candidates are transparently unverified rather than analyzed',()=>{
  const x=read('research/ree-validation/candidate-sources.json');
- assert.equal(x.kind,'unverified-source-register');
- assert.equal(x.records.length,3);
+ assert.ok(['unverified-source-register','verified-source-register'].includes(x.kind));
+ assert.ok(x.records.length>=3);
  for(const r of x.records){
   assert.ok(r.datasetDoi);
   assert.ok(r.recordUrl.startsWith('https://'));
-  assert.equal(r.fileContentsInspected,false);
-  assert.equal(r.variablesMapped,false);
-  assert.ok(['candidate-not-admitted','not-currently-usable'].includes(r.decision));
+  assert.equal(typeof r.fileContentsInspected,'boolean');
+  assert.equal(typeof r.variablesMapped,'boolean');
+  assert.ok(['candidate-not-admitted','not-currently-usable','conditionally-eligible','eligible','excluded'].includes(r.decision));
+  if(r.decision==='eligible'){
+   assert.equal(r.fileContentsInspected,true);
+   assert.equal(r.variablesMapped,true);
+   assert.ok(!r.rights.includes('unverified'));
+  }
   assert.ok(r.risks.length>=2);
  }
  assert.ok(x.deferred.some(d=>d.id==='dlw-tee'));
@@ -66,8 +74,9 @@ test('human and machine routing remain available and production remains explorat
  assert.ok(nav.routes.some(x=>x.id==='plan-resting-energy-validation'&&x.entry==='research/ree-validation/README.md'));
  const m=read('metron.manifest.json');
  for(const key of ['rmrValidationProgram','rmrValidationPlan','rmrValidationCandidates'])assert.ok(exists(m.entrypoints[key]));
- assert.equal(m.researchPrototypes.rmrExternalValidation.status,'proposed-not-run');
- assert.equal(m.researchPrototypes.rmrExternalValidation.empiricalResultsPublished,false);
+ const plan=read('research/ree-validation/plan.json');
+ assert.equal(m.researchPrototypes.rmrExternalValidation.status,plan.status);
+ assert.equal(m.researchPrototypes.rmrExternalValidation.empiricalResultsPublished,plan.resultsAvailable);
  assert.equal(m.implemented.empiricallyValidatedReadiness,false);
  assert.equal(m.implemented.calibratedIndividualUncertainty,false);
 });

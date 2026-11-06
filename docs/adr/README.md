@@ -9,6 +9,7 @@ Read [the collaboration policy](../COLLABORATION.md) before proposing new record
 | Record | Decision | Status |
 | --- | --- | --- |
 | [ADR-0001](./0001-lightweight-public-reasoning.md) | Adopt a lightweight, inspectable public reasoning protocol | Accepted |
+| [ADR-0002](./0002-repository-based-continuity.md) | Keep collaboration rules durable across agents and sessions | Accepted |
 
 **Machine index:** [`index.json`](./index.json), with stable IDs, file paths, status, confidence type and decision domain. Do not treat the index as a substitute for reading an ADR's rationale.
 

@@ -27,6 +27,19 @@
       "softwareVerification": "not-applicable",
       "empiricalValidation": "none",
       "supersededBy": null
+    },
+    {
+      "id": "ADR-0002",
+      "title": "Keep collaboration rules durable across agents and sessions",
+      "path": "docs/adr/0002-repository-based-continuity.md",
+      "status": "Accepted",
+      "decisionDate": "2026-11-06",
+      "domain": "collaboration",
+      "decisionConfidence": "medium",
+      "confidenceKind": "qualitative-judgment",
+      "softwareVerification": "tests-passed",
+      "empiricalValidation": "not-applicable",
+      "supersededBy": null
     }
   ]
 }

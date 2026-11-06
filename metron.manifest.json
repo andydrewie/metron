@@ -41,7 +41,9 @@
     "collaborationPolicy": "./docs/COLLABORATION.md",
     "decisionIndex": "./docs/adr/index.json",
     "vocabulary": "./docs/VOCABULARY.md",
-    "decisionTemplate": "./docs/adr/TEMPLATE.md"
+    "decisionTemplate": "./docs/adr/TEMPLATE.md",
+    "claudeAgentInstructions": "./CLAUDE.md",
+    "copilotAgentInstructions": "./.github/copilot-instructions.md"
   },
   "implemented": {
     "energyEstimate": true,

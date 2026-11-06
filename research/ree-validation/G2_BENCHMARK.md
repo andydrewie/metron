@@ -10,7 +10,7 @@
 
 ## What it computes
 
-\`\`\`text
+```text
 Frozen G1 protocol + pinned Metron core + checked source data
                            |
                       CSV parsing
@@ -31,22 +31,22 @@ Frozen G1 protocol + pinned Metron core + checked source data
                            |
              Aggregate-only JSON and
               optional executive text
-\`\`\`
+```
 
-**Interpretation:** Frozen source metadata and deterministic software tests protect reproducibility. They do not guarantee physiological accuracy. Unlike product \`TDEE\`, this benchmark evaluates only measured **resting energy expenditure**.
+**Interpretation:** Frozen source metadata and deterministic software tests protect reproducibility. They do not guarantee physiological accuracy. Unlike product `TDEE`, this benchmark evaluates only measured **resting energy expenditure**.
 
 ## Reproduce entirely offline
 
 No external NPM dependencies, health accounts, wearable devices or real individual records required:
 
-\`\`\`bash
+```bash
 node research/ree-validation/run.mjs --synthetic
 node research/ree-validation/run.mjs --synthetic --format markdown
 npm run ci
 npm run release:check
-\`\`\`
+```
 
-The fixture \`fixtures/synthetic-rmr.csv\` deliberately contains **five fictional participants**, including an age-missing row, an RMR-missing row and one person without valid FFM. Its known arithmetic: **three** primary-eligible cases; primary MAE **210 kcal/day**, positive mean bias **143.33 kcal/day**, paired Cunningham-minus-Mifflin MAE **+20.5 kcal/day**. **These are not human evidence.**
+The fixture `fixtures/synthetic-rmr.csv` deliberately contains **five fictional participants**, including an age-missing row, an RMR-missing row and one person without valid FFM. Its known arithmetic: **three** primary-eligible cases; primary MAE **210 kcal/day**, positive mean bias **143.33 kcal/day**, paired Cunningham-minus-Mifflin MAE **+20.5 kcal/day**. **These are not human evidence.**
 
 ## Prespecified statistics
 
@@ -61,7 +61,7 @@ The fixture \`fixtures/synthetic-rmr.csv\` deliberately contains **five fictiona
 | Source and core | Git blob identity verifies G1 protocol and frozen core; real dataset must match G0/G1 SHA-256 |
 | Record flow | Raw total, all independent field-invalid counts and one first-failure reason per excluded record |
 
-**PRNG detail:** Mulberry32-v1 updates an unsigned 32-bit seed by adding \`0x6D2B79F5\` each draw, applies two bitwise/32-bit integer-multiply mixing rounds, and divides the resulting unsigned 32-bit word by \`2^32\`. G2 tests identical seeded results. A later change to PRNG must version the engine rather than silently alter confidence intervals.
+**PRNG detail:** Mulberry32-v1 updates an unsigned 32-bit seed by adding `0x6D2B79F5` each draw, applies two bitwise/32-bit integer-multiply mixing rounds, and divides the resulting unsigned 32-bit word by `2^32`. G2 tests identical seeded results. A later change to PRNG must version the engine rather than silently alter confidence intervals.
 
 ## Privacy and execution boundary
 
@@ -69,11 +69,11 @@ The engine processes rows in volatile memory, hashes the input bytes and returns
 
 A later investigator may deliberately execute G3 with a locally available, properly licensed source file:
 
-\`\`\`bash
+```bash
 node research/ree-validation/run.mjs --file /path/to/enable_data.tsv \\
   --execute-g3 \\
   --g1-commit 6028a80fb7070b354dec68feeb7153ce0a4cbef9
-\`\`\`
+```
 
 **Do not run this G3 command as part of G2.** G3 must separately approve empirical analysis, verify source-specific permissions and inspect potential tiny cells or confidential metadata before making any resulting aggregates public. No live-data CI workflow or vendor integration is created here.
 

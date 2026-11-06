@@ -117,6 +117,12 @@ test('synthetic CLI is offline, JSON-only; real-data path is blocked without G3 
   assert.equal(ok.status,0,ok.stderr);
   const d=JSON.parse(ok.stdout);
   assert.equal(d.evidenceType,'synthetic-engineering-only');
+  const pretty=spawnSync(process.execPath,[cmd,'--synthetic','--format','markdown'],{encoding:'utf8'});
+  assert.equal(pretty.status,0,pretty.stderr);
+  assert.match(pretty.stdout,/SYNTHETIC TEST ONLY/);
+  assert.match(pretty.stdout,/Eligible observations/);
+  assert.match(pretty.stdout,/210.0 kcal\/day/);
+  assert.ok(!pretty.stdout.includes('SYN-001'));
   const denied=spawnSync(process.execPath,[cmd,'--file',fixturePath.pathname],{encoding:'utf8'});
   assert.equal(denied.status,2);
   assert.equal(JSON.parse(denied.stderr).status,'blocked');
@@ -124,4 +130,17 @@ test('synthetic CLI is offline, JSON-only; real-data path is blocked without G3 
   const invalidHash=spawnSync(process.execPath,[cmd,'--file',fixturePath.pathname,'--execute-g3','--g1-commit',G1_COMMIT],{encoding:'utf8'});
   assert.equal(invalidHash.status,2);
   assert.equal(JSON.parse(invalidHash.stderr).errorType,'verification-or-eligibility-failure');
+});
+
+test('bootstrap preserves fixed site contributions instead of pooling independent records',async()=>{
+  const {bootstrap}=await import('../research/ree-validation/benchmark.mjs');
+  const a={site:'freising',measured:1000,mifflin:900,cunningham:930};
+  const b={site:'nuernber',measured:1000,mifflin:1300,cunningham:1150};
+  const fixed=bootstrap([a,b],{replicates:300,seed:6,paired:true});
+  // Exactly one observation per site means every within-site resample is
+  // identical to the original, and all interval endpoints collapse.
+  assert.equal(fixed.mae.lower,200);
+  assert.equal(fixed.mae.upper,200);
+  assert.equal(fixed.pairedMaeDelta.lower,-60);
+  assert.equal(fixed.pairedMaeDelta.upper,-60);
 });

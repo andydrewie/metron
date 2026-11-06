@@ -14,6 +14,8 @@ node research/energy-accounting/run.mjs
 
 This research diagnostic is **not** integrated into the consumer calculation. It is not a metabolic validation result.
 
+**Next:** [Experimental activity-event contract](./activity-events/README.md) tests whether record intervals and provenance can prevent unwarranted assumptions about overlapping daily steps. No production energy correction is implemented.
+
 ## The central experiment
 
 **Does adding longitudinal wearable data improve held-out next-session resistance training performance predictions beyond a simple model using previous performance, sleep and subjective recovery?**

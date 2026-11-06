@@ -117,7 +117,7 @@ npm run release:check
 
 The separate Python-standard-library auditor does not import the JavaScript model or statistics code. It verifies the source/protocol/core pins, reconstructs eligibility, equations, flow and field quality, and reproduces **every reported point metric and interval**, including ten subgroups and age sensitivity, within absolute tolerance **1e−8**. This is independent calculation, **not independent-person peer review**. A repeated CLI run produces identical aggregate JSON.
 
-Only aggregate outputs and fixed provenance are published. No participant source file, ID, individual measurement, prediction or residual is committed. The existing guarded CLI and new auditor emit static errors. CI continues to use fictional data; it does not download or evaluate this cohort.
+Only aggregate outputs and fixed provenance are published. No participant source file, ID, individual measurement, prediction or residual is committed. The existing guarded CLI and new auditor emit static errors. Benchmark tests use fictional records and inspect the saved aggregate report. The pre-existing G0 workflow can download pinned source files for metadata inspection; it does not compute prediction errors. No automated G3 cohort-analysis workflow is introduced.
 
 Figures are generated from the public aggregate JSON using the optional `tools/render_g3.py` script with Matplotlib. The production project and benchmark retain zero runtime dependencies.
 

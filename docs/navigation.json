@@ -254,7 +254,13 @@
         "research/ree-validation/G0_SOURCE_AUDIT.md",
         "research/ree-validation/G0_FILE_VERIFICATION.json",
         "research/ree-validation/G1_FROZEN_PROTOCOL.md",
-        "research/ree-validation/protocol.v1.json"
+        "research/ree-validation/protocol.v1.json",
+        "research/ree-validation/G2_BENCHMARK.md",
+        "research/ree-validation/benchmark.mjs",
+        "research/ree-validation/run.mjs",
+        "research/ree-validation/fixtures/synthetic-rmr.csv",
+        "research/ree-validation/render.mjs",
+        "tests/ree-benchmark.test.js"
       ],
       "status": "research-question"
     }

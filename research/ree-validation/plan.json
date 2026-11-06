@@ -3,7 +3,7 @@
   "documentType": "metron.research.execution-plan",
   "studyId": "RMR-EXT-001",
   "asOf": "2026-11-06",
-  "status": "protocol-locked",
+  "status": "benchmark-implemented",
   "resultsAvailable": false,
   "measuredDataAccessed": true,
   "question": "How accurately do Metron's fixed RMR equation outputs agree with independently measured indirect-calorimetry RMR in eligible adult cohorts?",
@@ -75,7 +75,7 @@
       "id": "G2",
       "name": "Implement and audit benchmark CLI",
       "issue": 12,
-      "state": "not-started",
+      "state": "complete",
       "dependsOn": [
         "G1"
       ],
@@ -87,7 +87,14 @@
         "deterministic output and hashes",
         "no private source rows committed"
       ],
-      "goNoGo": "Reproducible passing tests and independent numeric verification"
+      "goNoGo": "Reproducible passing tests and independent numeric verification",
+      "evidenceArtifact": "research/ree-validation/G2_BENCHMARK.md",
+      "engine": "research/ree-validation/benchmark.mjs",
+      "runner": "research/ree-validation/run.mjs",
+      "testFixture": "research/ree-validation/fixtures/synthetic-rmr.csv",
+      "g1MergeCommit": "6028a80fb7070b354dec68feeb7153ce0a4cbef9",
+      "resultScope": "Synthetic verification only; no actual measured-vs-predicted error computed",
+      "nextGate": "G3"
     },
     {
       "id": "G3",
@@ -201,7 +208,7 @@
   "metadataAudit": "research/ree-validation/G0_SOURCE_AUDIT.md",
   "admittedSource": "enable-rmr:enable_data.tsv",
   "measurementOutcomesAnalyzed": false,
-  "nextGate": "G2",
+  "nextGate": "G3",
   "frozenProtocol": "research/ree-validation/protocol.v1.json",
   "frozenProtocolStatus": "frozen-before-model-error-analysis"
 }

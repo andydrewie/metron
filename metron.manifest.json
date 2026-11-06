@@ -58,7 +58,9 @@
     "rmrValidationPlan": "./research/ree-validation/plan.json",
     "rmrValidationCandidates": "./research/ree-validation/candidate-sources.json",
     "rmrValidationG0Audit": "./research/ree-validation/G0_SOURCE_AUDIT.md",
-    "rmrValidationG0Evidence": "./research/ree-validation/G0_FILE_VERIFICATION.json"
+    "rmrValidationG0Evidence": "./research/ree-validation/G0_FILE_VERIFICATION.json",
+    "rmrValidationFrozenProtocol": "./research/ree-validation/protocol.v1.json",
+    "rmrValidationG1Summary": "./research/ree-validation/G1_FROZEN_PROTOCOL.md"
   },
   "implemented": {
     "energyEstimate": true,
@@ -110,11 +112,12 @@
     },
     "rmrExternalValidation": {
       "studyId": "RMR-EXT-001",
-      "status": "proposed-not-run",
+      "status": "protocol-locked",
       "measuredDataAnalyzed": false,
       "empiricalResultsPublished": false,
       "productionIntegration": false,
-      "dashboard": "https://github.com/andydrewie/metron/issues/9"
+      "dashboard": "https://github.com/andydrewie/metron/issues/9",
+      "frozenProtocol": "research/ree-validation/protocol.v1.json"
     }
   }
 }

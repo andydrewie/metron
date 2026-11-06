@@ -22,7 +22,7 @@ This research diagnostic is **not** integrated into the consumer calculation. It
 
 **No-device path:** [Coefficient sensitivity audit](./assumption-sensitivity/README.md) uses fabricated profiles to quantify how the *mathematical model* responds to changed parameters; it does not measure physiological accuracy.
 
-**Measured resting-metabolism validation program:** [G0–G4 protocol and source candidates](./ree-validation/README.md) · [GitHub progress board](https://github.com/andydrewie/metron/issues/9). This new **not-yet-run** program examines real calorimetry data, separate from the wearable-performance research protocol below.
+**Measured resting-metabolism validation program:** [G0 source admitted and G1 methodology frozen](./ree-validation/G1_FROZEN_PROTOCOL.md) · [GitHub research dashboard](https://github.com/andydrewie/metron/issues/9). The data source is verified, the statistical protocol is locked, but **no model error results have been calculated**. This is separate from wearable-performance research below.
 
 ## The central experiment
 

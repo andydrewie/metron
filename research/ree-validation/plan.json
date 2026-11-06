@@ -3,7 +3,7 @@
   "documentType": "metron.research.execution-plan",
   "studyId": "RMR-EXT-001",
   "asOf": "2026-11-06",
-  "status": "proposed-not-run",
+  "status": "protocol-locked",
   "resultsAvailable": false,
   "measuredDataAccessed": true,
   "question": "How accurately do Metron's fixed RMR equation outputs agree with independently measured indirect-calorimetry RMR in eligible adult cohorts?",
@@ -51,7 +51,7 @@
       "id": "G1",
       "name": "Freeze statistical analysis protocol",
       "issue": 11,
-      "state": "not-started",
+      "state": "complete",
       "dependsOn": [
         "G0"
       ],
@@ -63,7 +63,13 @@
         "population and subgroup reporting rules",
         "no outcome-informed tuning"
       ],
-      "goNoGo": "Versioned, prospective-in-relation-to-analysis preregistered plan"
+      "goNoGo": "Versioned, prospective-in-relation-to-analysis preregistered plan",
+      "evidenceArtifact": "research/ree-validation/protocol.v1.json",
+      "humanEvidence": "research/ree-validation/G1_FROZEN_PROTOCOL.md",
+      "protocolId": "RMR-EXT-001-G1-v1",
+      "frozenAt": "2026-11-06",
+      "resultsInspectedBeforeFreeze": false,
+      "decision": "Fixed cohort bounds, reference conversion, model comparison/FFM eligibility, metrics, site-stratified 5000-replicate participant bootstrap, and subgroups before calculating errors"
     },
     {
       "id": "G2",
@@ -195,5 +201,7 @@
   "metadataAudit": "research/ree-validation/G0_SOURCE_AUDIT.md",
   "admittedSource": "enable-rmr:enable_data.tsv",
   "measurementOutcomesAnalyzed": false,
-  "nextGate": "G1"
+  "nextGate": "G2",
+  "frozenProtocol": "research/ree-validation/protocol.v1.json",
+  "frozenProtocolStatus": "frozen-before-model-error-analysis"
 }

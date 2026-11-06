@@ -252,7 +252,9 @@
         "docs/SCIENCE.md",
         "core/model.js",
         "research/ree-validation/G0_SOURCE_AUDIT.md",
-        "research/ree-validation/G0_FILE_VERIFICATION.json"
+        "research/ree-validation/G0_FILE_VERIFICATION.json",
+        "research/ree-validation/G1_FROZEN_PROTOCOL.md",
+        "research/ree-validation/protocol.v1.json"
       ],
       "status": "research-question"
     }

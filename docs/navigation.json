@@ -178,6 +178,25 @@
         "docs/ROADMAP.md"
       ],
       "status": "documented"
+    },
+    {
+      "id": "compare-provider-steps",
+      "label": "Compare provider step accounting documentation",
+      "intent": "determine whether WHOOP Garmin and Apple HealthKit public sources establish workout-step inclusion",
+      "audience": [
+        "human",
+        "researcher",
+        "agent"
+      ],
+      "entry": "research/provider-step-semantics/README.md",
+      "next": [
+        "research/provider-step-semantics/matrix.json",
+        "research/provider-step-semantics/fixtures.json",
+        "research/provider-step-semantics/run.mjs",
+        "research/activity-events/contract.schema.json",
+        "docs/adr/0004-provenance-before-automatic-reconciliation.md"
+      ],
+      "status": "documented"
     }
   ]
 }

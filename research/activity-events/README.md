@@ -53,6 +53,8 @@ A full activity ledger, vendor integrations, heart-rate streams, confidence scor
 
 The next useful test would involve *permission-cleared, real source records with documented inclusion semantics*. Only then should we consider a versioned optional input to the main engine.
 
+**Follow-up:** [Provider documentation comparison](../provider-step-semantics/README.md) shows why source access and overlapping time periods cannot establish step-total membership. The contract and public calculator remain unchanged.
+
 **Status:** research prototype only. **Software verification:** deterministic fixture tests. **Empirical validation:** none.
 
 ### Method references

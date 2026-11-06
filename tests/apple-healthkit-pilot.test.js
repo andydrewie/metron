@@ -32,7 +32,7 @@ test('HealthKit is requested only after an explicit button action',()=>{
   assert.ok(model.includes('HKObjectType.workoutType()'));
   assert.ok(model.includes('.stepCount'));
   assert.ok(!model.includes('HKObjectType.characteristicType'));
-  assert.ok(!model.includes('requestAuthorization(toShare: ['));
+  assert.ok(!/requestAuthorization\(toShare:\s*\[\s*[^\]\s]/.test(model));
   assert.ok(!model.includes('HKHealthStore().save'));
   assert.ok(!model.includes('enableBackgroundDelivery'));
 });

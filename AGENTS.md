@@ -2,6 +2,18 @@
 
 This is a real source repository, not a design mockup. **README.md is the human front door; this file is your execution contract.** Metron is an exploratory, headless fitness-computation project with a static browser client. It is **not** a trained AI model or clinically validated physiology system.
 
+## Before every repository task — reorient, then act
+
+**Do not rely on the user remembering our workflow, prior chats, or even the previous agent's context.** This repository is the continuity record.
+
+1. **Read the local rules:** this file, [collaboration policy](./docs/COLLABORATION.md), and [intent map](./docs/navigation.json).
+2. **Identify current reality:** check `metron.manifest.json`, the relevant source/tests, and [existing decisions](./docs/adr/index.json). Look for an existing Issue or PR before creating one.
+3. **Classify the change:** is this exploration, a reproducible question, a consequential decision, or straightforward implementation? Follow the *provisional publication gate* rather than documenting every thought.
+4. **Choose the smallest reviewable step:** for consequential or nontrivial changes, prefer a branch + Pull Request; link the relevant Issue/ADR when there is one. For trivial fixes, avoid process theater.
+5. **Prove and report:** run `npm run ci && npm run release:check`, distinguish software verification from empirical science, and report what changed, what's still uncertain, and the exact next investigation.
+
+**Default communication:** one short answer up front, optional evidence and detail, precise/direct/nurturing copy. Do not invent physiological confidence scores or privately sourced data. **If the current repository contradicts a remembered discussion, surface the conflict and defer to explicit user instructions before changing the policy.**
+
 ## Start here — deterministic commands
 
 ```bash

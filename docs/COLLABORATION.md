@@ -10,6 +10,21 @@
 
 > Make the reasoning inspectable, not the reader obligated to inspect it.
 
+## Continuity without reminders — operational contract
+
+An agent starting a new Metron task must **inspect the repository**, not ask a human to recite our conventions. [`AGENTS.md`](../AGENTS.md) provides the five-step kickoff; [`docs/navigation.json`](./navigation.json) routes task intent; [`metron.manifest.json`](../metron.manifest.json) declares shipped capabilities; [ADR index](./adr/index.json) identifies prior decisions. The most recent Issue/PR provides investigation context.
+
+**We enforce different things at different layers:**
+
+- **Machine-checkable integrity:** CI verifies valid decision-index entries, matching ADR files/statuses, documented navigation destinations, and discoverable agent entrypoints. Reproducible code behavior still uses ordinary software tests.
+- **Human-and-agent judgment:** whether a new ADR is warranted, whether an evidence claim is supported, and whether writing is nurturing cannot be proven by a green CI badge. A reviewer must assess material decisions.
+- **Review trail:** consequential work should normally happen through a branch + PR with a concise rationale and links. A PR is a proposed change; it isn't accepted until merged.
+- **No compulsory paperwork:** small wording fixes, exploratory discussions and experiments that don't change behavior don't require a fresh Issue, ADR or PR narrative.
+
+The current GitHub Actions jobs **run** on pull requests, but **will not prevent direct pushes unless branch protection/rulesets are enabled**. Treat a successful check as verification of what was tested, not a guarantee that every collaborator obeyed policy. Optional branch protection can require PRs and the `test` check before merge; it is a repository-owner configuration, not an agent promise.
+
+Cross-agent instruction adapters are minimal references to the same `AGENTS.md`; avoid maintaining competing copies of the policy. Add new checks only for an objective failure that is worth protecting against. **Don't make conscientious human judgment into a brittle form field.**
+
 ## The public trail
 
 | Purpose | Home | Record minimally |

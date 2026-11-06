@@ -150,6 +150,25 @@
         "docs/INFORMATION_DESIGN.md"
       ],
       "status": "documented"
+    },
+    {
+      "id": "resume-work",
+      "label": "Resume Metron after a break or a new agent session",
+      "intent": "recover the current project state, decisions and collaboration rules without asking the user to repeat them",
+      "audience": [
+        "human",
+        "agent",
+        "researcher"
+      ],
+      "entry": "AGENTS.md",
+      "next": [
+        "metron.manifest.json",
+        "docs/navigation.json",
+        "docs/COLLABORATION.md",
+        "docs/adr/index.json",
+        "docs/ROADMAP.md"
+      ],
+      "status": "documented"
     }
   ]
 }

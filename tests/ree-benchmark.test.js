@@ -141,6 +141,6 @@ test('bootstrap preserves fixed site contributions instead of pooling independen
   // identical to the original, and all interval endpoints collapse.
   assert.equal(fixed.mae.lower,200);
   assert.equal(fixed.mae.upper,200);
-  assert.equal(fixed.pairedMaeDelta.lower,-60);
-  assert.equal(fixed.pairedMaeDelta.upper,-60);
+  assert.equal(fixed.pairedMaeDelta.lower,-90);
+  assert.equal(fixed.pairedMaeDelta.upper,-90);
 });

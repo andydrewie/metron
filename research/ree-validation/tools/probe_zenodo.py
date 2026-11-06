@@ -191,7 +191,7 @@ def summarize_tsv(blob: bytes, source_name: str | None = None) -> dict:
         "fieldCount": len(first),
         "firstRowHeaderCandidates": headers,
         "eligibilityMetadata": eligibility,
-        "firstRowMayBeData": False,
+        "firstRowMayBeData": source_name is None,
         "containsSampleValues": False,
     }
 

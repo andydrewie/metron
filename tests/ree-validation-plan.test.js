@@ -40,7 +40,7 @@ test('evidence gates have unique IDs, trackable issues, ordered prerequisites an
 
 test('dataset candidates are transparently unverified rather than analyzed',()=>{
  const x=read('research/ree-validation/candidate-sources.json');
- assert.ok(['unverified-source-register','verified-source-register'].includes(x.kind));
+ assert.ok(['unverified-source-register','metadata-reviewed-source-register','verified-source-register'].includes(x.kind));
  assert.ok(x.records.length>=3);
  for(const r of x.records){
   assert.ok(r.datasetDoi);

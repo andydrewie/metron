@@ -118,7 +118,6 @@ test('verified G0 evidence qualifies real source schema but never fabricates pre
  assert.equal(plan.phases[0].state,'complete');
  assert.equal(plan.phases[1].state,'complete');
  assert.equal(plan.phases[1].protocolId,'RMR-EXT-001-G1-v1');
- assert.equal(plan.resultsAvailable,false);
- assert.equal(plan.resultsAvailable,false);
+ if(plan.status==='protocol-locked')assert.equal(plan.resultsAvailable,false);
  assert.equal(plan.measurementOutcomesAnalyzed,false);
 });

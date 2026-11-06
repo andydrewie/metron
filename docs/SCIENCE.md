@@ -47,6 +47,8 @@ Without interval-level activity provenance, the existing daily step and workout 
 
 **Follow-up provenance research:** [Activity-event evidence contract](../research/activity-events/README.md) demonstrates that coincident time windows do not prove step-summary membership. The experimental parser preserves reporting periods (including physiological cycles), sources and explicit evidence for inclusion. No physiological accuracy has been validated, and the public calculator is unchanged.
 
+**Local sample-identity experiment:** An optional [Apple HealthKit read-only pilot](../research/apple-healthkit-pilot/README.md) can compare UUIDs returned by workout-associated and calendar-day step-sample queries, once an individual grants permission on their device. Identical UUIDs do **not** establish contributions to a merged daily Health statistic or a validated energy adjustment. No real-device results have yet been recorded or published.
+
 ## 4. Training readiness (independent of TDEE)
 
 METRON takes sleep hours, present energy, musculoskeletal comfort, and past-week fatigue, then uses a transparent 3×3 heuristic to suggest an *illustrative fraction of the user's usual session sets*. A warning is triggered by sleep below five hours, pain, or combined low daily and fatigued weekly recovery. Step count adds contextual notes but is **not an automatic penalty**.

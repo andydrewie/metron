@@ -8,6 +8,8 @@
 
 **Provider evidence:** [WHOOP, Garmin and Apple HealthKit review](../research/provider-step-semantics/README.md) found no universal workout-step-inclusion guarantee in the official public sources examined. Researching Apple sample-level attribution comes before any real integration.
 
+**New opt-in research tool:** [Apple HealthKit sample-attribution pilot](../research/apple-healthkit-pilot/README.md) is a local-only Xcode/iPhone experiment. It is not part of the live website and cannot be run against real data without on-device Health permission.
+
 **What might follow:** A personal-calibration experiment, but only if it adds useful evidence. Caloric Allowance and wearable integrations remain possibilities, not promises.
 
 **How to use this roadmap:** Read the decision flow, then explore details only when relevant. [Information design principles](./INFORMATION_DESIGN.md).

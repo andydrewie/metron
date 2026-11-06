@@ -49,7 +49,9 @@
     "activityEventsResearch": "./research/activity-events/README.md",
     "activityEventsSchema": "./research/activity-events/contract.schema.json",
     "providerStepSemanticsResearch": "./research/provider-step-semantics/README.md",
-    "providerStepSemanticsMatrix": "./research/provider-step-semantics/matrix.json"
+    "providerStepSemanticsMatrix": "./research/provider-step-semantics/matrix.json",
+    "appleHealthKitLocalPilot": "./research/apple-healthkit-pilot/README.md",
+    "appleHealthKitXcodeProject": "./research/apple-healthkit-pilot/HealthPilot.xcodeproj/project.pbxproj"
   },
   "implemented": {
     "energyEstimate": true,
@@ -89,5 +91,15 @@
     "check": "npm run ci",
     "example": "node bin/metron.mjs --file examples/beginner.json",
     "stdin": "cat examples/beginner.json | node bin/metron.mjs"
+  },
+  "researchPrototypes": {
+    "appleHealthKitOnDevicePilot": {
+      "sourceAvailable": true,
+      "simulatorBuildVerified": true,
+      "realDeviceDataCollected": false,
+      "productionIntegration": false,
+      "requiresExplicitOnDevicePermission": true,
+      "simulatorBuildEvidence": "https://github.com/andydrewie/metron/actions/runs/42156958864"
+    }
   }
 }

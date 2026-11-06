@@ -39,6 +39,8 @@ Three **fabricated** provider-inspired records are interpreted by our existing [
 
 A null WHOOP cycle step count cannot be coerced to zero: our current experimental step-summary contract requires a nonnegative integer, so missing data must be represented separately before any future import. These fixtures **are not real API response examples** and establish no device compatibility.
 
+**Experimental implementation:** [Local Apple HealthKit pilot](../apple-healthkit-pilot/README.md) now includes a read-only iPhone app to inspect actual sample identities **after the user grants device permission**. It does not establish inclusion in merged statistics or modify TDEE.
+
 ## Next calibrated decision
 
 1. **Complete this official-source review and reproducible synthetic demonstration**—done in this research branch.

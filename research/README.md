@@ -18,6 +18,8 @@ This research diagnostic is **not** integrated into the consumer calculation. It
 
 **Official-source review:** [WHOOP, Garmin and Apple HealthKit step semantics](./provider-step-semantics/README.md), including Garmin's documented Personal API. Evidence is source-linked, synthetic-only and does not change production estimates.
 
+**Read-only pilot:** [Apple HealthKit local experiment](./apple-healthkit-pilot/README.md) includes source and Xcode project for comparing workout-associated and day-query step sample IDs. No personal data is uploaded; real-device operation is not yet verified.
+
 ## The central experiment
 
 **Does adding longitudinal wearable data improve held-out next-session resistance training performance predictions beyond a simple model using previous performance, sleep and subjective recovery?**

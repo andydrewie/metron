@@ -197,6 +197,24 @@
         "docs/adr/0004-provenance-before-automatic-reconciliation.md"
       ],
       "status": "documented"
+    },
+    {
+      "id": "run-apple-healthkit-local-pilot",
+      "label": "Run local opt-in Apple HealthKit sample attribution pilot",
+      "intent": "compile on Mac and explicitly authorize local iPhone step and workout read access to compare raw sample identities",
+      "audience": [
+        "human",
+        "agent",
+        "researcher"
+      ],
+      "entry": "research/apple-healthkit-pilot/README.md",
+      "next": [
+        "research/apple-healthkit-pilot/HealthPilot.xcodeproj/project.pbxproj",
+        "research/apple-healthkit-pilot/HealthPilot/HealthPilotModel.swift",
+        "research/apple-healthkit-pilot/HealthPilot/PilotView.swift",
+        "tests/apple-healthkit-pilot.test.js"
+      ],
+      "status": "documented"
     }
   ]
 }

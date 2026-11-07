@@ -45,6 +45,6 @@ export function auditH2A(corpus,matrix,plan,{review,registry,searchLog,queue}={}
     if(!contradiction.resolution||!contradiction.unresolved||contradiction.sourceIds.some(id=>!sourceIds.has(id))) fail('invalid contradiction record '+contradiction.id);
   }
   if(queue.slices.some(s=>s.state!=='complete') && plan.gates.find(g=>g.id==='H2')?.state==='complete') fail('whole H2 cannot close with unreviewed slices');
-  if(!queue.slices.some(s=>s.id===plan.nextTask.slice&&s.state!=='complete')) fail('next task must name an incomplete slice');
+  if(plan.nextTask.gate==='H2' && !queue.slices.some(s=>s.id===plan.nextTask.slice&&s.state!=='complete')) fail('next H2 task must name an incomplete slice');
   return errors;
 }

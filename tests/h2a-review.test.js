@@ -23,6 +23,11 @@ test('clinical promotion or whole-gate closure from a bounded review fails',()=>
  const f=fixture();f.records.review.claimReviews[0].directAlgorithmValidation=true;f.plan.gates.find(x=>x.id==='H2').state='complete';
  const errors=audit(f);assert.ok(errors.some(e=>e.includes('unsupported claim')));assert.ok(errors.some(e=>e.includes('whole H2')));
 });
+test('dated H2-A review does not prevent a later plan from moving to H3',()=>{
+ const f=fixture();f.records.queue.slices.forEach(s=>{s.state='complete';});
+ f.plan.gates.find(g=>g.id==='H2').state='complete';f.plan.nextTask={gate:'H3',action:'Fixture: proceed after all H2 slices'};
+ assert.deepEqual(audit(f),[]); // Whole-plan closure evidence is checked separately by auditProgram.
+});
 test('source metadata drift, absent inspected portions and impossible dates fail',()=>{
  for(const mutate of [f=>f.records.registry.sources[0].url='https://example.com/wrong',f=>f.records.registry.sources[0].inspectedPortions='',f=>f.records.review.claimReviews[0].reviewedAt='2026-02-30']){
   const f=fixture();mutate(f);assert.ok(audit(f).length);

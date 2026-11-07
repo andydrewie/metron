@@ -6,7 +6,7 @@
   "comprehensiveClinicalReviewCompleted": false,
   "definitionsAreWorkingVocabulary": true,
   "formalOntologyConformance": null,
-  "sourceReviewNote": "H1 inventories repository statements and operational semantics at the declared snapshot. Primary literature currency, corrections, clinical applicability and republication rights remain for H2. A recorded statement is not endorsement.",
+  "sourceReviewNote": "H1 is the finite repository inventory. H2-A adds a bounded source relevance/transfer review for seven readiness claim families; inspected portions, contrary findings and access limits are explicit. Full clinical applicability remains unreviewed.",
   "concepts": [
     {
       "id": "rmr",
@@ -1876,6 +1876,240 @@
         "Repository statement and contract inspection"
       ],
       "versionOrPublicationDate": "8fb3728e453493fc99c7a43bbbdaf3e45a43f75e"
+    },
+    {
+      "id": "h2a-aasm-2015",
+      "title": "Watson et al. 2015: adult sleep consensus",
+      "path": "research/robustness/h2a/sources.json",
+      "url": "https://www.aasm.org/resources/pdf/adultsleepdurationconsensus.pdf",
+      "freshnessClass": "clinical-guidance",
+      "sourceContentReviewedAt": "2026-11-07",
+      "reviewScope": "H2-A bounded source review: Official two-page PDF: consensus, scope and publication metadata. Current AASM support page still cites at least seven hours; its page copyright year is not a new guideline publication date.",
+      "rightsStatus": "Copyright AASM; no broad republication permission inferred.",
+      "importedFrom": "research/robustness/h2a/sources.json",
+      "status": "H2-A-scoped-review",
+      "note": "Inspected portions and correction-search limitations are in the H2-A source record. No clinical validation or complete update-registry verification.",
+      "retrievedAt": "2026-11-07",
+      "inspectedPortions": [
+        "Official two-page PDF: consensus, scope and publication metadata. Current AASM support page still cites at least seven hours; its page copyright year is not a new guideline publication date."
+      ],
+      "versionOrPublicationDate": "2015-06-15"
+    },
+    {
+      "id": "h2a-acsm-2026",
+      "title": "ACSM 2026: resistance-training prescription position stand",
+      "path": "research/robustness/h2a/sources.json",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC12965823/",
+      "freshnessClass": "clinical-guidance",
+      "sourceContentReviewedAt": "2026-11-07",
+      "reviewScope": "H2-A bounded source review: Abstract, eligibility, search methods, prescription summary, limitations and license; official ACSM infographic.",
+      "rightsStatus": "CC BY-NC-ND 4.0 as displayed; article/figures not republished.",
+      "importedFrom": "research/robustness/h2a/sources.json",
+      "status": "H2-A-scoped-review",
+      "note": "Inspected portions and correction-search limitations are in the H2-A source record. No clinical validation or complete update-registry verification.",
+      "retrievedAt": "2026-11-07",
+      "inspectedPortions": [
+        "Abstract, eligibility, search methods, prescription summary, limitations and license; official ACSM infographic."
+      ],
+      "versionOrPublicationDate": "2026-03-05"
+    },
+    {
+      "id": "h2a-delval-2026",
+      "title": "Del Val-Manzano et al. 2026: acute sleep loss and lifting",
+      "path": "research/robustness/h2a/sources.json",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC13028445/",
+      "freshnessClass": "active-empirical",
+      "sourceContentReviewedAt": "2026-11-07",
+      "reviewScope": "H2-A bounded source review: PubMed abstract/metadata; PMC abstract, eligibility, allocation/sleep protocol and license. Publisher HTTP 429; PMC subsequently accessible.",
+      "rightsStatus": "CC BY as displayed on PMC; retain attribution.",
+      "importedFrom": "research/robustness/h2a/sources.json",
+      "status": "H2-A-scoped-review",
+      "note": "Inspected portions and correction-search limitations are in the H2-A source record. No clinical validation or complete update-registry verification.",
+      "retrievedAt": "2026-11-07",
+      "inspectedPortions": [
+        "PubMed abstract/metadata; PMC abstract, eligibility, allocation/sleep protocol and license. Publisher HTTP 429; PMC subsequently accessible."
+      ],
+      "versionOrPublicationDate": "2026-02-19"
+    },
+    {
+      "id": "h2a-knowles-2022",
+      "title": "Knowles et al. 2022: sustained sleep restriction in trained women",
+      "path": "research/robustness/h2a/sources.json",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/36136596/",
+      "freshnessClass": "active-empirical",
+      "sourceContentReviewedAt": "2026-11-07",
+      "reviewScope": "H2-A bounded source review: Published abstract and metadata; linked preprint identified but not pooled as another study.",
+      "rightsStatus": "Copyright ACSM; full-paper reuse rights unverified.",
+      "importedFrom": "research/robustness/h2a/sources.json",
+      "status": "H2-A-scoped-review",
+      "note": "Inspected portions and correction-search limitations are in the H2-A source record. No clinical validation or complete update-registry verification.",
+      "retrievedAt": "2026-11-07",
+      "inspectedPortions": [
+        "Published abstract and metadata; linked preprint identified but not pooled as another study."
+      ],
+      "versionOrPublicationDate": "2022-09-22"
+    },
+    {
+      "id": "h2a-borba-2024",
+      "title": "Borba et al. 2024: habitual short sleep and training adaptations",
+      "path": "research/robustness/h2a/sources.json",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC11390164/",
+      "freshnessClass": "active-empirical",
+      "sourceContentReviewedAt": "2026-11-07",
+      "reviewScope": "H2-A bounded source review: Abstract, participant/assignment methods, baseline table, outcomes and license.",
+      "rightsStatus": "CC BY-NC-ND 4.0 as displayed; source not redistributed.",
+      "importedFrom": "research/robustness/h2a/sources.json",
+      "status": "H2-A-scoped-review",
+      "note": "Inspected portions and correction-search limitations are in the H2-A source record. No clinical validation or complete update-registry verification.",
+      "retrievedAt": "2026-11-07",
+      "inspectedPortions": [
+        "Abstract, participant/assignment methods, baseline table, outcomes and license."
+      ],
+      "versionOrPublicationDate": "2024-06-05"
+    },
+    {
+      "id": "h2a-edwards-2025",
+      "title": "Edwards et al. 2025: secondary analysis of sleep loss and naps",
+      "path": "research/robustness/h2a/sources.json",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC12340232/",
+      "freshnessClass": "active-empirical",
+      "sourceContentReviewedAt": "2026-11-07",
+      "reviewScope": "H2-A bounded source review: Abstract, explicit limitations, bibliographic metadata and license.",
+      "rightsStatus": "CC BY 4.0 as displayed; retain attribution.",
+      "importedFrom": "research/robustness/h2a/sources.json",
+      "status": "H2-A-scoped-review",
+      "note": "Inspected portions and correction-search limitations are in the H2-A source record. No clinical validation or complete update-registry verification.",
+      "retrievedAt": "2026-11-07",
+      "inspectedPortions": [
+        "Abstract, explicit limitations, bibliographic metadata and license."
+      ],
+      "versionOrPublicationDate": "2025-08-12"
+    },
+    {
+      "id": "h2a-schoenfeld-2019",
+      "title": "Schoenfeld et al. 2019: training volume and adaptation",
+      "path": "research/robustness/h2a/sources.json",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC6303131/",
+      "freshnessClass": "active-empirical",
+      "sourceContentReviewedAt": "2026-11-07",
+      "reviewScope": "H2-A bounded source review: Abstract, recruitment/eligibility, dropout flow, outcomes and license.",
+      "rightsStatus": "CC BY-NC-ND 4.0 as displayed; no table/figure republication.",
+      "importedFrom": "research/robustness/h2a/sources.json",
+      "status": "H2-A-scoped-review",
+      "note": "Inspected portions and correction-search limitations are in the H2-A source record. No clinical validation or complete update-registry verification.",
+      "retrievedAt": "2026-11-07",
+      "inspectedPortions": [
+        "Abstract, recruitment/eligibility, dropout flow, outcomes and license."
+      ],
+      "versionOrPublicationDate": "2019-01"
+    },
+    {
+      "id": "h2a-laurent-2011",
+      "title": "Laurent et al. 2011: perceived recovery scale development",
+      "path": "research/robustness/h2a/sources.json",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/20581704/",
+      "freshnessClass": "active-empirical",
+      "sourceContentReviewedAt": "2026-11-07",
+      "reviewScope": "H2-A bounded source review: Indexed primary abstract and bibliographic metadata.",
+      "rightsStatus": "Full-text rights unverified; pointers and brief original synthesis only.",
+      "importedFrom": "research/robustness/h2a/sources.json",
+      "status": "H2-A-scoped-review",
+      "note": "Inspected portions and correction-search limitations are in the H2-A source record. No clinical validation or complete update-registry verification.",
+      "retrievedAt": "2026-11-07",
+      "inspectedPortions": [
+        "Indexed primary abstract and bibliographic metadata."
+      ],
+      "versionOrPublicationDate": "2011-03"
+    },
+    {
+      "id": "h2a-shattock-2022",
+      "title": "Shattock and Tee 2022: subjective versus objective autoregulation",
+      "path": "research/robustness/h2a/sources.json",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/32058357/",
+      "freshnessClass": "active-empirical",
+      "sourceContentReviewedAt": "2026-11-07",
+      "reviewScope": "H2-A bounded source review: PubMed abstract and bibliographic metadata only.",
+      "rightsStatus": "Copyright NSCA 2020; full-text reuse terms not verified.",
+      "importedFrom": "research/robustness/h2a/sources.json",
+      "status": "H2-A-scoped-review",
+      "note": "Inspected portions and correction-search limitations are in the H2-A source record. No clinical validation or complete update-registry verification.",
+      "retrievedAt": "2026-11-07",
+      "inspectedPortions": [
+        "PubMed abstract and bibliographic metadata only."
+      ],
+      "versionOrPublicationDate": "2022-03-01"
+    },
+    {
+      "id": "h2a-silbernagel-2007",
+      "title": "Silbernagel et al. 2007: Achilles rehabilitation with monitored activity",
+      "path": "research/robustness/h2a/sources.json",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/17307888/",
+      "freshnessClass": "clinical-guidance",
+      "sourceContentReviewedAt": "2026-11-07",
+      "reviewScope": "H2-A bounded source review: Primary abstract; linked commentary PMID 17581977 metadata only, commentary body not retrieved.",
+      "rightsStatus": "Full-text/letter reuse rights unverified.",
+      "importedFrom": "research/robustness/h2a/sources.json",
+      "status": "H2-A-scoped-review",
+      "note": "Inspected portions and correction-search limitations are in the H2-A source record. No clinical validation or complete update-registry verification.",
+      "retrievedAt": "2026-11-07",
+      "inspectedPortions": [
+        "Primary abstract; linked commentary PMID 17581977 metadata only, commentary body not retrieved."
+      ],
+      "versionOrPublicationDate": "2007-06"
+    },
+    {
+      "id": "h2a-rothschild-2024",
+      "title": "Rothschild et al. 2024: predicting recovery in endurance athletes",
+      "path": "research/robustness/h2a/sources.json",
+      "url": "https://link.springer.com/article/10.1007/s00421-024-05530-2",
+      "freshnessClass": "active-empirical",
+      "sourceContentReviewedAt": "2026-11-07",
+      "reviewScope": "H2-A bounded source review: Abstract, participant flow, outcomes, model/validation methods, publication version and rights.",
+      "rightsStatus": "CC BY 4.0 as displayed; third-party materials may differ.",
+      "importedFrom": "research/robustness/h2a/sources.json",
+      "status": "H2-A-scoped-review",
+      "note": "Inspected portions and correction-search limitations are in the H2-A source record. No clinical validation or complete update-registry verification.",
+      "retrievedAt": "2026-11-07",
+      "inspectedPortions": [
+        "Abstract, participant flow, outcomes, model/validation methods, publication version and rights."
+      ],
+      "versionOrPublicationDate": "2024-06-20"
+    },
+    {
+      "id": "h2a-reforms-2024",
+      "title": "Kapoor et al. 2024: REFORMS reporting recommendations",
+      "path": "research/robustness/h2a/sources.json",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC11092361/",
+      "freshnessClass": "foundational",
+      "sourceContentReviewedAt": "2026-11-07",
+      "reviewScope": "H2-A bounded source review: Indexed primary abstract and methods/checklist modules; direct PMC retrieval challenged.",
+      "rightsStatus": "Full-text license not verified in this pass.",
+      "importedFrom": "research/robustness/h2a/sources.json",
+      "status": "H2-A-scoped-review",
+      "note": "Inspected portions and correction-search limitations are in the H2-A source record. No clinical validation or complete update-registry verification.",
+      "retrievedAt": "2026-11-07",
+      "inspectedPortions": [
+        "Indexed primary abstract and methods/checklist modules; direct PMC retrieval challenged."
+      ],
+      "versionOrPublicationDate": "2024-05-01"
+    },
+    {
+      "id": "h2a-sikorski-2013",
+      "title": "Sikorski et al. 2013: perceived recovery after resistance exercise",
+      "path": "research/robustness/h2a/sources.json",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/23287827/",
+      "freshnessClass": "active-empirical",
+      "sourceContentReviewedAt": "2026-11-07",
+      "reviewScope": "H2-A bounded source review: Indexed primary abstract and metadata only; no individual records or full-paper analysis.",
+      "rightsStatus": "Full-text reuse rights unverified.",
+      "importedFrom": "research/robustness/h2a/sources.json",
+      "status": "H2-A-scoped-review",
+      "note": "Inspected portions and correction-search limitations are in the H2-A source record. No clinical validation or complete update-registry verification.",
+      "retrievedAt": "2026-11-07",
+      "inspectedPortions": [
+        "Indexed primary abstract and metadata only; no individual records or full-paper analysis."
+      ],
+      "versionOrPublicationDate": "2013-08"
     }
   ],
   "claims": [
@@ -2114,7 +2348,12 @@
       "sources": [
         "core",
         "science",
-        "readiness-protocol"
+        "readiness-protocol",
+        "h2a-aasm-2015",
+        "h2a-delval-2026",
+        "h2a-knowles-2022",
+        "h2a-laurent-2011",
+        "h2a-shattock-2022"
       ],
       "gates": [
         "H2",
@@ -2123,13 +2362,22 @@
       ],
       "empiricalValidation": "none",
       "applicabilityMatrixStatus": "H1-explicit-all-contexts",
-      "evidenceDisposition": "unreviewed-for-current-cross-context-use",
+      "evidenceDisposition": "no-direct-validation-identified",
       "limitation": "Current outputs are unvalidated; no injury-safe threshold or optimal training-volume claim.",
       "contextsMeaning": "Salient origin or named discussion contexts only; complete cross-context coverage is in applicability.json.",
       "semanticLevel": "model-or-method",
       "temporalScope": "Source-specific window required; current use not established by inventory",
       "measurementScope": "Source-specific protocol required; unrecorded method, device, treatment and preparation remain unknown",
-      "noPopulationPerformanceInference": false
+      "noPopulationPerformanceInference": false,
+      "evidenceReviews": [
+        {
+          "reviewId": "H2-A",
+          "path": "research/robustness/h2a/review.json",
+          "reviewedAt": "2026-11-07",
+          "scope": "Bounded relevance/transfer review only; not all subpopulations or the complete clinical context.",
+          "nextReviewBy": "2027-02-05"
+        }
+      ]
     },
     {
       "id": "C09",
@@ -2292,7 +2540,14 @@
       ],
       "sources": [
         "core",
-        "science"
+        "science",
+        "h2a-aasm-2015",
+        "h2a-delval-2026",
+        "h2a-knowles-2022",
+        "h2a-borba-2024",
+        "h2a-edwards-2025",
+        "h2a-laurent-2011",
+        "h2a-sikorski-2013"
       ],
       "gates": [
         "H2",
@@ -2300,14 +2555,23 @@
       ],
       "empiricalValidation": "none",
       "applicabilityMatrixStatus": "H1-explicit-all-contexts",
-      "evidenceDisposition": "unreviewed-for-current-cross-context-use",
+      "evidenceDisposition": "indirect-component-evidence-exact-rule-unvalidated",
       "limitation": "Thresholds are not validated clinical cutoffs.",
       "contextsMeaning": "Salient origin or named discussion contexts only; complete cross-context coverage is in applicability.json.",
       "semanticLevel": "model-or-method",
       "temporalScope": "Source-specific window required; current use not established by inventory",
       "measurementScope": "Source-specific protocol required; unrecorded method, device, treatment and preparation remain unknown",
       "parentClaim": "C08",
-      "noPopulationPerformanceInference": false
+      "noPopulationPerformanceInference": false,
+      "evidenceReviews": [
+        {
+          "reviewId": "H2-A",
+          "path": "research/robustness/h2a/review.json",
+          "reviewedAt": "2026-11-07",
+          "scope": "Bounded relevance/transfer review only; not all subpopulations or the complete clinical context.",
+          "nextReviewBy": "2027-02-05"
+        }
+      ]
     },
     {
       "id": "C15",
@@ -2323,7 +2587,11 @@
       ],
       "sources": [
         "core",
-        "ui"
+        "ui",
+        "h2a-acsm-2026",
+        "h2a-schoenfeld-2019",
+        "h2a-shattock-2022",
+        "h2a-silbernagel-2007"
       ],
       "gates": [
         "H2",
@@ -2331,14 +2599,23 @@
       ],
       "empiricalValidation": "none",
       "applicabilityMatrixStatus": "H1-explicit-all-contexts",
-      "evidenceDisposition": "unreviewed-for-current-cross-context-use",
+      "evidenceDisposition": "no-direct-validation-identified",
       "limitation": "Ready for your full session and green-day wording can imply more certainty than the heuristic supports; no injury-risk or optimal-dose validation.",
       "contextsMeaning": "Salient origin or named discussion contexts only; complete cross-context coverage is in applicability.json.",
       "semanticLevel": "decision",
       "temporalScope": "Source-specific window required; current use not established by inventory",
       "measurementScope": "Source-specific protocol required; unrecorded method, device, treatment and preparation remain unknown",
       "parentClaim": "C08",
-      "noPopulationPerformanceInference": false
+      "noPopulationPerformanceInference": false,
+      "evidenceReviews": [
+        {
+          "reviewId": "H2-A",
+          "path": "research/robustness/h2a/review.json",
+          "reviewedAt": "2026-11-07",
+          "scope": "Bounded relevance/transfer review only; not all subpopulations or the complete clinical context.",
+          "nextReviewBy": "2027-02-05"
+        }
+      ]
     },
     {
       "id": "C16",
@@ -2360,14 +2637,23 @@
       ],
       "empiricalValidation": "none",
       "applicabilityMatrixStatus": "H1-explicit-all-contexts",
-      "evidenceDisposition": "unreviewed-for-current-cross-context-use",
+      "evidenceDisposition": "no-direct-validation-identified",
       "limitation": "The note is contextual, not a validated fatigue penalty.",
       "contextsMeaning": "Salient origin or named discussion contexts only; complete cross-context coverage is in applicability.json.",
       "semanticLevel": "model-or-method",
       "temporalScope": "Source-specific window required; current use not established by inventory",
       "measurementScope": "Source-specific protocol required; unrecorded method, device, treatment and preparation remain unknown",
       "parentClaim": "C08",
-      "noPopulationPerformanceInference": true
+      "noPopulationPerformanceInference": true,
+      "evidenceReviews": [
+        {
+          "reviewId": "H2-A",
+          "path": "research/robustness/h2a/review.json",
+          "reviewedAt": "2026-11-07",
+          "scope": "Bounded relevance/transfer review only; not all subpopulations or the complete clinical context.",
+          "nextReviewBy": "2027-02-05"
+        }
+      ]
     },
     {
       "id": "C17",
@@ -2801,7 +3087,9 @@
       ],
       "sources": [
         "readiness-protocol",
-        "readiness-methods"
+        "readiness-methods",
+        "h2a-rothschild-2024",
+        "h2a-reforms-2024"
       ],
       "gates": [
         "H2",
@@ -2810,13 +3098,22 @@
       ],
       "empiricalValidation": "none",
       "applicabilityMatrixStatus": "H1-explicit-all-contexts",
-      "evidenceDisposition": "unreviewed-for-current-cross-context-use",
+      "evidenceDisposition": "proposed-hypothesis-not-tested",
       "limitation": "No participant analysis or result exists for this proposal; leakage, missingness and temporal splits are protocol obligations.",
       "contextsMeaning": "Salient origin or named discussion contexts only; complete cross-context coverage is in applicability.json.",
       "semanticLevel": "model-or-method",
       "temporalScope": "Source-specific window required; current use not established by inventory",
       "measurementScope": "Source-specific protocol required; unrecorded method, device, treatment and preparation remain unknown",
-      "noPopulationPerformanceInference": true
+      "noPopulationPerformanceInference": true,
+      "evidenceReviews": [
+        {
+          "reviewId": "H2-A",
+          "path": "research/robustness/h2a/review.json",
+          "reviewedAt": "2026-11-07",
+          "scope": "Bounded relevance/transfer review only; not all subpopulations or the complete clinical context.",
+          "nextReviewBy": "2027-02-05"
+        }
+      ]
     },
     {
       "id": "C32",
@@ -2896,7 +3193,9 @@
       ],
       "sources": [
         "science",
-        "input-contract"
+        "input-contract",
+        "h2a-acsm-2026",
+        "h2a-silbernagel-2007"
       ],
       "gates": [
         "H2",
@@ -2905,13 +3204,22 @@
       ],
       "empiricalValidation": "none",
       "applicabilityMatrixStatus": "H1-explicit-all-contexts",
-      "evidenceDisposition": "unreviewed-for-current-cross-context-use",
+      "evidenceDisposition": "documentation-boundary-not-clinical-validation",
       "limitation": "Clinical status, treatment and exclusions are not detected or enforced by the current input contract.",
       "contextsMeaning": "Salient origin or named discussion contexts only; complete cross-context coverage is in applicability.json.",
       "semanticLevel": "decision",
       "temporalScope": "Source-specific window required; current use not established by inventory",
       "measurementScope": "Source-specific protocol required; unrecorded method, device, treatment and preparation remain unknown",
-      "noPopulationPerformanceInference": false
+      "noPopulationPerformanceInference": false,
+      "evidenceReviews": [
+        {
+          "reviewId": "H2-A",
+          "path": "research/robustness/h2a/review.json",
+          "reviewedAt": "2026-11-07",
+          "scope": "Bounded relevance/transfer review only; not all subpopulations or the complete clinical context.",
+          "nextReviewBy": "2027-02-05"
+        }
+      ]
     },
     {
       "id": "C35",
@@ -2927,7 +3235,10 @@
       ],
       "sources": [
         "readiness-methods",
-        "readiness-protocol"
+        "readiness-protocol",
+        "h2a-rothschild-2024",
+        "h2a-schoenfeld-2019",
+        "h2a-reforms-2024"
       ],
       "gates": [
         "H5",
@@ -2935,13 +3246,22 @@
       ],
       "empiricalValidation": "none",
       "applicabilityMatrixStatus": "H1-explicit-all-contexts",
-      "evidenceDisposition": "unreviewed-for-current-cross-context-use",
+      "evidenceDisposition": "inference-not-established-by-reviewed-designs",
       "limitation": "These endpoints require distinct protocols and evidence; observational predictive association is not intervention benefit.",
       "contextsMeaning": "Salient origin or named discussion contexts only; complete cross-context coverage is in applicability.json.",
       "semanticLevel": "model-or-method",
       "temporalScope": "Source-specific window required; current use not established by inventory",
       "measurementScope": "Source-specific protocol required; unrecorded method, device, treatment and preparation remain unknown",
-      "noPopulationPerformanceInference": true
+      "noPopulationPerformanceInference": true,
+      "evidenceReviews": [
+        {
+          "reviewId": "H2-A",
+          "path": "research/robustness/h2a/review.json",
+          "reviewedAt": "2026-11-07",
+          "scope": "Bounded relevance/transfer review only; not all subpopulations or the complete clinical context.",
+          "nextReviewBy": "2027-02-05"
+        }
+      ]
     }
   ],
   "relations": [

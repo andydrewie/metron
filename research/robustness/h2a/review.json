@@ -1,0 +1,346 @@
+{
+  "schemaVersion": "1.0.0",
+  "documentType": "metron.H2A-claim-review",
+  "reviewId": "H2-A",
+  "asOf": "2026-11-07",
+  "status": "complete-for-declared-slice",
+  "baselineCommit": "455534b573b5b025228cf42a95f6b8d729717669",
+  "scope": "C08/C14/C15/C16/C31/C34/C35: targeted evidence relevance, contradictions and action boundaries. No new empirical Metron study; no complete clinical review.",
+  "searchLog": "research/robustness/h2a/search-log.json",
+  "sourceRegistry": "research/robustness/h2a/sources.json",
+  "report": "research/robustness/h2a/README.md",
+  "reviewerRole": "Maintaining agent; not an independent clinical review",
+  "clinicalApplicabilityEstablished": false,
+  "algorithmEmpiricallyValidated": false,
+  "productionBehaviorChanged": false,
+  "claimReviews": [
+    {
+      "claimId": "C08",
+      "question": "The combined readiness heuristic predicts readiness or appropriate session volume.",
+      "disposition": "no-direct-validation-identified",
+      "sourceIds": [
+        "h2a-aasm-2015",
+        "h2a-delval-2026",
+        "h2a-knowles-2022",
+        "h2a-laurent-2011",
+        "h2a-shattock-2022"
+      ],
+      "searchIds": [
+        "Q01",
+        "Q02",
+        "Q03",
+        "Q04",
+        "Q11",
+        "Q13",
+        "Q14",
+        "Q16",
+        "Q17",
+        "Q29",
+        "Q30"
+      ],
+      "finding": "Component relevance does not validate the combination, weights, categories or decisions.",
+      "permittedInterpretation": "Only an educational heuristic; no injury-safe or optimal-session interpretation.",
+      "reviewedContextIds": [
+        "general-adult",
+        "athlete-muscular"
+      ],
+      "reviewScope": "Bounded relevance/transfer review only; not all subpopulations or the complete clinical context.",
+      "clinicalApplicabilityEstablished": false,
+      "directAlgorithmValidation": false,
+      "reviewedAt": "2026-11-07",
+      "nextReviewBy": "2027-02-05",
+      "nextGate": "H5",
+      "reversalTrigger": "A relevant independent study tests the exact claim, population, measurement window and decision with suitable comparators, uncertainty and adverse-use evaluation."
+    },
+    {
+      "claimId": "C14",
+      "question": "Sleep below 5/7 hours and energy/pain/soreness categories form validated daily and weekly readiness boundaries.",
+      "disposition": "indirect-component-evidence-exact-rule-unvalidated",
+      "sourceIds": [
+        "h2a-aasm-2015",
+        "h2a-delval-2026",
+        "h2a-knowles-2022",
+        "h2a-borba-2024",
+        "h2a-edwards-2025",
+        "h2a-laurent-2011",
+        "h2a-sikorski-2013"
+      ],
+      "searchIds": [
+        "Q01",
+        "Q02",
+        "Q08",
+        "Q09",
+        "Q11",
+        "Q13",
+        "Q14",
+        "Q16",
+        "Q18",
+        "Q22",
+        "Q23",
+        "Q25",
+        "Q27",
+        "Q29",
+        "Q30"
+      ],
+      "finding": "Habitual guidance, acute exposures, subjective scales and performance outcomes differ; none validates this exact classification.",
+      "permittedInterpretation": "Preserve sleep window/method and distinguish fatigue, soreness, pain and clinical states.",
+      "reviewedContextIds": [
+        "general-adult",
+        "athlete-muscular",
+        "pain-sleep"
+      ],
+      "reviewScope": "Bounded relevance/transfer review only; not all subpopulations or the complete clinical context.",
+      "clinicalApplicabilityEstablished": false,
+      "directAlgorithmValidation": false,
+      "reviewedAt": "2026-11-07",
+      "nextReviewBy": "2027-02-05",
+      "nextGate": "H5",
+      "reversalTrigger": "A relevant independent study tests the exact claim, population, measurement window and decision with suitable comparators, uncertainty and adverse-use evaluation."
+    },
+    {
+      "claimId": "C15",
+      "question": "The 3-by-3 ratio table, rest override and full-session wording prescribe an appropriate or safe set count.",
+      "disposition": "no-direct-validation-identified",
+      "sourceIds": [
+        "h2a-acsm-2026",
+        "h2a-schoenfeld-2019",
+        "h2a-shattock-2022",
+        "h2a-silbernagel-2007"
+      ],
+      "searchIds": [
+        "Q03",
+        "Q04",
+        "Q05",
+        "Q07",
+        "Q10",
+        "Q14",
+        "Q16",
+        "Q17",
+        "Q20",
+        "Q23",
+        "Q24"
+      ],
+      "finding": "Weekly/per-exercise doses and in-session intensity regulation cannot establish ratios of a user-entered usual per-muscle session count.",
+      "permittedInterpretation": "Treat ratios as chosen examples; submit the concrete wording changes in this review to H5.",
+      "reviewedContextIds": [
+        "general-adult",
+        "athlete-muscular",
+        "pain-sleep"
+      ],
+      "reviewScope": "Bounded relevance/transfer review only; not all subpopulations or the complete clinical context.",
+      "clinicalApplicabilityEstablished": false,
+      "directAlgorithmValidation": false,
+      "reviewedAt": "2026-11-07",
+      "nextReviewBy": "2027-02-05",
+      "nextGate": "H5",
+      "reversalTrigger": "A relevant independent study tests the exact claim, population, measurement window and decision with suitable comparators, uncertainty and adverse-use evaluation."
+    },
+    {
+      "claimId": "C16",
+      "question": "At least 1.5 times usual steps establishes a leg-fatigue threshold.",
+      "disposition": "no-direct-validation-identified",
+      "sourceIds": [],
+      "searchIds": [
+        "Q06",
+        "Q15",
+        "Q16"
+      ],
+      "finding": "Exact and broader searches did not locate a validation for this trigger. It currently adds a note, not an arithmetic penalty.",
+      "permittedInterpretation": "Keep the threshold identified as a project choice; do not infer an energy or set deduction.",
+      "reviewedContextIds": [
+        "general-adult",
+        "athlete-muscular",
+        "mobility-gait"
+      ],
+      "reviewScope": "Bounded relevance/transfer review only; not all subpopulations or the complete clinical context.",
+      "clinicalApplicabilityEstablished": false,
+      "directAlgorithmValidation": false,
+      "reviewedAt": "2026-11-07",
+      "nextReviewBy": "2027-02-05",
+      "nextGate": "H3",
+      "reversalTrigger": "A relevant independent study tests the exact claim, population, measurement window and decision with suitable comparators, uncertainty and adverse-use evaluation."
+    },
+    {
+      "claimId": "C31",
+      "question": "Wearable features improve next-session lifting predictions beyond the proposed human-context baseline.",
+      "disposition": "proposed-hypothesis-not-tested",
+      "sourceIds": [
+        "h2a-rothschild-2024",
+        "h2a-reforms-2024"
+      ],
+      "searchIds": [
+        "Q12",
+        "Q13",
+        "Q17",
+        "Q21",
+        "Q24",
+        "Q30"
+      ],
+      "finding": "The cited endurance study has different outcomes and baseline comparison. It does not demonstrate Metron B over A.",
+      "permittedInterpretation": "Retain the proposal; require predeclared lifting outcomes, past-only features and forward-time/person-held-out evaluation.",
+      "reviewedContextIds": [
+        "general-adult",
+        "athlete-muscular"
+      ],
+      "reviewScope": "Bounded relevance/transfer review only; not all subpopulations or the complete clinical context.",
+      "clinicalApplicabilityEstablished": false,
+      "directAlgorithmValidation": false,
+      "reviewedAt": "2026-11-07",
+      "nextReviewBy": "2027-02-05",
+      "nextGate": "H5",
+      "reversalTrigger": "A relevant independent study tests the exact claim, population, measurement window and decision with suitable comparators, uncertainty and adverse-use evaluation."
+    },
+    {
+      "claimId": "C34",
+      "question": "The documented adult educational scope establishes clinical suitability or automatic exclusion screening.",
+      "disposition": "documentation-boundary-not-clinical-validation",
+      "sourceIds": [
+        "h2a-acsm-2026",
+        "h2a-silbernagel-2007"
+      ],
+      "searchIds": [
+        "Q01",
+        "Q03",
+        "Q05",
+        "Q10",
+        "Q17",
+        "Q20",
+        "Q24",
+        "Q28",
+        "Q29"
+      ],
+      "finding": "General healthy-adult evidence and a diagnosis-specific rehabilitation trial do not establish broad clinical applicability.",
+      "permittedInterpretation": "No runtime clinical clearance; other conditions, severity, treatment, life stages and intersections remain unreviewed.",
+      "reviewedContextIds": [
+        "general-adult",
+        "pain-sleep"
+      ],
+      "reviewScope": "Bounded relevance/transfer review only; not all subpopulations or the complete clinical context.",
+      "clinicalApplicabilityEstablished": false,
+      "directAlgorithmValidation": false,
+      "reviewedAt": "2026-11-07",
+      "nextReviewBy": "2027-02-05",
+      "nextGate": "H5",
+      "reversalTrigger": "A relevant independent study tests the exact claim, population, measurement window and decision with suitable comparators, uncertainty and adverse-use evaluation."
+    },
+    {
+      "claimId": "C35",
+      "question": "Predicting recovery or performance proves hypertrophy, injury protection, optimal sets or causal benefit from advice.",
+      "disposition": "inference-not-established-by-reviewed-designs",
+      "sourceIds": [
+        "h2a-rothschild-2024",
+        "h2a-schoenfeld-2019",
+        "h2a-reforms-2024"
+      ],
+      "searchIds": [
+        "Q07",
+        "Q12",
+        "Q13",
+        "Q17",
+        "Q21",
+        "Q24"
+      ],
+      "finding": "Different endpoints and observational prediction cannot substitute for intervention evaluation.",
+      "permittedInterpretation": "Keep performance, hypertrophy, injury and decision benefit separate in protocols and public claims.",
+      "reviewedContextIds": [
+        "general-adult",
+        "athlete-muscular"
+      ],
+      "reviewScope": "Bounded relevance/transfer review only; not all subpopulations or the complete clinical context.",
+      "clinicalApplicabilityEstablished": false,
+      "directAlgorithmValidation": false,
+      "reviewedAt": "2026-11-07",
+      "nextReviewBy": "2027-02-05",
+      "nextGate": "H5",
+      "reversalTrigger": "A relevant independent study tests the exact claim, population, measurement window and decision with suitable comparators, uncertainty and adverse-use evaluation."
+    }
+  ],
+  "contradictions": [
+    {
+      "id": "K01",
+      "sourceIds": [
+        "h2a-delval-2026",
+        "h2a-knowles-2022",
+        "h2a-borba-2024",
+        "h2a-edwards-2025"
+      ],
+      "apparentConflict": "Sleep loss can impair some performance outcomes while some adaptation or strength outcomes are preserved.",
+      "resolution": "Do not pool acute deprivation, habitual short sleep, different sexes, endpoints or nonrandomized groups into one set-reduction factor.",
+      "unresolved": "Exact dose-response and individual decision value remain unknown."
+    },
+    {
+      "id": "K02",
+      "sourceIds": [
+        "h2a-acsm-2026",
+        "h2a-schoenfeld-2019",
+        "h2a-shattock-2022"
+      ],
+      "apparentConflict": "Higher chronic training volume can help some adaptations, while autoregulation changes day-to-day training.",
+      "resolution": "Weekly volume, per-exercise sets, intensity and per-muscle session ratios are different quantities; no direct conversion is justified.",
+      "unresolved": "Metron ratio bands and the validity of usual session volume are untested."
+    },
+    {
+      "id": "K03",
+      "sourceIds": [
+        "h2a-silbernagel-2007"
+      ],
+      "apparentConflict": "The software returns rest for any pain, while monitored loading can be part of diagnosis-specific rehabilitation.",
+      "resolution": "Treat generic pain as insufficiently characterized; neither universal rest nor universal permission follows.",
+      "unresolved": "No triage, diagnosis, acute-injury clearance or treatment-aware model exists."
+    },
+    {
+      "id": "K04",
+      "sourceIds": [
+        "h2a-rothschild-2024",
+        "h2a-reforms-2024"
+      ],
+      "apparentConflict": "A paper predicts recovery but Metron proposes lifting-performance prediction.",
+      "resolution": "Retain the actual endpoints, baseline and validation scheme; evidence for one task does not establish the other.",
+      "unresolved": "Incremental wearable value, prospective temporal generalization and benefit of following advice remain untested."
+    }
+  ],
+  "actionWordingReview": [
+    {
+      "surface": "app.js:full-session title/flag",
+      "current": "Ready for your full session / GREEN DAY",
+      "candidate": "Review your training plan / SELF-CHECK",
+      "reason": "Invites reflection without implying clinical clearance, a validated safe dose or that default inputs were explicitly reported.",
+      "status": "proposed-for-H5-not-implemented"
+    },
+    {
+      "surface": "app.js:readiness range label",
+      "current": "working sets / target muscle",
+      "candidate": "Illustrative set range / target muscle / session",
+      "reason": "Names the epistemic status and temporal unit near the number.",
+      "status": "proposed-for-H5-not-implemented"
+    },
+    {
+      "surface": "app.js:recovery-first title/unit",
+      "current": "Recovery comes first / sleep and easy movement first",
+      "candidate": "Review recovery before training / this tool cannot determine a safe session",
+      "reason": "Avoids turning broad pain/fatigue inputs into a universal treatment or movement recommendation.",
+      "status": "proposed-for-H5-not-implemented"
+    }
+  ],
+  "nextReviewBy": "2027-02-05",
+  "earlyReviewTriggers": [
+    "before changing action rules or clinical wording",
+    "new relevant trial or contradicting result",
+    "correction, retraction or guidance version change",
+    "new population, treatment or measurement context"
+  ],
+  "unresolved": [
+    "Full clinical applicability, severity, treatment and all named intersections",
+    "Full texts and correction registries where access or review was limited",
+    "Direct validation of combined rules, exact thresholds, ratios and step trigger",
+    "Independent prospective comparison, individual uncertainty and decision benefit",
+    "Public action wording remains as recorded until H5 review/implementation"
+  ],
+  "closure": {
+    "reviewedAt": "2026-11-07",
+    "scope": "Seven specified claim families; all source inspection and access limits recorded",
+    "acceptanceReview": "Reproducible targeted queries, primary/guidance records, support and contrary findings, claim-level dispositions, explicit clinical unknowns and review triggers are recorded. Whole H2 stays in progress.",
+    "independentReview": false
+  },
+  "ruleAudit": "research/robustness/h2a/rule-audit.json"
+}

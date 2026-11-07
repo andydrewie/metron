@@ -12,19 +12,32 @@
     {
       "id": "A",
       "name": "human-context",
-      "features": ["prior_training_performance", "planned_session", "prior_night_sleep_duration", "subjective_energy", "subjective_fatigue"]
+      "features": [
+        "prior_training_performance",
+        "planned_session",
+        "prior_night_sleep_duration",
+        "subjective_energy",
+        "subjective_fatigue"
+      ]
     },
     {
       "id": "B",
       "name": "wearable-augmented",
       "includes": "A",
-      "features": ["source_specific_hrv_with_metric_method", "resting_heart_rate", "sleep_regularities", "vendor_score_with_source_and_algorithm_version"]
+      "features": [
+        "source_specific_hrv_with_metric_method",
+        "resting_heart_rate",
+        "sleep_regularities",
+        "vendor_score_with_source_and_algorithm_version"
+      ]
     },
     {
       "id": "C",
       "name": "personalized-history",
       "includes": "B",
-      "features": ["historical_outcomes_observed_before_prediction"],
+      "features": [
+        "historical_outcomes_observed_before_prediction"
+      ],
       "warning": "Model fitting must use past-only personal observations"
     }
   ],
@@ -33,7 +46,15 @@
   "validation": {
     "split": "forward-time-held-out",
     "leakageChecksRequired": true,
-    "resultsToReport": ["sample_size", "missingness", "mae", "calibration_when_applicable", "uncertainty_intervals", "individual_and_subgroup_variation", "negative_results"],
+    "resultsToReport": [
+      "sample_size",
+      "missingness",
+      "mae",
+      "calibration_when_applicable",
+      "uncertainty_intervals",
+      "individual_and_subgroup_variation",
+      "negative_results"
+    ],
     "preRegistrationRequiredBeforeResults": true
   },
   "safety": {
@@ -42,5 +63,11 @@
     "noCausalSleepClaimsFromObservationalData": true,
     "participantConsentRequired": true
   },
-  "documentation": "../docs/RESEARCH_PROTOCOL.md"
+  "documentation": "../docs/RESEARCH_PROTOCOL.md",
+  "evidenceReview": {
+    "reviewId": "H2-A",
+    "path": "./robustness/h2a/review.json",
+    "status": "proposed-hypothesis-not-tested",
+    "boundary": "The cited endurance study predicts different outcomes with a different baseline; it does not validate Metron B versus A or causal decision benefit."
+  }
 }

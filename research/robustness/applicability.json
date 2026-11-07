@@ -1009,5 +1009,147 @@
         "pregnancy-sleep": "N"
       }
     }
+  ],
+  "reviewLayers": {
+    "baseCells": "H1 clinical-applicability classifications; not promoted by a targeted source relevance review.",
+    "overlays": "Bounded claim/context transfer reviews, with exact scope and no clinical clearance."
+  },
+  "reviewOverlays": [
+    {
+      "claimId": "C08",
+      "contextId": "general-adult",
+      "reviewId": "H2-A",
+      "reviewPath": "research/robustness/h2a/review.json",
+      "disposition": "no-direct-validation-identified",
+      "clinicalApplicabilityEstablished": false
+    },
+    {
+      "claimId": "C08",
+      "contextId": "athlete-muscular",
+      "reviewId": "H2-A",
+      "reviewPath": "research/robustness/h2a/review.json",
+      "disposition": "no-direct-validation-identified",
+      "clinicalApplicabilityEstablished": false
+    },
+    {
+      "claimId": "C14",
+      "contextId": "general-adult",
+      "reviewId": "H2-A",
+      "reviewPath": "research/robustness/h2a/review.json",
+      "disposition": "indirect-component-evidence-exact-rule-unvalidated",
+      "clinicalApplicabilityEstablished": false
+    },
+    {
+      "claimId": "C14",
+      "contextId": "athlete-muscular",
+      "reviewId": "H2-A",
+      "reviewPath": "research/robustness/h2a/review.json",
+      "disposition": "indirect-component-evidence-exact-rule-unvalidated",
+      "clinicalApplicabilityEstablished": false
+    },
+    {
+      "claimId": "C14",
+      "contextId": "pain-sleep",
+      "reviewId": "H2-A",
+      "reviewPath": "research/robustness/h2a/review.json",
+      "disposition": "indirect-component-evidence-exact-rule-unvalidated",
+      "clinicalApplicabilityEstablished": false
+    },
+    {
+      "claimId": "C15",
+      "contextId": "general-adult",
+      "reviewId": "H2-A",
+      "reviewPath": "research/robustness/h2a/review.json",
+      "disposition": "no-direct-validation-identified",
+      "clinicalApplicabilityEstablished": false
+    },
+    {
+      "claimId": "C15",
+      "contextId": "athlete-muscular",
+      "reviewId": "H2-A",
+      "reviewPath": "research/robustness/h2a/review.json",
+      "disposition": "no-direct-validation-identified",
+      "clinicalApplicabilityEstablished": false
+    },
+    {
+      "claimId": "C15",
+      "contextId": "pain-sleep",
+      "reviewId": "H2-A",
+      "reviewPath": "research/robustness/h2a/review.json",
+      "disposition": "no-direct-validation-identified",
+      "clinicalApplicabilityEstablished": false
+    },
+    {
+      "claimId": "C16",
+      "contextId": "general-adult",
+      "reviewId": "H2-A",
+      "reviewPath": "research/robustness/h2a/review.json",
+      "disposition": "no-direct-validation-identified",
+      "clinicalApplicabilityEstablished": false
+    },
+    {
+      "claimId": "C16",
+      "contextId": "athlete-muscular",
+      "reviewId": "H2-A",
+      "reviewPath": "research/robustness/h2a/review.json",
+      "disposition": "no-direct-validation-identified",
+      "clinicalApplicabilityEstablished": false
+    },
+    {
+      "claimId": "C16",
+      "contextId": "mobility-gait",
+      "reviewId": "H2-A",
+      "reviewPath": "research/robustness/h2a/review.json",
+      "disposition": "no-direct-validation-identified",
+      "clinicalApplicabilityEstablished": false
+    },
+    {
+      "claimId": "C31",
+      "contextId": "general-adult",
+      "reviewId": "H2-A",
+      "reviewPath": "research/robustness/h2a/review.json",
+      "disposition": "proposed-hypothesis-not-tested",
+      "clinicalApplicabilityEstablished": false
+    },
+    {
+      "claimId": "C31",
+      "contextId": "athlete-muscular",
+      "reviewId": "H2-A",
+      "reviewPath": "research/robustness/h2a/review.json",
+      "disposition": "proposed-hypothesis-not-tested",
+      "clinicalApplicabilityEstablished": false
+    },
+    {
+      "claimId": "C34",
+      "contextId": "general-adult",
+      "reviewId": "H2-A",
+      "reviewPath": "research/robustness/h2a/review.json",
+      "disposition": "documentation-boundary-not-clinical-validation",
+      "clinicalApplicabilityEstablished": false
+    },
+    {
+      "claimId": "C34",
+      "contextId": "pain-sleep",
+      "reviewId": "H2-A",
+      "reviewPath": "research/robustness/h2a/review.json",
+      "disposition": "documentation-boundary-not-clinical-validation",
+      "clinicalApplicabilityEstablished": false
+    },
+    {
+      "claimId": "C35",
+      "contextId": "general-adult",
+      "reviewId": "H2-A",
+      "reviewPath": "research/robustness/h2a/review.json",
+      "disposition": "inference-not-established-by-reviewed-designs",
+      "clinicalApplicabilityEstablished": false
+    },
+    {
+      "claimId": "C35",
+      "contextId": "athlete-muscular",
+      "reviewId": "H2-A",
+      "reviewPath": "research/robustness/h2a/review.json",
+      "disposition": "inference-not-established-by-reviewed-designs",
+      "clinicalApplicabilityEstablished": false
+    }
   ]
 }

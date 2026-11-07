@@ -698,5 +698,8 @@
     }
   ],
   "unresolvedScientificFamilies": [],
-  "maintenance": "A scientific formula, output, recommendation, empirical result or scope change must update claim IDs, surface mappings, matrix and H2 review queue. Retire IDs explicitly; never reuse them for different claims."
+  "maintenance": "A scientific formula, output, recommendation, empirical result or scope change must update claim IDs, surface mappings, matrix and H2 review queue. Retire IDs explicitly; never reuse them for different claims.",
+  "followupReviewRecords": [
+    "research/robustness/h2a/review.json"
+  ]
 }

@@ -35,6 +35,10 @@ A finding that HRV or proprietary wearable scores **do not** add useful predicti
 
 With voluntary self-tracking and standardized training sessions, use each athlete's prior data to make prospective next-session predictions. Timestamp and freeze each prediction *before* training. Compare predictions against the observed pre-specified performance measure; annotate illness, travel, deviations from the protocol and missing data. Do **not** infer safety from an individual readiness score.
 
+## Evidence boundary after H2-A
+
+The [H2-A review](../research/robustness/h2a/README.md) inspected the cited endurance prediction study: its targets were perceived morning recovery and HRV change, with an intercept-only baseline. That is not evidence that wearable features improve next-session lifting performance over our human-context baseline. Its described validation also does not establish this proposal's prospective forward-time decision benefit. The A/B/C study remains proposed and unrun; preserve distinct performance, hypertrophy, injury and causal endpoints.
+
 ## Important sources
 
 - HRV in strength and conditioning (narrative review): https://pmc.ncbi.nlm.nih.gov/articles/PMC11204851/

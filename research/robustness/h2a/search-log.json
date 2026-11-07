@@ -1,0 +1,294 @@
+{
+  "schemaVersion": "1.0.0",
+  "documentType": "metron.H2A-search-log",
+  "asOf": "2026-11-07",
+  "timezone": "Asia/Taipei",
+  "publicationCutoff": "2026-11-07",
+  "design": "Targeted rapid evidence review, not a systematic review, preregistered protocol or exhaustive negative search.",
+  "protocolTiming": "Initial orientation searches preceded this consolidated log. Queries and selection were adapted as directness and contradictory findings emerged; no prospective registration is claimed.",
+  "reviewerRole": "Maintaining agent; single-reviewer extraction and critical appraisal, not independent duplicate screening",
+  "inclusion": "Human primary studies or original issuing-body/methodological guidance relevant to exact readiness propositions. English-accessible content published by cutoff; older foundational sources retained.",
+  "exclusion": "Reviews used only for discovery unless an original authoritative position/consensus statement; commercial scores, unrelated activity populations/endpoints, duplicate preprints and unverified snippets are not direct validation.",
+  "retrievalSystem": "Web system1 discovery; direct primary publisher, PubMed, PMC and issuing-body pages/PDFs where available. No comprehensive database export.",
+  "queries": [
+    {
+      "id": "Q01",
+      "q": "site.aasm.org adult sleep duration consensus seven hours 2015 recommendation",
+      "runDate": "2026-11-07",
+      "recencyDays": null,
+      "purpose": "claim-discovery-or-metadata"
+    },
+    {
+      "id": "Q02",
+      "q": "sleep restriction resistance exercise performance randomized trial 4 hours 2024 2025 2026",
+      "runDate": "2026-11-07",
+      "recencyDays": null,
+      "purpose": "claim-discovery-or-metadata"
+    },
+    {
+      "id": "Q03",
+      "q": "site.acsm.org 2026 resistance training guidelines position stand volume",
+      "runDate": "2026-11-07",
+      "recencyDays": null,
+      "purpose": "claim-discovery-or-metadata"
+    },
+    {
+      "id": "Q04",
+      "q": "\"resistance training\" \"autoregulation\" \"randomized\" readiness subjective performance Helms",
+      "runDate": "2026-11-07",
+      "recencyDays": null,
+      "purpose": "claim-discovery-or-metadata"
+    },
+    {
+      "id": "Q05",
+      "q": "\"Continuing sports activity\" \"Achilles\" \"pain-monitoring\" randomized 2007",
+      "runDate": "2026-11-07",
+      "recencyDays": null,
+      "purpose": "claim-discovery-or-metadata"
+    },
+    {
+      "id": "Q06",
+      "q": "\"daily steps\" \"resistance training\" \"1.5\" fatigue readiness",
+      "runDate": "2026-11-07",
+      "recencyDays": null,
+      "purpose": "claim-discovery-or-metadata"
+    },
+    {
+      "id": "Q07",
+      "q": "\"Resistance Training Volume Enhances Muscle Hypertrophy\" 2019 randomized",
+      "runDate": "2026-11-07",
+      "recencyDays": null,
+      "purpose": "claim-discovery-or-metadata"
+    },
+    {
+      "id": "Q08",
+      "q": "\"Recommended Amount of Sleep\" \"2015\" \"7\" site.aasm.org",
+      "runDate": "2026-11-07",
+      "recencyDays": null,
+      "purpose": "claim-discovery-or-metadata"
+    },
+    {
+      "id": "Q09",
+      "q": "\"Could a Habitual Sleep Restriction\" Borba 2024 results",
+      "runDate": "2026-11-07",
+      "recencyDays": null,
+      "purpose": "claim-discovery-or-metadata"
+    },
+    {
+      "id": "Q10",
+      "q": "\"Continued sports activity\" Silbernagel \"38\" 2007",
+      "runDate": "2026-11-07",
+      "recencyDays": null,
+      "purpose": "claim-discovery-or-metadata"
+    },
+    {
+      "id": "Q11",
+      "q": "\"perceived recovery status scale\" Laurent 2011 validation 16",
+      "runDate": "2026-11-07",
+      "recencyDays": null,
+      "purpose": "claim-discovery-or-metadata"
+    },
+    {
+      "id": "Q12",
+      "q": "\"REFORMS\" \"2024\" machine learning science checklist",
+      "runDate": "2026-11-07",
+      "recencyDays": null,
+      "purpose": "claim-discovery-or-metadata"
+    },
+    {
+      "id": "Q13",
+      "q": "resistance training readiness sleep fatigue randomized trial wearable 2026",
+      "runDate": "2026-11-07",
+      "recencyDays": 365,
+      "purpose": "claim-discovery-or-metadata"
+    },
+    {
+      "id": "Q14",
+      "q": "\"5 hours\" \"7 hours\" sleep \"sets\" resistance training readiness validation",
+      "runDate": "2026-11-07",
+      "recencyDays": null,
+      "purpose": "claim-discovery-or-metadata"
+    },
+    {
+      "id": "Q15",
+      "q": "\"daily steps\" \"1.5\" \"leg fatigue\"",
+      "runDate": "2026-11-07",
+      "recencyDays": null,
+      "purpose": "claim-discovery-or-metadata"
+    },
+    {
+      "id": "Q16",
+      "q": "\"weekly fatigue\" \"sleep\" \"set volume\" randomized resistance training",
+      "runDate": "2026-11-07",
+      "recencyDays": null,
+      "purpose": "claim-discovery-or-metadata"
+    },
+    {
+      "id": "Q17",
+      "q": "\"readiness\" \"injury\" \"sleep\" \"resistance training\" validation",
+      "runDate": "2026-11-07",
+      "recencyDays": 365,
+      "purpose": "claim-discovery-or-metadata"
+    },
+    {
+      "id": "Q18",
+      "q": "\"Sustained Sleep Restriction Reduces Resistance Exercise Quality and Quantity in Females\" results",
+      "runDate": "2026-11-07",
+      "recencyDays": null,
+      "purpose": "claim-discovery-or-metadata"
+    },
+    {
+      "id": "Q19",
+      "q": "\"10.3390/jfmk11010083\" correction retraction erratum",
+      "runDate": "2026-11-07",
+      "recencyDays": null,
+      "purpose": "update-notice-screen"
+    },
+    {
+      "id": "Q20",
+      "q": "\"10.1249/MSS.0000000000003897\" correction erratum retraction",
+      "runDate": "2026-11-07",
+      "recencyDays": null,
+      "purpose": "update-notice-screen"
+    },
+    {
+      "id": "Q21",
+      "q": "\"10.1007/s00421-024-05530-2\" correction erratum retraction",
+      "runDate": "2026-11-07",
+      "recencyDays": null,
+      "purpose": "update-notice-screen"
+    },
+    {
+      "id": "Q22",
+      "q": "(\"10.1249/MSS.0000000000003000\" OR \"10.1055/s-0044-1787297\" OR \"10.1002/brb3.70741\") (correction OR retraction OR erratum)",
+      "runDate": "2026-11-07",
+      "recencyDays": null,
+      "purpose": "update-notice-screen"
+    },
+    {
+      "id": "Q23",
+      "q": "(\"10.1249/MSS.0000000000001764\" OR \"10.1519/JSC.0b013e3181c69ec6\" OR \"10.1519/JSC.0000000000003530\") (correction OR retraction OR erratum)",
+      "runDate": "2026-11-07",
+      "recencyDays": null,
+      "purpose": "update-notice-screen"
+    },
+    {
+      "id": "Q24",
+      "q": "(\"10.1177/0363546506298279\" OR \"10.5664/jcsm.4758\" OR \"10.1126/sciadv.adk3452\") (correction OR retraction OR erratum)",
+      "runDate": "2026-11-07",
+      "recencyDays": null,
+      "purpose": "update-notice-screen"
+    },
+    {
+      "id": "Q25",
+      "q": "\"Changes in perceived recovery status scale\" \"2013\" doi",
+      "runDate": "2026-11-07",
+      "recencyDays": null,
+      "purpose": "claim-discovery-or-metadata"
+    },
+    {
+      "id": "Q26",
+      "q": "site.pubmed.ncbi.nlm.nih.gov/23287827 \"10.1519\" \"2013\"",
+      "runDate": "2026-11-07",
+      "recencyDays": null,
+      "purpose": "claim-discovery-or-metadata"
+    },
+    {
+      "id": "Q27",
+      "q": "\"10.1519/JSC.0b013e31827e8e78\" (correction OR retraction OR erratum)",
+      "runDate": "2026-11-07",
+      "recencyDays": null,
+      "purpose": "update-notice-screen"
+    },
+    {
+      "id": "Q28",
+      "q": "site.pubmed.ncbi.nlm.nih.gov/17581977 \"Re:\"",
+      "runDate": "2026-11-07",
+      "recencyDays": null,
+      "purpose": "update-notice-screen"
+    },
+    {
+      "id": "Q29",
+      "q": "site.aasm.org adult sleep duration consensus recommendation update 2026 seven hours",
+      "runDate": "2026-11-07",
+      "recencyDays": 365,
+      "purpose": "recent-guidance-and-trial-currency-check"
+    },
+    {
+      "id": "Q30",
+      "q": "sleep restriction resistance training performance randomized trial 2025 2026 readiness volume",
+      "runDate": "2026-11-07",
+      "recencyDays": 365,
+      "purpose": "recent-guidance-and-trial-currency-check"
+    }
+  ],
+  "includedSourceIds": [
+    "h2a-aasm-2015",
+    "h2a-acsm-2026",
+    "h2a-delval-2026",
+    "h2a-knowles-2022",
+    "h2a-borba-2024",
+    "h2a-edwards-2025",
+    "h2a-schoenfeld-2019",
+    "h2a-laurent-2011",
+    "h2a-shattock-2022",
+    "h2a-silbernagel-2007",
+    "h2a-rothschild-2024",
+    "h2a-reforms-2024",
+    "h2a-sikorski-2013"
+  ],
+  "selectionNote": "Selected for relevance, directness and contrasting findings, not a target number of positive papers. Search ranking and tool result caps limit reproducibility of the result set; queries and retained URLs remain reproducible. No invented PRISMA counts.",
+  "directSearchFinding": "No direct validation of the exact Metron 3-by-3 rule, its 5/7-hour decision boundaries, set ratios or 1.5-times step trigger was identified in this bounded search. This is not proof that no such evidence exists.",
+  "accessLimits": [
+    {
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC4442216/",
+      "result": "Browser challenge; official AASM PDF used instead"
+    },
+    {
+      "url": "https://www.aasm.org/wp-content/uploads/2017/10/adult-sleep-duration-health-advisory.pdf",
+      "result": "Restricted fetch; alternative official consensus PDF read"
+    },
+    {
+      "url": "https://www.mdpi.com/2411-5142/11/1/83",
+      "result": "HTTP 429; primary PubMed abstract retained"
+    },
+    {
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC11092361/",
+      "result": "Browser challenge; indexed primary abstract/methods only"
+    },
+    {
+      "url": "https://pubmed.ncbi.nlm.nih.gov/17581977/",
+      "result": "Linked commentary metadata located; substantive letter not retrieved"
+    },
+    {
+      "url": "https://pubmed.ncbi.nlm.nih.gov/",
+      "result": "Some direct opens returned empty/challenge responses; successful indexed primary abstracts or primary full-text sections used and identified per source"
+    }
+  ],
+  "excludedExamples": [
+    {
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC7706636/",
+      "reason": "Secondary review useful for discovery, not direct validation"
+    },
+    {
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC7810043/",
+      "reason": "Secondary synthesis, not used as primary intervention evidence"
+    },
+    {
+      "url": "https://sportrxiv.org/index.php/server/preprint/view/157/version/181",
+      "reason": "Earlier version of included Knowles study; not an independent study"
+    },
+    {
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC13173077/",
+      "reason": "Clinical mobility intervention does not test the daily 1.5-times step trigger"
+    },
+    {
+      "url": "https://pubmed.ncbi.nlm.nih.gov/23589526/",
+      "reason": "Two-week step reduction is a different exposure and outcome from daily leg-readiness threshold"
+    },
+    {
+      "url": "https://www.frontiersin.org/journals/sports-and-active-living/articles/10.3389/fspor.2021.685813/full",
+      "reason": "Person-specific readiness construct research was not established as direct validation of the specified Metron algorithm; not extracted as evidence"
+    }
+  ]
+}

@@ -78,7 +78,12 @@
     "semanticContract": "./research/robustness/semantics.json",
     "claimLookup": "./research/robustness/inspect.mjs",
     "H1Report": "./research/robustness/H1_INVENTORY.md",
-    "evidenceReviewQueue": "./research/robustness/h2-review-queue.json"
+    "evidenceReviewQueue": "./research/robustness/h2-review-queue.json",
+    "readinessEvidenceReview": "./research/robustness/h2a/README.md",
+    "readinessReviewRecords": "./research/robustness/h2a/review.json",
+    "readinessReviewSources": "./research/robustness/h2a/sources.json",
+    "readinessReviewSearches": "./research/robustness/h2a/search-log.json",
+    "readinessRuleAudit": "./research/robustness/h2a/rule-audit.json"
   },
   "implemented": {
     "energyEstimate": true,
@@ -155,7 +160,10 @@
       "statusAuthority": "research/robustness/plan.json",
       "clinicalCoverage": "explicit-context-map-clinical-evidence-unreviewed",
       "automaticMonitoringEnabled": false,
-      "productionIntegration": false
+      "productionIntegration": false,
+      "boundedEvidenceReviews": [
+        "H2-A"
+      ]
     }
   }
 }

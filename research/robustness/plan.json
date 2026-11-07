@@ -97,7 +97,7 @@
     {
       "id": "H2",
       "name": "Evidence currency and contradictions",
-      "state": "not-started",
+      "state": "in-progress",
       "dependsOn": [
         "H1"
       ],
@@ -108,8 +108,22 @@
         "Record source inspected portions and actual review dates; adjudicate contradictions without silently pooling incompatible methods",
         "Set claim-level evidence dispositions and next-review triggers; never derive currentness from document creation time"
       ],
-      "evidence": [],
-      "closure": null
+      "evidence": [
+        "research/robustness/h2a/README.md",
+        "research/robustness/h2a/review.json",
+        "research/robustness/h2a/sources.json",
+        "research/robustness/h2a/search-log.json"
+      ],
+      "closure": null,
+      "completedSlices": [
+        "H2-A"
+      ],
+      "remainingSlices": [
+        "H2-B",
+        "H2-C",
+        "H2-D",
+        "H2-E"
+      ]
     },
     {
       "id": "H3",
@@ -263,13 +277,14 @@
       "gate": "H5",
       "ownerRole": "Readiness research lead",
       "state": "open",
-      "finding": "The core emits set ranges from selected heuristic thresholds without prospective outcome evidence.",
+      "finding": "H2-A found no direct validation for the exact readiness rules or set bands in its targeted review. Current full-session wording remains stronger than the evidence establishes.",
       "evidence": [
         "core/model.js",
         "docs/SCIENCE.md",
-        "research/protocol.json"
+        "research/protocol.json",
+        "research/robustness/h2a/review.json"
       ],
-      "nextTest": "Inventory each rule and output; distinguish reflection guidance from an outcome or safety claim.",
+      "nextTest": "H5: review proposed wording restrictions, choose explicit endpoints/comparators and retain/restrict unsupported rules with a justified decision; respect H2/H3 dependencies.",
       "resolutionEvidence": [],
       "residual": "Evidence work remains; no claim of closure."
     },
@@ -397,11 +412,11 @@
   ],
   "nextTask": {
     "gate": "H2",
-    "action": "Review readiness/action evidence and boundaries for C08, C14, C15, C16, C31, C34 and C35 using reproducible primary-source searches and explicit context dispositions",
+    "action": "Review resting-equation applicability, current primary evidence and contradictions for C01/C02/C18/C19/C20/C24/C25/C26/C27; preserve frozen G0–G4 and defer new dataset admission to H4",
     "candidateDeferred": "ten-haaf-2014",
     "candidateDestinationGate": "H4",
     "requiresSeparateFrozenProtocol": true,
-    "slice": "H2-A",
+    "slice": "H2-B",
     "queue": "research/robustness/h2-review-queue.json"
   },
   "trackPrerequisites": {

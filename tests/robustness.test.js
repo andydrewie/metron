@@ -6,7 +6,7 @@ import {auditProgram} from '../research/robustness/audit.mjs';
 const root=fileURLToPath(new URL('../',import.meta.url));
 const read=p=>JSON.parse(readFileSync(root+p,'utf8'));
 function fixture(){return [read('research/robustness/plan.json'),read('research/robustness/corpus.json')];}
-const options={asOf:'2026-11-07',pathExists:p=>existsSync(root+p),h1:{inventory:read('research/robustness/inventory.json'),matrix:read('research/robustness/applicability.json'),semantics:read('research/robustness/semantics.json'),inputSchema:read('schemas/input.schema.json'),outputSchema:read('schemas/output.schema.json')}};
+const options={asOf:'2026-11-07',pathExists:p=>existsSync(root+p),h1:{inventory:read('research/robustness/inventory.json'),matrix:read('research/robustness/applicability.json'),semantics:read('research/robustness/semantics.json'),inputSchema:read('schemas/input.schema.json'),outputSchema:read('schemas/output.schema.json')},h2a:{review:read('research/robustness/h2a/review.json'),registry:read('research/robustness/h2a/sources.json'),searchLog:read('research/robustness/h2a/search-log.json'),queue:read('research/robustness/h2-review-queue.json')}};
 
 test('durable corpus resolves locally while exposing unreviewed sources and open weaknesses',()=>{
  const [p,c]=fixture(), r=auditProgram(p,c,options);

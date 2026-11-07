@@ -13,8 +13,8 @@ test('H1 denominator, source paths and every API field are accounted for',()=>as
 test('H2 queue assigns every inventoried claim exactly once and exposes an unstarted next slice',()=>{
   const {corpus}=fixture(),q=read('research/robustness/h2-review-queue.json'),p=read('research/robustness/plan.json');
   assert.deepEqual(q.slices.flatMap(s=>s.claimIds).sort(),corpus.claims.map(c=>c.id).sort());
-  assert.ok(q.slices.every(s=>s.state==='not-started' && s.firstExecutableTask && s.ownerRole));
-  assert.ok(q.slices.some(s=>s.id===p.nextTask.slice));
+  assert.ok(q.slices.every(s=>['not-started','in-progress','complete'].includes(s.state) && s.firstExecutableTask && s.ownerRole));
+  if(p.nextTask.gate==='H2') assert.ok(q.slices.some(s=>s.id===p.nextTask.slice&&s.state==='not-started'));
 });
 test('missing and duplicate matrix rows or cells fail rather than inherit support',()=>{
   for(const mutate of [f=>f.artifacts.matrix.rows.pop(),f=>f.artifacts.matrix.rows.push(f.artifacts.matrix.rows[0]),f=>delete f.artifacts.matrix.rows[0].cells['renal-fluid']]){

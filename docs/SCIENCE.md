@@ -67,6 +67,8 @@ METRON takes sleep hours, present energy, musculoskeletal comfort, and past-week
 
 **Important: These thresholds and set ranges are not validated clinical cutoffs, and do not quantify injury risk.** They are coaching-style prompts for self-reflection. Circumstances such as extreme sleepiness, dizziness, acute pain, medications, illness, or other health risks call for appropriate professional assessment, not an automated training recommendation.
 
+**H2-A evidence review (7 November 2026):** the [targeted review](../research/robustness/h2a/README.md) found indirect support for considering sleep and subjective state, but no direct validation of the exact 5/7-hour classifier, set-ratio table or 1.5-times step trigger in its bounded search. Habitual sleep guidance, chronic weekly training volume and different recovery endpoints cannot be converted directly into these rules. Clinical scope remains unreviewed. Proposed changes to the full-session and rest wording are recorded for H5 and have not shipped.
+
 ## 5. Appropriate use and out-of-scope use
 
 Designed as an **educational adult fitness estimator** for generally healthy adults. It is not validated for children, pregnancy, clinical nutrition, critical illness, or prescribing eating/weight-loss treatment. Do not use it to diagnose metabolic disease, decide medical treatment, or guarantee fat-loss outcomes. People with a history of disordered eating should avoid treating estimates as rigid eating targets.

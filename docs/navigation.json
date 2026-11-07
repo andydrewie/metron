@@ -18,7 +18,8 @@
     "researchCorpus": "research/robustness/corpus.json",
     "continuation": "docs/CONTINUE.md",
     "claimApplicability": "research/robustness/applicability.json",
-    "semanticContract": "research/robustness/semantics.json"
+    "semanticContract": "research/robustness/semantics.json",
+    "readinessEvidenceReview": "research/robustness/h2a/review.json"
   },
   "conventions": {
     "paths": "repository-relative",
@@ -296,7 +297,12 @@
         "research/robustness/applicability.json",
         "research/robustness/semantics.json",
         "research/robustness/inspect.mjs",
-        "research/robustness/h2-review-queue.json"
+        "research/robustness/h2-review-queue.json",
+        "research/robustness/h2a/README.md",
+        "research/robustness/h2a/review.json",
+        "research/robustness/h2a/sources.json",
+        "research/robustness/h2a/search-log.json",
+        "research/robustness/h2a/rule-audit.json"
       ],
       "status": "research-question"
     }

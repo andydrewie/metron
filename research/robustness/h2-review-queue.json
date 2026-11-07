@@ -2,7 +2,7 @@
   "schemaVersion": "1.0.0",
   "documentType": "metron.H2-review-queue",
   "asOf": "2026-11-07",
-  "status": "not-started",
+  "status": "in-progress",
   "priorityRationale": "Potential consequence of existing action interpretation first, then equation applicability and measurement dependencies; not empirical effect-size ranking. All claim families are assigned. Research value is independently sufficient.",
   "reviewRecordRequired": [
     "search date, database, exact query, language/date limits and cutoff",
@@ -16,7 +16,7 @@
     {
       "id": "H2-A",
       "title": "Readiness and action boundaries",
-      "state": "not-started",
+      "state": "complete",
       "claimIds": [
         "C08",
         "C14",
@@ -34,7 +34,18 @@
         "H6",
         "H7"
       ],
-      "completion": "Claim-level evidence dispositions, reproducible searches, source records, contradictions, explicit unreviewed limits and next-review triggers; no unsupported clinical promotion."
+      "completion": "Claim-level evidence dispositions, reproducible searches, source records, contradictions, explicit unreviewed limits and next-review triggers; no unsupported clinical promotion.",
+      "closure": {
+        "reviewedAt": "2026-11-07",
+        "scope": "C08/C14/C15/C16/C31/C34/C35: targeted evidence relevance, contradictions and action boundaries. No new empirical Metron study; no complete clinical review.",
+        "evidence": [
+          "research/robustness/h2a/README.md",
+          "research/robustness/h2a/review.json",
+          "research/robustness/h2a/sources.json",
+          "research/robustness/h2a/search-log.json"
+        ],
+        "acceptanceReview": "Reproducible targeted queries, primary/guidance records, support and contrary findings, claim-level dispositions, explicit clinical unknowns and review triggers are recorded. Whole H2 stays in progress."
+      }
     },
     {
       "id": "H2-B",

@@ -1,0 +1,230 @@
+{
+  "schemaVersion": "1.0.0",
+  "documentType": "metron.H2A-synthetic-rule-audit",
+  "asOf": "2026-11-07",
+  "baselineCommit": "455534b573b5b025228cf42a95f6b8d729717669",
+  "coreBlob": "228a8032b503f37d7b90b421f425b2225143226d",
+  "meaning": "Exact deterministic software behavior for synthetic inputs; not a physiological threshold, dose or empirical outcome.",
+  "cases": [
+    {
+      "id": "sleep-4.99",
+      "input": {
+        "recovery": {
+          "sleepHours": 4.99,
+          "energy": "good",
+          "weekly": "fresh",
+          "musculoskeletal": "fine",
+          "usualMuscleSets": 14
+        }
+      },
+      "output": {
+        "modelVersion": "0.1.0",
+        "classification": {
+          "daily": "low",
+          "weekly": "fresh"
+        },
+        "status": "recovery-first",
+        "recommendation": {
+          "minSets": 0,
+          "maxSets": 0,
+          "unit": "working sets for one target muscle in this session",
+          "restRecommended": true
+        },
+        "notes": [
+          "Sleep below five hours: consider prioritizing recovery over demanding training."
+        ],
+        "disclaimer": "Illustrative coaching heuristics only; not validated to predict injury, readiness, or safe set counts."
+      }
+    },
+    {
+      "id": "sleep-5",
+      "input": {
+        "recovery": {
+          "sleepHours": 5,
+          "energy": "good",
+          "weekly": "fresh",
+          "musculoskeletal": "fine",
+          "usualMuscleSets": 14
+        }
+      },
+      "output": {
+        "modelVersion": "0.1.0",
+        "classification": {
+          "daily": "mixed",
+          "weekly": "fresh"
+        },
+        "status": "train-adjust",
+        "recommendation": {
+          "minSets": 9,
+          "maxSets": 12,
+          "unit": "working sets for one target muscle in this session",
+          "restRecommended": false
+        },
+        "notes": [
+          "Prioritize performance, alertness, and technique over hitting a rigid set quota."
+        ],
+        "disclaimer": "Illustrative coaching heuristics only; not validated to predict injury, readiness, or safe set counts."
+      }
+    },
+    {
+      "id": "sleep-6.99",
+      "input": {
+        "recovery": {
+          "sleepHours": 6.99,
+          "energy": "good",
+          "weekly": "fresh",
+          "musculoskeletal": "fine",
+          "usualMuscleSets": 14
+        }
+      },
+      "output": {
+        "modelVersion": "0.1.0",
+        "classification": {
+          "daily": "mixed",
+          "weekly": "fresh"
+        },
+        "status": "train-adjust",
+        "recommendation": {
+          "minSets": 9,
+          "maxSets": 12,
+          "unit": "working sets for one target muscle in this session",
+          "restRecommended": false
+        },
+        "notes": [
+          "Prioritize performance, alertness, and technique over hitting a rigid set quota."
+        ],
+        "disclaimer": "Illustrative coaching heuristics only; not validated to predict injury, readiness, or safe set counts."
+      }
+    },
+    {
+      "id": "sleep-7",
+      "input": {
+        "recovery": {
+          "sleepHours": 7,
+          "energy": "good",
+          "weekly": "fresh",
+          "musculoskeletal": "fine",
+          "usualMuscleSets": 14
+        }
+      },
+      "output": {
+        "modelVersion": "0.1.0",
+        "classification": {
+          "daily": "good",
+          "weekly": "fresh"
+        },
+        "status": "full-session",
+        "recommendation": {
+          "minSets": 13,
+          "maxSets": 14,
+          "unit": "working sets for one target muscle in this session",
+          "restRecommended": false
+        },
+        "notes": [
+          "Prioritize performance, alertness, and technique over hitting a rigid set quota."
+        ],
+        "disclaimer": "Illustrative coaching heuristics only; not validated to predict injury, readiness, or safe set counts."
+      }
+    },
+    {
+      "id": "pain",
+      "input": {
+        "recovery": {
+          "sleepHours": 7.5,
+          "energy": "good",
+          "weekly": "fresh",
+          "musculoskeletal": "pain",
+          "usualMuscleSets": 14
+        }
+      },
+      "output": {
+        "modelVersion": "0.1.0",
+        "classification": {
+          "daily": "low",
+          "weekly": "fresh"
+        },
+        "status": "recovery-first",
+        "recommendation": {
+          "minSets": 0,
+          "maxSets": 0,
+          "unit": "working sets for one target muscle in this session",
+          "restRecommended": true
+        },
+        "notes": [
+          "Painful joints or muscles: avoid painful movements; seek evaluation for unusual or persistent pain."
+        ],
+        "disclaimer": "Illustrative coaching heuristics only; not validated to predict injury, readiness, or safe set counts."
+      }
+    },
+    {
+      "id": "steps-14999",
+      "input": {
+        "activity": {
+          "steps": 14999
+        },
+        "recovery": {
+          "sleepHours": 7.5,
+          "energy": "good",
+          "weekly": "fresh",
+          "musculoskeletal": "fine",
+          "usualMuscleSets": 14,
+          "usualSteps": 10000,
+          "focus": "legs"
+        }
+      },
+      "output": {
+        "modelVersion": "0.1.0",
+        "classification": {
+          "daily": "good",
+          "weekly": "fresh"
+        },
+        "status": "full-session",
+        "recommendation": {
+          "minSets": 13,
+          "maxSets": 14,
+          "unit": "working sets for one target muscle in this session",
+          "restRecommended": false
+        },
+        "notes": [
+          "Prioritize performance, alertness, and technique over hitting a rigid set quota."
+        ],
+        "disclaimer": "Illustrative coaching heuristics only; not validated to predict injury, readiness, or safe set counts."
+      }
+    },
+    {
+      "id": "steps-15000",
+      "input": {
+        "activity": {
+          "steps": 15000
+        },
+        "recovery": {
+          "sleepHours": 7.5,
+          "energy": "good",
+          "weekly": "fresh",
+          "musculoskeletal": "fine",
+          "usualMuscleSets": 14,
+          "usualSteps": 10000,
+          "focus": "legs"
+        }
+      },
+      "output": {
+        "modelVersion": "0.1.0",
+        "classification": {
+          "daily": "good",
+          "weekly": "fresh"
+        },
+        "status": "full-session",
+        "recommendation": {
+          "minSets": 13,
+          "maxSets": 14,
+          "unit": "working sets for one target muscle in this session",
+          "restRecommended": false
+        },
+        "notes": [
+          "Planned steps are at least 1.5× normal; monitor leg fatigue before adding volume."
+        ],
+        "disclaimer": "Illustrative coaching heuristics only; not validated to predict injury, readiness, or safe set counts."
+      }
+    }
+  ]
+}

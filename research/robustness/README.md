@@ -8,7 +8,7 @@
 
 **Program:** `METRON-ROBUST-001` · **Established:** 7 November 2026
 
-**Current gate:** H2, starting with readiness/action evidence. H0 and [H1](./H1_INVENTORY.md) are complete for their declared scope. Clinical evidence remains unreviewed.
+**Current gate:** H2. [H2-A readiness/action evidence](./h2a/README.md) is complete at its bounded scope; H2-B resting-equation evidence is next. H0 and [H1](./H1_INVENTORY.md) are complete for their declared scope. Clinical evidence remains unreviewed.
 
 **Tracker:** [issue #22](https://github.com/andydrewie/metron/issues/22)
 
@@ -24,11 +24,11 @@ H0 inventories the current source, advertised capabilities, research entrypoints
 
 ## Execution order
 
-| Gate | Question and required evidence | Initial state |
+| Gate | Question and required evidence | Current scoped state |
 | --- | --- | --- |
 | **H0 · Scope and weaknesses** | Inventory capability claims, inherited evidence, material gaps, owners and acceptance criteria; preserve completed G0–G4. | Complete for the defined baseline |
 | **H1 · Ontology and applicability** | Define quantities, observations, models, decisions and outcomes; map population, clinical state, method and time context to each claim. Enumerate reviewed and unreviewed coverage. | Complete for the finite repository inventory; clinical evidence unreviewed |
-| **H2 · Current evidence and contradictions** | Execute documented searches of primary studies and authoritative guidance; record dates, corrections/retractions, counterevidence, versions, rights and claim-level applicability. | Not started |
+| **H2 · Current evidence and contradictions** | Execute documented searches of primary studies and authoritative guidance; record dates, corrections/retractions, counterevidence, versions, rights and claim-level applicability. | H2-A complete; H2-B–E pending |
 | **H3 · Measurement and energy accounting** | Audit reference methods, input error, gross/net expenditure, baseline allocation, activity membership, missingness and incompatible wearable semantics. | Not started; prior research is input |
 | **H4 · External validity** | Admit relevant independent data; freeze endpoints, paired comparisons, subgroup harms and decision margins before analysis; reproduce results independently. | Not started; athlete candidate deferred here |
 | **H5 · Readiness and decision boundaries** | Define readiness/performance endpoints, audit current set recommendations, evaluate prospective predictive value, or explicitly retain/restrict unsupported guidance. | Not started |
@@ -40,7 +40,7 @@ Dependencies in `plan.json` are authoritative. H2 and H3 follow H1; H4 and H5 ca
 
 Gate progress is claim- and domain-specific. Any partial passage must name its exact scope, evidence and outstanding criteria; it does not close the whole gate. `complete` means all declared acceptance criteria for that gate are reviewed, with evidence. Negative results and explicit no-go decisions can satisfy an investigation; they cannot be relabeled as successful physiological validation. The audit command never promotes a gate automatically.
 
-**Immediate next task:** execute H2-A from the [review queue](./h2-review-queue.json), covering readiness/action evidence and boundaries. Prioritize claims that can directly influence calorie or training decisions, then unresolved measurement dependencies. The ten Haaf athlete dataset remains a candidate for H4 after the applicable H1–H3 work and a new analysis protocol. Its published results are already known and must be disclosed. Do not reopen or tune the frozen enable study.
+**Immediate next task:** execute H2-B from the [review queue](./h2-review-queue.json), covering resting-equation applicability and current evidence. H2-A dispositions and proposed H5 wording changes are preserved in its [review record](./h2a/review.json). Prioritize claims that can directly influence calorie or training decisions, then unresolved measurement dependencies. The ten Haaf athlete dataset remains a candidate for H4 after the applicable H1–H3 work and a new analysis protocol. Its published results are already known and must be disclosed. Do not reopen or tune the frozen enable study.
 
 ## A multidimensional applicability map
 

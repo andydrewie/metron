@@ -2,6 +2,8 @@
 
 **H1 is complete for the declared repository snapshot: 35 scientific claim families, 48 primary surfaces, 23 contexts and 805 explicit claim/context cells.** The map distinguishes implemented calculations, observations reported by a study, synthetic demonstrations, author-reported findings, decisions and proposals. All 17 input fields and 31 output fields have units and an epistemic role. **Clinical applicability is still unreviewed.** The matrix does not certify safety or accuracy, and the software does not detect most clinical exclusions. H2 starts with the readiness/action claims because the interface already suggests actions; H3 measurement work is separately unblocked. The corpus is a reusable deliverable even before either produces a feature change.
 
+**Follow-up:** [H2-A](./h2a/README.md) now records a bounded readiness evidence review. This H1 inventory remains the dated baseline; consult [plan.json](./plan.json) for current execution.
+
 ---
 
 ## Coverage and reconstruction

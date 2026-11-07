@@ -2,7 +2,7 @@
 
 > **Status: exploratory whole-product modeling; limited external RMR evidence is published.** [G3](../research/ree-validation/G3_RESULTS.md) evaluated two fixed resting equations in one 454-person cohort. The combined daily-energy estimator and training-readiness heuristic remain unvalidated. Neither that cohort result nor software tests establish individual accuracy.
 
-**Coverage and currency:** the [partial claim/context corpus](../research/robustness/corpus.json) and [robustness program](../research/robustness/README.md) make unreviewed clinical contexts and evidence-refresh obligations explicit. The seed is not a comprehensive medical review and does not expand intended use.
+**Coverage and currency:** the [claim/context corpus](../research/robustness/corpus.json) and [robustness program](../research/robustness/README.md) make unreviewed clinical contexts and evidence-refresh obligations explicit. [H1](../research/robustness/H1_INVENTORY.md) reconciles the finite repository inventory; clinical evidence is still unreviewed and intended use is unchanged.
 
 ## 1. Resting energy (RMR / REE)
 

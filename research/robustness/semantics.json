@@ -1,0 +1,473 @@
+{
+  "schemaVersion": "1.0.0",
+  "documentType": "metron.H1-operational-semantics",
+  "asOf": "2026-11-07",
+  "externalTerminologyMappings": [],
+  "externalMappingDecision": "No external codes or equivalence mappings adopted. WHO/ICF and PROV-O remain design references only. Adopting a mapping requires exact identifier, relation type (not automatic equivalence), source version, inspected terms/license, reviewer and date. Empty mappings do not claim compliance.",
+  "axes": [
+    {
+      "id": "clinical",
+      "meaning": "Condition-specific scope; no complete diagnostic taxonomy asserted"
+    },
+    {
+      "id": "life-stage",
+      "meaning": "Age, pregnancy/lactation and other physiological contexts, not automatically pathology"
+    },
+    {
+      "id": "function",
+      "meaning": "Mobility/gait and functional limitations separate from diagnosis"
+    },
+    {
+      "id": "treatment",
+      "meaning": "Medication and treatment identity, exposure and timing remain source-specific"
+    },
+    {
+      "id": "measurement",
+      "meaning": "Method/device/preparation/reference and reporting window"
+    },
+    {
+      "id": "model",
+      "meaning": "Missingness, proxy error, overlapping membership, statistical uncertainty and implementation faults"
+    },
+    {
+      "id": "intersection",
+      "meaning": "Explicit combination with its own evidence state, not inherited validity"
+    }
+  ],
+  "temporalContract": {
+    "rmr": "Daily rate under a named resting protocol; not a day-long measured total",
+    "tdee": "Estimated daily expenditure; not intake allowance",
+    "walking": "Supplied daily steps, reporting timezone and source absent",
+    "workout": "Whole-session elapsed duration; daily membership and overlap unverified",
+    "readiness": "Current sleep/energy/comfort plus categorical past-week fatigue; no timestamps",
+    "sets": "Per target muscle per session",
+    "study": "Frozen study-specific measurement and analysis windows; preserve protocol",
+    "future": "Proposed rolling windows do not exist in the current API"
+  },
+  "observationContract": [
+    "Input values can be measured, self-reported, estimated or defaulted; current schema does not preserve that distinction.",
+    "Missing measurement metadata are unknown, not proof of standard protocol.",
+    "Schema numeric bounds and equation-sex categories do not establish clinical eligibility.",
+    "Clinical exclusions are documented, not enforced by disease/treatment detection."
+  ],
+  "outputFields": [
+    {
+      "path": "energy.modelVersion",
+      "units": "version",
+      "role": "metadata",
+      "claimIds": [
+        "C17"
+      ]
+    },
+    {
+      "path": "energy.units",
+      "units": "unit-label",
+      "role": "metadata",
+      "claimIds": [
+        "C17"
+      ]
+    },
+    {
+      "path": "energy.restingModel",
+      "units": "category",
+      "role": "model-choice",
+      "claimIds": [
+        "C01",
+        "C02"
+      ]
+    },
+    {
+      "path": "energy.estimatedTdeeKcal",
+      "units": "kcal/day",
+      "role": "estimate",
+      "claimIds": [
+        "C03"
+      ]
+    },
+    {
+      "path": "energy.components.baselineKcal",
+      "units": "kcal/day",
+      "role": "estimate",
+      "claimIds": [
+        "C04"
+      ]
+    },
+    {
+      "path": "energy.components.walkingKcal",
+      "units": "kcal/day",
+      "role": "estimate",
+      "claimIds": [
+        "C05"
+      ]
+    },
+    {
+      "path": "energy.components.workoutKcal",
+      "units": "kcal/day",
+      "role": "estimate",
+      "claimIds": [
+        "C06"
+      ]
+    },
+    {
+      "path": "energy.derived.restingKcal",
+      "units": "kcal/day",
+      "role": "estimate",
+      "claimIds": [
+        "C01",
+        "C02"
+      ]
+    },
+    {
+      "path": "energy.derived.mifflinKcal",
+      "units": "kcal/day",
+      "role": "estimate",
+      "claimIds": [
+        "C01"
+      ]
+    },
+    {
+      "path": "energy.derived.cunninghamKcal",
+      "units": "kcal/day-or-null",
+      "role": "estimate",
+      "claimIds": [
+        "C02"
+      ]
+    },
+    {
+      "path": "energy.derived.fatFreeMassKg",
+      "units": "kg-or-null",
+      "role": "derived-estimate",
+      "claimIds": [
+        "C13"
+      ]
+    },
+    {
+      "path": "energy.derived.strideMeters",
+      "units": "m/step",
+      "role": "proxy",
+      "claimIds": [
+        "C05"
+      ]
+    },
+    {
+      "path": "energy.derived.incrementalSteps",
+      "units": "steps/day",
+      "role": "derived-count",
+      "claimIds": [
+        "C04"
+      ]
+    },
+    {
+      "path": "energy.derived.incrementalWalkingKm",
+      "units": "km/day",
+      "role": "proxy",
+      "claimIds": [
+        "C05"
+      ]
+    },
+    {
+      "path": "energy.derived.sessionMet",
+      "units": "dimensionless",
+      "role": "preset",
+      "claimIds": [
+        "C06"
+      ]
+    },
+    {
+      "path": "energy.assumptions.sedentaryMultiplier",
+      "units": "dimensionless",
+      "role": "assumption",
+      "claimIds": [
+        "C04"
+      ]
+    },
+    {
+      "path": "energy.assumptions.includedBaselineSteps",
+      "units": "steps/day",
+      "role": "assumption",
+      "claimIds": [
+        "C04"
+      ]
+    },
+    {
+      "path": "energy.assumptions.walkingNetKcalPerKgKm",
+      "units": "kcal/kg/km",
+      "role": "assumption",
+      "claimIds": [
+        "C05"
+      ]
+    },
+    {
+      "path": "energy.assumptions.strideHeightRatio",
+      "units": "dimensionless",
+      "role": "assumption",
+      "claimIds": [
+        "C05"
+      ]
+    },
+    {
+      "path": "energy.assumptions.metPreset",
+      "units": "category",
+      "role": "assumption",
+      "claimIds": [
+        "C06"
+      ]
+    },
+    {
+      "path": "energy.warnings",
+      "units": "text-array",
+      "role": "limitation",
+      "claimIds": [
+        "C03",
+        "C04",
+        "C05",
+        "C06"
+      ]
+    },
+    {
+      "path": "recovery.modelVersion",
+      "units": "version",
+      "role": "metadata",
+      "claimIds": [
+        "C08"
+      ]
+    },
+    {
+      "path": "recovery.classification.daily",
+      "units": "category",
+      "role": "heuristic",
+      "claimIds": [
+        "C14"
+      ]
+    },
+    {
+      "path": "recovery.classification.weekly",
+      "units": "category",
+      "role": "self-report-category",
+      "claimIds": [
+        "C14"
+      ]
+    },
+    {
+      "path": "recovery.status",
+      "units": "category",
+      "role": "heuristic-decision",
+      "claimIds": [
+        "C15"
+      ]
+    },
+    {
+      "path": "recovery.recommendation.minSets",
+      "units": "sets/muscle/session",
+      "role": "heuristic-decision",
+      "claimIds": [
+        "C15"
+      ]
+    },
+    {
+      "path": "recovery.recommendation.maxSets",
+      "units": "sets/muscle/session",
+      "role": "heuristic-decision",
+      "claimIds": [
+        "C15"
+      ]
+    },
+    {
+      "path": "recovery.recommendation.unit",
+      "units": "unit-label",
+      "role": "metadata",
+      "claimIds": [
+        "C15"
+      ]
+    },
+    {
+      "path": "recovery.recommendation.restRecommended",
+      "units": "boolean",
+      "role": "heuristic-decision",
+      "claimIds": [
+        "C15"
+      ]
+    },
+    {
+      "path": "recovery.notes",
+      "units": "text-array",
+      "role": "context",
+      "claimIds": [
+        "C16"
+      ]
+    },
+    {
+      "path": "recovery.disclaimer",
+      "units": "text",
+      "role": "limitation",
+      "claimIds": [
+        "C08",
+        "C34"
+      ]
+    }
+  ],
+  "displayContract": {
+    "headline": "Rounded to nearest 50 kcal/day; no interval interpretation",
+    "components": "Rounded to integer kcal; may not sum exactly to rounded headline",
+    "export": "Unrounded core result with input",
+    "bodyFatDefault": "20 percent when checkbox enabled, a placeholder rather than a measurement",
+    "smmUnknown": "Unknown is preserved as null; zero-width display is not measured zero muscle",
+    "modelDisagreement": "Difference between equations is not calibrated individual uncertainty"
+  },
+  "inferenceBoundaries": [
+    "Arithmetic agreement is not empirical accuracy.",
+    "Population error distributions and cohort confidence intervals are not individual prediction intervals.",
+    "Prediction is not causal benefit from following a decision.",
+    "Documented exclusion does not detect the excluded state at runtime.",
+    "Current implementation, synthetic experiment, measured result, author report and proposal must retain different evidence labels."
+  ],
+  "inputFields": [
+    {
+      "path": "profile.weightKg",
+      "units": "kg",
+      "role": "user-supplied-or-defaulted",
+      "claimIds": [
+        "C01",
+        "C02",
+        "C05",
+        "C06"
+      ]
+    },
+    {
+      "path": "profile.heightCm",
+      "units": "cm",
+      "role": "user-supplied-or-defaulted",
+      "claimIds": [
+        "C01",
+        "C05"
+      ]
+    },
+    {
+      "path": "profile.ageYears",
+      "units": "years",
+      "role": "user-supplied-or-defaulted",
+      "claimIds": [
+        "C01",
+        "C17"
+      ]
+    },
+    {
+      "path": "profile.equationSex",
+      "units": "category",
+      "role": "user-supplied-or-defaulted",
+      "claimIds": [
+        "C01",
+        "C17"
+      ]
+    },
+    {
+      "path": "profile.bodyFatPercent",
+      "units": "percent-or-null",
+      "role": "user-supplied-or-defaulted",
+      "claimIds": [
+        "C02",
+        "C13"
+      ]
+    },
+    {
+      "path": "profile.skeletalMuscleKg",
+      "units": "kg-or-null",
+      "role": "user-supplied-or-defaulted",
+      "claimIds": [
+        "C11",
+        "C13"
+      ]
+    },
+    {
+      "path": "activity.steps",
+      "units": "steps/day",
+      "role": "user-supplied-or-defaulted",
+      "claimIds": [
+        "C04",
+        "C05"
+      ]
+    },
+    {
+      "path": "activity.workoutMinutes",
+      "units": "min/session",
+      "role": "user-supplied-or-defaulted",
+      "claimIds": [
+        "C06"
+      ]
+    },
+    {
+      "path": "activity.intensity",
+      "units": "category",
+      "role": "user-supplied-or-defaulted",
+      "claimIds": [
+        "C06"
+      ]
+    },
+    {
+      "path": "activity.restingModel",
+      "units": "category",
+      "role": "user-supplied-or-defaulted",
+      "claimIds": [
+        "C01",
+        "C02"
+      ]
+    },
+    {
+      "path": "recovery.sleepHours",
+      "units": "hours",
+      "role": "user-supplied-or-defaulted",
+      "claimIds": [
+        "C14"
+      ]
+    },
+    {
+      "path": "recovery.energy",
+      "units": "category",
+      "role": "user-supplied-or-defaulted",
+      "claimIds": [
+        "C14"
+      ]
+    },
+    {
+      "path": "recovery.weekly",
+      "units": "category",
+      "role": "user-supplied-or-defaulted",
+      "claimIds": [
+        "C14"
+      ]
+    },
+    {
+      "path": "recovery.musculoskeletal",
+      "units": "category",
+      "role": "user-supplied-or-defaulted",
+      "claimIds": [
+        "C14",
+        "C15"
+      ]
+    },
+    {
+      "path": "recovery.usualMuscleSets",
+      "units": "sets/muscle/session",
+      "role": "user-supplied-or-defaulted",
+      "claimIds": [
+        "C15"
+      ]
+    },
+    {
+      "path": "recovery.focus",
+      "units": "category",
+      "role": "user-supplied-or-defaulted",
+      "claimIds": [
+        "C16"
+      ]
+    },
+    {
+      "path": "recovery.usualSteps",
+      "units": "steps/day",
+      "role": "user-supplied-or-defaulted",
+      "claimIds": [
+        "C16"
+      ]
+    }
+  ]
+}

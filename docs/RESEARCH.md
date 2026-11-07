@@ -4,7 +4,7 @@
 
 ## Current cross-project execution program
 
-[METRON-ROBUST-001](../research/robustness/README.md) establishes H0–H8 for reusable evidence, clinical applicability, measurement, validation, uncertainty, software and reconstruction. The [machine plan](../research/robustness/plan.json) owns execution order; the question IDs below are topics, not gates. H1 ontology/applicability mapping comes next. The athlete candidate belongs to H4 after applicable H1–H3 work. The corpus is independently valuable even without a feature change.
+[METRON-ROBUST-001](../research/robustness/README.md) establishes H0–H8 for reusable evidence, clinical applicability, measurement, validation, uncertainty, software and reconstruction. The [machine plan](../research/robustness/plan.json) owns execution order; the question IDs below are topics, not gates. [H1 mapping is complete](../research/robustness/H1_INVENTORY.md); H2-A readiness/action evidence review comes next. The athlete candidate belongs to H4 after applicable H1–H3 work. The corpus is independently valuable even without a feature change.
 
 ## Research questions
 

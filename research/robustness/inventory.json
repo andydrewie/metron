@@ -1,0 +1,702 @@
+{
+  "schemaVersion": "1.0.0",
+  "documentType": "metron.scientific-claim-inventory",
+  "asOf": "2026-11-07",
+  "snapshotCommit": "8fb3728e453493fc99c7a43bbbdaf3e45a43f75e",
+  "coverageUnit": "deduplicated scientific claim family, not individual sentence or independent hypothesis",
+  "claimIds": [
+    "C01",
+    "C02",
+    "C03",
+    "C04",
+    "C05",
+    "C06",
+    "C07",
+    "C08",
+    "C09",
+    "C10",
+    "C11",
+    "C12",
+    "C13",
+    "C14",
+    "C15",
+    "C16",
+    "C17",
+    "C18",
+    "C19",
+    "C20",
+    "C21",
+    "C22",
+    "C23",
+    "C24",
+    "C25",
+    "C26",
+    "C27",
+    "C28",
+    "C29",
+    "C30",
+    "C31",
+    "C32",
+    "C33",
+    "C34",
+    "C35"
+  ],
+  "claimFamilyCount": 35,
+  "surfaceCount": 48,
+  "coverageMeaning": "Every identified scientific claim family across the declared primary surfaces has a stable ID. Repeated statements and numeric instances are grouped; original artifacts retain their exact numbers and qualifications. This denominator is finite and repository-specific, not the universe of clinical conditions or published evidence.",
+  "surfaces": [
+    {
+      "path": "core/model.js",
+      "gitBlobAtSnapshot": "228a8032b503f37d7b90b421f425b2225143226d",
+      "claimIds": [
+        "C01",
+        "C02",
+        "C03",
+        "C04",
+        "C05",
+        "C06",
+        "C07",
+        "C08",
+        "C09",
+        "C10",
+        "C11",
+        "C12",
+        "C13",
+        "C14",
+        "C15",
+        "C16",
+        "C17",
+        "C23",
+        "C34"
+      ],
+      "reviewScope": "Scientific statements and their role in the finite family inventory; not source-currentness, clinical validation or independent software audit"
+    },
+    {
+      "path": "core/model.d.ts",
+      "gitBlobAtSnapshot": "0a8f06cad31233845683d622c1ee1bc4fac91116",
+      "claimIds": [
+        "C01",
+        "C02",
+        "C03",
+        "C04",
+        "C05",
+        "C06",
+        "C07",
+        "C08",
+        "C09",
+        "C10",
+        "C11",
+        "C12",
+        "C13",
+        "C14",
+        "C15",
+        "C16",
+        "C17",
+        "C34"
+      ],
+      "reviewScope": "Scientific statements and their role in the finite family inventory; not source-currentness, clinical validation or independent software audit"
+    },
+    {
+      "path": "schemas/input.schema.json",
+      "gitBlobAtSnapshot": "4d2f329c4a6fe8c28e22104d1192e40c936483df",
+      "claimIds": [
+        "C01",
+        "C02",
+        "C08",
+        "C13",
+        "C14",
+        "C15",
+        "C16",
+        "C17",
+        "C34"
+      ],
+      "reviewScope": "Scientific statements and their role in the finite family inventory; not source-currentness, clinical validation or independent software audit"
+    },
+    {
+      "path": "schemas/output.schema.json",
+      "gitBlobAtSnapshot": "613494ee6e27ab1d2d894c8e2a0930e1d1f0baf2",
+      "claimIds": [
+        "C01",
+        "C02",
+        "C03",
+        "C04",
+        "C05",
+        "C06",
+        "C07",
+        "C08",
+        "C09",
+        "C10",
+        "C11",
+        "C12",
+        "C13",
+        "C14",
+        "C15",
+        "C16",
+        "C17",
+        "C33"
+      ],
+      "reviewScope": "Scientific statements and their role in the finite family inventory; not source-currentness, clinical validation or independent software audit"
+    },
+    {
+      "path": "app.js",
+      "gitBlobAtSnapshot": "b5ff8f2e2b13f90980225c86c7666538d9cc8648",
+      "claimIds": [
+        "C01",
+        "C02",
+        "C03",
+        "C08",
+        "C13",
+        "C15",
+        "C17",
+        "C33"
+      ],
+      "reviewScope": "Scientific statements and their role in the finite family inventory; not source-currentness, clinical validation or independent software audit"
+    },
+    {
+      "path": "index.html",
+      "gitBlobAtSnapshot": "a364be4aa2a5d4863afa4b2945eaaf3424edac82",
+      "claimIds": [
+        "C01",
+        "C02",
+        "C03",
+        "C08",
+        "C09",
+        "C11",
+        "C13",
+        "C15",
+        "C17",
+        "C33",
+        "C34"
+      ],
+      "reviewScope": "Scientific statements and their role in the finite family inventory; not source-currentness, clinical validation or independent software audit"
+    },
+    {
+      "path": "docs/SCIENCE.md",
+      "gitBlobAtSnapshot": "f5189ac5544cb6bde1254aa3260bf29be0477ca8",
+      "claimIds": [
+        "C01",
+        "C02",
+        "C03",
+        "C04",
+        "C05",
+        "C06",
+        "C07",
+        "C08",
+        "C09",
+        "C10",
+        "C11",
+        "C12",
+        "C13",
+        "C14",
+        "C15",
+        "C16",
+        "C17",
+        "C18",
+        "C19",
+        "C20",
+        "C21",
+        "C22",
+        "C23",
+        "C29",
+        "C30",
+        "C34",
+        "C35"
+      ],
+      "reviewScope": "Scientific statements and their role in the finite family inventory; not source-currentness, clinical validation or independent software audit"
+    },
+    {
+      "path": "docs/API.md",
+      "gitBlobAtSnapshot": "9c6a78bd4d3d3f1261ec663588dd86ae5e637f24",
+      "claimIds": [
+        "C01",
+        "C02",
+        "C03",
+        "C04",
+        "C05",
+        "C06",
+        "C07",
+        "C08",
+        "C09",
+        "C10",
+        "C11",
+        "C12",
+        "C13",
+        "C14",
+        "C15",
+        "C16",
+        "C17",
+        "C33",
+        "C34"
+      ],
+      "reviewScope": "Scientific statements and their role in the finite family inventory; not source-currentness, clinical validation or independent software audit"
+    },
+    {
+      "path": "README.md",
+      "gitBlobAtSnapshot": "671d1c49feb57a63f81639b4d1099f0445e33f45",
+      "claimIds": [
+        "C01",
+        "C02",
+        "C03",
+        "C08",
+        "C09",
+        "C18",
+        "C19",
+        "C32",
+        "C34"
+      ],
+      "reviewScope": "Scientific statements and their role in the finite family inventory; not source-currentness, clinical validation or independent software audit"
+    },
+    {
+      "path": "metron.manifest.json",
+      "gitBlobAtSnapshot": "02f34bb9fa1610a62e49323b8d21655d9073c93d",
+      "claimIds": [
+        "C01",
+        "C02",
+        "C03",
+        "C08",
+        "C09",
+        "C17",
+        "C19",
+        "C30",
+        "C32",
+        "C34"
+      ],
+      "reviewScope": "Scientific statements and their role in the finite family inventory; not source-currentness, clinical validation or independent software audit"
+    },
+    {
+      "path": "docs/ARCHITECTURE.md",
+      "gitBlobAtSnapshot": "d8da6a06a8e620c5cf0d39477bc14be9142ddbea",
+      "claimIds": [
+        "C01",
+        "C02",
+        "C03",
+        "C04",
+        "C05",
+        "C06",
+        "C08",
+        "C09",
+        "C17",
+        "C32"
+      ],
+      "reviewScope": "Scientific statements and their role in the finite family inventory; not source-currentness, clinical validation or independent software audit"
+    },
+    {
+      "path": "docs/FUTURE_ARCHITECTURE.md",
+      "gitBlobAtSnapshot": "db4637e868c6044525ede06039497ecd465982e0",
+      "claimIds": [
+        "C07",
+        "C09",
+        "C10",
+        "C12",
+        "C29",
+        "C31",
+        "C32",
+        "C35"
+      ],
+      "reviewScope": "Scientific statements and their role in the finite family inventory; not source-currentness, clinical validation or independent software audit"
+    },
+    {
+      "path": "docs/RESEARCH.md",
+      "gitBlobAtSnapshot": "cfc17d91912588b4d9571d67fc325555e6d8aa46",
+      "claimIds": [
+        "C01",
+        "C02",
+        "C03",
+        "C08",
+        "C19",
+        "C20",
+        "C31",
+        "C35"
+      ],
+      "reviewScope": "Scientific statements and their role in the finite family inventory; not source-currentness, clinical validation or independent software audit"
+    },
+    {
+      "path": "docs/RESEARCH_PROTOCOL.md",
+      "gitBlobAtSnapshot": "24011f27d0b31220b981a2b9df05d1bdddb91331",
+      "claimIds": [
+        "C08",
+        "C12",
+        "C31",
+        "C35"
+      ],
+      "reviewScope": "Scientific statements and their role in the finite family inventory; not source-currentness, clinical validation or independent software audit"
+    },
+    {
+      "path": "research/protocol.json",
+      "gitBlobAtSnapshot": "203554cea547375256e366c8af5eb8a78ca31a39",
+      "claimIds": [
+        "C08",
+        "C12",
+        "C31",
+        "C35"
+      ],
+      "reviewScope": "Scientific statements and their role in the finite family inventory; not source-currentness, clinical validation or independent software audit"
+    },
+    {
+      "path": "research/README.md",
+      "gitBlobAtSnapshot": "e119204a4e858222eb145e7a08a98a1babd2b6f0",
+      "claimIds": [
+        "C03",
+        "C07",
+        "C08",
+        "C19",
+        "C21",
+        "C22",
+        "C29",
+        "C30",
+        "C31",
+        "C35"
+      ],
+      "reviewScope": "Scientific statements and their role in the finite family inventory; not source-currentness, clinical validation or independent software audit"
+    },
+    {
+      "path": "docs/DISTRIBUTION.md",
+      "gitBlobAtSnapshot": "472d806586b93a9e28f4183bc7776af3189d8191",
+      "claimIds": [
+        "C03",
+        "C08",
+        "C09",
+        "C31",
+        "C32",
+        "C34"
+      ],
+      "reviewScope": "Scientific statements and their role in the finite family inventory; not source-currentness, clinical validation or independent software audit"
+    },
+    {
+      "path": "docs/ROADMAP.md",
+      "gitBlobAtSnapshot": "20283ae3185d6c9489b3b093ba217bb57273a816",
+      "claimIds": [
+        "C01",
+        "C02",
+        "C03",
+        "C08",
+        "C09",
+        "C10",
+        "C19",
+        "C31",
+        "C32"
+      ],
+      "reviewScope": "Scientific statements and their role in the finite family inventory; not source-currentness, clinical validation or independent software audit"
+    },
+    {
+      "path": "docs/VOCABULARY.md",
+      "gitBlobAtSnapshot": "5ccefeee543ded3a1f4225bc69a61c84bf55f567",
+      "claimIds": [
+        "C07",
+        "C09",
+        "C10",
+        "C11",
+        "C12",
+        "C31",
+        "C35"
+      ],
+      "reviewScope": "Scientific statements and their role in the finite family inventory; not source-currentness, clinical validation or independent software audit"
+    },
+    {
+      "path": "research/energy-accounting/README.md",
+      "gitBlobAtSnapshot": "0b27272a9900fead3c04e2790b8479502f129e08",
+      "claimIds": [
+        "C03",
+        "C04",
+        "C05",
+        "C06",
+        "C07",
+        "C10",
+        "C21"
+      ],
+      "reviewScope": "Scientific statements and their role in the finite family inventory; not source-currentness, clinical validation or independent software audit"
+    },
+    {
+      "path": "research/energy-accounting/scenarios.json",
+      "gitBlobAtSnapshot": "998ccd558d9ef09e2d2aac864054310b9011451f",
+      "claimIds": [
+        "C21"
+      ],
+      "reviewScope": "Scientific statements and their role in the finite family inventory; not source-currentness, clinical validation or independent software audit"
+    },
+    {
+      "path": "research/energy-accounting/audit.mjs",
+      "gitBlobAtSnapshot": "aa9d5c6f40938393361236a7c1701e7d3518ac7e",
+      "claimIds": [
+        "C21"
+      ],
+      "reviewScope": "Scientific statements and their role in the finite family inventory; not source-currentness, clinical validation or independent software audit"
+    },
+    {
+      "path": "research/activity-events/README.md",
+      "gitBlobAtSnapshot": "4ed9fc83a6f23131d4e855fa12ada92aac400c65",
+      "claimIds": [
+        "C07",
+        "C29"
+      ],
+      "reviewScope": "Scientific statements and their role in the finite family inventory; not source-currentness, clinical validation or independent software audit"
+    },
+    {
+      "path": "research/activity-events/contract.schema.json",
+      "gitBlobAtSnapshot": "c6938809c9fd8064346075a5bb0337fd38dca278",
+      "claimIds": [
+        "C07",
+        "C29"
+      ],
+      "reviewScope": "Scientific statements and their role in the finite family inventory; not source-currentness, clinical validation or independent software audit"
+    },
+    {
+      "path": "research/activity-events/fixtures.json",
+      "gitBlobAtSnapshot": "56be63cd413bc44ad4aa5398efefc02e152d912a",
+      "claimIds": [
+        "C07"
+      ],
+      "reviewScope": "Scientific statements and their role in the finite family inventory; not source-currentness, clinical validation or independent software audit"
+    },
+    {
+      "path": "research/activity-events/inspect.mjs",
+      "gitBlobAtSnapshot": "048a6d1145c64de8af7b5aa22cb550256309623d",
+      "claimIds": [
+        "C07"
+      ],
+      "reviewScope": "Scientific statements and their role in the finite family inventory; not source-currentness, clinical validation or independent software audit"
+    },
+    {
+      "path": "research/assumption-sensitivity/README.md",
+      "gitBlobAtSnapshot": "6199a51c5fa006b12249c4b7799cc0a891a4fe26",
+      "claimIds": [
+        "C22"
+      ],
+      "reviewScope": "Scientific statements and their role in the finite family inventory; not source-currentness, clinical validation or independent software audit"
+    },
+    {
+      "path": "research/assumption-sensitivity/fixtures.json",
+      "gitBlobAtSnapshot": "553dd022c2a6e742daabbc54102a4f8d1045f2e3",
+      "claimIds": [
+        "C22"
+      ],
+      "reviewScope": "Scientific statements and their role in the finite family inventory; not source-currentness, clinical validation or independent software audit"
+    },
+    {
+      "path": "research/assumption-sensitivity/sensitivity.mjs",
+      "gitBlobAtSnapshot": "2621eefa665222c42e639551dab7d6dcf90ba7f8",
+      "claimIds": [
+        "C22"
+      ],
+      "reviewScope": "Scientific statements and their role in the finite family inventory; not source-currentness, clinical validation or independent software audit"
+    },
+    {
+      "path": "research/provider-step-semantics/README.md",
+      "gitBlobAtSnapshot": "c835e3f9bc47776d3633e61240f6dc1f6c1fe0e0",
+      "claimIds": [
+        "C07",
+        "C29"
+      ],
+      "reviewScope": "Scientific statements and their role in the finite family inventory; not source-currentness, clinical validation or independent software audit"
+    },
+    {
+      "path": "research/provider-step-semantics/matrix.json",
+      "gitBlobAtSnapshot": "348e10b5ee9b08148a0d71e70a07fca72895d206",
+      "claimIds": [
+        "C07",
+        "C29"
+      ],
+      "reviewScope": "Scientific statements and their role in the finite family inventory; not source-currentness, clinical validation or independent software audit"
+    },
+    {
+      "path": "research/provider-step-semantics/fixtures.json",
+      "gitBlobAtSnapshot": "d4d79e74ac851db2b809885c37924c249057f136",
+      "claimIds": [
+        "C07",
+        "C29"
+      ],
+      "reviewScope": "Scientific statements and their role in the finite family inventory; not source-currentness, clinical validation or independent software audit"
+    },
+    {
+      "path": "research/apple-healthkit-pilot/README.md",
+      "gitBlobAtSnapshot": "80ca1234bcd297803726349ba5a628e4028000d6",
+      "claimIds": [
+        "C07",
+        "C30"
+      ],
+      "reviewScope": "Scientific statements and their role in the finite family inventory; not source-currentness, clinical validation or independent software audit"
+    },
+    {
+      "path": "research/ree-validation/README.md",
+      "gitBlobAtSnapshot": "78d4f7bca62e911402ea90ebf0e76405365aafcf",
+      "claimIds": [
+        "C01",
+        "C02",
+        "C18",
+        "C19",
+        "C20"
+      ],
+      "reviewScope": "Scientific statements and their role in the finite family inventory; not source-currentness, clinical validation or independent software audit"
+    },
+    {
+      "path": "research/ree-validation/plan.json",
+      "gitBlobAtSnapshot": "db29f380e0f163e4e467c28edb16f36f6acd32c8",
+      "claimIds": [
+        "C18",
+        "C19"
+      ],
+      "reviewScope": "Scientific statements and their role in the finite family inventory; not source-currentness, clinical validation or independent software audit"
+    },
+    {
+      "path": "research/ree-validation/G0_SOURCE_AUDIT.md",
+      "gitBlobAtSnapshot": "989af43f1bec888029eb988907234df51aa98e26",
+      "claimIds": [
+        "C19"
+      ],
+      "reviewScope": "Scientific statements and their role in the finite family inventory; not source-currentness, clinical validation or independent software audit"
+    },
+    {
+      "path": "research/ree-validation/G0_FILE_VERIFICATION.json",
+      "gitBlobAtSnapshot": "8e466eed798d142ba292e86bc62529be870e2dc1",
+      "claimIds": [
+        "C19"
+      ],
+      "reviewScope": "Scientific statements and their role in the finite family inventory; not source-currentness, clinical validation or independent software audit"
+    },
+    {
+      "path": "research/ree-validation/candidate-sources.json",
+      "gitBlobAtSnapshot": "834eb56cff18b3331f8822fe933f40fdfa75fcb3",
+      "claimIds": [
+        "C19",
+        "C24"
+      ],
+      "reviewScope": "Scientific statements and their role in the finite family inventory; not source-currentness, clinical validation or independent software audit"
+    },
+    {
+      "path": "research/ree-validation/G1_FROZEN_PROTOCOL.md",
+      "gitBlobAtSnapshot": "16e6d7f065f7a7beeca9e9b91edd39e8d47153ab",
+      "claimIds": [
+        "C19",
+        "C20"
+      ],
+      "reviewScope": "Scientific statements and their role in the finite family inventory; not source-currentness, clinical validation or independent software audit"
+    },
+    {
+      "path": "research/ree-validation/protocol.v1.json",
+      "gitBlobAtSnapshot": "2a40beada8abfec0c778e1c64da256836ed735db",
+      "claimIds": [
+        "C19",
+        "C20"
+      ],
+      "reviewScope": "Scientific statements and their role in the finite family inventory; not source-currentness, clinical validation or independent software audit"
+    },
+    {
+      "path": "research/ree-validation/G2_BENCHMARK.md",
+      "gitBlobAtSnapshot": "87fb27d8fb461ecb1876877937326606cc4cb05d",
+      "claimIds": [
+        "C19",
+        "C20"
+      ],
+      "reviewScope": "Scientific statements and their role in the finite family inventory; not source-currentness, clinical validation or independent software audit"
+    },
+    {
+      "path": "research/ree-validation/benchmark.mjs",
+      "gitBlobAtSnapshot": "d3e3216d39852d1de7c7edfa365d777386b708eb",
+      "claimIds": [
+        "C19",
+        "C20"
+      ],
+      "reviewScope": "Scientific statements and their role in the finite family inventory; not source-currentness, clinical validation or independent software audit"
+    },
+    {
+      "path": "research/ree-validation/G3_RESULTS.md",
+      "gitBlobAtSnapshot": "18b18573ab92b81ddbb541f5f72c2fefb64c5012",
+      "claimIds": [
+        "C01",
+        "C02",
+        "C10",
+        "C19",
+        "C20"
+      ],
+      "reviewScope": "Scientific statements and their role in the finite family inventory; not source-currentness, clinical validation or independent software audit"
+    },
+    {
+      "path": "research/ree-validation/results/g3-enable-v1.json",
+      "gitBlobAtSnapshot": "c995cad5f0ab0256c470d4abb38d532453bd1ca5",
+      "claimIds": [
+        "C19",
+        "C20"
+      ],
+      "reviewScope": "Scientific statements and their role in the finite family inventory; not source-currentness, clinical validation or independent software audit"
+    },
+    {
+      "path": "research/ree-validation/G4_DECISION.md",
+      "gitBlobAtSnapshot": "e04844497d71d5ea24751ea6a7f9f95eefb11d17",
+      "claimIds": [
+        "C01",
+        "C02",
+        "C18",
+        "C19",
+        "C20",
+        "C23",
+        "C24",
+        "C25",
+        "C26",
+        "C27",
+        "C28"
+      ],
+      "reviewScope": "Scientific statements and their role in the finite family inventory; not source-currentness, clinical validation or independent software audit"
+    },
+    {
+      "path": "docs/adr/0003-explicit-overlap-assumptions.md",
+      "gitBlobAtSnapshot": "13bd9824d14db1144a14110918ad290c025c6ddc",
+      "claimIds": [
+        "C07",
+        "C21"
+      ],
+      "reviewScope": "Scientific statements and their role in the finite family inventory; not source-currentness, clinical validation or independent software audit"
+    },
+    {
+      "path": "docs/adr/0004-provenance-before-automatic-reconciliation.md",
+      "gitBlobAtSnapshot": "4b9302ecdf305deb77d14fd031ec55de261f2e5f",
+      "claimIds": [
+        "C07",
+        "C29",
+        "C30"
+      ],
+      "reviewScope": "Scientific statements and their role in the finite family inventory; not source-currentness, clinical validation or independent software audit"
+    },
+    {
+      "path": "docs/adr/0005-retain-resting-default-pending-replication.md",
+      "gitBlobAtSnapshot": "85ba2c9059adda534c8d1ec3cd659237b93bf76b",
+      "claimIds": [
+        "C18",
+        "C23",
+        "C24",
+        "C25",
+        "C26",
+        "C27",
+        "C28"
+      ],
+      "reviewScope": "Scientific statements and their role in the finite family inventory; not source-currentness, clinical validation or independent software audit"
+    }
+  ],
+  "exclusions": [
+    {
+      "scope": "dist/, screenshots and rendered diagrams",
+      "reason": "Generated or visual copies; canonical implementation and source documents are inventoried. Visual accessibility and output parity belong to H7."
+    },
+    {
+      "scope": "tests/, examples/, fixture CSVs and Python parity/privacy tools",
+      "reason": "Software verification and synthetic examples of inventoried formulas or frozen study methods; not new empirical claims."
+    },
+    {
+      "scope": "build, CI, CLI wrappers, Swift implementation, styles, release and design infrastructure",
+      "reason": "Execution/transport/presentation of inventoried methods, not additional scientific claim families. H7 owns implementation audit; pilot semantics are C30."
+    },
+    {
+      "scope": "AGENTS, collaboration, contribution, governance, decision indexes, llms.txt, historical changelog and robustness program files",
+      "reason": "Routing, rules or summaries of inventoried claims; superseded historical statements are not promoted to current evidence."
+    },
+    {
+      "scope": "External publications, their supplementary data and all possible diseases/intersections",
+      "reason": "H1 inventories repository representations only. H2 reviews primary content and currentness; H4 handles new dataset admission."
+    },
+    {
+      "scope": "Private chat, email and participant-level records",
+      "reason": "Not public scientific source-of-truth artifacts; not published or copied by H1."
+    }
+  ],
+  "unresolvedScientificFamilies": [],
+  "maintenance": "A scientific formula, output, recommendation, empirical result or scope change must update claim IDs, surface mappings, matrix and H2 review queue. Retire IDs explicitly; never reuse them for different claims."
+}

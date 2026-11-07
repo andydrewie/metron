@@ -1,0 +1,125 @@
+{
+  "schemaVersion": "1.0.0",
+  "documentType": "metron.H2-review-queue",
+  "asOf": "2026-11-07",
+  "status": "not-started",
+  "priorityRationale": "Potential consequence of existing action interpretation first, then equation applicability and measurement dependencies; not empirical effect-size ranking. All claim families are assigned. Research value is independently sufficient.",
+  "reviewRecordRequired": [
+    "search date, database, exact query, language/date limits and cutoff",
+    "primary source identifier, version, corrections/retractions and inaccessible portions",
+    "population, severity, treatment, intersections, method and time window",
+    "supporting and contrary results, endpoints and uncertainty",
+    "rights and inspected terms; pointer versus reusable content",
+    "claim/context disposition, reviewer, actual content-review date and next trigger"
+  ],
+  "slices": [
+    {
+      "id": "H2-A",
+      "title": "Readiness and action boundaries",
+      "state": "not-started",
+      "claimIds": [
+        "C08",
+        "C14",
+        "C15",
+        "C16",
+        "C31",
+        "C34",
+        "C35"
+      ],
+      "ownerRole": "Evidence review lead",
+      "reason": "Current interface suggests session actions despite unvalidated thresholds.",
+      "firstExecutableTask": "Define precise propositions for sleep cutoffs, fatigue/pain handling, set bands and action wording; execute logged primary-study and authoritative-guidance searches; preserve no-evidence and out-of-scope findings.",
+      "downstreamGates": [
+        "H5",
+        "H6",
+        "H7"
+      ],
+      "completion": "Claim-level evidence dispositions, reproducible searches, source records, contradictions, explicit unreviewed limits and next-review triggers; no unsupported clinical promotion."
+    },
+    {
+      "id": "H2-B",
+      "title": "Resting equations and transfer",
+      "state": "not-started",
+      "claimIds": [
+        "C01",
+        "C02",
+        "C18",
+        "C19",
+        "C20",
+        "C24",
+        "C25",
+        "C26",
+        "C27"
+      ],
+      "ownerRole": "Evidence review lead",
+      "reason": "Keep the measured G3 finding distinct from general clinical applicability.",
+      "firstExecutableTask": "Inspect original equations, G3 methods and cited independent comparisons; resolve population/method contradictions without admitting a new dataset.",
+      "downstreamGates": [
+        "H4"
+      ],
+      "completion": "Claim-level evidence dispositions, reproducible searches, source records, contradictions, explicit unreviewed limits and next-review triggers; no unsupported clinical promotion."
+    },
+    {
+      "id": "H2-C",
+      "title": "Measurement and source semantics",
+      "state": "not-started",
+      "claimIds": [
+        "C04",
+        "C05",
+        "C06",
+        "C07",
+        "C11",
+        "C12",
+        "C13",
+        "C17",
+        "C23",
+        "C28",
+        "C29",
+        "C30"
+      ],
+      "ownerRole": "Evidence review lead",
+      "reason": "Input provenance and activity accounting condition downstream meaning.",
+      "firstExecutableTask": "Audit primary methods and current provider semantics; preserve non-equivalent measures, missing metadata and unknown membership.",
+      "downstreamGates": [
+        "H3"
+      ],
+      "completion": "Claim-level evidence dispositions, reproducible searches, source records, contradictions, explicit unreviewed limits and next-review triggers; no unsupported clinical promotion."
+    },
+    {
+      "id": "H2-D",
+      "title": "Combined energy and uncertainty",
+      "state": "not-started",
+      "claimIds": [
+        "C03",
+        "C10",
+        "C21",
+        "C22",
+        "C33"
+      ],
+      "ownerRole": "Evidence review lead",
+      "reason": "A displayed daily-energy point estimate can be mistaken for an individual measured target.",
+      "firstExecutableTask": "Separate arithmetic examples, prediction errors, model disagreement and interval coverage; identify required reference outcomes.",
+      "downstreamGates": [
+        "H3",
+        "H6"
+      ],
+      "completion": "Claim-level evidence dispositions, reproducible searches, source records, contradictions, explicit unreviewed limits and next-review triggers; no unsupported clinical promotion."
+    },
+    {
+      "id": "H2-E",
+      "title": "Proposed allowance and calibration",
+      "state": "not-started",
+      "claimIds": [
+        "C09",
+        "C32"
+      ],
+      "ownerRole": "Evidence review lead",
+      "reason": "Preserve future design without implying working capability.",
+      "firstExecutableTask": "Review proposed outcomes and dependencies before any implementation or personalized allowance claim.",
+      "downstreamGates": [
+        "H6"
+      ],
+      "completion": "Claim-level evidence dispositions, reproducible searches, source records, contradictions, explicit unreviewed limits and next-review triggers; no unsupported clinical promotion."
+    }
+  ]
+}

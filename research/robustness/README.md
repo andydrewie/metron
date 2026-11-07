@@ -8,7 +8,7 @@
 
 **Program:** `METRON-ROBUST-001` · **Established:** 7 November 2026
 
-**Current gate:** H1, ontology and applicability mapping. H0's scoped inventory is complete.
+**Current gate:** H2, starting with readiness/action evidence. H0 and [H1](./H1_INVENTORY.md) are complete for their declared scope. Clinical evidence remains unreviewed.
 
 **Tracker:** [issue #22](https://github.com/andydrewie/metron/issues/22)
 
@@ -20,14 +20,14 @@ Research value includes reusable explanations, well-supported exclusions, contra
 
 Aim for **no untracked material weakness**. Each known weakness must be resolved with appropriate evidence, constrained by an explicit scope boundary, or remain open with an owner role, blocker and next test. A documented exclusion reduces misuse risk but does not prove accuracy in that population. Unknown, unreviewed, unsupported and contradicted are different states. Do not erase uncertainty to obtain an all-green dashboard.
 
-H0 inventories the current source, advertised capabilities, research entrypoints and known limitations. It is not an exhaustive independent code audit or a comprehensive medical review. The seed corpus is deliberately marked partial. H1 must reconcile every public scientific claim and define the coverage denominator before claiming completeness.
+H0 inventories the current source, advertised capabilities, research entrypoints and known limitations. It is not an exhaustive independent code audit or a comprehensive medical review. H1 reconciles 35 claim families across 48 primary snapshot surfaces, 23 contexts and 805 explicit cells. This finite coverage denominator does not establish comprehensive clinical evidence.
 
 ## Execution order
 
 | Gate | Question and required evidence | Initial state |
 | --- | --- | --- |
 | **H0 · Scope and weaknesses** | Inventory capability claims, inherited evidence, material gaps, owners and acceptance criteria; preserve completed G0–G4. | Complete for the defined baseline |
-| **H1 · Ontology and applicability** | Define quantities, observations, models, decisions and outcomes; map population, clinical state, method and time context to each claim. Enumerate reviewed and unreviewed coverage. | In progress; seed inventory only |
+| **H1 · Ontology and applicability** | Define quantities, observations, models, decisions and outcomes; map population, clinical state, method and time context to each claim. Enumerate reviewed and unreviewed coverage. | Complete for the finite repository inventory; clinical evidence unreviewed |
 | **H2 · Current evidence and contradictions** | Execute documented searches of primary studies and authoritative guidance; record dates, corrections/retractions, counterevidence, versions, rights and claim-level applicability. | Not started |
 | **H3 · Measurement and energy accounting** | Audit reference methods, input error, gross/net expenditure, baseline allocation, activity membership, missingness and incompatible wearable semantics. | Not started; prior research is input |
 | **H4 · External validity** | Admit relevant independent data; freeze endpoints, paired comparisons, subgroup harms and decision margins before analysis; reproduce results independently. | Not started; athlete candidate deferred here |
@@ -40,13 +40,13 @@ Dependencies in `plan.json` are authoritative. H2 and H3 follow H1; H4 and H5 ca
 
 Gate progress is claim- and domain-specific. Any partial passage must name its exact scope, evidence and outstanding criteria; it does not close the whole gate. `complete` means all declared acceptance criteria for that gate are reviewed, with evidence. Negative results and explicit no-go decisions can satisfy an investigation; they cannot be relabeled as successful physiological validation. The audit command never promotes a gate automatically.
 
-**Immediate next task:** complete H1's claim-to-context mapping and select the first H2 review slice. Prioritize claims that can directly influence calorie or training decisions, then unresolved measurement dependencies. The ten Haaf athlete dataset remains a candidate for H4 after the applicable H1–H3 work and a new analysis protocol. Its published results are already known and must be disclosed. Do not reopen or tune the frozen enable study.
+**Immediate next task:** execute H2-A from the [review queue](./h2-review-queue.json), covering readiness/action evidence and boundaries. Prioritize claims that can directly influence calorie or training decisions, then unresolved measurement dependencies. The ten Haaf athlete dataset remains a candidate for H4 after the applicable H1–H3 work and a new analysis protocol. Its published results are already known and must be disclosed. Do not reopen or tune the frozen enable study.
 
 ## A multidimensional applicability map
 
 “Pathological spectrum” covers clinical conditions relevant to a claim, not a single healthy-to-sick scale. Keep disease, functional status, life stage, treatment, measurement conditions and model failure modes separate. Athletic muscularity, pregnancy, aging and disability must not be classified as diseases merely because they differ from a study population.
 
-The seed includes general adult and athletic populations; older/frail and unusual-body-composition contexts; energy restriction and low energy availability; reproductive and pediatric contexts; endocrine/metabolic, renal/fluid, cardiopulmonary, acute/critical and cancer/cachexia contexts; medication, pain/sleep and mobility contexts. These are **questions to review**, not established mechanisms, exhaustive disease coverage or new clinical eligibility claims. Preserve intersections and multimorbidity; do not infer a diagnosis from BMI, age, sex, activity or a wearable signal.
+The working context inventory includes general adult and athletic populations; older/frail and unusual-body-composition contexts; energy restriction and low energy availability; reproductive and pediatric contexts; endocrine/metabolic, renal/fluid, cardiopulmonary, acute/critical and cancer/cachexia contexts; medication, pain/sleep and mobility contexts. These are **questions to review**, not established mechanisms, exhaustive disease coverage or new clinical eligibility claims. Preserve intersections and multimorbidity; do not infer a diagnosis from BMI, age, sex, activity or a wearable signal.
 
 For each claim, record: definition and units; target and comparator; population and exclusions; disease/state severity, duration and treatment where relevant; measurement method and conditions; temporal horizon; evidence supporting and challenging it; implementation and decision links; known uncertainty; and the disposition `supported-within-scope`, `uncertain`, `contradicted`, `unreviewed` or `out-of-scope`. The present `corpus.json` is a migration seed, not a completed claim-by-context matrix.
 
@@ -58,7 +58,7 @@ Stable IDs connect concepts, contexts, claims, sources and open weaknesses. Each
 
 Retain source title, canonical locator, version/date, access level, inspected portions, rights, retrieval/search date and review date separately. For datasets and executable evidence, retain file identity, hashes, codebook, units, transformations, exclusions, frozen protocol and code pins. Preserve aggregate results and lawful reproduction instructions; never commit private participant rows or restricted full texts. If bytes cannot be retained, keep the restriction and retrieval instructions explicit. A source URL resolving is not evidence that its scientific interpretation is current.
 
-These choices follow the machine reuse emphasis of [FAIR](https://doi.org/10.1038/sdata.2016.18) and the entity/activity/agent distinctions in [W3C PROV-O](https://www.w3.org/TR/prov-o/). The current JSON is a project-specific working vocabulary, not an OWL ontology or a claim of formal standards conformance. H1 decides whether an additional representation would solve a demonstrated interchange need.
+These choices follow the machine reuse emphasis of [FAIR](https://doi.org/10.1038/sdata.2016.18) and the entity/activity/agent distinctions in [W3C PROV-O](https://www.w3.org/TR/prov-o/). The current JSON is a project-specific working vocabulary, not an OWL ontology or a claim of formal standards conformance. H1 adopted no external code mapping; [semantics.json](./semantics.json) records version/terms verification requirements for any future adoption.
 
 ## Freshness from the first gate
 

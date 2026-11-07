@@ -3,6 +3,7 @@
 > Open-source, headless-first fitness computation. An exploratory TDEE estimator and unvalidated recovery coaching heuristic with a responsive static web interface. Caloric Allowance and direct wearable integrations are planned, not shipped.
 
 ## Start here
+- [Continue in a new chat](./docs/CONTINUE.md): recovery order, verified checkpoint and next task
 - [README](./README.md): public premise, feature status, and local demo
 - [Agent instructions](./AGENTS.md): build commands and non-negotiable invariants
 - [Machine manifest](./metron.manifest.json): structured capabilities and paths
@@ -13,7 +14,8 @@
 - [Research Lab](./research/README.md): published limited RMR results, open questions and proposed studies
 - [Durable evidence program](./research/robustness/README.md): current H0–H8 gates, applicability, freshness and reconstruction
 - [Gate and weakness state](./research/robustness/plan.json): authoritative execution order
-- [Partial research corpus](./research/robustness/corpus.json): claim, context and provenance seed; clinical review incomplete
+- [Research claim corpus](./research/robustness/corpus.json): stable claim, context and source records; clinical review incomplete
+- [H1 inventory](./research/robustness/H1_INVENTORY.md): declared denominator, explicit applicability matrix and field semantics
 - [Machine-readable study plan](./research/protocol.json): planned A/B/C comparator and evaluation criteria
 - [Research agenda](./docs/RESEARCH.md): falsifiable questions
 - [Research protocol](./docs/RESEARCH_PROTOCOL.md): wearable prediction study proposal

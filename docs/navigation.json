@@ -15,7 +15,10 @@
     "safety": "AGENTS.md",
     "decisionIndex": "docs/adr/index.json",
     "researchExecution": "research/robustness/plan.json",
-    "researchCorpus": "research/robustness/corpus.json"
+    "researchCorpus": "research/robustness/corpus.json",
+    "continuation": "docs/CONTINUE.md",
+    "claimApplicability": "research/robustness/applicability.json",
+    "semanticContract": "research/robustness/semantics.json"
   },
   "conventions": {
     "paths": "repository-relative",
@@ -171,8 +174,9 @@
         "agent",
         "researcher"
       ],
-      "entry": "AGENTS.md",
+      "entry": "docs/CONTINUE.md",
       "next": [
+        "AGENTS.md",
         "metron.manifest.json",
         "docs/navigation.json",
         "docs/COLLABORATION.md",
@@ -286,7 +290,13 @@
         "research/robustness/plan.json",
         "research/robustness/corpus.json",
         "research/robustness/audit.mjs",
-        "docs/adr/0006-durable-evidence-before-expansion.md"
+        "docs/adr/0006-durable-evidence-before-expansion.md",
+        "research/robustness/H1_INVENTORY.md",
+        "research/robustness/inventory.json",
+        "research/robustness/applicability.json",
+        "research/robustness/semantics.json",
+        "research/robustness/inspect.mjs",
+        "research/robustness/h2-review-queue.json"
       ],
       "status": "research-question"
     }

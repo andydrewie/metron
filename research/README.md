@@ -4,7 +4,7 @@ This folder exists to make **falsifiable research a first-class contributor surf
 
 **Measured resting-equation results are published:** [G3](./ree-validation/G3_RESULTS.md) evaluated 454 adults; [G4](./ree-validation/G4_DECISION.md) records the separate model decision. This is limited resting-energy evidence. Combined TDEE, individual predictions and readiness remain unvalidated; no collected wearable research dataset is published here.
 
-**Current program:** [durable evidence and robustness](./robustness/README.md) · [gate/weakness state](./robustness/plan.json) · [partial corpus](./robustness/corpus.json) · [tracker #22](https://github.com/andydrewie/metron/issues/22). H0 is complete for its scoped inventory; H1 ontology/applicability mapping is in progress. Evidence currency and measurement work precede the next cohort analysis. Research reuse through at least 7 November 2027 is an explicit objective.
+**Current program:** [durable evidence and robustness](./robustness/README.md) · [gate/weakness state](./robustness/plan.json) · [claim corpus](./robustness/corpus.json) · [tracker #22](https://github.com/andydrewie/metron/issues/22). H0 and [H1](./robustness/H1_INVENTORY.md) are complete for their scoped inventories. H2-A readiness/action evidence review is next; clinical evidence remains unreviewed. Evidence currency and measurement work precede the next cohort analysis. Research reuse through at least 7 November 2027 is an explicit objective.
 
 ## Open investigation: Energy accounting
 

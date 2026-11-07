@@ -2,6 +2,7 @@
 import {readFileSync, existsSync} from 'node:fs';
 import {resolve, relative, isAbsolute} from 'node:path';
 import {fileURLToPath} from 'node:url';
+import {auditH1} from './h1-audit.mjs';
 
 const root = fileURLToPath(new URL('../../', import.meta.url));
 const day = 86400000;
@@ -10,7 +11,7 @@ function dateValue(value) {
   const valueMs = Date.parse(value+'T00:00:00Z');
   return Number.isFinite(valueMs) && new Date(valueMs).toISOString().slice(0,10) === value ? valueMs : null;
 }
-export function auditProgram(plan, corpus, {asOf, pathExists = () => true} = {}) {
+export function auditProgram(plan, corpus, {asOf, pathExists = () => true, h1} = {}) {
   const errors = [], warnings = [];
   const at = dateValue(asOf);
   if (at === null) errors.push('asOf must be a real YYYY-MM-DD date');
@@ -43,6 +44,7 @@ export function auditProgram(plan, corpus, {asOf, pathExists = () => true} = {})
   ref('gates',plan.currentGate,'currentGate');
   ref('gates',plan.nextTask?.gate,'nextTask');
   const gateMap = new Map(plan.gates.map(g => [g.id,g]));
+  if (gateMap.get('H1')?.state === 'complete') errors.push(...auditH1(corpus,h1 ?? {},pathExists));
   for (const gate of plan.gates) {
     if (!['not-started','in-progress','blocked','complete'].includes(gate.state)) errors.push(gate.id+' invalid state');
     if (!gate.ownerRole || !Array.isArray(gate.acceptanceCriteria) || !gate.acceptanceCriteria.length) errors.push(gate.id+' missing owner/acceptance criteria');
@@ -128,7 +130,8 @@ if (process.argv[1] && resolve(process.argv[1]) === fileURLToPath(import.meta.ur
   else {
     const read=p=>JSON.parse(readFileSync(resolve(root,p),'utf8'));
     const result=auditProgram(read('research/robustness/plan.json'),read('research/robustness/corpus.json'),{
-      asOf:args[1],pathExists:p=>{const absolute=resolve(root,p);return !relative(root,absolute).startsWith('..')&&existsSync(absolute);}
+      asOf:args[1],pathExists:p=>{const absolute=resolve(root,p);return !relative(root,absolute).startsWith('..')&&existsSync(absolute);},
+      h1:{inventory:read('research/robustness/inventory.json'),matrix:read('research/robustness/applicability.json'),semantics:read('research/robustness/semantics.json'),inputSchema:read('schemas/input.schema.json'),outputSchema:read('schemas/output.schema.json')}
     });
     console.log(JSON.stringify(result,null,2));
     if(!result.valid) process.exitCode=1;

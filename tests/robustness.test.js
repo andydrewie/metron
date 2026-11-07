@@ -6,7 +6,7 @@ import {auditProgram} from '../research/robustness/audit.mjs';
 const root=fileURLToPath(new URL('../',import.meta.url));
 const read=p=>JSON.parse(readFileSync(root+p,'utf8'));
 function fixture(){return [read('research/robustness/plan.json'),read('research/robustness/corpus.json')];}
-const options={asOf:'2026-11-07',pathExists:p=>existsSync(root+p)};
+const options={asOf:'2026-11-07',pathExists:p=>existsSync(root+p),h1:{inventory:read('research/robustness/inventory.json'),matrix:read('research/robustness/applicability.json'),semantics:read('research/robustness/semantics.json'),inputSchema:read('schemas/input.schema.json'),outputSchema:read('schemas/output.schema.json')}};
 
 test('durable corpus resolves locally while exposing unreviewed sources and open weaknesses',()=>{
  const [p,c]=fixture(), r=auditProgram(p,c,options);

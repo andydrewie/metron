@@ -9,9 +9,9 @@
   "baselineCommit": "2a9cc6cc45832abcbe0ce57454562d605715fc49",
   "corpus": "research/robustness/corpus.json",
   "dashboard": "https://github.com/andydrewie/metron/issues/22",
-  "currentGate": "H1",
+  "currentGate": "H2",
   "completedStudy": "research/ree-validation/plan.json",
-  "coverage": "Scoped gap inventory and partial ontology seed; not exhaustive clinical or independent software review",
+  "coverage": "H1 finite repository claim inventory and explicit context matrix complete; clinical evidence and independent software/reconstruction review remain open.",
   "scope": [
     "energy quantities and model assumptions",
     "clinical applicability and physiological states",
@@ -68,7 +68,7 @@
     {
       "id": "H1",
       "name": "Ontology and applicability",
-      "state": "in-progress",
+      "state": "complete",
       "dependsOn": [
         "H0"
       ],
@@ -79,8 +79,20 @@
         "Complete an explicit claim-by-context matrix including clinical conditions, life stages, functional status, severity, treatment and intersections; mark every unreviewed cell",
         "Verify any external terminology mapping and record its version and terms; retain unsupported and excluded scope without implying accuracy"
       ],
-      "evidence": [],
-      "closure": null
+      "evidence": [
+        "research/robustness/H1_INVENTORY.md",
+        "research/robustness/inventory.json",
+        "research/robustness/corpus.json",
+        "research/robustness/applicability.json",
+        "research/robustness/semantics.json",
+        "research/robustness/h2-review-queue.json"
+      ],
+      "closure": {
+        "reviewedAt": "2026-11-07",
+        "reviewerRole": "Maintaining agent, repository semantic review",
+        "scope": "35 claim families across 48 primary surfaces at 8fb3728e453493fc99c7a43bbbdaf3e45a43f75e; 23 contexts and 805 cells; no clinical evidence or independent reconstruction closure",
+        "acceptanceReview": "All four H1 criteria reconciled in H1_INVENTORY.md. Units and field coverage checked against schemas and runtime. All applicability unknowns explicit. No external terminology mapping adopted; version and terms verification required before any adoption."
+      }
     },
     {
       "id": "H2",
@@ -228,15 +240,21 @@
       "severity": "high",
       "gate": "H1",
       "ownerRole": "Applicability review lead",
-      "state": "open",
-      "finding": "Adult intended use and exclusions exist, but no reviewed claim-by-context coverage matrix exists.",
+      "state": "constrained",
+      "finding": "The finite repository claim/context inventory is complete; context-specific clinical evidence remains unreviewed.",
       "evidence": [
         "docs/SCIENCE.md",
         "core/model.js"
       ],
-      "nextTest": "Build the clinical/state/function matrix; prioritize consequences of unsupported calorie and training interpretation.",
-      "resolutionEvidence": [],
-      "residual": "Evidence work remains; no claim of closure."
+      "nextTest": "Execute H2-A readiness/action source review, then remaining H2 queue; update claim/context dispositions only from inspected evidence.",
+      "resolutionEvidence": [
+        "research/robustness/H1_INVENTORY.md",
+        "research/robustness/inventory.json",
+        "research/robustness/corpus.json",
+        "research/robustness/applicability.json",
+        "research/robustness/semantics.json"
+      ],
+      "residual": "Mapping reduces ambiguity but does not establish clinical suitability or runtime exclusion detection."
     },
     {
       "id": "W03",
@@ -378,11 +396,13 @@
     }
   ],
   "nextTask": {
-    "gate": "H1",
-    "action": "Reconcile public claim inventory and complete claim-by-context applicability mapping before selecting the first H2 source-review slice",
+    "gate": "H2",
+    "action": "Review readiness/action evidence and boundaries for C08, C14, C15, C16, C31, C34 and C35 using reproducible primary-source searches and explicit context dispositions",
     "candidateDeferred": "ten-haaf-2014",
     "candidateDestinationGate": "H4",
-    "requiresSeparateFrozenProtocol": true
+    "requiresSeparateFrozenProtocol": true,
+    "slice": "H2-A",
+    "queue": "research/robustness/h2-review-queue.json"
   },
   "trackPrerequisites": {
     "H6": {

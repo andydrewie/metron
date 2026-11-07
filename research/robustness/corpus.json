@@ -1,19 +1,19 @@
 {
   "schemaVersion": "1.0.0",
-  "documentType": "metron.research.corpus-seed",
+  "documentType": "metron.research.claim-corpus",
   "asOf": "2026-11-07",
-  "coverageStatus": "partial-seed-not-comprehensive",
+  "coverageStatus": "H1-repository-inventory-complete-clinical-evidence-unreviewed",
   "comprehensiveClinicalReviewCompleted": false,
   "definitionsAreWorkingVocabulary": true,
   "formalOntologyConformance": null,
-  "sourceReviewNote": "Repository records inspected during H0. External science citations imported from existing documents, not comprehensively rechecked in this pass; H2 owns currency. A source pointer is not a scientific review.",
+  "sourceReviewNote": "H1 inventories repository statements and operational semantics at the declared snapshot. Primary literature currency, corrections, clinical applicability and republication rights remain for H2. A recorded statement is not endorsement.",
   "concepts": [
     {
       "id": "rmr",
       "label": "Resting metabolic rate",
       "definition": "Energy expenditure under a specified resting measurement protocol; do not silently equate different preparation conditions.",
       "units": "kcal/day",
-      "definitionReview": "pending-H1",
+      "definitionReview": "H1-working-definition-recorded-not-clinical-standard",
       "externalMappings": []
     },
     {
@@ -21,7 +21,7 @@
       "label": "Resting energy expenditure",
       "definition": "Resting energy endpoint with source-specific operational definition; map to RMR only after method review.",
       "units": "kcal/day",
-      "definitionReview": "pending-H1",
+      "definitionReview": "H1-working-definition-recorded-not-clinical-standard",
       "externalMappings": []
     },
     {
@@ -29,7 +29,7 @@
       "label": "Total daily energy expenditure",
       "definition": "Whole-day expenditure endpoint, distinct from resting energy or an intake target.",
       "units": "kcal/day",
-      "definitionReview": "pending-H1",
+      "definitionReview": "H1-working-definition-recorded-not-clinical-standard",
       "externalMappings": []
     },
     {
@@ -37,7 +37,7 @@
       "label": "Sedentary baseline",
       "definition": "Current model assumption allocating 1.2 times resting energy; not measured resting expenditure.",
       "units": "kcal/day",
-      "definitionReview": "pending-H1",
+      "definitionReview": "H1-working-definition-recorded-not-clinical-standard",
       "externalMappings": []
     },
     {
@@ -45,7 +45,7 @@
       "label": "Incremental walking energy",
       "definition": "Modeled energy above the assumed included steps, with explicit stride and net-cost assumptions.",
       "units": "kcal/day",
-      "definitionReview": "pending-H1",
+      "definitionReview": "H1-working-definition-recorded-not-clinical-standard",
       "externalMappings": []
     },
     {
@@ -53,7 +53,7 @@
       "label": "Workout energy",
       "definition": "Current whole-session MET estimate net of an allocated baseline; membership of steps remains separate.",
       "units": "kcal/day",
-      "definitionReview": "pending-H1",
+      "definitionReview": "H1-working-definition-recorded-not-clinical-standard",
       "externalMappings": []
     },
     {
@@ -61,7 +61,7 @@
       "label": "Fat-free mass",
       "definition": "Nonfat body mass, with method and conditions required; not identical to skeletal muscle mass.",
       "units": "kg",
-      "definitionReview": "pending-H1",
+      "definitionReview": "H1-working-definition-recorded-not-clinical-standard",
       "externalMappings": []
     },
     {
@@ -69,7 +69,7 @@
       "label": "Skeletal muscle mass",
       "definition": "A component of FFM, not an independent calorie bonus or sufficient body-fat measurement.",
       "units": "kg",
-      "definitionReview": "pending-H1",
+      "definitionReview": "H1-working-definition-recorded-not-clinical-standard",
       "externalMappings": []
     },
     {
@@ -77,7 +77,7 @@
       "label": "Body-fat percentage",
       "definition": "A measured or estimated input whose method and uncertainty must be retained.",
       "units": "percentage points for changes; percent for levels",
-      "definitionReview": "pending-H1",
+      "definitionReview": "H1-working-definition-recorded-not-clinical-standard",
       "externalMappings": []
     },
     {
@@ -85,7 +85,7 @@
       "label": "Training readiness",
       "definition": "Current heuristic classification; requires a specified outcome before predictive validation.",
       "units": "categorical",
-      "definitionReview": "pending-H1",
+      "definitionReview": "H1-working-definition-recorded-not-clinical-standard",
       "externalMappings": []
     },
     {
@@ -93,7 +93,7 @@
       "label": "Caloric allowance",
       "definition": "A proposed goal-dependent intake decision, not equal to measured or estimated TDEE.",
       "units": "kcal/day if implemented",
-      "definitionReview": "pending-H1",
+      "definitionReview": "H1-working-definition-recorded-not-clinical-standard",
       "externalMappings": []
     },
     {
@@ -101,7 +101,7 @@
       "label": "SDNN",
       "definition": "A specific HRV statistic; preserve measurement window and provider method.",
       "units": "ms",
-      "definitionReview": "pending-H1",
+      "definitionReview": "H1-working-definition-recorded-not-clinical-standard",
       "externalMappings": []
     },
     {
@@ -109,7 +109,7 @@
       "label": "RMSSD",
       "definition": "A distinct HRV statistic; not interchangeable with SDNN because units match.",
       "units": "ms",
-      "definitionReview": "pending-H1",
+      "definitionReview": "H1-working-definition-recorded-not-clinical-standard",
       "externalMappings": []
     },
     {
@@ -117,7 +117,7 @@
       "label": "Activity membership",
       "definition": "Evidence that a sample contributes to a defined aggregate; temporal overlap alone is insufficient.",
       "units": "relation",
-      "definitionReview": "pending-H1",
+      "definitionReview": "H1-working-definition-recorded-not-clinical-standard",
       "externalMappings": []
     },
     {
@@ -125,7 +125,7 @@
       "label": "Cohort confidence interval",
       "definition": "Sampling uncertainty for a defined aggregate under a resampling/analysis method.",
       "units": "endpoint-specific",
-      "definitionReview": "pending-H1",
+      "definitionReview": "H1-working-definition-recorded-not-clinical-standard",
       "externalMappings": []
     },
     {
@@ -133,7 +133,143 @@
       "label": "Individual prediction interval",
       "definition": "Uncertainty for a new individual observation; requires evaluation of predictive coverage.",
       "units": "endpoint-specific",
-      "definitionReview": "pending-H1",
+      "definitionReview": "H1-working-definition-recorded-not-clinical-standard",
+      "externalMappings": []
+    },
+    {
+      "id": "mass",
+      "label": "Body mass",
+      "definition": "User-supplied body mass; measurement method and date are not captured by the current API.",
+      "units": "kg",
+      "definitionReview": "H1-working-definition-recorded-not-clinical-standard",
+      "externalMappings": []
+    },
+    {
+      "id": "height",
+      "label": "Height",
+      "definition": "User-supplied height; converted from cm to m for the stride proxy.",
+      "units": "cm",
+      "definitionReview": "H1-working-definition-recorded-not-clinical-standard",
+      "externalMappings": []
+    },
+    {
+      "id": "age",
+      "label": "Age",
+      "definition": "User-supplied age in years; permitted numeric bounds are a software contract, not evidence of suitability.",
+      "units": "years",
+      "definitionReview": "H1-working-definition-recorded-not-clinical-standard",
+      "externalMappings": []
+    },
+    {
+      "id": "equation-sex",
+      "label": "Equation sex parameter",
+      "definition": "Binary male/female coefficient selection in the existing equation; does not represent a complete account of sex, gender, physiology or treatment.",
+      "units": "category",
+      "definitionReview": "H1-working-definition-recorded-not-clinical-standard",
+      "externalMappings": []
+    },
+    {
+      "id": "steps",
+      "label": "Step count",
+      "definition": "Daily step total supplied to the model; source, merge rules and reporting window are not recorded by the current API.",
+      "units": "steps/day",
+      "definitionReview": "H1-working-definition-recorded-not-clinical-standard",
+      "externalMappings": []
+    },
+    {
+      "id": "stride",
+      "label": "Stride proxy",
+      "definition": "Height in meters multiplied by 0.415 in the current model; not directly observed distance per step.",
+      "units": "m/step",
+      "definitionReview": "H1-working-definition-recorded-not-clinical-standard",
+      "externalMappings": []
+    },
+    {
+      "id": "distance",
+      "label": "Walking distance proxy",
+      "definition": "Nonnegative steps above the assumed baseline multiplied by the stride proxy.",
+      "units": "km/day",
+      "definitionReview": "H1-working-definition-recorded-not-clinical-standard",
+      "externalMappings": []
+    },
+    {
+      "id": "duration",
+      "label": "Workout duration",
+      "definition": "Whole-session elapsed duration, including rest intervals under the documented intensity convention.",
+      "units": "min/session",
+      "definitionReview": "H1-working-definition-recorded-not-clinical-standard",
+      "externalMappings": []
+    },
+    {
+      "id": "met",
+      "label": "MET preset",
+      "definition": "Illustrative whole-session activity factor; used with the approximate 1 kcal/kg/hour convention.",
+      "units": "dimensionless",
+      "definitionReview": "H1-working-definition-recorded-not-clinical-standard",
+      "externalMappings": []
+    },
+    {
+      "id": "sleep",
+      "label": "Sleep duration",
+      "definition": "Supplied sleep hours; no device, window, sleep quality or clinical assessment is encoded.",
+      "units": "hours",
+      "definitionReview": "H1-working-definition-recorded-not-clinical-standard",
+      "externalMappings": []
+    },
+    {
+      "id": "subjective-state",
+      "label": "Subjective state",
+      "definition": "Categorical self-report of energy, soreness/pain or prior-week fatigue; not a diagnostic measurement.",
+      "units": "category",
+      "definitionReview": "H1-working-definition-recorded-not-clinical-standard",
+      "externalMappings": []
+    },
+    {
+      "id": "sets",
+      "label": "Working sets",
+      "definition": "Illustrative count per target muscle per session, based on the user-supplied usual count; not weekly volume.",
+      "units": "sets/muscle/session",
+      "definitionReview": "H1-working-definition-recorded-not-clinical-standard",
+      "externalMappings": []
+    },
+    {
+      "id": "performance",
+      "label": "Training performance outcome",
+      "definition": "Proposed next-session task-specific outcome in the wearable protocol; not interchangeable with hypertrophy, injury or causal benefit.",
+      "units": "protocol-specific",
+      "definitionReview": "H1-working-definition-recorded-not-clinical-standard",
+      "externalMappings": []
+    },
+    {
+      "id": "observation",
+      "label": "Observation",
+      "definition": "Recorded value with method, source, window and units; unknown metadata remain unknown. User entry alone does not establish direct measurement.",
+      "units": "not-applicable",
+      "definitionReview": "H1-working-definition-recorded-not-clinical-standard",
+      "externalMappings": []
+    },
+    {
+      "id": "estimate",
+      "label": "Model estimate",
+      "definition": "Value derived from an equation or heuristic; separate from an observation and from an action recommendation.",
+      "units": "output-specific",
+      "definitionReview": "H1-working-definition-recorded-not-clinical-standard",
+      "externalMappings": []
+    },
+    {
+      "id": "decision",
+      "label": "Decision",
+      "definition": "Action or deployment choice informed by evidence and values; accuracy or causal benefit requires separate evaluation.",
+      "units": "not-applicable",
+      "definitionReview": "H1-working-definition-recorded-not-clinical-standard",
+      "externalMappings": []
+    },
+    {
+      "id": "body-fat-change",
+      "label": "Body-fat percentage-point change",
+      "definition": "Absolute difference between two percent values; distinct from relative percent change.",
+      "units": "percentage-points",
+      "definitionReview": "H1-working-definition-recorded-not-clinical-standard",
       "externalMappings": []
     }
   ],
@@ -153,7 +289,35 @@
         "measurement protocol",
         "time horizon"
       ],
-      "reviewGate": "H1"
+      "reviewGate": "H2",
+      "dimensions": {
+        "severity": {
+          "state": "unreviewed",
+          "value": null
+        },
+        "duration": {
+          "state": "unreviewed",
+          "value": null
+        },
+        "treatment": {
+          "state": "unreviewed",
+          "value": null
+        },
+        "coexistingConditions": {
+          "state": "unreviewed",
+          "value": null
+        },
+        "measurementProtocol": {
+          "state": "unreviewed",
+          "value": null
+        },
+        "timeHorizon": {
+          "state": "unreviewed",
+          "value": null
+        }
+      },
+      "runtimeDetection": "not-implemented",
+      "dimensionMeaning": "Null is unknown or unassessed, never absent, normal, untreated or safe. Record source-specific strata in H2; intersecting contexts do not inherit evidence automatically."
     },
     {
       "id": "athlete-muscular",
@@ -170,7 +334,35 @@
         "measurement protocol",
         "time horizon"
       ],
-      "reviewGate": "H1"
+      "reviewGate": "H2",
+      "dimensions": {
+        "severity": {
+          "state": "unreviewed",
+          "value": null
+        },
+        "duration": {
+          "state": "unreviewed",
+          "value": null
+        },
+        "treatment": {
+          "state": "unreviewed",
+          "value": null
+        },
+        "coexistingConditions": {
+          "state": "unreviewed",
+          "value": null
+        },
+        "measurementProtocol": {
+          "state": "unreviewed",
+          "value": null
+        },
+        "timeHorizon": {
+          "state": "unreviewed",
+          "value": null
+        }
+      },
+      "runtimeDetection": "not-implemented",
+      "dimensionMeaning": "Null is unknown or unassessed, never absent, normal, untreated or safe. Record source-specific strata in H2; intersecting contexts do not inherit evidence automatically."
     },
     {
       "id": "older-frailty",
@@ -187,7 +379,35 @@
         "measurement protocol",
         "time horizon"
       ],
-      "reviewGate": "H1"
+      "reviewGate": "H2",
+      "dimensions": {
+        "severity": {
+          "state": "unreviewed",
+          "value": null
+        },
+        "duration": {
+          "state": "unreviewed",
+          "value": null
+        },
+        "treatment": {
+          "state": "unreviewed",
+          "value": null
+        },
+        "coexistingConditions": {
+          "state": "unreviewed",
+          "value": null
+        },
+        "measurementProtocol": {
+          "state": "unreviewed",
+          "value": null
+        },
+        "timeHorizon": {
+          "state": "unreviewed",
+          "value": null
+        }
+      },
+      "runtimeDetection": "not-implemented",
+      "dimensionMeaning": "Null is unknown or unassessed, never absent, normal, untreated or safe. Record source-specific strata in H2; intersecting contexts do not inherit evidence automatically."
     },
     {
       "id": "body-size",
@@ -204,7 +424,35 @@
         "measurement protocol",
         "time horizon"
       ],
-      "reviewGate": "H1"
+      "reviewGate": "H2",
+      "dimensions": {
+        "severity": {
+          "state": "unreviewed",
+          "value": null
+        },
+        "duration": {
+          "state": "unreviewed",
+          "value": null
+        },
+        "treatment": {
+          "state": "unreviewed",
+          "value": null
+        },
+        "coexistingConditions": {
+          "state": "unreviewed",
+          "value": null
+        },
+        "measurementProtocol": {
+          "state": "unreviewed",
+          "value": null
+        },
+        "timeHorizon": {
+          "state": "unreviewed",
+          "value": null
+        }
+      },
+      "runtimeDetection": "not-implemented",
+      "dimensionMeaning": "Null is unknown or unassessed, never absent, normal, untreated or safe. Record source-specific strata in H2; intersecting contexts do not inherit evidence automatically."
     },
     {
       "id": "energy-restriction",
@@ -221,7 +469,35 @@
         "measurement protocol",
         "time horizon"
       ],
-      "reviewGate": "H1"
+      "reviewGate": "H2",
+      "dimensions": {
+        "severity": {
+          "state": "unreviewed",
+          "value": null
+        },
+        "duration": {
+          "state": "unreviewed",
+          "value": null
+        },
+        "treatment": {
+          "state": "unreviewed",
+          "value": null
+        },
+        "coexistingConditions": {
+          "state": "unreviewed",
+          "value": null
+        },
+        "measurementProtocol": {
+          "state": "unreviewed",
+          "value": null
+        },
+        "timeHorizon": {
+          "state": "unreviewed",
+          "value": null
+        }
+      },
+      "runtimeDetection": "not-implemented",
+      "dimensionMeaning": "Null is unknown or unassessed, never absent, normal, untreated or safe. Record source-specific strata in H2; intersecting contexts do not inherit evidence automatically."
     },
     {
       "id": "low-energy-availability",
@@ -238,7 +514,35 @@
         "measurement protocol",
         "time horizon"
       ],
-      "reviewGate": "H1"
+      "reviewGate": "H2",
+      "dimensions": {
+        "severity": {
+          "state": "unreviewed",
+          "value": null
+        },
+        "duration": {
+          "state": "unreviewed",
+          "value": null
+        },
+        "treatment": {
+          "state": "unreviewed",
+          "value": null
+        },
+        "coexistingConditions": {
+          "state": "unreviewed",
+          "value": null
+        },
+        "measurementProtocol": {
+          "state": "unreviewed",
+          "value": null
+        },
+        "timeHorizon": {
+          "state": "unreviewed",
+          "value": null
+        }
+      },
+      "runtimeDetection": "not-implemented",
+      "dimensionMeaning": "Null is unknown or unassessed, never absent, normal, untreated or safe. Record source-specific strata in H2; intersecting contexts do not inherit evidence automatically."
     },
     {
       "id": "pregnancy-lactation",
@@ -255,7 +559,35 @@
         "measurement protocol",
         "time horizon"
       ],
-      "reviewGate": "H1"
+      "reviewGate": "H2",
+      "dimensions": {
+        "severity": {
+          "state": "unreviewed",
+          "value": null
+        },
+        "duration": {
+          "state": "unreviewed",
+          "value": null
+        },
+        "treatment": {
+          "state": "unreviewed",
+          "value": null
+        },
+        "coexistingConditions": {
+          "state": "unreviewed",
+          "value": null
+        },
+        "measurementProtocol": {
+          "state": "unreviewed",
+          "value": null
+        },
+        "timeHorizon": {
+          "state": "unreviewed",
+          "value": null
+        }
+      },
+      "runtimeDetection": "not-implemented",
+      "dimensionMeaning": "Null is unknown or unassessed, never absent, normal, untreated or safe. Record source-specific strata in H2; intersecting contexts do not inherit evidence automatically."
     },
     {
       "id": "pediatric",
@@ -272,7 +604,35 @@
         "measurement protocol",
         "time horizon"
       ],
-      "reviewGate": "H1"
+      "reviewGate": "H2",
+      "dimensions": {
+        "severity": {
+          "state": "unreviewed",
+          "value": null
+        },
+        "duration": {
+          "state": "unreviewed",
+          "value": null
+        },
+        "treatment": {
+          "state": "unreviewed",
+          "value": null
+        },
+        "coexistingConditions": {
+          "state": "unreviewed",
+          "value": null
+        },
+        "measurementProtocol": {
+          "state": "unreviewed",
+          "value": null
+        },
+        "timeHorizon": {
+          "state": "unreviewed",
+          "value": null
+        }
+      },
+      "runtimeDetection": "not-implemented",
+      "dimensionMeaning": "Null is unknown or unassessed, never absent, normal, untreated or safe. Record source-specific strata in H2; intersecting contexts do not inherit evidence automatically."
     },
     {
       "id": "diabetes",
@@ -289,7 +649,35 @@
         "measurement protocol",
         "time horizon"
       ],
-      "reviewGate": "H1"
+      "reviewGate": "H2",
+      "dimensions": {
+        "severity": {
+          "state": "unreviewed",
+          "value": null
+        },
+        "duration": {
+          "state": "unreviewed",
+          "value": null
+        },
+        "treatment": {
+          "state": "unreviewed",
+          "value": null
+        },
+        "coexistingConditions": {
+          "state": "unreviewed",
+          "value": null
+        },
+        "measurementProtocol": {
+          "state": "unreviewed",
+          "value": null
+        },
+        "timeHorizon": {
+          "state": "unreviewed",
+          "value": null
+        }
+      },
+      "runtimeDetection": "not-implemented",
+      "dimensionMeaning": "Null is unknown or unassessed, never absent, normal, untreated or safe. Record source-specific strata in H2; intersecting contexts do not inherit evidence automatically."
     },
     {
       "id": "thyroid",
@@ -306,7 +694,35 @@
         "measurement protocol",
         "time horizon"
       ],
-      "reviewGate": "H1"
+      "reviewGate": "H2",
+      "dimensions": {
+        "severity": {
+          "state": "unreviewed",
+          "value": null
+        },
+        "duration": {
+          "state": "unreviewed",
+          "value": null
+        },
+        "treatment": {
+          "state": "unreviewed",
+          "value": null
+        },
+        "coexistingConditions": {
+          "state": "unreviewed",
+          "value": null
+        },
+        "measurementProtocol": {
+          "state": "unreviewed",
+          "value": null
+        },
+        "timeHorizon": {
+          "state": "unreviewed",
+          "value": null
+        }
+      },
+      "runtimeDetection": "not-implemented",
+      "dimensionMeaning": "Null is unknown or unassessed, never absent, normal, untreated or safe. Record source-specific strata in H2; intersecting contexts do not inherit evidence automatically."
     },
     {
       "id": "renal-fluid",
@@ -323,7 +739,35 @@
         "measurement protocol",
         "time horizon"
       ],
-      "reviewGate": "H1"
+      "reviewGate": "H2",
+      "dimensions": {
+        "severity": {
+          "state": "unreviewed",
+          "value": null
+        },
+        "duration": {
+          "state": "unreviewed",
+          "value": null
+        },
+        "treatment": {
+          "state": "unreviewed",
+          "value": null
+        },
+        "coexistingConditions": {
+          "state": "unreviewed",
+          "value": null
+        },
+        "measurementProtocol": {
+          "state": "unreviewed",
+          "value": null
+        },
+        "timeHorizon": {
+          "state": "unreviewed",
+          "value": null
+        }
+      },
+      "runtimeDetection": "not-implemented",
+      "dimensionMeaning": "Null is unknown or unassessed, never absent, normal, untreated or safe. Record source-specific strata in H2; intersecting contexts do not inherit evidence automatically."
     },
     {
       "id": "cardiopulmonary",
@@ -340,7 +784,35 @@
         "measurement protocol",
         "time horizon"
       ],
-      "reviewGate": "H1"
+      "reviewGate": "H2",
+      "dimensions": {
+        "severity": {
+          "state": "unreviewed",
+          "value": null
+        },
+        "duration": {
+          "state": "unreviewed",
+          "value": null
+        },
+        "treatment": {
+          "state": "unreviewed",
+          "value": null
+        },
+        "coexistingConditions": {
+          "state": "unreviewed",
+          "value": null
+        },
+        "measurementProtocol": {
+          "state": "unreviewed",
+          "value": null
+        },
+        "timeHorizon": {
+          "state": "unreviewed",
+          "value": null
+        }
+      },
+      "runtimeDetection": "not-implemented",
+      "dimensionMeaning": "Null is unknown or unassessed, never absent, normal, untreated or safe. Record source-specific strata in H2; intersecting contexts do not inherit evidence automatically."
     },
     {
       "id": "acute-critical",
@@ -357,7 +829,35 @@
         "measurement protocol",
         "time horizon"
       ],
-      "reviewGate": "H1"
+      "reviewGate": "H2",
+      "dimensions": {
+        "severity": {
+          "state": "unreviewed",
+          "value": null
+        },
+        "duration": {
+          "state": "unreviewed",
+          "value": null
+        },
+        "treatment": {
+          "state": "unreviewed",
+          "value": null
+        },
+        "coexistingConditions": {
+          "state": "unreviewed",
+          "value": null
+        },
+        "measurementProtocol": {
+          "state": "unreviewed",
+          "value": null
+        },
+        "timeHorizon": {
+          "state": "unreviewed",
+          "value": null
+        }
+      },
+      "runtimeDetection": "not-implemented",
+      "dimensionMeaning": "Null is unknown or unassessed, never absent, normal, untreated or safe. Record source-specific strata in H2; intersecting contexts do not inherit evidence automatically."
     },
     {
       "id": "cancer-cachexia",
@@ -374,7 +874,35 @@
         "measurement protocol",
         "time horizon"
       ],
-      "reviewGate": "H1"
+      "reviewGate": "H2",
+      "dimensions": {
+        "severity": {
+          "state": "unreviewed",
+          "value": null
+        },
+        "duration": {
+          "state": "unreviewed",
+          "value": null
+        },
+        "treatment": {
+          "state": "unreviewed",
+          "value": null
+        },
+        "coexistingConditions": {
+          "state": "unreviewed",
+          "value": null
+        },
+        "measurementProtocol": {
+          "state": "unreviewed",
+          "value": null
+        },
+        "timeHorizon": {
+          "state": "unreviewed",
+          "value": null
+        }
+      },
+      "runtimeDetection": "not-implemented",
+      "dimensionMeaning": "Null is unknown or unassessed, never absent, normal, untreated or safe. Record source-specific strata in H2; intersecting contexts do not inherit evidence automatically."
     },
     {
       "id": "medications",
@@ -391,7 +919,35 @@
         "measurement protocol",
         "time horizon"
       ],
-      "reviewGate": "H1"
+      "reviewGate": "H2",
+      "dimensions": {
+        "severity": {
+          "state": "unreviewed",
+          "value": null
+        },
+        "duration": {
+          "state": "unreviewed",
+          "value": null
+        },
+        "treatment": {
+          "state": "unreviewed",
+          "value": null
+        },
+        "coexistingConditions": {
+          "state": "unreviewed",
+          "value": null
+        },
+        "measurementProtocol": {
+          "state": "unreviewed",
+          "value": null
+        },
+        "timeHorizon": {
+          "state": "unreviewed",
+          "value": null
+        }
+      },
+      "runtimeDetection": "not-implemented",
+      "dimensionMeaning": "Null is unknown or unassessed, never absent, normal, untreated or safe. Record source-specific strata in H2; intersecting contexts do not inherit evidence automatically."
     },
     {
       "id": "pain-sleep",
@@ -408,7 +964,35 @@
         "measurement protocol",
         "time horizon"
       ],
-      "reviewGate": "H1"
+      "reviewGate": "H2",
+      "dimensions": {
+        "severity": {
+          "state": "unreviewed",
+          "value": null
+        },
+        "duration": {
+          "state": "unreviewed",
+          "value": null
+        },
+        "treatment": {
+          "state": "unreviewed",
+          "value": null
+        },
+        "coexistingConditions": {
+          "state": "unreviewed",
+          "value": null
+        },
+        "measurementProtocol": {
+          "state": "unreviewed",
+          "value": null
+        },
+        "timeHorizon": {
+          "state": "unreviewed",
+          "value": null
+        }
+      },
+      "runtimeDetection": "not-implemented",
+      "dimensionMeaning": "Null is unknown or unassessed, never absent, normal, untreated or safe. Record source-specific strata in H2; intersecting contexts do not inherit evidence automatically."
     },
     {
       "id": "mobility-gait",
@@ -425,7 +1009,329 @@
         "measurement protocol",
         "time horizon"
       ],
-      "reviewGate": "H1"
+      "reviewGate": "H2",
+      "dimensions": {
+        "severity": {
+          "state": "unreviewed",
+          "value": null
+        },
+        "duration": {
+          "state": "unreviewed",
+          "value": null
+        },
+        "treatment": {
+          "state": "unreviewed",
+          "value": null
+        },
+        "coexistingConditions": {
+          "state": "unreviewed",
+          "value": null
+        },
+        "measurementProtocol": {
+          "state": "unreviewed",
+          "value": null
+        },
+        "timeHorizon": {
+          "state": "unreviewed",
+          "value": null
+        }
+      },
+      "runtimeDetection": "not-implemented",
+      "dimensionMeaning": "Null is unknown or unassessed, never absent, normal, untreated or safe. Record source-specific strata in H2; intersecting contexts do not inherit evidence automatically."
+    },
+    {
+      "id": "athlete-restriction",
+      "axis": "intersection",
+      "label": "Athlete with energy restriction",
+      "composedOf": [
+        "athlete-muscular",
+        "energy-restriction"
+      ],
+      "currentProductDisposition": "not-established-for-intersection",
+      "clinicalEvidenceReview": "unreviewed",
+      "externalMappings": [],
+      "requiredDimensions": [
+        "severity",
+        "duration",
+        "treatment",
+        "coexisting conditions",
+        "measurement protocol",
+        "time horizon"
+      ],
+      "reviewGate": "H2",
+      "dimensions": {
+        "severity": {
+          "state": "unreviewed",
+          "value": null
+        },
+        "duration": {
+          "state": "unreviewed",
+          "value": null
+        },
+        "treatment": {
+          "state": "unreviewed",
+          "value": null
+        },
+        "coexistingConditions": {
+          "state": "unreviewed",
+          "value": null
+        },
+        "measurementProtocol": {
+          "state": "unreviewed",
+          "value": null
+        },
+        "timeHorizon": {
+          "state": "unreviewed",
+          "value": null
+        }
+      },
+      "runtimeDetection": "not-implemented",
+      "dimensionMeaning": "Null is unknown or unassessed, never absent, normal, untreated or safe. Record source-specific strata in H2; intersecting contexts do not inherit evidence automatically."
+    },
+    {
+      "id": "older-renal",
+      "axis": "intersection",
+      "label": "Older adult with renal/fluid context",
+      "composedOf": [
+        "older-frailty",
+        "renal-fluid"
+      ],
+      "currentProductDisposition": "not-established-for-intersection",
+      "clinicalEvidenceReview": "unreviewed",
+      "externalMappings": [],
+      "requiredDimensions": [
+        "severity",
+        "duration",
+        "treatment",
+        "coexisting conditions",
+        "measurement protocol",
+        "time horizon"
+      ],
+      "reviewGate": "H2",
+      "dimensions": {
+        "severity": {
+          "state": "unreviewed",
+          "value": null
+        },
+        "duration": {
+          "state": "unreviewed",
+          "value": null
+        },
+        "treatment": {
+          "state": "unreviewed",
+          "value": null
+        },
+        "coexistingConditions": {
+          "state": "unreviewed",
+          "value": null
+        },
+        "measurementProtocol": {
+          "state": "unreviewed",
+          "value": null
+        },
+        "timeHorizon": {
+          "state": "unreviewed",
+          "value": null
+        }
+      },
+      "runtimeDetection": "not-implemented",
+      "dimensionMeaning": "Null is unknown or unassessed, never absent, normal, untreated or safe. Record source-specific strata in H2; intersecting contexts do not inherit evidence automatically."
+    },
+    {
+      "id": "diabetes-medications",
+      "axis": "intersection",
+      "label": "Diabetes with medication context",
+      "composedOf": [
+        "diabetes",
+        "medications"
+      ],
+      "currentProductDisposition": "not-established-for-intersection",
+      "clinicalEvidenceReview": "unreviewed",
+      "externalMappings": [],
+      "requiredDimensions": [
+        "severity",
+        "duration",
+        "treatment",
+        "coexisting conditions",
+        "measurement protocol",
+        "time horizon"
+      ],
+      "reviewGate": "H2",
+      "dimensions": {
+        "severity": {
+          "state": "unreviewed",
+          "value": null
+        },
+        "duration": {
+          "state": "unreviewed",
+          "value": null
+        },
+        "treatment": {
+          "state": "unreviewed",
+          "value": null
+        },
+        "coexistingConditions": {
+          "state": "unreviewed",
+          "value": null
+        },
+        "measurementProtocol": {
+          "state": "unreviewed",
+          "value": null
+        },
+        "timeHorizon": {
+          "state": "unreviewed",
+          "value": null
+        }
+      },
+      "runtimeDetection": "not-implemented",
+      "dimensionMeaning": "Null is unknown or unassessed, never absent, normal, untreated or safe. Record source-specific strata in H2; intersecting contexts do not inherit evidence automatically."
+    },
+    {
+      "id": "pain-acute",
+      "axis": "intersection",
+      "label": "Pain/sleep context with acute illness",
+      "composedOf": [
+        "pain-sleep",
+        "acute-critical"
+      ],
+      "currentProductDisposition": "not-established-for-intersection",
+      "clinicalEvidenceReview": "unreviewed",
+      "externalMappings": [],
+      "requiredDimensions": [
+        "severity",
+        "duration",
+        "treatment",
+        "coexisting conditions",
+        "measurement protocol",
+        "time horizon"
+      ],
+      "reviewGate": "H2",
+      "dimensions": {
+        "severity": {
+          "state": "unreviewed",
+          "value": null
+        },
+        "duration": {
+          "state": "unreviewed",
+          "value": null
+        },
+        "treatment": {
+          "state": "unreviewed",
+          "value": null
+        },
+        "coexistingConditions": {
+          "state": "unreviewed",
+          "value": null
+        },
+        "measurementProtocol": {
+          "state": "unreviewed",
+          "value": null
+        },
+        "timeHorizon": {
+          "state": "unreviewed",
+          "value": null
+        }
+      },
+      "runtimeDetection": "not-implemented",
+      "dimensionMeaning": "Null is unknown or unassessed, never absent, normal, untreated or safe. Record source-specific strata in H2; intersecting contexts do not inherit evidence automatically."
+    },
+    {
+      "id": "body-size-fluid",
+      "axis": "intersection",
+      "label": "Body-size and fluid context",
+      "composedOf": [
+        "body-size",
+        "renal-fluid"
+      ],
+      "currentProductDisposition": "not-established-for-intersection",
+      "clinicalEvidenceReview": "unreviewed",
+      "externalMappings": [],
+      "requiredDimensions": [
+        "severity",
+        "duration",
+        "treatment",
+        "coexisting conditions",
+        "measurement protocol",
+        "time horizon"
+      ],
+      "reviewGate": "H2",
+      "dimensions": {
+        "severity": {
+          "state": "unreviewed",
+          "value": null
+        },
+        "duration": {
+          "state": "unreviewed",
+          "value": null
+        },
+        "treatment": {
+          "state": "unreviewed",
+          "value": null
+        },
+        "coexistingConditions": {
+          "state": "unreviewed",
+          "value": null
+        },
+        "measurementProtocol": {
+          "state": "unreviewed",
+          "value": null
+        },
+        "timeHorizon": {
+          "state": "unreviewed",
+          "value": null
+        }
+      },
+      "runtimeDetection": "not-implemented",
+      "dimensionMeaning": "Null is unknown or unassessed, never absent, normal, untreated or safe. Record source-specific strata in H2; intersecting contexts do not inherit evidence automatically."
+    },
+    {
+      "id": "pregnancy-sleep",
+      "axis": "intersection",
+      "label": "Pregnancy/lactation with sleep context",
+      "composedOf": [
+        "pregnancy-lactation",
+        "pain-sleep"
+      ],
+      "currentProductDisposition": "not-established-for-intersection",
+      "clinicalEvidenceReview": "unreviewed",
+      "externalMappings": [],
+      "requiredDimensions": [
+        "severity",
+        "duration",
+        "treatment",
+        "coexisting conditions",
+        "measurement protocol",
+        "time horizon"
+      ],
+      "reviewGate": "H2",
+      "dimensions": {
+        "severity": {
+          "state": "unreviewed",
+          "value": null
+        },
+        "duration": {
+          "state": "unreviewed",
+          "value": null
+        },
+        "treatment": {
+          "state": "unreviewed",
+          "value": null
+        },
+        "coexistingConditions": {
+          "state": "unreviewed",
+          "value": null
+        },
+        "measurementProtocol": {
+          "state": "unreviewed",
+          "value": null
+        },
+        "timeHorizon": {
+          "state": "unreviewed",
+          "value": null
+        }
+      },
+      "runtimeDetection": "not-implemented",
+      "dimensionMeaning": "Null is unknown or unassessed, never absent, normal, untreated or safe. Record source-specific strata in H2; intersecting contexts do not inherit evidence automatically."
     }
   ],
   "sources": [
@@ -772,6 +1678,204 @@
       "retrievedAt": null,
       "inspectedPortions": [],
       "versionOrPublicationDate": null
+    },
+    {
+      "id": "ui",
+      "title": "app.js",
+      "path": "app.js",
+      "url": null,
+      "freshnessClass": "foundational",
+      "sourceContentReviewedAt": null,
+      "reviewScope": null,
+      "rightsStatus": "repository-content-policy",
+      "importedFrom": null,
+      "status": "repository-pointer",
+      "note": "H1 semantic inventory only; no primary-source freshness or clinical evidence review.",
+      "retrievedAt": "2026-11-07",
+      "inspectedPortions": [
+        "Repository statement and contract inspection"
+      ],
+      "versionOrPublicationDate": "8fb3728e453493fc99c7a43bbbdaf3e45a43f75e"
+    },
+    {
+      "id": "ui-copy",
+      "title": "index.html",
+      "path": "index.html",
+      "url": null,
+      "freshnessClass": "foundational",
+      "sourceContentReviewedAt": null,
+      "reviewScope": null,
+      "rightsStatus": "repository-content-policy",
+      "importedFrom": null,
+      "status": "repository-pointer",
+      "note": "H1 semantic inventory only; no primary-source freshness or clinical evidence review.",
+      "retrievedAt": "2026-11-07",
+      "inspectedPortions": [
+        "Repository statement and contract inspection"
+      ],
+      "versionOrPublicationDate": "8fb3728e453493fc99c7a43bbbdaf3e45a43f75e"
+    },
+    {
+      "id": "input-contract",
+      "title": "schemas/input.schema.json",
+      "path": "schemas/input.schema.json",
+      "url": null,
+      "freshnessClass": "foundational",
+      "sourceContentReviewedAt": null,
+      "reviewScope": null,
+      "rightsStatus": "repository-content-policy",
+      "importedFrom": null,
+      "status": "repository-pointer",
+      "note": "H1 semantic inventory only; no primary-source freshness or clinical evidence review.",
+      "retrievedAt": "2026-11-07",
+      "inspectedPortions": [
+        "Repository statement and contract inspection"
+      ],
+      "versionOrPublicationDate": "8fb3728e453493fc99c7a43bbbdaf3e45a43f75e"
+    },
+    {
+      "id": "output-contract",
+      "title": "schemas/output.schema.json",
+      "path": "schemas/output.schema.json",
+      "url": null,
+      "freshnessClass": "foundational",
+      "sourceContentReviewedAt": null,
+      "reviewScope": null,
+      "rightsStatus": "repository-content-policy",
+      "importedFrom": null,
+      "status": "repository-pointer",
+      "note": "H1 semantic inventory only; no primary-source freshness or clinical evidence review.",
+      "retrievedAt": "2026-11-07",
+      "inspectedPortions": [
+        "Repository statement and contract inspection"
+      ],
+      "versionOrPublicationDate": "8fb3728e453493fc99c7a43bbbdaf3e45a43f75e"
+    },
+    {
+      "id": "types",
+      "title": "core/model.d.ts",
+      "path": "core/model.d.ts",
+      "url": null,
+      "freshnessClass": "foundational",
+      "sourceContentReviewedAt": null,
+      "reviewScope": null,
+      "rightsStatus": "repository-content-policy",
+      "importedFrom": null,
+      "status": "repository-pointer",
+      "note": "H1 semantic inventory only; no primary-source freshness or clinical evidence review.",
+      "retrievedAt": "2026-11-07",
+      "inspectedPortions": [
+        "Repository statement and contract inspection"
+      ],
+      "versionOrPublicationDate": "8fb3728e453493fc99c7a43bbbdaf3e45a43f75e"
+    },
+    {
+      "id": "g3-data",
+      "title": "research/ree-validation/results/g3-enable-v1.json",
+      "path": "research/ree-validation/results/g3-enable-v1.json",
+      "url": null,
+      "freshnessClass": "foundational",
+      "sourceContentReviewedAt": null,
+      "reviewScope": null,
+      "rightsStatus": "repository-content-policy",
+      "importedFrom": null,
+      "status": "repository-pointer",
+      "note": "H1 semantic inventory only; no primary-source freshness or clinical evidence review.",
+      "retrievedAt": "2026-11-07",
+      "inspectedPortions": [
+        "Repository statement and contract inspection"
+      ],
+      "versionOrPublicationDate": "8fb3728e453493fc99c7a43bbbdaf3e45a43f75e"
+    },
+    {
+      "id": "g3-protocol",
+      "title": "research/ree-validation/protocol.v1.json",
+      "path": "research/ree-validation/protocol.v1.json",
+      "url": null,
+      "freshnessClass": "foundational",
+      "sourceContentReviewedAt": null,
+      "reviewScope": null,
+      "rightsStatus": "repository-content-policy",
+      "importedFrom": null,
+      "status": "repository-pointer",
+      "note": "H1 semantic inventory only; no primary-source freshness or clinical evidence review.",
+      "retrievedAt": "2026-11-07",
+      "inspectedPortions": [
+        "Repository statement and contract inspection"
+      ],
+      "versionOrPublicationDate": "8fb3728e453493fc99c7a43bbbdaf3e45a43f75e"
+    },
+    {
+      "id": "sensitivity",
+      "title": "research/assumption-sensitivity/README.md",
+      "path": "research/assumption-sensitivity/README.md",
+      "url": null,
+      "freshnessClass": "foundational",
+      "sourceContentReviewedAt": null,
+      "reviewScope": null,
+      "rightsStatus": "repository-content-policy",
+      "importedFrom": null,
+      "status": "repository-pointer",
+      "note": "H1 semantic inventory only; no primary-source freshness or clinical evidence review.",
+      "retrievedAt": "2026-11-07",
+      "inspectedPortions": [
+        "Repository statement and contract inspection"
+      ],
+      "versionOrPublicationDate": "8fb3728e453493fc99c7a43bbbdaf3e45a43f75e"
+    },
+    {
+      "id": "pilot",
+      "title": "research/apple-healthkit-pilot/README.md",
+      "path": "research/apple-healthkit-pilot/README.md",
+      "url": null,
+      "freshnessClass": "foundational",
+      "sourceContentReviewedAt": null,
+      "reviewScope": null,
+      "rightsStatus": "repository-content-policy",
+      "importedFrom": null,
+      "status": "repository-pointer",
+      "note": "H1 semantic inventory only; no primary-source freshness or clinical evidence review.",
+      "retrievedAt": "2026-11-07",
+      "inspectedPortions": [
+        "Repository statement and contract inspection"
+      ],
+      "versionOrPublicationDate": "8fb3728e453493fc99c7a43bbbdaf3e45a43f75e"
+    },
+    {
+      "id": "future",
+      "title": "docs/FUTURE_ARCHITECTURE.md",
+      "path": "docs/FUTURE_ARCHITECTURE.md",
+      "url": null,
+      "freshnessClass": "foundational",
+      "sourceContentReviewedAt": null,
+      "reviewScope": null,
+      "rightsStatus": "repository-content-policy",
+      "importedFrom": null,
+      "status": "repository-pointer",
+      "note": "H1 semantic inventory only; no primary-source freshness or clinical evidence review.",
+      "retrievedAt": "2026-11-07",
+      "inspectedPortions": [
+        "Repository statement and contract inspection"
+      ],
+      "versionOrPublicationDate": "8fb3728e453493fc99c7a43bbbdaf3e45a43f75e"
+    },
+    {
+      "id": "readiness-methods",
+      "title": "docs/RESEARCH_PROTOCOL.md",
+      "path": "docs/RESEARCH_PROTOCOL.md",
+      "url": null,
+      "freshnessClass": "foundational",
+      "sourceContentReviewedAt": null,
+      "reviewScope": null,
+      "rightsStatus": "repository-content-policy",
+      "importedFrom": null,
+      "status": "repository-pointer",
+      "note": "H1 semantic inventory only; no primary-source freshness or clinical evidence review.",
+      "retrievedAt": "2026-11-07",
+      "inspectedPortions": [
+        "Repository statement and contract inspection"
+      ],
+      "versionOrPublicationDate": "8fb3728e453493fc99c7a43bbbdaf3e45a43f75e"
     }
   ],
   "claims": [
@@ -797,9 +1901,14 @@
         "H4"
       ],
       "empiricalValidation": "single-source-external-retrospective",
-      "applicabilityMatrixStatus": "pending-H1",
+      "applicabilityMatrixStatus": "H1-explicit-all-contexts",
       "evidenceDisposition": "unreviewed-for-current-cross-context-use",
-      "limitation": "Equation arithmetic and one cohort are established at their stated scope; no universal or individual guarantee."
+      "limitation": "Equation arithmetic and one cohort are established at their stated scope; no universal or individual guarantee.",
+      "contextsMeaning": "Salient origin or named discussion contexts only; complete cross-context coverage is in applicability.json.",
+      "semanticLevel": "model-or-method",
+      "temporalScope": "Source-specific window required; current use not established by inventory",
+      "measurementScope": "Source-specific protocol required; unrecorded method, device, treatment and preparation remain unknown",
+      "noPopulationPerformanceInference": false
     },
     {
       "id": "C02",
@@ -828,9 +1937,14 @@
         "H4"
       ],
       "empiricalValidation": "single-source-external-retrospective",
-      "applicabilityMatrixStatus": "pending-H1",
+      "applicabilityMatrixStatus": "H1-explicit-all-contexts",
       "evidenceDisposition": "unreviewed-for-current-cross-context-use",
-      "limitation": "Better cohort performance does not establish a general input-quality or population selector."
+      "limitation": "Better cohort performance does not establish a general input-quality or population selector.",
+      "contextsMeaning": "Salient origin or named discussion contexts only; complete cross-context coverage is in applicability.json.",
+      "semanticLevel": "model-or-method",
+      "temporalScope": "Source-specific window required; current use not established by inventory",
+      "measurementScope": "Source-specific protocol required; unrecorded method, device, treatment and preparation remain unknown",
+      "noPopulationPerformanceInference": false
     },
     {
       "id": "C03",
@@ -855,9 +1969,14 @@
         "H6"
       ],
       "empiricalValidation": "none",
-      "applicabilityMatrixStatus": "pending-H1",
+      "applicabilityMatrixStatus": "H1-explicit-all-contexts",
       "evidenceDisposition": "unreviewed-for-current-cross-context-use",
-      "limitation": "No independent whole-model TDEE validation; RMR evidence does not transfer automatically."
+      "limitation": "No independent whole-model TDEE validation; RMR evidence does not transfer automatically.",
+      "contextsMeaning": "Salient origin or named discussion contexts only; complete cross-context coverage is in applicability.json.",
+      "semanticLevel": "model-or-method",
+      "temporalScope": "Source-specific window required; current use not established by inventory",
+      "measurementScope": "Source-specific protocol required; unrecorded method, device, treatment and preparation remain unknown",
+      "noPopulationPerformanceInference": false
     },
     {
       "id": "C04",
@@ -880,9 +1999,14 @@
         "H3"
       ],
       "empiricalValidation": "none",
-      "applicabilityMatrixStatus": "pending-H1",
+      "applicabilityMatrixStatus": "H1-explicit-all-contexts",
       "evidenceDisposition": "unreviewed-for-current-cross-context-use",
-      "limitation": "1.2 and 2000 included steps are simplifying choices; the baseline does not decrement below 2000 steps."
+      "limitation": "1.2 and 2000 included steps are simplifying choices; the baseline does not decrement below 2000 steps.",
+      "contextsMeaning": "Salient origin or named discussion contexts only; complete cross-context coverage is in applicability.json.",
+      "semanticLevel": "model-or-method",
+      "temporalScope": "Source-specific window required; current use not established by inventory",
+      "measurementScope": "Source-specific protocol required; unrecorded method, device, treatment and preparation remain unknown",
+      "noPopulationPerformanceInference": false
     },
     {
       "id": "C05",
@@ -906,9 +2030,14 @@
         "H4"
       ],
       "empiricalValidation": "none",
-      "applicabilityMatrixStatus": "pending-H1",
+      "applicabilityMatrixStatus": "H1-explicit-all-contexts",
       "evidenceDisposition": "unreviewed-for-current-cross-context-use",
-      "limitation": "Fixed stride and cost do not establish individual gait, incline or speed accuracy."
+      "limitation": "Fixed stride and cost do not establish individual gait, incline or speed accuracy.",
+      "contextsMeaning": "Salient origin or named discussion contexts only; complete cross-context coverage is in applicability.json.",
+      "semanticLevel": "model-or-method",
+      "temporalScope": "Source-specific window required; current use not established by inventory",
+      "measurementScope": "Source-specific protocol required; unrecorded method, device, treatment and preparation remain unknown",
+      "noPopulationPerformanceInference": false
     },
     {
       "id": "C06",
@@ -933,9 +2062,14 @@
         "H4"
       ],
       "empiricalValidation": "none",
-      "applicabilityMatrixStatus": "pending-H1",
+      "applicabilityMatrixStatus": "H1-explicit-all-contexts",
       "evidenceDisposition": "unreviewed-for-current-cross-context-use",
-      "limitation": "Preset intensity is not measured expenditure and is not a validated set-count conversion."
+      "limitation": "Preset intensity is not measured expenditure and is not a validated set-count conversion.",
+      "contextsMeaning": "Salient origin or named discussion contexts only; complete cross-context coverage is in applicability.json.",
+      "semanticLevel": "model-or-method",
+      "temporalScope": "Source-specific window required; current use not established by inventory",
+      "measurementScope": "Source-specific protocol required; unrecorded method, device, treatment and preparation remain unknown",
+      "noPopulationPerformanceInference": false
     },
     {
       "id": "C07",
@@ -957,9 +2091,14 @@
         "H3"
       ],
       "empiricalValidation": "none",
-      "applicabilityMatrixStatus": "pending-H1",
+      "applicabilityMatrixStatus": "H1-explicit-all-contexts",
       "evidenceDisposition": "unreviewed-for-current-cross-context-use",
-      "limitation": "Prior provider review and synthetic cases do not establish actual-device aggregate attribution."
+      "limitation": "Prior provider review and synthetic cases do not establish actual-device aggregate attribution.",
+      "contextsMeaning": "Salient origin or named discussion contexts only; complete cross-context coverage is in applicability.json.",
+      "semanticLevel": "model-or-method",
+      "temporalScope": "Source-specific window required; current use not established by inventory",
+      "measurementScope": "Source-specific protocol required; unrecorded method, device, treatment and preparation remain unknown",
+      "noPopulationPerformanceInference": true
     },
     {
       "id": "C08",
@@ -983,9 +2122,14 @@
         "H6"
       ],
       "empiricalValidation": "none",
-      "applicabilityMatrixStatus": "pending-H1",
+      "applicabilityMatrixStatus": "H1-explicit-all-contexts",
       "evidenceDisposition": "unreviewed-for-current-cross-context-use",
-      "limitation": "Current outputs are unvalidated; no injury-safe threshold or optimal training-volume claim."
+      "limitation": "Current outputs are unvalidated; no injury-safe threshold or optimal training-volume claim.",
+      "contextsMeaning": "Salient origin or named discussion contexts only; complete cross-context coverage is in applicability.json.",
+      "semanticLevel": "model-or-method",
+      "temporalScope": "Source-specific window required; current use not established by inventory",
+      "measurementScope": "Source-specific protocol required; unrecorded method, device, treatment and preparation remain unknown",
+      "noPopulationPerformanceInference": false
     },
     {
       "id": "C09",
@@ -1006,9 +2150,14 @@
         "H6"
       ],
       "empiricalValidation": "none",
-      "applicabilityMatrixStatus": "pending-H1",
+      "applicabilityMatrixStatus": "H1-explicit-all-contexts",
       "evidenceDisposition": "unreviewed-for-current-cross-context-use",
-      "limitation": "No intake-planning or treatment function is currently shipped."
+      "limitation": "No intake-planning or treatment function is currently shipped.",
+      "contextsMeaning": "Salient origin or named discussion contexts only; complete cross-context coverage is in applicability.json.",
+      "semanticLevel": "model-or-method",
+      "temporalScope": "Source-specific window required; current use not established by inventory",
+      "measurementScope": "Source-specific protocol required; unrecorded method, device, treatment and preparation remain unknown",
+      "noPopulationPerformanceInference": true
     },
     {
       "id": "C10",
@@ -1031,9 +2180,14 @@
         "H6"
       ],
       "empiricalValidation": "none",
-      "applicabilityMatrixStatus": "pending-H1",
+      "applicabilityMatrixStatus": "H1-explicit-all-contexts",
       "evidenceDisposition": "unreviewed-for-current-cross-context-use",
-      "limitation": "Do not transfer a cohort interval or deterministic perturbation to an individual prediction interval."
+      "limitation": "Do not transfer a cohort interval or deterministic perturbation to an individual prediction interval.",
+      "contextsMeaning": "Salient origin or named discussion contexts only; complete cross-context coverage is in applicability.json.",
+      "semanticLevel": "model-or-method",
+      "temporalScope": "Source-specific window required; current use not established by inventory",
+      "measurementScope": "Source-specific protocol required; unrecorded method, device, treatment and preparation remain unknown",
+      "noPopulationPerformanceInference": true
     },
     {
       "id": "C11",
@@ -1056,9 +2210,14 @@
         "H2"
       ],
       "empiricalValidation": "none",
-      "applicabilityMatrixStatus": "pending-H1",
+      "applicabilityMatrixStatus": "H1-explicit-all-contexts",
       "evidenceDisposition": "unreviewed-for-current-cross-context-use",
-      "limitation": "No extra calorie bonus or body-fat inference from SMM alone."
+      "limitation": "No extra calorie bonus or body-fat inference from SMM alone.",
+      "contextsMeaning": "Salient origin or named discussion contexts only; complete cross-context coverage is in applicability.json.",
+      "semanticLevel": "model-or-method",
+      "temporalScope": "Source-specific window required; current use not established by inventory",
+      "measurementScope": "Source-specific protocol required; unrecorded method, device, treatment and preparation remain unknown",
+      "noPopulationPerformanceInference": true
     },
     {
       "id": "C12",
@@ -1080,9 +2239,709 @@
         "H3"
       ],
       "empiricalValidation": "none",
-      "applicabilityMatrixStatus": "pending-H1",
+      "applicabilityMatrixStatus": "H1-explicit-all-contexts",
       "evidenceDisposition": "unreviewed-for-current-cross-context-use",
-      "limitation": "Units alone do not establish interchangeability; source-specific definitions still require review."
+      "limitation": "Units alone do not establish interchangeability; source-specific definitions still require review.",
+      "contextsMeaning": "Salient origin or named discussion contexts only; complete cross-context coverage is in applicability.json.",
+      "semanticLevel": "model-or-method",
+      "temporalScope": "Source-specific window required; current use not established by inventory",
+      "measurementScope": "Source-specific protocol required; unrecorded method, device, treatment and preparation remain unknown",
+      "noPopulationPerformanceInference": true
+    },
+    {
+      "id": "C13",
+      "statement": "Composition chart derives FFM, fat mass and other lean mass; unknown SMM is not measured zero.",
+      "kind": "derived-arithmetic",
+      "concepts": [
+        "ffm",
+        "smm",
+        "body-fat"
+      ],
+      "contexts": [
+        "general-adult"
+      ],
+      "sources": [
+        "core",
+        "ui"
+      ],
+      "gates": [
+        "H2",
+        "H3"
+      ],
+      "empiricalValidation": "none",
+      "applicabilityMatrixStatus": "H1-explicit-all-contexts",
+      "evidenceDisposition": "unreviewed-for-current-cross-context-use",
+      "limitation": "Measurement accuracy does not follow from chart arithmetic.",
+      "contextsMeaning": "Salient origin or named discussion contexts only; complete cross-context coverage is in applicability.json.",
+      "semanticLevel": "model-or-method",
+      "temporalScope": "Source-specific window required; current use not established by inventory",
+      "measurementScope": "Source-specific protocol required; unrecorded method, device, treatment and preparation remain unknown",
+      "noPopulationPerformanceInference": true
+    },
+    {
+      "id": "C14",
+      "statement": "Daily readiness uses sleep cutoffs at 5 and 7 hours, energy and pain/soreness; weekly state is separately self-reported.",
+      "kind": "heuristic-classification",
+      "concepts": [
+        "readiness",
+        "sleep",
+        "subjective-state"
+      ],
+      "contexts": [
+        "general-adult"
+      ],
+      "sources": [
+        "core",
+        "science"
+      ],
+      "gates": [
+        "H2",
+        "H5"
+      ],
+      "empiricalValidation": "none",
+      "applicabilityMatrixStatus": "H1-explicit-all-contexts",
+      "evidenceDisposition": "unreviewed-for-current-cross-context-use",
+      "limitation": "Thresholds are not validated clinical cutoffs.",
+      "contextsMeaning": "Salient origin or named discussion contexts only; complete cross-context coverage is in applicability.json.",
+      "semanticLevel": "model-or-method",
+      "temporalScope": "Source-specific window required; current use not established by inventory",
+      "measurementScope": "Source-specific protocol required; unrecorded method, device, treatment and preparation remain unknown",
+      "parentClaim": "C08",
+      "noPopulationPerformanceInference": false
+    },
+    {
+      "id": "C15",
+      "statement": "The 3 by 3 set-ratio matrix, integer rounding and caution override produce set bands and rest flags.",
+      "kind": "action-heuristic",
+      "concepts": [
+        "readiness",
+        "sets",
+        "decision"
+      ],
+      "contexts": [
+        "general-adult"
+      ],
+      "sources": [
+        "core",
+        "ui"
+      ],
+      "gates": [
+        "H2",
+        "H5"
+      ],
+      "empiricalValidation": "none",
+      "applicabilityMatrixStatus": "H1-explicit-all-contexts",
+      "evidenceDisposition": "unreviewed-for-current-cross-context-use",
+      "limitation": "Ready for your full session and green-day wording can imply more certainty than the heuristic supports; no injury-risk or optimal-dose validation.",
+      "contextsMeaning": "Salient origin or named discussion contexts only; complete cross-context coverage is in applicability.json.",
+      "semanticLevel": "decision",
+      "temporalScope": "Source-specific window required; current use not established by inventory",
+      "measurementScope": "Source-specific protocol required; unrecorded method, device, treatment and preparation remain unknown",
+      "parentClaim": "C08",
+      "noPopulationPerformanceInference": false
+    },
+    {
+      "id": "C16",
+      "statement": "At least 1.5 times usual steps on a leg-focused day adds a note without changing energy or set calculations.",
+      "kind": "implementation-rule",
+      "concepts": [
+        "steps",
+        "readiness"
+      ],
+      "contexts": [
+        "general-adult"
+      ],
+      "sources": [
+        "core"
+      ],
+      "gates": [
+        "H3",
+        "H5"
+      ],
+      "empiricalValidation": "none",
+      "applicabilityMatrixStatus": "H1-explicit-all-contexts",
+      "evidenceDisposition": "unreviewed-for-current-cross-context-use",
+      "limitation": "The note is contextual, not a validated fatigue penalty.",
+      "contextsMeaning": "Salient origin or named discussion contexts only; complete cross-context coverage is in applicability.json.",
+      "semanticLevel": "model-or-method",
+      "temporalScope": "Source-specific window required; current use not established by inventory",
+      "measurementScope": "Source-specific protocol required; unrecorded method, device, treatment and preparation remain unknown",
+      "parentClaim": "C08",
+      "noPopulationPerformanceInference": true
+    },
+    {
+      "id": "C17",
+      "statement": "Defaults and allowed numeric ranges are interface assumptions, not measurements or population eligibility criteria.",
+      "kind": "input-contract",
+      "concepts": [
+        "observation",
+        "age",
+        "equation-sex",
+        "body-fat"
+      ],
+      "contexts": [
+        "general-adult"
+      ],
+      "sources": [
+        "core",
+        "ui",
+        "input-contract"
+      ],
+      "gates": [
+        "H3",
+        "H7"
+      ],
+      "empiricalValidation": "none",
+      "applicabilityMatrixStatus": "H1-explicit-all-contexts",
+      "evidenceDisposition": "unreviewed-for-current-cross-context-use",
+      "limitation": "The body-fat checkbox initializes 20 percent; missing inputs use defaults. Neither establishes actual user physiology.",
+      "contextsMeaning": "Salient origin or named discussion contexts only; complete cross-context coverage is in applicability.json.",
+      "semanticLevel": "model-or-method",
+      "temporalScope": "Source-specific window required; current use not established by inventory",
+      "measurementScope": "Source-specific protocol required; unrecorded method, device, treatment and preparation remain unknown",
+      "noPopulationPerformanceInference": true
+    },
+    {
+      "id": "C18",
+      "statement": "G4 retains Mifflin as default and Cunningham as an explicit option pending independent replication.",
+      "kind": "deployment-decision",
+      "concepts": [
+        "decision",
+        "rmr",
+        "ffm"
+      ],
+      "contexts": [
+        "general-adult"
+      ],
+      "sources": [
+        "g4",
+        "science"
+      ],
+      "gates": [
+        "H2",
+        "H4"
+      ],
+      "empiricalValidation": "none",
+      "applicabilityMatrixStatus": "H1-explicit-all-contexts",
+      "evidenceDisposition": "unreviewed-for-current-cross-context-use",
+      "limitation": "A provisional deployment decision is not a universal equation ranking or individual model selector.",
+      "contextsMeaning": "Salient origin or named discussion contexts only; complete cross-context coverage is in applicability.json.",
+      "semanticLevel": "decision",
+      "temporalScope": "Source-specific window required; current use not established by inventory",
+      "measurementScope": "Source-specific protocol required; unrecorded method, device, treatment and preparation remain unknown",
+      "noPopulationPerformanceInference": false
+    },
+    {
+      "id": "C19",
+      "statement": "G3 reports cohort flow and paired fixed-equation errors in 454 included participants from one released cohort.",
+      "kind": "measured-cohort-result",
+      "concepts": [
+        "rmr",
+        "ree",
+        "cohort-interval"
+      ],
+      "contexts": [
+        "general-adult"
+      ],
+      "sources": [
+        "g3",
+        "g3-data",
+        "g3-protocol"
+      ],
+      "gates": [
+        "H2",
+        "H4"
+      ],
+      "empiricalValidation": "single-source-external-retrospective",
+      "applicabilityMatrixStatus": "H1-explicit-all-contexts",
+      "evidenceDisposition": "unreviewed-for-current-cross-context-use",
+      "limitation": "All metric values and intervals remain in the frozen aggregate JSON; no new pooling, recalibration or individual accuracy claim.",
+      "contextsMeaning": "Salient origin or named discussion contexts only; complete cross-context coverage is in applicability.json.",
+      "semanticLevel": "observation-report",
+      "temporalScope": "Frozen study-specific window",
+      "measurementScope": "Source-specific protocol required; unrecorded method, device, treatment and preparation remain unknown",
+      "parentClaim": "C01",
+      "noPopulationPerformanceInference": false
+    },
+    {
+      "id": "C20",
+      "statement": "G3 reports Mifflin-only subgroup metrics and a prespecified age sensitivity analysis.",
+      "kind": "measured-subgroup-result",
+      "concepts": [
+        "rmr",
+        "cohort-interval"
+      ],
+      "contexts": [
+        "general-adult"
+      ],
+      "sources": [
+        "g3",
+        "g3-data",
+        "g3-protocol"
+      ],
+      "gates": [
+        "H2",
+        "H4"
+      ],
+      "empiricalValidation": "single-source-external-retrospective",
+      "applicabilityMatrixStatus": "H1-explicit-all-contexts",
+      "evidenceDisposition": "unreviewed-for-current-cross-context-use",
+      "limitation": "Subgroup precision and confounding differ; these are not paired equation rankings for each subgroup.",
+      "contextsMeaning": "Salient origin or named discussion contexts only; complete cross-context coverage is in applicability.json.",
+      "semanticLevel": "observation-report",
+      "temporalScope": "Frozen study-specific window",
+      "measurementScope": "Source-specific protocol required; unrecorded method, device, treatment and preparation remain unknown",
+      "parentClaim": "C19",
+      "noPopulationPerformanceInference": false
+    },
+    {
+      "id": "C21",
+      "statement": "A synthetic overlap assignment changes one example by 174.30 kcal/day; low-step inputs share an assumed baseline plateau.",
+      "kind": "synthetic-result",
+      "concepts": [
+        "tdee",
+        "membership",
+        "baseline"
+      ],
+      "contexts": [
+        "general-adult"
+      ],
+      "sources": [
+        "accounting",
+        "science"
+      ],
+      "gates": [
+        "H3"
+      ],
+      "empiricalValidation": "none",
+      "applicabilityMatrixStatus": "H1-explicit-all-contexts",
+      "evidenceDisposition": "unreviewed-for-current-cross-context-use",
+      "limitation": "Chosen overlap and example inputs are hypothetical, not an observed TDEE error.",
+      "contextsMeaning": "Salient origin or named discussion contexts only; complete cross-context coverage is in applicability.json.",
+      "semanticLevel": "model-or-method",
+      "temporalScope": "Source-specific window required; current use not established by inventory",
+      "measurementScope": "Source-specific protocol required; unrecorded method, device, treatment and preparation remain unknown",
+      "noPopulationPerformanceInference": true
+    },
+    {
+      "id": "C22",
+      "statement": "Arbitrary plus/minus 10 percent coefficient perturbations quantify synthetic output sensitivity.",
+      "kind": "synthetic-result",
+      "concepts": [
+        "tdee",
+        "baseline",
+        "walking",
+        "workout"
+      ],
+      "contexts": [
+        "general-adult"
+      ],
+      "sources": [
+        "sensitivity"
+      ],
+      "gates": [
+        "H3",
+        "H6"
+      ],
+      "empiricalValidation": "none",
+      "applicabilityMatrixStatus": "H1-explicit-all-contexts",
+      "evidenceDisposition": "unreviewed-for-current-cross-context-use",
+      "limitation": "Perturbation magnitude is not measured coefficient error, uncertainty coverage or empirical risk ranking.",
+      "contextsMeaning": "Salient origin or named discussion contexts only; complete cross-context coverage is in applicability.json.",
+      "semanticLevel": "model-or-method",
+      "temporalScope": "Source-specific window required; current use not established by inventory",
+      "measurementScope": "Source-specific protocol required; unrecorded method, device, treatment and preparation remain unknown",
+      "noPopulationPerformanceInference": true
+    },
+    {
+      "id": "C23",
+      "statement": "At fixed mass, a body-fat percentage-point change shifts Cunningham RMR by negative 0.22 times mass times that change.",
+      "kind": "derived-arithmetic",
+      "concepts": [
+        "rmr",
+        "ffm",
+        "mass",
+        "body-fat-change"
+      ],
+      "contexts": [
+        "general-adult"
+      ],
+      "sources": [
+        "g4",
+        "science"
+      ],
+      "gates": [
+        "H3",
+        "H6"
+      ],
+      "empiricalValidation": "none",
+      "applicabilityMatrixStatus": "H1-explicit-all-contexts",
+      "evidenceDisposition": "unreviewed-for-current-cross-context-use",
+      "limitation": "A deterministic output shift is not an individual error interval or expected difference in MAE.",
+      "contextsMeaning": "Salient origin or named discussion contexts only; complete cross-context coverage is in applicability.json.",
+      "semanticLevel": "model-or-method",
+      "temporalScope": "Source-specific window required; current use not established by inventory",
+      "measurementScope": "Source-specific protocol required; unrecorded method, device, treatment and preparation remain unknown",
+      "parentClaim": "C02",
+      "noPopulationPerformanceInference": true
+    },
+    {
+      "id": "C24",
+      "statement": "G4 records ten Haaf 2014 findings in 90 Dutch athletes, including sex-specific Cunningham agreement and Mifflin comparison.",
+      "kind": "author-reported-result",
+      "concepts": [
+        "rmr",
+        "ffm"
+      ],
+      "contexts": [
+        "athlete-muscular"
+      ],
+      "sources": [
+        "ten-haaf-2014",
+        "g4"
+      ],
+      "gates": [
+        "H2",
+        "H4"
+      ],
+      "empiricalValidation": "author-reported-not-reanalyzed-by-Metron",
+      "applicabilityMatrixStatus": "H1-explicit-all-contexts",
+      "evidenceDisposition": "unreviewed-for-current-cross-context-use",
+      "limitation": "Study-specific population, preparation and methods; candidate dataset remains unadmitted for new analysis.",
+      "contextsMeaning": "Salient origin or named discussion contexts only; complete cross-context coverage is in applicability.json.",
+      "semanticLevel": "observation-report",
+      "temporalScope": "Source-specific window required; current use not established by inventory",
+      "measurementScope": "Source-specific protocol required; unrecorded method, device, treatment and preparation remain unknown",
+      "noPopulationPerformanceInference": false
+    },
+    {
+      "id": "C25",
+      "statement": "G4 records Weijs 2008 results in US and Dutch overweight/obese adult samples with different equation performance.",
+      "kind": "author-reported-result",
+      "concepts": [
+        "rmr"
+      ],
+      "contexts": [
+        "body-size"
+      ],
+      "sources": [
+        "weijs-2008",
+        "g4"
+      ],
+      "gates": [
+        "H2",
+        "H4"
+      ],
+      "empiricalValidation": "author-reported-not-reanalyzed-by-Metron",
+      "applicabilityMatrixStatus": "H1-explicit-all-contexts",
+      "evidenceDisposition": "unreviewed-for-current-cross-context-use",
+      "limitation": "No inference that nationality or body size alone explains performance differences.",
+      "contextsMeaning": "Salient origin or named discussion contexts only; complete cross-context coverage is in applicability.json.",
+      "semanticLevel": "observation-report",
+      "temporalScope": "Source-specific window required; current use not established by inventory",
+      "measurementScope": "Source-specific protocol required; unrecorded method, device, treatment and preparation remain unknown",
+      "noPopulationPerformanceInference": false
+    },
+    {
+      "id": "C26",
+      "statement": "G4 records Tinsley findings from 27 muscular physique athletes and abstract-level equation comparisons.",
+      "kind": "author-reported-result",
+      "concepts": [
+        "rmr",
+        "ffm"
+      ],
+      "contexts": [
+        "athlete-muscular"
+      ],
+      "sources": [
+        "tinsley-2019",
+        "g4"
+      ],
+      "gates": [
+        "H2",
+        "H4"
+      ],
+      "empiricalValidation": "author-reported-not-reanalyzed-by-Metron",
+      "applicabilityMatrixStatus": "H1-explicit-all-contexts",
+      "evidenceDisposition": "unreviewed-for-current-cross-context-use",
+      "limitation": "Inspected scope is limited; do not present an abstract as a complete methods or rights review.",
+      "contextsMeaning": "Salient origin or named discussion contexts only; complete cross-context coverage is in applicability.json.",
+      "semanticLevel": "observation-report",
+      "temporalScope": "Source-specific window required; current use not established by inventory",
+      "measurementScope": "Source-specific protocol required; unrecorded method, device, treatment and preparation remain unknown",
+      "noPopulationPerformanceInference": false
+    },
+    {
+      "id": "C27",
+      "statement": "G4 records Sordi results in 65 cross-training participants as counterevidence to universal Cunningham superiority.",
+      "kind": "author-reported-result",
+      "concepts": [
+        "rmr",
+        "ffm"
+      ],
+      "contexts": [
+        "athlete-muscular"
+      ],
+      "sources": [
+        "sordi-2024",
+        "g4"
+      ],
+      "gates": [
+        "H2",
+        "H4"
+      ],
+      "empiricalValidation": "author-reported-not-reanalyzed-by-Metron",
+      "applicabilityMatrixStatus": "H1-explicit-all-contexts",
+      "evidenceDisposition": "unreviewed-for-current-cross-context-use",
+      "limitation": "Mifflin was not compared; source equation labeling and fixed respiratory-quotient measurement limitations remain explicit.",
+      "contextsMeaning": "Salient origin or named discussion contexts only; complete cross-context coverage is in applicability.json.",
+      "semanticLevel": "observation-report",
+      "temporalScope": "Source-specific window required; current use not established by inventory",
+      "measurementScope": "Source-specific protocol required; unrecorded method, device, treatment and preparation remain unknown",
+      "noPopulationPerformanceInference": false
+    },
+    {
+      "id": "C28",
+      "statement": "G4 records Siedler device-specific body-fat measurement errors against a four-compartment reference.",
+      "kind": "author-reported-result",
+      "concepts": [
+        "body-fat",
+        "ffm"
+      ],
+      "contexts": [
+        "general-adult"
+      ],
+      "sources": [
+        "siedler-2023",
+        "g4"
+      ],
+      "gates": [
+        "H2",
+        "H3"
+      ],
+      "empiricalValidation": "author-reported-not-reanalyzed-by-Metron",
+      "applicabilityMatrixStatus": "H1-explicit-all-contexts",
+      "evidenceDisposition": "unreviewed-for-current-cross-context-use",
+      "limitation": "Reported devices and populations do not supply a universal error budget or a SECA mBCA 515 calibration.",
+      "contextsMeaning": "Salient origin or named discussion contexts only; complete cross-context coverage is in applicability.json.",
+      "semanticLevel": "observation-report",
+      "temporalScope": "Source-specific window required; current use not established by inventory",
+      "measurementScope": "Source-specific protocol required; unrecorded method, device, treatment and preparation remain unknown",
+      "noPopulationPerformanceInference": false
+    },
+    {
+      "id": "C29",
+      "statement": "Provider matrix records WHOOP, Garmin and Apple documentation about reporting periods and step-summary membership.",
+      "kind": "provider-semantics",
+      "concepts": [
+        "steps",
+        "membership",
+        "observation"
+      ],
+      "contexts": [
+        "general-adult"
+      ],
+      "sources": [
+        "providers",
+        "events"
+      ],
+      "gates": [
+        "H2",
+        "H3"
+      ],
+      "empiricalValidation": "none",
+      "applicabilityMatrixStatus": "H1-explicit-all-contexts",
+      "evidenceDisposition": "unreviewed-for-current-cross-context-use",
+      "limitation": "Dated documentation is not an inspected real payload or proof of current API behavior or merge contributions.",
+      "contextsMeaning": "Salient origin or named discussion contexts only; complete cross-context coverage is in applicability.json.",
+      "semanticLevel": "model-or-method",
+      "temporalScope": "Source-specific window required; current use not established by inventory",
+      "measurementScope": "Source-specific protocol required; unrecorded method, device, treatment and preparation remain unknown",
+      "noPopulationPerformanceInference": true
+    },
+    {
+      "id": "C30",
+      "statement": "The HealthKit pilot compares raw sample identities; compiled simulator evidence does not establish device data collection or aggregate membership.",
+      "kind": "prototype-semantics",
+      "concepts": [
+        "membership",
+        "observation"
+      ],
+      "contexts": [
+        "general-adult"
+      ],
+      "sources": [
+        "pilot"
+      ],
+      "gates": [
+        "H3",
+        "H7"
+      ],
+      "empiricalValidation": "none",
+      "applicabilityMatrixStatus": "H1-explicit-all-contexts",
+      "evidenceDisposition": "unreviewed-for-current-cross-context-use",
+      "limitation": "Equal UUIDs do not prove contributions to merged Health statistics; absent read data cannot reliably distinguish denial from no records.",
+      "contextsMeaning": "Salient origin or named discussion contexts only; complete cross-context coverage is in applicability.json.",
+      "semanticLevel": "model-or-method",
+      "temporalScope": "Source-specific window required; current use not established by inventory",
+      "measurementScope": "Source-specific protocol required; unrecorded method, device, treatment and preparation remain unknown",
+      "noPopulationPerformanceInference": true
+    },
+    {
+      "id": "C31",
+      "statement": "The proposed wearable study compares A/B/C feature sets for held-out next-session resistance-training performance.",
+      "kind": "proposed-study",
+      "concepts": [
+        "performance",
+        "sdnn",
+        "rmssd"
+      ],
+      "contexts": [
+        "general-adult"
+      ],
+      "sources": [
+        "readiness-protocol",
+        "readiness-methods"
+      ],
+      "gates": [
+        "H2",
+        "H5",
+        "H6"
+      ],
+      "empiricalValidation": "none",
+      "applicabilityMatrixStatus": "H1-explicit-all-contexts",
+      "evidenceDisposition": "unreviewed-for-current-cross-context-use",
+      "limitation": "No participant analysis or result exists for this proposal; leakage, missingness and temporal splits are protocol obligations.",
+      "contextsMeaning": "Salient origin or named discussion contexts only; complete cross-context coverage is in applicability.json.",
+      "semanticLevel": "model-or-method",
+      "temporalScope": "Source-specific window required; current use not established by inventory",
+      "measurementScope": "Source-specific protocol required; unrecorded method, device, treatment and preparation remain unknown",
+      "noPopulationPerformanceInference": true
+    },
+    {
+      "id": "C32",
+      "statement": "Proposed calibration, provenance ledger, Bayesian modeling and allowance architecture remain unimplemented.",
+      "kind": "proposed-capability",
+      "concepts": [
+        "allowance",
+        "individual-interval",
+        "decision"
+      ],
+      "contexts": [
+        "general-adult"
+      ],
+      "sources": [
+        "future"
+      ],
+      "gates": [
+        "H3",
+        "H6"
+      ],
+      "empiricalValidation": "none",
+      "applicabilityMatrixStatus": "H1-explicit-all-contexts",
+      "evidenceDisposition": "unreviewed-for-current-cross-context-use",
+      "limitation": "A design diagram is not a fitted model, evaluated decision or working integration.",
+      "contextsMeaning": "Salient origin or named discussion contexts only; complete cross-context coverage is in applicability.json.",
+      "semanticLevel": "model-or-method",
+      "temporalScope": "Source-specific window required; current use not established by inventory",
+      "measurementScope": "Source-specific protocol required; unrecorded method, device, treatment and preparation remain unknown",
+      "noPopulationPerformanceInference": true
+    },
+    {
+      "id": "C33",
+      "statement": "UI rounds headline TDEE to 50 kcal and components to integers; model disagreement wording is not a calibrated uncertainty interval.",
+      "kind": "presentation-semantics",
+      "concepts": [
+        "estimate",
+        "tdee",
+        "individual-interval"
+      ],
+      "contexts": [
+        "general-adult"
+      ],
+      "sources": [
+        "ui",
+        "ui-copy",
+        "core"
+      ],
+      "gates": [
+        "H2",
+        "H6",
+        "H7"
+      ],
+      "empiricalValidation": "none",
+      "applicabilityMatrixStatus": "H1-explicit-all-contexts",
+      "evidenceDisposition": "unreviewed-for-current-cross-context-use",
+      "limitation": "API/export retain unrounded values; rounding and between-model difference do not quantify individual prediction error.",
+      "contextsMeaning": "Salient origin or named discussion contexts only; complete cross-context coverage is in applicability.json.",
+      "semanticLevel": "model-or-method",
+      "temporalScope": "Source-specific window required; current use not established by inventory",
+      "measurementScope": "Source-specific protocol required; unrecorded method, device, treatment and preparation remain unknown",
+      "parentClaim": "C10",
+      "noPopulationPerformanceInference": true
+    },
+    {
+      "id": "C34",
+      "statement": "The documented intended use is educational adult fitness estimation, with clinical and pediatric uses outside validated scope.",
+      "kind": "scope-boundary",
+      "concepts": [
+        "decision",
+        "estimate"
+      ],
+      "contexts": [
+        "general-adult",
+        "pediatric",
+        "pregnancy-lactation",
+        "acute-critical"
+      ],
+      "sources": [
+        "science",
+        "input-contract"
+      ],
+      "gates": [
+        "H2",
+        "H5",
+        "H7"
+      ],
+      "empiricalValidation": "none",
+      "applicabilityMatrixStatus": "H1-explicit-all-contexts",
+      "evidenceDisposition": "unreviewed-for-current-cross-context-use",
+      "limitation": "Clinical status, treatment and exclusions are not detected or enforced by the current input contract.",
+      "contextsMeaning": "Salient origin or named discussion contexts only; complete cross-context coverage is in applicability.json.",
+      "semanticLevel": "decision",
+      "temporalScope": "Source-specific window required; current use not established by inventory",
+      "measurementScope": "Source-specific protocol required; unrecorded method, device, treatment and preparation remain unknown",
+      "noPopulationPerformanceInference": false
+    },
+    {
+      "id": "C35",
+      "statement": "Predicting task performance does not establish hypertrophy, injury prediction, optimal sets or causal benefit from following advice.",
+      "kind": "inference-boundary",
+      "concepts": [
+        "performance",
+        "decision",
+        "readiness"
+      ],
+      "contexts": [
+        "general-adult"
+      ],
+      "sources": [
+        "readiness-methods",
+        "readiness-protocol"
+      ],
+      "gates": [
+        "H5",
+        "H6"
+      ],
+      "empiricalValidation": "none",
+      "applicabilityMatrixStatus": "H1-explicit-all-contexts",
+      "evidenceDisposition": "unreviewed-for-current-cross-context-use",
+      "limitation": "These endpoints require distinct protocols and evidence; observational predictive association is not intervention benefit.",
+      "contextsMeaning": "Salient origin or named discussion contexts only; complete cross-context coverage is in applicability.json.",
+      "semanticLevel": "model-or-method",
+      "temporalScope": "Source-specific window required; current use not established by inventory",
+      "measurementScope": "Source-specific protocol required; unrecorded method, device, treatment and preparation remain unknown",
+      "noPopulationPerformanceInference": true
     }
   ],
   "relations": [
@@ -1135,5 +2994,8 @@
       "source": "semantic-contract",
       "qualification": "Preserve statistic, method and time window."
     }
-  ]
+  ],
+  "coverage": "research/robustness/inventory.json",
+  "applicabilityMatrix": "research/robustness/applicability.json",
+  "semanticContract": "research/robustness/semantics.json"
 }

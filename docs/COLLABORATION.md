@@ -110,3 +110,7 @@ Further detail: [Vocabulary](./VOCABULARY.md) · [ADR index](./adr/README.md) ·
 - [Michael Nygard-style ADR structure](https://adr.github.io/adr-templates/) — context, decision and consequences, with lightweight variants.
 - [UK Government Digital Service: architecture decisions](https://gds-way.digital.cabinet-office.gov.uk/standards/architecture-decisions.html) — record important choices with traceability.
 - [GitHub engineering communication guidance](https://github.com/github/how-engineering-communicates) — seek feedback, preserve context and trade-offs.
+
+## Continuity checkpoints
+
+[CONTINUE.md](./CONTINUE.md) is the stable new-chat entrypoint. At each completed consequential task, reconcile its dated checkpoint with the authoritative plan and current tracker. Keep the next executable task, outstanding limitations and evidence locators concrete. A shared chat is supplementary; never imply perfect memory or successful link retrieval before reading it. Keep private email/account history out of the public repository. Independent reconstruction remains H8 work.

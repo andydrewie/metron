@@ -71,7 +71,14 @@
     "durableEvidenceProgram": "./research/robustness/README.md",
     "robustnessPlan": "./research/robustness/plan.json",
     "researchCorpus": "./research/robustness/corpus.json",
-    "corpusAudit": "./research/robustness/audit.mjs"
+    "corpusAudit": "./research/robustness/audit.mjs",
+    "continuation": "./docs/CONTINUE.md",
+    "claimInventory": "./research/robustness/inventory.json",
+    "claimApplicability": "./research/robustness/applicability.json",
+    "semanticContract": "./research/robustness/semantics.json",
+    "claimLookup": "./research/robustness/inspect.mjs",
+    "H1Report": "./research/robustness/H1_INVENTORY.md",
+    "evidenceReviewQueue": "./research/robustness/h2-review-queue.json"
   },
   "implemented": {
     "energyEstimate": true,
@@ -146,7 +153,7 @@
       "corpus": "research/robustness/corpus.json",
       "dashboard": "https://github.com/andydrewie/metron/issues/22",
       "statusAuthority": "research/robustness/plan.json",
-      "clinicalCoverage": "partial-unreviewed-seed",
+      "clinicalCoverage": "explicit-context-map-clinical-evidence-unreviewed",
       "automaticMonitoringEnabled": false,
       "productionIntegration": false
     }

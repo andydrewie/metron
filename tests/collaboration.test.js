@@ -55,7 +55,7 @@ test('decision index covers every numbered ADR and preserves statuses',()=>{
 test('machine navigation routes are unique and every target exists',()=>{
   const doc=JSON.parse(content('docs/navigation.json'));
   assert.equal(doc.schemaVersion,'1.0.0');
-  assert.ok(doc.routes.some(r=>r.id==='resume-work'&&r.entry==='AGENTS.md'));
+  assert.ok(doc.routes.some(r=>r.id==='resume-work'&&r.entry==='docs/CONTINUE.md'&&r.next.includes('AGENTS.md')));
   const seen=new Set();
   for(const route of doc.routes){
     assert.match(route.id,/^[a-z0-9]+(?:-[a-z0-9]+)*$/);

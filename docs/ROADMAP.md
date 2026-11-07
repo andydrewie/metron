@@ -12,11 +12,13 @@
 
 **Device-free research:** [Coefficient sensitivity audit](../research/assumption-sensitivity/README.md) tests how changes to stated assumptions move the modeled output. It requires no equipment or personal records. The optional HealthKit pilot is **not** a prerequisite for future work.
 
-**Current empirical research program:** [G3 measured-RMR results](../research/ree-validation/G3_RESULTS.md) are published for 454 eligible participants under the frozen G1 protocol. Mifflin MAE is 165.7 kcal/day; Cunningham is 129.5 in the same people. This is one cohort with BIA-estimated FFM, not TDEE or readiness validation. **[G4 is complete](../research/ree-validation/G4_DECISION.md): retain Mifflin as default and Cunningham as an explicit option with population/input-quality guidance.** Next is qualifying an independent athlete cohort before a new frozen reanalysis; the production model is unchanged. [Track evidence](https://github.com/andydrewie/metron/issues/9).
+**Current empirical research program:** [G3 measured-RMR results](../research/ree-validation/G3_RESULTS.md) are published for 454 eligible participants under the frozen G1 protocol. Mifflin MAE is 165.7 kcal/day; Cunningham is 129.5 in the same people. This is one cohort with BIA-estimated FFM, not TDEE or readiness validation. **[G4 is complete](../research/ree-validation/G4_DECISION.md): retain Mifflin as default and Cunningham as an explicit option with population/input-quality guidance.** Execution now follows the [durable evidence program](../research/robustness/README.md): ontology/applicability, current evidence and measurement review precede further cohort evaluation. The athlete candidate is deferred to H4; the production model is unchanged. [Track evidence](https://github.com/andydrewie/metron/issues/9).
+
+**Current priority:** [METRON-ROBUST-001](../research/robustness/README.md) treats reusable research as a deliverable through at least 7 November 2027. [H0–H8 and known weaknesses](../research/robustness/plan.json) are tracked in [issue #22](https://github.com/andydrewie/metron/issues/22). H0 is complete for its defined inventory; H1 is in progress. This is not a completed clinical review or a guarantee of future currency.
 
 **What might follow:** A personal-calibration experiment, but only if it adds useful evidence. Caloric Allowance and wearable integrations remain possibilities, not promises.
 
-**How to use this roadmap:** Read the decision flow, then explore details only when relevant. [Information design principles](./INFORMATION_DESIGN.md).
+**How to use this roadmap:** Use the current program for execution order. The activity flow below illustrates one open research branch. [Information design principles](./INFORMATION_DESIGN.md).
 
 > **No deadlines, growth targets, or promises.** Metron is open homework: a beautiful, headless instrument for testing what we think we know about energy, training readiness, and nutrition. This document is a map of considerations, **not** a committed feature schedule.
 
@@ -35,13 +37,13 @@
 
 The three user-facing concepts are **Daily Energy**, **Readiness**, and eventually **Caloric Allowance**. **Body** is currently a third UI tab and shared model input, not a new physiological claim. No redesign is necessary to research the underlying engine.
 
-## The decision in one picture
+## One open branch: activity accounting
 
 ```mermaid
 flowchart TD
     A["Could Metron count activity twice?"]
     B["Reproduce with synthetic examples"]
-    C{"Do we know whether intervals overlap?"}
+    C{"Is aggregate membership established?"}
     D["Yes: test a versioned accounting method"]
     E["No: show assumptions and conditional scenarios"]
     F["Possible later question: does calibration improve predictions?"]
@@ -52,9 +54,9 @@ flowchart TD
     E -.-> F
 ```
 
-**Text equivalent:** Reproduce overlap with known examples. When overlap is identifiable, test a corrected model. When it is not, show transparent alternative scenarios instead of claiming a precise number. Either result may motivate calibration research, but neither commits us to a feature.
+**Text equivalent:** Reproduce overlap with known examples. When aggregate membership is identifiable, test an explicit accounting alternative. Clock overlap alone is insufficient. When membership is unknown, show transparent alternative scenarios. Either result may motivate calibration research, but neither commits us to a feature.
 
-## Now: v0.3 — Trust before personalization
+## Open energy-accounting questions within H3
 
 We begin with *correctness, provenance, and uncertainty honesty*, not extra inputs or AI branding.
 
@@ -68,9 +70,9 @@ We begin with *correctness, provenance, and uncertainty honesty*, not extra inpu
 
 **Policy for ambiguous overlap:** first *surface the ambiguity*, with explicit assumptions or conservative scenarios. Do not manufacture precision or automatically subtract exercise calories without enough information. Retain the current simple API until a versioned, tested alternative earns inclusion.
 
-**First concrete issue:** `Energy accounting: model overlap and baseline assumptions`. Do this before adding a wearable or intake goal to the core.
+**Existing scoped issue:** `Energy accounting: model overlap and baseline assumptions`. Do this before adding a wearable or intake goal to the core.
 
-## Next investigation: personal calibration, if the foundation warrants it
+## Later H6 branch: personal calibration, if the evidence warrants it
 
 Question: *Can longitudinal intake and weight observations improve an individual's TDEE estimate over a simple population baseline?*
 
@@ -106,4 +108,4 @@ A calibration feature is an **experiment**, not a promised next release.
 - **Code discipline:** preserve pure calculations and deterministic JSON, version behavior changes, update types/schema/examples/tests together, and distinguish mathematical tests from biological validation.
 - **Privacy & safety:** no wearable credentials or private health exports in issues, commits, examples or telemetry. No harsh intake targets or claims of medical safety.
 
-**When to revisit this map:** whenever an experiment changes what we believe, or a compelling new question emerges. Not on a calendar.
+**When to revisit this map:** after evidence changes or a material new question, and when the [source-specific freshness policy](../research/robustness/README.md#freshness-from-the-first-gate) requires review. Review intervals govern evidence currency, not feature deadlines. No background monitor is installed.

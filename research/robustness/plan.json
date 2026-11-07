@@ -1,0 +1,406 @@
+{
+  "schemaVersion": "1.0.0",
+  "documentType": "metron.robustness.execution-plan",
+  "programId": "METRON-ROBUST-001",
+  "asOf": "2026-11-07",
+  "status": "in-progress",
+  "reuseHorizonThrough": "2027-11-07",
+  "horizonMeaning": "Design and maintenance objective, not a guarantee of future scientific currency",
+  "baselineCommit": "2a9cc6cc45832abcbe0ce57454562d605715fc49",
+  "corpus": "research/robustness/corpus.json",
+  "dashboard": "https://github.com/andydrewie/metron/issues/22",
+  "currentGate": "H1",
+  "completedStudy": "research/ree-validation/plan.json",
+  "coverage": "Scoped gap inventory and partial ontology seed; not exhaustive clinical or independent software review",
+  "scope": [
+    "energy quantities and model assumptions",
+    "clinical applicability and physiological states",
+    "measurement and source semantics",
+    "readiness decision claims",
+    "uncertainty and individual calibration",
+    "software privacy and accessibility",
+    "agent navigation and reconstruction",
+    "evidence freshness and lawful reuse"
+  ],
+  "freshnessPolicy": {
+    "sourceReviewWindowsDays": {
+      "provider-or-access": 30,
+      "clinical-guidance": 90,
+      "active-empirical": 180,
+      "foundational": 365
+    },
+    "beforeConsequentialReuse": true,
+    "unknownDates": "unreviewed",
+    "automaticMonitoringEnabled": false,
+    "earlyTriggers": [
+      "correction or retraction",
+      "changed guideline or source version",
+      "new contradictory study",
+      "changed provider semantics or rights",
+      "failed replication or reconstruction"
+    ]
+  },
+  "gates": [
+    {
+      "id": "H0",
+      "name": "Scope and weakness inventory",
+      "state": "complete",
+      "dependsOn": [],
+      "ownerRole": "Maintaining agent",
+      "acceptanceCriteria": [
+        "Inventory current code, public claims, existing research and documented limitations with explicit audit boundaries",
+        "Assign every recorded material weakness an owner role, gate, next test and closure evidence requirement",
+        "Preserve G0–G4 status and freeze the new ordering without changing production behavior"
+      ],
+      "evidence": [
+        "research/robustness/README.md",
+        "research/robustness/plan.json",
+        "research/robustness/corpus.json",
+        "docs/adr/0006-durable-evidence-before-expansion.md"
+      ],
+      "closure": {
+        "reviewedAt": "2026-11-07",
+        "reviewerRole": "Maintaining agent",
+        "scope": "Current code, advertised capabilities, research entrypoints and explicitly recorded known limitations only",
+        "acceptanceReview": "All three H0 criteria accounted for by the inventory, assigned weaknesses and preserved G0–G4 record; no assertion of comprehensive medical coverage"
+      }
+    },
+    {
+      "id": "H1",
+      "name": "Ontology and applicability",
+      "state": "in-progress",
+      "dependsOn": [
+        "H0"
+      ],
+      "ownerRole": "Applicability review lead",
+      "acceptanceCriteria": [
+        "Reconcile every public scientific output, formula, heuristic and recommendation into stable claim IDs and declare the coverage denominator",
+        "Define quantities, units, observation/model/decision distinctions and temporal/measurement contexts",
+        "Complete an explicit claim-by-context matrix including clinical conditions, life stages, functional status, severity, treatment and intersections; mark every unreviewed cell",
+        "Verify any external terminology mapping and record its version and terms; retain unsupported and excluded scope without implying accuracy"
+      ],
+      "evidence": [],
+      "closure": null
+    },
+    {
+      "id": "H2",
+      "name": "Evidence currency and contradictions",
+      "state": "not-started",
+      "dependsOn": [
+        "H1"
+      ],
+      "ownerRole": "Evidence review lead",
+      "acceptanceCriteria": [
+        "Log reproducible primary-source and authoritative-guidance searches with date ranges, cutoffs and inaccessible material",
+        "Review source versions, corrections/retractions, applicability, rights and both supporting and contrary evidence",
+        "Record source inspected portions and actual review dates; adjudicate contradictions without silently pooling incompatible methods",
+        "Set claim-level evidence dispositions and next-review triggers; never derive currentness from document creation time"
+      ],
+      "evidence": [],
+      "closure": null
+    },
+    {
+      "id": "H3",
+      "name": "Measurement and energy accounting",
+      "state": "not-started",
+      "dependsOn": [
+        "H1"
+      ],
+      "ownerRole": "Measurement research lead",
+      "acceptanceCriteria": [
+        "Audit reference calorimetry, body-composition inputs, preparation conditions, units and missingness for the intended comparison",
+        "Resolve or explicitly bound baseline, gross/net activity and step-membership assumptions without treating clock overlap as membership",
+        "Identify provider-specific semantics, measurement error and nonidentifiability; record unresolved cases and no-go rules"
+      ],
+      "evidence": [],
+      "closure": null
+    },
+    {
+      "id": "H4",
+      "name": "External validity",
+      "state": "not-started",
+      "dependsOn": [
+        "H2",
+        "H3"
+      ],
+      "ownerRole": "RMR validation lead",
+      "acceptanceCriteria": [
+        "Admit a relevant independent source with rights, exact identity, codebook, measurement conditions and independence checks",
+        "Freeze model comparisons, practical margins, exclusions, subgroup harms and uncertainty before new calculations; disclose previously seen published outcomes",
+        "Independently reproduce estimates, paired comparisons and intervals; publish negative findings and exact population limits",
+        "Record a versioned retain/change/no-go decision; do not tune on the evaluation cohort"
+      ],
+      "evidence": [],
+      "closure": null
+    },
+    {
+      "id": "H5",
+      "name": "Readiness and decision boundaries",
+      "state": "not-started",
+      "dependsOn": [
+        "H2",
+        "H3"
+      ],
+      "ownerRole": "Readiness research lead",
+      "acceptanceCriteria": [
+        "Audit each current sleep, pain, fatigue and set-range rule against an explicitly defined outcome and intended population",
+        "Prespecify prospective performance outcomes, simple comparators, temporal/participant separation and adverse-use boundaries",
+        "Evaluate incremental predictive/decision value or formally retain/restrict unsupported guidance with a justified no-go and unresolved evidence needs",
+        "Separate educational reflection from prescriptions; no injury-safe or optimal-set claim without suitable evidence"
+      ],
+      "evidence": [],
+      "closure": null
+    },
+    {
+      "id": "H6",
+      "name": "Uncertainty and individual value",
+      "state": "not-started",
+      "dependsOn": [
+        "H2",
+        "H3"
+      ],
+      "ownerRole": "Uncertainty research lead",
+      "acceptanceCriteria": [
+        "For each track, require the applicable H4 or H5 scoped result or explicit no-go before individual inference",
+        "Distinguish sampling intervals, input sensitivity, measurement error, model error and individual prediction coverage",
+        "Evaluate personal calibration forward in time against a fixed baseline, accounting for intake error and fluid shifts; otherwise keep it unimplemented",
+        "Test comprehension and decision usefulness without manufacturing validated ranges; report harmful interpretations and non-improvement"
+      ],
+      "evidence": [],
+      "closure": null
+    },
+    {
+      "id": "H7",
+      "name": "Software privacy and accessibility",
+      "state": "not-started",
+      "dependsOn": [
+        "H1"
+      ],
+      "ownerRole": "Software and accessibility reviewer",
+      "acceptanceCriteria": [
+        "Audit SDK, CLI, browser and direct-export contracts including malformed input, units, defaults and error propagation",
+        "Exercise sensitive-error/log handling, source admission, build portability and current external dependency assumptions",
+        "Verify keyboard, screen-reader labels, 320px layout and color-independent meaning with recorded methods and failures",
+        "Resolve high-consequence defects or enforce scope restrictions before changing user-facing decisions"
+      ],
+      "evidence": [],
+      "closure": null
+    },
+    {
+      "id": "H8",
+      "name": "Reconstruction and maintenance",
+      "state": "not-started",
+      "dependsOn": [
+        "H1",
+        "H7"
+      ],
+      "ownerRole": "Reconstruction reviewer",
+      "acceptanceCriteria": [
+        "Reproduce selected calculations and frozen-study artifacts from a clean checkout with environment and source rights recorded",
+        "Record a separate cold-start navigation exercise using only repository entrypoints; recover definitions, current/superseded decisions and next unblocked work",
+        "Rebuild an equivalent bounded calculation from preserved specifications and compare reference outputs; distinguish this from simply running existing code",
+        "Exercise a source update, contradiction, stale review and supersession scenario; preserve all unresolved H2–H6 limitations and record actual monitoring coverage"
+      ],
+      "evidence": [],
+      "closure": null
+    }
+  ],
+  "weaknesses": [
+    {
+      "id": "W01",
+      "title": "Whole-product claims exceed current measured validation",
+      "severity": "high",
+      "gate": "H4",
+      "ownerRole": "RMR validation lead",
+      "state": "open",
+      "finding": "G3 tests resting equations only; combined TDEE has no external accuracy evaluation.",
+      "evidence": [
+        "docs/SCIENCE.md",
+        "research/ree-validation/G3_RESULTS.md"
+      ],
+      "nextTest": "Map every energy output to an endpoint and independent reference method before choosing new data.",
+      "resolutionEvidence": [],
+      "residual": "Evidence work remains; no claim of closure."
+    },
+    {
+      "id": "W02",
+      "title": "Clinical and physiological applicability is not systematically mapped",
+      "severity": "high",
+      "gate": "H1",
+      "ownerRole": "Applicability review lead",
+      "state": "open",
+      "finding": "Adult intended use and exclusions exist, but no reviewed claim-by-context coverage matrix exists.",
+      "evidence": [
+        "docs/SCIENCE.md",
+        "core/model.js"
+      ],
+      "nextTest": "Build the clinical/state/function matrix; prioritize consequences of unsupported calorie and training interpretation.",
+      "resolutionEvidence": [],
+      "residual": "Evidence work remains; no claim of closure."
+    },
+    {
+      "id": "W03",
+      "title": "Actionable readiness set bands remain unvalidated",
+      "severity": "high",
+      "gate": "H5",
+      "ownerRole": "Readiness research lead",
+      "state": "open",
+      "finding": "The core emits set ranges from selected heuristic thresholds without prospective outcome evidence.",
+      "evidence": [
+        "core/model.js",
+        "docs/SCIENCE.md",
+        "research/protocol.json"
+      ],
+      "nextTest": "Inventory each rule and output; distinguish reflection guidance from an outcome or safety claim.",
+      "resolutionEvidence": [],
+      "residual": "Evidence work remains; no claim of closure."
+    },
+    {
+      "id": "W04",
+      "title": "Measurement quality and accounting ambiguities remain",
+      "severity": "high",
+      "gate": "H3",
+      "ownerRole": "Measurement research lead",
+      "state": "open",
+      "finding": "BIA quality, baseline expenditure, gross/net MET and workout-step membership remain context-dependent.",
+      "evidence": [
+        "research/ree-validation/G4_DECISION.md",
+        "research/energy-accounting/README.md",
+        "research/provider-step-semantics/matrix.json"
+      ],
+      "nextTest": "Trace reference/input method and component attribution before treating a model difference as deployable benefit.",
+      "resolutionEvidence": [],
+      "residual": "Evidence work remains; no claim of closure."
+    },
+    {
+      "id": "W05",
+      "title": "Individual uncertainty and calibration are unestablished",
+      "severity": "high",
+      "gate": "H6",
+      "ownerRole": "Uncertainty research lead",
+      "state": "open",
+      "finding": "Cohort intervals and synthetic sensitivity are not individual error bounds.",
+      "evidence": [
+        "docs/SCIENCE.md",
+        "metron.manifest.json"
+      ],
+      "nextTest": "Define individual prediction target, observation horizon and a forward-time comparison before constructing a range.",
+      "resolutionEvidence": [],
+      "residual": "Evidence work remains; no claim of closure."
+    },
+    {
+      "id": "W06",
+      "title": "Evidence freshness and contradiction handling lack an operational corpus",
+      "severity": "high",
+      "gate": "H2",
+      "ownerRole": "Evidence review lead",
+      "state": "open",
+      "finding": "Citations exist but source-level currentness and correction checks are not unified.",
+      "evidence": [
+        "docs/SCIENCE.md",
+        "research/ree-validation/G4_DECISION.md"
+      ],
+      "nextTest": "Review high-consequence sources with dated searches and preserve counterevidence; do not stamp imported sources fresh.",
+      "resolutionEvidence": [],
+      "residual": "Evidence work remains; no claim of closure."
+    },
+    {
+      "id": "W07",
+      "title": "Public research entrypoints had stale status statements",
+      "severity": "medium",
+      "gate": "H0",
+      "ownerRole": "Maintaining agent",
+      "state": "resolved",
+      "finding": "research/README.md and llms.txt denied measured benchmark/results after G3; roadmap ordering needed reconciliation with the new priority.",
+      "evidence": [
+        "research/README.md",
+        "docs/ROADMAP.md",
+        "llms.txt"
+      ],
+      "nextTest": "Reconcile current entrypoints and make the scoped baseline and future drift checks explicit.",
+      "resolutionEvidence": [
+        "research/README.md",
+        "docs/ROADMAP.md",
+        "docs/navigation.json",
+        "llms.txt"
+      ],
+      "residual": "Future documentation drift remains possible; H8 must exercise maintenance."
+    },
+    {
+      "id": "W08",
+      "title": "Independent navigation and reconstruction are untested",
+      "severity": "medium",
+      "gate": "H8",
+      "ownerRole": "Reconstruction reviewer",
+      "state": "open",
+      "finding": "Agent pointers and fixtures exist; an independent reconstruction from specifications has not been demonstrated.",
+      "evidence": [
+        "AGENTS.md",
+        "docs/navigation.json",
+        "docs/API.md"
+      ],
+      "nextTest": "Define and execute a clean-checkout and later independent navigation/reimplementation exercise.",
+      "resolutionEvidence": [],
+      "residual": "Evidence work remains; no claim of closure."
+    },
+    {
+      "id": "W09",
+      "title": "Full software adversarial and accessibility coverage is incomplete",
+      "severity": "high",
+      "gate": "H7",
+      "ownerRole": "Software and accessibility reviewer",
+      "state": "open",
+      "finding": "Existing tests and render checks do not establish full public-interface robustness, screen-reader access or privacy completeness.",
+      "evidence": [
+        "tests/model.test.js",
+        "tests/metadata.test.js",
+        "docs/QA.md"
+      ],
+      "nextTest": "Audit direct exports, malformed inputs, defaults, sensitive errors and accessible interpretation with explicit test evidence.",
+      "resolutionEvidence": [],
+      "residual": "Evidence work remains; no claim of closure."
+    },
+    {
+      "id": "W10",
+      "title": "User comprehension and decision benefit are unmeasured",
+      "severity": "medium",
+      "gate": "H6",
+      "ownerRole": "Human factors reviewer",
+      "state": "open",
+      "finding": "A functioning UI and research results do not establish better individual decisions.",
+      "evidence": [
+        "docs/INFORMATION_DESIGN.md",
+        "docs/RESEARCH.md"
+      ],
+      "nextTest": "Define comprehension and decision-usefulness questions; a reusable corpus remains valuable without a new feature.",
+      "resolutionEvidence": [],
+      "residual": "Evidence work remains; no claim of closure."
+    }
+  ],
+  "nextTask": {
+    "gate": "H1",
+    "action": "Reconcile public claim inventory and complete claim-by-context applicability mapping before selecting the first H2 source-review slice",
+    "candidateDeferred": "ten-haaf-2014",
+    "candidateDestinationGate": "H4",
+    "requiresSeparateFrozenProtocol": true
+  },
+  "trackPrerequisites": {
+    "H6": {
+      "energy": [
+        "H4"
+      ],
+      "readiness": [
+        "H5"
+      ]
+    }
+  },
+  "invariants": [
+    "Do not reopen or tune completed G0–G4",
+    "No production formula or clinical scope change through planning status",
+    "No unreviewed clinical cell treated as validated",
+    "No automatic gate promotion from software checks",
+    "No private participant records in repository",
+    "No new dataset analysis before relevant scope/evidence/measurement gates",
+    "Research is independently valuable even without a shipped feature"
+  ]
+}

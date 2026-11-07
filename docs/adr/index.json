@@ -79,6 +79,19 @@
       "softwareVerification": "tests-passed",
       "empiricalValidation": "external-retrospective",
       "supersededBy": null
+    },
+    {
+      "id": "ADR-0006",
+      "title": "Prioritize durable evidence and applicability before expansion",
+      "path": "docs/adr/0006-durable-evidence-before-expansion.md",
+      "status": "Accepted",
+      "decisionDate": "2026-11-07",
+      "domain": "scientific-method",
+      "decisionConfidence": "medium",
+      "confidenceKind": "qualitative-judgment",
+      "softwareVerification": "tests-passed",
+      "empiricalValidation": "not-applicable",
+      "supersededBy": null
     }
   ]
 }

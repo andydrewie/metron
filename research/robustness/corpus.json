@@ -1,0 +1,1139 @@
+{
+  "schemaVersion": "1.0.0",
+  "documentType": "metron.research.corpus-seed",
+  "asOf": "2026-11-07",
+  "coverageStatus": "partial-seed-not-comprehensive",
+  "comprehensiveClinicalReviewCompleted": false,
+  "definitionsAreWorkingVocabulary": true,
+  "formalOntologyConformance": null,
+  "sourceReviewNote": "Repository records inspected during H0. External science citations imported from existing documents, not comprehensively rechecked in this pass; H2 owns currency. A source pointer is not a scientific review.",
+  "concepts": [
+    {
+      "id": "rmr",
+      "label": "Resting metabolic rate",
+      "definition": "Energy expenditure under a specified resting measurement protocol; do not silently equate different preparation conditions.",
+      "units": "kcal/day",
+      "definitionReview": "pending-H1",
+      "externalMappings": []
+    },
+    {
+      "id": "ree",
+      "label": "Resting energy expenditure",
+      "definition": "Resting energy endpoint with source-specific operational definition; map to RMR only after method review.",
+      "units": "kcal/day",
+      "definitionReview": "pending-H1",
+      "externalMappings": []
+    },
+    {
+      "id": "tdee",
+      "label": "Total daily energy expenditure",
+      "definition": "Whole-day expenditure endpoint, distinct from resting energy or an intake target.",
+      "units": "kcal/day",
+      "definitionReview": "pending-H1",
+      "externalMappings": []
+    },
+    {
+      "id": "baseline",
+      "label": "Sedentary baseline",
+      "definition": "Current model assumption allocating 1.2 times resting energy; not measured resting expenditure.",
+      "units": "kcal/day",
+      "definitionReview": "pending-H1",
+      "externalMappings": []
+    },
+    {
+      "id": "walking",
+      "label": "Incremental walking energy",
+      "definition": "Modeled energy above the assumed included steps, with explicit stride and net-cost assumptions.",
+      "units": "kcal/day",
+      "definitionReview": "pending-H1",
+      "externalMappings": []
+    },
+    {
+      "id": "workout",
+      "label": "Workout energy",
+      "definition": "Current whole-session MET estimate net of an allocated baseline; membership of steps remains separate.",
+      "units": "kcal/day",
+      "definitionReview": "pending-H1",
+      "externalMappings": []
+    },
+    {
+      "id": "ffm",
+      "label": "Fat-free mass",
+      "definition": "Nonfat body mass, with method and conditions required; not identical to skeletal muscle mass.",
+      "units": "kg",
+      "definitionReview": "pending-H1",
+      "externalMappings": []
+    },
+    {
+      "id": "smm",
+      "label": "Skeletal muscle mass",
+      "definition": "A component of FFM, not an independent calorie bonus or sufficient body-fat measurement.",
+      "units": "kg",
+      "definitionReview": "pending-H1",
+      "externalMappings": []
+    },
+    {
+      "id": "body-fat",
+      "label": "Body-fat percentage",
+      "definition": "A measured or estimated input whose method and uncertainty must be retained.",
+      "units": "percentage points for changes; percent for levels",
+      "definitionReview": "pending-H1",
+      "externalMappings": []
+    },
+    {
+      "id": "readiness",
+      "label": "Training readiness",
+      "definition": "Current heuristic classification; requires a specified outcome before predictive validation.",
+      "units": "categorical",
+      "definitionReview": "pending-H1",
+      "externalMappings": []
+    },
+    {
+      "id": "allowance",
+      "label": "Caloric allowance",
+      "definition": "A proposed goal-dependent intake decision, not equal to measured or estimated TDEE.",
+      "units": "kcal/day if implemented",
+      "definitionReview": "pending-H1",
+      "externalMappings": []
+    },
+    {
+      "id": "sdnn",
+      "label": "SDNN",
+      "definition": "A specific HRV statistic; preserve measurement window and provider method.",
+      "units": "ms",
+      "definitionReview": "pending-H1",
+      "externalMappings": []
+    },
+    {
+      "id": "rmssd",
+      "label": "RMSSD",
+      "definition": "A distinct HRV statistic; not interchangeable with SDNN because units match.",
+      "units": "ms",
+      "definitionReview": "pending-H1",
+      "externalMappings": []
+    },
+    {
+      "id": "membership",
+      "label": "Activity membership",
+      "definition": "Evidence that a sample contributes to a defined aggregate; temporal overlap alone is insufficient.",
+      "units": "relation",
+      "definitionReview": "pending-H1",
+      "externalMappings": []
+    },
+    {
+      "id": "cohort-interval",
+      "label": "Cohort confidence interval",
+      "definition": "Sampling uncertainty for a defined aggregate under a resampling/analysis method.",
+      "units": "endpoint-specific",
+      "definitionReview": "pending-H1",
+      "externalMappings": []
+    },
+    {
+      "id": "individual-interval",
+      "label": "Individual prediction interval",
+      "definition": "Uncertainty for a new individual observation; requires evaluation of predictive coverage.",
+      "units": "endpoint-specific",
+      "definitionReview": "pending-H1",
+      "externalMappings": []
+    }
+  ],
+  "contexts": [
+    {
+      "id": "general-adult",
+      "axis": "population",
+      "label": "Generally healthy adults",
+      "currentProductDisposition": "educational-estimation-only",
+      "clinicalEvidenceReview": "unreviewed",
+      "externalMappings": [],
+      "requiredDimensions": [
+        "severity",
+        "duration",
+        "treatment",
+        "coexisting conditions",
+        "measurement protocol",
+        "time horizon"
+      ],
+      "reviewGate": "H1"
+    },
+    {
+      "id": "athlete-muscular",
+      "axis": "population",
+      "label": "Athletic or highly muscular adults",
+      "currentProductDisposition": "not-validated-as-a-personal-selector",
+      "clinicalEvidenceReview": "unreviewed",
+      "externalMappings": [],
+      "requiredDimensions": [
+        "severity",
+        "duration",
+        "treatment",
+        "coexisting conditions",
+        "measurement protocol",
+        "time horizon"
+      ],
+      "reviewGate": "H1"
+    },
+    {
+      "id": "older-frailty",
+      "axis": "population-and-function",
+      "label": "Older adults, frailty and sarcopenia distinctions",
+      "currentProductDisposition": "not-validated",
+      "clinicalEvidenceReview": "unreviewed",
+      "externalMappings": [],
+      "requiredDimensions": [
+        "severity",
+        "duration",
+        "treatment",
+        "coexisting conditions",
+        "measurement protocol",
+        "time horizon"
+      ],
+      "reviewGate": "H1"
+    },
+    {
+      "id": "body-size",
+      "axis": "population",
+      "label": "Body-size and composition extremes",
+      "currentProductDisposition": "not-validated",
+      "clinicalEvidenceReview": "unreviewed",
+      "externalMappings": [],
+      "requiredDimensions": [
+        "severity",
+        "duration",
+        "treatment",
+        "coexisting conditions",
+        "measurement protocol",
+        "time horizon"
+      ],
+      "reviewGate": "H1"
+    },
+    {
+      "id": "energy-restriction",
+      "axis": "physiological-state",
+      "label": "Energy restriction, weight change and adaptation",
+      "currentProductDisposition": "not-modeled",
+      "clinicalEvidenceReview": "unreviewed",
+      "externalMappings": [],
+      "requiredDimensions": [
+        "severity",
+        "duration",
+        "treatment",
+        "coexisting conditions",
+        "measurement protocol",
+        "time horizon"
+      ],
+      "reviewGate": "H1"
+    },
+    {
+      "id": "low-energy-availability",
+      "axis": "clinical-and-behavioral-context",
+      "label": "Low energy availability and disordered-eating contexts",
+      "currentProductDisposition": "out-of-scope-for-treatment",
+      "clinicalEvidenceReview": "unreviewed",
+      "externalMappings": [],
+      "requiredDimensions": [
+        "severity",
+        "duration",
+        "treatment",
+        "coexisting conditions",
+        "measurement protocol",
+        "time horizon"
+      ],
+      "reviewGate": "H1"
+    },
+    {
+      "id": "pregnancy-lactation",
+      "axis": "life-stage",
+      "label": "Pregnancy, lactation and reproductive state",
+      "currentProductDisposition": "out-of-scope",
+      "clinicalEvidenceReview": "unreviewed",
+      "externalMappings": [],
+      "requiredDimensions": [
+        "severity",
+        "duration",
+        "treatment",
+        "coexisting conditions",
+        "measurement protocol",
+        "time horizon"
+      ],
+      "reviewGate": "H1"
+    },
+    {
+      "id": "pediatric",
+      "axis": "life-stage",
+      "label": "Children and adolescents",
+      "currentProductDisposition": "out-of-scope",
+      "clinicalEvidenceReview": "unreviewed",
+      "externalMappings": [],
+      "requiredDimensions": [
+        "severity",
+        "duration",
+        "treatment",
+        "coexisting conditions",
+        "measurement protocol",
+        "time horizon"
+      ],
+      "reviewGate": "H1"
+    },
+    {
+      "id": "diabetes",
+      "axis": "clinical-condition",
+      "label": "Diabetes and glycemic-treatment contexts",
+      "currentProductDisposition": "not-validated",
+      "clinicalEvidenceReview": "unreviewed",
+      "externalMappings": [],
+      "requiredDimensions": [
+        "severity",
+        "duration",
+        "treatment",
+        "coexisting conditions",
+        "measurement protocol",
+        "time horizon"
+      ],
+      "reviewGate": "H1"
+    },
+    {
+      "id": "thyroid",
+      "axis": "clinical-condition",
+      "label": "Thyroid/endocrine contexts",
+      "currentProductDisposition": "not-validated",
+      "clinicalEvidenceReview": "unreviewed",
+      "externalMappings": [],
+      "requiredDimensions": [
+        "severity",
+        "duration",
+        "treatment",
+        "coexisting conditions",
+        "measurement protocol",
+        "time horizon"
+      ],
+      "reviewGate": "H1"
+    },
+    {
+      "id": "renal-fluid",
+      "axis": "clinical-and-measurement-context",
+      "label": "Kidney disease and altered fluid balance",
+      "currentProductDisposition": "not-validated",
+      "clinicalEvidenceReview": "unreviewed",
+      "externalMappings": [],
+      "requiredDimensions": [
+        "severity",
+        "duration",
+        "treatment",
+        "coexisting conditions",
+        "measurement protocol",
+        "time horizon"
+      ],
+      "reviewGate": "H1"
+    },
+    {
+      "id": "cardiopulmonary",
+      "axis": "clinical-and-function-context",
+      "label": "Cardiopulmonary disease and exercise limitation",
+      "currentProductDisposition": "not-validated",
+      "clinicalEvidenceReview": "unreviewed",
+      "externalMappings": [],
+      "requiredDimensions": [
+        "severity",
+        "duration",
+        "treatment",
+        "coexisting conditions",
+        "measurement protocol",
+        "time horizon"
+      ],
+      "reviewGate": "H1"
+    },
+    {
+      "id": "acute-critical",
+      "axis": "clinical-condition",
+      "label": "Acute illness, critical illness and major injury",
+      "currentProductDisposition": "out-of-scope",
+      "clinicalEvidenceReview": "unreviewed",
+      "externalMappings": [],
+      "requiredDimensions": [
+        "severity",
+        "duration",
+        "treatment",
+        "coexisting conditions",
+        "measurement protocol",
+        "time horizon"
+      ],
+      "reviewGate": "H1"
+    },
+    {
+      "id": "cancer-cachexia",
+      "axis": "clinical-condition",
+      "label": "Cancer, cachexia and treatment contexts",
+      "currentProductDisposition": "not-validated",
+      "clinicalEvidenceReview": "unreviewed",
+      "externalMappings": [],
+      "requiredDimensions": [
+        "severity",
+        "duration",
+        "treatment",
+        "coexisting conditions",
+        "measurement protocol",
+        "time horizon"
+      ],
+      "reviewGate": "H1"
+    },
+    {
+      "id": "medications",
+      "axis": "treatment-context",
+      "label": "Medication and treatment exposure",
+      "currentProductDisposition": "not-modeled",
+      "clinicalEvidenceReview": "unreviewed",
+      "externalMappings": [],
+      "requiredDimensions": [
+        "severity",
+        "duration",
+        "treatment",
+        "coexisting conditions",
+        "measurement protocol",
+        "time horizon"
+      ],
+      "reviewGate": "H1"
+    },
+    {
+      "id": "pain-sleep",
+      "axis": "symptom-and-function-context",
+      "label": "Pain, sleep disturbance and fatigue",
+      "currentProductDisposition": "heuristic-only",
+      "clinicalEvidenceReview": "unreviewed",
+      "externalMappings": [],
+      "requiredDimensions": [
+        "severity",
+        "duration",
+        "treatment",
+        "coexisting conditions",
+        "measurement protocol",
+        "time horizon"
+      ],
+      "reviewGate": "H1"
+    },
+    {
+      "id": "mobility-gait",
+      "axis": "function-and-measurement-context",
+      "label": "Disability, mobility aids and gait differences",
+      "currentProductDisposition": "not-validated",
+      "clinicalEvidenceReview": "unreviewed",
+      "externalMappings": [],
+      "requiredDimensions": [
+        "severity",
+        "duration",
+        "treatment",
+        "coexisting conditions",
+        "measurement protocol",
+        "time horizon"
+      ],
+      "reviewGate": "H1"
+    }
+  ],
+  "sources": [
+    {
+      "id": "science",
+      "title": "Metron science and limitations",
+      "path": "docs/SCIENCE.md",
+      "url": null,
+      "freshnessClass": "foundational",
+      "sourceContentReviewedAt": null,
+      "reviewScope": null,
+      "rightsStatus": "repository-content-policy",
+      "importedFrom": null,
+      "status": "repository-pointer",
+      "note": "Review date intentionally absent until H2 source/version inspection is logged.",
+      "retrievedAt": null,
+      "inspectedPortions": [],
+      "versionOrPublicationDate": null
+    },
+    {
+      "id": "core",
+      "title": "Metron production calculation functions",
+      "path": "core/model.js",
+      "url": null,
+      "freshnessClass": "foundational",
+      "sourceContentReviewedAt": null,
+      "reviewScope": null,
+      "rightsStatus": "repository-content-policy",
+      "importedFrom": null,
+      "status": "repository-pointer",
+      "note": "Review date intentionally absent until H2 source/version inspection is logged.",
+      "retrievedAt": null,
+      "inspectedPortions": [],
+      "versionOrPublicationDate": null
+    },
+    {
+      "id": "g3",
+      "title": "Frozen enable cohort aggregate results",
+      "path": "research/ree-validation/G3_RESULTS.md",
+      "url": null,
+      "freshnessClass": "active-empirical",
+      "sourceContentReviewedAt": null,
+      "reviewScope": null,
+      "rightsStatus": "repository-content-policy",
+      "importedFrom": null,
+      "status": "repository-pointer",
+      "note": "Review date intentionally absent until H2 source/version inspection is logged.",
+      "retrievedAt": null,
+      "inspectedPortions": [],
+      "versionOrPublicationDate": null
+    },
+    {
+      "id": "g4",
+      "title": "Targeted resting-equation review and decision",
+      "path": "research/ree-validation/G4_DECISION.md",
+      "url": null,
+      "freshnessClass": "active-empirical",
+      "sourceContentReviewedAt": null,
+      "reviewScope": null,
+      "rightsStatus": "repository-content-policy",
+      "importedFrom": null,
+      "status": "repository-pointer",
+      "note": "Review date intentionally absent until H2 source/version inspection is logged.",
+      "retrievedAt": null,
+      "inspectedPortions": [],
+      "versionOrPublicationDate": null
+    },
+    {
+      "id": "accounting",
+      "title": "Synthetic energy accounting",
+      "path": "research/energy-accounting/README.md",
+      "url": null,
+      "freshnessClass": "active-empirical",
+      "sourceContentReviewedAt": null,
+      "reviewScope": null,
+      "rightsStatus": "repository-content-policy",
+      "importedFrom": null,
+      "status": "repository-pointer",
+      "note": "Review date intentionally absent until H2 source/version inspection is logged.",
+      "retrievedAt": null,
+      "inspectedPortions": [],
+      "versionOrPublicationDate": null
+    },
+    {
+      "id": "events",
+      "title": "Source-aware activity event contract",
+      "path": "research/activity-events/README.md",
+      "url": null,
+      "freshnessClass": "provider-or-access",
+      "sourceContentReviewedAt": null,
+      "reviewScope": null,
+      "rightsStatus": "repository-content-policy",
+      "importedFrom": null,
+      "status": "repository-pointer",
+      "note": "Review date intentionally absent until H2 source/version inspection is logged.",
+      "retrievedAt": null,
+      "inspectedPortions": [],
+      "versionOrPublicationDate": null
+    },
+    {
+      "id": "providers",
+      "title": "Provider step-semantics review",
+      "path": "research/provider-step-semantics/matrix.json",
+      "url": null,
+      "freshnessClass": "provider-or-access",
+      "sourceContentReviewedAt": null,
+      "reviewScope": null,
+      "rightsStatus": "repository-content-policy",
+      "importedFrom": null,
+      "status": "repository-pointer",
+      "note": "Review date intentionally absent until H2 source/version inspection is logged.",
+      "retrievedAt": null,
+      "inspectedPortions": [],
+      "versionOrPublicationDate": null
+    },
+    {
+      "id": "readiness-protocol",
+      "title": "Proposed wearable-performance protocol",
+      "path": "research/protocol.json",
+      "url": null,
+      "freshnessClass": "active-empirical",
+      "sourceContentReviewedAt": null,
+      "reviewScope": null,
+      "rightsStatus": "repository-content-policy",
+      "importedFrom": null,
+      "status": "repository-pointer",
+      "note": "Review date intentionally absent until H2 source/version inspection is logged.",
+      "retrievedAt": null,
+      "inspectedPortions": [],
+      "versionOrPublicationDate": null
+    },
+    {
+      "id": "mifflin-1990",
+      "title": "Mifflin et al. resting-energy equation",
+      "path": null,
+      "url": "https://doi.org/10.1093/ajcn/51.2.241",
+      "freshnessClass": "foundational",
+      "sourceContentReviewedAt": null,
+      "reviewScope": null,
+      "rightsStatus": "not-audited-for-republication",
+      "importedFrom": "docs/SCIENCE.md",
+      "status": "imported-reference",
+      "note": "Review date intentionally absent until H2 source/version inspection is logged.",
+      "retrievedAt": null,
+      "inspectedPortions": [],
+      "versionOrPublicationDate": null
+    },
+    {
+      "id": "cunningham-1980",
+      "title": "Cunningham resting-energy equation",
+      "path": null,
+      "url": "https://doi.org/10.1093/ajcn/33.11.2372",
+      "freshnessClass": "foundational",
+      "sourceContentReviewedAt": null,
+      "reviewScope": null,
+      "rightsStatus": "not-audited-for-republication",
+      "importedFrom": "docs/SCIENCE.md",
+      "status": "imported-reference",
+      "note": "Review date intentionally absent until H2 source/version inspection is logged.",
+      "retrievedAt": null,
+      "inspectedPortions": [],
+      "versionOrPublicationDate": null
+    },
+    {
+      "id": "compendium",
+      "title": "Adult Compendium of Physical Activities",
+      "path": null,
+      "url": "https://pacompendium.com/",
+      "freshnessClass": "active-empirical",
+      "sourceContentReviewedAt": null,
+      "reviewScope": null,
+      "rightsStatus": "not-audited-for-republication",
+      "importedFrom": "docs/SCIENCE.md",
+      "status": "imported-reference",
+      "note": "Review date intentionally absent until H2 source/version inspection is logged.",
+      "retrievedAt": null,
+      "inspectedPortions": [],
+      "versionOrPublicationDate": null
+    },
+    {
+      "id": "ten-haaf-2014",
+      "title": "ten Haaf and Weijs recreational-athlete study",
+      "path": null,
+      "url": "https://doi.org/10.1371/journal.pone.0108460",
+      "freshnessClass": "active-empirical",
+      "sourceContentReviewedAt": null,
+      "reviewScope": null,
+      "rightsStatus": "not-audited-for-republication",
+      "importedFrom": "research/ree-validation/G4_DECISION.md",
+      "status": "imported-reference",
+      "note": "Review date intentionally absent until H2 source/version inspection is logged.",
+      "retrievedAt": null,
+      "inspectedPortions": [],
+      "versionOrPublicationDate": null
+    },
+    {
+      "id": "weijs-2008",
+      "title": "Weijs US and Dutch adult evaluation",
+      "path": null,
+      "url": "https://pubmed.ncbi.nlm.nih.gov/18842782/",
+      "freshnessClass": "active-empirical",
+      "sourceContentReviewedAt": null,
+      "reviewScope": null,
+      "rightsStatus": "not-audited-for-republication",
+      "importedFrom": "research/ree-validation/G4_DECISION.md",
+      "status": "imported-reference",
+      "note": "Review date intentionally absent until H2 source/version inspection is logged.",
+      "retrievedAt": null,
+      "inspectedPortions": [],
+      "versionOrPublicationDate": null
+    },
+    {
+      "id": "tinsley-2019",
+      "title": "Tinsley muscular physique athletes",
+      "path": null,
+      "url": "https://doi.org/10.1139/apnm-2018-0412",
+      "freshnessClass": "active-empirical",
+      "sourceContentReviewedAt": null,
+      "reviewScope": null,
+      "rightsStatus": "not-audited-for-republication",
+      "importedFrom": "research/ree-validation/G4_DECISION.md",
+      "status": "imported-reference",
+      "note": "Review date intentionally absent until H2 source/version inspection is logged.",
+      "retrievedAt": null,
+      "inspectedPortions": [],
+      "versionOrPublicationDate": null
+    },
+    {
+      "id": "sordi-2024",
+      "title": "Sordi cross-training equation evaluation",
+      "path": null,
+      "url": "https://doi.org/10.3390/ijerph21070891",
+      "freshnessClass": "active-empirical",
+      "sourceContentReviewedAt": null,
+      "reviewScope": null,
+      "rightsStatus": "not-audited-for-republication",
+      "importedFrom": "research/ree-validation/G4_DECISION.md",
+      "status": "imported-reference",
+      "note": "Review date intentionally absent until H2 source/version inspection is logged.",
+      "retrievedAt": null,
+      "inspectedPortions": [],
+      "versionOrPublicationDate": null
+    },
+    {
+      "id": "siedler-2023",
+      "title": "Siedler BIA-device validation",
+      "path": null,
+      "url": "https://doi.org/10.1017/S0007114522003749",
+      "freshnessClass": "active-empirical",
+      "sourceContentReviewedAt": null,
+      "reviewScope": null,
+      "rightsStatus": "not-audited-for-republication",
+      "importedFrom": "research/ree-validation/G4_DECISION.md",
+      "status": "imported-reference",
+      "note": "Review date intentionally absent until H2 source/version inspection is logged.",
+      "retrievedAt": null,
+      "inspectedPortions": [],
+      "versionOrPublicationDate": null
+    },
+    {
+      "id": "who-classifications",
+      "title": "WHO classification family",
+      "path": null,
+      "url": "https://www.who.int/standards/classifications",
+      "freshnessClass": "foundational",
+      "sourceContentReviewedAt": null,
+      "reviewScope": null,
+      "rightsStatus": "not-audited-for-republication",
+      "importedFrom": null,
+      "status": "overview-inspected-review-pending",
+      "note": "Overview directly inspected. Full review criteria and correction/terms checks remain H2 work, so no currentness review date is assigned.",
+      "retrievedAt": "2026-11-07",
+      "inspectedPortions": [
+        "Official overview and scope; no complete terminology mapping, rights or errata audit"
+      ],
+      "versionOrPublicationDate": null
+    },
+    {
+      "id": "who-icf",
+      "title": "WHO ICF",
+      "path": null,
+      "url": "https://www.who.int/classifications/international-classification-of-functioning-disability-and-health",
+      "freshnessClass": "foundational",
+      "sourceContentReviewedAt": null,
+      "reviewScope": null,
+      "rightsStatus": "not-audited-for-republication",
+      "importedFrom": null,
+      "status": "overview-inspected-review-pending",
+      "note": "Overview directly inspected. Full review criteria and correction/terms checks remain H2 work, so no currentness review date is assigned.",
+      "retrievedAt": "2026-11-07",
+      "inspectedPortions": [
+        "Official overview and scope; no complete terminology mapping, rights or errata audit"
+      ],
+      "versionOrPublicationDate": null
+    },
+    {
+      "id": "fair",
+      "title": "FAIR guiding principles",
+      "path": null,
+      "url": "https://doi.org/10.1038/sdata.2016.18",
+      "freshnessClass": "foundational",
+      "sourceContentReviewedAt": null,
+      "reviewScope": null,
+      "rightsStatus": "not-audited-for-republication",
+      "importedFrom": null,
+      "status": "partial-access-review-pending",
+      "note": "Direct full-page retrieval encountered a publisher authentication redirect; indexed publisher summary supports the limited machine-reuse rationale. Full review remains pending.",
+      "retrievedAt": "2026-11-07",
+      "inspectedPortions": [
+        "Publisher search-index abstract and principles summary"
+      ],
+      "versionOrPublicationDate": null
+    },
+    {
+      "id": "prov-o",
+      "title": "W3C PROV-O",
+      "path": null,
+      "url": "https://www.w3.org/TR/prov-o/",
+      "freshnessClass": "foundational",
+      "sourceContentReviewedAt": null,
+      "reviewScope": null,
+      "rightsStatus": "not-audited-for-republication",
+      "importedFrom": null,
+      "status": "overview-inspected-review-pending",
+      "note": "Overview directly inspected. Full review criteria and correction/terms checks remain H2 work, so no currentness review date is assigned.",
+      "retrievedAt": "2026-11-07",
+      "inspectedPortions": [
+        "Official overview and scope; no complete terminology mapping, rights or errata audit"
+      ],
+      "versionOrPublicationDate": "W3C Recommendation 2013-04-30"
+    },
+    {
+      "id": "semantic-contract",
+      "title": "Metron semantic invariants",
+      "path": "AGENTS.md",
+      "url": null,
+      "freshnessClass": "foundational",
+      "sourceContentReviewedAt": null,
+      "reviewScope": null,
+      "rightsStatus": "repository-content-policy",
+      "importedFrom": null,
+      "status": "repository-pointer",
+      "note": "Project semantic rule; underlying provider definitions require H2 review.",
+      "retrievedAt": null,
+      "inspectedPortions": [],
+      "versionOrPublicationDate": null
+    }
+  ],
+  "claims": [
+    {
+      "id": "C01",
+      "statement": "Fixed Mifflin arithmetic and its limited empirical evaluation",
+      "kind": "published-equation",
+      "concepts": [
+        "rmr",
+        "ree"
+      ],
+      "contexts": [
+        "general-adult"
+      ],
+      "sources": [
+        "core",
+        "science",
+        "mifflin-1990",
+        "g3"
+      ],
+      "gates": [
+        "H2",
+        "H4"
+      ],
+      "empiricalValidation": "single-source-external-retrospective",
+      "applicabilityMatrixStatus": "pending-H1",
+      "evidenceDisposition": "unreviewed-for-current-cross-context-use",
+      "limitation": "Equation arithmetic and one cohort are established at their stated scope; no universal or individual guarantee."
+    },
+    {
+      "id": "C02",
+      "statement": "Cunningham arithmetic and body-composition dependence",
+      "kind": "published-equation",
+      "concepts": [
+        "rmr",
+        "ffm",
+        "body-fat"
+      ],
+      "contexts": [
+        "general-adult",
+        "athlete-muscular"
+      ],
+      "sources": [
+        "core",
+        "science",
+        "cunningham-1980",
+        "g3",
+        "g4",
+        "siedler-2023"
+      ],
+      "gates": [
+        "H2",
+        "H3",
+        "H4"
+      ],
+      "empiricalValidation": "single-source-external-retrospective",
+      "applicabilityMatrixStatus": "pending-H1",
+      "evidenceDisposition": "unreviewed-for-current-cross-context-use",
+      "limitation": "Better cohort performance does not establish a general input-quality or population selector."
+    },
+    {
+      "id": "C03",
+      "statement": "Combined daily-energy estimate",
+      "kind": "model-estimate",
+      "concepts": [
+        "tdee",
+        "baseline",
+        "walking",
+        "workout"
+      ],
+      "contexts": [
+        "general-adult"
+      ],
+      "sources": [
+        "core",
+        "science"
+      ],
+      "gates": [
+        "H3",
+        "H4",
+        "H6"
+      ],
+      "empiricalValidation": "none",
+      "applicabilityMatrixStatus": "pending-H1",
+      "evidenceDisposition": "unreviewed-for-current-cross-context-use",
+      "limitation": "No independent whole-model TDEE validation; RMR evidence does not transfer automatically."
+    },
+    {
+      "id": "C04",
+      "statement": "Sedentary multiplier and included-step baseline",
+      "kind": "assumption",
+      "concepts": [
+        "baseline",
+        "walking"
+      ],
+      "contexts": [
+        "general-adult"
+      ],
+      "sources": [
+        "core",
+        "science",
+        "accounting"
+      ],
+      "gates": [
+        "H2",
+        "H3"
+      ],
+      "empiricalValidation": "none",
+      "applicabilityMatrixStatus": "pending-H1",
+      "evidenceDisposition": "unreviewed-for-current-cross-context-use",
+      "limitation": "1.2 and 2000 included steps are simplifying choices; the baseline does not decrement below 2000 steps."
+    },
+    {
+      "id": "C05",
+      "statement": "Stride and walking net-energy coefficients",
+      "kind": "assumption",
+      "concepts": [
+        "walking"
+      ],
+      "contexts": [
+        "general-adult",
+        "mobility-gait",
+        "body-size"
+      ],
+      "sources": [
+        "core",
+        "science"
+      ],
+      "gates": [
+        "H2",
+        "H3",
+        "H4"
+      ],
+      "empiricalValidation": "none",
+      "applicabilityMatrixStatus": "pending-H1",
+      "evidenceDisposition": "unreviewed-for-current-cross-context-use",
+      "limitation": "Fixed stride and cost do not establish individual gait, incline or speed accuracy."
+    },
+    {
+      "id": "C06",
+      "statement": "Whole-session workout MET and baseline subtraction",
+      "kind": "assumption",
+      "concepts": [
+        "workout",
+        "baseline"
+      ],
+      "contexts": [
+        "general-adult",
+        "athlete-muscular"
+      ],
+      "sources": [
+        "core",
+        "science",
+        "compendium"
+      ],
+      "gates": [
+        "H2",
+        "H3",
+        "H4"
+      ],
+      "empiricalValidation": "none",
+      "applicabilityMatrixStatus": "pending-H1",
+      "evidenceDisposition": "unreviewed-for-current-cross-context-use",
+      "limitation": "Preset intensity is not measured expenditure and is not a validated set-count conversion."
+    },
+    {
+      "id": "C07",
+      "statement": "Clock overlap is insufficient to establish aggregate membership",
+      "kind": "semantic-boundary",
+      "concepts": [
+        "membership"
+      ],
+      "contexts": [
+        "general-adult"
+      ],
+      "sources": [
+        "events",
+        "providers",
+        "accounting"
+      ],
+      "gates": [
+        "H2",
+        "H3"
+      ],
+      "empiricalValidation": "none",
+      "applicabilityMatrixStatus": "pending-H1",
+      "evidenceDisposition": "unreviewed-for-current-cross-context-use",
+      "limitation": "Prior provider review and synthetic cases do not establish actual-device aggregate attribution."
+    },
+    {
+      "id": "C08",
+      "statement": "Readiness thresholds and recommended working-set bands",
+      "kind": "heuristic",
+      "concepts": [
+        "readiness"
+      ],
+      "contexts": [
+        "general-adult",
+        "pain-sleep"
+      ],
+      "sources": [
+        "core",
+        "science",
+        "readiness-protocol"
+      ],
+      "gates": [
+        "H2",
+        "H5",
+        "H6"
+      ],
+      "empiricalValidation": "none",
+      "applicabilityMatrixStatus": "pending-H1",
+      "evidenceDisposition": "unreviewed-for-current-cross-context-use",
+      "limitation": "Current outputs are unvalidated; no injury-safe threshold or optimal training-volume claim."
+    },
+    {
+      "id": "C09",
+      "statement": "Caloric allowance is a separate unimplemented decision",
+      "kind": "proposed-decision",
+      "concepts": [
+        "allowance",
+        "tdee"
+      ],
+      "contexts": [
+        "general-adult"
+      ],
+      "sources": [
+        "science"
+      ],
+      "gates": [
+        "H1",
+        "H6"
+      ],
+      "empiricalValidation": "none",
+      "applicabilityMatrixStatus": "pending-H1",
+      "evidenceDisposition": "unreviewed-for-current-cross-context-use",
+      "limitation": "No intake-planning or treatment function is currently shipped."
+    },
+    {
+      "id": "C10",
+      "statement": "Cohort intervals and sensitivity do not provide individual error bounds",
+      "kind": "semantic-boundary",
+      "concepts": [
+        "cohort-interval",
+        "individual-interval"
+      ],
+      "contexts": [
+        "general-adult"
+      ],
+      "sources": [
+        "science",
+        "g3",
+        "g4"
+      ],
+      "gates": [
+        "H1",
+        "H6"
+      ],
+      "empiricalValidation": "none",
+      "applicabilityMatrixStatus": "pending-H1",
+      "evidenceDisposition": "unreviewed-for-current-cross-context-use",
+      "limitation": "Do not transfer a cohort interval or deterministic perturbation to an individual prediction interval."
+    },
+    {
+      "id": "C11",
+      "statement": "SMM is not interchangeable with FFM",
+      "kind": "semantic-boundary",
+      "concepts": [
+        "smm",
+        "ffm",
+        "body-fat"
+      ],
+      "contexts": [
+        "general-adult"
+      ],
+      "sources": [
+        "science",
+        "core"
+      ],
+      "gates": [
+        "H1",
+        "H2"
+      ],
+      "empiricalValidation": "none",
+      "applicabilityMatrixStatus": "pending-H1",
+      "evidenceDisposition": "unreviewed-for-current-cross-context-use",
+      "limitation": "No extra calorie bonus or body-fat inference from SMM alone."
+    },
+    {
+      "id": "C12",
+      "statement": "SDNN and RMSSD must retain distinct measurement definitions",
+      "kind": "semantic-boundary",
+      "concepts": [
+        "sdnn",
+        "rmssd"
+      ],
+      "contexts": [
+        "general-adult"
+      ],
+      "sources": [
+        "semantic-contract"
+      ],
+      "gates": [
+        "H1",
+        "H2",
+        "H3"
+      ],
+      "empiricalValidation": "none",
+      "applicabilityMatrixStatus": "pending-H1",
+      "evidenceDisposition": "unreviewed-for-current-cross-context-use",
+      "limitation": "Units alone do not establish interchangeability; source-specific definitions still require review."
+    }
+  ],
+  "relations": [
+    {
+      "from": "smm",
+      "relation": "part-of",
+      "to": "ffm",
+      "source": "science",
+      "qualification": "Composition relation; no additive metabolic bonus."
+    },
+    {
+      "from": "body-fat",
+      "relation": "input-to",
+      "to": "ffm",
+      "source": "core",
+      "qualification": "Conversion additionally requires body weight and a legitimate measurement."
+    },
+    {
+      "from": "ffm",
+      "relation": "input-to",
+      "to": "rmr",
+      "source": "core",
+      "qualification": "Cunningham only; not every resting model."
+    },
+    {
+      "from": "rmr",
+      "relation": "component-input-to",
+      "to": "tdee",
+      "source": "core",
+      "qualification": "Current model applies additional assumptions."
+    },
+    {
+      "from": "tdee",
+      "relation": "distinct-from",
+      "to": "allowance",
+      "source": "science",
+      "qualification": "Energy expenditure is not an intake prescription."
+    },
+    {
+      "from": "cohort-interval",
+      "relation": "distinct-from",
+      "to": "individual-interval",
+      "source": "g3",
+      "qualification": "Different statistical targets."
+    },
+    {
+      "from": "sdnn",
+      "relation": "distinct-from",
+      "to": "rmssd",
+      "source": "semantic-contract",
+      "qualification": "Preserve statistic, method and time window."
+    }
+  ]
+}

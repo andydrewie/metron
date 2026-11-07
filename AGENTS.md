@@ -8,9 +8,10 @@ This is a real source repository, not a design mockup. **README.md is the human 
 
 1. **Read the local rules:** this file, [collaboration policy](./docs/COLLABORATION.md), and [intent map](./docs/navigation.json).
 2. **Identify current reality:** check `metron.manifest.json`, the relevant source/tests, and [existing decisions](./docs/adr/index.json). Look for an existing Issue or PR before creating one.
-3. **Classify the change:** is this exploration, a reproducible question, a consequential decision, or straightforward implementation? Follow the *provisional publication gate* rather than documenting every thought.
-4. **Choose the smallest reviewable step:** for consequential or nontrivial changes, prefer a branch + Pull Request; link the relevant Issue/ADR when there is one. For trivial fixes, avoid process theater.
-5. **Prove and report:** run `npm run ci && npm run release:check`, distinguish software verification from empirical science, and report what changed, what's still uncertain, and the exact next investigation.
+3. **Load current research scope when relevant:** [durable evidence program](./research/robustness/README.md), [gate/weakness state](./research/robustness/plan.json) and [partial corpus](./research/robustness/corpus.json). Research reuse is independently valuable; do not require an immediate feature benefit. Check applicability and evidence freshness before extending a scientific claim.
+4. **Classify the change:** is this exploration, a reproducible question, a consequential decision, or straightforward implementation? Follow the *provisional publication gate* rather than documenting every thought.
+5. **Choose the smallest reviewable step:** for consequential or nontrivial changes, prefer a branch + Pull Request; link the relevant Issue/ADR when there is one. For trivial fixes, avoid process theater.
+6. **Prove and report:** run `npm run ci && npm run release:check`, distinguish software verification from empirical science, and report what changed, what's still uncertain, and the exact next investigation.
 
 **Default communication:** one short answer up front, optional evidence and detail, precise/direct/nurturing copy. Do not invent physiological confidence scores or privately sourced data. **If the current repository contradicts a remembered discussion, surface the conflict and defer to explicit user instructions before changing the policy.**
 
@@ -33,6 +34,7 @@ For structured discovery, read `docs/navigation.json` (stable route IDs, exact r
 | Run a calculation | `schemas/input.schema.json` → `core/model.js` → `examples/` |
 | Challenge physiology | `docs/SCIENCE.md` → `docs/ROADMAP.md` → `tests/` |
 | Extend the interface | `docs/INFORMATION_DESIGN.md` → `docs/DESIGN.md` → `design/tokens.json` |
+| Map evidence, clinical applicability, weaknesses and current gates | `research/robustness/README.md` → `plan.json` → `corpus.json` |
 | Explore unimplemented research | `docs/RESEARCH.md` → `docs/RESEARCH_PROTOCOL.md` |
 
 **Writing rule:** precise, direct, nurturing. Explain the answer first, make detailed evidence optional but easy to find, and place necessary limitations next to the relevant claim. Diagrams are for comprehension, not decoration. Do not imply a human must read everything or an agent must guess file semantics.

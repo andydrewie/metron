@@ -8,7 +8,9 @@
 
 **Status: G3 measured results published.** The frozen evaluation includes 454 eligible participants: Mifflin MAE **165.7 kcal/day**, Cunningham **129.5**, with paired difference **−36.2** (95% bootstrap CI −49.5 to −22.6). [Read the results and limitations](./G3_RESULTS.md) · [Aggregate JSON](./results/g3-enable-v1.json). This single-source RMR reanalysis does not validate TDEE or readiness. **G4 is complete:** retain the default and explicit alternative, with population and input-quality guidance. [Decision and reversal conditions](./G4_DECISION.md). Production calculations are unchanged.
 
-**One place to track:** [GitHub research dashboard — #9](https://github.com/andydrewie/metron/issues/9) · [Machine plan](./plan.json) · [Source candidates](./candidate-sources.json) · [Current science](../../docs/SCIENCE.md)
+**Current execution order:** [durable evidence program](../robustness/README.md), tracked in [issue #22](https://github.com/andydrewie/metron/issues/22), now puts H1 applicability, H2 evidence currency and H3 measurement review before further cohort evaluation. G0–G4 below remain complete.
+
+**Completed study record:** [GitHub research dashboard — #9](https://github.com/andydrewie/metron/issues/9) · [Machine plan](./plan.json) · [Source candidates](./candidate-sources.json) · [Current science](../../docs/SCIENCE.md)
 
 > Measure what we can. Question what we infer. Improve what we can demonstrate.
 

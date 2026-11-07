@@ -8,6 +8,7 @@ Choose a route according to what you are trying to do. **All readers share the s
 | Run it from an agent or a terminal | [AGENTS](../AGENTS.md) · [API](./API.md) |
 | Inspect the current implementation | [Architecture](./ARCHITECTURE.md) · [Core](../core/model.js) |
 | Inspect the assumptions or limitations | [Science](./SCIENCE.md) |
+| Find current research gates, weaknesses and clinical applicability coverage | [Durable evidence program](../research/robustness/README.md) · [Gate state](../research/robustness/plan.json) · [Partial corpus](../research/robustness/corpus.json) |
 | Challenge the models or design an experiment | [Research Lab](../research/README.md) · [Research agenda](./RESEARCH.md) · [Research protocol](./RESEARCH_PROTOCOL.md) |
 | Understand future wearable/agent architecture | [Future architecture](./FUTURE_ARCHITECTURE.md) |
 | Improve the visual design | [Design](./DESIGN.md) · [Canonical tokens](../design/tokens.json) |

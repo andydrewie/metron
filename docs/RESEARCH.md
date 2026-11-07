@@ -2,6 +2,10 @@
 
 **METRON is not a trained AI model.** It's an open computational estimator and a separate recovery decision heuristic. We welcome researchers who can invalidate, refine, or replace its assumptions with stronger evidence.
 
+## Current cross-project execution program
+
+[METRON-ROBUST-001](../research/robustness/README.md) establishes H0–H8 for reusable evidence, clinical applicability, measurement, validation, uncertainty, software and reconstruction. The [machine plan](../research/robustness/plan.json) owns execution order; the question IDs below are topics, not gates. H1 ontology/applicability mapping comes next. The athlete candidate belongs to H4 after applicable H1–H3 work. The corpus is independently valuable even without a feature change.
+
 ## Research questions
 
 **R1 · REE equation performance**

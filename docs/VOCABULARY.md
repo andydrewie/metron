@@ -23,6 +23,10 @@
 | **Decision confidence** | A qualitative, revisable judgment about a choice's rationale | A calibrated statistical probability |
 | **Superseded** | Historical decision replaced by another cited decision | Erased, hidden or retroactively declared never to have happened |
 | **Headless** | Calculation works without the website, browser, UI framework or external service | Having no human-friendly UI |
+| **Applicability** | The population, state, method and time conditions under which a claim is supported | A universal property of an equation |
+| **Ontology** | Explicit concepts and qualified relationships supporting consistent interpretation | A list of disease labels or proof of clinical validity |
+| **Evidence currency** | Review against a stated source/search scope and cutoff, with version and correction checks | A recent document-edit timestamp |
+| **Coverage** | Enumerated reviewed and unreviewed claims/contexts within a declared boundary | A claim that every possible condition was considered |
 
 ## Semantic hygiene
 

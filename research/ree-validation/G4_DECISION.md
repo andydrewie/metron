@@ -1,5 +1,7 @@
 # G4 · Resting-model decision
 
+**Current execution route:** [METRON-ROBUST-001](../robustness/README.md) and [ADR-0006](../../docs/adr/0006-durable-evidence-before-expansion.md) now place scope, evidence and measurement review before the next cohort. The G4 decision and evidence below remain the historical record.
+
 ## In 20 seconds
 
 **Keep Mifflin–St Jeor as Metron's default and Cunningham as an explicit option.** G3 favors Cunningham in one cohort; independent studies show that performance depends on population and measurement method. Body-composition error can materially move its output. This is a provisional product decision, not proof that Mifflin is more accurate. Publish population and input-quality guidance, retain the frozen results, and require a separate replication protocol before reconsidering adoption.

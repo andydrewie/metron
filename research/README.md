@@ -1,10 +1,12 @@
-# Metron Research Lab — proposals, not results
+# Metron Research Lab — evidence, limitations and open questions
 
 This folder exists to make **falsifiable research a first-class contributor surface** rather than an ornamental "science" section in a commercial landing page.
 
-**No published validation benchmarks or collected wearable research dataset currently exist in this repo.** The implemented source is deterministic software; unit tests establish software correctness under selected fixtures, not accuracy against human metabolic or training outcomes.
+**Measured resting-equation results are published:** [G3](./ree-validation/G3_RESULTS.md) evaluated 454 adults; [G4](./ree-validation/G4_DECISION.md) records the separate model decision. This is limited resting-energy evidence. Combined TDEE, individual predictions and readiness remain unvalidated; no collected wearable research dataset is published here.
 
-## Current investigation: Energy accounting
+**Current program:** [durable evidence and robustness](./robustness/README.md) · [gate/weakness state](./robustness/plan.json) · [partial corpus](./robustness/corpus.json) · [tracker #22](https://github.com/andydrewie/metron/issues/22). H0 is complete for its scoped inventory; H1 ontology/applicability mapping is in progress. Evidence currency and measurement work precede the next cohort analysis. Research reuse through at least 7 November 2027 is an explicit objective.
+
+## Open investigation: Energy accounting
 
 [Issue #1 synthetic experiment](./energy-accounting/README.md) shows that daily steps and workout duration cannot identify overlapping activity. The runner prints structured JSON without accessing any personal health data:
 
@@ -22,9 +24,9 @@ This research diagnostic is **not** integrated into the consumer calculation. It
 
 **No-device path:** [Coefficient sensitivity audit](./assumption-sensitivity/README.md) uses fabricated profiles to quantify how the *mathematical model* responds to changed parameters; it does not measure physiological accuracy.
 
-**Measured resting-metabolism validation program:** [G0 verified source and G1 frozen protocol](./ree-validation/G1_FROZEN_PROTOCOL.md) · [G2 deterministic benchmark](./ree-validation/G2_BENCHMARK.md) · [Research dashboard](https://github.com/andydrewie/metron/issues/9). The new engine passes synthetic test fixtures; **no actual measured-cohort errors have been calculated**. Separate from the wearable-performance project below.
+**Measured resting-metabolism validation program:** [G0 verified source and G1 frozen protocol](./ree-validation/G1_FROZEN_PROTOCOL.md) · [G2 deterministic benchmark](./ree-validation/G2_BENCHMARK.md) · [Research dashboard](https://github.com/andydrewie/metron/issues/9). G0–G4 are complete, including actual measured-cohort errors. The frozen results and source pins remain unchanged. The next cohort is deferred to H4 of the current program after applicable scope, evidence and measurement gates. Separate from the proposed wearable-performance project below.
 
-## The central experiment
+## Proposed wearable-performance experiment
 
 **Does adding longitudinal wearable data improve held-out next-session resistance training performance predictions beyond a simple model using previous performance, sleep and subjective recovery?**
 

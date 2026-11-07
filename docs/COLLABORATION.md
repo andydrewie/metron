@@ -12,7 +12,7 @@
 
 ## Continuity without reminders — operational contract
 
-An agent starting a new Metron task must **inspect the repository**, not ask a human to recite our conventions. [`AGENTS.md`](../AGENTS.md) provides the five-step kickoff; [`docs/navigation.json`](./navigation.json) routes task intent; [`metron.manifest.json`](../metron.manifest.json) declares shipped capabilities; [ADR index](./adr/index.json) identifies prior decisions. The most recent Issue/PR provides investigation context.
+An agent starting a new Metron task must **inspect the repository**, not ask a human to recite our conventions. [`AGENTS.md`](../AGENTS.md) provides the kickoff; [`docs/navigation.json`](./navigation.json) routes task intent; [`metron.manifest.json`](../metron.manifest.json) declares shipped capabilities; [ADR index](./adr/index.json) identifies prior decisions. The most recent Issue/PR provides investigation context.
 
 **We enforce different things at different layers:**
 
@@ -91,9 +91,17 @@ ADRs use [our short template](./adr/TEMPLATE.md), one per consequential choice, 
 
 **Don't confuse a popular proposal with evidence.** A decision can be accepted with low confidence if it is reversible and its assumptions are explicit.
 
+## Durable research is a deliverable
+
+The corpus should remain reusable through at least **7 November 2027** even if the implementation is rebuilt. Evidence, ontological distinctions, negative results, limitations and reconstruction instructions can justify research without an immediate feature change. The [durable evidence program](../research/robustness/README.md) defines scoped gates, freshness review and clinical applicability coverage. Keep records canonical and navigable; document count is not an objective.
+
+**Correction rule:** when prioritizing investigations, do not assume near-term product utility is the sole value criterion. That assumption can distort the roadmap, next-task pointers and evidence retention. Check all current entrypoints against the program, while preserving historical protocols/results and accepted decisions. The exception is disposable exploration with no reusable or consequential finding. This change is recorded in [ADR-0006](./adr/0006-durable-evidence-before-expansion.md).
+
+A twelve-month reuse objective is not a delivery deadline or promise of complete medical knowledge. Record actual source-review dates, scope and unresolved gaps; do not equate an exclusion or software pass with physiological validity.
+
 ## No forced engagement
 
-No quotas for GitHub Issues, ADRs, PRs, citations, stars, discussions, commits, contributors, or scheduled deliverables. Participation may be exploratory, quiet, episodic, or critical. Usefulness—not document count—is our criterion.
+No quotas for GitHub Issues, ADRs, PRs, citations, stars, discussions, commits, contributors, or scheduled deliverables. Participation may be exploratory, quiet, episodic, or critical. Reusable research and practical usefulness, rather than document count, are our criteria.
 
 Further detail: [Vocabulary](./VOCABULARY.md) · [ADR index](./adr/README.md) · [Research agenda](./RESEARCH.md) · [Information design](./INFORMATION_DESIGN.md).
 

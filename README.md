@@ -66,6 +66,8 @@ The desktop image captures the entire browser viewport; open it full size to ins
 
 **Current measured-science workstream:** [Resting energy validation program](./research/ree-validation/README.md) · [GitHub tracking dashboard](https://github.com/andydrewie/metron/issues/9). **G0–G4 complete:** [454-person RMR results](./research/ree-validation/G3_RESULTS.md) and [the decision to retain the default with scoped guidance](./research/ree-validation/G4_DECISION.md) are published. This is one fixed-equation cohort reanalysis, not validation of the combined daily-energy or readiness estimator.
 
+**Current research priority:** [durable evidence and robustness](./research/robustness/README.md) · [tracker #22](https://github.com/andydrewie/metron/issues/22). Build a navigable, current, explicitly scoped corpus that remains reusable if the app is rebuilt. Ontology and applicability mapping precede the next cohort analysis; clinical coverage is still incomplete.
+
 **Research-only iPhone pilot:** [Read-only Apple HealthKit sample attribution](./research/apple-healthkit-pilot/README.md) (requires Xcode and your device's separate Health permission; not an existing web feature).
 
 **[Why this is designed for humans and agents](./docs/INFORMATION_DESIGN.md)** · [Structured navigation map](./docs/navigation.json). Detail is always available, not a prerequisite.

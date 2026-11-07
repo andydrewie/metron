@@ -10,7 +10,10 @@
 - [Science and limits](./docs/SCIENCE.md): equations, assumptions, citations
 
 ## Research and contribution
-- [Research Lab](./research/README.md): study proposals, no performance results
+- [Research Lab](./research/README.md): published limited RMR results, open questions and proposed studies
+- [Durable evidence program](./research/robustness/README.md): current H0–H8 gates, applicability, freshness and reconstruction
+- [Gate and weakness state](./research/robustness/plan.json): authoritative execution order
+- [Partial research corpus](./research/robustness/corpus.json): claim, context and provenance seed; clinical review incomplete
 - [Machine-readable study plan](./research/protocol.json): planned A/B/C comparator and evaluation criteria
 - [Research agenda](./docs/RESEARCH.md): falsifiable questions
 - [Research protocol](./docs/RESEARCH_PROTOCOL.md): wearable prediction study proposal

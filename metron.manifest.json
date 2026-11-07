@@ -67,7 +67,11 @@
     "rmrValidationResults": "./research/ree-validation/G3_RESULTS.md",
     "rmrValidationAggregateResults": "./research/ree-validation/results/g3-enable-v1.json",
     "rmrValidationDecision": "./research/ree-validation/G4_DECISION.md",
-    "restingModelDecisionRecord": "./docs/adr/0005-retain-resting-default-pending-replication.md"
+    "restingModelDecisionRecord": "./docs/adr/0005-retain-resting-default-pending-replication.md",
+    "durableEvidenceProgram": "./research/robustness/README.md",
+    "robustnessPlan": "./research/robustness/plan.json",
+    "researchCorpus": "./research/robustness/corpus.json",
+    "corpusAudit": "./research/robustness/audit.mjs"
   },
   "implemented": {
     "energyEstimate": true,
@@ -133,6 +137,18 @@
       "decision": "retain-default-with-population-and-input-quality-guidance",
       "decisionArtifact": "research/ree-validation/G4_DECISION.md",
       "independentCohortReplicationCompleted": false
+    }
+  },
+  "researchPrograms": {
+    "durableEvidence": {
+      "programId": "METRON-ROBUST-001",
+      "plan": "research/robustness/plan.json",
+      "corpus": "research/robustness/corpus.json",
+      "dashboard": "https://github.com/andydrewie/metron/issues/22",
+      "statusAuthority": "research/robustness/plan.json",
+      "clinicalCoverage": "partial-unreviewed-seed",
+      "automaticMonitoringEnabled": false,
+      "productionIntegration": false
     }
   }
 }

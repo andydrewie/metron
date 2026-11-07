@@ -227,10 +227,20 @@
   "decisionArtifact": "research/ree-validation/G4_DECISION.md",
   "decisionRecord": "docs/adr/0005-retain-resting-default-pending-replication.md",
   "nextInvestigation": {
+    "id": "durable-evidence-H1",
+    "state": "in-progress",
+    "scope": "Complete claim/context ontology and applicability mapping in METRON-ROBUST-001",
+    "program": "research/robustness/plan.json",
+    "gate": "H1"
+  },
+  "deferredInvestigation": {
     "id": "ten-haaf-2014-source-admission",
     "state": "not-started",
     "scope": "Qualify Dataset S1 rights, file identity, codebook, equation-sex mapping and cohort independence before a separate frozen reanalysis",
     "candidate": "ten-haaf-2014",
-    "requiresNewProtocol": true
+    "requiresNewProtocol": true,
+    "sequencingReason": "Applicable H1 ontology, H2 evidence and H3 measurement gates precede cohort analysis.",
+    "sequencingState": "deferred",
+    "destinationGate": "H4"
   }
 }

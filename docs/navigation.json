@@ -13,7 +13,9 @@
     "inputs": "schemas/input.schema.json",
     "outputs": "schemas/output.schema.json",
     "safety": "AGENTS.md",
-    "decisionIndex": "docs/adr/index.json"
+    "decisionIndex": "docs/adr/index.json",
+    "researchExecution": "research/robustness/plan.json",
+    "researchCorpus": "research/robustness/corpus.json"
   },
   "conventions": {
     "paths": "repository-relative",
@@ -175,7 +177,9 @@
         "docs/navigation.json",
         "docs/COLLABORATION.md",
         "docs/adr/index.json",
-        "docs/ROADMAP.md"
+        "docs/ROADMAP.md",
+        "research/robustness/README.md",
+        "research/robustness/plan.json"
       ],
       "status": "documented"
     },
@@ -265,6 +269,24 @@
         "research/ree-validation/results/g3-enable-v1.json",
         "research/ree-validation/G4_DECISION.md",
         "docs/adr/0005-retain-resting-default-pending-replication.md"
+      ],
+      "status": "research-question"
+    },
+    {
+      "id": "audit-durable-evidence",
+      "label": "Map evidence, applicability, weaknesses and next research gates",
+      "intent": "review clinical and physiological scope, source freshness, contradictions and reconstruction requirements",
+      "audience": [
+        "human",
+        "researcher",
+        "agent"
+      ],
+      "entry": "research/robustness/README.md",
+      "next": [
+        "research/robustness/plan.json",
+        "research/robustness/corpus.json",
+        "research/robustness/audit.mjs",
+        "docs/adr/0006-durable-evidence-before-expansion.md"
       ],
       "status": "research-question"
     }

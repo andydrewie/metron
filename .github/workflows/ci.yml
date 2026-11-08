@@ -25,7 +25,7 @@ jobs:
           node bin/metron.mjs --file examples/strength-athlete.json > /tmp/athlete-output.json
           node -e "const a=require('/tmp/beginner-output.json'); if(!Number.isFinite(a.energy.estimatedTdeeKcal)) process.exit(1)"
   browser:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-24.04
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v5

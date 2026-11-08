@@ -1,0 +1,74 @@
+{
+  "schemaVersion": "1.0.0",
+  "studyId": "RMR-EXT-002",
+  "version": "1.1.0",
+  "state": "frozen-before-new-predictions",
+  "asOf": "2026-11-09",
+  "baselineCommit": "9bb5aa1d47675255218c5e893fc88098fe7562c3",
+  "prerequisites": [
+    "H2 complete for finite claims",
+    "H3 measurement audit complete with restrictions"
+  ],
+  "sourceAdmission": "research/robustness/h4/admission.json",
+  "sourceSha256": "c592369ac706c26e881b79aa2152df94d5117dad08a319d90eee56d00ab02262",
+  "target": "Measured resting energy expenditure, kcal/day, one observation per published row",
+  "primaryModels": [
+    "Metron Mifflin 10*kg+6.25*cm-5*years+(5 male or -161 female)",
+    "Metron Cunningham 500+22*(kg*(1-BF_percent/100))"
+  ],
+  "secondaryModel": "Cunningham using supplied FFM_kg; report any discrepancy from BF-derived FFM",
+  "conversion": {
+    "height": "metres * 100",
+    "reference": "kJ/day / 4.184",
+    "sex": {
+      "0": "female",
+      "1": "male"
+    }
+  },
+  "analysis": {
+    "primary": "Paired delta MAE = Cunningham MAE minus Mifflin MAE; negative favors Cunningham.",
+    "secondary": [
+      "Mean signed error (prediction minus reference)",
+      "RMSE",
+      "Fraction within \u00b110% of reference",
+      "Paired difference in within-10% fraction",
+      "Sample error SD and descriptive mean \u00b11.96 SD; not individual coverage",
+      "All 90 rows: equation-only Mifflin versus supplied-FFM Cunningham metrics; not production input eligibility."
+    ],
+    "bootstrap": {
+      "unit": "participant row, paired across models",
+      "replicates": 20000,
+      "seed": 20261109,
+      "generator": "xorshift32: x ^= x<<13; x ^= x>>>17; x ^= x<<5; unsigned state / 2**32; index=floor(u*n)",
+      "interval": "2.5th and 97.5th percentile; linear interpolation at (B-1)*p",
+      "meaning": "Sampling uncertainty in these cohort statistics, conditional on observed sample; not measurement error or personal prediction coverage"
+    },
+    "subgroups": [
+      "File equation-sex categories separately; n<10 descriptive only"
+    ],
+    "exclusions": [
+      "Fail entire admission on hash, column/codebook or reference-unit conflict.",
+      "Fail entire analysis on duplicate complete rows, unknown sex codes, nonfinite/missing required fields or nonpositive reference; investigate without silent deletion.",
+      "No post hoc outlier trimming or selected favorable subgroup.",
+      "Exclude records with body fat outside existing production 2\u201375% range from primary product evaluation; report count. Preserve all records in equation-only sensitivity using supplied FFM and Mifflin. Stop for any other range violation."
+    ],
+    "practicalDecision": {
+      "marginKcalPerDay": 25,
+      "meaning": "Engineering comparison margin, half the current display rounding increment; not a clinical benefit threshold.",
+      "criterion": "Cunningham supported for this cohort only if upper 95% paired delta MAE < -25 kcal/day and each prespecified sex subgroup upper limit < +25 kcal/day; n<10 or missing subgroup evidence prevents this conclusion.",
+      "defaultPolicy": "No automatic general-default change from this selected athletic cohort. Retain inspectable choices unless broadly relevant replicated evidence and input quality support transfer."
+    }
+  },
+  "noTuning": true,
+  "noRawParticipantPublication": true,
+  "previouslySeenOutcomes": "Published conclusions read before protocol; retrospective replication with disclosed outcome awareness.",
+  "independentReproduction": "Python equation/paired-bootstrap implementation and separately written JavaScript implementation; same analyst, same fixed seed; compare every prediction privately and aggregate outputs to numeric tolerances.",
+  "uncertaintyLimits": [
+    "No transportable personal interval",
+    "No combined TDEE validation",
+    "No causal outcome or clinical applicability"
+  ],
+  "protocolFreeze": "Freeze v1.1 before resuming predictions; preserve failed v1 and exact amendment commit in results.",
+  "amends": "protocol.v1.json",
+  "amendmentReason": "Initial run stopped on input eligibility before any aggregate prediction errors were inspected. One record has BF <2%, outside the existing product contract. No output results were produced."
+}

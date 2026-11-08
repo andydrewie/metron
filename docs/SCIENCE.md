@@ -15,6 +15,8 @@ Originally derived from indirect calorimetry data (n=498, ages 19–78); a popul
 
 **Cunningham (optional, requires body fat percentage):** `RMR = 500 + 22 × FFMkg`, with `FFMkg = weightKg × (1−bodyFatPercent/100)`. Original Cunningham equation: *AJCN* (1980), DOI: [10.1093/ajcn/33.11.2372](https://doi.org/10.1093/ajcn/33.11.2372). Body composition readings introduce their own measurement error. The app permits an explicit model choice instead of silently treating one as an accurate correction to the other.
 
+**H2-B evidence review (9 November 2026):** the [targeted equation review](../research/robustness/h2b/README.md) records original versus rounded Mifflin, different Cunningham coefficient sets, and the difference between historical estimated LBM/BMR and modern FFM/RMR. A publication's equation label does not establish the exact formula. Newer population comparisons support neither a universal winner nor automatic individual selection. Weijs's US denominator and Kfir's formula identity remain unresolved; source-specific restrictions are recorded before quantitative reuse. The frozen G0–G4 study is unchanged, and Brandl 2026 is provenance for the same enable cohort, not independent replication.
+
 ### G4 decision and choosing a resting equation
 
 **Keep Mifflin as the default and Cunningham as an explicit option.** [G4](../research/ree-validation/G4_DECISION.md) and [ADR-0005](./adr/0005-retain-resting-default-pending-replication.md) explain why Cunningham's better G3 result does not establish a universal replacement. Independent studies differ by population and measurement method. Retaining Mifflin is a provisional deployment decision, not evidence that it is always more accurate.

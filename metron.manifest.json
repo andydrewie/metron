@@ -162,7 +162,8 @@
       "automaticMonitoringEnabled": false,
       "productionIntegration": false,
       "boundedEvidenceReviews": [
-        "H2-A"
+        "H2-A",
+        "H2-B"
       ]
     }
   }

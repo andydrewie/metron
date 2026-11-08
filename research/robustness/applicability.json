@@ -1,7 +1,7 @@
 {
   "schemaVersion": "1.0.0",
   "documentType": "metron.claim-context-matrix",
-  "asOf": "2026-11-07",
+  "asOf": "2026-11-09",
   "claimCount": 35,
   "contextCount": 23,
   "cellCount": 805,
@@ -1149,6 +1149,182 @@
       "reviewId": "H2-A",
       "reviewPath": "research/robustness/h2a/review.json",
       "disposition": "inference-not-established-by-reviewed-designs",
+      "clinicalApplicabilityEstablished": false
+    },
+    {
+      "claimId": "C01",
+      "contextId": "general-adult",
+      "reviewId": "H2-B",
+      "reviewPath": "research/robustness/h2b/review.json",
+      "disposition": "published-arithmetic-with-bounded-transfer",
+      "clinicalApplicabilityEstablished": false
+    },
+    {
+      "claimId": "C01",
+      "contextId": "athlete-muscular",
+      "reviewId": "H2-B",
+      "reviewPath": "research/robustness/h2b/review.json",
+      "disposition": "published-arithmetic-with-bounded-transfer",
+      "clinicalApplicabilityEstablished": false
+    },
+    {
+      "claimId": "C01",
+      "contextId": "older-frailty",
+      "reviewId": "H2-B",
+      "reviewPath": "research/robustness/h2b/review.json",
+      "disposition": "published-arithmetic-with-bounded-transfer",
+      "clinicalApplicabilityEstablished": false
+    },
+    {
+      "claimId": "C01",
+      "contextId": "body-size",
+      "reviewId": "H2-B",
+      "reviewPath": "research/robustness/h2b/review.json",
+      "disposition": "published-arithmetic-with-bounded-transfer",
+      "clinicalApplicabilityEstablished": false
+    },
+    {
+      "claimId": "C02",
+      "contextId": "general-adult",
+      "reviewId": "H2-B",
+      "reviewPath": "research/robustness/h2b/review.json",
+      "disposition": "published-arithmetic-with-input-and-variant-constraints",
+      "clinicalApplicabilityEstablished": false
+    },
+    {
+      "claimId": "C02",
+      "contextId": "athlete-muscular",
+      "reviewId": "H2-B",
+      "reviewPath": "research/robustness/h2b/review.json",
+      "disposition": "published-arithmetic-with-input-and-variant-constraints",
+      "clinicalApplicabilityEstablished": false
+    },
+    {
+      "claimId": "C02",
+      "contextId": "older-frailty",
+      "reviewId": "H2-B",
+      "reviewPath": "research/robustness/h2b/review.json",
+      "disposition": "published-arithmetic-with-input-and-variant-constraints",
+      "clinicalApplicabilityEstablished": false
+    },
+    {
+      "claimId": "C02",
+      "contextId": "body-size",
+      "reviewId": "H2-B",
+      "reviewPath": "research/robustness/h2b/review.json",
+      "disposition": "published-arithmetic-with-input-and-variant-constraints",
+      "clinicalApplicabilityEstablished": false
+    },
+    {
+      "claimId": "C18",
+      "contextId": "general-adult",
+      "reviewId": "H2-B",
+      "reviewPath": "research/robustness/h2b/review.json",
+      "disposition": "provisional-deployment-decision-retained",
+      "clinicalApplicabilityEstablished": false
+    },
+    {
+      "claimId": "C18",
+      "contextId": "athlete-muscular",
+      "reviewId": "H2-B",
+      "reviewPath": "research/robustness/h2b/review.json",
+      "disposition": "provisional-deployment-decision-retained",
+      "clinicalApplicabilityEstablished": false
+    },
+    {
+      "claimId": "C18",
+      "contextId": "older-frailty",
+      "reviewId": "H2-B",
+      "reviewPath": "research/robustness/h2b/review.json",
+      "disposition": "provisional-deployment-decision-retained",
+      "clinicalApplicabilityEstablished": false
+    },
+    {
+      "claimId": "C18",
+      "contextId": "body-size",
+      "reviewId": "H2-B",
+      "reviewPath": "research/robustness/h2b/review.json",
+      "disposition": "provisional-deployment-decision-retained",
+      "clinicalApplicabilityEstablished": false
+    },
+    {
+      "claimId": "C19",
+      "contextId": "general-adult",
+      "reviewId": "H2-B",
+      "reviewPath": "research/robustness/h2b/review.json",
+      "disposition": "frozen-single-cohort-result-preserved",
+      "clinicalApplicabilityEstablished": false
+    },
+    {
+      "claimId": "C19",
+      "contextId": "older-frailty",
+      "reviewId": "H2-B",
+      "reviewPath": "research/robustness/h2b/review.json",
+      "disposition": "frozen-single-cohort-result-preserved",
+      "clinicalApplicabilityEstablished": false
+    },
+    {
+      "claimId": "C20",
+      "contextId": "general-adult",
+      "reviewId": "H2-B",
+      "reviewPath": "research/robustness/h2b/review.json",
+      "disposition": "frozen-descriptive-subgroups-no-paired-ranking",
+      "clinicalApplicabilityEstablished": false
+    },
+    {
+      "claimId": "C20",
+      "contextId": "older-frailty",
+      "reviewId": "H2-B",
+      "reviewPath": "research/robustness/h2b/review.json",
+      "disposition": "frozen-descriptive-subgroups-no-paired-ranking",
+      "clinicalApplicabilityEstablished": false
+    },
+    {
+      "claimId": "C20",
+      "contextId": "body-size",
+      "reviewId": "H2-B",
+      "reviewPath": "research/robustness/h2b/review.json",
+      "disposition": "frozen-descriptive-subgroups-no-paired-ranking",
+      "clinicalApplicabilityEstablished": false
+    },
+    {
+      "claimId": "C24",
+      "contextId": "athlete-muscular",
+      "reviewId": "H2-B",
+      "reviewPath": "research/robustness/h2b/review.json",
+      "disposition": "athlete-comparison-qualified-by-formula-and-method",
+      "clinicalApplicabilityEstablished": false
+    },
+    {
+      "claimId": "C25",
+      "contextId": "general-adult",
+      "reviewId": "H2-B",
+      "reviewPath": "research/robustness/h2b/review.json",
+      "disposition": "abstract-result-with-unresolved-denominator",
+      "clinicalApplicabilityEstablished": false
+    },
+    {
+      "claimId": "C25",
+      "contextId": "body-size",
+      "reviewId": "H2-B",
+      "reviewPath": "research/robustness/h2b/review.json",
+      "disposition": "abstract-result-with-unresolved-denominator",
+      "clinicalApplicabilityEstablished": false
+    },
+    {
+      "claimId": "C26",
+      "contextId": "athlete-muscular",
+      "reviewId": "H2-B",
+      "reviewPath": "research/robustness/h2b/review.json",
+      "disposition": "small-athlete-abstract-level-support",
+      "clinicalApplicabilityEstablished": false
+    },
+    {
+      "claimId": "C27",
+      "contextId": "athlete-muscular",
+      "reviewId": "H2-B",
+      "reviewPath": "research/robustness/h2b/review.json",
+      "disposition": "counterevidence-with-device-and-label-qualification",
       "clinicalApplicabilityEstablished": false
     }
   ]

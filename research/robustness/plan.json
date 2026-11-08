@@ -2,7 +2,7 @@
   "schemaVersion": "1.0.0",
   "documentType": "metron.robustness.execution-plan",
   "programId": "METRON-ROBUST-001",
-  "asOf": "2026-11-07",
+  "asOf": "2026-11-09",
   "status": "in-progress",
   "reuseHorizonThrough": "2027-11-07",
   "horizonMeaning": "Design and maintenance objective, not a guarantee of future scientific currency",
@@ -11,7 +11,7 @@
   "dashboard": "https://github.com/andydrewie/metron/issues/22",
   "currentGate": "H2",
   "completedStudy": "research/ree-validation/plan.json",
-  "coverage": "H1 finite repository claim inventory and explicit context matrix complete; clinical evidence and independent software/reconstruction review remain open.",
+  "coverage": "H1 finite inventory complete; H2-A and H2-B bounded reviews complete. Whole H2, clinical applicability, independent replication and reconstruction remain open.",
   "scope": [
     "energy quantities and model assumptions",
     "clinical applicability and physiological states",
@@ -112,14 +112,19 @@
         "research/robustness/h2a/README.md",
         "research/robustness/h2a/review.json",
         "research/robustness/h2a/sources.json",
-        "research/robustness/h2a/search-log.json"
+        "research/robustness/h2a/search-log.json",
+        "research/robustness/h2b/README.md",
+        "research/robustness/h2b/review.json",
+        "research/robustness/h2b/sources.json",
+        "research/robustness/h2b/search-log.json",
+        "research/robustness/h2b/equation-crosswalk.json"
       ],
       "closure": null,
       "completedSlices": [
-        "H2-A"
+        "H2-A",
+        "H2-B"
       ],
       "remainingSlices": [
-        "H2-B",
         "H2-C",
         "H2-D",
         "H2-E"
@@ -260,7 +265,7 @@
         "docs/SCIENCE.md",
         "core/model.js"
       ],
-      "nextTest": "Execute H2-A readiness/action source review, then remaining H2 queue; update claim/context dispositions only from inspected evidence.",
+      "nextTest": "Execute H2-C measurement/source review and remaining H2 slices; add scoped clinical reviews without promoting whole contexts from narrow samples.",
       "resolutionEvidence": [
         "research/robustness/H1_INVENTORY.md",
         "research/robustness/inventory.json",
@@ -328,14 +333,17 @@
       "gate": "H2",
       "ownerRole": "Evidence review lead",
       "state": "open",
-      "finding": "Citations exist but source-level currentness and correction checks are not unified.",
+      "finding": "Operational dated source records now cover H2-A and H2-B; remaining slices, inaccessible methods, exact-variant discrepancies and comprehensive correction checks remain open.",
       "evidence": [
         "docs/SCIENCE.md",
         "research/ree-validation/G4_DECISION.md"
       ],
-      "nextTest": "Review high-consequence sources with dated searches and preserve counterevidence; do not stamp imported sources fresh.",
-      "resolutionEvidence": [],
-      "residual": "Evidence work remains; no claim of closure."
+      "nextTest": "Complete H2-C/D/E and resolve source discrepancies before dependent reuse; recheck bounded H2-A/B on their review dates or early triggers.",
+      "resolutionEvidence": [
+        "research/robustness/h2a/review.json",
+        "research/robustness/h2b/review.json"
+      ],
+      "residual": "Partial progress; no whole-H2 or comprehensive clinical closure."
     },
     {
       "id": "W07",
@@ -412,11 +420,11 @@
   ],
   "nextTask": {
     "gate": "H2",
-    "action": "Review resting-equation applicability, current primary evidence and contradictions for C01/C02/C18/C19/C20/C24/C25/C26/C27; preserve frozen G0–G4 and defer new dataset admission to H4",
+    "action": "Review measurement and source semantics for C04/C05/C06/C07/C11/C12/C13/C17/C23/C28/C29/C30; preserve non-equivalent measures, provenance gaps and frozen G0–G4. Dataset admission remains H4 work.",
     "candidateDeferred": "ten-haaf-2014",
     "candidateDestinationGate": "H4",
     "requiresSeparateFrozenProtocol": true,
-    "slice": "H2-B",
+    "slice": "H2-C",
     "queue": "research/robustness/h2-review-queue.json"
   },
   "trackPrerequisites": {

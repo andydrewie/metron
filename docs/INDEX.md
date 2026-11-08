@@ -10,6 +10,7 @@ Choose a route according to what you are trying to do. **All readers share the s
 | Inspect the current implementation | [Architecture](./ARCHITECTURE.md) · [Core](../core/model.js) |
 | Inspect the assumptions or limitations | [Science](./SCIENCE.md) |
 | Find current research gates, weaknesses and clinical applicability coverage | [Durable evidence program](../research/robustness/README.md) · [Gate state](../research/robustness/plan.json) · [Claim corpus](../research/robustness/corpus.json) |
+| Inspect resting-equation evidence | [H2-B report](../research/robustness/h2b/README.md) · [Equation identities](../research/robustness/h2b/equation-crosswalk.json) · [Source records](../research/robustness/h2b/sources.json) |
 | Inspect the readiness evidence review | [H2-A report](../research/robustness/h2a/README.md) · [Sources](../research/robustness/h2a/sources.json) · [Review records](../research/robustness/h2a/review.json) |
 | Challenge the models or design an experiment | [Research Lab](../research/README.md) · [Research agenda](./RESEARCH.md) · [Research protocol](./RESEARCH_PROTOCOL.md) |
 | Understand future wearable/agent architecture | [Future architecture](./FUTURE_ARCHITECTURE.md) |

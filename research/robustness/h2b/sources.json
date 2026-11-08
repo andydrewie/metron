@@ -1,0 +1,374 @@
+{
+  "schemaVersion": "1.0.0",
+  "documentType": "metron.H2B-source-review",
+  "asOf": "2026-11-09",
+  "scope": "14 published source records, including foundational equation proposals and existing sources refreshed at inspected portions; not 14 independent validation trials.",
+  "sources": [
+    {
+      "id": "mifflin-1990",
+      "title": "Mifflin et al.: a new predictive equation for resting energy expenditure",
+      "doi": "10.1093/ajcn/51.2.241",
+      "url": "https://doi.org/10.1093/ajcn/51.2.241",
+      "publicationDate": "1990-02",
+      "design": "equation-development",
+      "populationAndWindow": "498 healthy adults, 247 women and 251 men, ages 19–78; 264 normal-weight and 234 obese.",
+      "measurement": "Indirect calorimetry; original coefficients 9.99W + 6.25H − 4.92A + 166S − 161. Authors also give the rounded form implemented by Metron.",
+      "finding": "Published arithmetic is supported; derivation fit is not independent validation or an individual accuracy guarantee.",
+      "limitations": "Healthy derivation population; no transfer to the complete pathological spectrum established.",
+      "sourceContentReviewedAt": "2026-11-09",
+      "inspectedPortions": "Primary PubMed/publisher indexed abstract and metadata; full methods not inspected.",
+      "rightsStatus": "Original publisher copyright; broad reuse rights unverified.",
+      "republication": "Bibliographic pointers and original analysis only. Source text, figures and tables are not relicensed under repository MIT.",
+      "freshnessClass": "foundational",
+      "correctionReview": {
+        "checkedAt": "2026-11-09",
+        "method": "Targeted DOI/title update-notice queries and visible notices; not exhaustive Crossmark or Retraction Watch reconciliation.",
+        "result": "No matching correction/retraction notice identified in inspected search results; absence is not certified.",
+        "unresolved": "Full update-registry reconciliation and inaccessible publisher content remain unverified."
+      },
+      "accessUrls": [
+        "https://pubmed.ncbi.nlm.nih.gov/2305711/"
+      ]
+    },
+    {
+      "id": "cunningham-1980",
+      "title": "Cunningham: reanalysis of factors influencing basal metabolic rate",
+      "doi": "10.1093/ajcn/33.11.2372",
+      "url": "https://doi.org/10.1093/ajcn/33.11.2372",
+      "publicationDate": "1980-11",
+      "design": "historical-data-reanalysis",
+      "populationAndWindow": "223 people from the 1919 Harris–Benedict data.",
+      "measurement": "BMR and estimated lean body mass; proposed 500 + 22 × LBM kg.",
+      "finding": "Arithmetic origin supports the named equation; estimated LBM and basal measurement are not automatically equivalent to modern FFM and RMR.",
+      "limitations": "Historical reanalysis; body-composition construct and measurement transfer require explicit qualification.",
+      "sourceContentReviewedAt": "2026-11-09",
+      "inspectedPortions": "Primary abstract and publication metadata; original participant methods not independently reconstructed.",
+      "rightsStatus": "Original publisher copyright; broad reuse rights unverified.",
+      "republication": "Bibliographic pointers and original analysis only. Source text, figures and tables are not relicensed under repository MIT.",
+      "freshnessClass": "foundational",
+      "correctionReview": {
+        "checkedAt": "2026-11-09",
+        "method": "Targeted DOI/title update-notice queries and visible notices; not exhaustive Crossmark or Retraction Watch reconciliation.",
+        "result": "No matching correction/retraction notice identified in inspected search results; absence is not certified.",
+        "unresolved": "Full update-registry reconciliation and inaccessible publisher content remain unverified."
+      },
+      "accessUrls": [
+        "https://pubmed.ncbi.nlm.nih.gov/7435418/"
+      ]
+    },
+    {
+      "id": "h2b-cunningham-1991",
+      "title": "Cunningham: body composition as a determinant of energy expenditure",
+      "doi": "10.1093/ajcn/54.6.963",
+      "url": "https://doi.org/10.1093/ajcn/54.6.963",
+      "publicationDate": "1991-12",
+      "design": "synthetic-review-and-equation-proposal",
+      "populationAndWindow": "Synthesis of adult body-composition and energy-expenditure studies, not a new independent Metron validation cohort.",
+      "measurement": "Proposed REE = 370 + 21.6 × FFM kg.",
+      "finding": "This named Cunningham equation differs from the 500 + 22 × FFM formula used by Metron.",
+      "limitations": "Do not assign performance by author/year label without checking coefficients and mass definition.",
+      "sourceContentReviewedAt": "2026-11-09",
+      "inspectedPortions": "Publisher indexed abstract and metadata, including proposed formula; full review not inspected.",
+      "rightsStatus": "© American Society for Nutrition 1991; no broad republication permission inferred.",
+      "republication": "Bibliographic pointers and original analysis only. Source text, figures and tables are not relicensed under repository MIT.",
+      "freshnessClass": "foundational",
+      "correctionReview": {
+        "checkedAt": "2026-11-09",
+        "method": "Targeted DOI/title update-notice queries and visible notices; not exhaustive Crossmark or Retraction Watch reconciliation.",
+        "result": "No matching correction/retraction notice identified in inspected search results; absence is not certified.",
+        "unresolved": "Full update-registry reconciliation and inaccessible publisher content remain unverified."
+      },
+      "accessUrls": [
+        "https://ajcn.nutrition.org/article/S0002-9165%2823%2931936-1/fulltext"
+      ]
+    },
+    {
+      "id": "ten-haaf-2014",
+      "title": "ten Haaf and Weijs: resting energy expenditure in recreational athletes",
+      "doi": "10.1371/journal.pone.0108460",
+      "url": "https://doi.org/10.1371/journal.pone.0108460",
+      "publicationDate": "2014-10-02",
+      "design": "cross-sectional-comparison-and-equation-development",
+      "populationAndWindow": "90 Dutch recreational athletes, 53 men and 37 women, ages 18–35; 103 initially tested, 13 excluded.",
+      "measurement": "Vmax Encore n29 hood calorimetry; 30 minutes with first five discarded, CV <10%. Bod Pod composition. Minimum four-hour fast, mean 9.1±4.6 hours; no exercise for 12 hours.",
+      "finding": "Cunningham within ±10% for 84.9% of men and 78.4% of women; Mifflin below 50%. Table 4 uses 500 + 22FFM and the original unrounded Mifflin coefficients.",
+      "limitations": "Equation-development results are not independent external validation. Published Mifflin variant differs from Metron rounded form; no reanalysis here. Athlete sampling, preparation and ADP do not transfer to all users.",
+      "sourceContentReviewedAt": "2026-11-09",
+      "inspectedPortions": "Publisher abstract, methods, results, limitations and licence; published institutional PDF Table 4 checked directly.",
+      "rightsStatus": "Publisher states Creative Commons Attribution; licence version not independently confirmed.",
+      "republication": "Bibliographic pointers and original analysis only. Source text, figures and tables are not relicensed under repository MIT.",
+      "freshnessClass": "active-empirical",
+      "correctionReview": {
+        "checkedAt": "2026-11-09",
+        "method": "Targeted DOI/title update-notice queries and visible notices; not exhaustive Crossmark or Retraction Watch reconciliation.",
+        "result": "No matching correction/retraction notice identified in inspected search results; absence is not certified.",
+        "unresolved": "Full update-registry reconciliation and inaccessible publisher content remain unverified."
+      },
+      "accessUrls": [
+        "https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0108460",
+        "https://pure.hva.nl/ws/portalfiles/portal/2070091/document.pdf"
+      ]
+    },
+    {
+      "id": "weijs-2008",
+      "title": "Weijs: prediction validity in US and Dutch overweight and obese adults",
+      "doi": "10.1093/ajcn/88.4.959",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/18842782/",
+      "publicationDate": "2008-10",
+      "design": "two-population-equation-comparison",
+      "populationAndWindow": "Adults ages 18–65, BMI 25–40. US abstract says 338 (180 women, 158 men); indexed publisher results/Table 1/Table 4 say 239 (137 women, 102 men). Dutch sample 208 is consistent.",
+      "measurement": "Indirect calorimetry; Dutch preparation overnight or at least four-hour fast and stable gas exchange. Full US method reconciliation unavailable.",
+      "finding": "Abstract reports US Mifflin accuracy 79% within ±10%, bias −1%, RMSE 136 kcal/day. Dutch leading equations differ.",
+      "limitations": "US denominator discrepancy remains unresolved. No authoritative combined US sample count, pooling or sample weighting. Not a direct Mifflin-versus-Cunningham superiority comparison.",
+      "sourceContentReviewedAt": "2026-11-09",
+      "inspectedPortions": "PubMed abstract and publisher indexed methods/results/Table 1/Table 4. Direct publisher full-page access returned 403.",
+      "rightsStatus": "© 2008 ASN/Elsevier; Open Archive availability does not establish blanket CC rights.",
+      "republication": "Bibliographic pointers and original analysis only. Source text, figures and tables are not relicensed under repository MIT.",
+      "freshnessClass": "active-empirical",
+      "correctionReview": {
+        "checkedAt": "2026-11-09",
+        "method": "Targeted DOI/title update-notice queries and visible notices; not exhaustive Crossmark or Retraction Watch reconciliation.",
+        "result": "No matching correction/retraction notice identified in inspected search results; absence is not certified.",
+        "unresolved": "Full update-registry reconciliation and inaccessible publisher content remain unverified."
+      },
+      "accessUrls": [
+        "https://ajcn.nutrition.org/article/S0002-9165%2823%2923309-2/fulltext"
+      ]
+    },
+    {
+      "id": "tinsley-2019",
+      "title": "Tinsley et al.: resting metabolic rate in muscular physique athletes",
+      "doi": "10.1139/apnm-2018-0412",
+      "url": "https://doi.org/10.1139/apnm-2018-0412",
+      "publicationDate": "2019-04",
+      "design": "cross-sectional-equation-and-device-comparison",
+      "populationAndWindow": "27 physique athletes, 17 men and 10 women. Online 21 September 2018; issue April 2019.",
+      "measurement": "Parvo Medics TrueOne 2400 reference; DXA composition; additional Fitmate and Breezing comparisons.",
+      "finding": "Abstract reports most equations underestimate; ten Haaf FFM and named Cunningham (1980) may be acceptable in this sample.",
+      "limitations": "Small selected sample; exact equation table and individual error metrics not inspected. New equations used leave-one-out cross-validation, not an independent cohort.",
+      "sourceContentReviewedAt": "2026-11-09",
+      "inspectedPortions": "Primary indexed abstract and metadata only; direct PubMed extraction was empty.",
+      "rightsStatus": "Full-text reuse rights unverified.",
+      "republication": "Bibliographic pointers and original analysis only. Source text, figures and tables are not relicensed under repository MIT.",
+      "freshnessClass": "active-empirical",
+      "correctionReview": {
+        "checkedAt": "2026-11-09",
+        "method": "Targeted DOI/title update-notice queries and visible notices; not exhaustive Crossmark or Retraction Watch reconciliation.",
+        "result": "No matching correction/retraction notice identified in inspected search results; absence is not certified.",
+        "unresolved": "Full update-registry reconciliation and inaccessible publisher content remain unverified."
+      },
+      "accessUrls": [
+        "https://pubmed.ncbi.nlm.nih.gov/30240568/"
+      ]
+    },
+    {
+      "id": "sordi-2024",
+      "title": "Sordi et al.: predicted versus measured RMR in cross-training participants",
+      "doi": "10.3390/ijerph21070891",
+      "url": "https://doi.org/10.3390/ijerph21070891",
+      "publicationDate": "2024-07",
+      "design": "cross-sectional-equation-comparison",
+      "populationAndWindow": "65 novice/advanced cross-training participants, 31 men and 34 women; injuries, chronic disease and physical limitations excluded.",
+      "measurement": "FitMate PRO calorimetry uses fixed RQ 0.85; 15-minute test. InBody 570 estimates composition. Eight-hour fast, no exercise previous day, avoid caffeine 12 hours.",
+      "finding": "Cunningham is among the most discrepant tested equations. Table 1 labels Cunningham 1991 but specifies 500 + 22FFM, matching Metron arithmetic. Mifflin is not compared.",
+      "limitations": "Device/preparation and BIA-derived FFM affect comparability. BIA device RMR output is an estimate, not an independent measured reference. Cannot infer Mifflin superiority.",
+      "sourceContentReviewedAt": "2026-11-09",
+      "inspectedPortions": "Primary PMC full text: abstract, methods, Table 1, results, exclusions and licence.",
+      "rightsStatus": "CC BY 4.0 as displayed.",
+      "republication": "Bibliographic pointers and original analysis only. Source text, figures and tables are not relicensed under repository MIT.",
+      "freshnessClass": "active-empirical",
+      "correctionReview": {
+        "checkedAt": "2026-11-09",
+        "method": "Targeted DOI/title update-notice queries and visible notices; not exhaustive Crossmark or Retraction Watch reconciliation.",
+        "result": "No matching correction/retraction notice identified in inspected search results; absence is not certified.",
+        "unresolved": "Full update-registry reconciliation and inaccessible publisher content remain unverified."
+      },
+      "accessUrls": [
+        "https://pmc.ncbi.nlm.nih.gov/articles/PMC11276680/"
+      ]
+    },
+    {
+      "id": "siedler-2023",
+      "title": "Siedler et al.: performance of 15 bioimpedance devices",
+      "doi": "10.1017/S0007114522003749",
+      "url": "https://doi.org/10.1017/S0007114522003749",
+      "publicationDate": "2023-09-14",
+      "design": "device-comparison",
+      "populationAndWindow": "73 healthy adults ages 19–50; 37 returned after 12–16 weeks. Online 21 November 2022.",
+      "measurement": "15 BIA devices versus a four-compartment reference incorporating ADP, DXA and bioimpedance spectroscopy.",
+      "finding": "Device repeatability and agreement with reference are different properties; composition input uncertainty remains material.",
+      "limitations": "Not a validation of enable SECA mBCA 515 or a universal consumer BIA error distribution. Do not propagate these device errors into an individual Metron interval.",
+      "sourceContentReviewedAt": "2026-11-09",
+      "inspectedPortions": "Primary PMC abstract, publication metadata and licence; not every device-specific results table.",
+      "rightsStatus": "CC BY 4.0 as displayed.",
+      "republication": "Bibliographic pointers and original analysis only. Source text, figures and tables are not relicensed under repository MIT.",
+      "freshnessClass": "active-empirical",
+      "correctionReview": {
+        "checkedAt": "2026-11-09",
+        "method": "Targeted DOI/title update-notice queries and visible notices; not exhaustive Crossmark or Retraction Watch reconciliation.",
+        "result": "No matching correction/retraction notice identified in inspected search results; absence is not certified.",
+        "unresolved": "Full update-registry reconciliation and inaccessible publisher content remain unverified."
+      },
+      "accessUrls": [
+        "https://pmc.ncbi.nlm.nih.gov/articles/PMC10404482/"
+      ]
+    },
+    {
+      "id": "h2b-brandl-2026",
+      "title": "Brandl et al.: machine learning predictions of resting metabolic rate",
+      "doi": "10.1152/ajpendo.00375.2025",
+      "url": "https://doi.org/10.1152/ajpendo.00375.2025",
+      "publicationDate": "2026-02-01",
+      "design": "cohort-analysis-and-model-development",
+      "populationAndWindow": "enable Freising 351 and Nuremberg 103, same 454-person source family as Metron G3. Authors also evaluate Kiel 361; those participant files are not admitted by Metron. Ahead 6 January, online 29 January 2026.",
+      "measurement": "COSMED Quark RMR hood calorimetry and SECA mBCA 515 composition, as documented in inspected methods and frozen G3 provenance. Source uses Lasso development, distinct from Metron fixed equations.",
+      "finding": "Adds publication provenance for the same source cohort; does not supply independent replication of Metron G3.",
+      "limitations": "Training fit, authors’ held-out evaluation and our fixed-equation paired evaluation answer different questions. No new participant records downloaded.",
+      "sourceContentReviewedAt": "2026-11-09",
+      "inspectedPortions": "PubMed abstract plus indexed publisher methods, cohort table and licence. Direct publisher page returned 403.",
+      "rightsStatus": "Paper CC BY-NC-ND 4.0 as displayed; released dataset CC BY 4.0 in frozen G0 record. Paper and data licences differ.",
+      "republication": "Bibliographic pointers and original analysis only. Source text, figures and tables are not relicensed under repository MIT.",
+      "freshnessClass": "active-empirical",
+      "correctionReview": {
+        "checkedAt": "2026-11-09",
+        "method": "Targeted DOI/title update-notice queries and visible notices; not exhaustive Crossmark or Retraction Watch reconciliation.",
+        "result": "No matching correction/retraction notice identified in inspected search results; absence is not certified.",
+        "unresolved": "Full update-registry reconciliation and inaccessible publisher content remain unverified."
+      },
+      "accessUrls": [
+        "https://pubmed.ncbi.nlm.nih.gov/41494660/",
+        "https://journals.physiology.org/doi/10.1152/ajpendo.00375.2025"
+      ]
+    },
+    {
+      "id": "h2b-kfir-2023",
+      "title": "Kfir, Lahav and Gepner: prediction of RMR using fat-free mass",
+      "doi": "10.3390/nu15040805",
+      "url": "https://doi.org/10.3390/nu15040805",
+      "publicationDate": "2023-02-04",
+      "design": "retrospective-clinic-comparison-and-internal-validation",
+      "populationAndWindow": "3,001 Israeli nutrition-clinic patients ages 20–95, 52% women; random 2,251 development and 750 validation split.",
+      "measurement": "DXA; Quark RMR mask, 12-hour fast, no exercise for 24 hours, 20-minute rest, 21-minute recording with first five discarded.",
+      "finding": "Authors report Mifflin and Cunningham underprediction; formula identity for the reported Cunningham output is unresolved.",
+      "limitations": "Citation names 1980, but implemented coefficients were not located. Reported Cunningham mean 1,521 and mean FFM 53.3 do not reconcile with 500 + 22 × mean FFM. This flags uncertainty, not proof of a different implementation. Methods and Table 1 also interchange thyroid/bariatric subgroup counts (46/136); no disease-specific conclusions admitted.",
+      "sourceContentReviewedAt": "2026-11-09",
+      "inspectedPortions": "PMC abstract, methods, Table 1, aggregate results, references and licence.",
+      "rightsStatus": "CC BY 4.0 as displayed.",
+      "republication": "Bibliographic pointers and original analysis only. Source text, figures and tables are not relicensed under repository MIT.",
+      "freshnessClass": "active-empirical",
+      "correctionReview": {
+        "checkedAt": "2026-11-09",
+        "method": "Targeted DOI/title update-notice queries and visible notices; not exhaustive Crossmark or Retraction Watch reconciliation.",
+        "result": "No matching correction/retraction notice identified in inspected search results; absence is not certified.",
+        "unresolved": "Full update-registry reconciliation and inaccessible publisher content remain unverified."
+      },
+      "accessUrls": [
+        "https://pmc.ncbi.nlm.nih.gov/articles/PMC9960966/"
+      ]
+    },
+    {
+      "id": "h2b-cai-2026",
+      "title": "Cai et al.: RMR equations in healthy community-dwelling Chinese older adults",
+      "doi": "10.3390/nu18020344",
+      "url": "https://doi.org/10.3390/nu18020344",
+      "publicationDate": "2026-01-21",
+      "design": "equation-development-and-internal-split-validation",
+      "populationAndWindow": "189 adults ages 60–94 in Shanghai; 132 development and 57 validation. Cancer, diabetes, anemia, thyroid disease and RMR-altering medications/hormones excluded; stable weight required.",
+      "measurement": "DXA and Quark CPET canopy; 12-hour fast, 15–20-minute rest and 60-minute measurement with reported steady-state criteria.",
+      "finding": "In the 57-person validation split, Mifflin 49.1% and the new Cai model 82.5% within ±10%. Table 1 labels Cunningham (1980) but uses 501.6 + 21.6FFM.",
+      "limitations": "Reported 10.5% Cunningham accuracy is not performance of Metron 500 + 22FFM. Internal split is not independent-site replication; authors note weak performance at age ≥80.",
+      "sourceContentReviewedAt": "2026-11-09",
+      "inspectedPortions": "PMC abstract, methods, Table 1, Table 8, limitations and licence. Publisher direct access returned 429.",
+      "rightsStatus": "Creative Commons Attribution as displayed.",
+      "republication": "Bibliographic pointers and original analysis only. Source text, figures and tables are not relicensed under repository MIT.",
+      "freshnessClass": "active-empirical",
+      "correctionReview": {
+        "checkedAt": "2026-11-09",
+        "method": "Targeted DOI/title update-notice queries and visible notices; not exhaustive Crossmark or Retraction Watch reconciliation.",
+        "result": "No matching correction/retraction notice identified in inspected search results; absence is not certified.",
+        "unresolved": "Full update-registry reconciliation and inaccessible publisher content remain unverified."
+      },
+      "accessUrls": [
+        "https://pmc.ncbi.nlm.nih.gov/articles/PMC12844918/"
+      ]
+    },
+    {
+      "id": "h2b-dong-2026",
+      "title": "Dong et al.: RMR prediction in Chinese older adults with sarcopenia",
+      "doi": "10.1002/ncp.70131",
+      "url": "https://doi.org/10.1002/ncp.70131",
+      "publicationDate": "2026-10",
+      "design": "cross-sectional-equation-comparison",
+      "populationAndWindow": "43 free-living adults age ≥60 in Suzhou meeting AWGS 2019 sarcopenia criteria. Online 7 May 2026.",
+      "measurement": "Indirect calorimetry in abstract; exact device, equation coefficients and accuracy definition not verified from full methods.",
+      "finding": "All 11 equations have reported accuracy below 40%; Mifflin_W has the lowest reported bias, 16.54%, and RMSE 216.51 kcal/day.",
+      "limitations": "Relative best performance can still be poor. Do not pool its accuracy with verified ±10% definitions or infer all older/frail patients are equivalent. Severity, treatment and intersecting conditions unresolved.",
+      "sourceContentReviewedAt": "2026-11-09",
+      "inspectedPortions": "PubMed abstract and metadata only; Wiley full-text redirect inaccessible.",
+      "rightsStatus": "Full-text reuse rights unverified.",
+      "republication": "Bibliographic pointers and original analysis only. Source text, figures and tables are not relicensed under repository MIT.",
+      "freshnessClass": "active-empirical",
+      "correctionReview": {
+        "checkedAt": "2026-11-09",
+        "method": "Targeted DOI/title update-notice queries and visible notices; not exhaustive Crossmark or Retraction Watch reconciliation.",
+        "result": "No matching correction/retraction notice identified in inspected search results; absence is not certified.",
+        "unresolved": "Full update-registry reconciliation and inaccessible publisher content remain unverified."
+      },
+      "accessUrls": [
+        "https://pubmed.ncbi.nlm.nih.gov/42095278/"
+      ]
+    },
+    {
+      "id": "h2b-delbiondo-2026",
+      "title": "Del Biondo et al.: prediction of REE in midlife females",
+      "doi": "10.1080/27697061.2026.2658497",
+      "url": "https://doi.org/10.1080/27697061.2026.2658497",
+      "publicationDate": "2026-08",
+      "design": "cross-sectional-equation-comparison",
+      "populationAndWindow": "45 perimenopausal women. Online 21 April 2026.",
+      "measurement": "Indirect calorimetry and DXA lean soft tissue; exact Cunningham variant and full preparation protocol unverified.",
+      "finding": "Abstract measured minus predicted mean ± SE: Cunningham −157.8 ±28.7 and Mifflin −18.5 ±31.7 kcal/day.",
+      "limitations": "A nonsignificant mean difference is not equivalence or individual agreement. Lean soft tissue is not automatically FFM. Perimenopause is not pregnancy/lactation; treatment and clinical intersections not reviewed.",
+      "sourceContentReviewedAt": "2026-11-09",
+      "inspectedPortions": "PubMed primary abstract/metadata only; publisher full text returned 403.",
+      "rightsStatus": "Full-text reuse rights unverified.",
+      "republication": "Bibliographic pointers and original analysis only. Source text, figures and tables are not relicensed under repository MIT.",
+      "freshnessClass": "active-empirical",
+      "correctionReview": {
+        "checkedAt": "2026-11-09",
+        "method": "Targeted DOI/title update-notice queries and visible notices; not exhaustive Crossmark or Retraction Watch reconciliation.",
+        "result": "No matching correction/retraction notice identified in inspected search results; absence is not certified.",
+        "unresolved": "Full update-registry reconciliation and inaccessible publisher content remain unverified."
+      },
+      "accessUrls": [
+        "https://pubmed.ncbi.nlm.nih.gov/42012364/"
+      ]
+    },
+    {
+      "id": "h2b-xu-2026",
+      "title": "Xu et al.: RMR equation validity in Chinese nursing-home residents",
+      "doi": "10.3389/fnut.2026.1860294",
+      "url": "https://doi.org/10.3389/fnut.2026.1860294",
+      "publicationDate": "2026-07-28",
+      "design": "single-site-cross-sectional-equation-comparison",
+      "populationAndWindow": "156 residents of one 300-bed Chinese nursing home, 59 men/97 women, mean age 83.4; measured November–December 2023. 45.5% at malnutrition risk.",
+      "measurement": "CCM Express hood VO2/VCO2 calorimetry after eight-hour fast, 15-minute rest and 30-minute steady-state measurement; InBody S10 FFM after 12-hour fast. Table 1 uses exact 500 + 22FFM and rounded Mifflin.",
+      "finding": "Within ±10%: Cunningham 45.5%, Mifflin 17.3%. Cunningham measured-minus-predicted limits of agreement −419.7 to 473.9 kcal/day despite small mean bias.",
+      "limitations": "Selected single facility. Excluded pulmonary disease, fever, rheumatoid arthritis, thyroid/metabolic disease, anesthetics/benzodiazepines and enteral feeding; final sample without significant disability. Not the whole institutionalized or frail population.",
+      "sourceContentReviewedAt": "2026-11-09",
+      "inspectedPortions": "Publisher full text: methods, Table 1, results, individual-agreement limits, exclusions and licence.",
+      "rightsStatus": "Creative Commons Attribution as displayed.",
+      "republication": "Bibliographic pointers and original analysis only. Source text, figures and tables are not relicensed under repository MIT.",
+      "freshnessClass": "active-empirical",
+      "correctionReview": {
+        "checkedAt": "2026-11-09",
+        "method": "Targeted DOI/title update-notice queries and visible notices; not exhaustive Crossmark or Retraction Watch reconciliation.",
+        "result": "No matching correction/retraction notice identified in inspected search results; absence is not certified.",
+        "unresolved": "Full update-registry reconciliation and inaccessible publisher content remain unverified."
+      },
+      "accessUrls": [
+        "https://www.frontiersin.org/journals/nutrition/articles/10.3389/fnut.2026.1860294/full"
+      ]
+    }
+  ]
+}

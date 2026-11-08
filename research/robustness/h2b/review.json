@@ -1,0 +1,428 @@
+{
+  "schemaVersion": "1.0.0",
+  "documentType": "metron.H2B-review",
+  "reviewId": "H2-B",
+  "asOf": "2026-11-09",
+  "status": "complete-for-declared-slice",
+  "baselineCommit": "6146ae6241d4627ba155036c5fba03906d79602b",
+  "scope": "Nine specified resting-equation claim families; targeted current evidence, exact equation identity and contradictions. No new cohort admission, reanalysis or clinical clearance.",
+  "searchLog": "research/robustness/h2b/search-log.json",
+  "sourceRegistry": "research/robustness/h2b/sources.json",
+  "report": "research/robustness/h2b/README.md",
+  "equationCrosswalk": "research/robustness/h2b/equation-crosswalk.json",
+  "reviewerRole": "Maintaining agent; not independent duplicate scientific review",
+  "clinicalApplicabilityEstablished": false,
+  "algorithmEmpiricallyValidated": false,
+  "productionBehaviorChanged": false,
+  "claimReviews": [
+    {
+      "claimId": "C01",
+      "question": "Fixed Mifflin arithmetic and its limited empirical evaluation",
+      "disposition": "published-arithmetic-with-bounded-transfer",
+      "sourceIds": [
+        "mifflin-1990",
+        "ten-haaf-2014",
+        "weijs-2008",
+        "h2b-cai-2026",
+        "h2b-dong-2026",
+        "h2b-delbiondo-2026",
+        "h2b-xu-2026"
+      ],
+      "searchIds": [
+        "Q01",
+        "Q04",
+        "Q05",
+        "Q06",
+        "Q12",
+        "Q13",
+        "Q15",
+        "Q16",
+        "Q17",
+        "Q27",
+        "Q32"
+      ],
+      "finding": "Published rounded Mifflin arithmetic is established; performance changes across selected populations and protocols. Internal development fit is not external validation.",
+      "permittedInterpretation": "Educational estimate. No universal accuracy, automatic demographic selector or clinical prescription.",
+      "reviewedContextIds": [
+        "general-adult",
+        "athlete-muscular",
+        "older-frailty",
+        "body-size"
+      ],
+      "reviewScope": "Bounded source-specific equation/provenance and transfer review, not review of every patient, severity, treatment or intersection in these contexts.",
+      "clinicalApplicabilityEstablished": false,
+      "directAlgorithmValidation": false,
+      "reviewedAt": "2026-11-09",
+      "nextReviewBy": "2027-02-07",
+      "nextGate": "H4",
+      "reversalTrigger": "Preserve the G3 estimate and require an exact-variant independent H4 protocol before a default change."
+    },
+    {
+      "claimId": "C02",
+      "question": "Cunningham arithmetic and body-composition dependence",
+      "disposition": "published-arithmetic-with-input-and-variant-constraints",
+      "sourceIds": [
+        "cunningham-1980",
+        "h2b-cunningham-1991",
+        "siedler-2023",
+        "sordi-2024",
+        "h2b-kfir-2023",
+        "h2b-cai-2026",
+        "h2b-xu-2026"
+      ],
+      "searchIds": [
+        "Q02",
+        "Q03",
+        "Q04",
+        "Q08",
+        "Q10",
+        "Q23",
+        "Q24",
+        "Q26",
+        "Q29",
+        "Q30",
+        "Q31"
+      ],
+      "finding": "Metron uses 500 + 22FFM; original 1980 source used estimated LBM/BMR. Several publications label other or unresolved variants Cunningham. BIA repeatability is not reference accuracy.",
+      "permittedInterpretation": "Explicit optional comparison with body-composition provenance. Never treat DXA lean soft tissue, SMM, historical LBM and FFM as automatically interchangeable.",
+      "reviewedContextIds": [
+        "general-adult",
+        "athlete-muscular",
+        "older-frailty",
+        "body-size"
+      ],
+      "reviewScope": "Bounded source-specific equation/provenance and transfer review, not review of every patient, severity, treatment or intersection in these contexts.",
+      "clinicalApplicabilityEstablished": false,
+      "directAlgorithmValidation": false,
+      "reviewedAt": "2026-11-09",
+      "nextReviewBy": "2027-02-07",
+      "nextGate": "H4",
+      "reversalTrigger": "H3 must characterize composition provenance and H4 must test exact arithmetic on independently admitted data."
+    },
+    {
+      "claimId": "C18",
+      "question": "G4 retains Mifflin as default and Cunningham as an explicit option pending independent replication.",
+      "disposition": "provisional-deployment-decision-retained",
+      "sourceIds": [
+        "ten-haaf-2014",
+        "weijs-2008",
+        "tinsley-2019",
+        "sordi-2024",
+        "siedler-2023",
+        "h2b-brandl-2026",
+        "h2b-kfir-2023",
+        "h2b-cai-2026",
+        "h2b-dong-2026",
+        "h2b-delbiondo-2026",
+        "h2b-xu-2026"
+      ],
+      "searchIds": [
+        "Q04",
+        "Q05",
+        "Q06",
+        "Q07",
+        "Q08",
+        "Q09",
+        "Q10",
+        "Q12",
+        "Q13",
+        "Q15",
+        "Q16",
+        "Q17",
+        "Q20",
+        "Q29",
+        "Q30",
+        "Q31",
+        "Q32"
+      ],
+      "finding": "Evidence includes meaningful Cunningham advantages and disadvantages. G3 and Brandl share a cohort; newer studies do not establish a universally preferred replacement or switching rule.",
+      "permittedInterpretation": "Retain ADR-0005 as a deployment judgment, not a claim that Mifflin is always more accurate. No production change.",
+      "reviewedContextIds": [
+        "general-adult",
+        "athlete-muscular",
+        "older-frailty",
+        "body-size"
+      ],
+      "reviewScope": "Bounded source-specific equation/provenance and transfer review, not review of every patient, severity, treatment or intersection in these contexts.",
+      "clinicalApplicabilityEstablished": false,
+      "directAlgorithmValidation": false,
+      "reviewedAt": "2026-11-09",
+      "nextReviewBy": "2027-02-07",
+      "nextGate": "H4",
+      "reversalTrigger": "Relevant independent exact-formula replication, documented input quality, individual errors and prespecified subgroup harm criteria may reverse the choice."
+    },
+    {
+      "claimId": "C19",
+      "question": "G3 reports cohort flow and paired fixed-equation errors in 454 included participants from one released cohort.",
+      "disposition": "frozen-single-cohort-result-preserved",
+      "sourceIds": [
+        "h2b-brandl-2026"
+      ],
+      "searchIds": [
+        "Q09",
+        "Q30"
+      ],
+      "finding": "Frozen G3 compares paired errors in 454 eligible participants from 459 raw rows; 351 Freising and 103 Nuremberg. Cunningham MAE is lower by 36.2 kcal/day, paired bootstrap 95% CI −49.5 to −22.6.",
+      "permittedInterpretation": "Single-source external retrospective fixed-equation comparison. Brandl publication is provenance, not independent replication; bootstrap precision does not establish transportability.",
+      "reviewedContextIds": [
+        "general-adult",
+        "older-frailty"
+      ],
+      "reviewScope": "Bounded source-specific equation/provenance and transfer review, not review of every patient, severity, treatment or intersection in these contexts.",
+      "clinicalApplicabilityEstablished": false,
+      "directAlgorithmValidation": false,
+      "reviewedAt": "2026-11-09",
+      "nextReviewBy": "2027-02-07",
+      "nextGate": "H4",
+      "reversalTrigger": "Independent H4 data and separately frozen analysis; retain current published cohort flow and estimates."
+    },
+    {
+      "claimId": "C20",
+      "question": "G3 reports Mifflin-only subgroup metrics and a prespecified age sensitivity analysis.",
+      "disposition": "frozen-descriptive-subgroups-no-paired-ranking",
+      "sourceIds": [
+        "mifflin-1990",
+        "h2b-brandl-2026"
+      ],
+      "searchIds": [
+        "Q01",
+        "Q09",
+        "Q30"
+      ],
+      "finding": "G3 subgroup table describes Mifflin only. Prespecified age 19–78 sensitivity includes 390, MAE 159.2 kcal/day, 57.4% within ±10%; primary paired sample remains 454.",
+      "permittedInterpretation": "Do not rank both equations within G3 subgroups from this table, choose an individualized equation, or treat age filtering as the new primary analysis.",
+      "reviewedContextIds": [
+        "general-adult",
+        "older-frailty",
+        "body-size"
+      ],
+      "reviewScope": "Bounded source-specific equation/provenance and transfer review, not review of every patient, severity, treatment or intersection in these contexts.",
+      "clinicalApplicabilityEstablished": false,
+      "directAlgorithmValidation": false,
+      "reviewedAt": "2026-11-09",
+      "nextReviewBy": "2027-02-07",
+      "nextGate": "H4",
+      "reversalTrigger": "A prespecified paired subgroup comparison with adequate sample size, uncertainty and independent data is required."
+    },
+    {
+      "claimId": "C24",
+      "question": "G4 records ten Haaf 2014 findings in 90 Dutch athletes, including sex-specific Cunningham agreement and Mifflin comparison.",
+      "disposition": "athlete-comparison-qualified-by-formula-and-method",
+      "sourceIds": [
+        "ten-haaf-2014"
+      ],
+      "searchIds": [
+        "Q05",
+        "Q28"
+      ],
+      "finding": "In 90 selected athletes, 500 + 22FFM performed well by sex-specific ±10% accuracy, while the original unrounded Mifflin form performed less well.",
+      "permittedInterpretation": "Transfer only the exact source result and measurement context; no reanalysis of Metron rounded form or independent validation of newly fitted ten Haaf equations.",
+      "reviewedContextIds": [
+        "athlete-muscular"
+      ],
+      "reviewScope": "Bounded source-specific equation/provenance and transfer review, not review of every patient, severity, treatment or intersection in these contexts.",
+      "clinicalApplicabilityEstablished": false,
+      "directAlgorithmValidation": false,
+      "reviewedAt": "2026-11-09",
+      "nextReviewBy": "2027-02-07",
+      "nextGate": "H4",
+      "reversalTrigger": "H4 athlete source admission requires independent protocol, rights and measurement checks; published results are already known."
+    },
+    {
+      "claimId": "C25",
+      "question": "G4 records Weijs 2008 results in US and Dutch overweight/obese adult samples with different equation performance.",
+      "disposition": "abstract-result-with-unresolved-denominator",
+      "sourceIds": [
+        "weijs-2008"
+      ],
+      "searchIds": [
+        "Q06",
+        "Q11",
+        "Q14",
+        "Q18",
+        "Q19",
+        "Q21",
+        "Q22",
+        "Q27"
+      ],
+      "finding": "US Mifflin abstract statistics and different Dutch leaders are relevant; abstract US n=338 conflicts with indexed results n=239. Dutch n=208 is consistent.",
+      "permittedInterpretation": "Attribute figures to their inspected portion. Do not pick a reconciled US denominator or pool/sample-weight this source. G4 remains a dated abstract-level account.",
+      "reviewedContextIds": [
+        "general-adult",
+        "body-size"
+      ],
+      "reviewScope": "Bounded source-specific equation/provenance and transfer review, not review of every patient, severity, treatment or intersection in these contexts.",
+      "clinicalApplicabilityEstablished": false,
+      "directAlgorithmValidation": false,
+      "reviewedAt": "2026-11-09",
+      "nextReviewBy": "2027-02-07",
+      "nextGate": "H4",
+      "reversalTrigger": "Resolve primary full-text/update notice or author clarification before denominator-dependent reuse; no outreach performed."
+    },
+    {
+      "claimId": "C26",
+      "question": "G4 records Tinsley findings from 27 muscular physique athletes and abstract-level equation comparisons.",
+      "disposition": "small-athlete-abstract-level-support",
+      "sourceIds": [
+        "tinsley-2019"
+      ],
+      "searchIds": [
+        "Q07",
+        "Q25",
+        "Q28"
+      ],
+      "finding": "The 27-person primary abstract supports a possible role for Cunningham (1980) in muscular physique athletes; exact coefficients and detailed errors not inspected.",
+      "permittedInterpretation": "Small-sample, abstract-level evidence only. Leave-one-out validation of new equations is not external replication.",
+      "reviewedContextIds": [
+        "athlete-muscular"
+      ],
+      "reviewScope": "Bounded source-specific equation/provenance and transfer review, not review of every patient, severity, treatment or intersection in these contexts.",
+      "clinicalApplicabilityEstablished": false,
+      "directAlgorithmValidation": false,
+      "reviewedAt": "2026-11-09",
+      "nextReviewBy": "2027-02-07",
+      "nextGate": "H4",
+      "reversalTrigger": "Inspect complete equation table, methods and results before exact-variant quantitative synthesis."
+    },
+    {
+      "claimId": "C27",
+      "question": "G4 records Sordi results in 65 cross-training participants as counterevidence to universal Cunningham superiority.",
+      "disposition": "counterevidence-with-device-and-label-qualification",
+      "sourceIds": [
+        "sordi-2024"
+      ],
+      "searchIds": [
+        "Q08",
+        "Q29"
+      ],
+      "finding": "Cross-training sample provides counterevidence to universal 500 + 22FFM superiority; Table 1 labels it 1991. FitMate uses assumed RQ and BIA estimates composition.",
+      "permittedInterpretation": "No Mifflin comparison was performed. Neither source label nor BIA-generated RMR is an independently measured comparator.",
+      "reviewedContextIds": [
+        "athlete-muscular"
+      ],
+      "reviewScope": "Bounded source-specific equation/provenance and transfer review, not review of every patient, severity, treatment or intersection in these contexts.",
+      "clinicalApplicabilityEstablished": false,
+      "directAlgorithmValidation": false,
+      "reviewedAt": "2026-11-09",
+      "nextReviewBy": "2027-02-07",
+      "nextGate": "H4",
+      "reversalTrigger": "Independent matched-variant comparison with documented gas measurement, composition and preparation could change the inference."
+    }
+  ],
+  "contradictions": [
+    {
+      "id": "variant-labels",
+      "sourceIds": [
+        "cunningham-1980",
+        "h2b-cunningham-1991",
+        "sordi-2024",
+        "h2b-cai-2026",
+        "h2b-kfir-2023"
+      ],
+      "resolution": "Attach inspected coefficient fingerprints and mass definitions; quarantine unknown variants from exact-formula performance attribution.",
+      "unresolved": "Source labels and some implementations remain inconsistent or unavailable."
+    },
+    {
+      "id": "population-performance",
+      "sourceIds": [
+        "ten-haaf-2014",
+        "weijs-2008",
+        "sordi-2024",
+        "h2b-cai-2026",
+        "h2b-dong-2026",
+        "h2b-delbiondo-2026",
+        "h2b-xu-2026"
+      ],
+      "resolution": "Preserve population, device, prep, variant, endpoint and uncertainty separately. No pooled ranking or automatic equation selector.",
+      "unresolved": "Differences cannot be causally assigned to age, country, training or disease from these studies."
+    },
+    {
+      "id": "us-denominator",
+      "sourceIds": [
+        "weijs-2008"
+      ],
+      "resolution": "Keep abstract n=338 and indexed tables n=239 side by side; do not rewrite frozen G4 or assume an erratum.",
+      "unresolved": "No reconciled denominator identified; blocks sample weighting."
+    },
+    {
+      "id": "cohort-independence",
+      "sourceIds": [
+        "h2b-brandl-2026"
+      ],
+      "resolution": "Count enable once. Source ML and Metron fixed-equation analyses are different questions on overlapping source data.",
+      "unresolved": "No independent Metron H4 replication completed."
+    },
+    {
+      "id": "group-versus-individual",
+      "sourceIds": [
+        "h2b-delbiondo-2026",
+        "h2b-xu-2026"
+      ],
+      "resolution": "Separate mean difference, standard error, ±10% individual agreement and limits of agreement.",
+      "unresolved": "No calibrated individual Metron prediction interval or prospective nutrition response established."
+    }
+  ],
+  "contextQualifiers": {
+    "generalAdult": "Includes source-specific perimenopausal evidence; perimenopause is not silently mapped to pregnancy/lactation. No complete reproductive-state review.",
+    "olderFrailty": "Community-dwelling healthy, AWGS sarcopenia and selected nursing-home residents are distinct populations. Frailty and sarcopenia are not synonyms.",
+    "pathologicalSpectrum": "All broad clinical cells and severity/treatment/intersection dimensions remain unreviewed. Source exclusions do not establish runtime screening or safety.",
+    "negativeSearch": "No absence-of-evidence claim for every disease. Multimorbidity, renal/fluid, thyroid, diabetes, acute illness, pregnancy/lactation, pediatric and other clinical settings require separately scoped evidence."
+  },
+  "repositoryEvidence": {
+    "paths": [
+      "core/model.js",
+      "research/ree-validation/protocol.v1.json",
+      "research/ree-validation/protocol.lock.json",
+      "research/ree-validation/G1_FROZEN_PROTOCOL.md",
+      "research/ree-validation/G3_RESULTS.md",
+      "research/ree-validation/G4_DECISION.md",
+      "research/ree-validation/results/g3-enable-v1.json",
+      "research/ree-validation/results/g3-audit-v1.json",
+      "docs/adr/0005-retain-resting-default-pending-replication.md"
+    ],
+    "inspection": "Fixed equation functions; protocol source/filter/reference/metric definitions; aggregate cohort flow, paired/bootstrap and Mifflin-only subgroup results; G4 decision and prior audit record. No raw participant data reopened.",
+    "asOf": "2026-11-09",
+    "g3Reference": "COSMED Quark RMR, SECA mBCA 515 composition; released enable data SHA-256 d91d7c609de5b90b7282afc36071c67cdbf8f7362f8d6fae82126f93c8d8ba61",
+    "g3Metrics": {
+      "n": 454,
+      "mifflin": {
+        "mae": 165.7,
+        "bias": -134.7,
+        "rmse": 210.8,
+        "within10Percent": 54.8
+      },
+      "cunningham": {
+        "mae": 129.5,
+        "bias": 34.1,
+        "rmse": 160.5,
+        "within10Percent": 65.9
+      },
+      "biasConvention": "prediction minus calorimetry",
+      "pairedDeltaMae": -36.2,
+      "paired95PercentCI": [
+        -49.5,
+        -22.6
+      ],
+      "bootstrap": "5,000 within-site paired resamples, frozen seed 20261106 / Mulberry32 v1; cohort precision, not population transfer"
+    }
+  },
+  "nextReviewBy": "2027-02-07",
+  "earlyReviewTriggers": [
+    "Consequential reuse, new exact-variant independent evidence, source correction/retraction or changed measurement provenance",
+    "Resolve Weijs denominator or Kfir formula/subgroup discrepancies before dependent quantitative reuse",
+    "Any change to default, equation coefficients, input construct or intended population"
+  ],
+  "unresolved": [
+    "No universal equation winner or validated individual selection rule",
+    "No independent H4 replication; ten Haaf remains candidate only",
+    "Abstract-only/full-text access limits and source discrepancies",
+    "Disease severity, treatment and intersecting contexts remain unreviewed",
+    "No TDEE, nutrition prescription, prospective calibration or individual uncertainty validation"
+  ],
+  "closure": {
+    "reviewedAt": "2026-11-09",
+    "scope": "Nine claim families, 14 published source records and 32 logged queries; bounded source and repository inspection only.",
+    "acceptanceReview": "Source portions, rights, update-check limits, contradictory evidence, formula identities, claim/context dispositions and review triggers recorded. G0–G4 retained. Whole H2 remains in progress; H2-C next.",
+    "independentReview": false
+  }
+}

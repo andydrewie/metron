@@ -106,3 +106,5 @@ Briefly state **why**, affected contracts, test evidence, user-visible change, p
 A future MCP adapter, if built, must be an optional wrapper around existing functions with structured inputs/outputs—not a second model or an agent that autonomously changes someone's diet/training.
 
 Historical G0–G4 reproduction uses `research/robustness/h8/frozen-study.mjs` and its pinned core. Do not update historical locks to match a new interface release. H8 requires a genuinely fresh agent record; same-agent scripted navigation is insufficient.
+
+When changing observation completeness, test actual interval coverage alongside history/access/cap flags. Include partial, disjoint, DST and fully covering counterexamples; a positive access flag cannot certify a complete day. This rule applies to admission diagnostics, not physiological accuracy. See H3 measurement tests and review correction.

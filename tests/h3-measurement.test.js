@@ -24,3 +24,11 @@ test('gross/net reference and baseline plateau remain explicit arithmetic assump
  const base=500+22*80*(1-.2),changed=500+22*82*(1-.22);
  assert.notEqual(changed-base,-.22*80*2);
 });
+test('history/access flags cannot promote partial or disjoint coverage to a complete observation',()=>{
+ const common={start:'2026-11-01T00:00:00Z',end:'2026-11-02T00:00:00Z',historyComplete:true,readAccessKnown:true};
+ for(const [sampleStart,sampleEnd] of [['2026-11-01T01:00:00Z','2026-11-01T01:15:00Z'],['2026-11-02T00:00:00Z','2026-11-02T00:15:00Z']]) {
+  const r=inspectCoverage({...common,sampleStart,sampleEnd});assert.equal(r.completeObservation,false);assert.equal(r.coversWindow,false);
+ }
+ const full=inspectCoverage({...common,sampleStart:common.start,sampleEnd:common.end});assert.equal(full.completeObservation,true);assert.equal(full.automaticSubtractionPermitted,false);
+ assert.throws(()=>inspectCoverage({...common,sampleStart:'2026-02-30T00:00:00Z',sampleEnd:common.end}));
+});

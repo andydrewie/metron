@@ -1,0 +1,195 @@
+{
+  "schemaVersion": "1.0.0",
+  "documentType": "metron.H2-D-search-log",
+  "asOf": "2026-11-09",
+  "timezone": "Asia/Taipei",
+  "publicationCutoff": "2026-11-09",
+  "design": "Targeted rapid review; joint H2-D/E and H4 admission discovery log, not systematic.",
+  "protocolTiming": "Adaptive searches; no preregistration claimed.",
+  "retrievalSystem": "Web system1 with primary publisher, PubMed/PMC, NIST and NIDDK records.",
+  "languageAndDates": "English; no lower date limit except recorded filters.",
+  "queries": [
+    {
+      "id": "Q01",
+      "q": "site.niddk.nih.gov Body Weight Planner dynamic model Hall calorie weight change limitations",
+      "runDate": "2026-11-09",
+      "recencyDays": null,
+      "purpose": "discovery-or-method-definition"
+    },
+    {
+      "id": "Q02",
+      "q": "site.pubmed.ncbi.nlm.nih.gov Hall 2011 quantification effect energy imbalance bodyweight 2011",
+      "runDate": "2026-11-09",
+      "recencyDays": null,
+      "purpose": "discovery-or-method-definition"
+    },
+    {
+      "id": "Q03",
+      "q": "site.pubmed.ncbi.nlm.nih.gov Careau energy compensation adiposity humans 2021 doubly labeled water",
+      "runDate": "2026-11-09",
+      "recencyDays": null,
+      "purpose": "discovery-or-method-definition"
+    },
+    {
+      "id": "Q04",
+      "q": "site.itl.nist.gov prediction interval confidence interval individual observation regression",
+      "runDate": "2026-11-09",
+      "recencyDays": null,
+      "purpose": "discovery-or-method-definition"
+    },
+    {
+      "id": "Q05",
+      "q": "site.pubmed.ncbi.nlm.nih.gov 2025 2026 energy compensation exercise total daily expenditure doubly labelled water randomized trial",
+      "runDate": "2026-11-09",
+      "recencyDays": 730,
+      "purpose": "discovery-or-method-definition"
+    },
+    {
+      "id": "Q06",
+      "q": "site.pubmed.ncbi.nlm.nih.gov Hall 2017 energy intake body weight measurements model validation self report fluid",
+      "runDate": "2026-11-09",
+      "recencyDays": null,
+      "purpose": "discovery-or-method-definition"
+    },
+    {
+      "id": "Q07",
+      "q": "site.pubmed.ncbi.nlm.nih.gov wearable energy expenditure Shcherbina 2017 60 participants indirect calorimetry",
+      "runDate": "2026-11-09",
+      "recencyDays": null,
+      "purpose": "discovery-or-method-definition"
+    },
+    {
+      "id": "Q08",
+      "q": "site.itl.nist.gov/div898/handbook/pmd/section5/pmd512 prediction interval new measurement",
+      "runDate": "2026-11-09",
+      "recencyDays": null,
+      "purpose": "discovery-or-method-definition"
+    },
+    {
+      "id": "Q09",
+      "q": "\"Longitudinal and cross-sectional evidence that daily resting\" 2026 doi sample",
+      "runDate": "2026-11-09",
+      "recencyDays": null,
+      "purpose": "discovery-or-method-definition"
+    },
+    {
+      "id": "Q10",
+      "q": "\"Physical activity is directly associated with total energy expenditure\" 2025 doi 2026",
+      "runDate": "2026-11-09",
+      "recencyDays": null,
+      "purpose": "discovery-or-method-definition"
+    },
+    {
+      "id": "Q11",
+      "q": "\"Multilevel metabolic adaptation to exercise training\" 2026 results limitations",
+      "runDate": "2026-11-09",
+      "recencyDays": null,
+      "purpose": "discovery-or-method-definition"
+    },
+    {
+      "id": "Q12",
+      "q": "site.journals.plos.org/plosone \"0108460\" \"Bod Pod\"",
+      "runDate": "2026-11-09",
+      "recencyDays": null,
+      "purpose": "discovery-or-method-definition"
+    },
+    {
+      "id": "Q13",
+      "q": "\"10.1016/j.cub.2021.08.016\" correction erratum retraction",
+      "runDate": "2026-11-09",
+      "recencyDays": null,
+      "purpose": "targeted-update-notice-check"
+    },
+    {
+      "id": "Q14",
+      "q": "\"10.1073/pnas.2519626122\" correction erratum retraction",
+      "runDate": "2026-11-09",
+      "recencyDays": null,
+      "purpose": "targeted-update-notice-check"
+    },
+    {
+      "id": "Q15",
+      "q": "\"10.1113/JP291108\" correction erratum retraction",
+      "runDate": "2026-11-09",
+      "recencyDays": null,
+      "purpose": "targeted-update-notice-check"
+    },
+    {
+      "id": "Q16",
+      "q": "\"Validation of an inexpensive and accurate mathematical method\" Hall 2015 doi",
+      "runDate": "2026-11-09",
+      "recencyDays": null,
+      "purpose": "discovery-or-method-definition"
+    },
+    {
+      "id": "Q17",
+      "q": "site.journals.plos.org/plosone supporting information files Creative Commons Attribution license",
+      "runDate": "2026-11-09",
+      "recencyDays": null,
+      "purpose": "discovery-or-method-definition"
+    },
+    {
+      "id": "Q18",
+      "q": "\"10.1371/journal.pone.0108460\" correction erratum retraction",
+      "runDate": "2026-11-09",
+      "recencyDays": null,
+      "purpose": "targeted-update-notice-check"
+    },
+    {
+      "id": "Q19",
+      "q": "\"10.3945/ajcn.115.111070\" correction erratum retraction",
+      "runDate": "2026-11-09",
+      "recencyDays": null,
+      "purpose": "targeted-update-notice-check"
+    },
+    {
+      "id": "Q20",
+      "q": "\"10.1038/s43856-026-01502-z\" correction erratum retraction",
+      "runDate": "2026-11-09",
+      "recencyDays": null,
+      "purpose": "targeted-update-notice-check"
+    },
+    {
+      "id": "Q21",
+      "q": "\"10.1016/S0140-6736(11)60812-X\" correction erratum retraction",
+      "runDate": "2026-11-09",
+      "recencyDays": null,
+      "purpose": "targeted-update-notice-check"
+    },
+    {
+      "id": "Q22",
+      "q": "\"10.3390/jpm7020003\" correction erratum retraction",
+      "runDate": "2026-11-09",
+      "recencyDays": null,
+      "purpose": "targeted-update-notice-check"
+    },
+    {
+      "id": "Q23",
+      "q": "\"Metron\" \"1.2\" \"2000\" energy validation",
+      "runDate": "2026-11-09",
+      "recencyDays": null,
+      "purpose": "discovery-or-method-definition"
+    },
+    {
+      "id": "Q24",
+      "q": "site.niddk.nih.gov Body Weight Planner glycogen fluid sodium model limitations",
+      "runDate": "2026-11-09",
+      "recencyDays": null,
+      "purpose": "discovery-or-method-definition"
+    }
+  ],
+  "includedSourceIds": [
+    "h2d-careau-2021",
+    "h2d-howard-2025",
+    "h2d-knaan-2026",
+    "h2d-nist-prediction",
+    "h2d-shcherbina-2017",
+    "h2d-yegian-2026"
+  ],
+  "selectionLimits": "No independent duplicate extraction or exhaustive clinical review. H4-only discovery queries retained for transparent joint search history.",
+  "accessLimits": [
+    "Some direct PMC/publisher pages intermittently returned bot/error pages; indexed portions are named per source.",
+    "No governed DLW participant data admitted."
+  ],
+  "updateNoticeLimit": "Targeted queries and visible notices only; absence is not certified."
+}

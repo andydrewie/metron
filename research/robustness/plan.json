@@ -9,9 +9,9 @@
   "baselineCommit": "2a9cc6cc45832abcbe0ce57454562d605715fc49",
   "corpus": "research/robustness/corpus.json",
   "dashboard": "https://github.com/andydrewie/metron/issues/22",
-  "currentGate": "H2",
+  "currentGate": "H4",
   "completedStudy": "research/ree-validation/plan.json",
-  "coverage": "H1 finite inventory complete; H2-A/B/C bounded reviews complete. Whole H2, clinical applicability, independent replication and reconstruction remain open.",
+  "coverage": "H1 and H2 finite inventory/relevance review complete. Clinical applicability remains unreviewed; H3–H8 execution authorized.",
   "scope": [
     "energy quantities and model assumptions",
     "clinical applicability and physiological states",
@@ -97,7 +97,7 @@
     {
       "id": "H2",
       "name": "Evidence currency and contradictions",
-      "state": "in-progress",
+      "state": "complete",
       "dependsOn": [
         "H1"
       ],
@@ -122,23 +122,35 @@
         "research/robustness/h2c/review.json",
         "research/robustness/h2c/sources.json",
         "research/robustness/h2c/search-log.json",
-        "research/robustness/h2c/measurement-crosswalk.json"
+        "research/robustness/h2c/measurement-crosswalk.json",
+        "research/robustness/h2d/README.md",
+        "research/robustness/h2d/review.json",
+        "research/robustness/h2d/sources.json",
+        "research/robustness/h2d/search-log.json",
+        "research/robustness/h2e/README.md",
+        "research/robustness/h2e/review.json",
+        "research/robustness/h2e/sources.json",
+        "research/robustness/h2e/search-log.json"
       ],
-      "closure": null,
+      "closure": {
+        "reviewedAt": "2026-11-09",
+        "reviewerRole": "Maintaining agent",
+        "scope": "All 35 finite claim families, bounded relevance/method review only; not a comprehensive clinical review.",
+        "acceptanceReview": "All five slices have searches, actual inspection scope/dates, rights/update limits, contradictions, dispositions and review triggers."
+      },
       "completedSlices": [
         "H2-A",
         "H2-B",
-        "H2-C"
-      ],
-      "remainingSlices": [
+        "H2-C",
         "H2-D",
         "H2-E"
-      ]
+      ],
+      "remainingSlices": []
     },
     {
       "id": "H3",
       "name": "Measurement and energy accounting",
-      "state": "not-started",
+      "state": "complete",
       "dependsOn": [
         "H1"
       ],
@@ -149,14 +161,23 @@
         "Identify provider-specific semantics, measurement error and nonidentifiability; record unresolved cases and no-go rules"
       ],
       "evidence": [
-        "research/robustness/h2c/measurement-crosswalk.json"
+        "research/robustness/h3/README.md",
+        "research/robustness/h3/inspect.mjs",
+        "tests/h3-measurement.test.js",
+        "research/robustness/h2c/measurement-crosswalk.json",
+        "research/robustness/h4/admission.json"
       ],
-      "closure": null
+      "closure": {
+        "reviewedAt": "2026-11-09",
+        "reviewerRole": "Maintaining agent",
+        "scope": "Measurement/accounting audit and synthetic non-equivalence checks; no real-device validation.",
+        "acceptanceReview": "Reference preparation, body composition, units/missingness, gross/net and baseline assumptions, provider semantics, nonidentifiability and no-go rules explicitly audited and bounded."
+      }
     },
     {
       "id": "H4",
       "name": "External validity",
-      "state": "not-started",
+      "state": "in-progress",
       "dependsOn": [
         "H2",
         "H3"
@@ -168,7 +189,10 @@
         "Independently reproduce estimates, paired comparisons and intervals; publish negative findings and exact population limits",
         "Record a versioned retain/change/no-go decision; do not tune on the evaluation cohort"
       ],
-      "evidence": [],
+      "evidence": [
+        "research/robustness/h4/admission.json",
+        "research/robustness/h4/protocol.v1.json"
+      ],
       "closure": null
     },
     {
@@ -428,13 +452,9 @@
     }
   ],
   "nextTask": {
-    "gate": "H2",
-    "action": "Review combined energy and uncertainty for C03/C10/C21/C22/C33; separate accounting arithmetic, prediction error, model disagreement and individual interval coverage. Preserve frozen G0–G4; dataset admission remains H4 work.",
-    "candidateDeferred": "ten-haaf-2014",
-    "candidateDestinationGate": "H4",
-    "requiresSeparateFrozenProtocol": true,
-    "slice": "H2-D",
-    "queue": "research/robustness/h2-review-queue.json"
+    "gate": "H4",
+    "action": "Execute the frozen fixed-equation replication; then H5–H8 within the user-authorized program.",
+    "requiresSeparateFrozenProtocol": true
   },
   "trackPrerequisites": {
     "H6": {

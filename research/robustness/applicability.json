@@ -1454,6 +1454,62 @@
       "reviewPath": "research/robustness/h2c/review.json",
       "disposition": "pilot-observes-query-local-identity-only",
       "clinicalApplicabilityEstablished": false
+    },
+    {
+      "claimId": "C03",
+      "contextId": "general-adult",
+      "reviewId": "H2-D",
+      "reviewPath": "research/robustness/h2d/review.json",
+      "disposition": "combined-model-not-externally-validated",
+      "clinicalApplicabilityEstablished": false
+    },
+    {
+      "claimId": "C10",
+      "contextId": "general-adult",
+      "reviewId": "H2-D",
+      "reviewPath": "research/robustness/h2d/review.json",
+      "disposition": "cohort-inference-not-individual-coverage",
+      "clinicalApplicabilityEstablished": false
+    },
+    {
+      "claimId": "C21",
+      "contextId": "general-adult",
+      "reviewId": "H2-D",
+      "reviewPath": "research/robustness/h2d/review.json",
+      "disposition": "conditional-accounting-not-measured-error",
+      "clinicalApplicabilityEstablished": false
+    },
+    {
+      "claimId": "C22",
+      "contextId": "general-adult",
+      "reviewId": "H2-D",
+      "reviewPath": "research/robustness/h2d/review.json",
+      "disposition": "coefficient-sensitivity-not-error-distribution",
+      "clinicalApplicabilityEstablished": false
+    },
+    {
+      "claimId": "C33",
+      "contextId": "general-adult",
+      "reviewId": "H2-D",
+      "reviewPath": "research/robustness/h2d/review.json",
+      "disposition": "display-precision-and-disagreement-not-personal-uncertainty",
+      "clinicalApplicabilityEstablished": false
+    },
+    {
+      "claimId": "C09",
+      "contextId": "general-adult",
+      "reviewId": "H2-E",
+      "reviewPath": "research/robustness/h2e/review.json",
+      "disposition": "allowance-proposal-not-validated-or-implemented",
+      "clinicalApplicabilityEstablished": false
+    },
+    {
+      "claimId": "C32",
+      "contextId": "general-adult",
+      "reviewId": "H2-E",
+      "reviewPath": "research/robustness/h2e/review.json",
+      "disposition": "calibration-architecture-with-unresolved-identifiability",
+      "clinicalApplicabilityEstablished": false
     }
   ]
 }

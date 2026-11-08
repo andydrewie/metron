@@ -1,0 +1,99 @@
+{
+  "schemaVersion": "1.0.0",
+  "documentType": "metron.H2-E-sources",
+  "asOf": "2026-11-09",
+  "sources": [
+    {
+      "id": "h2e-hall-2011",
+      "title": "Quantification of the effect of energy imbalance on bodyweight",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/21872751/",
+      "doi": "10.1016/S0140-6736(11)60812-X",
+      "publicationDate": "2011-08-27",
+      "design": "dynamic-model-development-and-validation",
+      "populationAndWindow": "Adult weight-change modeling over time.",
+      "measurement": "Energy balance with changing expenditure and body stores.",
+      "finding": "Dynamic adaptation limits a static calorie-to-weight conversion.",
+      "limitations": "Related model is not implemented or validated as Metron calibration.",
+      "sourceContentReviewedAt": "2026-11-09",
+      "inspectedPortions": "Indexed abstract; official NIDDK linked model description. Full PMC page intermittently inaccessible.",
+      "rightsStatus": "Publisher terms; redistribution rights not assumed.",
+      "republication": "Pointers and original analysis only; source content is not relicensed under MIT.",
+      "freshnessClass": "foundational",
+      "correctionReview": {
+        "checkedAt": "2026-11-09",
+        "method": "Targeted identifier/update queries and inspected visible records; see search log.",
+        "result": "No matching correction/retraction identified in inspected results.",
+        "unresolved": "Not an exhaustive registry search or certification; unavailable portions and later updates remain unverified."
+      }
+    },
+    {
+      "id": "h2e-hall-appendix",
+      "title": "Dynamic Mathematical Model of Body Weight Change in Adults: appendix",
+      "url": "https://www.niddk.nih.gov/-/media/Files/BWP/Hall_Lancet_Web_Appendix.pdf",
+      "doi": null,
+      "publicationDate": "2011",
+      "design": "original-model-specification",
+      "populationAndWindow": "Adult model; early weight-change dynamics.",
+      "measurement": "Separate glycogen and extracellular-fluid terms.",
+      "finding": "Early scale movement is not uniquely fat-energy change.",
+      "limitations": "Model terms are not direct measurements of a particular person.",
+      "sourceContentReviewedAt": "2026-11-09",
+      "inspectedPortions": "Indexed early-phase equations and explanatory text; not a full mathematical audit.",
+      "rightsStatus": "Official-hosted appendix; pointers only.",
+      "republication": "Pointers and original analysis only; source content is not relicensed under MIT.",
+      "freshnessClass": "foundational",
+      "correctionReview": {
+        "checkedAt": "2026-11-09",
+        "method": "Targeted identifier/update queries and inspected visible records; see search log.",
+        "result": "No matching correction/retraction identified in inspected results.",
+        "unresolved": "Not an exhaustive registry search or certification; unavailable portions and later updates remain unverified."
+      }
+    },
+    {
+      "id": "h2e-sanghvi-2015",
+      "title": "Validation of an inexpensive and accurate mathematical method to measure long-term changes in free-living energy intake",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/26040640/",
+      "doi": "10.3945/ajcn.115.111070",
+      "publicationDate": "2015-06-03",
+      "design": "external-longitudinal-model-validation",
+      "populationAndWindow": "140 CALERIE participants over two years, four intervals.",
+      "measurement": "Repeated weight/demographics compared with DLW/DXA intake-balance estimates.",
+      "finding": "Group agreement for intake change does not establish individual absolute TDEE accuracy.",
+      "limitations": "Reference methods have error; restricted intervention population, horizon and target.",
+      "sourceContentReviewedAt": "2026-11-09",
+      "inspectedPortions": "Indexed primary abstract, identifiers and publisher metadata; no participant data inspected.",
+      "rightsStatus": "Publisher terms; redistribution rights not assumed.",
+      "republication": "Pointers and original analysis only; source content is not relicensed under MIT.",
+      "freshnessClass": "active-empirical",
+      "correctionReview": {
+        "checkedAt": "2026-11-09",
+        "method": "Targeted identifier/update queries and inspected visible records; see search log.",
+        "result": "No matching correction/retraction identified in inspected results.",
+        "unresolved": "Not an exhaustive registry search or certification; unavailable portions and later updates remain unverified."
+      }
+    },
+    {
+      "id": "h2e-niddk-planner",
+      "title": "NIDDK: research behind and scope of the Body Weight Planner",
+      "url": "https://www.niddk.nih.gov/research-funding/at-niddk/labs-branches/laboratory-biological-modeling/integrative-physiology-section/research/body-weight-planner",
+      "doi": null,
+      "publicationDate": "2025-02",
+      "design": "official-research-and-scope-guidance",
+      "populationAndWindow": "Adults; stated exclusions include pregnancy and breastfeeding.",
+      "measurement": "Published dynamic model and separate prototype tracking system.",
+      "finding": "An existing research tool does not supply implementation or validation for Metron allowance.",
+      "limitations": "Scope limits and licensing differ across resources; do not infer reusable prototype code rights.",
+      "sourceContentReviewedAt": "2026-11-09",
+      "inspectedPortions": "Official research page, displayed review date and linked about page.",
+      "rightsStatus": "Official information; no software license adopted.",
+      "republication": "Pointers and original analysis only; source content is not relicensed under MIT.",
+      "freshnessClass": "clinical-guidance",
+      "correctionReview": {
+        "checkedAt": "2026-11-09",
+        "method": "Targeted identifier/update queries and inspected visible records; see search log.",
+        "result": "No matching correction/retraction identified in inspected results.",
+        "unresolved": "Not an exhaustive registry search or certification; unavailable portions and later updates remain unverified."
+      }
+    }
+  ]
+}

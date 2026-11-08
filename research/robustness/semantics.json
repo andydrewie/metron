@@ -472,7 +472,9 @@
   ],
   "followUpEvidence": [
     "research/robustness/h2b/equation-crosswalk.json",
-    "research/robustness/h2c/measurement-crosswalk.json"
+    "research/robustness/h2c/measurement-crosswalk.json",
+    "research/robustness/h2d/review.json",
+    "research/robustness/h2e/review.json"
   ],
   "equationIdentityRule": "A source equation name is not a coefficient fingerprint. Record exact arithmetic, mass construct (FFM/LBM/lean soft tissue/SMM), measured reference (BMR/RMR/REE), population and protocol before transferring performance. Unknown variants remain unknown. H2-B adds evidence qualification without changing the dated H1 API field inventory.",
   "measurementIdentityRule": "H2-C records required construct, method/reference, temporal and origin metadata. Same units, overlapping intervals and sample identities do not alone prove equivalence or aggregate contribution. The current API does not implement this proposed provenance contract."

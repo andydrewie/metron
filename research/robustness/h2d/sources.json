@@ -1,0 +1,145 @@
+{
+  "schemaVersion": "1.0.0",
+  "documentType": "metron.H2-D-sources",
+  "asOf": "2026-11-09",
+  "sources": [
+    {
+      "id": "h2d-careau-2021",
+      "title": "Energy compensation and adiposity in humans",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC8551017/",
+      "doi": "10.1016/j.cub.2021.08.016",
+      "publicationDate": "2021-08-27",
+      "design": "secondary-cross-sectional-analysis",
+      "populationAndWindow": "1,754 adults; pooled free-living measurements.",
+      "measurement": "DLW total and calorimetry basal expenditure; activity derived using assumed thermogenesis.",
+      "finding": "Authors infer compensation; between-person association does not identify an individual exercise correction.",
+      "limitations": "Derived components share terms; causal adaptation and population transfer unresolved. Data access requires IAEA approval.",
+      "sourceContentReviewedAt": "2026-11-09",
+      "inspectedPortions": "Abstract, methods and data/code-availability sections.",
+      "rightsStatus": "Publisher terms; redistribution rights not assumed.",
+      "republication": "Pointers and original analysis only; source content is not relicensed under MIT.",
+      "freshnessClass": "active-empirical",
+      "correctionReview": {
+        "checkedAt": "2026-11-09",
+        "method": "Targeted identifier/update queries and inspected visible records; see search log.",
+        "result": "No matching correction/retraction identified in inspected results.",
+        "unresolved": "Not an exhaustive registry search or certification; unavailable portions and later updates remain unverified."
+      }
+    },
+    {
+      "id": "h2d-howard-2025",
+      "title": "Physical activity is directly associated with total energy expenditure without evidence of constraint or compensation",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC12582307/",
+      "doi": "10.1073/pnas.2519626122",
+      "publicationDate": "2025-10-21",
+      "design": "cross-sectional-observational",
+      "populationAndWindow": "75 weight-stable adults, 18–63 years, Virginia.",
+      "measurement": "DLW, resting metabolism and activity assessment.",
+      "finding": "Linear activity/total-expenditure association challenges a universal compensation assumption.",
+      "limitations": "Selected cohort; association does not validate Metron coefficients or exclude adaptation elsewhere.",
+      "sourceContentReviewedAt": "2026-11-09",
+      "inspectedPortions": "Abstract, sample characteristics, article rights and identifiers.",
+      "rightsStatus": "CC BY-NC-ND 4.0 displayed; no source adaptation or data redistribution adopted.",
+      "republication": "Pointers and original analysis only; source content is not relicensed under MIT.",
+      "freshnessClass": "active-empirical",
+      "correctionReview": {
+        "checkedAt": "2026-11-09",
+        "method": "Targeted identifier/update queries and inspected visible records; see search log.",
+        "result": "No matching correction/retraction identified in inspected results.",
+        "unresolved": "Not an exhaustive registry search or certification; unavailable portions and later updates remain unverified."
+      }
+    },
+    {
+      "id": "h2d-yegian-2026",
+      "title": "Longitudinal and cross-sectional evidence that daily resting and activity energy expenditures are independent in humans",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC13370726/",
+      "doi": "10.1113/JP291108",
+      "publicationDate": "2026-06-25",
+      "design": "repeated-measures-and-secondary-cross-sectional",
+      "populationAndWindow": "12 adults: two 10-day activity periods; separate 268-adult baseline cohort.",
+      "measurement": "DLW and calorimetry; wearable activity proxy and derived activity estimates have distinct roles.",
+      "finding": "No mass-adjusted resting suppression identified in the reported comparisons.",
+      "limitations": "Small, brief intervention; unsupervised activity, long washout and residual measurement error. No long-term or clinical generalization.",
+      "sourceContentReviewedAt": "2026-11-09",
+      "inspectedPortions": "Indexed full-text abstract, methods, results and limitations.",
+      "rightsStatus": "Publisher terms; redistribution rights not assumed.",
+      "republication": "Pointers and original analysis only; source content is not relicensed under MIT.",
+      "freshnessClass": "active-empirical",
+      "correctionReview": {
+        "checkedAt": "2026-11-09",
+        "method": "Targeted identifier/update queries and inspected visible records; see search log.",
+        "result": "No matching correction/retraction identified in inspected results.",
+        "unresolved": "Not an exhaustive registry search or certification; unavailable portions and later updates remain unverified."
+      }
+    },
+    {
+      "id": "h2d-knaan-2026",
+      "title": "Multilevel metabolic adaptation to exercise training",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC13111656/",
+      "doi": "10.1038/s43856-026-01502-z",
+      "publicationDate": "2026-03-11",
+      "design": "small-pre-post-intervention",
+      "populationAndWindow": "16 sedentary adults with overweight; 12-week supervised walking.",
+      "measurement": "DLW, whole-room calorimetry, MRI and activity measures.",
+      "finding": "Reported resting/sleeping reductions alongside higher total expenditure provide contrary adaptation evidence.",
+      "limitations": "Small selected cohort; no concurrent human control; mouse findings do not establish human causality or a universal factor.",
+      "sourceContentReviewedAt": "2026-11-09",
+      "inspectedPortions": "Abstract, recruitment/results, methods excerpts and rights.",
+      "rightsStatus": "CC BY-NC-ND 4.0 displayed; pointers and original critique only.",
+      "republication": "Pointers and original analysis only; source content is not relicensed under MIT.",
+      "freshnessClass": "active-empirical",
+      "correctionReview": {
+        "checkedAt": "2026-11-09",
+        "method": "Targeted identifier/update queries and inspected visible records; see search log.",
+        "result": "No matching correction/retraction identified in inspected results.",
+        "unresolved": "Not an exhaustive registry search or certification; unavailable portions and later updates remain unverified."
+      }
+    },
+    {
+      "id": "h2d-nist-prediction",
+      "title": "NIST engineering statistics: individual prediction versus mean-response uncertainty",
+      "url": "https://www.itl.nist.gov/div898/handbook/pmd/section5/pmd512.htm",
+      "doi": null,
+      "publicationDate": null,
+      "design": "official-statistical-method-reference",
+      "populationAndWindow": "Statistical method, not a clinical population.",
+      "measurement": "Prediction coverage conditional on a specified model and assumptions.",
+      "finding": "A new observation carries residual variation beyond uncertainty in a mean estimate.",
+      "limitations": "This regression illustration supplies no Metron residual distribution or individual range.",
+      "sourceContentReviewedAt": "2026-11-09",
+      "inspectedPortions": "Complete prediction-interval section; linked mean-response distinction.",
+      "rightsStatus": "Official public reference; pointers only.",
+      "republication": "Pointers and original analysis only; source content is not relicensed under MIT.",
+      "freshnessClass": "foundational",
+      "correctionReview": {
+        "checkedAt": "2026-11-09",
+        "method": "Targeted identifier/update queries and inspected visible records; see search log.",
+        "result": "No matching correction/retraction identified in inspected results.",
+        "unresolved": "Not an exhaustive registry search or certification; unavailable portions and later updates remain unverified."
+      }
+    },
+    {
+      "id": "h2d-shcherbina-2017",
+      "title": "Accuracy in Wrist-Worn, Sensor-Based Measurements of Heart Rate and Energy Expenditure in a Diverse Cohort",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC5491979/",
+      "doi": "10.3390/jpm7020003",
+      "publicationDate": "2017-05-24",
+      "design": "device-validation-experiment",
+      "populationAndWindow": "60 volunteers; seven then-current devices in selected activities.",
+      "measurement": "Heart-rate and energy estimates compared with separate laboratory references.",
+      "finding": "Energy and heart-rate accuracy differ; wearable output is not automatically a reference outcome.",
+      "limitations": "Historical hardware/software and selected tasks cannot rank current devices.",
+      "sourceContentReviewedAt": "2026-11-09",
+      "inspectedPortions": "Indexed abstract, methods overview and identifiers.",
+      "rightsStatus": "Publisher terms; redistribution rights not assumed.",
+      "republication": "Pointers and original analysis only; source content is not relicensed under MIT.",
+      "freshnessClass": "active-empirical",
+      "correctionReview": {
+        "checkedAt": "2026-11-09",
+        "method": "Targeted identifier/update queries and inspected visible records; see search log.",
+        "result": "No matching correction/retraction identified in inspected results.",
+        "unresolved": "Not an exhaustive registry search or certification; unavailable portions and later updates remain unverified."
+      }
+    }
+  ]
+}

@@ -1,0 +1,139 @@
+{
+  "schemaVersion": "1.0.0",
+  "documentType": "metron.H2-E-review",
+  "reviewId": "H2-E",
+  "asOf": "2026-11-09",
+  "status": "complete-for-declared-slice",
+  "baselineCommit": "9bb5aa1d47675255218c5e893fc88098fe7562c3",
+  "scope": "2 claim families; targeted primary-source relevance review.",
+  "searchLog": "research/robustness/h2e/search-log.json",
+  "sourceRegistry": "research/robustness/h2e/sources.json",
+  "report": "research/robustness/h2e/README.md",
+  "reviewerRole": "Maintaining agent; no independent duplicate review",
+  "clinicalApplicabilityEstablished": false,
+  "algorithmEmpiricallyValidated": false,
+  "productionBehaviorChanged": false,
+  "claimReviews": [
+    {
+      "claimId": "C09",
+      "question": "Caloric allowance is a separate unimplemented decision",
+      "disposition": "allowance-proposal-not-validated-or-implemented",
+      "sourceIds": [
+        "h2e-hall-2011",
+        "h2e-niddk-planner"
+      ],
+      "searchIds": [
+        "Q01",
+        "Q02",
+        "Q03",
+        "Q04",
+        "Q05",
+        "Q06",
+        "Q07",
+        "Q08",
+        "Q09",
+        "Q10",
+        "Q11",
+        "Q12",
+        "Q13",
+        "Q14",
+        "Q15",
+        "Q16",
+        "Q17",
+        "Q18",
+        "Q19",
+        "Q20",
+        "Q21",
+        "Q22",
+        "Q23",
+        "Q24"
+      ],
+      "finding": "Energy expenditure is not an individualized dietary allowance. A proposed allowance needs a defined outcome, horizon and appropriate evaluation.",
+      "permittedInterpretation": "Keep allowance unimplemented; no automatic deficit or target from an energy estimate.",
+      "reviewedContextIds": [
+        "general-adult"
+      ],
+      "reviewScope": "Bounded source relevance and method distinction only; clinical severity, treatments and intersections remain unreviewed.",
+      "clinicalApplicabilityEstablished": false,
+      "directAlgorithmValidation": false,
+      "reviewedAt": "2026-11-09",
+      "nextReviewBy": "2027-02-07",
+      "nextGate": "H6",
+      "reversalTrigger": "New contrary evidence, changed methods/rights or consequential reuse; reopen the named downstream evaluation."
+    },
+    {
+      "claimId": "C32",
+      "question": "Proposed calibration, provenance ledger, Bayesian modeling and allowance architecture remain unimplemented.",
+      "disposition": "calibration-architecture-with-unresolved-identifiability",
+      "sourceIds": [
+        "h2e-hall-2011",
+        "h2e-hall-appendix",
+        "h2e-sanghvi-2015"
+      ],
+      "searchIds": [
+        "Q01",
+        "Q02",
+        "Q03",
+        "Q04",
+        "Q05",
+        "Q06",
+        "Q07",
+        "Q08",
+        "Q09",
+        "Q10",
+        "Q11",
+        "Q12",
+        "Q13",
+        "Q14",
+        "Q15",
+        "Q16",
+        "Q17",
+        "Q18",
+        "Q19",
+        "Q20",
+        "Q21",
+        "Q22",
+        "Q23",
+        "Q24"
+      ],
+      "finding": "Weight trends, logged intake and expenditure are jointly ambiguous when intake error and fluid shifts are unknown. Bayesian structure does not remove missing information.",
+      "permittedInterpretation": "Keep calibration unimplemented pending forward-time comparison against a fixed baseline and independent reference.",
+      "reviewedContextIds": [
+        "general-adult"
+      ],
+      "reviewScope": "Bounded source relevance and method distinction only; clinical severity, treatments and intersections remain unreviewed.",
+      "clinicalApplicabilityEstablished": false,
+      "directAlgorithmValidation": false,
+      "reviewedAt": "2026-11-09",
+      "nextReviewBy": "2027-02-07",
+      "nextGate": "H6",
+      "reversalTrigger": "New contrary evidence, changed methods/rights or consequential reuse; reopen the named downstream evaluation."
+    }
+  ],
+  "contradictions": [
+    {
+      "id": "group-versus-person",
+      "sourceIds": [
+        "h2e-sanghvi-2015",
+        "h2e-hall-appendix"
+      ],
+      "resolution": "Related intake-change validation motivates a bounded protocol, not a Metron feature or absolute personal TDEE claim.",
+      "unresolved": "Independent reference, fluid/intake error, prospective usefulness and clinical transfer."
+    }
+  ],
+  "nextReviewBy": "2027-02-07",
+  "earlyReviewTriggers": [
+    "correction/retraction",
+    "contrary new study",
+    "consequential reuse"
+  ],
+  "unresolved": [
+    "All clinical context cells remain unreviewed.",
+    "No combined TDEE, readiness or individual calibration validation."
+  ],
+  "closure": {
+    "reviewedAt": "2026-11-09",
+    "scope": "Assigned propositions only; targeted review, not systematic or comprehensive clinical evidence.",
+    "acceptanceReview": "Logged queries/cutoff, inspected source portions, rights/update limits, contradictions, dispositions and review triggers recorded."
+  }
+}

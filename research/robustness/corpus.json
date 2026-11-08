@@ -2920,6 +2920,206 @@
           "inspectedPortions": "Official Health/Activity overviews, Personal FAQ, FIT overview and Swagger shell."
         }
       ]
+    },
+    {
+      "id": "h2d-careau-2021",
+      "title": "Energy compensation and adiposity in humans",
+      "path": "research/robustness/h2d/sources.json",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC8551017/",
+      "freshnessClass": "active-empirical",
+      "sourceContentReviewedAt": "2026-11-09",
+      "reviewScope": "Abstract, methods and data/code-availability sections.",
+      "rightsStatus": "Publisher terms; redistribution rights not assumed.",
+      "status": "reviewed-at-declared-scope",
+      "contentReviewHistory": [
+        {
+          "reviewId": "H2-D",
+          "registryPath": "research/robustness/h2d/sources.json",
+          "sourceContentReviewedAt": "2026-11-09",
+          "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC8551017/",
+          "inspectedPortions": "Abstract, methods and data/code-availability sections."
+        }
+      ]
+    },
+    {
+      "id": "h2d-howard-2025",
+      "title": "Physical activity is directly associated with total energy expenditure without evidence of constraint or compensation",
+      "path": "research/robustness/h2d/sources.json",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC12582307/",
+      "freshnessClass": "active-empirical",
+      "sourceContentReviewedAt": "2026-11-09",
+      "reviewScope": "Abstract, sample characteristics, article rights and identifiers.",
+      "rightsStatus": "CC BY-NC-ND 4.0 displayed; no source adaptation or data redistribution adopted.",
+      "status": "reviewed-at-declared-scope",
+      "contentReviewHistory": [
+        {
+          "reviewId": "H2-D",
+          "registryPath": "research/robustness/h2d/sources.json",
+          "sourceContentReviewedAt": "2026-11-09",
+          "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC12582307/",
+          "inspectedPortions": "Abstract, sample characteristics, article rights and identifiers."
+        }
+      ]
+    },
+    {
+      "id": "h2d-yegian-2026",
+      "title": "Longitudinal and cross-sectional evidence that daily resting and activity energy expenditures are independent in humans",
+      "path": "research/robustness/h2d/sources.json",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC13370726/",
+      "freshnessClass": "active-empirical",
+      "sourceContentReviewedAt": "2026-11-09",
+      "reviewScope": "Indexed full-text abstract, methods, results and limitations.",
+      "rightsStatus": "Publisher terms; redistribution rights not assumed.",
+      "status": "reviewed-at-declared-scope",
+      "contentReviewHistory": [
+        {
+          "reviewId": "H2-D",
+          "registryPath": "research/robustness/h2d/sources.json",
+          "sourceContentReviewedAt": "2026-11-09",
+          "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC13370726/",
+          "inspectedPortions": "Indexed full-text abstract, methods, results and limitations."
+        }
+      ]
+    },
+    {
+      "id": "h2d-knaan-2026",
+      "title": "Multilevel metabolic adaptation to exercise training",
+      "path": "research/robustness/h2d/sources.json",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC13111656/",
+      "freshnessClass": "active-empirical",
+      "sourceContentReviewedAt": "2026-11-09",
+      "reviewScope": "Abstract, recruitment/results, methods excerpts and rights.",
+      "rightsStatus": "CC BY-NC-ND 4.0 displayed; pointers and original critique only.",
+      "status": "reviewed-at-declared-scope",
+      "contentReviewHistory": [
+        {
+          "reviewId": "H2-D",
+          "registryPath": "research/robustness/h2d/sources.json",
+          "sourceContentReviewedAt": "2026-11-09",
+          "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC13111656/",
+          "inspectedPortions": "Abstract, recruitment/results, methods excerpts and rights."
+        }
+      ]
+    },
+    {
+      "id": "h2d-nist-prediction",
+      "title": "NIST engineering statistics: individual prediction versus mean-response uncertainty",
+      "path": "research/robustness/h2d/sources.json",
+      "url": "https://www.itl.nist.gov/div898/handbook/pmd/section5/pmd512.htm",
+      "freshnessClass": "foundational",
+      "sourceContentReviewedAt": "2026-11-09",
+      "reviewScope": "Complete prediction-interval section; linked mean-response distinction.",
+      "rightsStatus": "Official public reference; pointers only.",
+      "status": "reviewed-at-declared-scope",
+      "contentReviewHistory": [
+        {
+          "reviewId": "H2-D",
+          "registryPath": "research/robustness/h2d/sources.json",
+          "sourceContentReviewedAt": "2026-11-09",
+          "url": "https://www.itl.nist.gov/div898/handbook/pmd/section5/pmd512.htm",
+          "inspectedPortions": "Complete prediction-interval section; linked mean-response distinction."
+        }
+      ]
+    },
+    {
+      "id": "h2d-shcherbina-2017",
+      "title": "Accuracy in Wrist-Worn, Sensor-Based Measurements of Heart Rate and Energy Expenditure in a Diverse Cohort",
+      "path": "research/robustness/h2d/sources.json",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC5491979/",
+      "freshnessClass": "active-empirical",
+      "sourceContentReviewedAt": "2026-11-09",
+      "reviewScope": "Indexed abstract, methods overview and identifiers.",
+      "rightsStatus": "Publisher terms; redistribution rights not assumed.",
+      "status": "reviewed-at-declared-scope",
+      "contentReviewHistory": [
+        {
+          "reviewId": "H2-D",
+          "registryPath": "research/robustness/h2d/sources.json",
+          "sourceContentReviewedAt": "2026-11-09",
+          "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC5491979/",
+          "inspectedPortions": "Indexed abstract, methods overview and identifiers."
+        }
+      ]
+    },
+    {
+      "id": "h2e-hall-2011",
+      "title": "Quantification of the effect of energy imbalance on bodyweight",
+      "path": "research/robustness/h2e/sources.json",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/21872751/",
+      "freshnessClass": "foundational",
+      "sourceContentReviewedAt": "2026-11-09",
+      "reviewScope": "Indexed abstract; official NIDDK linked model description. Full PMC page intermittently inaccessible.",
+      "rightsStatus": "Publisher terms; redistribution rights not assumed.",
+      "status": "reviewed-at-declared-scope",
+      "contentReviewHistory": [
+        {
+          "reviewId": "H2-E",
+          "registryPath": "research/robustness/h2e/sources.json",
+          "sourceContentReviewedAt": "2026-11-09",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/21872751/",
+          "inspectedPortions": "Indexed abstract; official NIDDK linked model description. Full PMC page intermittently inaccessible."
+        }
+      ]
+    },
+    {
+      "id": "h2e-hall-appendix",
+      "title": "Dynamic Mathematical Model of Body Weight Change in Adults: appendix",
+      "path": "research/robustness/h2e/sources.json",
+      "url": "https://www.niddk.nih.gov/-/media/Files/BWP/Hall_Lancet_Web_Appendix.pdf",
+      "freshnessClass": "foundational",
+      "sourceContentReviewedAt": "2026-11-09",
+      "reviewScope": "Indexed early-phase equations and explanatory text; not a full mathematical audit.",
+      "rightsStatus": "Official-hosted appendix; pointers only.",
+      "status": "reviewed-at-declared-scope",
+      "contentReviewHistory": [
+        {
+          "reviewId": "H2-E",
+          "registryPath": "research/robustness/h2e/sources.json",
+          "sourceContentReviewedAt": "2026-11-09",
+          "url": "https://www.niddk.nih.gov/-/media/Files/BWP/Hall_Lancet_Web_Appendix.pdf",
+          "inspectedPortions": "Indexed early-phase equations and explanatory text; not a full mathematical audit."
+        }
+      ]
+    },
+    {
+      "id": "h2e-sanghvi-2015",
+      "title": "Validation of an inexpensive and accurate mathematical method to measure long-term changes in free-living energy intake",
+      "path": "research/robustness/h2e/sources.json",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/26040640/",
+      "freshnessClass": "active-empirical",
+      "sourceContentReviewedAt": "2026-11-09",
+      "reviewScope": "Indexed primary abstract, identifiers and publisher metadata; no participant data inspected.",
+      "rightsStatus": "Publisher terms; redistribution rights not assumed.",
+      "status": "reviewed-at-declared-scope",
+      "contentReviewHistory": [
+        {
+          "reviewId": "H2-E",
+          "registryPath": "research/robustness/h2e/sources.json",
+          "sourceContentReviewedAt": "2026-11-09",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/26040640/",
+          "inspectedPortions": "Indexed primary abstract, identifiers and publisher metadata; no participant data inspected."
+        }
+      ]
+    },
+    {
+      "id": "h2e-niddk-planner",
+      "title": "NIDDK: research behind and scope of the Body Weight Planner",
+      "path": "research/robustness/h2e/sources.json",
+      "url": "https://www.niddk.nih.gov/research-funding/at-niddk/labs-branches/laboratory-biological-modeling/integrative-physiology-section/research/body-weight-planner",
+      "freshnessClass": "clinical-guidance",
+      "sourceContentReviewedAt": "2026-11-09",
+      "reviewScope": "Official research page, displayed review date and linked about page.",
+      "rightsStatus": "Official information; no software license adopted.",
+      "status": "reviewed-at-declared-scope",
+      "contentReviewHistory": [
+        {
+          "reviewId": "H2-E",
+          "registryPath": "research/robustness/h2e/sources.json",
+          "sourceContentReviewedAt": "2026-11-09",
+          "url": "https://www.niddk.nih.gov/research-funding/at-niddk/labs-branches/laboratory-biological-modeling/integrative-physiology-section/research/body-weight-planner",
+          "inspectedPortions": "Official research page, displayed review date and linked about page."
+        }
+      ]
     }
   ],
   "claims": [
@@ -3034,7 +3234,12 @@
       ],
       "sources": [
         "core",
-        "science"
+        "science",
+        "h2d-careau-2021",
+        "h2d-howard-2025",
+        "h2d-yegian-2026",
+        "h2d-knaan-2026",
+        "h2d-shcherbina-2017"
       ],
       "gates": [
         "H3",
@@ -3043,13 +3248,22 @@
       ],
       "empiricalValidation": "none",
       "applicabilityMatrixStatus": "H1-explicit-all-contexts",
-      "evidenceDisposition": "unreviewed-for-current-cross-context-use",
+      "evidenceDisposition": "combined-model-not-externally-validated",
       "limitation": "No independent whole-model TDEE validation; RMR evidence does not transfer automatically.",
       "contextsMeaning": "Salient origin or named discussion contexts only; complete cross-context coverage is in applicability.json.",
       "semanticLevel": "model-or-method",
       "temporalScope": "Source-specific window required; current use not established by inventory",
       "measurementScope": "Source-specific protocol required; unrecorded method, device, treatment and preparation remain unknown",
-      "noPopulationPerformanceInference": false
+      "noPopulationPerformanceInference": false,
+      "evidenceReviews": [
+        {
+          "reviewId": "H2-D",
+          "path": "research/robustness/h2d/review.json",
+          "reviewedAt": "2026-11-09",
+          "scope": "Bounded source relevance and method distinction only; clinical severity, treatments and intersections remain unreviewed.",
+          "nextReviewBy": "2027-02-07"
+        }
+      ]
     },
     {
       "id": "C04",
@@ -3271,7 +3485,9 @@
         "general-adult"
       ],
       "sources": [
-        "science"
+        "science",
+        "h2e-hall-2011",
+        "h2e-niddk-planner"
       ],
       "gates": [
         "H1",
@@ -3279,13 +3495,22 @@
       ],
       "empiricalValidation": "none",
       "applicabilityMatrixStatus": "H1-explicit-all-contexts",
-      "evidenceDisposition": "unreviewed-for-current-cross-context-use",
+      "evidenceDisposition": "allowance-proposal-not-validated-or-implemented",
       "limitation": "No intake-planning or treatment function is currently shipped.",
       "contextsMeaning": "Salient origin or named discussion contexts only; complete cross-context coverage is in applicability.json.",
       "semanticLevel": "model-or-method",
       "temporalScope": "Source-specific window required; current use not established by inventory",
       "measurementScope": "Source-specific protocol required; unrecorded method, device, treatment and preparation remain unknown",
-      "noPopulationPerformanceInference": true
+      "noPopulationPerformanceInference": true,
+      "evidenceReviews": [
+        {
+          "reviewId": "H2-E",
+          "path": "research/robustness/h2e/review.json",
+          "reviewedAt": "2026-11-09",
+          "scope": "Bounded source relevance and method distinction only; clinical severity, treatments and intersections remain unreviewed.",
+          "nextReviewBy": "2027-02-07"
+        }
+      ]
     },
     {
       "id": "C10",
@@ -3301,7 +3526,8 @@
       "sources": [
         "science",
         "g3",
-        "g4"
+        "g4",
+        "h2d-nist-prediction"
       ],
       "gates": [
         "H1",
@@ -3309,13 +3535,22 @@
       ],
       "empiricalValidation": "none",
       "applicabilityMatrixStatus": "H1-explicit-all-contexts",
-      "evidenceDisposition": "unreviewed-for-current-cross-context-use",
+      "evidenceDisposition": "cohort-inference-not-individual-coverage",
       "limitation": "Do not transfer a cohort interval or deterministic perturbation to an individual prediction interval.",
       "contextsMeaning": "Salient origin or named discussion contexts only; complete cross-context coverage is in applicability.json.",
       "semanticLevel": "model-or-method",
       "temporalScope": "Source-specific window required; current use not established by inventory",
       "measurementScope": "Source-specific protocol required; unrecorded method, device, treatment and preparation remain unknown",
-      "noPopulationPerformanceInference": true
+      "noPopulationPerformanceInference": true,
+      "evidenceReviews": [
+        {
+          "reviewId": "H2-D",
+          "path": "research/robustness/h2d/review.json",
+          "reviewedAt": "2026-11-09",
+          "scope": "Bounded source relevance and method distinction only; clinical severity, treatments and intersections remain unreviewed.",
+          "nextReviewBy": "2027-02-07"
+        }
+      ]
     },
     {
       "id": "C11",
@@ -3757,20 +3992,30 @@
       ],
       "sources": [
         "accounting",
-        "science"
+        "science",
+        "h2d-careau-2021"
       ],
       "gates": [
         "H3"
       ],
       "empiricalValidation": "none",
       "applicabilityMatrixStatus": "H1-explicit-all-contexts",
-      "evidenceDisposition": "unreviewed-for-current-cross-context-use",
+      "evidenceDisposition": "conditional-accounting-not-measured-error",
       "limitation": "Chosen overlap and example inputs are hypothetical, not an observed TDEE error.",
       "contextsMeaning": "Salient origin or named discussion contexts only; complete cross-context coverage is in applicability.json.",
       "semanticLevel": "model-or-method",
       "temporalScope": "Source-specific window required; current use not established by inventory",
       "measurementScope": "Source-specific protocol required; unrecorded method, device, treatment and preparation remain unknown",
-      "noPopulationPerformanceInference": true
+      "noPopulationPerformanceInference": true,
+      "evidenceReviews": [
+        {
+          "reviewId": "H2-D",
+          "path": "research/robustness/h2d/review.json",
+          "reviewedAt": "2026-11-09",
+          "scope": "Bounded source relevance and method distinction only; clinical severity, treatments and intersections remain unreviewed.",
+          "nextReviewBy": "2027-02-07"
+        }
+      ]
     },
     {
       "id": "C22",
@@ -3786,7 +4031,8 @@
         "general-adult"
       ],
       "sources": [
-        "sensitivity"
+        "sensitivity",
+        "h2d-nist-prediction"
       ],
       "gates": [
         "H3",
@@ -3794,13 +4040,22 @@
       ],
       "empiricalValidation": "none",
       "applicabilityMatrixStatus": "H1-explicit-all-contexts",
-      "evidenceDisposition": "unreviewed-for-current-cross-context-use",
+      "evidenceDisposition": "coefficient-sensitivity-not-error-distribution",
       "limitation": "Perturbation magnitude is not measured coefficient error, uncertainty coverage or empirical risk ranking.",
       "contextsMeaning": "Salient origin or named discussion contexts only; complete cross-context coverage is in applicability.json.",
       "semanticLevel": "model-or-method",
       "temporalScope": "Source-specific window required; current use not established by inventory",
       "measurementScope": "Source-specific protocol required; unrecorded method, device, treatment and preparation remain unknown",
-      "noPopulationPerformanceInference": true
+      "noPopulationPerformanceInference": true,
+      "evidenceReviews": [
+        {
+          "reviewId": "H2-D",
+          "path": "research/robustness/h2d/review.json",
+          "reviewedAt": "2026-11-09",
+          "scope": "Bounded source relevance and method distinction only; clinical severity, treatments and intersections remain unreviewed.",
+          "nextReviewBy": "2027-02-07"
+        }
+      ]
     },
     {
       "id": "C23",
@@ -4167,7 +4422,10 @@
         "general-adult"
       ],
       "sources": [
-        "future"
+        "future",
+        "h2e-hall-2011",
+        "h2e-hall-appendix",
+        "h2e-sanghvi-2015"
       ],
       "gates": [
         "H3",
@@ -4175,13 +4433,22 @@
       ],
       "empiricalValidation": "none",
       "applicabilityMatrixStatus": "H1-explicit-all-contexts",
-      "evidenceDisposition": "unreviewed-for-current-cross-context-use",
+      "evidenceDisposition": "calibration-architecture-with-unresolved-identifiability",
       "limitation": "A design diagram is not a fitted model, evaluated decision or working integration.",
       "contextsMeaning": "Salient origin or named discussion contexts only; complete cross-context coverage is in applicability.json.",
       "semanticLevel": "model-or-method",
       "temporalScope": "Source-specific window required; current use not established by inventory",
       "measurementScope": "Source-specific protocol required; unrecorded method, device, treatment and preparation remain unknown",
-      "noPopulationPerformanceInference": true
+      "noPopulationPerformanceInference": true,
+      "evidenceReviews": [
+        {
+          "reviewId": "H2-E",
+          "path": "research/robustness/h2e/review.json",
+          "reviewedAt": "2026-11-09",
+          "scope": "Bounded source relevance and method distinction only; clinical severity, treatments and intersections remain unreviewed.",
+          "nextReviewBy": "2027-02-07"
+        }
+      ]
     },
     {
       "id": "C33",
@@ -4198,7 +4465,8 @@
       "sources": [
         "ui",
         "ui-copy",
-        "core"
+        "core",
+        "h2d-nist-prediction"
       ],
       "gates": [
         "H2",
@@ -4207,14 +4475,23 @@
       ],
       "empiricalValidation": "none",
       "applicabilityMatrixStatus": "H1-explicit-all-contexts",
-      "evidenceDisposition": "unreviewed-for-current-cross-context-use",
+      "evidenceDisposition": "display-precision-and-disagreement-not-personal-uncertainty",
       "limitation": "API/export retain unrounded values; rounding and between-model difference do not quantify individual prediction error.",
       "contextsMeaning": "Salient origin or named discussion contexts only; complete cross-context coverage is in applicability.json.",
       "semanticLevel": "model-or-method",
       "temporalScope": "Source-specific window required; current use not established by inventory",
       "measurementScope": "Source-specific protocol required; unrecorded method, device, treatment and preparation remain unknown",
       "parentClaim": "C10",
-      "noPopulationPerformanceInference": true
+      "noPopulationPerformanceInference": true,
+      "evidenceReviews": [
+        {
+          "reviewId": "H2-D",
+          "path": "research/robustness/h2d/review.json",
+          "reviewedAt": "2026-11-09",
+          "scope": "Bounded source relevance and method distinction only; clinical severity, treatments and intersections remain unreviewed.",
+          "nextReviewBy": "2027-02-07"
+        }
+      ]
     },
     {
       "id": "C34",

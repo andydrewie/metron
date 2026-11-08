@@ -36,7 +36,7 @@ An open-source fitness instrument with an independently usable, headless calcula
 
 <p align="center"><img src="./docs/assets/v41-palette.svg" width="100%" alt="Metron V4.1 colors: soft slate baseline, blue walking and copper workout, each with text labels and numeric values" /></p>
 
-<sub>UI screenshots below document the preceding monochrome V4 layout; the live site is authoritative for the updated V4.1 palette.</sub>
+<sub>UI screenshots below capture the V4.1 interface with alpha.4 interpretation and input fixes. See the [H7 verification record](./research/robustness/h7/verification.json) for the exact source commit, browser and scope.</sub>
 
 
 **Mobile-first preview.** This is the actual app at phone size—not a desktop screenshot shrunk into a mobile screen. Tap the image to open it at full resolution.
@@ -66,7 +66,7 @@ The desktop image captures the entire browser viewport; open it full size to ins
 
 **Current measured-science workstream:** [Resting energy validation program](./research/ree-validation/README.md) · [GitHub tracking dashboard](https://github.com/andydrewie/metron/issues/9). **G0–G4 complete:** [454-person RMR results](./research/ree-validation/G3_RESULTS.md) and [the decision to retain the default with scoped guidance](./research/ree-validation/G4_DECISION.md) are published. This is one fixed-equation cohort reanalysis, not validation of the combined daily-energy or readiness estimator.
 
-**Current robustness program:** [checkpoint](./research/robustness/CHECKPOINT.md) · [canonical gate/weakness state](./research/robustness/plan.json) · [tracker #22](https://github.com/andydrewie/metron/issues/22). H0–H5 are complete at declared scope; H7 is under verification. H6 human evidence and H8 fresh-agent recovery remain blocked. Research reuse through 7 November 2027 is independently valuable; clinical applicability remains unreviewed.
+**Current robustness program:** [checkpoint](./research/robustness/CHECKPOINT.md) · [canonical gate/weakness state](./research/robustness/plan.json) · [tracker #22](https://github.com/andydrewie/metron/issues/22). H0–H5 and H7 are complete at declared scope: seven of nine gates. H6 human evidence and H8 fresh-agent recovery remain blocked. Research reuse through 7 November 2027 is independently valuable; clinical applicability remains unreviewed.
 
 **Research-only iPhone pilot:** [Read-only Apple HealthKit sample attribution](./research/apple-healthkit-pilot/README.md) (requires Xcode and your device's separate Health permission; not an existing web feature).
 

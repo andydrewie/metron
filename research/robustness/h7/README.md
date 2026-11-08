@@ -1,6 +1,6 @@
 # H7 · Software, privacy and accessibility
 
-**Implementation completed; browser verification pending.** The audit covers the SDK, direct exports, CLI, browser input/export state and research replay. It is a bounded software review, not a security certification or proof of clinical accuracy.
+**Complete at bounded review scope.** Hosted checks passed on commit `71301ba1f6946d9eacea2cac9ab6e194007a0be3`; [verification.json](verification.json) records the run, methods and limitations. All four synthetic screenshots were visually inspected at 320px/1280px. The audit covers the SDK, direct exports, CLI, browser input/export state and research replay. It is a bounded software review, not a security certification or proof of clinical accuracy.
 
 | Finding | Change | Verification |
 | --- | --- | --- |

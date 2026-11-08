@@ -8,7 +8,7 @@ Copy this into a new chat, optionally with the conversation link:
 
 ## Checkpoint
 
-There are nine main gates H0–H8; H2 has five evidence slices. H0–H5 are complete at declared scope. H7 input/privacy/interface fixes are under hosted verification. H6 remains blocked on real-user comprehension/decision-value evidence, with calibration unimplemented. H8 has historical replay, a bounded Python rebuild and maintenance drills; the genuinely fresh-agent exercise remains outstanding.
+There are nine main gates H0–H8; H2 has five evidence slices. H0–H5 are complete at declared scope. H7 input/privacy/interface fixes passed hosted verification. Seven of nine gates are complete. H6 remains blocked on real-user comprehension/decision-value evidence, with calibration unimplemented. H8 has historical replay, a bounded Python rebuild and maintenance drills; the genuinely fresh-agent exercise remains outstanding.
 
 H4 independently analyzes a different resting cohort: 89 eligible records, one transparently excluded under an existing BF bound. Cunningham's paired MAE difference is −104.5 kcal/day, 95% sampling interval −127.5 to −80.1. Published outcomes were already known; frozen protocol and amendment precede newly inspected errors. The general default stays Mifflin, Cunningham remains an explicit option. See H4 for source, preparation and population limits. Neither cohort validates combined TDEE, personal calorie targets, clinical use or readiness.
 

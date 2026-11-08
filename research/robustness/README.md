@@ -8,7 +8,7 @@
 
 **Program:** `METRON-ROBUST-001` · **Established:** 7 November 2026
 
-**Current checkpoint:** [all-gate execution record](CHECKPOINT.md). H0–H5 are complete at declared scope, H7 is under verification, and H6/H8 retain explicit evidence blockers. Clinical applicability remains unreviewed.
+**Current checkpoint:** [all-gate execution record](CHECKPOINT.md). H0–H5 and H7 are complete at declared scope, and H6/H8 retain explicit evidence blockers. Clinical applicability remains unreviewed.
 
 **Tracker:** [issue #22](https://github.com/andydrewie/metron/issues/22)
 
@@ -31,16 +31,16 @@ H0 inventories the current source, advertised capabilities, research entrypoints
 | **H2 · Current evidence and contradictions** | Execute documented searches of primary studies and authoritative guidance; record dates, corrections/retractions, counterevidence, versions, rights and claim-level applicability. | All five slices complete at bounded scope |
 | **H3 · Measurement and energy accounting** | Audit reference methods, input error, gross/net expenditure, baseline allocation, activity membership, missingness and incompatible wearable semantics. | Complete as an audit with explicit no-go boundaries |
 | **H4 · External validity** | Admit relevant independent data; freeze endpoints, paired comparisons, subgroup harms and decision margins before analysis; reproduce results independently. | Complete for independent resting replication; TDEE accuracy no-go |
-| **H5 · Readiness and decision boundaries** | Define readiness/performance endpoints, audit current set recommendations, evaluate prospective predictive value, or explicitly retain/restrict unsupported guidance. | See canonical plan and checkpoint |
-| **H6 · Uncertainty and individual value** | Separate cohort intervals, input sensitivity and individual prediction uncertainty; evaluate calibration forward in time and whether users understand the decision limits. | See canonical plan and checkpoint |
-| **H7 · Software, privacy and accessibility** | Exercise public API/CLI/browser contracts, malformed inputs, privacy failures, dependency/build assumptions, keyboard/mobile and color-independent comprehension. | Implementation complete; hosted verification pending |
-| **H8 · Reconstruction and maintenance** | Complete a clean-checkout reproduction and a separately recorded agent navigation/rebuild exercise; verify evidence update and supersession procedures while preserving open gaps. | See canonical plan and checkpoint |
+| **H5 · Readiness and decision boundaries** | Define readiness/performance endpoints, audit current set recommendations, evaluate prospective predictive value, or explicitly retain/restrict unsupported guidance. | Complete through explicit restriction/no-go; no prospective outcome claim |
+| **H6 · Uncertainty and individual value** | Separate cohort intervals, input sensitivity and individual prediction uncertainty; evaluate calibration forward in time and whether users understand the decision limits. | Blocked on real-user comprehension and decision-value evidence |
+| **H7 · Software, privacy and accessibility** | Exercise public API/CLI/browser contracts, malformed inputs, privacy failures, dependency/build assumptions, keyboard/mobile and color-independent comprehension. | Complete at bounded software/browser review scope |
+| **H8 · Reconstruction and maintenance** | Complete a clean-checkout reproduction and a separately recorded agent navigation/rebuild exercise; verify evidence update and supersession procedures while preserving open gaps. | Blocked on genuinely fresh-agent recovery; scripted reproduction passed |
 
 Dependencies in `plan.json` are authoritative. H2 and H3 follow H1; H4 and H5 can then proceed independently. H7 can start after H1. H8 tests reconstruction once H1 and H7 are complete and must preserve the actual state of the other gates. H6 has separate RMR/TDEE and readiness tracks: only the applicable H4 or H5 track is a prerequisite. An unsupported readiness branch must not indefinitely block independent RMR work.
 
 Gate progress is claim- and domain-specific. Any partial passage must name its exact scope, evidence and outstanding criteria; it does not close the whole gate. `complete` means all declared acceptance criteria for that gate are reviewed, with evidence. Negative results and explicit no-go decisions can satisfy an investigation; they cannot be relabeled as successful physiological validation. The audit command never promotes a gate automatically.
 
-**Immediate next task:** finish H7 hosted verification, then execute the [H8 cold-start task](h8/COLD_START_TASK.md) in a genuinely new context. H6 needs real-user and longitudinal evidence; implementation or paperwork cannot substitute for it.
+**Immediate next task:** execute the [H8 cold-start task](h8/COLD_START_TASK.md) in a genuinely new context. H6 needs real-user and longitudinal evidence; implementation or paperwork cannot substitute for it.
 
 ## A multidimensional applicability map
 

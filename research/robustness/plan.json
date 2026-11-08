@@ -9,9 +9,9 @@
   "baselineCommit": "2a9cc6cc45832abcbe0ce57454562d605715fc49",
   "corpus": "research/robustness/corpus.json",
   "dashboard": "https://github.com/andydrewie/metron/issues/22",
-  "currentGate": "H7",
+  "currentGate": "H8",
   "completedStudy": "research/ree-validation/plan.json",
-  "coverage": "H0–H5 complete at declared scope. H7 implementation under verification. H6 human comprehension and H8 independent cold-start evidence remain blocked. All clinical matrix cells remain unreviewed.",
+  "coverage": "Seven of nine gates complete: H0–H5 and H7 at declared scope. H6 human comprehension and H8 independent cold-start evidence remain blocked. All clinical matrix cells remain unreviewed.",
   "scope": [
     "energy quantities and model assumptions",
     "clinical applicability and physiological states",
@@ -261,7 +261,7 @@
     {
       "id": "H7",
       "name": "Software privacy and accessibility",
-      "state": "in-progress",
+      "state": "complete",
       "dependsOn": [
         "H1"
       ],
@@ -275,9 +275,15 @@
       "evidence": [
         "research/robustness/h7/README.md",
         "tests/interface-boundaries.test.js",
-        "research/robustness/h7/browser_check.py"
+        "research/robustness/h7/browser_check.py",
+        "research/robustness/h7/verification.json"
       ],
-      "closure": null
+      "closure": {
+        "reviewedAt": "2026-11-09",
+        "reviewerRole": "Maintaining agent; hosted Chromium and automated code review",
+        "scope": "Bounded SDK/CLI/privacy and browser state/keyboard/accessible-name review at 320px and 1280px; no exhaustive security or assistive-technology certification.",
+        "acceptanceReview": "All four criteria reviewed: malformed/direct-export contracts, sensitive errors and isolated research replay, recorded keyboard/label/layout checks and failures, and scoped restrictions on unsupported personal decisions. Four synthetic screenshots visually inspected. See verification.json for exact head/run and limits."
+      }
     },
     {
       "id": "H8",
@@ -481,17 +487,18 @@
       "severity": "high",
       "gate": "H7",
       "ownerRole": "Software and accessibility reviewer",
-      "state": "open",
-      "finding": "API/CLI/privacy/browser defects fixed; hosted accessibility/browser verification pending.",
+      "state": "constrained",
+      "finding": "API/CLI/privacy/browser defects repaired; hosted keyboard, accessible-name and narrow-layout checks passed and screenshots inspected.",
       "evidence": [
         "tests/model.test.js",
         "tests/metadata.test.js",
         "docs/QA.md"
       ],
-      "nextTest": "Finish hosted browser checks and inspect screenshots.",
+      "nextTest": "Evaluate additional real-device/assistive-technology combinations before expanding accessibility claims.",
       "resolutionEvidence": [
         "research/robustness/h7/README.md",
-        "tests/interface-boundaries.test.js"
+        "tests/interface-boundaries.test.js",
+        "research/robustness/h7/verification.json"
       ],
       "residual": "No exhaustive security or assistive-technology certification."
     },
@@ -515,8 +522,8 @@
     }
   ],
   "nextTask": {
-    "gate": "H7",
-    "action": "Finish hosted browser verification and review; then hand H8 cold-start task to a genuinely new context. H6 remains blocked on real-user/longitudinal evidence.",
+    "gate": "H8",
+    "action": "Execute H8/COLD_START_TASK.md in a genuinely new agent context and record actual recovery. H6 remains blocked on real-user evidence; calibration remains unimplemented.",
     "userAuthorization": "Execute all remaining gates without per-gate reconfirmation; do not fabricate unavailable evidence."
   },
   "trackPrerequisites": {

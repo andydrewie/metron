@@ -14,14 +14,16 @@ H0 and [H1](../research/robustness/H1_INVENTORY.md) are complete for their finit
 
 **[H2-B](../research/robustness/h2b/README.md) is complete for nine claim families**, with 14 published source records and 32 queries. Equation variants and unresolved Weijs/Kfir discrepancies are explicit. G0–G4, the provisional default and production behavior remain unchanged. Broad clinical applicability is still unreviewed.
 
-**Next: H2-C, measurement and source semantics**, as specified in [the review queue](../research/robustness/h2-review-queue.json). Whole H2 remains in progress. H3 and H7 are separately unblocked; H5 still follows its H2/H3 prerequisites. Athlete data admission remains deferred to H4 and a separate frozen protocol.
+**[H2-C](../research/robustness/h2c/README.md) is complete for 12 claim families**, with 17 source records, 40 queries and 16 bounded overlays. The measurement crosswalk preserves incompatible constructs, baseline references, query windows, defaults and unknown provider membership. No new production adapter or real-device validation was added.
+
+**Next: H2-D, combined energy and uncertainty**, as specified in [the review queue](../research/robustness/h2-review-queue.json). Whole H2 remains in progress. H3 and H7 are separately unblocked; H5 still follows its H2/H3 prerequisites. Athlete data admission remains deferred to H4 and a separate frozen protocol.
 
 ## Recover and act
 
 1. Check latest `main`, open [tracker #22](https://github.com/andydrewie/metron/issues/22) and existing PRs before creating work.
 2. Read [AGENTS](../AGENTS.md), [collaboration rules](./COLLABORATION.md), [manifest](../metron.manifest.json), [navigation](./navigation.json) and [decisions](./adr/index.json).
 3. Read the plan, relevant claim/context entries and actual review sources. A bounded review overlay is not clinical clearance.
-4. Run the audit using today's date. H2-A's next operational review is 5 February 2027; H2-B's is 7 February 2027. Review earlier upon consequential reuse, source corrections or contrary evidence.
+4. Run the audit using today's date. H2-A's next operational review is 5 February 2027; H2-B's is 7 February 2027. H2-C provider definitions are due 9 December 2026; its other claim reviews are due 7 February 2027. Review earlier upon consequential reuse, source corrections or contrary evidence.
 5. Use a scoped PR, run required checks and inspect review findings. Update the plan, checkpoint and tracker after completion.
 
 ```bash

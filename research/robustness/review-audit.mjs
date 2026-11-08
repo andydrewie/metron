@@ -17,7 +17,10 @@ export function auditReview(corpus,matrix,plan,{review,registry,searchLog,queue}
   if(!date(review.nextReviewBy)||review.nextReviewBy<=review.asOf) fail('invalid next review date');
   for(const source of registry.sources){
     const canonical=corpus.sources.find(x=>x.id===source.id);
-    if(!canonical || canonical.url!==source.url || canonical.sourceContentReviewedAt!==source.sourceContentReviewedAt) fail('source registry/corpus mismatch '+source.id);
+    // A newer inspection must not invalidate a retained dated review or refresh it.
+    const retained=canonical?.contentReviewHistory?.some(h=>h.reviewId===reviewId&&h.registryPath===review.sourceRegistry&&h.sourceContentReviewedAt===source.sourceContentReviewedAt&&h.url===source.url&&h.inspectedPortions===source.inspectedPortions);
+    const latest=canonical?.sourceContentReviewedAt;
+    if(!canonical || canonical.url!==source.url || (latest!==source.sourceContentReviewedAt && !(retained&&date(latest)&&latest>=source.sourceContentReviewedAt))) fail('source registry/corpus mismatch '+source.id);
     if(!date(source.sourceContentReviewedAt)||source.sourceContentReviewedAt>asOf) fail('invalid/future source review '+source.id);
     if(!source.inspectedPortions||!source.rightsStatus||!source.limitations||!source.correctionReview?.unresolved||!source.design) fail('source lacks scope, rights, design or update limits '+source.id);
   }

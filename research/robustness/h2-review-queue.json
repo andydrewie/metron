@@ -85,7 +85,7 @@
     {
       "id": "H2-C",
       "title": "Measurement and source semantics",
-      "state": "not-started",
+      "state": "complete",
       "claimIds": [
         "C04",
         "C05",
@@ -106,7 +106,20 @@
       "downstreamGates": [
         "H3"
       ],
-      "completion": "Claim-level evidence dispositions, reproducible searches, source records, contradictions, explicit unreviewed limits and next-review triggers; no unsupported clinical promotion."
+      "completion": "Claim-level evidence dispositions, reproducible searches, source records, contradictions, explicit unreviewed limits and next-review triggers; no unsupported clinical promotion.",
+      "closure": {
+        "reviewedAt": "2026-11-09",
+        "scope": "12 claim families, 17 source records and 40 logged queries; bounded source/repository inspection and synthetic checks.",
+        "acceptanceReview": "Source portions, versions, rights, contrary evidence, claim/context limits, measurement crosswalk and H3 follow-ups recorded. H2-D next; whole H2 remains in progress.",
+        "independentReview": false,
+        "evidence": [
+          "research/robustness/h2c/README.md",
+          "research/robustness/h2c/review.json",
+          "research/robustness/h2c/sources.json",
+          "research/robustness/h2c/search-log.json",
+          "research/robustness/h2c/measurement-crosswalk.json"
+        ]
+      }
     },
     {
       "id": "H2-D",

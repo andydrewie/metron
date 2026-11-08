@@ -1,5 +1,8 @@
 # Metron · Apple Health sample-attribution pilot
 
+**Dated source follow-up, 9 November 2026:** [H2-C](../robustness/h2c/README.md) verifies that raw daily samples use `strictStartDate`, while the statistics predicate uses options `[]`. The calendar anchor is the workout start day. [H3 follow-up](../robustness/h2c/measurement-crosswalk.json) retains query caps, day boundaries, authorization/history limits and changing sample representation. This does not establish that stepCount was condensed or that an actual device supplied any data. No new on-device run occurred.
+
+
 ## In 20 seconds
 
 **A working research app is prepared:** a small, read-only SwiftUI iPhone pilot that compares **exact sample UUIDs** between the latest visible workout's associated step records and the step records returned by a calendar-day query.

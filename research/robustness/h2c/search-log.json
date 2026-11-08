@@ -1,0 +1,401 @@
+{
+  "schemaVersion": "1.0.0",
+  "documentType": "metron.H2C-search-log",
+  "asOf": "2026-11-09",
+  "timezone": "Asia/Taipei",
+  "publicationCutoff": "2026-11-09",
+  "design": "Targeted rapid measurement/provenance review, not a systematic review.",
+  "protocolTiming": "Adaptive queries consolidated after orientation; no preregistration claimed.",
+  "reviewerRole": "Maintaining agent; no independent duplicate extraction.",
+  "retrievalSystem": "Web system1; primary publisher, PubMed/PMC, official agency and provider documents, public publisher PDF.",
+  "languageAndDates": "English queries/content; no lower date limit except recorded recency filters. Publication metadata checked separately.",
+  "inclusion": "Sources that distinguish the quantities, methods and reporting windows behind the 12 assigned claims. Original methodological aggregate analyses explicitly labelled.",
+  "exclusion": "No participant data, authenticated API payloads, secondary effect estimates, clinical recommendation or production integration.",
+  "queries": [
+    {
+      "id": "Q01",
+      "q": "site.pacompendium.com 2024 adult compendium MET 19 59 3.5 ml kg minute resistance training",
+      "runDate": "2026-11-09",
+      "recencyDays": null,
+      "purpose": "claim-discovery-or-method-definition"
+    },
+    {
+      "id": "Q02",
+      "q": "site.pubmed.ncbi.nlm.nih.gov 2024 Adult Compendium Physical Activities Herrmann metabolic equivalents",
+      "runDate": "2026-11-09",
+      "recencyDays": null,
+      "purpose": "claim-discovery-or-method-definition"
+    },
+    {
+      "id": "Q03",
+      "q": "site.pubmed.ncbi.nlm.nih.gov Byrne 2005 metabolic equivalent one size does not fit all 3.5",
+      "runDate": "2026-11-09",
+      "recencyDays": null,
+      "purpose": "claim-discovery-or-method-definition"
+    },
+    {
+      "id": "Q04",
+      "q": "site.pubmed.ncbi.nlm.nih.gov walking energy expenditure Ludlow Weyand 2016 0.5 stature",
+      "runDate": "2026-11-09",
+      "recencyDays": null,
+      "purpose": "claim-discovery-or-method-definition"
+    },
+    {
+      "id": "Q05",
+      "q": "site.fao.org human energy requirements physical activity level PAL total energy expenditure basal metabolic rate 1.40 1.69",
+      "runDate": "2026-11-09",
+      "recencyDays": null,
+      "purpose": "claim-discovery-or-method-definition"
+    },
+    {
+      "id": "Q06",
+      "q": "\"2000 steps\" \"1.2\" basal metabolic rate validation",
+      "runDate": "2026-11-09",
+      "recencyDays": null,
+      "purpose": "claim-discovery-or-method-definition"
+    },
+    {
+      "id": "Q07",
+      "q": "\"0.415\" \"step length\" validation height walking",
+      "runDate": "2026-11-09",
+      "recencyDays": null,
+      "purpose": "claim-discovery-or-method-definition"
+    },
+    {
+      "id": "Q08",
+      "q": "site.pubmed.ncbi.nlm.nih.gov Wang Pierson Heymsfield 1992 five level model body composition fat free mass skeletal muscle",
+      "runDate": "2026-11-09",
+      "recencyDays": null,
+      "purpose": "claim-discovery-or-method-definition"
+    },
+    {
+      "id": "Q09",
+      "q": "site.escardio.org heart rate variability 1996 task force SDNN RMSSD normal normal recording length",
+      "runDate": "2026-11-09",
+      "recencyDays": null,
+      "purpose": "claim-discovery-or-method-definition"
+    },
+    {
+      "id": "Q10",
+      "q": "site.developer.apple.com documentation healthkit heartRateVariabilitySDNN milliseconds",
+      "runDate": "2026-11-09",
+      "recencyDays": null,
+      "purpose": "claim-discovery-or-method-definition"
+    },
+    {
+      "id": "Q11",
+      "q": "site.developer.whoop.com recovery hrv_rmssd milliseconds step_count cycle 2026",
+      "runDate": "2026-11-09",
+      "recencyDays": null,
+      "purpose": "claim-discovery-or-method-definition"
+    },
+    {
+      "id": "Q12",
+      "q": "site.pubmed.ncbi.nlm.nih.gov Kyle 2004 bioelectrical impedance analysis clinical practice hydration fluid body composition",
+      "runDate": "2026-11-09",
+      "recencyDays": null,
+      "purpose": "claim-discovery-or-method-definition"
+    },
+    {
+      "id": "Q13",
+      "q": "site.developer.apple.com \"heartRateVariabilityRMSSD\"",
+      "runDate": "2026-11-09",
+      "recencyDays": null,
+      "purpose": "claim-discovery-or-method-definition"
+    },
+    {
+      "id": "Q14",
+      "q": "\"10.1152/ajpheart.00041.2026\" guidelines authors",
+      "runDate": "2026-11-09",
+      "recencyDays": null,
+      "purpose": "claim-discovery-or-method-definition"
+    },
+    {
+      "id": "Q15",
+      "q": "site.developer.garmin.com personal API FAQ 2026 health activity steps",
+      "runDate": "2026-11-09",
+      "recencyDays": null,
+      "purpose": "claim-discovery-or-method-definition"
+    },
+    {
+      "id": "Q16",
+      "q": "site.pmc.ncbi.nlm.nih.gov/articles/PMC10404482/ Siedler devices four compartment repeatability bias",
+      "runDate": "2026-11-09",
+      "recencyDays": null,
+      "purpose": "claim-discovery-or-method-definition"
+    },
+    {
+      "id": "Q17",
+      "q": "site.developer.apple.com healthkit HKStatistics merges overlapping sources separateBySource step count",
+      "runDate": "2026-11-09",
+      "recencyDays": null,
+      "purpose": "claim-discovery-or-method-definition"
+    },
+    {
+      "id": "Q18",
+      "q": "site.developer.apple.com healthkit predicateForSamples strictStartDate strictEndDate overlap",
+      "runDate": "2026-11-09",
+      "recencyDays": null,
+      "purpose": "claim-discovery-or-method-definition"
+    },
+    {
+      "id": "Q19",
+      "q": "site.developer.apple.com healthkit authorization read denied cannot determine read permission",
+      "runDate": "2026-11-09",
+      "recencyDays": null,
+      "purpose": "claim-discovery-or-method-definition"
+    },
+    {
+      "id": "Q20",
+      "q": "\"Development of a Multivariable Equation for Predicting Healthy Step Length\" authors 2026",
+      "runDate": "2026-11-09",
+      "recencyDays": null,
+      "purpose": "claim-discovery-or-method-definition"
+    },
+    {
+      "id": "Q21",
+      "q": "site.developer.apple.com/documentation/healthkit/hkstatistics \"merges\"",
+      "runDate": "2026-11-09",
+      "recencyDays": null,
+      "purpose": "claim-discovery-or-method-definition"
+    },
+    {
+      "id": "Q22",
+      "q": "site.developer.apple.com/documentation/healthkit/hkquantitytypeidentifier/heartratevariabilityrmssd \"root\"",
+      "runDate": "2026-11-09",
+      "recencyDays": null,
+      "purpose": "claim-discovery-or-method-definition"
+    },
+    {
+      "id": "Q23",
+      "q": "site.developer.apple.com/documentation/healthkit/hkquery/predicateforsamples \"strictStartDate\"",
+      "runDate": "2026-11-09",
+      "recencyDays": null,
+      "purpose": "claim-discovery-or-method-definition"
+    },
+    {
+      "id": "Q24",
+      "q": "2025 2026 bioelectrical impedance validation four compartment hydration fat free mass",
+      "runDate": "2026-11-09",
+      "recencyDays": 730,
+      "purpose": "claim-discovery-or-method-definition"
+    },
+    {
+      "id": "Q25",
+      "q": "\"10.1152/ajpheart.00041.2026\" \"recording\" \"five\"",
+      "runDate": "2026-11-09",
+      "recencyDays": null,
+      "purpose": "claim-discovery-or-method-definition"
+    },
+    {
+      "id": "Q26",
+      "q": "\"10.1152/ajpheart.00041.2026\" \"sampling\" \"respiration\"",
+      "runDate": "2026-11-09",
+      "recencyDays": null,
+      "purpose": "claim-discovery-or-method-definition"
+    },
+    {
+      "id": "Q27",
+      "q": "site.developer.apple.com healthkit \"SDNN\" \"RMSSD\" 2026",
+      "runDate": "2026-11-09",
+      "recencyDays": 365,
+      "purpose": "claim-discovery-or-method-definition"
+    },
+    {
+      "id": "Q28",
+      "q": "\"0.415\" step length clinical validation walking energy \"2000\"",
+      "runDate": "2026-11-09",
+      "recencyDays": null,
+      "purpose": "claim-discovery-or-method-definition"
+    },
+    {
+      "id": "Q29",
+      "q": "\"10.1152/ajpheart.00041.2026\" correction erratum retraction",
+      "runDate": "2026-11-09",
+      "recencyDays": null,
+      "purpose": "targeted-update-notice"
+    },
+    {
+      "id": "Q30",
+      "q": "\"10.1017/S0007114522003749\" correction erratum retraction",
+      "runDate": "2026-11-09",
+      "recencyDays": null,
+      "purpose": "targeted-update-notice"
+    },
+    {
+      "id": "Q31",
+      "q": "\"10.1016/j.jshs.2023.10.010\" correction erratum retraction",
+      "runDate": "2026-11-09",
+      "recencyDays": null,
+      "purpose": "targeted-update-notice"
+    },
+    {
+      "id": "Q32",
+      "q": "\"10.3390/s22114277\" correction erratum retraction",
+      "runDate": "2026-11-09",
+      "recencyDays": null,
+      "purpose": "targeted-update-notice"
+    },
+    {
+      "id": "Q33",
+      "q": "\"Metabolic equivalent: one size does not fit all\" \"2005\" \"doi\"",
+      "runDate": "2026-11-09",
+      "recencyDays": null,
+      "purpose": "claim-discovery-or-method-definition"
+    },
+    {
+      "id": "Q34",
+      "q": "site.developer.apple.com/documentation/healthkit/accessing-condensed-workout-samples coalesced",
+      "runDate": "2026-11-09",
+      "recencyDays": null,
+      "purpose": "claim-discovery-or-method-definition"
+    },
+    {
+      "id": "Q35",
+      "q": "site.developer.apple.com/documentation/healthkit/hkstatistics \"merge\" \"overlap\"",
+      "runDate": "2026-11-09",
+      "recencyDays": null,
+      "purpose": "claim-discovery-or-method-definition"
+    },
+    {
+      "id": "Q36",
+      "q": "site.developer.apple.com/documentation/healthkit/hkquery \"predicateForObjects(from:)\" \"workout\"",
+      "runDate": "2026-11-09",
+      "recencyDays": null,
+      "purpose": "claim-discovery-or-method-definition"
+    },
+    {
+      "id": "Q37",
+      "q": "site.mdpi.com/1424-8220/22/11/4277 \"participants\" \"5.24\"",
+      "runDate": "2026-11-09",
+      "recencyDays": null,
+      "purpose": "claim-discovery-or-method-definition"
+    },
+    {
+      "id": "Q38",
+      "q": "site.mdpi.com/1424-8220/22/11/4277 \"healthy\" \"Methods\"",
+      "runDate": "2026-11-09",
+      "recencyDays": null,
+      "purpose": "claim-discovery-or-method-definition"
+    },
+    {
+      "id": "Q39",
+      "q": "site.mdpi.com/1424-8220/22/11/4277 \"13.\" \"step\"",
+      "runDate": "2026-11-09",
+      "recencyDays": null,
+      "purpose": "claim-discovery-or-method-definition"
+    },
+    {
+      "id": "Q40",
+      "q": "site.pmc.ncbi.nlm.nih.gov/articles/PMC10404482 \"non-independent\"",
+      "runDate": "2026-11-09",
+      "recencyDays": null,
+      "purpose": "claim-discovery-or-method-definition"
+    }
+  ],
+  "includedSourceIds": [
+    "compendium",
+    "h2c-fao-2004",
+    "h2c-byrne-2005",
+    "h2c-ludlow-2016",
+    "h2c-han-2026",
+    "h2c-scherrenberg-2022",
+    "h2c-wang-1992",
+    "h2c-kyle-2004",
+    "siedler-2023",
+    "h2c-carter-2026",
+    "h2c-apple-hrv",
+    "h2c-apple-queries",
+    "h2c-apple-auth",
+    "h2c-apple-condensed",
+    "h2c-whoop-cycle",
+    "h2c-whoop-recovery",
+    "h2c-garmin"
+  ],
+  "selectionLimits": "Purposeful selection, no exhaustive screening denominator or saturation claim. No universal absence-of-evidence inference.",
+  "discoveryOnly": [
+    {
+      "locator": "https://pmc.ncbi.nlm.nih.gov/articles/PMC12922097/",
+      "reason": "2026 BIA systematic review used for discovery only; no secondary estimates admitted."
+    },
+    {
+      "locator": "1996 HRV Task Force ESC PDF",
+      "reason": "Direct PDF unavailable (403); current Carter guidance and provider definitions used within their retrieved scope."
+    },
+    {
+      "locator": "Third-party Apple/iOS 27 release commentary",
+      "reason": "Not used to establish official OS availability or device generation of RMSSD."
+    }
+  ],
+  "accessLimits": [
+    {
+      "sourceId": "compendium",
+      "inspected": "Official adult overview, conditioning/walking tables; primary article indexed abstract and limitations. Full contributing studies not inspected."
+    },
+    {
+      "sourceId": "h2c-fao-2004",
+      "inspected": "Official adult requirements and terminology sections."
+    },
+    {
+      "sourceId": "h2c-byrne-2005",
+      "inspected": "Primary PubMed/publisher indexed abstract and bibliographic metadata; full methods not inspected."
+    },
+    {
+      "sourceId": "h2c-ludlow-2016",
+      "inspected": "PubMed abstract and equation; contributing datasets/full methods not independently inspected."
+    },
+    {
+      "sourceId": "h2c-han-2026",
+      "inspected": "Publisher-indexed abstract, results and discussion; full methods/access terms not inspected."
+    },
+    {
+      "sourceId": "h2c-scherrenberg-2022",
+      "inspected": "Publisher PDF abstract, methods §§2.1–2.3, limitations and §4.3; title alone was not used as validation."
+    },
+    {
+      "sourceId": "h2c-wang-1992",
+      "inspected": "PubMed abstract and metadata only."
+    },
+    {
+      "sourceId": "h2c-kyle-2004",
+      "inspected": "Primary PubMed indexed abstract; full guidance not inspected."
+    },
+    {
+      "sourceId": "siedler-2023",
+      "inspected": "PMC abstract, methods, reliability discussion, limitations and licence; device supplements not inspected."
+    },
+    {
+      "sourceId": "h2c-carter-2026",
+      "inspected": "Primary indexed guideline abstract, recording/respiration sections and table of laboratory versus field methods; metadata. Direct PMC access challenged."
+    },
+    {
+      "sourceId": "h2c-apple-hrv",
+      "inspected": "Official indexed SDNN discussion and RMSSD declaration; direct HTML is a JS shell, Markdown retrieval unsupported."
+    },
+    {
+      "sourceId": "h2c-apple-queries",
+      "inspected": "Official indexed workout predicate, query-option and statistics/collection documentation; direct pages partly JS-only."
+    },
+    {
+      "sourceId": "h2c-apple-auth",
+      "inspected": "Official indexed authorization discussion including getEarliestAuthorizedSampleDate; JS/Markdown access limits recorded."
+    },
+    {
+      "sourceId": "h2c-apple-condensed",
+      "inspected": "Official indexed overview and query guidance. No device experiment. "
+    },
+    {
+      "sourceId": "h2c-whoop-cycle",
+      "inspected": "Public cycle/workout field tables and API changelog, including September 2026 entry."
+    },
+    {
+      "sourceId": "h2c-whoop-recovery",
+      "inspected": "Public recovery model and field definitions; no user records."
+    },
+    {
+      "sourceId": "h2c-garmin",
+      "inspected": "Official Health/Activity overviews, Personal FAQ, FIT overview and Swagger shell."
+    }
+  ],
+  "updateNoticeLimit": "Q29–Q32 targeted four DOIs; other sources had visible metadata/version inspection only. No exhaustive Crossmark/retraction-registry audit."
+}

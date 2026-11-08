@@ -1,5 +1,8 @@
 # Provider step accounting — public documentation review
 
+**Dated follow-up, 9 November 2026:** [H2-C](../robustness/h2c/README.md) rechecked public definitions and records provider-version, metric, window, missingness and contribution limits in its [crosswalk](../robustness/h2c/measurement-crosswalk.json). The 6 November comparison remains historical evidence. Public Garmin Swagger retrieval exposed navigation only; no authenticated payload or automatic membership proof was added.
+
+
 ## In 20 seconds
 
 **Finding:** WHOOP, Garmin and Apple HealthKit expose useful step and workout information, but the documentation examined does **not establish a universal rule for subtracting workout steps from daily or cycle steps**.

@@ -40,7 +40,7 @@ test('lookup distinguishes a bounded review from unreviewed clinical contexts',(
 });
 test('review-age boundary warns without inventing scientific invalidity or refresh',()=>{
  const f=fixture();const h1={inventory:read('research/robustness/inventory.json'),matrix:f.matrix,semantics:read('research/robustness/semantics.json'),inputSchema:read('schemas/input.schema.json'),outputSchema:read('schemas/output.schema.json')};
- const opts={asOf:'2027-02-05',pathExists:p=>existsSync(root+p),h1,h2a:f.records,h2b:{review:read('research/robustness/h2b/review.json'),registry:read('research/robustness/h2b/sources.json'),searchLog:read('research/robustness/h2b/search-log.json'),queue:read('research/robustness/h2-review-queue.json'),crosswalk:read('research/robustness/h2b/equation-crosswalk.json')}};
+ const opts={asOf:'2027-02-05',pathExists:p=>existsSync(root+p),h1,h2a:f.records,h2c:{review:read('research/robustness/h2c/review.json'),registry:read('research/robustness/h2c/sources.json'),searchLog:read('research/robustness/h2c/search-log.json'),queue:read('research/robustness/h2-review-queue.json'),crosswalk:read('research/robustness/h2c/measurement-crosswalk.json')},h2b:{review:read('research/robustness/h2b/review.json'),registry:read('research/robustness/h2b/sources.json'),searchLog:read('research/robustness/h2b/search-log.json'),queue:read('research/robustness/h2-review-queue.json'),crosswalk:read('research/robustness/h2b/equation-crosswalk.json')}};
  const result=auditProgram(f.plan,f.corpus,opts);assert.equal(result.valid,true);assert.ok(result.warnings.some(w=>w.includes('H2-A bounded evidence review is due')));
  assert.equal(f.records.review.asOf,'2026-11-07');
 });

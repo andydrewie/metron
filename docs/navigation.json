@@ -19,7 +19,8 @@
     "continuation": "docs/CONTINUE.md",
     "claimApplicability": "research/robustness/applicability.json",
     "semanticContract": "research/robustness/semantics.json",
-    "readinessEvidenceReview": "research/robustness/h2a/review.json"
+    "readinessEvidenceReview": "research/robustness/h2a/review.json",
+    "measurementEvidenceReview": "research/robustness/h2c/review.json"
   },
   "conventions": {
     "paths": "repository-relative",
@@ -307,7 +308,12 @@
         "research/robustness/h2b/review.json",
         "research/robustness/h2b/sources.json",
         "research/robustness/h2b/search-log.json",
-        "research/robustness/h2b/equation-crosswalk.json"
+        "research/robustness/h2b/equation-crosswalk.json",
+        "research/robustness/h2c/README.md",
+        "research/robustness/h2c/review.json",
+        "research/robustness/h2c/sources.json",
+        "research/robustness/h2c/search-log.json",
+        "research/robustness/h2c/measurement-crosswalk.json"
       ],
       "status": "research-question"
     }

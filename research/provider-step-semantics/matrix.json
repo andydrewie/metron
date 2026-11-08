@@ -105,5 +105,13 @@
     ],
     "nextQuestion": "Can permission-cleared sample IDs or provenance establish exact inclusion within a particular aggregate total?",
     "policyReference": "docs/adr/0004-provenance-before-automatic-reconciliation.md"
-  }
+  },
+  "followUpReviews": [
+    {
+      "asOf": "2026-11-09",
+      "reviewId": "H2-C",
+      "path": "research/robustness/h2c/review.json",
+      "meaning": "Dated follow-up; original 2026-11-06 comparison preserved. No real payload or membership promotion."
+    }
+  ]
 }

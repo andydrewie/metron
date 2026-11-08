@@ -11,7 +11,7 @@
   "dashboard": "https://github.com/andydrewie/metron/issues/22",
   "currentGate": "H2",
   "completedStudy": "research/ree-validation/plan.json",
-  "coverage": "H1 finite inventory complete; H2-A and H2-B bounded reviews complete. Whole H2, clinical applicability, independent replication and reconstruction remain open.",
+  "coverage": "H1 finite inventory complete; H2-A/B/C bounded reviews complete. Whole H2, clinical applicability, independent replication and reconstruction remain open.",
   "scope": [
     "energy quantities and model assumptions",
     "clinical applicability and physiological states",
@@ -117,15 +117,20 @@
         "research/robustness/h2b/review.json",
         "research/robustness/h2b/sources.json",
         "research/robustness/h2b/search-log.json",
-        "research/robustness/h2b/equation-crosswalk.json"
+        "research/robustness/h2b/equation-crosswalk.json",
+        "research/robustness/h2c/README.md",
+        "research/robustness/h2c/review.json",
+        "research/robustness/h2c/sources.json",
+        "research/robustness/h2c/search-log.json",
+        "research/robustness/h2c/measurement-crosswalk.json"
       ],
       "closure": null,
       "completedSlices": [
         "H2-A",
-        "H2-B"
+        "H2-B",
+        "H2-C"
       ],
       "remainingSlices": [
-        "H2-C",
         "H2-D",
         "H2-E"
       ]
@@ -143,7 +148,9 @@
         "Resolve or explicitly bound baseline, gross/net activity and step-membership assumptions without treating clock overlap as membership",
         "Identify provider-specific semantics, measurement error and nonidentifiability; record unresolved cases and no-go rules"
       ],
-      "evidence": [],
+      "evidence": [
+        "research/robustness/h2c/measurement-crosswalk.json"
+      ],
       "closure": null
     },
     {
@@ -265,7 +272,7 @@
         "docs/SCIENCE.md",
         "core/model.js"
       ],
-      "nextTest": "Execute H2-C measurement/source review and remaining H2 slices; add scoped clinical reviews without promoting whole contexts from narrow samples.",
+      "nextTest": "Complete H2-D/E, then separately scope clinical severity/treatment/intersection reviews; H2-C method overlays do not establish clinical eligibility.",
       "resolutionEvidence": [
         "research/robustness/H1_INVENTORY.md",
         "research/robustness/inventory.json",
@@ -300,13 +307,14 @@
       "gate": "H3",
       "ownerRole": "Measurement research lead",
       "state": "open",
-      "finding": "BIA quality, baseline expenditure, gross/net MET and workout-step membership remain context-dependent.",
+      "finding": "H2-C identifies baseline/PAL, step/stride, MET reference, composition/HRV constructs, defaults and provider-window/membership mismatches. Current production inputs lack the proposed provenance contract.",
       "evidence": [
         "research/ree-validation/G4_DECISION.md",
         "research/energy-accounting/README.md",
-        "research/provider-step-semantics/matrix.json"
+        "research/provider-step-semantics/matrix.json",
+        "research/robustness/h2c/measurement-crosswalk.json"
       ],
-      "nextTest": "Trace reference/input method and component attribution before treating a model difference as deployable benefit.",
+      "nextTest": "Execute H3 mapping nextTest entries, beginning with baseline reference and input provenance; use synthetic temporal/missingness cases before optional provider records.",
       "resolutionEvidence": [],
       "residual": "Evidence work remains; no claim of closure."
     },
@@ -333,12 +341,13 @@
       "gate": "H2",
       "ownerRole": "Evidence review lead",
       "state": "open",
-      "finding": "Operational dated source records now cover H2-A and H2-B; remaining slices, inaccessible methods, exact-variant discrepancies and comprehensive correction checks remain open.",
+      "finding": "H2-A/B/C record scoped source inspections and update-check limits; H2-D/E and clinical applicability remain open. H2-C provider review due 2026-12-09 or earlier before reuse.",
       "evidence": [
         "docs/SCIENCE.md",
-        "research/ree-validation/G4_DECISION.md"
+        "research/ree-validation/G4_DECISION.md",
+        "research/robustness/h2c/review.json"
       ],
-      "nextTest": "Complete H2-C/D/E and resolve source discrepancies before dependent reuse; recheck bounded H2-A/B on their review dates or early triggers.",
+      "nextTest": "Complete H2-D/E and recheck due provider definitions before integration; preserve actual inspection dates.",
       "resolutionEvidence": [
         "research/robustness/h2a/review.json",
         "research/robustness/h2b/review.json"
@@ -420,11 +429,11 @@
   ],
   "nextTask": {
     "gate": "H2",
-    "action": "Review measurement and source semantics for C04/C05/C06/C07/C11/C12/C13/C17/C23/C28/C29/C30; preserve non-equivalent measures, provenance gaps and frozen G0–G4. Dataset admission remains H4 work.",
+    "action": "Review combined energy and uncertainty for C03/C10/C21/C22/C33; separate accounting arithmetic, prediction error, model disagreement and individual interval coverage. Preserve frozen G0–G4; dataset admission remains H4 work.",
     "candidateDeferred": "ten-haaf-2014",
     "candidateDestinationGate": "H4",
     "requiresSeparateFrozenProtocol": true,
-    "slice": "H2-C",
+    "slice": "H2-D",
     "queue": "research/robustness/h2-review-queue.json"
   },
   "trackPrerequisites": {

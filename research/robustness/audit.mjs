@@ -5,6 +5,7 @@ import {fileURLToPath} from 'node:url';
 import {auditH1} from './h1-audit.mjs';
 import {auditH2A} from './h2a/audit.mjs';
 import {auditH2B} from './h2b/audit.mjs';
+import {auditH2C} from './h2c/audit.mjs';
 import {createHash} from 'node:crypto';
 
 const root = fileURLToPath(new URL('../../', import.meta.url));
@@ -14,7 +15,7 @@ function dateValue(value) {
   const valueMs = Date.parse(value+'T00:00:00Z');
   return Number.isFinite(valueMs) && new Date(valueMs).toISOString().slice(0,10) === value ? valueMs : null;
 }
-export function auditProgram(plan, corpus, {asOf, pathExists = () => true, h1, h2a, h2b, fileDigest} = {}) {
+export function auditProgram(plan, corpus, {asOf, pathExists = () => true, h1, h2a, h2b, h2c, fileDigest} = {}) {
   const errors = [], warnings = [];
   const at = dateValue(asOf);
   if (at === null) errors.push('asOf must be a real YYYY-MM-DD date');
@@ -56,10 +57,14 @@ export function auditProgram(plan, corpus, {asOf, pathExists = () => true, h1, h
     errors.push(...auditH2B(corpus,h1?.matrix ?? {},plan,h2b,asOf,fileDigest));
     if(h2b?.review?.nextReviewBy && asOf>=h2b.review.nextReviewBy) warnings.push('H2-B bounded evidence review is due; do not infer currentness from prior completion');
   }
+  if(gateMap.get('H2')?.completedSlices?.includes('H2-C')) {
+    errors.push(...auditH2C(corpus,h1?.matrix ?? {},plan,h2c,asOf));
+    if(h2c?.review?.nextReviewBy && asOf>=h2c.review.nextReviewBy) warnings.push('H2-C bounded evidence review is due; do not infer currentness from prior completion');
+  }
   const overlays=new Set();
   for(const overlay of h1?.matrix?.reviewOverlays ?? []) {
     const key=[overlay.reviewId,overlay.claimId,overlay.contextId].join('/');
-    if(!['H2-A','H2-B'].includes(overlay.reviewId) || !gateMap.get('H2')?.completedSlices?.includes(overlay.reviewId)) errors.push('Unknown or inactive review overlay '+key);
+    if(!['H2-A','H2-B','H2-C'].includes(overlay.reviewId) || !gateMap.get('H2')?.completedSlices?.includes(overlay.reviewId)) errors.push('Unknown or inactive review overlay '+key);
     if(overlays.has(key)) errors.push('Duplicate review overlay '+key);
     overlays.add(key);
   }
@@ -152,6 +157,7 @@ if (process.argv[1] && resolve(process.argv[1]) === fileURLToPath(import.meta.ur
       h1:{inventory:read('research/robustness/inventory.json'),matrix:read('research/robustness/applicability.json'),semantics:read('research/robustness/semantics.json'),inputSchema:read('schemas/input.schema.json'),outputSchema:read('schemas/output.schema.json')},
       h2a:{review:read('research/robustness/h2a/review.json'),registry:read('research/robustness/h2a/sources.json'),searchLog:read('research/robustness/h2a/search-log.json'),queue:read('research/robustness/h2-review-queue.json')},
       h2b:{review:read('research/robustness/h2b/review.json'),registry:read('research/robustness/h2b/sources.json'),searchLog:read('research/robustness/h2b/search-log.json'),queue:read('research/robustness/h2-review-queue.json'),crosswalk:read('research/robustness/h2b/equation-crosswalk.json')},
+      h2c:{review:read('research/robustness/h2c/review.json'),registry:read('research/robustness/h2c/sources.json'),searchLog:read('research/robustness/h2c/search-log.json'),queue:read('research/robustness/h2-review-queue.json'),crosswalk:read('research/robustness/h2c/measurement-crosswalk.json')},
       fileDigest:p=>createHash('sha256').update(readFileSync(resolve(root,p))).digest('hex')
     });
     console.log(JSON.stringify(result,null,2));

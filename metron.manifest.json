@@ -163,7 +163,8 @@
       "productionIntegration": false,
       "boundedEvidenceReviews": [
         "H2-A",
-        "H2-B"
+        "H2-B",
+        "H2-C"
       ]
     }
   }

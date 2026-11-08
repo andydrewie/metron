@@ -1326,6 +1326,134 @@
       "reviewPath": "research/robustness/h2b/review.json",
       "disposition": "counterevidence-with-device-and-label-qualification",
       "clinicalApplicabilityEstablished": false
+    },
+    {
+      "claimId": "C04",
+      "contextId": "general-adult",
+      "reviewId": "H2-C",
+      "reviewPath": "research/robustness/h2c/review.json",
+      "disposition": "accounting-assumption-not-empirically-established",
+      "clinicalApplicabilityEstablished": false
+    },
+    {
+      "claimId": "C05",
+      "contextId": "general-adult",
+      "reviewId": "H2-C",
+      "reviewPath": "research/robustness/h2c/review.json",
+      "disposition": "proxy-with-bounded-related-evidence",
+      "clinicalApplicabilityEstablished": false
+    },
+    {
+      "claimId": "C05",
+      "contextId": "mobility-gait",
+      "reviewId": "H2-C",
+      "reviewPath": "research/robustness/h2c/review.json",
+      "disposition": "proxy-with-bounded-related-evidence",
+      "clinicalApplicabilityEstablished": false
+    },
+    {
+      "claimId": "C05",
+      "contextId": "cardiopulmonary",
+      "reviewId": "H2-C",
+      "reviewPath": "research/robustness/h2c/review.json",
+      "disposition": "proxy-with-bounded-related-evidence",
+      "clinicalApplicabilityEstablished": false
+    },
+    {
+      "claimId": "C06",
+      "contextId": "general-adult",
+      "reviewId": "H2-C",
+      "reviewPath": "research/robustness/h2c/review.json",
+      "disposition": "conventional-metric-with-unvalidated-session-mapping",
+      "clinicalApplicabilityEstablished": false
+    },
+    {
+      "claimId": "C06",
+      "contextId": "athlete-muscular",
+      "reviewId": "H2-C",
+      "reviewPath": "research/robustness/h2c/review.json",
+      "disposition": "conventional-metric-with-unvalidated-session-mapping",
+      "clinicalApplicabilityEstablished": false
+    },
+    {
+      "claimId": "C07",
+      "contextId": "general-adult",
+      "reviewId": "H2-C",
+      "reviewPath": "research/robustness/h2c/review.json",
+      "disposition": "association-not-aggregate-contribution",
+      "clinicalApplicabilityEstablished": false
+    },
+    {
+      "claimId": "C11",
+      "contextId": "general-adult",
+      "reviewId": "H2-C",
+      "reviewPath": "research/robustness/h2c/review.json",
+      "disposition": "construct-distinction-supported-with-method-limits",
+      "clinicalApplicabilityEstablished": false
+    },
+    {
+      "claimId": "C12",
+      "contextId": "general-adult",
+      "reviewId": "H2-C",
+      "reviewPath": "research/robustness/h2c/review.json",
+      "disposition": "metric-distinction-and-provenance-required",
+      "clinicalApplicabilityEstablished": false
+    },
+    {
+      "claimId": "C13",
+      "contextId": "general-adult",
+      "reviewId": "H2-C",
+      "reviewPath": "research/robustness/h2c/review.json",
+      "disposition": "chart-arithmetic-not-tissue-measurement",
+      "clinicalApplicabilityEstablished": false
+    },
+    {
+      "claimId": "C17",
+      "contextId": "general-adult",
+      "reviewId": "H2-C",
+      "reviewPath": "research/robustness/h2c/review.json",
+      "disposition": "defaults-and-range-checks-not-observations",
+      "clinicalApplicabilityEstablished": false
+    },
+    {
+      "claimId": "C23",
+      "contextId": "general-adult",
+      "reviewId": "H2-C",
+      "reviewPath": "research/robustness/h2c/review.json",
+      "disposition": "fixed-mass-sensitivity-not-error-interval",
+      "clinicalApplicabilityEstablished": false
+    },
+    {
+      "claimId": "C28",
+      "contextId": "general-adult",
+      "reviewId": "H2-C",
+      "reviewPath": "research/robustness/h2c/review.json",
+      "disposition": "device-method-evidence-without-transfer-budget",
+      "clinicalApplicabilityEstablished": false
+    },
+    {
+      "claimId": "C28",
+      "contextId": "body-size",
+      "reviewId": "H2-C",
+      "reviewPath": "research/robustness/h2c/review.json",
+      "disposition": "device-method-evidence-without-transfer-budget",
+      "clinicalApplicabilityEstablished": false
+    },
+    {
+      "claimId": "C29",
+      "contextId": "general-adult",
+      "reviewId": "H2-C",
+      "reviewPath": "research/robustness/h2c/review.json",
+      "disposition": "dated-provider-definitions-with-membership-unknown",
+      "clinicalApplicabilityEstablished": false
+    },
+    {
+      "claimId": "C30",
+      "contextId": "general-adult",
+      "reviewId": "H2-C",
+      "reviewPath": "research/robustness/h2c/review.json",
+      "disposition": "pilot-observes-query-local-identity-only",
+      "clinicalApplicabilityEstablished": false
     }
   ]
 }

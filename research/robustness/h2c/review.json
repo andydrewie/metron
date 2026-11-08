@@ -1,0 +1,463 @@
+{
+  "schemaVersion": "1.0.0",
+  "documentType": "metron.H2C-review",
+  "reviewId": "H2-C",
+  "asOf": "2026-11-09",
+  "status": "complete-for-declared-slice",
+  "baselineCommit": "420614e9fbdb0ceaeed5b0f4c3be01a99ce43bc2",
+  "scope": "12 claim families, 17 source records and 40 logged queries; bounded source/repository inspection and synthetic checks.",
+  "searchLog": "research/robustness/h2c/search-log.json",
+  "sourceRegistry": "research/robustness/h2c/sources.json",
+  "report": "research/robustness/h2c/README.md",
+  "measurementCrosswalk": "research/robustness/h2c/measurement-crosswalk.json",
+  "reviewerRole": "Maintaining agent; not independent duplicate scientific review",
+  "clinicalApplicabilityEstablished": false,
+  "algorithmEmpiricallyValidated": false,
+  "productionBehaviorChanged": false,
+  "claimReviews": [
+    {
+      "claimId": "C04",
+      "question": "Sedentary multiplier and included-step baseline",
+      "disposition": "accounting-assumption-not-empirically-established",
+      "sourceIds": [
+        "h2c-fao-2004"
+      ],
+      "searchIds": [
+        "Q05",
+        "Q06",
+        "Q28"
+      ],
+      "finding": "The 1.2×RMR baseline and 2,000-step floor remain Metron accounting assumptions. FAO PAL is a different whole-day ratio.",
+      "permittedInterpretation": "No claim that baseline steps are measured or that a PAL range validates this decomposition.",
+      "reviewedContextIds": [
+        "general-adult"
+      ],
+      "reviewScope": "Bounded method/source relevance and non-equivalence review only; clinical severity, treatment and intersection coverage is not established.",
+      "clinicalApplicabilityEstablished": false,
+      "directAlgorithmValidation": false,
+      "reviewedAt": "2026-11-09",
+      "nextReviewBy": "2027-02-07",
+      "nextGate": "H3",
+      "reversalTrigger": "Reopen upon changed source definitions, contrary measurements or consequential reuse; require the stated H3 provenance before transfer."
+    },
+    {
+      "claimId": "C05",
+      "question": "Stride and walking net-energy coefficients",
+      "disposition": "proxy-with-bounded-related-evidence",
+      "sourceIds": [
+        "h2c-scherrenberg-2022",
+        "h2c-han-2026",
+        "h2c-ludlow-2016",
+        "compendium"
+      ],
+      "searchIds": [
+        "Q01",
+        "Q04",
+        "Q07",
+        "Q20",
+        "Q28",
+        "Q32",
+        "Q37",
+        "Q38",
+        "Q39"
+      ],
+      "finding": "strideMeters functions as distance per step. Related step-length evidence exists, but neither it nor walking-model literature directly validates the unrounded universal 0.415 plus 0.5 net-energy chain.",
+      "permittedInterpretation": "Label distance and energy as proxies; do not infer accurate pathological gait or energy expenditure.",
+      "reviewedContextIds": [
+        "general-adult",
+        "mobility-gait",
+        "cardiopulmonary"
+      ],
+      "reviewScope": "Bounded method/source relevance and non-equivalence review only; clinical severity, treatment and intersection coverage is not established.",
+      "clinicalApplicabilityEstablished": false,
+      "directAlgorithmValidation": false,
+      "reviewedAt": "2026-11-09",
+      "nextReviewBy": "2027-02-07",
+      "nextGate": "H3",
+      "reversalTrigger": "Reopen upon changed source definitions, contrary measurements or consequential reuse; require the stated H3 provenance before transfer."
+    },
+    {
+      "claimId": "C06",
+      "question": "Whole-session workout MET and baseline subtraction",
+      "disposition": "conventional-metric-with-unvalidated-session-mapping",
+      "sourceIds": [
+        "compendium",
+        "h2c-byrne-2005"
+      ],
+      "searchIds": [
+        "Q01",
+        "Q02",
+        "Q03",
+        "Q31",
+        "Q33"
+      ],
+      "finding": "Task MET values and an individual resting baseline differ. Current workout increment subtracts 1.2×predicted RMR over elapsed session time.",
+      "permittedInterpretation": "Keep whole-session duration, gross estimate, subtraction reference and floor explicit. Preset mapping remains an assumption.",
+      "reviewedContextIds": [
+        "general-adult",
+        "athlete-muscular"
+      ],
+      "reviewScope": "Bounded method/source relevance and non-equivalence review only; clinical severity, treatment and intersection coverage is not established.",
+      "clinicalApplicabilityEstablished": false,
+      "directAlgorithmValidation": false,
+      "reviewedAt": "2026-11-09",
+      "nextReviewBy": "2027-02-07",
+      "nextGate": "H3",
+      "reversalTrigger": "Reopen upon changed source definitions, contrary measurements or consequential reuse; require the stated H3 provenance before transfer."
+    },
+    {
+      "claimId": "C07",
+      "question": "Clock overlap is insufficient to establish aggregate membership",
+      "disposition": "association-not-aggregate-contribution",
+      "sourceIds": [
+        "h2c-apple-queries",
+        "h2c-whoop-cycle",
+        "h2c-garmin"
+      ],
+      "searchIds": [
+        "Q11",
+        "Q15",
+        "Q17",
+        "Q18",
+        "Q21",
+        "Q23",
+        "Q35",
+        "Q36"
+      ],
+      "finding": "Clock overlap, workout association, source membership and exact sample identity are distinct from contribution to a particular merged total.",
+      "permittedInterpretation": "Unknown membership cannot license automatic subtraction.",
+      "reviewedContextIds": [
+        "general-adult"
+      ],
+      "reviewScope": "Bounded method/source relevance and non-equivalence review only; clinical severity, treatment and intersection coverage is not established.",
+      "clinicalApplicabilityEstablished": false,
+      "directAlgorithmValidation": false,
+      "reviewedAt": "2026-11-09",
+      "nextReviewBy": "2026-12-09",
+      "nextGate": "H3",
+      "reversalTrigger": "Reopen upon changed source definitions, contrary measurements or consequential reuse; require the stated H3 provenance before transfer."
+    },
+    {
+      "claimId": "C11",
+      "question": "SMM is not interchangeable with FFM",
+      "disposition": "construct-distinction-supported-with-method-limits",
+      "sourceIds": [
+        "h2c-wang-1992",
+        "h2c-kyle-2004"
+      ],
+      "searchIds": [
+        "Q08",
+        "Q12"
+      ],
+      "finding": "FFM and SMM are different constructs; compatible method definitions are required even when both use kg.",
+      "permittedInterpretation": "No FFM substitution, calorie bonus or BF inference from SMM alone.",
+      "reviewedContextIds": [
+        "general-adult"
+      ],
+      "reviewScope": "Bounded method/source relevance and non-equivalence review only; clinical severity, treatment and intersection coverage is not established.",
+      "clinicalApplicabilityEstablished": false,
+      "directAlgorithmValidation": false,
+      "reviewedAt": "2026-11-09",
+      "nextReviewBy": "2027-02-07",
+      "nextGate": "H3",
+      "reversalTrigger": "Reopen upon changed source definitions, contrary measurements or consequential reuse; require the stated H3 provenance before transfer."
+    },
+    {
+      "claimId": "C12",
+      "question": "SDNN and RMSSD must retain distinct measurement definitions",
+      "disposition": "metric-distinction-and-provenance-required",
+      "sourceIds": [
+        "h2c-carter-2026",
+        "h2c-apple-hrv",
+        "h2c-whoop-recovery"
+      ],
+      "searchIds": [
+        "Q09",
+        "Q10",
+        "Q11",
+        "Q13",
+        "Q14",
+        "Q22",
+        "Q25",
+        "Q26",
+        "Q27",
+        "Q29"
+      ],
+      "finding": "SDNN and RMSSD are distinct time-domain metrics. Current Apple documentation contains separate identifiers; WHOOP names its scored RMSSD field.",
+      "permittedInterpretation": "Same-unit values cannot be pooled as equivalent without metric, signal, epoch and processing metadata. No direct conversion or readiness inference.",
+      "reviewedContextIds": [
+        "general-adult"
+      ],
+      "reviewScope": "Bounded method/source relevance and non-equivalence review only; clinical severity, treatment and intersection coverage is not established.",
+      "clinicalApplicabilityEstablished": false,
+      "directAlgorithmValidation": false,
+      "reviewedAt": "2026-11-09",
+      "nextReviewBy": "2026-12-09",
+      "nextGate": "H3",
+      "reversalTrigger": "Reopen upon changed source definitions, contrary measurements or consequential reuse; require the stated H3 provenance before transfer."
+    },
+    {
+      "claimId": "C13",
+      "question": "Composition chart derives FFM, fat mass and other lean mass; unknown SMM is not measured zero.",
+      "disposition": "chart-arithmetic-not-tissue-measurement",
+      "sourceIds": [
+        "h2c-wang-1992",
+        "h2c-kyle-2004"
+      ],
+      "searchIds": [
+        "Q08",
+        "Q12"
+      ],
+      "finding": "Current FFM/fat mass derive from weight and BF percentage. Other lean is an arithmetic residual; missing SMM remains unknown despite zero-width rendering.",
+      "permittedInterpretation": "Do not portray a residual as an independently measured anatomical compartment or compare incompatible vendor constructs.",
+      "reviewedContextIds": [
+        "general-adult"
+      ],
+      "reviewScope": "Bounded method/source relevance and non-equivalence review only; clinical severity, treatment and intersection coverage is not established.",
+      "clinicalApplicabilityEstablished": false,
+      "directAlgorithmValidation": false,
+      "reviewedAt": "2026-11-09",
+      "nextReviewBy": "2027-02-07",
+      "nextGate": "H3",
+      "reversalTrigger": "Reopen upon changed source definitions, contrary measurements or consequential reuse; require the stated H3 provenance before transfer."
+    },
+    {
+      "claimId": "C17",
+      "question": "Defaults and allowed numeric ranges are interface assumptions, not measurements or population eligibility criteria.",
+      "disposition": "defaults-and-range-checks-not-observations",
+      "sourceIds": [
+        "h2c-apple-auth",
+        "h2c-kyle-2004"
+      ],
+      "searchIds": [
+        "Q12",
+        "Q19"
+      ],
+      "finding": "Default values and interface bounds encode software choices, not measured observations or clinical eligibility. Absence can have multiple causes.",
+      "permittedInterpretation": "Record defaulted, estimated, observed, unavailable and unknown separately; enabling BF currently initializes a 20% placeholder.",
+      "reviewedContextIds": [
+        "general-adult"
+      ],
+      "reviewScope": "Bounded method/source relevance and non-equivalence review only; clinical severity, treatment and intersection coverage is not established.",
+      "clinicalApplicabilityEstablished": false,
+      "directAlgorithmValidation": false,
+      "reviewedAt": "2026-11-09",
+      "nextReviewBy": "2026-12-09",
+      "nextGate": "H3",
+      "reversalTrigger": "Reopen upon changed source definitions, contrary measurements or consequential reuse; require the stated H3 provenance before transfer."
+    },
+    {
+      "claimId": "C23",
+      "question": "At fixed mass, a body-fat percentage-point change shifts Cunningham RMR by negative 0.22 times mass times that change.",
+      "disposition": "fixed-mass-sensitivity-not-error-interval",
+      "sourceIds": [
+        "siedler-2023"
+      ],
+      "searchIds": [
+        "Q16",
+        "Q24",
+        "Q30"
+      ],
+      "finding": "For implemented Cunningham arithmetic at fixed mass, ΔRMR = −0.22×massKg×ΔBFpercentagePoints. This propagates an assumed perturbation, not an empirical distribution.",
+      "permittedInterpretation": "No conversion to individual coverage, MAE, or joint mass/BF uncertainty; joint input errors require separate treatment.",
+      "reviewedContextIds": [
+        "general-adult"
+      ],
+      "reviewScope": "Bounded method/source relevance and non-equivalence review only; clinical severity, treatment and intersection coverage is not established.",
+      "clinicalApplicabilityEstablished": false,
+      "directAlgorithmValidation": false,
+      "reviewedAt": "2026-11-09",
+      "nextReviewBy": "2027-02-07",
+      "nextGate": "H6",
+      "reversalTrigger": "Require a joint measurement-error model and independent coverage evaluation before displaying an individual prediction interval."
+    },
+    {
+      "claimId": "C28",
+      "question": "G4 records Siedler device-specific body-fat measurement errors against a four-compartment reference.",
+      "disposition": "device-method-evidence-without-transfer-budget",
+      "sourceIds": [
+        "siedler-2023",
+        "h2c-kyle-2004"
+      ],
+      "searchIds": [
+        "Q12",
+        "Q16",
+        "Q24",
+        "Q30",
+        "Q40"
+      ],
+      "finding": "BIA reliability, cross-sectional agreement and longitudinal change validity are different endpoints under device-specific protocols.",
+      "permittedInterpretation": "Retain preparation, population, device/algorithm and reference method. No universal BIA uncertainty or SECA calibration inferred.",
+      "reviewedContextIds": [
+        "general-adult",
+        "body-size"
+      ],
+      "reviewScope": "Bounded method/source relevance and non-equivalence review only; clinical severity, treatment and intersection coverage is not established.",
+      "clinicalApplicabilityEstablished": false,
+      "directAlgorithmValidation": false,
+      "reviewedAt": "2026-11-09",
+      "nextReviewBy": "2027-02-07",
+      "nextGate": "H3",
+      "reversalTrigger": "Reopen upon changed source definitions, contrary measurements or consequential reuse; require the stated H3 provenance before transfer."
+    },
+    {
+      "claimId": "C29",
+      "question": "Provider matrix records WHOOP, Garmin and Apple documentation about reporting periods and step-summary membership.",
+      "disposition": "dated-provider-definitions-with-membership-unknown",
+      "sourceIds": [
+        "h2c-whoop-cycle",
+        "h2c-garmin",
+        "h2c-apple-queries"
+      ],
+      "searchIds": [
+        "Q11",
+        "Q15",
+        "Q17",
+        "Q18",
+        "Q21",
+        "Q23",
+        "Q35",
+        "Q36"
+      ],
+      "finding": "Current public provider definitions do not establish a shared calendar-day step denominator or general workout inclusion rule.",
+      "permittedInterpretation": "Preserve API version, record state, interval, timezone and provenance. Zero, null, pending and incomplete are different.",
+      "reviewedContextIds": [
+        "general-adult"
+      ],
+      "reviewScope": "Bounded method/source relevance and non-equivalence review only; clinical severity, treatment and intersection coverage is not established.",
+      "clinicalApplicabilityEstablished": false,
+      "directAlgorithmValidation": false,
+      "reviewedAt": "2026-11-09",
+      "nextReviewBy": "2026-12-09",
+      "nextGate": "H3",
+      "reversalTrigger": "Reopen upon changed source definitions, contrary measurements or consequential reuse; require the stated H3 provenance before transfer."
+    },
+    {
+      "claimId": "C30",
+      "question": "The HealthKit pilot compares raw sample identities; compiled simulator evidence does not establish device data collection or aggregate membership.",
+      "disposition": "pilot-observes-query-local-identity-only",
+      "sourceIds": [
+        "h2c-apple-queries",
+        "h2c-apple-auth",
+        "h2c-apple-condensed"
+      ],
+      "searchIds": [
+        "Q17",
+        "Q18",
+        "Q19",
+        "Q23",
+        "Q34",
+        "Q36"
+      ],
+      "finding": "Pilot raw query uses strictStartDate on the workout start day; statistics use an overlap predicate and source separation. UUID intersection is query-local identity evidence.",
+      "permittedInterpretation": "No merged-contribution, read-authorization, full-history or on-device validation claim. Sample caps, crossing days and changing representation remain explicit.",
+      "reviewedContextIds": [
+        "general-adult"
+      ],
+      "reviewScope": "Bounded method/source relevance and non-equivalence review only; clinical severity, treatment and intersection coverage is not established.",
+      "clinicalApplicabilityEstablished": false,
+      "directAlgorithmValidation": false,
+      "reviewedAt": "2026-11-09",
+      "nextReviewBy": "2026-12-09",
+      "nextGate": "H3",
+      "reversalTrigger": "Reopen upon changed source definitions, contrary measurements or consequential reuse; require the stated H3 provenance before transfer."
+    }
+  ],
+  "contradictions": [
+    {
+      "id": "pal-versus-baseline",
+      "sourceIds": [
+        "h2c-fao-2004"
+      ],
+      "resolution": "Separate whole-day TEE/BMR from a component based on RMR before comparing factors.",
+      "unresolved": "Exact 1.2/2,000-step allocation not independently established."
+    },
+    {
+      "id": "step-versus-stride",
+      "sourceIds": [
+        "h2c-scherrenberg-2022",
+        "h2c-han-2026"
+      ],
+      "resolution": "Operational API meaning is m/step; preserve legacy name until a versioned implementation decision.",
+      "unresolved": "No direct validation of the complete current walking-energy estimator."
+    },
+    {
+      "id": "met-reference",
+      "sourceIds": [
+        "compendium",
+        "h2c-byrne-2005"
+      ],
+      "resolution": "Name the conventional MET reference and the app-specific subtracted baseline separately.",
+      "unresolved": "Whole-session preset mapping and personalized conversion remain unevaluated."
+    },
+    {
+      "id": "same-units-different-constructs",
+      "sourceIds": [
+        "h2c-wang-1992",
+        "h2c-carter-2026",
+        "h2c-apple-hrv",
+        "h2c-whoop-recovery"
+      ],
+      "resolution": "Require construct and method identity before comparison, including current Apple quantity identifier.",
+      "unresolved": "Vendor-specific composition mappings and exact HRV preprocessing/epoch remain unknown."
+    },
+    {
+      "id": "repeatability-versus-validity",
+      "sourceIds": [
+        "siedler-2023"
+      ],
+      "resolution": "Retain separate endpoints and retest-independence concerns.",
+      "unresolved": "No transportable personal/device error distribution established."
+    },
+    {
+      "id": "query-identity-versus-contribution",
+      "sourceIds": [
+        "h2c-apple-queries",
+        "h2c-apple-auth",
+        "h2c-apple-condensed",
+        "h2c-whoop-cycle",
+        "h2c-garmin"
+      ],
+      "resolution": "Keep association, query selection, sample identity and merged contribution separate.",
+      "unresolved": "Actual provider payload membership, OS availability and on-device pilot remain unverified."
+    }
+  ],
+  "contextQualifiers": {
+    "pathologicalSpectrum": "Broad clinical base cells and all unreviewed severity/treatment/intersection dimensions remain unreviewed. A cardiac-rehabilitation step-length comparison is not cardiopulmonary clearance.",
+    "measurementAxis": "Method constraints apply even where the inventory marks a family model-or-method; units alone cannot establish equivalence.",
+    "negativeSearch": "No direct validation identified within this bounded search is not evidence that none exists."
+  },
+  "repositoryEvidence": {
+    "asOf": "2026-11-09",
+    "baselineCommit": "420614e9fbdb0ceaeed5b0f4c3be01a99ce43bc2",
+    "paths": [
+      "core/model.js",
+      "app.js",
+      "schemas/input.schema.json",
+      "research/activity-events/README.md",
+      "research/provider-step-semantics/matrix.json",
+      "research/apple-healthkit-pilot/HealthPilot/HealthPilotModel.swift",
+      "research/ree-validation/G4_DECISION.md"
+    ],
+    "inspection": "Formula components, chart defaults and unknown display, exact pilot predicates/caps, current source contracts. Frozen study retained; no participant rows reopened."
+  },
+  "nextReviewBy": "2026-12-09",
+  "earlyReviewTriggers": [
+    "Before provider integration, data download or consequential reuse",
+    "API/OS/source changes, corrections or contrary measurement evidence",
+    "Any change to quantity identity, input provenance, query window or energy subtraction baseline"
+  ],
+  "unresolved": [
+    "No measured whole-TDEE validation",
+    "No direct validation of exact baseline/walking/session assumptions",
+    "No universal BIA or HRV conversion/error budget",
+    "No actual wearable payload or on-device pilot evidence",
+    "No complete clinical spectrum, treatment or intersection review"
+  ],
+  "closure": {
+    "reviewedAt": "2026-11-09",
+    "scope": "12 claim families, 17 source records and 40 logged queries; bounded source/repository inspection and synthetic checks.",
+    "acceptanceReview": "Source portions, versions, rights, contrary evidence, claim/context limits, measurement crosswalk and H3 follow-ups recorded. H2-D next; whole H2 remains in progress.",
+    "independentReview": false
+  }
+}

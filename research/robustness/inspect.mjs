@@ -30,8 +30,9 @@ if(process.argv[1] && resolve(process.argv[1])===fileURLToPath(import.meta.url))
     const plan=read('research/robustness/plan.json');
     const h2a={review:read('research/robustness/h2a/review.json'),registry:read('research/robustness/h2a/sources.json'),searchLog:read('research/robustness/h2a/search-log.json'),queue:read('research/robustness/h2-review-queue.json')};
     const h2b={review:read('research/robustness/h2b/review.json'),registry:read('research/robustness/h2b/sources.json'),searchLog:read('research/robustness/h2b/search-log.json'),queue:read('research/robustness/h2-review-queue.json'),crosswalk:read('research/robustness/h2b/equation-crosswalk.json')};
-    const reviews=[h2a.review,h2b.review];
-    errors.push(...auditProgram(plan,corpus,{asOf:plan.asOf,pathExists:p=>existsSync(resolve(root,p)),h1:artifacts,h2a,h2b,fileDigest:p=>createHash('sha256').update(readFileSync(resolve(root,p))).digest('hex')}).errors);
+    const h2c={review:read('research/robustness/h2c/review.json'),registry:read('research/robustness/h2c/sources.json'),searchLog:read('research/robustness/h2c/search-log.json'),queue:read('research/robustness/h2-review-queue.json'),crosswalk:read('research/robustness/h2c/measurement-crosswalk.json')};
+    const reviews=[h2a.review,h2b.review,h2c.review];
+    errors.push(...auditProgram(plan,corpus,{asOf:plan.asOf,pathExists:p=>existsSync(resolve(root,p)),h1:artifacts,h2a,h2b,h2c,fileDigest:p=>createHash('sha256').update(readFileSync(resolve(root,p))).digest('hex')}).errors);
     if(errors.length) throw new Error(errors.join('; '));
     const args=process.argv.slice(2);
     let result;

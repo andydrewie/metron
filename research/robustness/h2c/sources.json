@@ -1,0 +1,449 @@
+{
+  "schemaVersion": "1.0.0",
+  "documentType": "metron.H2C-source-review",
+  "asOf": "2026-11-09",
+  "scope": "17 source records: primary studies, original method analyses, authoritative guidance and official provider documentation families. Not 17 validation trials.",
+  "sources": [
+    {
+      "id": "compendium",
+      "title": "2024 Adult Compendium: activity definitions and conventional METs",
+      "url": "https://pacompendium.com/",
+      "publicationDate": "2024-01",
+      "design": "original-activity-compilation",
+      "populationAndWindow": "Adults 19–59; target excludes conditions materially affecting metabolism.",
+      "measurement": "Standard MET convention; activity descriptions and measured/estimated entries.",
+      "finding": "Resistance categories differ by task and effort; they do not validate Metron’s complete 2.5/3.5/5 session mapping.",
+      "limitations": "Population averages, not individual calorimetry; older-adult and clinical transfer not established.",
+      "sourceContentReviewedAt": "2026-11-09",
+      "inspectedPortions": "Official adult overview, conditioning/walking tables; primary article indexed abstract and limitations. Full contributing studies not inspected.",
+      "rightsStatus": "Publisher/provider terms; broad redistribution rights not verified.",
+      "republication": "Pointers and original analysis only; third-party content is not relicensed under repository MIT.",
+      "freshnessClass": "foundational",
+      "accessUrls": [
+        "https://pacompendium.com/adult-compendium/",
+        "https://pacompendium.com/conditioning-exercise/",
+        "https://pacompendium.com/walking/",
+        "https://pubmed.ncbi.nlm.nih.gov/38242596/"
+      ],
+      "doi": "10.1016/j.jshs.2023.10.010",
+      "correctionReview": {
+        "checkedAt": "2026-11-09",
+        "method": "Targeted DOI correction/erratum/retraction query and visible notices.",
+        "result": "No matching notice identified in inspected results; absence is not certified.",
+        "unresolved": "Incomplete update-registry coverage; inaccessible content and future changes remain unverified."
+      }
+    },
+    {
+      "id": "h2c-fao-2004",
+      "title": "FAO/WHO/UNU: Human energy requirements",
+      "url": "https://www.fao.org/4/y5686e/y5686e07.htm",
+      "publicationDate": "2004",
+      "design": "historical-authoritative-method-definition",
+      "populationAndWindow": "Habitual adult daily activity patterns; 2001 consultation published 2004.",
+      "measurement": "PAL is 24-hour TEE divided by BMR.",
+      "finding": "Sedentary/light PAL category 1.40–1.69 uses a different numerator and denominator from Metron’s baseline component.",
+      "limitations": "Not evidence to substitute 1.4 for 1.2 or to certify the 2,000-step allowance.",
+      "sourceContentReviewedAt": "2026-11-09",
+      "inspectedPortions": "Official adult requirements and terminology sections.",
+      "rightsStatus": "Publisher/provider terms; broad redistribution rights not verified.",
+      "republication": "Pointers and original analysis only; third-party content is not relicensed under repository MIT.",
+      "freshnessClass": "foundational",
+      "accessUrls": [
+        "https://www.fao.org/4/y5686e/y5686e04.htm"
+      ],
+      "correctionReview": {
+        "checkedAt": "2026-11-09",
+        "method": "Visible metadata/version notices in the inspected portions only; no dedicated correction-registry reconciliation.",
+        "result": "Only the stated version and inspected portions are established.",
+        "unresolved": "Incomplete update-registry coverage; inaccessible content and future changes remain unverified."
+      }
+    },
+    {
+      "id": "h2c-byrne-2005",
+      "title": "Byrne et al.: Metabolic equivalent, one size does not fit all",
+      "url": "https://doi.org/10.1152/japplphysiol.00023.2004",
+      "publicationDate": "2005-09",
+      "design": "primary-human-calorimetry",
+      "populationAndWindow": "769 healthy weight-stable adults aged 18–74; walking subset 98 at 5.6 km/h.",
+      "measurement": "Ventilated-hood indirect calorimetry; measured rest compared with the conventional MET reference.",
+      "finding": "Measured resting expenditure varied from the fixed standard.",
+      "limitations": "No universal adjustment factor for Metron, all workouts or clinical populations.",
+      "sourceContentReviewedAt": "2026-11-09",
+      "inspectedPortions": "Primary PubMed/publisher indexed abstract and bibliographic metadata; full methods not inspected.",
+      "rightsStatus": "Publisher/provider terms; broad redistribution rights not verified.",
+      "republication": "Pointers and original analysis only; third-party content is not relicensed under repository MIT.",
+      "freshnessClass": "active-empirical",
+      "accessUrls": [
+        "https://pubmed.ncbi.nlm.nih.gov/15831804/"
+      ],
+      "doi": "10.1152/japplphysiol.00023.2004",
+      "correctionReview": {
+        "checkedAt": "2026-11-09",
+        "method": "Visible metadata/version notices in the inspected portions only; no dedicated correction-registry reconciliation.",
+        "result": "Only the stated version and inspected portions are established.",
+        "unresolved": "Incomplete update-registry coverage; inaccessible content and future changes remain unverified."
+      }
+    },
+    {
+      "id": "h2c-ludlow-2016",
+      "title": "Ludlow and Weyand: level walking energy prediction",
+      "url": "https://doi.org/10.1152/japplphysiol.00864.2015",
+      "publicationDate": "2016-03-01",
+      "design": "original-model-analysis-of-published-aggregates",
+      "populationAndWindow": "127 literature values from 25 populations; walking speeds 0.4–1.9 m/s.",
+      "measurement": "Speed/height models; resting rates estimated by equations.",
+      "finding": "Speed and stature matter to the proposed walking model.",
+      "limitations": "Aggregate reanalysis, not 127 independent participants or a direct test of Metron’s 0.5 net coefficient.",
+      "sourceContentReviewedAt": "2026-11-09",
+      "inspectedPortions": "PubMed abstract and equation; contributing datasets/full methods not independently inspected.",
+      "rightsStatus": "Publisher/provider terms; broad redistribution rights not verified.",
+      "republication": "Pointers and original analysis only; third-party content is not relicensed under repository MIT.",
+      "freshnessClass": "active-empirical",
+      "accessUrls": [
+        "https://pubmed.ncbi.nlm.nih.gov/26679617/"
+      ],
+      "doi": "10.1152/japplphysiol.00864.2015",
+      "correctionReview": {
+        "checkedAt": "2026-11-09",
+        "method": "Visible metadata/version notices in the inspected portions only; no dedicated correction-registry reconciliation.",
+        "result": "Only the stated version and inspected portions are established.",
+        "unresolved": "Incomplete update-registry coverage; inaccessible content and future changes remain unverified."
+      }
+    },
+    {
+      "id": "h2c-han-2026",
+      "title": "Han et al.: Development of a Multivariable Equation for Predicting Healthy Step Length",
+      "url": "https://doi.org/10.1080/1091367X.2026.2634091",
+      "publicationDate": "2026-03-06",
+      "design": "primary-equation-development",
+      "populationAndWindow": "252 healthy adults aged 18–90; repeated five-fold cross-validation within the same cohort.",
+      "measurement": "Multivariable step-length model including walking speed and stature.",
+      "finding": "Supports retaining gait conditions and model identity rather than treating height alone as an observation.",
+      "limitations": "Internal cross-validation is not independent validation; pathological gait and clinical outcomes not established.",
+      "sourceContentReviewedAt": "2026-11-09",
+      "inspectedPortions": "Publisher-indexed abstract, results and discussion; full methods/access terms not inspected.",
+      "rightsStatus": "Publisher/provider terms; broad redistribution rights not verified.",
+      "republication": "Pointers and original analysis only; third-party content is not relicensed under repository MIT.",
+      "freshnessClass": "active-empirical",
+      "accessUrls": [
+        "https://www.tandfonline.com/doi/full/10.1080/1091367X.2026.2634091"
+      ],
+      "doi": "10.1080/1091367X.2026.2634091",
+      "correctionReview": {
+        "checkedAt": "2026-11-09",
+        "method": "Visible metadata/version notices in the inspected portions only; no dedicated correction-registry reconciliation.",
+        "result": "Only the stated version and inspected portions are established.",
+        "unresolved": "Incomplete update-registry coverage; inaccessible content and future changes remain unverified."
+      }
+    },
+    {
+      "id": "h2c-scherrenberg-2022",
+      "title": "Scherrenberg et al.: smartphone six-minute walk assessment",
+      "url": "https://doi.org/10.3390/s22114277",
+      "publicationDate": "2022-06-03",
+      "design": "primary-method-comparison",
+      "populationAndWindow": "102 cardiovascular patients enrolled in phase II cardiac rehabilitation; supervised study.",
+      "measurement": "Section 4.3 compares rounded height×0.413/0.415 step lengths with manually counted 30-m walking.",
+      "finding": "Reported step-length MAE 5.24 cm for the sex-specific formula comparison.",
+      "limitations": "Not the universal unrounded 0.415 rule, calorimetry or a Metron energy validation; main app tests used measured step length.",
+      "sourceContentReviewedAt": "2026-11-09",
+      "inspectedPortions": "Publisher PDF abstract, methods §§2.1–2.3, limitations and §4.3; title alone was not used as validation.",
+      "rightsStatus": "CC BY 4.0 stated in the publisher PDF; participant data remain restricted/on request.",
+      "republication": "Pointers and original analysis only; third-party content is not relicensed under repository MIT.",
+      "freshnessClass": "active-empirical",
+      "accessUrls": [
+        "https://mdpi-res.com/d_attachment/sensors/sensors-22-04277/article_deploy/sensors-22-04277.pdf"
+      ],
+      "doi": "10.3390/s22114277",
+      "correctionReview": {
+        "checkedAt": "2026-11-09",
+        "method": "Targeted DOI correction/erratum/retraction query and visible notices.",
+        "result": "No matching notice identified in inspected results; absence is not certified.",
+        "unresolved": "Incomplete update-registry coverage; inaccessible content and future changes remain unverified."
+      }
+    },
+    {
+      "id": "h2c-wang-1992",
+      "title": "Wang, Pierson and Heymsfield: five-level body-composition model",
+      "url": "https://doi.org/10.1093/ajcn/56.1.19",
+      "publicationDate": "1992-07",
+      "design": "original-conceptual-framework",
+      "populationAndWindow": "Body-composition organization, not a device-validation cohort.",
+      "measurement": "Atomic, molecular, cellular, tissue-system and whole-body levels.",
+      "finding": "Compartment relationships require explicit definitions across levels.",
+      "limitations": "Does not establish universal vendor SMM/FFM equivalence or compatible subtraction.",
+      "sourceContentReviewedAt": "2026-11-09",
+      "inspectedPortions": "PubMed abstract and metadata only.",
+      "rightsStatus": "Publisher/provider terms; broad redistribution rights not verified.",
+      "republication": "Pointers and original analysis only; third-party content is not relicensed under repository MIT.",
+      "freshnessClass": "foundational",
+      "accessUrls": [
+        "https://pubmed.ncbi.nlm.nih.gov/1609756/"
+      ],
+      "doi": "10.1093/ajcn/56.1.19",
+      "correctionReview": {
+        "checkedAt": "2026-11-09",
+        "method": "Visible metadata/version notices in the inspected portions only; no dedicated correction-registry reconciliation.",
+        "result": "Only the stated version and inspected portions are established.",
+        "unresolved": "Incomplete update-registry coverage; inaccessible content and future changes remain unverified."
+      }
+    },
+    {
+      "id": "h2c-kyle-2004",
+      "title": "Kyle et al.: bioelectrical impedance analysis, part II",
+      "url": "https://doi.org/10.1016/j.clnu.2004.09.012",
+      "publicationDate": "2004-12",
+      "design": "historical-professional-method-guidance",
+      "populationAndWindow": "BIA use with population-appropriate equations and hydration conditions.",
+      "measurement": "Interpretation depends on equation, body composition and fluid state.",
+      "finding": "Abnormal hydration and body-size extremes constrain transfer.",
+      "limitations": "Historical guidance, not a current complete clinical guideline review or individual error distribution.",
+      "sourceContentReviewedAt": "2026-11-09",
+      "inspectedPortions": "Primary PubMed indexed abstract; full guidance not inspected.",
+      "rightsStatus": "Publisher/provider terms; broad redistribution rights not verified.",
+      "republication": "Pointers and original analysis only; third-party content is not relicensed under repository MIT.",
+      "freshnessClass": "foundational",
+      "accessUrls": [
+        "https://pubmed.ncbi.nlm.nih.gov/15556267/"
+      ],
+      "doi": "10.1016/j.clnu.2004.09.012",
+      "correctionReview": {
+        "checkedAt": "2026-11-09",
+        "method": "Visible metadata/version notices in the inspected portions only; no dedicated correction-registry reconciliation.",
+        "result": "Only the stated version and inspected portions are established.",
+        "unresolved": "Incomplete update-registry coverage; inaccessible content and future changes remain unverified."
+      }
+    },
+    {
+      "id": "siedler-2023",
+      "title": "Siedler et al.: reliability and validity of fifteen BIA devices",
+      "url": "https://doi.org/10.1017/S0007114522003749",
+      "publicationDate": "2023-09-14 (online 2022-11-21)",
+      "design": "primary-device-method-comparison",
+      "populationAndWindow": "73 healthy adults aged 19–50; 37 returned after 12–16 weeks.",
+      "measurement": "15 devices compared with four-compartment reference using ADP, DXA and BIS; standardized preparation.",
+      "finding": "Device-specific validity differs from repeatability; near-identical retests warrant independence checks.",
+      "limitations": "Excluded major composition abnormalities and device-size limitations; no transferable SECA mBCA 515 calibration or universal error budget established.",
+      "sourceContentReviewedAt": "2026-11-09",
+      "inspectedPortions": "PMC abstract, methods, reliability discussion, limitations and licence; device supplements not inspected.",
+      "rightsStatus": "CC BY 4.0 stated in PMC article.",
+      "republication": "Pointers and original analysis only; third-party content is not relicensed under repository MIT.",
+      "freshnessClass": "active-empirical",
+      "accessUrls": [
+        "https://pmc.ncbi.nlm.nih.gov/articles/PMC10404482/",
+        "https://pubmed.ncbi.nlm.nih.gov/36404739/"
+      ],
+      "doi": "10.1017/S0007114522003749",
+      "correctionReview": {
+        "checkedAt": "2026-11-09",
+        "method": "Targeted DOI correction/erratum/retraction query and visible notices.",
+        "result": "No matching notice identified in inspected results; absence is not certified.",
+        "unresolved": "Incomplete update-registry coverage; inaccessible content and future changes remain unverified."
+      }
+    },
+    {
+      "id": "h2c-carter-2026",
+      "title": "Carter et al.: HRV rigor and reproducibility guidelines",
+      "url": "https://doi.org/10.1152/ajpheart.00041.2026",
+      "publicationDate": "2026-09-01 (online 2026-07-24)",
+      "design": "authoritative-research-method-guidance",
+      "populationAndWindow": "Human cardiovascular HRV research; laboratory and field/home settings distinguished.",
+      "measurement": "Metric, epoch duration, input signal, artifact processing, posture and respiration affect interpretation.",
+      "finding": "Same units do not establish comparable HRV observations.",
+      "limitations": "Not a Metron readiness validation or a rule to convert SDNN to RMSSD.",
+      "sourceContentReviewedAt": "2026-11-09",
+      "inspectedPortions": "Primary indexed guideline abstract, recording/respiration sections and table of laboratory versus field methods; metadata. Direct PMC access challenged.",
+      "rightsStatus": "Publisher/provider terms; broad redistribution rights not verified.",
+      "republication": "Pointers and original analysis only; third-party content is not relicensed under repository MIT.",
+      "freshnessClass": "clinical-guidance",
+      "accessUrls": [
+        "https://pubmed.ncbi.nlm.nih.gov/42495990/",
+        "https://journals.physiology.org/doi/full/10.1152/ajpheart.00041.2026"
+      ],
+      "doi": "10.1152/ajpheart.00041.2026",
+      "correctionReview": {
+        "checkedAt": "2026-11-09",
+        "method": "Targeted DOI correction/erratum/retraction query and visible notices.",
+        "result": "No matching notice identified in inspected results; absence is not certified.",
+        "unresolved": "Incomplete update-registry coverage; inaccessible content and future changes remain unverified."
+      }
+    },
+    {
+      "id": "h2c-apple-hrv",
+      "title": "Apple HealthKit: SDNN and RMSSD quantity identifiers",
+      "url": "https://developer.apple.com/documentation/healthkit/hkquantitytypeidentifier/heartratevariabilitysdnn",
+      "publicationDate": null,
+      "design": "official-provider-documentation",
+      "populationAndWindow": "Current public documentation; no authorized device records.",
+      "measurement": "SDNN type discussion specifies normal-interval standard deviation and time units. Separate RMSSD symbol is documented.",
+      "finding": "Resolve the exact quantity identifier; do not label all HealthKit HRV SDNN.",
+      "limitations": "RMSSD OS availability, computation and automatic Apple Watch production not verified from the retrieved symbol page.",
+      "sourceContentReviewedAt": "2026-11-09",
+      "inspectedPortions": "Official indexed SDNN discussion and RMSSD declaration; direct HTML is a JS shell, Markdown retrieval unsupported.",
+      "rightsStatus": "Publisher/provider terms; broad redistribution rights not verified.",
+      "republication": "Pointers and original analysis only; third-party content is not relicensed under repository MIT.",
+      "freshnessClass": "provider-or-access",
+      "accessUrls": [
+        "https://developer.apple.com/documentation/healthkit/hkquantitytypeidentifier/heartratevariabilityrmssd"
+      ],
+      "correctionReview": {
+        "checkedAt": "2026-11-09",
+        "method": "Visible metadata/version notices in the inspected portions only; no dedicated correction-registry reconciliation.",
+        "result": "Only the stated version and inspected portions are established.",
+        "unresolved": "Incomplete update-registry coverage; inaccessible content and future changes remain unverified."
+      }
+    },
+    {
+      "id": "h2c-apple-queries",
+      "title": "Apple HealthKit: workout association and statistical/query selection",
+      "url": "https://developer.apple.com/documentation/healthkit/hkstatistics",
+      "publicationDate": null,
+      "design": "official-provider-documentation",
+      "populationAndWindow": "Caller-defined predicates, intervals and sources; no real payload.",
+      "measurement": "Workout association predicate, raw strict-start selection, cumulative sums and source separation are different operations.",
+      "finding": "Association and a source list do not identify each sample’s contribution to a merged statistic.",
+      "limitations": "Full merge/deduplication algorithm and end-to-end sample membership unverified.",
+      "sourceContentReviewedAt": "2026-11-09",
+      "inspectedPortions": "Official indexed workout predicate, query-option and statistics/collection documentation; direct pages partly JS-only.",
+      "rightsStatus": "Publisher/provider terms; broad redistribution rights not verified.",
+      "republication": "Pointers and original analysis only; third-party content is not relicensed under repository MIT.",
+      "freshnessClass": "provider-or-access",
+      "accessUrls": [
+        "https://developer.apple.com/documentation/healthkit/hkquery/predicateforobjects%28from%3A%29-5irg9",
+        "https://developer.apple.com/documentation/healthkit/hkqueryoptions",
+        "https://developer.apple.com/documentation/healthkit/executing-statistics-collection-queries"
+      ],
+      "correctionReview": {
+        "checkedAt": "2026-11-09",
+        "method": "Visible metadata/version notices in the inspected portions only; no dedicated correction-registry reconciliation.",
+        "result": "Only the stated version and inspected portions are established.",
+        "unresolved": "Incomplete update-registry coverage; inaccessible content and future changes remain unverified."
+      }
+    },
+    {
+      "id": "h2c-apple-auth",
+      "title": "Apple HealthKit: authorization and limited read windows",
+      "url": "https://developer.apple.com/documentation/healthkit/authorizing-access-to-health-data",
+      "publicationDate": null,
+      "design": "official-provider-documentation",
+      "populationAndWindow": "Current documentation; SDK/device availability not established.",
+      "measurement": "Read denial is intentionally not observable through ordinary authorization status. Limited history can also constrain results.",
+      "finding": "No returned sample does not establish no measurement or denied/granted read permission.",
+      "limitations": "The documented earliest-authorized-date API is not a universal permission oracle; full versus denied access can both lack an entry.",
+      "sourceContentReviewedAt": "2026-11-09",
+      "inspectedPortions": "Official indexed authorization discussion including getEarliestAuthorizedSampleDate; JS/Markdown access limits recorded.",
+      "rightsStatus": "Publisher/provider terms; broad redistribution rights not verified.",
+      "republication": "Pointers and original analysis only; third-party content is not relicensed under repository MIT.",
+      "freshnessClass": "provider-or-access",
+      "accessUrls": [
+        "https://developer.apple.com/documentation/healthkit/hkhealthstore/authorizationstatus(for:)"
+      ],
+      "correctionReview": {
+        "checkedAt": "2026-11-09",
+        "method": "Visible metadata/version notices in the inspected portions only; no dedicated correction-registry reconciliation.",
+        "result": "Only the stated version and inspected portions are established.",
+        "unresolved": "Incomplete update-registry coverage; inaccessible content and future changes remain unverified."
+      }
+    },
+    {
+      "id": "h2c-apple-condensed",
+      "title": "Apple HealthKit: condensed workout samples",
+      "url": "https://developer.apple.com/documentation/healthkit/accessing-condensed-workout-samples",
+      "publicationDate": null,
+      "design": "official-provider-documentation",
+      "populationAndWindow": "Older first-party workout data for documented quantity types.",
+      "measurement": "Condensation replaces original samples with series; cumulative coalescing preserves the sum.",
+      "finding": "Raw object count and granularity can change without a changed underlying statistic.",
+      "limitations": "Listed examples do not establish that stepCount is condensed on the pilot device; no universal UUID-lifetime assertion.",
+      "sourceContentReviewedAt": "2026-11-09",
+      "inspectedPortions": "Official indexed overview and query guidance. No device experiment. ",
+      "rightsStatus": "Publisher/provider terms; broad redistribution rights not verified.",
+      "republication": "Pointers and original analysis only; third-party content is not relicensed under repository MIT.",
+      "freshnessClass": "provider-or-access",
+      "accessUrls": [],
+      "correctionReview": {
+        "checkedAt": "2026-11-09",
+        "method": "Visible metadata/version notices in the inspected portions only; no dedicated correction-registry reconciliation.",
+        "result": "Only the stated version and inspected portions are established.",
+        "unresolved": "Incomplete update-registry coverage; inaccessible content and future changes remain unverified."
+      }
+    },
+    {
+      "id": "h2c-whoop-cycle",
+      "title": "WHOOP v2: cycle, workout and changelog",
+      "url": "https://developer.whoop.com/docs/developing/user-data/cycle/",
+      "publicationDate": "v2; step_count entry 2026-09-23",
+      "design": "official-provider-documentation",
+      "populationAndWindow": "Physiological cycles and workouts, not necessarily calendar days.",
+      "measurement": "Cycle step_count is optional/null when unavailable; workout scores include kilojoules and scoring state.",
+      "finding": "September 23, 2026 changelog introduces cycle steps; inspected workout fields do not establish included workout steps.",
+      "limitations": "No authenticated payload, gross/net energy definition or workout-to-aggregate contribution proof.",
+      "sourceContentReviewedAt": "2026-11-09",
+      "inspectedPortions": "Public cycle/workout field tables and API changelog, including September 2026 entry.",
+      "rightsStatus": "Publisher/provider terms; broad redistribution rights not verified.",
+      "republication": "Pointers and original analysis only; third-party content is not relicensed under repository MIT.",
+      "freshnessClass": "provider-or-access",
+      "accessUrls": [
+        "https://developer.whoop.com/docs/developing/user-data/workout/",
+        "https://developer.whoop.com/docs/api-changelog/"
+      ],
+      "correctionReview": {
+        "checkedAt": "2026-11-09",
+        "method": "Visible metadata/version notices in the inspected portions only; no dedicated correction-registry reconciliation.",
+        "result": "Only the stated version and inspected portions are established.",
+        "unresolved": "Incomplete update-registry coverage; inaccessible content and future changes remain unverified."
+      }
+    },
+    {
+      "id": "h2c-whoop-recovery",
+      "title": "WHOOP v2: recovery resource",
+      "url": "https://developer.whoop.com/docs/developing/user-data/recovery/",
+      "publicationDate": "v2; inspected 2026-11-09",
+      "design": "official-provider-documentation",
+      "populationAndWindow": "Recovery associated with cycle/sleep identifiers; score may be pending or unavailable.",
+      "measurement": "hrv_rmssd_milli is a scored RMSSD field; recovery_score is a separate vendor assessment.",
+      "finding": "Metric identity and score availability must survive ingestion.",
+      "limitations": "No equivalence to Apple SDNN or validation of Metron recovery established.",
+      "sourceContentReviewedAt": "2026-11-09",
+      "inspectedPortions": "Public recovery model and field definitions; no user records.",
+      "rightsStatus": "Publisher/provider terms; broad redistribution rights not verified.",
+      "republication": "Pointers and original analysis only; third-party content is not relicensed under repository MIT.",
+      "freshnessClass": "provider-or-access",
+      "accessUrls": [],
+      "correctionReview": {
+        "checkedAt": "2026-11-09",
+        "method": "Visible metadata/version notices in the inspected portions only; no dedicated correction-registry reconciliation.",
+        "result": "Only the stated version and inspected portions are established.",
+        "unresolved": "Incomplete update-registry coverage; inaccessible content and future changes remain unverified."
+      }
+    },
+    {
+      "id": "h2c-garmin",
+      "title": "Garmin: Health, Activity and Personal API surfaces",
+      "url": "https://developer.garmin.com/gc-developer-program/enterprise/health-api/",
+      "publicationDate": null,
+      "design": "official-provider-documentation",
+      "populationAndWindow": "Health summaries, activity records and personal-account access are separate surfaces.",
+      "measurement": "Health overview describes all-day steps; Activity overview exposes summaries and FIT/GPX/TCX files.",
+      "finding": "Access to both surfaces does not establish a general reconciliation rule.",
+      "limitations": "Public Personal Swagger retrieval exposed navigation only; field-level inclusion, exact windows and real payloads remain unknown.",
+      "sourceContentReviewedAt": "2026-11-09",
+      "inspectedPortions": "Official Health/Activity overviews, Personal FAQ, FIT overview and Swagger shell.",
+      "rightsStatus": "Publisher/provider terms; broad redistribution rights not verified.",
+      "republication": "Pointers and original analysis only; third-party content is not relicensed under repository MIT.",
+      "freshnessClass": "provider-or-access",
+      "accessUrls": [
+        "https://developer.garmin.com/gc-developer-program/enterprise/activity-api/",
+        "https://developer.garmin.com/gc-developer-program/personal/personal-faq",
+        "https://developer.garmin.com/gc-developer-program/personal/swagger-docs/",
+        "https://developer.garmin.com/fit/overview/"
+      ],
+      "correctionReview": {
+        "checkedAt": "2026-11-09",
+        "method": "Visible metadata/version notices in the inspected portions only; no dedicated correction-registry reconciliation.",
+        "result": "Only the stated version and inspected portions are established.",
+        "unresolved": "Incomplete update-registry coverage; inaccessible content and future changes remain unverified."
+      }
+    }
+  ]
+}

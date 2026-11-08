@@ -1,0 +1,363 @@
+{
+  "schemaVersion": "1.0.0",
+  "documentType": "metron.H2C-measurement-crosswalk",
+  "asOf": "2026-11-09",
+  "status": "research-contract-not-production-adapter",
+  "productionIntegration": false,
+  "comparisonRule": "Compare quantity identity, method/reference and window before units; preserve unrecorded metadata as unknown. Compatibility is necessary but does not establish clinical validity.",
+  "mappings": [
+    {
+      "id": "baseline",
+      "claimIds": [
+        "C04"
+      ],
+      "sourceIds": [
+        "h2c-fao-2004"
+      ],
+      "quantity": "Metron baseline component",
+      "units": "kcal/day",
+      "reference": "1.2 × predicted RMR; not PAL TEE/BMR",
+      "window": "nominal day",
+      "requiredMetadata": [
+        "resting-equation variant",
+        "baseline factor",
+        "included step allowance"
+      ],
+      "permittedInterpretation": "Accounting assumption; below 2,000 steps no downward adjustment.",
+      "unresolved": "Allocation is not independently validated.",
+      "nextGate": "H3",
+      "nextTest": "Specify baseline coverage and reference outcome before evaluating combined expenditure."
+    },
+    {
+      "id": "walking",
+      "claimIds": [
+        "C05"
+      ],
+      "sourceIds": [
+        "h2c-scherrenberg-2022",
+        "h2c-han-2026",
+        "h2c-ludlow-2016"
+      ],
+      "quantity": "height-derived distance per step and incremental walking energy",
+      "units": "m/step; km/day; kcal/day",
+      "reference": "legacy strideMeters is single-step distance; net coefficient 0.5 kcal/kg/km",
+      "window": "supplied daily steps above baseline allowance",
+      "requiredMetadata": [
+        "step-count provenance",
+        "height method",
+        "pace/grade/load",
+        "gait/mobility context",
+        "calendar period"
+      ],
+      "permittedInterpretation": "Keep proxy and net-energy assumptions visible.",
+      "unresolved": "Actual step length, metabolic baseline and non-level gait cost unknown.",
+      "nextGate": "H3",
+      "nextTest": "Evaluate step-length terminology and provenance; test speed/grade/gait sensitivity separately from step accuracy."
+    },
+    {
+      "id": "workout",
+      "claimIds": [
+        "C06"
+      ],
+      "sourceIds": [
+        "compendium",
+        "h2c-byrne-2005"
+      ],
+      "quantity": "whole-session energy increment",
+      "units": "kcal/session",
+      "reference": "gross MET × kg × hours minus 1.2×RMR/24 × hours, floored at zero",
+      "window": "elapsed session including rests",
+      "requiredMetadata": [
+        "task and effort",
+        "elapsed versus active duration",
+        "MET reference convention",
+        "subtracted baseline"
+      ],
+      "permittedInterpretation": "Gross and net require a named reference and matching interval.",
+      "unresolved": "Session presets and fixed conversion not individualized.",
+      "nextGate": "H3",
+      "nextTest": "Test baseline compatibility and floor behavior before combining or reconciling increments."
+    },
+    {
+      "id": "composition",
+      "claimIds": [
+        "C11",
+        "C13",
+        "C28"
+      ],
+      "sourceIds": [
+        "h2c-wang-1992",
+        "h2c-kyle-2004",
+        "siedler-2023"
+      ],
+      "quantity": "FFM, fat mass, SMM and residual",
+      "units": "kg; BF percentage points",
+      "reference": "FFM=mass×(1−BF/100); residual=FFM−SMM only when supplied",
+      "window": "same assessment occasion for arithmetic interpretation",
+      "requiredMetadata": [
+        "device/model/algorithm",
+        "construct definition",
+        "reference method",
+        "preparation/hydration",
+        "assessment time"
+      ],
+      "permittedInterpretation": "SMM is not FFM; residual is model arithmetic; absent SMM is unknown.",
+      "unresolved": "Current schema lacks compatible-method evidence.",
+      "nextGate": "H3",
+      "nextTest": "Define method-aware composition provenance and reject silent construct substitution."
+    },
+    {
+      "id": "hrv",
+      "claimIds": [
+        "C12"
+      ],
+      "sourceIds": [
+        "h2c-carter-2026",
+        "h2c-apple-hrv",
+        "h2c-whoop-recovery"
+      ],
+      "quantity": "SDNN or RMSSD, separately identified",
+      "units": "ms",
+      "reference": "normal-interval variability statistic, not generic recovery",
+      "window": "specified epoch and aggregation period",
+      "requiredMetadata": [
+        "exact metric identifier",
+        "ECG/PPG input",
+        "epoch duration",
+        "artifact handling",
+        "posture/respiration/state",
+        "device/algorithm version"
+      ],
+      "permittedInterpretation": "Retain distinct metrics; compare only after method review.",
+      "unresolved": "Sampling, window and preprocessing may be missing.",
+      "nextGate": "H3",
+      "nextTest": "Define compatible comparison keys; retain unknown fields rather than coercing provider values."
+    },
+    {
+      "id": "defaults",
+      "claimIds": [
+        "C17"
+      ],
+      "sourceIds": [
+        "h2c-apple-auth"
+      ],
+      "quantity": "observation state",
+      "units": "field-specific",
+      "reference": "default is software input, not a measurement",
+      "window": "observation time or unknown",
+      "requiredMetadata": [
+        "origin: observed/self-report/estimated/defaulted",
+        "missingness reason",
+        "observation timestamp"
+      ],
+      "permittedInterpretation": "Validation bounds do not establish clinical eligibility.",
+      "unresolved": "Current API does not retain origin.",
+      "nextGate": "H3",
+      "nextTest": "Design explicit origin and missingness states while preserving existing API compatibility."
+    },
+    {
+      "id": "sensitivity",
+      "claimIds": [
+        "C23"
+      ],
+      "sourceIds": [
+        "siedler-2023"
+      ],
+      "quantity": "fixed-mass Cunningham BF sensitivity",
+      "units": "kcal/day per BF percentage point",
+      "reference": "−0.22×massKg",
+      "window": "same mass held fixed",
+      "requiredMetadata": [
+        "mass fixed or changed",
+        "BF perturbation units",
+        "measurement-error dependence"
+      ],
+      "permittedInterpretation": "Deterministic sensitivity, not prediction interval.",
+      "unresolved": "Joint mass/BF errors and their distribution unknown.",
+      "nextGate": "H3",
+      "nextTest": "Carry joint-input error question to H3 and interval coverage to H6."
+    },
+    {
+      "id": "whoop-cycle",
+      "claimIds": [
+        "C07",
+        "C29"
+      ],
+      "sourceIds": [
+        "h2c-whoop-cycle"
+      ],
+      "quantity": "cycle step_count and workout score",
+      "units": "steps; workout kilojoules",
+      "reference": "physiological cycle; energy reference unverified",
+      "window": "explicit start/end and offset; active end may be absent",
+      "requiredMetadata": [
+        "API version",
+        "cycle/workout identity",
+        "start/end/timezone offset",
+        "scoring state",
+        "null versus zero"
+      ],
+      "permittedInterpretation": "Null is missing; incomplete is not a full calendar day.",
+      "unresolved": "Workout steps contributing to cycle total unknown.",
+      "nextGate": "H3",
+      "nextTest": "Require documented contribution evidence and explicit conversion semantics before reconciliation."
+    },
+    {
+      "id": "whoop-recovery",
+      "claimIds": [
+        "C12",
+        "C29"
+      ],
+      "sourceIds": [
+        "h2c-whoop-recovery"
+      ],
+      "quantity": "hrv_rmssd_milli and recovery_score",
+      "units": "ms; vendor score",
+      "reference": "RMSSD metric versus vendor-derived assessment",
+      "window": "cycle/sleep-linked scoring",
+      "requiredMetadata": [
+        "field name",
+        "score_state",
+        "cycle_id",
+        "sleep_id",
+        "score availability"
+      ],
+      "permittedInterpretation": "Vendor recovery is not a direct Metron readiness observation.",
+      "unresolved": "No common recovery-scale or metric-window equivalence.",
+      "nextGate": "H3",
+      "nextTest": "Keep raw metric and vendor assessment separate in an eventual adapter."
+    },
+    {
+      "id": "garmin",
+      "claimIds": [
+        "C07",
+        "C29"
+      ],
+      "sourceIds": [
+        "h2c-garmin"
+      ],
+      "quantity": "Health summary versus Activity/FIT record",
+      "units": "unverified per field",
+      "reference": "public surface descriptions only",
+      "window": "verify each summary/activity interval",
+      "requiredMetadata": [
+        "API/FIT version",
+        "field definition and units",
+        "start/end/timezone",
+        "source/device",
+        "membership evidence"
+      ],
+      "permittedInterpretation": "File access does not establish semantic equivalence.",
+      "unresolved": "Full definitions and inclusion rule remain unverified.",
+      "nextGate": "H3",
+      "nextTest": "Inspect lawful field documentation before any optional local payload experiment."
+    },
+    {
+      "id": "healthkit",
+      "claimIds": [
+        "C07",
+        "C29",
+        "C30"
+      ],
+      "sourceIds": [
+        "h2c-apple-queries",
+        "h2c-apple-auth",
+        "h2c-apple-condensed"
+      ],
+      "quantity": "workout-associated samples, raw day query, statistics",
+      "units": "steps/count; time interval",
+      "reference": "association ≠ raw identity ≠ merged contribution",
+      "window": "pilot start-day raw strictStartDate; statistics predicate options []",
+      "requiredMetadata": [
+        "OS/SDK and quantity type",
+        "predicate/options",
+        "calendar/timezone",
+        "interval boundaries",
+        "source revision",
+        "query cap/error",
+        "access/history limits",
+        "sample representation"
+      ],
+      "permittedInterpretation": "UUID intersection proves identical returned objects only.",
+      "unresolved": "Merged sample weights, denied/full read state and complete history unobservable from this comparison.",
+      "nextGate": "H3",
+      "nextTest": "Add synthetic midnight/DST/cap/missing-history cases before considering an optional on-device study."
+    }
+  ],
+  "guardrails": [
+    {
+      "id": "metric-identity",
+      "forbiddenInference": "same units imply same quantity",
+      "requiredState": "distinct-until-method-reviewed"
+    },
+    {
+      "id": "aggregate-membership",
+      "forbiddenInference": "overlap, association or UUID identity proves merged contribution",
+      "requiredState": "unknown-without-contribution-evidence"
+    },
+    {
+      "id": "missingness",
+      "forbiddenInference": "null, pending, absent or denied means zero",
+      "requiredState": "unknown-preserved"
+    },
+    {
+      "id": "defaults",
+      "forbiddenInference": "default or schema-valid input is a measured eligible observation",
+      "requiredState": "origin-required"
+    },
+    {
+      "id": "uncertainty",
+      "forbiddenInference": "fixed-input sensitivity is an individual prediction interval",
+      "requiredState": "sensitivity-only"
+    },
+    {
+      "id": "authorization",
+      "forbiddenInference": "no samples proves read permission or absence of data",
+      "requiredState": "not-inferred"
+    },
+    {
+      "id": "device-transfer",
+      "forbiddenInference": "repeatability or a different device study supplies universal accuracy",
+      "requiredState": "device-method-specific"
+    }
+  ],
+  "providerMembership": [
+    {
+      "provider": "whoop-v2",
+      "state": "unknown",
+      "evidence": "Public documentation only; no authorized payload or on-device experiment.",
+      "automaticReconciliationPermitted": false
+    },
+    {
+      "provider": "garmin-connect",
+      "state": "unknown",
+      "evidence": "Public documentation only; no authorized payload or on-device experiment.",
+      "automaticReconciliationPermitted": false
+    },
+    {
+      "provider": "apple-healthkit",
+      "state": "unknown",
+      "evidence": "Public documentation only; no authorized payload or on-device experiment.",
+      "automaticReconciliationPermitted": false
+    }
+  ],
+  "pilotPredicateContract": {
+    "rawDayOptions": [
+      "strictStartDate"
+    ],
+    "statisticsOptions": [
+      "cumulativeSum",
+      "separateBySource"
+    ],
+    "statisticsPredicateOptions": [],
+    "dayAnchor": "workout start date in Calendar.current",
+    "proves": "identity in the two returned raw query sets",
+    "doesNotProve": [
+      "merged statistical contribution",
+      "complete history",
+      "read authorization",
+      "real-device execution"
+    ],
+    "sampleRepresentationRule": "Condensed workout documentation is a limitation on general sample-count reasoning; stepCount condensation on this device is not established."
+  }
+}

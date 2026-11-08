@@ -1,0 +1,330 @@
+{
+  "schemaVersion": "1.0.0",
+  "documentType": "metron.H2B-search-log",
+  "asOf": "2026-11-09",
+  "timezone": "Asia/Taipei",
+  "publicationCutoff": "2026-11-09",
+  "design": "Targeted rapid evidence and provenance review; not systematic, exhaustive, preregistered or independently double-screened.",
+  "protocolTiming": "Queries and selection adapted to population transfer and source discrepancies. This log consolidates actual searches after initial orientation; no prospective registration claimed.",
+  "reviewerRole": "Maintaining agent; single-reviewer extraction and critical appraisal.",
+  "retrievalSystem": "Web system1 discovery; primary publisher, PubMed, PMC and author-institution published PDF where accessible. No comprehensive database export.",
+  "languageAndDates": "English queries and accessible English content by cutoff. No lower publication bound except recencyDays filters recorded per query; these are discovery filters, not source publication guarantees.",
+  "inclusion": "Original equation proposals and human primary comparisons relevant to the nine specified claim families, plus source-cohort provenance and input-device evidence.",
+  "exclusion": "Reviews used for discovery only unless the original equation proposal; no unverified primary findings imported from secondary summaries. No participant data admitted.",
+  "queries": [
+    {
+      "id": "Q01",
+      "q": "Mifflin St Jeor 1990 new predictive equation resting energy expenditure healthy individuals 498 19 78",
+      "runDate": "2026-11-09",
+      "recencyDays": null,
+      "purpose": "claim-discovery-or-metadata"
+    },
+    {
+      "id": "Q02",
+      "q": "Cunningham 1980 reanalysis factors influencing basal metabolic rate normal adults 1919 lean body mass 500 22",
+      "runDate": "2026-11-09",
+      "recencyDays": null,
+      "purpose": "source-discrepancy-check"
+    },
+    {
+      "id": "Q03",
+      "q": "Cunningham 1991 body composition predictor resting metabolic rate 370 21.6 500 22 review",
+      "runDate": "2026-11-09",
+      "recencyDays": null,
+      "purpose": "source-discrepancy-check"
+    },
+    {
+      "id": "Q04",
+      "q": "2025 2026 Mifflin Cunningham resting metabolic rate validation indirect calorimetry",
+      "runDate": "2026-11-09",
+      "recencyDays": 365,
+      "purpose": "claim-discovery-or-metadata"
+    },
+    {
+      "id": "Q05",
+      "q": "ten Haaf Weijs 2014 90 recreational athletes resting energy expenditure Cunningham Mifflin 10.1371 journal.pone.0108460",
+      "runDate": "2026-11-09",
+      "recencyDays": null,
+      "purpose": "claim-discovery-or-metadata"
+    },
+    {
+      "id": "Q06",
+      "q": "Weijs 2008 338 208 resting energy expenditure US Dutch 18842782",
+      "runDate": "2026-11-09",
+      "recencyDays": null,
+      "purpose": "source-discrepancy-check"
+    },
+    {
+      "id": "Q07",
+      "q": "Tinsley 2019 metabolic rate prediction muscular physique athletes 27 apnm-2018-0412",
+      "runDate": "2026-11-09",
+      "recencyDays": null,
+      "purpose": "claim-discovery-or-metadata"
+    },
+    {
+      "id": "Q08",
+      "q": "Sordi 2024 resting metabolic rate cross training Cunningham FitMate 65 ijerph21070891",
+      "runDate": "2026-11-09",
+      "recencyDays": null,
+      "purpose": "claim-discovery-or-metadata"
+    },
+    {
+      "id": "Q09",
+      "q": "\"10.1152/ajpendo.00375.2025\" Brandl resting metabolic rate",
+      "runDate": "2026-11-09",
+      "recencyDays": null,
+      "purpose": "claim-discovery-or-metadata"
+    },
+    {
+      "id": "Q10",
+      "q": "\"S0007114522003749\" Siedler 73 15 bioimpedance",
+      "runDate": "2026-11-09",
+      "recencyDays": null,
+      "purpose": "claim-discovery-or-metadata"
+    },
+    {
+      "id": "Q11",
+      "q": "\"10.1093/ajcn/88.4.959\" erratum correction 239 338",
+      "runDate": "2026-11-09",
+      "recencyDays": null,
+      "purpose": "source-discrepancy-check"
+    },
+    {
+      "id": "Q12",
+      "q": "\"42095278\" sarcopenia resting metabolic rate 2026",
+      "runDate": "2026-11-09",
+      "recencyDays": null,
+      "purpose": "claim-discovery-or-metadata"
+    },
+    {
+      "id": "Q13",
+      "q": "\"Resting Energy Expenditure is Overpredicted in Midlife Females\" 2026 Cunningham equation authors",
+      "runDate": "2026-11-09",
+      "recencyDays": null,
+      "purpose": "claim-discovery-or-metadata"
+    },
+    {
+      "id": "Q14",
+      "q": "\"Weijs\" \"239\" \"338\" 2008 resting energy expenditure",
+      "runDate": "2026-11-09",
+      "recencyDays": null,
+      "purpose": "source-discrepancy-check"
+    },
+    {
+      "id": "Q15",
+      "q": "\"Mifflin\" \"Cunningham\" \"2025\" validation resting energy expenditure indirect calorimetry",
+      "runDate": "2026-11-09",
+      "recencyDays": 730,
+      "purpose": "claim-discovery-or-metadata"
+    },
+    {
+      "id": "Q16",
+      "q": "\"Mifflin\" \"Cunningham\" \"2026\" validation resting metabolic rate",
+      "runDate": "2026-11-09",
+      "recencyDays": 365,
+      "purpose": "claim-discovery-or-metadata"
+    },
+    {
+      "id": "Q17",
+      "q": "\"Prediction Equations to Estimate Resting Metabolic Rate in Healthy, Community-Dwelling Chinese Older Adults\" 344 2026",
+      "runDate": "2026-11-09",
+      "recencyDays": null,
+      "purpose": "claim-discovery-or-metadata"
+    },
+    {
+      "id": "Q18",
+      "q": "site:ajcn.nutrition.org \"Validity of predictive equations\" \"239\" \"338\"",
+      "runDate": "2026-11-09",
+      "recencyDays": null,
+      "purpose": "source-discrepancy-check"
+    },
+    {
+      "id": "Q19",
+      "q": "site:ajcn.nutrition.org \"Validity of predictive equations\" \"Erratum\"",
+      "runDate": "2026-11-09",
+      "recencyDays": null,
+      "purpose": "claim-discovery-or-metadata"
+    },
+    {
+      "id": "Q20",
+      "q": "\"Mifflin\" \"Cunningham\" resting energy kidney disease cancer thyroid indirect calorimetry validation",
+      "runDate": "2026-11-09",
+      "recencyDays": 1095,
+      "purpose": "claim-discovery-or-metadata"
+    },
+    {
+      "id": "Q21",
+      "q": "site:ajcn.nutrition.org/article/S0002-9165 \"Weijs\" \"239\"",
+      "runDate": "2026-11-09",
+      "recencyDays": null,
+      "purpose": "source-discrepancy-check"
+    },
+    {
+      "id": "Q22",
+      "q": "site:ajcn.nutrition.org/article/S0002-9165 \"Weijs\" \"338\"",
+      "runDate": "2026-11-09",
+      "recencyDays": null,
+      "purpose": "source-discrepancy-check"
+    },
+    {
+      "id": "Q23",
+      "q": "site:pmc.ncbi.nlm.nih.gov/articles/PMC9960966 \"Cunningham\" \"500\"",
+      "runDate": "2026-11-09",
+      "recencyDays": null,
+      "purpose": "source-discrepancy-check"
+    },
+    {
+      "id": "Q24",
+      "q": "site:pmc.ncbi.nlm.nih.gov/articles/PMC12844918 \"Cunningham\" \"500\"",
+      "runDate": "2026-11-09",
+      "recencyDays": null,
+      "purpose": "source-discrepancy-check"
+    },
+    {
+      "id": "Q25",
+      "q": "\"Resting metabolic rate in muscular physique athletes\" \"Cunningham (1980)\"",
+      "runDate": "2026-11-09",
+      "recencyDays": null,
+      "purpose": "claim-discovery-or-metadata"
+    },
+    {
+      "id": "Q26",
+      "q": "\"10.1093/ajcn/51.2.241\" \"10.1093/ajcn/33.11.2372\" correction retraction",
+      "runDate": "2026-11-09",
+      "recencyDays": null,
+      "purpose": "targeted-update-notice-check"
+    },
+    {
+      "id": "Q27",
+      "q": "\"10.1093/ajcn/88.4.959\" correction erratum retraction",
+      "runDate": "2026-11-09",
+      "recencyDays": null,
+      "purpose": "targeted-update-notice-check"
+    },
+    {
+      "id": "Q28",
+      "q": "\"10.1371/journal.pone.0108460\" \"10.1139/apnm-2018-0412\" correction retraction",
+      "runDate": "2026-11-09",
+      "recencyDays": null,
+      "purpose": "targeted-update-notice-check"
+    },
+    {
+      "id": "Q29",
+      "q": "(\"10.3390/ijerph21070891\" OR \"10.1017/S0007114522003749\") (correction OR retraction OR erratum)",
+      "runDate": "2026-11-09",
+      "recencyDays": null,
+      "purpose": "targeted-update-notice-check"
+    },
+    {
+      "id": "Q30",
+      "q": "(\"10.1152/ajpendo.00375.2025\" OR \"10.3390/nu15040805\") (correction OR retraction OR erratum)",
+      "runDate": "2026-11-09",
+      "recencyDays": null,
+      "purpose": "targeted-update-notice-check"
+    },
+    {
+      "id": "Q31",
+      "q": "(\"10.3390/nu18020344\" OR \"10.3389/fnut.2026.1860294\") (correction OR retraction OR erratum)",
+      "runDate": "2026-11-09",
+      "recencyDays": null,
+      "purpose": "targeted-update-notice-check"
+    },
+    {
+      "id": "Q32",
+      "q": "(\"10.1002/ncp.70131\" OR \"10.1080/27697061.2026.2658497\" OR \"10.1093/ajcn/54.6.963\") (correction OR retraction OR erratum)",
+      "runDate": "2026-11-09",
+      "recencyDays": null,
+      "purpose": "targeted-update-notice-check"
+    }
+  ],
+  "includedSourceIds": [
+    "mifflin-1990",
+    "cunningham-1980",
+    "h2b-cunningham-1991",
+    "ten-haaf-2014",
+    "weijs-2008",
+    "tinsley-2019",
+    "sordi-2024",
+    "siedler-2023",
+    "h2b-brandl-2026",
+    "h2b-kfir-2023",
+    "h2b-cai-2026",
+    "h2b-dong-2026",
+    "h2b-delbiondo-2026",
+    "h2b-xu-2026"
+  ],
+  "selectionLimits": "No complete result-screening denominator or PRISMA flow available. Fourteen purposefully selected source records do not establish saturation or negative evidence for every disease.",
+  "discoveryOnly": [
+    {
+      "locator": "10.1007/s40279-023-01896-z",
+      "reason": "Athlete systematic review used for discovery; no secondary effect estimates admitted."
+    },
+    {
+      "locator": "https://pmc.ncbi.nlm.nih.gov/articles/PMC12101231/",
+      "reason": "Young-athlete study encountered but not appraised; no pediatric clearance."
+    },
+    {
+      "locator": "10.3390/nu17132144",
+      "reason": "Multimorbid older-adult paper cited by Xu; not retrieved/appraised. Candidate for a separately scoped clinical review."
+    }
+  ],
+  "accessLimits": [
+    {
+      "sourceId": "mifflin-1990",
+      "inspected": "Primary PubMed/publisher indexed abstract and metadata; full methods not inspected."
+    },
+    {
+      "sourceId": "cunningham-1980",
+      "inspected": "Primary abstract and publication metadata; original participant methods not independently reconstructed."
+    },
+    {
+      "sourceId": "h2b-cunningham-1991",
+      "inspected": "Publisher indexed abstract and metadata, including proposed formula; full review not inspected."
+    },
+    {
+      "sourceId": "ten-haaf-2014",
+      "inspected": "Publisher abstract, methods, results, limitations and licence; published institutional PDF Table 4 checked directly."
+    },
+    {
+      "sourceId": "weijs-2008",
+      "inspected": "PubMed abstract and publisher indexed methods/results/Table 1/Table 4. Direct publisher full-page access returned 403."
+    },
+    {
+      "sourceId": "tinsley-2019",
+      "inspected": "Primary indexed abstract and metadata only; direct PubMed extraction was empty."
+    },
+    {
+      "sourceId": "sordi-2024",
+      "inspected": "Primary PMC full text: abstract, methods, Table 1, results, exclusions and licence."
+    },
+    {
+      "sourceId": "siedler-2023",
+      "inspected": "Primary PMC abstract, publication metadata and licence; not every device-specific results table."
+    },
+    {
+      "sourceId": "h2b-brandl-2026",
+      "inspected": "PubMed abstract plus indexed publisher methods, cohort table and licence. Direct publisher page returned 403."
+    },
+    {
+      "sourceId": "h2b-kfir-2023",
+      "inspected": "PMC abstract, methods, Table 1, aggregate results, references and licence."
+    },
+    {
+      "sourceId": "h2b-cai-2026",
+      "inspected": "PMC abstract, methods, Table 1, Table 8, limitations and licence. Publisher direct access returned 429."
+    },
+    {
+      "sourceId": "h2b-dong-2026",
+      "inspected": "PubMed abstract and metadata only; Wiley full-text redirect inaccessible."
+    },
+    {
+      "sourceId": "h2b-delbiondo-2026",
+      "inspected": "PubMed primary abstract/metadata only; publisher full text returned 403."
+    },
+    {
+      "sourceId": "h2b-xu-2026",
+      "inspected": "Publisher full text: methods, Table 1, results, individual-agreement limits, exclusions and licence."
+    }
+  ],
+  "updateNoticeLimit": "Combined DOI queries returned unrelated notices, including a different physiology paper’s retraction. No matching notice identified; this is not a certified no-correction result. Registry-level reconciliation remains open."
+}

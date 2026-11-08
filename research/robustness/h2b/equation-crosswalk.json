@@ -1,0 +1,291 @@
+{
+  "schemaVersion": "1.0.0",
+  "documentType": "metron.H2B-equation-provenance",
+  "asOf": "2026-11-09",
+  "units": "kcal/day, mass in kg, height in cm, age in years; equation-sex constants as source-defined parameters",
+  "variants": [
+    {
+      "id": "metron-mifflin-rounded",
+      "family": "mifflin",
+      "coefficients": {
+        "weightKg": 10,
+        "heightCm": 6.25,
+        "ageYears": -5,
+        "maleConstant": 5,
+        "femaleConstant": -161
+      },
+      "outcome": "RMR/REE prediction"
+    },
+    {
+      "id": "mifflin-original",
+      "family": "mifflin",
+      "coefficients": {
+        "weightKg": 9.99,
+        "heightCm": 6.25,
+        "ageYears": -4.92,
+        "maleConstant": 5,
+        "femaleConstant": -161
+      },
+      "outcome": "REE prediction"
+    },
+    {
+      "id": "metron-cunningham-500-22",
+      "family": "cunningham",
+      "coefficients": {
+        "intercept": 500,
+        "massKg": 22
+      },
+      "outcome": "RMR prediction with FFM; original source used BMR and estimated LBM"
+    },
+    {
+      "id": "cunningham-1991-370-21.6",
+      "family": "cunningham",
+      "coefficients": {
+        "intercept": 370,
+        "massKg": 21.6
+      },
+      "outcome": "REE prediction with FFM"
+    },
+    {
+      "id": "cai-table-501.6-21.6",
+      "family": "cunningham",
+      "coefficients": {
+        "intercept": 501.6,
+        "massKg": 21.6
+      },
+      "outcome": "Table 1 prediction with FFM"
+    }
+  ],
+  "sourceMappings": [
+    {
+      "sourceId": "mifflin-1990",
+      "label": "Mifflin original and simplified",
+      "variantIds": [
+        "mifflin-original",
+        "metron-mifflin-rounded"
+      ],
+      "identityState": "verified",
+      "qualification": "Published original and rounded forms both described."
+    },
+    {
+      "sourceId": "cunningham-1980",
+      "label": "Cunningham 1980",
+      "variantIds": [
+        "metron-cunningham-500-22"
+      ],
+      "identityState": "verified-arithmetic-only",
+      "qualification": "Original estimated LBM/BMR differs from modern FFM/RMR."
+    },
+    {
+      "sourceId": "h2b-cunningham-1991",
+      "label": "Cunningham 1991",
+      "variantIds": [
+        "cunningham-1991-370-21.6"
+      ],
+      "identityState": "verified",
+      "qualification": "Different arithmetic."
+    },
+    {
+      "sourceId": "ten-haaf-2014",
+      "label": "Cunningham 1980; Mifflin",
+      "variantIds": [
+        "metron-cunningham-500-22",
+        "mifflin-original"
+      ],
+      "identityState": "verified",
+      "qualification": "Table 4; no rounded-form reanalysis."
+    },
+    {
+      "sourceId": "sordi-2024",
+      "label": "Cunningham 1991",
+      "variantIds": [
+        "metron-cunningham-500-22"
+      ],
+      "identityState": "label-coefficient-disagreement",
+      "qualification": "Table 1 label differs from arithmetic lineage."
+    },
+    {
+      "sourceId": "h2b-cai-2026",
+      "label": "Cunningham 1980",
+      "variantIds": [
+        "cai-table-501.6-21.6"
+      ],
+      "identityState": "label-coefficient-disagreement",
+      "qualification": "Table 1; cannot transfer 10.5% accuracy to Metron variant."
+    },
+    {
+      "sourceId": "h2b-kfir-2023",
+      "label": "Cunningham citation 1980",
+      "variantIds": [],
+      "identityState": "unresolved",
+      "qualification": "Coefficients not located; reported mean fails 500 + 22 × mean FFM consistency check. Do not infer implementation."
+    },
+    {
+      "sourceId": "tinsley-2019",
+      "label": "Cunningham 1980",
+      "variantIds": [],
+      "identityState": "unresolved",
+      "qualification": "Abstract name only; coefficients not directly inspected."
+    },
+    {
+      "sourceId": "h2b-dong-2026",
+      "label": "Mifflin_W and other variants",
+      "variantIds": [],
+      "identityState": "unresolved",
+      "qualification": "Abstract only; exact coefficients unverified."
+    },
+    {
+      "sourceId": "h2b-delbiondo-2026",
+      "label": "Cunningham",
+      "variantIds": [],
+      "identityState": "unresolved",
+      "qualification": "Abstract only; variant and LST/FFM input mapping unverified."
+    },
+    {
+      "sourceId": "h2b-xu-2026",
+      "label": "Cunningham; Mifflin",
+      "variantIds": [
+        "metron-cunningham-500-22",
+        "metron-mifflin-rounded"
+      ],
+      "identityState": "verified",
+      "qualification": "Table 1 arithmetic matches; population/method transfer still constrained."
+    }
+  ],
+  "transferRule": "Require exact coefficients, mass construct, reference outcome, population and protocol before transferring performance. A matching fingerprint alone is insufficient.",
+  "discrepancies": [
+    {
+      "id": "weijs-us-denominator",
+      "sourceId": "weijs-2008",
+      "state": "unresolved",
+      "observations": [
+        {
+          "portion": "PubMed abstract",
+          "n": 338
+        },
+        {
+          "portion": "indexed publisher results/Table 1/Table 4",
+          "n": 239
+        }
+      ],
+      "permittedUse": "Attribute abstract statistics explicitly; no single reconciled US denominator, pooled estimate or sample weighting."
+    },
+    {
+      "id": "kfir-cunningham-mean",
+      "sourceId": "h2b-kfir-2023",
+      "state": "unresolved",
+      "reportedMeanFfmKg": 53.3,
+      "reportedMeanPrediction": 1521,
+      "derived500Plus22MeanFfm": 1672.6,
+      "meaning": "Arithmetic consistency flag from rounded group means, not proof of code or permission to reassign the equation."
+    },
+    {
+      "id": "kfir-subgroup-counts",
+      "sourceId": "h2b-kfir-2023",
+      "state": "unresolved",
+      "meaning": "Methods and Table 1 interchange thyroid/bariatric 46/136 counts; no disease-specific evidence inferred."
+    }
+  ],
+  "frozenStudy": {
+    "baselineCommit": "6146ae6241d4627ba155036c5fba03906d79602b",
+    "files": [
+      {
+        "path": "research/ree-validation/G0_FILE_VERIFICATION.json",
+        "sha256": "284e1efef5217e2610488da9391c8a488ea7a9aeeaefe559eae0d62e1f765333"
+      },
+      {
+        "path": "research/ree-validation/G0_SOURCE_AUDIT.md",
+        "sha256": "625b2c0bfb0652277f13ddf9ae629e61a728876fef895aef7e363a1bd6417cf9"
+      },
+      {
+        "path": "research/ree-validation/G1_FROZEN_PROTOCOL.md",
+        "sha256": "2a7332b6ec068a15e9cbead63f82ef74301a88064927b4d92041232b7f6f7a66"
+      },
+      {
+        "path": "research/ree-validation/G2_BENCHMARK.md",
+        "sha256": "aa11af13e5a141b060fc93a3dd774622e204a73145fc00ee706f2df07edf122c"
+      },
+      {
+        "path": "research/ree-validation/G3_RESULTS.md",
+        "sha256": "1b55b80d294910ddcf14545dfcdd6e8137120665a1578cbb7770a3b1baa38a07"
+      },
+      {
+        "path": "research/ree-validation/G4_DECISION.md",
+        "sha256": "848e808b2088237d73ce765b21e5ee99bc46deb59e3d0ea0a5dbd3f686b93b12"
+      },
+      {
+        "path": "research/ree-validation/README.md",
+        "sha256": "c7ab1d772039340e011541e65db4beeb38265842277f812afe5b7d1a1a93c99d"
+      },
+      {
+        "path": "research/ree-validation/benchmark.mjs",
+        "sha256": "3dda5dcff0319fc65272107e9ab41d27cc487bc4a8942c9043d5e39bce8c195d"
+      },
+      {
+        "path": "research/ree-validation/candidate-sources.json",
+        "sha256": "100022c2e1b00edcabd472c6850e713a4601623efaac239ed7e96c5133c46930"
+      },
+      {
+        "path": "research/ree-validation/figures/g3-equations.svg",
+        "sha256": "845f32ce7efedd3cdc5b2c291862acaf010ccfe9d3631514a6a26a076418fffb"
+      },
+      {
+        "path": "research/ree-validation/figures/g3-subgroups.svg",
+        "sha256": "2a414fe7b3ded1d0754509f1423edd133b9dd4ab866d4fc84ae3ee594a421cfc"
+      },
+      {
+        "path": "research/ree-validation/fixtures/synthetic-rmr.csv",
+        "sha256": "2da6d774e6fe12e3c606975ece0f09b22b8707b5dbd5d5b7965343478a535032"
+      },
+      {
+        "path": "research/ree-validation/plan.json",
+        "sha256": "7c5ed45ddb04803e4e2d238538c454cef8117e68a5cac41ac6f27a06f4d3513c"
+      },
+      {
+        "path": "research/ree-validation/protocol.lock.json",
+        "sha256": "523275889fc5db939545a49d29e175d10236f3297397a59b0844787254fdf0ed"
+      },
+      {
+        "path": "research/ree-validation/protocol.v1.json",
+        "sha256": "81e47129949e7194022c55887788b1f1b244af24e44bd7090af792ad18ccccb3"
+      },
+      {
+        "path": "research/ree-validation/render.mjs",
+        "sha256": "40869746c298b5d37e5ca41bd2063832cbfbc2297269231d66847a6b835df348"
+      },
+      {
+        "path": "research/ree-validation/results/G3_RUN.json",
+        "sha256": "bba2b3b326bd98e21b1ca3a9d5db50c443301e7d8522465271f45f4edd7cbd71"
+      },
+      {
+        "path": "research/ree-validation/results/g3-audit-v1.json",
+        "sha256": "673bc9f8d96f5fa366b4ea711d0154dc1233d04764a600b34b6843476d1b401e"
+      },
+      {
+        "path": "research/ree-validation/results/g3-enable-v1.json",
+        "sha256": "16b5e8cda5b097f3e1b18a5822932b05797743b008b20de0d40507536f50ca94"
+      },
+      {
+        "path": "research/ree-validation/run.mjs",
+        "sha256": "af8e26a33b3a9afef2616632562675f2446e44742d313d30809ee67d8562a8f8"
+      },
+      {
+        "path": "research/ree-validation/tools/audit_g3.py",
+        "sha256": "ea3a703232d0bd120eff29b98c803daf306d6dc803ece2834f65add5f92fabe2"
+      },
+      {
+        "path": "research/ree-validation/tools/probe_zenodo.py",
+        "sha256": "b17576fcc0d6ac6e8b215c799ed2beb63f6e6726f101ab0277bfc42da34ca504"
+      },
+      {
+        "path": "research/ree-validation/tools/render_g3.py",
+        "sha256": "273ebe277bc846b2fb00e765de5150e6f2c4d0cc900a64d818fa6530b5134bb5"
+      },
+      {
+        "path": "research/ree-validation/tools/test_probe_zenodo.py",
+        "sha256": "1e97dc8634a879295a67195581e22f74b88d692eb7c0fc0b7f83305536004fa7"
+      }
+    ],
+    "meaning": "All tracked G0–G4 directory files preserved at this checkpoint; intentional future changes require explicit treatment of this dated preservation check. No new participant records used."
+  }
+}

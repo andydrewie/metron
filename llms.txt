@@ -16,6 +16,7 @@
 - [Gate and weakness state](./research/robustness/plan.json): authoritative execution order
 - [Research claim corpus](./research/robustness/corpus.json): stable claim, context and source records; clinical review incomplete
 - [H1 inventory](./research/robustness/H1_INVENTORY.md): declared denominator, explicit applicability matrix and field semantics
+- [H2-B resting-equation evidence](./research/robustness/h2b/README.md): exact variants, source discrepancies, bounded population findings and preserved G3
 - [H2-A readiness evidence](./research/robustness/h2a/README.md): bounded source review, contradictions, unsupported exact rules and H5 wording candidates
 - [Machine-readable study plan](./research/protocol.json): planned A/B/C comparator and evaluation criteria
 - [Research agenda](./docs/RESEARCH.md): falsifiable questions

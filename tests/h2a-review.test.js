@@ -15,7 +15,7 @@ test('bounded H2-A records resolve without promoting clinical validity',()=>{
  assert.ok(f.corpus.contexts.every(c=>c.clinicalEvidenceReview==='unreviewed'));
 });
 test('source/query references and reviewed-context overlays cannot disappear silently',()=>{
- for(const mutate of [f=>f.records.review.claimReviews[0].sourceIds.push('invented'),f=>f.records.review.claimReviews[0].searchIds.push('Q999'),f=>f.matrix.reviewOverlays.pop(),f=>f.matrix.reviewOverlays.push(f.matrix.reviewOverlays[0]),f=>f.records.review.claimReviews[0].nextGate='H99']){
+ for(const mutate of [f=>f.records.review.claimReviews[0].sourceIds.push('invented'),f=>f.records.review.claimReviews[0].searchIds.push('Q999'),f=>f.matrix.reviewOverlays.splice(f.matrix.reviewOverlays.findIndex(x=>x.reviewId==='H2-A'),1),f=>f.matrix.reviewOverlays.push(f.matrix.reviewOverlays[0]),f=>f.records.review.claimReviews[0].nextGate='H99']){
   const f=fixture();mutate(f);assert.ok(audit(f).length);
  }
 });
@@ -40,7 +40,7 @@ test('lookup distinguishes a bounded review from unreviewed clinical contexts',(
 });
 test('review-age boundary warns without inventing scientific invalidity or refresh',()=>{
  const f=fixture();const h1={inventory:read('research/robustness/inventory.json'),matrix:f.matrix,semantics:read('research/robustness/semantics.json'),inputSchema:read('schemas/input.schema.json'),outputSchema:read('schemas/output.schema.json')};
- const opts={asOf:'2027-02-05',pathExists:p=>existsSync(root+p),h1,h2a:f.records};
+ const opts={asOf:'2027-02-05',pathExists:p=>existsSync(root+p),h1,h2a:f.records,h2b:{review:read('research/robustness/h2b/review.json'),registry:read('research/robustness/h2b/sources.json'),searchLog:read('research/robustness/h2b/search-log.json'),queue:read('research/robustness/h2-review-queue.json'),crosswalk:read('research/robustness/h2b/equation-crosswalk.json')}};
  const result=auditProgram(f.plan,f.corpus,opts);assert.equal(result.valid,true);assert.ok(result.warnings.some(w=>w.includes('H2-A bounded evidence review is due')));
  assert.equal(f.records.review.asOf,'2026-11-07');
 });

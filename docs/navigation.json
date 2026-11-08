@@ -302,7 +302,12 @@
         "research/robustness/h2a/review.json",
         "research/robustness/h2a/sources.json",
         "research/robustness/h2a/search-log.json",
-        "research/robustness/h2a/rule-audit.json"
+        "research/robustness/h2a/rule-audit.json",
+        "research/robustness/h2b/README.md",
+        "research/robustness/h2b/review.json",
+        "research/robustness/h2b/sources.json",
+        "research/robustness/h2b/search-log.json",
+        "research/robustness/h2b/equation-crosswalk.json"
       ],
       "status": "research-question"
     }

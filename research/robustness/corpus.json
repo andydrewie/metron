@@ -1,7 +1,7 @@
 {
   "schemaVersion": "1.0.0",
   "documentType": "metron.research.claim-corpus",
-  "asOf": "2026-11-07",
+  "asOf": "2026-11-09",
   "coverageStatus": "H1-repository-inventory-complete-clinical-evidence-unreviewed",
   "comprehensiveClinicalReviewCompleted": false,
   "definitionsAreWorkingVocabulary": true,
@@ -1373,15 +1373,17 @@
       "path": "research/ree-validation/G3_RESULTS.md",
       "url": null,
       "freshnessClass": "active-empirical",
-      "sourceContentReviewedAt": null,
-      "reviewScope": null,
+      "sourceContentReviewedAt": "2026-11-09",
+      "reviewScope": "Frozen G3 report: cohort flow, paired metrics, bootstrap confidence interval, Mifflin-only subgroups and age sensitivity; no participant-level rerun.",
       "rightsStatus": "repository-content-policy",
       "importedFrom": null,
-      "status": "repository-pointer",
-      "note": "Review date intentionally absent until H2 source/version inspection is logged.",
-      "retrievedAt": null,
-      "inspectedPortions": [],
-      "versionOrPublicationDate": null
+      "status": "reviewed-at-declared-scope",
+      "note": "Repository evidence re-inspected for H2-B at the declared portions; no new external validation or participant data.",
+      "retrievedAt": "2026-11-09",
+      "inspectedPortions": [
+        "Frozen G3 report: cohort flow, paired metrics, bootstrap confidence interval, Mifflin-only subgroups and age sensitivity; no participant-level rerun."
+      ],
+      "versionOrPublicationDate": "6146ae6241d4627ba155036c5fba03906d79602b"
     },
     {
       "id": "g4",
@@ -1389,15 +1391,17 @@
       "path": "research/ree-validation/G4_DECISION.md",
       "url": null,
       "freshnessClass": "active-empirical",
-      "sourceContentReviewedAt": null,
-      "reviewScope": null,
+      "sourceContentReviewedAt": "2026-11-09",
+      "reviewScope": "Frozen G4 evidence comparison and deployment rationale; current H2-B qualifies source identity and Weijs denominator without rewriting G4.",
       "rightsStatus": "repository-content-policy",
       "importedFrom": null,
-      "status": "repository-pointer",
-      "note": "Review date intentionally absent until H2 source/version inspection is logged.",
-      "retrievedAt": null,
-      "inspectedPortions": [],
-      "versionOrPublicationDate": null
+      "status": "reviewed-at-declared-scope",
+      "note": "Repository evidence re-inspected for H2-B at the declared portions; no new external validation or participant data.",
+      "retrievedAt": "2026-11-09",
+      "inspectedPortions": [
+        "Frozen G4 evidence comparison and deployment rationale; current H2-B qualifies source identity and Weijs denominator without rewriting G4."
+      ],
+      "versionOrPublicationDate": "6146ae6241d4627ba155036c5fba03906d79602b"
     },
     {
       "id": "accounting",
@@ -1465,35 +1469,39 @@
     },
     {
       "id": "mifflin-1990",
-      "title": "Mifflin et al. resting-energy equation",
+      "title": "Mifflin et al.: a new predictive equation for resting energy expenditure",
       "path": null,
       "url": "https://doi.org/10.1093/ajcn/51.2.241",
       "freshnessClass": "foundational",
-      "sourceContentReviewedAt": null,
-      "reviewScope": null,
-      "rightsStatus": "not-audited-for-republication",
+      "sourceContentReviewedAt": "2026-11-09",
+      "reviewScope": "Primary PubMed/publisher indexed abstract and metadata; full methods not inspected.",
+      "rightsStatus": "Original publisher copyright; broad reuse rights unverified.",
       "importedFrom": "docs/SCIENCE.md",
-      "status": "imported-reference",
-      "note": "Review date intentionally absent until H2 source/version inspection is logged.",
-      "retrievedAt": null,
-      "inspectedPortions": [],
-      "versionOrPublicationDate": null
+      "status": "reviewed-at-declared-scope",
+      "note": "H2-B source-specific scope and uncertainty in research/robustness/h2b/sources.json; no blanket currency or clinical validation.",
+      "retrievedAt": "2026-11-09",
+      "inspectedPortions": [
+        "Primary PubMed/publisher indexed abstract and metadata; full methods not inspected."
+      ],
+      "versionOrPublicationDate": "1990-02"
     },
     {
       "id": "cunningham-1980",
-      "title": "Cunningham resting-energy equation",
+      "title": "Cunningham: reanalysis of factors influencing basal metabolic rate",
       "path": null,
       "url": "https://doi.org/10.1093/ajcn/33.11.2372",
       "freshnessClass": "foundational",
-      "sourceContentReviewedAt": null,
-      "reviewScope": null,
-      "rightsStatus": "not-audited-for-republication",
+      "sourceContentReviewedAt": "2026-11-09",
+      "reviewScope": "Primary abstract and publication metadata; original participant methods not independently reconstructed.",
+      "rightsStatus": "Original publisher copyright; broad reuse rights unverified.",
       "importedFrom": "docs/SCIENCE.md",
-      "status": "imported-reference",
-      "note": "Review date intentionally absent until H2 source/version inspection is logged.",
-      "retrievedAt": null,
-      "inspectedPortions": [],
-      "versionOrPublicationDate": null
+      "status": "reviewed-at-declared-scope",
+      "note": "H2-B source-specific scope and uncertainty in research/robustness/h2b/sources.json; no blanket currency or clinical validation.",
+      "retrievedAt": "2026-11-09",
+      "inspectedPortions": [
+        "Primary abstract and publication metadata; original participant methods not independently reconstructed."
+      ],
+      "versionOrPublicationDate": "1980-11"
     },
     {
       "id": "compendium",
@@ -1513,83 +1521,93 @@
     },
     {
       "id": "ten-haaf-2014",
-      "title": "ten Haaf and Weijs recreational-athlete study",
+      "title": "ten Haaf and Weijs: resting energy expenditure in recreational athletes",
       "path": null,
       "url": "https://doi.org/10.1371/journal.pone.0108460",
       "freshnessClass": "active-empirical",
-      "sourceContentReviewedAt": null,
-      "reviewScope": null,
-      "rightsStatus": "not-audited-for-republication",
+      "sourceContentReviewedAt": "2026-11-09",
+      "reviewScope": "Publisher abstract, methods, results, limitations and licence; published institutional PDF Table 4 checked directly.",
+      "rightsStatus": "Publisher states Creative Commons Attribution; licence version not independently confirmed.",
       "importedFrom": "research/ree-validation/G4_DECISION.md",
-      "status": "imported-reference",
-      "note": "Review date intentionally absent until H2 source/version inspection is logged.",
-      "retrievedAt": null,
-      "inspectedPortions": [],
-      "versionOrPublicationDate": null
+      "status": "reviewed-at-declared-scope",
+      "note": "H2-B source-specific scope and uncertainty in research/robustness/h2b/sources.json; no blanket currency or clinical validation.",
+      "retrievedAt": "2026-11-09",
+      "inspectedPortions": [
+        "Publisher abstract, methods, results, limitations and licence; published institutional PDF Table 4 checked directly."
+      ],
+      "versionOrPublicationDate": "2014-10-02"
     },
     {
       "id": "weijs-2008",
-      "title": "Weijs US and Dutch adult evaluation",
+      "title": "Weijs: prediction validity in US and Dutch overweight and obese adults",
       "path": null,
       "url": "https://pubmed.ncbi.nlm.nih.gov/18842782/",
       "freshnessClass": "active-empirical",
-      "sourceContentReviewedAt": null,
-      "reviewScope": null,
-      "rightsStatus": "not-audited-for-republication",
+      "sourceContentReviewedAt": "2026-11-09",
+      "reviewScope": "PubMed abstract and publisher indexed methods/results/Table 1/Table 4. Direct publisher full-page access returned 403.",
+      "rightsStatus": "© 2008 ASN/Elsevier; Open Archive availability does not establish blanket CC rights.",
       "importedFrom": "research/ree-validation/G4_DECISION.md",
-      "status": "imported-reference",
-      "note": "Review date intentionally absent until H2 source/version inspection is logged.",
-      "retrievedAt": null,
-      "inspectedPortions": [],
-      "versionOrPublicationDate": null
+      "status": "reviewed-at-declared-scope",
+      "note": "H2-B source-specific scope and uncertainty in research/robustness/h2b/sources.json; no blanket currency or clinical validation.",
+      "retrievedAt": "2026-11-09",
+      "inspectedPortions": [
+        "PubMed abstract and publisher indexed methods/results/Table 1/Table 4. Direct publisher full-page access returned 403."
+      ],
+      "versionOrPublicationDate": "2008-10"
     },
     {
       "id": "tinsley-2019",
-      "title": "Tinsley muscular physique athletes",
+      "title": "Tinsley et al.: resting metabolic rate in muscular physique athletes",
       "path": null,
       "url": "https://doi.org/10.1139/apnm-2018-0412",
       "freshnessClass": "active-empirical",
-      "sourceContentReviewedAt": null,
-      "reviewScope": null,
-      "rightsStatus": "not-audited-for-republication",
+      "sourceContentReviewedAt": "2026-11-09",
+      "reviewScope": "Primary indexed abstract and metadata only; direct PubMed extraction was empty.",
+      "rightsStatus": "Full-text reuse rights unverified.",
       "importedFrom": "research/ree-validation/G4_DECISION.md",
-      "status": "imported-reference",
-      "note": "Review date intentionally absent until H2 source/version inspection is logged.",
-      "retrievedAt": null,
-      "inspectedPortions": [],
-      "versionOrPublicationDate": null
+      "status": "reviewed-at-declared-scope",
+      "note": "H2-B source-specific scope and uncertainty in research/robustness/h2b/sources.json; no blanket currency or clinical validation.",
+      "retrievedAt": "2026-11-09",
+      "inspectedPortions": [
+        "Primary indexed abstract and metadata only; direct PubMed extraction was empty."
+      ],
+      "versionOrPublicationDate": "2019-04"
     },
     {
       "id": "sordi-2024",
-      "title": "Sordi cross-training equation evaluation",
+      "title": "Sordi et al.: predicted versus measured RMR in cross-training participants",
       "path": null,
       "url": "https://doi.org/10.3390/ijerph21070891",
       "freshnessClass": "active-empirical",
-      "sourceContentReviewedAt": null,
-      "reviewScope": null,
-      "rightsStatus": "not-audited-for-republication",
+      "sourceContentReviewedAt": "2026-11-09",
+      "reviewScope": "Primary PMC full text: abstract, methods, Table 1, results, exclusions and licence.",
+      "rightsStatus": "CC BY 4.0 as displayed.",
       "importedFrom": "research/ree-validation/G4_DECISION.md",
-      "status": "imported-reference",
-      "note": "Review date intentionally absent until H2 source/version inspection is logged.",
-      "retrievedAt": null,
-      "inspectedPortions": [],
-      "versionOrPublicationDate": null
+      "status": "reviewed-at-declared-scope",
+      "note": "H2-B source-specific scope and uncertainty in research/robustness/h2b/sources.json; no blanket currency or clinical validation.",
+      "retrievedAt": "2026-11-09",
+      "inspectedPortions": [
+        "Primary PMC full text: abstract, methods, Table 1, results, exclusions and licence."
+      ],
+      "versionOrPublicationDate": "2024-07"
     },
     {
       "id": "siedler-2023",
-      "title": "Siedler BIA-device validation",
+      "title": "Siedler et al.: performance of 15 bioimpedance devices",
       "path": null,
       "url": "https://doi.org/10.1017/S0007114522003749",
       "freshnessClass": "active-empirical",
-      "sourceContentReviewedAt": null,
-      "reviewScope": null,
-      "rightsStatus": "not-audited-for-republication",
+      "sourceContentReviewedAt": "2026-11-09",
+      "reviewScope": "Primary PMC abstract, publication metadata and licence; not every device-specific results table.",
+      "rightsStatus": "CC BY 4.0 as displayed.",
       "importedFrom": "research/ree-validation/G4_DECISION.md",
-      "status": "imported-reference",
-      "note": "Review date intentionally absent until H2 source/version inspection is logged.",
-      "retrievedAt": null,
-      "inspectedPortions": [],
-      "versionOrPublicationDate": null
+      "status": "reviewed-at-declared-scope",
+      "note": "H2-B source-specific scope and uncertainty in research/robustness/h2b/sources.json; no blanket currency or clinical validation.",
+      "retrievedAt": "2026-11-09",
+      "inspectedPortions": [
+        "Primary PMC abstract, publication metadata and licence; not every device-specific results table."
+      ],
+      "versionOrPublicationDate": "2023-09-14"
     },
     {
       "id": "who-classifications",
@@ -1775,17 +1793,17 @@
       "path": "research/ree-validation/results/g3-enable-v1.json",
       "url": null,
       "freshnessClass": "foundational",
-      "sourceContentReviewedAt": null,
-      "reviewScope": null,
+      "sourceContentReviewedAt": "2026-11-09",
+      "reviewScope": "Published aggregate JSON: source provenance, flow, equation metrics, paired interval and subgroup/sensitivity results; no participant records.",
       "rightsStatus": "repository-content-policy",
       "importedFrom": null,
-      "status": "repository-pointer",
-      "note": "H1 semantic inventory only; no primary-source freshness or clinical evidence review.",
-      "retrievedAt": "2026-11-07",
+      "status": "reviewed-at-declared-scope",
+      "note": "Repository evidence re-inspected for H2-B at the declared portions; no new external validation or participant data.",
+      "retrievedAt": "2026-11-09",
       "inspectedPortions": [
-        "Repository statement and contract inspection"
+        "Published aggregate JSON: source provenance, flow, equation metrics, paired interval and subgroup/sensitivity results; no participant records."
       ],
-      "versionOrPublicationDate": "8fb3728e453493fc99c7a43bbbdaf3e45a43f75e"
+      "versionOrPublicationDate": "6146ae6241d4627ba155036c5fba03906d79602b"
     },
     {
       "id": "g3-protocol",
@@ -1793,17 +1811,17 @@
       "path": "research/ree-validation/protocol.v1.json",
       "url": null,
       "freshnessClass": "foundational",
-      "sourceContentReviewedAt": null,
-      "reviewScope": null,
+      "sourceContentReviewedAt": "2026-11-09",
+      "reviewScope": "Frozen protocol: source hash, outcome and input mappings, eligibility, paired metrics, stratified bootstrap and prespecified subgroups.",
       "rightsStatus": "repository-content-policy",
       "importedFrom": null,
-      "status": "repository-pointer",
-      "note": "H1 semantic inventory only; no primary-source freshness or clinical evidence review.",
-      "retrievedAt": "2026-11-07",
+      "status": "reviewed-at-declared-scope",
+      "note": "Repository evidence re-inspected for H2-B at the declared portions; no new external validation or participant data.",
+      "retrievedAt": "2026-11-09",
       "inspectedPortions": [
-        "Repository statement and contract inspection"
+        "Frozen protocol: source hash, outcome and input mappings, eligibility, paired metrics, stratified bootstrap and prespecified subgroups."
       ],
-      "versionOrPublicationDate": "8fb3728e453493fc99c7a43bbbdaf3e45a43f75e"
+      "versionOrPublicationDate": "6146ae6241d4627ba155036c5fba03906d79602b"
     },
     {
       "id": "sensitivity",
@@ -2110,6 +2128,132 @@
         "Indexed primary abstract and metadata only; no individual records or full-paper analysis."
       ],
       "versionOrPublicationDate": "2013-08"
+    },
+    {
+      "id": "h2b-cunningham-1991",
+      "path": "research/robustness/h2b/sources.json",
+      "importedFrom": "research/robustness/h2b/sources.json",
+      "title": "Cunningham: body composition as a determinant of energy expenditure",
+      "url": "https://doi.org/10.1093/ajcn/54.6.963",
+      "freshnessClass": "foundational",
+      "sourceContentReviewedAt": "2026-11-09",
+      "reviewScope": "Publisher indexed abstract and metadata, including proposed formula; full review not inspected.",
+      "rightsStatus": "© American Society for Nutrition 1991; no broad republication permission inferred.",
+      "status": "reviewed-at-declared-scope",
+      "note": "H2-B source-specific scope and uncertainty in research/robustness/h2b/sources.json; no blanket currency or clinical validation.",
+      "retrievedAt": "2026-11-09",
+      "inspectedPortions": [
+        "Publisher indexed abstract and metadata, including proposed formula; full review not inspected."
+      ],
+      "versionOrPublicationDate": "1991-12"
+    },
+    {
+      "id": "h2b-brandl-2026",
+      "path": "research/robustness/h2b/sources.json",
+      "importedFrom": "research/robustness/h2b/sources.json",
+      "title": "Brandl et al.: machine learning predictions of resting metabolic rate",
+      "url": "https://doi.org/10.1152/ajpendo.00375.2025",
+      "freshnessClass": "active-empirical",
+      "sourceContentReviewedAt": "2026-11-09",
+      "reviewScope": "PubMed abstract plus indexed publisher methods, cohort table and licence. Direct publisher page returned 403.",
+      "rightsStatus": "Paper CC BY-NC-ND 4.0 as displayed; released dataset CC BY 4.0 in frozen G0 record. Paper and data licences differ.",
+      "status": "reviewed-at-declared-scope",
+      "note": "H2-B source-specific scope and uncertainty in research/robustness/h2b/sources.json; no blanket currency or clinical validation.",
+      "retrievedAt": "2026-11-09",
+      "inspectedPortions": [
+        "PubMed abstract plus indexed publisher methods, cohort table and licence. Direct publisher page returned 403."
+      ],
+      "versionOrPublicationDate": "2026-02-01"
+    },
+    {
+      "id": "h2b-kfir-2023",
+      "path": "research/robustness/h2b/sources.json",
+      "importedFrom": "research/robustness/h2b/sources.json",
+      "title": "Kfir, Lahav and Gepner: prediction of RMR using fat-free mass",
+      "url": "https://doi.org/10.3390/nu15040805",
+      "freshnessClass": "active-empirical",
+      "sourceContentReviewedAt": "2026-11-09",
+      "reviewScope": "PMC abstract, methods, Table 1, aggregate results, references and licence.",
+      "rightsStatus": "CC BY 4.0 as displayed.",
+      "status": "reviewed-at-declared-scope",
+      "note": "H2-B source-specific scope and uncertainty in research/robustness/h2b/sources.json; no blanket currency or clinical validation.",
+      "retrievedAt": "2026-11-09",
+      "inspectedPortions": [
+        "PMC abstract, methods, Table 1, aggregate results, references and licence."
+      ],
+      "versionOrPublicationDate": "2023-02-04"
+    },
+    {
+      "id": "h2b-cai-2026",
+      "path": "research/robustness/h2b/sources.json",
+      "importedFrom": "research/robustness/h2b/sources.json",
+      "title": "Cai et al.: RMR equations in healthy community-dwelling Chinese older adults",
+      "url": "https://doi.org/10.3390/nu18020344",
+      "freshnessClass": "active-empirical",
+      "sourceContentReviewedAt": "2026-11-09",
+      "reviewScope": "PMC abstract, methods, Table 1, Table 8, limitations and licence. Publisher direct access returned 429.",
+      "rightsStatus": "Creative Commons Attribution as displayed.",
+      "status": "reviewed-at-declared-scope",
+      "note": "H2-B source-specific scope and uncertainty in research/robustness/h2b/sources.json; no blanket currency or clinical validation.",
+      "retrievedAt": "2026-11-09",
+      "inspectedPortions": [
+        "PMC abstract, methods, Table 1, Table 8, limitations and licence. Publisher direct access returned 429."
+      ],
+      "versionOrPublicationDate": "2026-01-21"
+    },
+    {
+      "id": "h2b-dong-2026",
+      "path": "research/robustness/h2b/sources.json",
+      "importedFrom": "research/robustness/h2b/sources.json",
+      "title": "Dong et al.: RMR prediction in Chinese older adults with sarcopenia",
+      "url": "https://doi.org/10.1002/ncp.70131",
+      "freshnessClass": "active-empirical",
+      "sourceContentReviewedAt": "2026-11-09",
+      "reviewScope": "PubMed abstract and metadata only; Wiley full-text redirect inaccessible.",
+      "rightsStatus": "Full-text reuse rights unverified.",
+      "status": "reviewed-at-declared-scope",
+      "note": "H2-B source-specific scope and uncertainty in research/robustness/h2b/sources.json; no blanket currency or clinical validation.",
+      "retrievedAt": "2026-11-09",
+      "inspectedPortions": [
+        "PubMed abstract and metadata only; Wiley full-text redirect inaccessible."
+      ],
+      "versionOrPublicationDate": "2026-10"
+    },
+    {
+      "id": "h2b-delbiondo-2026",
+      "path": "research/robustness/h2b/sources.json",
+      "importedFrom": "research/robustness/h2b/sources.json",
+      "title": "Del Biondo et al.: prediction of REE in midlife females",
+      "url": "https://doi.org/10.1080/27697061.2026.2658497",
+      "freshnessClass": "active-empirical",
+      "sourceContentReviewedAt": "2026-11-09",
+      "reviewScope": "PubMed primary abstract/metadata only; publisher full text returned 403.",
+      "rightsStatus": "Full-text reuse rights unverified.",
+      "status": "reviewed-at-declared-scope",
+      "note": "H2-B source-specific scope and uncertainty in research/robustness/h2b/sources.json; no blanket currency or clinical validation.",
+      "retrievedAt": "2026-11-09",
+      "inspectedPortions": [
+        "PubMed primary abstract/metadata only; publisher full text returned 403."
+      ],
+      "versionOrPublicationDate": "2026-08"
+    },
+    {
+      "id": "h2b-xu-2026",
+      "path": "research/robustness/h2b/sources.json",
+      "importedFrom": "research/robustness/h2b/sources.json",
+      "title": "Xu et al.: RMR equation validity in Chinese nursing-home residents",
+      "url": "https://doi.org/10.3389/fnut.2026.1860294",
+      "freshnessClass": "active-empirical",
+      "sourceContentReviewedAt": "2026-11-09",
+      "reviewScope": "Publisher full text: methods, Table 1, results, individual-agreement limits, exclusions and licence.",
+      "rightsStatus": "Creative Commons Attribution as displayed.",
+      "status": "reviewed-at-declared-scope",
+      "note": "H2-B source-specific scope and uncertainty in research/robustness/h2b/sources.json; no blanket currency or clinical validation.",
+      "retrievedAt": "2026-11-09",
+      "inspectedPortions": [
+        "Publisher full text: methods, Table 1, results, individual-agreement limits, exclusions and licence."
+      ],
+      "versionOrPublicationDate": "2026-07-28"
     }
   ],
   "claims": [
@@ -2128,7 +2272,13 @@
         "core",
         "science",
         "mifflin-1990",
-        "g3"
+        "g3",
+        "ten-haaf-2014",
+        "weijs-2008",
+        "h2b-cai-2026",
+        "h2b-dong-2026",
+        "h2b-delbiondo-2026",
+        "h2b-xu-2026"
       ],
       "gates": [
         "H2",
@@ -2136,13 +2286,22 @@
       ],
       "empiricalValidation": "single-source-external-retrospective",
       "applicabilityMatrixStatus": "H1-explicit-all-contexts",
-      "evidenceDisposition": "unreviewed-for-current-cross-context-use",
-      "limitation": "Equation arithmetic and one cohort are established at their stated scope; no universal or individual guarantee.",
+      "evidenceDisposition": "published-arithmetic-with-bounded-transfer",
+      "limitation": "Educational estimate. No universal accuracy, automatic demographic selector or clinical prescription.",
       "contextsMeaning": "Salient origin or named discussion contexts only; complete cross-context coverage is in applicability.json.",
       "semanticLevel": "model-or-method",
-      "temporalScope": "Source-specific window required; current use not established by inventory",
-      "measurementScope": "Source-specific protocol required; unrecorded method, device, treatment and preparation remain unknown",
-      "noPopulationPerformanceInference": false
+      "temporalScope": "H2-B source inspection dated 2026-11-09; next operational review 2027-02-07 or earlier consequential reuse.",
+      "measurementScope": "Source-specific methods and exact-variant qualifiers in H2-B sources and equation crosswalk; uninspected details remain unknown.",
+      "noPopulationPerformanceInference": false,
+      "evidenceReviews": [
+        {
+          "reviewId": "H2-B",
+          "path": "research/robustness/h2b/review.json",
+          "reviewedAt": "2026-11-09",
+          "nextReviewBy": "2027-02-07",
+          "scope": "Bounded source-specific equation/provenance and transfer review, not review of every patient, severity, treatment or intersection in these contexts."
+        }
+      ]
     },
     {
       "id": "C02",
@@ -2163,7 +2322,12 @@
         "cunningham-1980",
         "g3",
         "g4",
-        "siedler-2023"
+        "siedler-2023",
+        "h2b-cunningham-1991",
+        "sordi-2024",
+        "h2b-kfir-2023",
+        "h2b-cai-2026",
+        "h2b-xu-2026"
       ],
       "gates": [
         "H2",
@@ -2172,13 +2336,22 @@
       ],
       "empiricalValidation": "single-source-external-retrospective",
       "applicabilityMatrixStatus": "H1-explicit-all-contexts",
-      "evidenceDisposition": "unreviewed-for-current-cross-context-use",
-      "limitation": "Better cohort performance does not establish a general input-quality or population selector.",
+      "evidenceDisposition": "published-arithmetic-with-input-and-variant-constraints",
+      "limitation": "Explicit optional comparison with body-composition provenance. Never treat DXA lean soft tissue, SMM, historical LBM and FFM as automatically interchangeable.",
       "contextsMeaning": "Salient origin or named discussion contexts only; complete cross-context coverage is in applicability.json.",
       "semanticLevel": "model-or-method",
-      "temporalScope": "Source-specific window required; current use not established by inventory",
-      "measurementScope": "Source-specific protocol required; unrecorded method, device, treatment and preparation remain unknown",
-      "noPopulationPerformanceInference": false
+      "temporalScope": "H2-B source inspection dated 2026-11-09; next operational review 2027-02-07 or earlier consequential reuse.",
+      "measurementScope": "Source-specific methods and exact-variant qualifiers in H2-B sources and equation crosswalk; uninspected details remain unknown.",
+      "noPopulationPerformanceInference": false,
+      "evidenceReviews": [
+        {
+          "reviewId": "H2-B",
+          "path": "research/robustness/h2b/review.json",
+          "reviewedAt": "2026-11-09",
+          "nextReviewBy": "2027-02-07",
+          "scope": "Bounded source-specific equation/provenance and transfer review, not review of every patient, severity, treatment or intersection in these contexts."
+        }
+      ]
     },
     {
       "id": "C03",
@@ -2701,7 +2874,18 @@
       ],
       "sources": [
         "g4",
-        "science"
+        "science",
+        "ten-haaf-2014",
+        "weijs-2008",
+        "tinsley-2019",
+        "sordi-2024",
+        "siedler-2023",
+        "h2b-brandl-2026",
+        "h2b-kfir-2023",
+        "h2b-cai-2026",
+        "h2b-dong-2026",
+        "h2b-delbiondo-2026",
+        "h2b-xu-2026"
       ],
       "gates": [
         "H2",
@@ -2709,13 +2893,22 @@
       ],
       "empiricalValidation": "none",
       "applicabilityMatrixStatus": "H1-explicit-all-contexts",
-      "evidenceDisposition": "unreviewed-for-current-cross-context-use",
-      "limitation": "A provisional deployment decision is not a universal equation ranking or individual model selector.",
+      "evidenceDisposition": "provisional-deployment-decision-retained",
+      "limitation": "Retain ADR-0005 as a deployment judgment, not a claim that Mifflin is always more accurate. No production change.",
       "contextsMeaning": "Salient origin or named discussion contexts only; complete cross-context coverage is in applicability.json.",
       "semanticLevel": "decision",
-      "temporalScope": "Source-specific window required; current use not established by inventory",
-      "measurementScope": "Source-specific protocol required; unrecorded method, device, treatment and preparation remain unknown",
-      "noPopulationPerformanceInference": false
+      "temporalScope": "H2-B source inspection dated 2026-11-09; next operational review 2027-02-07 or earlier consequential reuse.",
+      "measurementScope": "Source-specific methods and exact-variant qualifiers in H2-B sources and equation crosswalk; uninspected details remain unknown.",
+      "noPopulationPerformanceInference": false,
+      "evidenceReviews": [
+        {
+          "reviewId": "H2-B",
+          "path": "research/robustness/h2b/review.json",
+          "reviewedAt": "2026-11-09",
+          "nextReviewBy": "2027-02-07",
+          "scope": "Bounded source-specific equation/provenance and transfer review, not review of every patient, severity, treatment or intersection in these contexts."
+        }
+      ]
     },
     {
       "id": "C19",
@@ -2732,7 +2925,8 @@
       "sources": [
         "g3",
         "g3-data",
-        "g3-protocol"
+        "g3-protocol",
+        "h2b-brandl-2026"
       ],
       "gates": [
         "H2",
@@ -2740,14 +2934,23 @@
       ],
       "empiricalValidation": "single-source-external-retrospective",
       "applicabilityMatrixStatus": "H1-explicit-all-contexts",
-      "evidenceDisposition": "unreviewed-for-current-cross-context-use",
-      "limitation": "All metric values and intervals remain in the frozen aggregate JSON; no new pooling, recalibration or individual accuracy claim.",
+      "evidenceDisposition": "frozen-single-cohort-result-preserved",
+      "limitation": "Single-source external retrospective fixed-equation comparison. Brandl publication is provenance, not independent replication; bootstrap precision does not establish transportability.",
       "contextsMeaning": "Salient origin or named discussion contexts only; complete cross-context coverage is in applicability.json.",
       "semanticLevel": "observation-report",
-      "temporalScope": "Frozen study-specific window",
-      "measurementScope": "Source-specific protocol required; unrecorded method, device, treatment and preparation remain unknown",
+      "temporalScope": "H2-B source inspection dated 2026-11-09; next operational review 2027-02-07 or earlier consequential reuse.",
+      "measurementScope": "Source-specific methods and exact-variant qualifiers in H2-B sources and equation crosswalk; uninspected details remain unknown.",
       "parentClaim": "C01",
-      "noPopulationPerformanceInference": false
+      "noPopulationPerformanceInference": false,
+      "evidenceReviews": [
+        {
+          "reviewId": "H2-B",
+          "path": "research/robustness/h2b/review.json",
+          "reviewedAt": "2026-11-09",
+          "nextReviewBy": "2027-02-07",
+          "scope": "Bounded source-specific equation/provenance and transfer review, not review of every patient, severity, treatment or intersection in these contexts."
+        }
+      ]
     },
     {
       "id": "C20",
@@ -2763,7 +2966,9 @@
       "sources": [
         "g3",
         "g3-data",
-        "g3-protocol"
+        "g3-protocol",
+        "mifflin-1990",
+        "h2b-brandl-2026"
       ],
       "gates": [
         "H2",
@@ -2771,14 +2976,23 @@
       ],
       "empiricalValidation": "single-source-external-retrospective",
       "applicabilityMatrixStatus": "H1-explicit-all-contexts",
-      "evidenceDisposition": "unreviewed-for-current-cross-context-use",
-      "limitation": "Subgroup precision and confounding differ; these are not paired equation rankings for each subgroup.",
+      "evidenceDisposition": "frozen-descriptive-subgroups-no-paired-ranking",
+      "limitation": "Do not rank both equations within G3 subgroups from this table, choose an individualized equation, or treat age filtering as the new primary analysis.",
       "contextsMeaning": "Salient origin or named discussion contexts only; complete cross-context coverage is in applicability.json.",
       "semanticLevel": "observation-report",
-      "temporalScope": "Frozen study-specific window",
-      "measurementScope": "Source-specific protocol required; unrecorded method, device, treatment and preparation remain unknown",
+      "temporalScope": "H2-B source inspection dated 2026-11-09; next operational review 2027-02-07 or earlier consequential reuse.",
+      "measurementScope": "Source-specific methods and exact-variant qualifiers in H2-B sources and equation crosswalk; uninspected details remain unknown.",
       "parentClaim": "C19",
-      "noPopulationPerformanceInference": false
+      "noPopulationPerformanceInference": false,
+      "evidenceReviews": [
+        {
+          "reviewId": "H2-B",
+          "path": "research/robustness/h2b/review.json",
+          "reviewedAt": "2026-11-09",
+          "nextReviewBy": "2027-02-07",
+          "scope": "Bounded source-specific equation/provenance and transfer review, not review of every patient, severity, treatment or intersection in these contexts."
+        }
+      ]
     },
     {
       "id": "C21",
@@ -2892,13 +3106,22 @@
       ],
       "empiricalValidation": "author-reported-not-reanalyzed-by-Metron",
       "applicabilityMatrixStatus": "H1-explicit-all-contexts",
-      "evidenceDisposition": "unreviewed-for-current-cross-context-use",
-      "limitation": "Study-specific population, preparation and methods; candidate dataset remains unadmitted for new analysis.",
+      "evidenceDisposition": "athlete-comparison-qualified-by-formula-and-method",
+      "limitation": "Transfer only the exact source result and measurement context; no reanalysis of Metron rounded form or independent validation of newly fitted ten Haaf equations.",
       "contextsMeaning": "Salient origin or named discussion contexts only; complete cross-context coverage is in applicability.json.",
       "semanticLevel": "observation-report",
-      "temporalScope": "Source-specific window required; current use not established by inventory",
-      "measurementScope": "Source-specific protocol required; unrecorded method, device, treatment and preparation remain unknown",
-      "noPopulationPerformanceInference": false
+      "temporalScope": "H2-B source inspection dated 2026-11-09; next operational review 2027-02-07 or earlier consequential reuse.",
+      "measurementScope": "Source-specific methods and exact-variant qualifiers in H2-B sources and equation crosswalk; uninspected details remain unknown.",
+      "noPopulationPerformanceInference": false,
+      "evidenceReviews": [
+        {
+          "reviewId": "H2-B",
+          "path": "research/robustness/h2b/review.json",
+          "reviewedAt": "2026-11-09",
+          "nextReviewBy": "2027-02-07",
+          "scope": "Bounded source-specific equation/provenance and transfer review, not review of every patient, severity, treatment or intersection in these contexts."
+        }
+      ]
     },
     {
       "id": "C25",
@@ -2920,13 +3143,22 @@
       ],
       "empiricalValidation": "author-reported-not-reanalyzed-by-Metron",
       "applicabilityMatrixStatus": "H1-explicit-all-contexts",
-      "evidenceDisposition": "unreviewed-for-current-cross-context-use",
-      "limitation": "No inference that nationality or body size alone explains performance differences.",
+      "evidenceDisposition": "abstract-result-with-unresolved-denominator",
+      "limitation": "Attribute figures to their inspected portion. Do not pick a reconciled US denominator or pool/sample-weight this source. G4 remains a dated abstract-level account.",
       "contextsMeaning": "Salient origin or named discussion contexts only; complete cross-context coverage is in applicability.json.",
       "semanticLevel": "observation-report",
-      "temporalScope": "Source-specific window required; current use not established by inventory",
-      "measurementScope": "Source-specific protocol required; unrecorded method, device, treatment and preparation remain unknown",
-      "noPopulationPerformanceInference": false
+      "temporalScope": "H2-B source inspection dated 2026-11-09; next operational review 2027-02-07 or earlier consequential reuse.",
+      "measurementScope": "Source-specific methods and exact-variant qualifiers in H2-B sources and equation crosswalk; uninspected details remain unknown.",
+      "noPopulationPerformanceInference": false,
+      "evidenceReviews": [
+        {
+          "reviewId": "H2-B",
+          "path": "research/robustness/h2b/review.json",
+          "reviewedAt": "2026-11-09",
+          "nextReviewBy": "2027-02-07",
+          "scope": "Bounded source-specific equation/provenance and transfer review, not review of every patient, severity, treatment or intersection in these contexts."
+        }
+      ]
     },
     {
       "id": "C26",
@@ -2949,13 +3181,22 @@
       ],
       "empiricalValidation": "author-reported-not-reanalyzed-by-Metron",
       "applicabilityMatrixStatus": "H1-explicit-all-contexts",
-      "evidenceDisposition": "unreviewed-for-current-cross-context-use",
-      "limitation": "Inspected scope is limited; do not present an abstract as a complete methods or rights review.",
+      "evidenceDisposition": "small-athlete-abstract-level-support",
+      "limitation": "Small-sample, abstract-level evidence only. Leave-one-out validation of new equations is not external replication.",
       "contextsMeaning": "Salient origin or named discussion contexts only; complete cross-context coverage is in applicability.json.",
       "semanticLevel": "observation-report",
-      "temporalScope": "Source-specific window required; current use not established by inventory",
-      "measurementScope": "Source-specific protocol required; unrecorded method, device, treatment and preparation remain unknown",
-      "noPopulationPerformanceInference": false
+      "temporalScope": "H2-B source inspection dated 2026-11-09; next operational review 2027-02-07 or earlier consequential reuse.",
+      "measurementScope": "Source-specific methods and exact-variant qualifiers in H2-B sources and equation crosswalk; uninspected details remain unknown.",
+      "noPopulationPerformanceInference": false,
+      "evidenceReviews": [
+        {
+          "reviewId": "H2-B",
+          "path": "research/robustness/h2b/review.json",
+          "reviewedAt": "2026-11-09",
+          "nextReviewBy": "2027-02-07",
+          "scope": "Bounded source-specific equation/provenance and transfer review, not review of every patient, severity, treatment or intersection in these contexts."
+        }
+      ]
     },
     {
       "id": "C27",
@@ -2978,13 +3219,22 @@
       ],
       "empiricalValidation": "author-reported-not-reanalyzed-by-Metron",
       "applicabilityMatrixStatus": "H1-explicit-all-contexts",
-      "evidenceDisposition": "unreviewed-for-current-cross-context-use",
-      "limitation": "Mifflin was not compared; source equation labeling and fixed respiratory-quotient measurement limitations remain explicit.",
+      "evidenceDisposition": "counterevidence-with-device-and-label-qualification",
+      "limitation": "No Mifflin comparison was performed. Neither source label nor BIA-generated RMR is an independently measured comparator.",
       "contextsMeaning": "Salient origin or named discussion contexts only; complete cross-context coverage is in applicability.json.",
       "semanticLevel": "observation-report",
-      "temporalScope": "Source-specific window required; current use not established by inventory",
-      "measurementScope": "Source-specific protocol required; unrecorded method, device, treatment and preparation remain unknown",
-      "noPopulationPerformanceInference": false
+      "temporalScope": "H2-B source inspection dated 2026-11-09; next operational review 2027-02-07 or earlier consequential reuse.",
+      "measurementScope": "Source-specific methods and exact-variant qualifiers in H2-B sources and equation crosswalk; uninspected details remain unknown.",
+      "noPopulationPerformanceInference": false,
+      "evidenceReviews": [
+        {
+          "reviewId": "H2-B",
+          "path": "research/robustness/h2b/review.json",
+          "reviewedAt": "2026-11-09",
+          "nextReviewBy": "2027-02-07",
+          "scope": "Bounded source-specific equation/provenance and transfer review, not review of every patient, severity, treatment or intersection in these contexts."
+        }
+      ]
     },
     {
       "id": "C28",

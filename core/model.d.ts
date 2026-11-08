@@ -23,9 +23,9 @@ export interface EnergyOutput {
 export interface RecoveryOutput { modelVersion: string; classification: { daily: string; weekly: string }; status: string;
   recommendation: { minSets: number; maxSets: number; unit: string; restRecommended: boolean }; notes: string[]; disclaimer: string }
 export declare const MODEL_VERSION: string;
-export declare const DEFAULTS: Readonly<{profile: Profile;activity: Activity;recovery: Recovery}>;
+export declare const DEFAULTS: Readonly<{profile: Readonly<Profile>;activity: Readonly<Activity>;recovery: Readonly<Recovery>}>;
 export declare function normalizeInput(input?: Input): {profile:Profile;activity:Activity;recovery:Recovery};
-export declare function mifflinStJeor(profile: Profile): number;
+export declare function mifflinStJeor(profile: Pick<Profile,'weightKg'|'heightCm'|'ageYears'|'equationSex'>): number;
 export declare function fatFreeMassKg(profile: Pick<Profile,'weightKg'|'bodyFatPercent'>): number | null;
 export declare function cunninghamRmr(ffmKg: number): number;
 export declare function estimateEnergy(input?: Input): EnergyOutput;

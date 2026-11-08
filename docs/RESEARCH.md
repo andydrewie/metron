@@ -4,7 +4,7 @@
 
 ## Current cross-project execution program
 
-[METRON-ROBUST-001](../research/robustness/README.md) establishes H0–H8 for reusable evidence, clinical applicability, measurement, validation, uncertainty, software and reconstruction. The [machine plan](../research/robustness/plan.json) owns execution order; the question IDs below are topics, not gates. [H1 mapping is complete](../research/robustness/H1_INVENTORY.md); [H2-A readiness/action evidence review](../research/robustness/h2a/README.md) is complete at its bounded scope; H2-B resting-equation and H2-C measurement/source reviews are also complete at their bounded scopes; H2-D combined energy and uncertainty is next. The athlete candidate belongs to H4 after applicable H1–H3 work. The corpus is independently valuable even without a feature change.
+**Current robustness program:** [checkpoint](../research/robustness/CHECKPOINT.md) · [canonical gate/weakness state](../research/robustness/plan.json) · [tracker #22](https://github.com/andydrewie/metron/issues/22). H0–H5 are complete at declared scope; H7 is under verification. H6 human evidence and H8 fresh-agent recovery remain blocked. Research reuse through 7 November 2027 is independently valuable; clinical applicability remains unreviewed.
 
 ## Research questions
 

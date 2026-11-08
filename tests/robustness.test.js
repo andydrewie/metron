@@ -6,7 +6,7 @@ import {auditProgram} from '../research/robustness/audit.mjs';
 const root=fileURLToPath(new URL('../',import.meta.url));
 const read=p=>JSON.parse(readFileSync(root+p,'utf8'));
 function fixture(){return [read('research/robustness/plan.json'),read('research/robustness/corpus.json')];}
-const options={asOf:'2026-11-09',pathExists:p=>existsSync(root+p),h1:{inventory:read('research/robustness/inventory.json'),matrix:read('research/robustness/applicability.json'),semantics:read('research/robustness/semantics.json'),inputSchema:read('schemas/input.schema.json'),outputSchema:read('schemas/output.schema.json')},h2a:{review:read('research/robustness/h2a/review.json'),registry:read('research/robustness/h2a/sources.json'),searchLog:read('research/robustness/h2a/search-log.json'),queue:read('research/robustness/h2-review-queue.json')},h2c:{review:read('research/robustness/h2c/review.json'),registry:read('research/robustness/h2c/sources.json'),searchLog:read('research/robustness/h2c/search-log.json'),queue:read('research/robustness/h2-review-queue.json'),crosswalk:read('research/robustness/h2c/measurement-crosswalk.json')},h2b:{review:read('research/robustness/h2b/review.json'),registry:read('research/robustness/h2b/sources.json'),searchLog:read('research/robustness/h2b/search-log.json'),queue:read('research/robustness/h2-review-queue.json'),crosswalk:read('research/robustness/h2b/equation-crosswalk.json')}};
+const options={asOf:'2026-11-09',pathExists:p=>existsSync(root+p),h1:{inventory:read('research/robustness/inventory.json'),matrix:read('research/robustness/applicability.json'),semantics:read('research/robustness/semantics.json'),inputSchema:read('schemas/input.schema.json'),outputSchema:read('schemas/output.schema.json')},h2a:{review:read('research/robustness/h2a/review.json'),registry:read('research/robustness/h2a/sources.json'),searchLog:read('research/robustness/h2a/search-log.json'),queue:read('research/robustness/h2-review-queue.json')},h2d:{review:read('research/robustness/h2d/review.json'),registry:read('research/robustness/h2d/sources.json'),searchLog:read('research/robustness/h2d/search-log.json'),queue:read('research/robustness/h2-review-queue.json')},h2e:{review:read('research/robustness/h2e/review.json'),registry:read('research/robustness/h2e/sources.json'),searchLog:read('research/robustness/h2e/search-log.json'),queue:read('research/robustness/h2-review-queue.json')},h2c:{review:read('research/robustness/h2c/review.json'),registry:read('research/robustness/h2c/sources.json'),searchLog:read('research/robustness/h2c/search-log.json'),queue:read('research/robustness/h2-review-queue.json'),crosswalk:read('research/robustness/h2c/measurement-crosswalk.json')},h2b:{review:read('research/robustness/h2b/review.json'),registry:read('research/robustness/h2b/sources.json'),searchLog:read('research/robustness/h2b/search-log.json'),queue:read('research/robustness/h2-review-queue.json'),crosswalk:read('research/robustness/h2b/equation-crosswalk.json')}};
 
 test('durable corpus resolves locally while exposing unreviewed sources and open weaknesses',()=>{
  const [p,c]=fixture(), r=auditProgram(p,c,options);
@@ -18,7 +18,7 @@ test('durable corpus resolves locally while exposing unreviewed sources and open
 });
 test('missing references, unsafe paths and false gate closure fail',()=>{
  const [p,c]=fixture();c.claims[0].sources.push('invented-source');c.sources[0].path='../outside';
- const gate=p.gates.find(g=>g.id==='H4');gate.state='complete';
+ const gate=p.gates.find(g=>g.id==='H4');gate.state='complete';gate.closure=null;p.gates.find(g=>g.id==='H3').state='in-progress';
  const r=auditProgram(p,c,options);
  assert.equal(r.valid,false);
  assert.ok(r.errors.some(e=>e.includes('invented-source')));
@@ -33,7 +33,7 @@ test('dependency cycles and unsupported completeness cannot pass',()=>{
  assert.ok(r.errors.some(e=>e.includes('unreviewed contexts')));
 });
 test('whole uncertainty gate cannot close while a required evaluation track remains open',()=>{
- const [p,c]=fixture();const gate=p.gates.find(g=>g.id==='H6');gate.state='complete';
+ const [p,c]=fixture();const gate=p.gates.find(g=>g.id==='H6');gate.state='complete';p.gates.find(g=>g.id==='H4').state='in-progress';p.gates.find(g=>g.id==='H5').state='in-progress';
  const r=auditProgram(p,c,options);
  assert.ok(r.errors.some(e=>e.includes('energy prerequisite H4')));
  assert.ok(r.errors.some(e=>e.includes('readiness prerequisite H5')));

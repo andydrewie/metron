@@ -4,7 +4,7 @@ This folder exists to make **falsifiable research a first-class contributor surf
 
 **Measured resting-equation results are published:** [G3](./ree-validation/G3_RESULTS.md) evaluated 454 adults; [G4](./ree-validation/G4_DECISION.md) records the separate model decision. This is limited resting-energy evidence. Combined TDEE, individual predictions and readiness remain unvalidated; no collected wearable research dataset is published here.
 
-**Current program:** [durable evidence and robustness](./robustness/README.md) · [gate/weakness state](./robustness/plan.json) · [claim corpus](./robustness/corpus.json) · [tracker #22](https://github.com/andydrewie/metron/issues/22). H0 and [H1](./robustness/H1_INVENTORY.md) are complete for their scoped inventories. [H2-A readiness review](./robustness/h2a/README.md) is complete at its bounded scope; H2-B resting-equation evidence is also complete at its bounded scope; H2-C measurement and source semantics is next. Full clinical applicability remains unreviewed. Evidence currency and measurement work precede the next cohort analysis. Research reuse through at least 7 November 2027 is an explicit objective.
+**Current robustness program:** [checkpoint](./robustness/CHECKPOINT.md) · [canonical gate/weakness state](./robustness/plan.json) · [tracker #22](https://github.com/andydrewie/metron/issues/22). H0–H5 are complete at declared scope; H7 is under verification. H6 human evidence and H8 fresh-agent recovery remain blocked. Research reuse through 7 November 2027 is independently valuable; clinical applicability remains unreviewed.
 
 ## Open investigation: Energy accounting
 
@@ -24,7 +24,7 @@ This research diagnostic is **not** integrated into the consumer calculation. It
 
 **No-device path:** [Coefficient sensitivity audit](./assumption-sensitivity/README.md) uses fabricated profiles to quantify how the *mathematical model* responds to changed parameters; it does not measure physiological accuracy.
 
-**Measured resting-metabolism validation program:** [G0 verified source and G1 frozen protocol](./ree-validation/G1_FROZEN_PROTOCOL.md) · [G2 deterministic benchmark](./ree-validation/G2_BENCHMARK.md) · [Research dashboard](https://github.com/andydrewie/metron/issues/9). G0–G4 are complete, including actual measured-cohort errors. The frozen results and source pins remain unchanged. The next cohort is deferred to H4 of the current program after applicable scope, evidence and measurement gates. Separate from the proposed wearable-performance project below.
+**Measured resting-metabolism validation program:** [G0 verified source and G1 frozen protocol](./ree-validation/G1_FROZEN_PROTOCOL.md) · [G2 deterministic benchmark](./ree-validation/G2_BENCHMARK.md) · [Research dashboard](https://github.com/andydrewie/metron/issues/9). G0–G4 are complete, including actual measured-cohort errors. The frozen results and source pins remain unchanged. A second cohort has been evaluated under H4 of the robustness program; use its current checkpoint for status. Separate from the proposed wearable-performance project below.
 
 ## Proposed wearable-performance experiment
 

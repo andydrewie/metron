@@ -1,0 +1,93 @@
+{
+  "schemaVersion": "1.0.0",
+  "studyId": "RMR-EXT-002",
+  "asOf": "2026-11-09",
+  "state": "admitted-for-fixed-resting-equation-comparison",
+  "datasetId": "ten-haaf-2014-s001",
+  "authors": "Twan ten Haaf and Peter J. M. Weijs",
+  "article": "https://doi.org/10.1371/journal.pone.0108460",
+  "dataset": "https://doi.org/10.1371/journal.pone.0108460.s001",
+  "downloadUrl": "https://journals.plos.org/plosone/article/file?id=10.1371/journal.pone.0108460.s001&type=supplementary",
+  "sha256": "c592369ac706c26e881b79aa2152df94d5117dad08a319d90eee56d00ab02262",
+  "bytes": 9159,
+  "rights": {
+    "status": "public-publisher-supporting-data-CC-BY-with-attribution",
+    "basis": [
+      "Article copyright and unrestricted supporting-data statement",
+      "PLOS all-content licensing policy"
+    ],
+    "policy": "https://plos.org/open-science-policies/",
+    "inspectedAt": "2026-11-09",
+    "scope": "Local reproducible analysis; publish original aggregate results and metadata only. Do not relicense third-party data as MIT."
+  },
+  "codebook": {
+    "parser": "1.3.1",
+    "rows": 90,
+    "columns": {
+      "Gender": "Female = 0, Male = 1",
+      "Age": null,
+      "Training_Volume": "Hours/week",
+      "Training_Frequency": "Times/week",
+      "Weight": "weight (kg)",
+      "FM_Perc": "Fat Mass (%)",
+      "FM_kg": "Fat Mass (kg)",
+      "FFM_kg": "Fat Free Mass (kg)",
+      "Height": "Heigth (m)",
+      "BMI": "Body Mass Index (kg/m2)",
+      "FFM_Perc": "Fat Free Mass (%)",
+      "Measured_REE_kJ": "Resting Energy Expenditure (MJ/day) measured by indirect calorimetry"
+    },
+    "valueLabels": {
+      "Gender": {
+        "0.0": "Female",
+        "1.0": "Male"
+      }
+    },
+    "missing": {},
+    "types": {
+      "Gender": "F8.0",
+      "Age": "F8.0",
+      "Training_Volume": "F8.1",
+      "Training_Frequency": "F8.0",
+      "Weight": "F8.3",
+      "FM_Perc": "F8.3",
+      "FM_kg": "F8.3",
+      "FFM_kg": "F8.3",
+      "Height": "F8.2",
+      "BMI": "F8.2",
+      "FFM_Perc": "F8.2",
+      "Measured_REE_kJ": "F8.2"
+    }
+  },
+  "unitAudit": {
+    "referenceCount": 90,
+    "referenceMin": 4648.424,
+    "referenceMax": 10673.384,
+    "referenceMean": 7686.333422222223,
+    "publishedMeanMJ": 7.68,
+    "referenceName": "Measured_REE_kJ",
+    "referenceLabel": "Resting Energy Expenditure (MJ/day) measured by indirect calorimetry"
+  },
+  "unitDecision": "Raw reference is kJ/day despite MJ/day label; divide by 4.184. Reference-only mean divided by 1000 matches the published rounded 7.68 MJ/day within 0.01 MJ/day. Inference disclosed before prediction.",
+  "sexMapping": "File Gender labels 0=Female, 1=Male map to the historical equation parameter only; do not infer identity or clinical applicability.",
+  "measurement": {
+    "reference": "Vmax Encore n29 ventilated-hood calorimetry",
+    "calibration": "Daily two standard gases and volume; automatic recalibration every five minutes",
+    "preparation": "No vigorous exercise for 12 hours; no food/beverages except water for four hours; at least 30 minutes laboratory rest",
+    "selection": "30-minute recording; first five minutes discarded; steady-state CV <10%; authors excluded nine ovulation-phase and four RER-out-of-range participants",
+    "bodyComposition": "BODPOD; thoracic gas volume estimated in 31 participants; individual estimate flag not supplied",
+    "height": "Stadiometer; dataset stores metres"
+  },
+  "independence": {
+    "cohort": "Different from the prior 2023 body-composition cohort and the original Mifflin/Cunningham development populations.",
+    "equations": "Fixed published equations; no fit on this evaluation cohort. Ten Haaf new equations are in-sample developments and excluded.",
+    "knownOutcomes": "Published conclusion favoring Cunningham and poor Mifflin ±10% accuracy was already read during H2-B. Not an unseen confirmatory trial.",
+    "reviewer": "Same maintaining agent; independent implementation is not independent personnel."
+  },
+  "limits": [
+    "Selected Dutch recreational athletes aged 18–35; no clinical population coverage.",
+    "Four-hour fast differs from stricter overnight basal protocols.",
+    "Within-person identifiers across older unrelated publications cannot be exhaustively verified.",
+    "No TDEE, repeated personal calibration, injury, diet or training outcome."
+  ]
+}

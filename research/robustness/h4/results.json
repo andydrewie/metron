@@ -1,0 +1,197 @@
+{
+  "schemaVersion": "1.0.0",
+  "studyId": "RMR-EXT-002",
+  "asOf": "2026-11-09",
+  "protocolFreezeCommit": "d5250bec8bfa29157c7e6eb0dd0a0a271750b561",
+  "protocolSha256": "e0c522d5fb4e1ba02c1140c8afdaac4599079677ec1df3deffe983f86abfccdc",
+  "sourceSha256": "c592369ac706c26e881b79aa2152df94d5117dad08a319d90eee56d00ab02262",
+  "analysisStatus": "complete",
+  "admittedN": 90,
+  "analyzedN": 89,
+  "excludedN": 1,
+  "exclusionReason": "bodyFatPercent below pre-existing production bound",
+  "allRecordEquationOnly": {
+    "n": 90,
+    "mifflin": {
+      "mae": 212.20044444444446,
+      "bias": -202.13,
+      "rmse": 251.55159033928254,
+      "within10": 0.43333333333333335,
+      "errorSD": 150.5775366060193,
+      "descriptiveAgreementLimits": [
+        -497.2619717477978,
+        93.00197174779782
+      ]
+    },
+    "suppliedFfmCunningham": {
+      "mae": 111.3498,
+      "bias": -30.042866666666647,
+      "rmse": 147.04126656494162,
+      "within10": 0.8222222222222222,
+      "errorSD": 144.74582220950495,
+      "descriptiveAgreementLimits": [
+        -313.74467819729637,
+        253.65894486396306
+      ]
+    }
+  },
+  "groups": {
+    "all": {
+      "n": 89,
+      "deltaMae": -104.53997887213481,
+      "deltaMaeCI": [
+        -127.53990647713475,
+        -80.13398356405055
+      ],
+      "deltaWithin10": 0.4044943820224719,
+      "deltaWithin10CI": [
+        0.2808988764044944,
+        0.5280898876404494
+      ],
+      "mifflin": {
+        "mae": 213.85483146067418,
+        "bias": -203.6712359550562,
+        "rmse": 252.86711953429815,
+        "within10": 0.42696629213483145,
+        "errorSD": 150.71507182293158,
+        "descriptiveAgreementLimits": [
+          -499.0727767280021,
+          91.7303048178897
+        ]
+      },
+      "cunningham": {
+        "mae": 109.31485258853937,
+        "bias": -33.6660417350562,
+        "rmse": 144.57790016145617,
+        "within10": 0.8314606741573034,
+        "errorSD": 141.4002077261582,
+        "descriptiveAgreementLimits": [
+          -310.8104488783262,
+          243.47836540821385
+        ]
+      },
+      "suppliedFfmCunningham": {
+        "mae": 109.3140449438202,
+        "bias": -33.6673033707865,
+        "rmse": 144.57714769413175,
+        "within10": 0.8314606741573034,
+        "errorSD": 141.39912580098195,
+        "descriptiveAgreementLimits": [
+          -310.80958994071113,
+          243.47498319913814
+        ]
+      }
+    },
+    "female": {
+      "n": 37,
+      "deltaMae": -83.55606605729733,
+      "deltaMaeCI": [
+        -116.74219355433789,
+        -48.02254760577036
+      ],
+      "deltaWithin10": 0.35135135135135137,
+      "deltaWithin10CI": [
+        0.13513513513513514,
+        0.5405405405405406
+      ],
+      "mifflin": {
+        "mae": 191.12702702702705,
+        "bias": -174.0167567567568,
+        "rmse": 220.10491309275122,
+        "within10": 0.43243243243243246,
+        "errorSD": 136.6342056988914,
+        "descriptiveAgreementLimits": [
+          -441.819799926584,
+          93.78628641307037
+        ]
+      },
+      "cunningham": {
+        "mae": 107.57096096972971,
+        "bias": -17.408435591351385,
+        "rmse": 137.76924193217278,
+        "within10": 0.7837837837837838,
+        "errorSD": 138.55007964777883,
+        "descriptiveAgreementLimits": [
+          -288.9665917009979,
+          254.14972051829514
+        ]
+      },
+      "suppliedFfmCunningham": {
+        "mae": 107.56902702702703,
+        "bias": -17.405891891891873,
+        "rmse": 137.76467470056085,
+        "within10": 0.7837837837837838,
+        "errorSD": 138.54574047580093,
+        "descriptiveAgreementLimits": [
+          -288.9555432244617,
+          254.1437594406779
+        ]
+      }
+    },
+    "male": {
+      "n": 52,
+      "deltaMae": -119.47083991346148,
+      "deltaMaeCI": [
+        -149.86602524853842,
+        -86.73050671974033
+      ],
+      "deltaWithin10": 0.4423076923076923,
+      "deltaWithin10CI": [
+        0.28846153846153844,
+        0.5961538461538461
+      ],
+      "mifflin": {
+        "mae": 230.02653846153848,
+        "bias": -224.77153846153846,
+        "rmse": 273.8019371244055,
+        "within10": 0.4230769230769231,
+        "errorSD": 157.87518811110294,
+        "descriptiveAgreementLimits": [
+          -534.2069071593003,
+          84.6638302362233
+        ]
+      },
+      "cunningham": {
+        "mae": 110.55569854807699,
+        "bias": -45.23395379884617,
+        "rmse": 149.23348970067894,
+        "within10": 0.8653846153846154,
+        "errorSD": 143.60042884188644,
+        "descriptiveAgreementLimits": [
+          -326.6907943289436,
+          236.2228867312512
+        ]
+      },
+      "suppliedFfmCunningham": {
+        "mae": 110.5556923076923,
+        "bias": -45.23792307692307,
+        "rmse": 149.2352420560856,
+        "within10": 0.8653846153846154,
+        "errorSD": 143.60101076544242,
+        "descriptiveAgreementLimits": [
+          -326.6959041771902,
+          236.22005802334408
+        ]
+      }
+    }
+  },
+  "sourceFfmVsDerivedFfmMaxKg": 0.004582800000021466,
+  "independentImplementation": {
+    "python": "3.12.14",
+    "pyreadstat": "1.3.1",
+    "node": "v24.22.1",
+    "maximumPredictionDifferenceKcal": 4.547473508864641e-13,
+    "maximumAggregateDifference": 1.2789769243681803e-13,
+    "separatePersonnel": false
+  },
+  "frozenMarginCriterionMet": true,
+  "decision": "retain-general-default-and-inspectable-alternative",
+  "limits": [
+    "No transportable personal interval",
+    "No combined TDEE validation",
+    "No causal outcome or clinical applicability",
+    "Known published outcomes; selected cohort; same analyst wrote both implementations.",
+    "Bootstrap covers sampling variation, not method error or transportability.",
+    "Agreement limits are descriptive in this cohort, not a validated personal interval."
+  ]
+}

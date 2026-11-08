@@ -58,3 +58,11 @@ The schema reflects the current `evaluate` I/O, not a wearable-observation inter
 ## Proposed extensions (not importable)
 
 `normalizeObservations`, `estimateAllowance`, `compareScenarios`, `explainEstimate`, future vendor parsers and MCP are described in [future architecture](./FUTURE_ARCHITECTURE.md). Do not call them from integrations until tests and schema definitions ship.
+
+## Interface boundary changes in 0.2.0-alpha.4
+
+Plain data objects only; accessor and prototype-bearing class instances are rejected. Nested defaults are immutable. Direct `mifflinStJeor` requires weightKg, heightCm, ageYears and the historical male/female equation parameter within the input-schema ranges. `fatFreeMassKg` validates weight and optional/null BF; `cunninghamRmr` requires finite FFM greater than zero and at most 350 kg. These are computational bounds, not clinical eligibility.
+
+CLI arguments are exact and errors use fixed messages without echoing inputs or file paths. Input is limited to 1 MiB. The browser disables stale results/exports on invalid entry and leaves optional BF blank. Its exported wrapper adds `inputOrigins` (example-default, user-entered, fallback-default, unknown); this is not a measurement/provenance adapter or a new core input field.
+
+Legacy `recommendation`, `restRecommended` and status names remain for compatibility and numerical-model identity. Treat them as illustrative rule outputs, never training clearance or safe/optimal dose. See ADR-0007 and H5. Numerical model version 0.1.0 is unchanged; the package version records validation and presentation changes.

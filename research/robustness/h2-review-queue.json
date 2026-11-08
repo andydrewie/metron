@@ -2,7 +2,7 @@
   "schemaVersion": "1.0.0",
   "documentType": "metron.H2-review-queue",
   "asOf": "2026-11-09",
-  "status": "in-progress",
+  "status": "complete-for-declared-claim-families",
   "priorityRationale": "Potential consequence of existing action interpretation first, then equation applicability and measurement dependencies; not empirical effect-size ranking. All claim families are assigned. Research value is independently sufficient.",
   "reviewRecordRequired": [
     "search date, database, exact query, language/date limits and cutoff",
@@ -124,7 +124,7 @@
     {
       "id": "H2-D",
       "title": "Combined energy and uncertainty",
-      "state": "not-started",
+      "state": "complete",
       "claimIds": [
         "C03",
         "C10",
@@ -139,12 +139,23 @@
         "H3",
         "H6"
       ],
-      "completion": "Claim-level evidence dispositions, reproducible searches, source records, contradictions, explicit unreviewed limits and next-review triggers; no unsupported clinical promotion."
+      "completion": "Claim-level evidence dispositions, reproducible searches, source records, contradictions, explicit unreviewed limits and next-review triggers; no unsupported clinical promotion.",
+      "closure": {
+        "reviewedAt": "2026-11-09",
+        "scope": "Assigned propositions only; targeted review, not systematic or comprehensive clinical evidence.",
+        "acceptanceReview": "Logged queries/cutoff, inspected source portions, rights/update limits, contradictions, dispositions and review triggers recorded.",
+        "evidence": [
+          "research/robustness/h2d/README.md",
+          "research/robustness/h2d/review.json",
+          "research/robustness/h2d/sources.json",
+          "research/robustness/h2d/search-log.json"
+        ]
+      }
     },
     {
       "id": "H2-E",
       "title": "Proposed allowance and calibration",
-      "state": "not-started",
+      "state": "complete",
       "claimIds": [
         "C09",
         "C32"
@@ -155,7 +166,18 @@
       "downstreamGates": [
         "H6"
       ],
-      "completion": "Claim-level evidence dispositions, reproducible searches, source records, contradictions, explicit unreviewed limits and next-review triggers; no unsupported clinical promotion."
+      "completion": "Claim-level evidence dispositions, reproducible searches, source records, contradictions, explicit unreviewed limits and next-review triggers; no unsupported clinical promotion.",
+      "closure": {
+        "reviewedAt": "2026-11-09",
+        "scope": "Assigned propositions only; targeted review, not systematic or comprehensive clinical evidence.",
+        "acceptanceReview": "Logged queries/cutoff, inspected source portions, rights/update limits, contradictions, dispositions and review triggers recorded.",
+        "evidence": [
+          "research/robustness/h2e/README.md",
+          "research/robustness/h2e/review.json",
+          "research/robustness/h2e/sources.json",
+          "research/robustness/h2e/search-log.json"
+        ]
+      }
     }
   ]
 }

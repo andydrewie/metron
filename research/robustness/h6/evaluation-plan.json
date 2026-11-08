@@ -1,0 +1,38 @@
+{
+  "schemaVersion": "1.0.0",
+  "asOf": "2026-11-09",
+  "status": "blocked-pending-new-observations",
+  "implemented": false,
+  "prerequisites": {
+    "energy": "H4 resting result and combined-TDEE no-go",
+    "readiness": "H5 prescription no-go"
+  },
+  "calibration": {
+    "target": "Prospectively observed expenditure over a declared reference window, not daily scale noise.",
+    "baseline": "Frozen uncalibrated Metron estimate and a fixed personal mean trained only in the initial window.",
+    "separation": "Fit only on earlier observations; freeze predictions before every evaluation block; report held-out time blocks and entirely held-out participants separately.",
+    "minimumEvidence": "Lawful repeated reference expenditure, intake measurement/error information, body-mass time series with fluid/context metadata, device/method identity and missingness.",
+    "confounding": "Scale weight alone cannot separate intake bias, fluid/glycogen shifts and expenditure. Do not identify all unknowns from one energy-balance equation.",
+    "intervals": "Report sampling, input sensitivity, reference error, model residual and out-of-sample personal coverage separately. No numeric interval ships before coverage evaluation.",
+    "nonImprovement": "Retain baseline if improvement/coverage criteria frozen before evaluation are unmet; publish negative and subgroup results."
+  },
+  "comprehension": {
+    "status": "not-run",
+    "participants": "Consenting intended users including varied numeracy and assistive-technology use; recruitment not performed.",
+    "tasks": [
+      "Explain estimate versus measurement/intake target",
+      "Explain two equations agreeing versus being accurate",
+      "Interpret a bootstrap cohort interval versus a personal range",
+      "Recognize default/unknown values and invalid-input suppression",
+      "Respond to pain or a fewer-signals label without inferring training clearance"
+    ],
+    "comparators": "Randomized presentation order of old and restricted wording, with blinded scoring where feasible; no instruction to act on health outputs.",
+    "outcomes": "Count harmful interpretations, correct boundary explanations, task completion and decision usefulness; report denominators and uncertainty, including non-improvement.",
+    "successRule": "Any recurring high-consequence misinterpretation blocks the corresponding claim. Predefine sample size, coding rubric and practical improvement margin before recruitment; no post hoc success threshold."
+  },
+  "blockers": [
+    "No appropriate longitudinal calibration/reference dataset admitted.",
+    "No real-user comprehension or decision-usefulness observations collected."
+  ],
+  "automaticGateClosure": false
+}

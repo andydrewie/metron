@@ -2,10 +2,12 @@ import test from 'node:test';
 import assert from 'node:assert/strict';
 import {readFileSync} from 'node:fs';
 import {spawnSync} from 'node:child_process';
-import {
-  G1_COMMIT,parseCsv,numberOrNull,loadLockedProtocol,sha256,
-  evaluateCsv
-} from '../research/ree-validation/benchmark.mjs';
+import {after} from 'node:test';
+import {frozenStudy} from '../research/robustness/h8/frozen-study.mjs';
+const replay=frozenStudy();
+after(()=>replay.cleanup());
+const frozen=await import(replay.moduleUrl);
+const {G1_COMMIT,parseCsv,numberOrNull,loadLockedProtocol,sha256,evaluateCsv}=frozen;
 
 const fixturePath=new URL('../research/ree-validation/fixtures/synthetic-rmr.csv',import.meta.url);
 const fixture=readFileSync(fixturePath,'utf8');
@@ -112,7 +114,7 @@ test('eligibility excludes out-of-domain records without outcome-dependent trimm
 });
 
 test('synthetic CLI is offline, JSON-only; real-data path is blocked without G3 controls',()=>{
-  const cmd=new URL('../research/ree-validation/run.mjs',import.meta.url).pathname;
+  const cmd=replay.command;
   const ok=spawnSync(process.execPath,[cmd,'--synthetic'],{encoding:'utf8'});
   assert.equal(ok.status,0,ok.stderr);
   const d=JSON.parse(ok.stdout);
@@ -133,7 +135,7 @@ test('synthetic CLI is offline, JSON-only; real-data path is blocked without G3 
 });
 
 test('bootstrap preserves fixed site contributions instead of pooling independent records',async()=>{
-  const {bootstrap}=await import('../research/ree-validation/benchmark.mjs');
+  const {bootstrap}=frozen;
   const a={site:'freising',measured:1000,mifflin:900,cunningham:930};
   const b={site:'nuernber',measured:1000,mifflin:1300,cunningham:1150};
   const fixed=bootstrap([a,b],{replicates:300,seed:6,paired:true});

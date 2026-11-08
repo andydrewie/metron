@@ -1,0 +1,41 @@
+{
+  "schemaVersion": "1.0.0",
+  "asOf": "2026-11-09",
+  "sourceCommit": "71301ba1f6946d9eacea2cac9ab6e194007a0be3",
+  "workflowRun": "https://github.com/andydrewie/metron/actions/runs/42520204050",
+  "testJob": 128851832096,
+  "browserJob": 128851832288,
+  "nodeTestsPassed": 129,
+  "pythonPrivacyTestsPassed": 8,
+  "releaseCheck": "passed",
+  "browser": "Chromium 145.0.7632.6 via Playwright 1.58.0",
+  "runner": "Ubuntu 24.04; Python 3.12",
+  "widthsPx": [320, 1280],
+  "checks": [
+    "no horizontal overflow",
+    "keyboard tab-list and cross-panel focus",
+    "body-composition checkbox by Space and visible label",
+    "accessible input names and tab roles",
+    "invalid inputs suppress results and exports across tabs/choices",
+    "body fat unknown until explicitly supplied",
+    "invalid SMM retained for correction rather than silently cleared",
+    "export preserves example-default versus user-entered provenance",
+    "no external network requests or page JavaScript errors in the synthetic sequence",
+    "adjacent interpretation limits and illustrative set-band disclosure"
+  ],
+  "visualInspection": {
+    "reviewer": "Maintaining agent",
+    "files": ["docs/assets/mobile.png", "docs/assets/recovery.png", "docs/assets/body.png", "docs/assets/desktop.png"],
+    "result": "Readable labels and limits, no clipping or horizontal overflow in captured states. Body input labels wrap at 320px without overlapping controls."
+  },
+  "recordedFailures": [
+    {"run": 42519626921, "finding": "Playwright 1.58.0 dependency setup unsupported on Ubuntu 26.04", "resolution": "Pin Ubuntu 24.04; no UI test result claimed for failed setup."},
+    {"run": 42519772676, "finding": "Test targeted visually hidden native checkbox under styled label", "resolution": "Exercise keyboard Space and visible-label click with actual state assertions; do not force clicks."},
+    {"reviewThread": "PRRT_kwDOVjWyUM61EDxW", "finding": "H3 completeness promoted partial/disjoint intervals with positive history/access flags", "resolution": "Require observed interval to cover requested window, validate timestamp bounds, and test positive/partial/disjoint/invalid-date cases."}
+  ],
+  "actualScreenReaderSession": false,
+  "humanComprehensionStudy": false,
+  "independentSecurityCertification": false,
+  "physiologicalValidation": false,
+  "limits": "Synthetic hosted Chromium only. Screen-reader names/roles are programmatically inspected, not tested by assistive-technology users. Historical narrow/tablet screenshots are not alpha.4 evidence. H6/H8 retain their evidence blockers."
+}

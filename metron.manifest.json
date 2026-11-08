@@ -9,7 +9,7 @@
     "repositoryPublished": true,
     "pagesTarget": "https://andydrewie.github.io/metron/",
     "pagesVerifiedLive": true,
-    "packageVersion": "0.2.0-alpha.3",
+    "packageVersion": "0.2.0-alpha.4",
     "modelVersion": "0.1.0",
     "maturity": "public-exploratory-alpha"
   },
@@ -83,7 +83,10 @@
     "readinessReviewRecords": "./research/robustness/h2a/review.json",
     "readinessReviewSources": "./research/robustness/h2a/sources.json",
     "readinessReviewSearches": "./research/robustness/h2a/search-log.json",
-    "readinessRuleAudit": "./research/robustness/h2a/rule-audit.json"
+    "readinessRuleAudit": "./research/robustness/h2a/rule-audit.json",
+    "robustnessCheckpoint": "./research/robustness/CHECKPOINT.md",
+    "externalRmrReplication": "./research/robustness/h4/README.md",
+    "coldStartTask": "./research/robustness/h8/COLD_START_TASK.md"
   },
   "implemented": {
     "energyEstimate": true,
@@ -148,7 +151,8 @@
       "decisionGateComplete": true,
       "decision": "retain-default-with-population-and-input-quality-guidance",
       "decisionArtifact": "research/ree-validation/G4_DECISION.md",
-      "independentCohortReplicationCompleted": false
+      "independentCohortReplicationCompleted": true,
+      "replicationArtifact": "research/robustness/h4/README.md"
     }
   },
   "researchPrograms": {
@@ -160,12 +164,15 @@
       "statusAuthority": "research/robustness/plan.json",
       "clinicalCoverage": "explicit-context-map-clinical-evidence-unreviewed",
       "automaticMonitoringEnabled": false,
-      "productionIntegration": false,
+      "productionIntegration": true,
       "boundedEvidenceReviews": [
         "H2-A",
         "H2-B",
-        "H2-C"
-      ]
+        "H2-C",
+        "H2-D",
+        "H2-E"
+      ],
+      "integrationScope": "Interface/privacy/validation restrictions only; no new physiological coefficients or calibrated capabilities."
     }
   }
 }

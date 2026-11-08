@@ -702,6 +702,10 @@
   "followupReviewRecords": [
     "research/robustness/h2a/review.json",
     "research/robustness/h2b/review.json",
-    "research/robustness/h2c/review.json"
+    "research/robustness/h2c/review.json",
+    "research/robustness/h2d/review.json",
+    "research/robustness/h2e/review.json",
+    "research/robustness/h4/results.json",
+    "research/robustness/h7/change-record.json"
   ]
 }

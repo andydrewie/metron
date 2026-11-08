@@ -1,0 +1,28 @@
+{
+  "schemaVersion": "1.0.0",
+  "asOf": "2026-11-09",
+  "commit": "63349daf1c23976b2e0f46864465482299aa8f84",
+  "cleanCheckoutBeforeCommands": true,
+  "node": "v24.22.1",
+  "python": "3.12.14",
+  "nodeTestsPassed": 128,
+  "releaseCheck": "passed",
+  "energyRebuild": {
+    "cases": 6,
+    "maximumDifferenceKcal": 0
+  },
+  "h4AggregateReproduction": "byte-equivalent JSON values including all subgroup results; pinned source used privately",
+  "historicalStudyReplay": "synthetic fixture replay against exact historical core passed in Node suite",
+  "maintenanceDrills": {
+    "staleReviewWarnings": 7,
+    "sourceVersionMismatchRejected": true,
+    "unadjudicatedContradictionRejected": true,
+    "missingSupersessionSuccessorRejected": true
+  },
+  "independentColdStart": false,
+  "sourceRights": "H4 admitted public publisher supporting file; original aggregate outputs only. Historical replay uses repository MIT code and synthetic fixture.",
+  "limits": [
+    "Same maintaining analyst; no independent-person certification.",
+    "Clean checkout is local source/environment reproduction, not a fresh-agent navigation exercise."
+  ]
+}

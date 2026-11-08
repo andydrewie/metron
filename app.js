@@ -4,6 +4,9 @@ const $ = (id) => document.getElementById(id);
 const number = (value) => Math.round(value).toLocaleString('en-US');
 let activeTab = 'tdee';
 let isSample = true;
+let validEstimate = false;
+const invalidFields = new Set();
+const origins = Object.fromEntries(Object.entries(DEFAULTS).map(([group,fields])=>[group,Object.fromEntries(Object.entries(fields).map(([key,value])=>[key,value===null?'unknown':'example-default']))]));
 const choiceLocation = { intensity: 'activity', restingModel: 'activity', equationSex: 'profile', energy: 'recovery', weekly: 'recovery', musculoskeletal: 'recovery', focus: 'recovery' };
 function toggleTab(name, focus=false) {
   activeTab = name;
@@ -21,15 +24,20 @@ for(const button of document.querySelectorAll('[data-tab]')) {
     toggleTab(tabs[next].dataset.tab,true);
   });
 }
+function unavailable(message) {
+  validEstimate=false;
+  $('input-error').hidden=false;$('input-error').textContent=message;
+  $('export-json').disabled=true;
+  for(const el of document.querySelectorAll('[data-estimate]'))el.hidden=true;
+}
 function update() {
+  if(invalidFields.size) {unavailable('Fix the marked fields to update estimates.');return;}
   try {
-    // Prevent impossible combinations after another body field changes.
-    if(state.profile.bodyFatPercent !== null && state.profile.skeletalMuscleKg !== null && state.profile.skeletalMuscleKg > state.profile.weightKg*(1-state.profile.bodyFatPercent/100)) {
-      state.profile.skeletalMuscleKg=null;
-    }
     const {energy,recovery}=evaluate(state);
+    validEstimate=true;$('export-json').disabled=false;
+    for(const el of document.querySelectorAll('[data-estimate]'))el.hidden=false;
     $('input-error').hidden=true;
-    $('sample-caption').hidden=!isSample;
+    $('sample-caption').textContent=isSample?'A sample profile is preloaded. Review each field before interpreting the estimate.':'Some values may still be examples. Check weight, height, age and the equation parameter.';
     $('tdee-number').textContent=number(Math.round(energy.estimatedTdeeKcal/50)*50);
     const c=energy.components,total=energy.estimatedTdeeKcal;
     $('kcal-base').textContent=number(c.baselineKcal);
@@ -42,7 +50,7 @@ function update() {
     $('walk-distance').textContent=`~${energy.derived.incrementalWalkingKm.toFixed(1)} km incremental`;
     $('minutes-label').textContent=`${state.activity.workoutMinutes} min`;
     $('intensity-control').hidden=state.activity.workoutMinutes===0;
-    $('profile-summary').textContent=`${isSample ? "Example" : "Your profile"} · ${state.profile.weightKg} kg · ${state.profile.heightCm} cm · ${state.profile.ageYears} years`;
+    $('profile-summary').textContent=`${isSample ? "Example" : "Entered / example profile"} · ${state.profile.weightKg} kg · ${state.profile.heightCm} cm · ${state.profile.ageYears} years`;
     $('rmr-number').textContent=number(energy.derived.restingKcal);
     $('rmr-model').textContent=state.activity.restingModel==='mifflin'?'Mifflin–St Jeor model':'Cunningham · FFM-based model';
     $('mifflin-compare').textContent=number(energy.derived.mifflinKcal);
@@ -50,15 +58,18 @@ function update() {
     $('sleep-label').textContent=`${state.recovery.sleepHours} h`;
     $('sets-label').textContent=`${state.recovery.usualMuscleSets} sets`;
     $('usual-steps-label').textContent=number(state.recovery.usualSteps);
-    const titles={'recovery-first':'Recovery comes first','full-session':'Ready for your full session','train-adjust':'Train. Adjust the volume.','reduce-volume':'Dial it back today.'};
-    const flags={'recovery-first':'RECOVERY DAY','full-session':'GREEN DAY','train-adjust':'ADAPTIVE DAY','reduce-volume':'LOWER-VOLUME DAY'};
+    const titles={'recovery-first':'Signals need attention','full-session':'Fewer caution signals entered','train-adjust':'Mixed signals entered','reduce-volume':'More caution signals entered'};
+    const flags={'recovery-first':'CAUTION SIGNALS','full-session':'FEWER SIGNALS','train-adjust':'MIXED SIGNALS','reduce-volume':'MORE SIGNALS'};
     $('recovery-title').textContent=titles[recovery.status];
     $('recovery-flag').textContent=flags[recovery.status];
     $('recovery-flag').dataset.status=recovery.status;
-    $('recovery-range').textContent=recovery.recommendation.restRecommended?'REST':`${recovery.recommendation.minSets}–${recovery.recommendation.maxSets}`;
-    $('recovery-unit').textContent=recovery.recommendation.restRecommended?'sleep and easy movement first':'working sets / target muscle';
+    $('recovery-range').textContent=`${recovery.recommendation.minSets}–${recovery.recommendation.maxSets}`;
+    $('recovery-unit').textContent='illustrative sets / target muscle; not a training target';
     $('recovery-note').textContent=recovery.notes.join(' ');
-    $('composition-controls').hidden=state.profile.bodyFatPercent===null;
+    $('composition-controls').hidden=!$('know-bf').checked;
+    $('composition-visual').hidden=state.profile.bodyFatPercent===null;
+    $('bodyfat-label').textContent=state.profile.bodyFatPercent===null?'Not entered':`${state.profile.bodyFatPercent}%`;
+    $('smm-label').textContent=state.profile.skeletalMuscleKg===null?'Not entered':`${state.profile.skeletalMuscleKg} kg`;
     $('cunningham-btn').disabled=state.profile.bodyFatPercent===null;
     if(state.profile.bodyFatPercent!==null) {
       const ffm=energy.derived.fatFreeMassKg;const mus=state.profile.skeletalMuscleKg??0;
@@ -80,12 +91,20 @@ function update() {
         button.classList.toggle('chosen',active);button.setAttribute('aria-pressed',String(active));
       }
     }
-  } catch (err) { $('input-error').hidden=false;$('input-error').textContent=err.message; }
+  } catch (err) { unavailable(err.message); }
 }
 function numeric(id,group,key) {
+  $(id).setAttribute('aria-describedby','input-error');
   $(id).addEventListener('input',()=>{
-    if($(id).value===''||!$(id).validity.valid) { $('input-error').hidden=false;$('input-error').textContent='Enter a valid '+key+'.';return; }
-    state[group][key]=Number($(id).value);if(group==='profile')isSample=false;update();
+    const optional=['bodyfat','smm'].includes(id);
+    if(($(id).value===''&&!optional)||!$(id).validity.valid) {
+      invalidFields.add(id);$(id).setAttribute('aria-invalid','true');update();return;
+    }
+    invalidFields.delete(id);$(id).removeAttribute('aria-invalid');
+    state[group][key]=$(id).value===''?null:Number($(id).value);
+    origins[group][key]=state[group][key]===null?'unknown':'user-entered';
+    if(key==='bodyFatPercent'&&state.profile.bodyFatPercent===null){state.activity.restingModel='mifflin';origins.activity.restingModel='fallback-default';}
+    if(group==='profile')isSample=false;update();
   });
 }
 for(const [id,group,key] of [
@@ -97,25 +116,23 @@ for(const [id,group,key] of [
 for(const segment of document.querySelectorAll('[data-choice]')) {
   segment.addEventListener('click',(event)=>{
     const button=event.target.closest('[data-value]');if(!button||button.disabled)return;
-    const key=segment.dataset.choice;state[choiceLocation[key]][key]=button.dataset.value;if(choiceLocation[key]==='profile')isSample=false;update();
+    const key=segment.dataset.choice;state[choiceLocation[key]][key]=button.dataset.value;origins[choiceLocation[key]][key]='user-entered';if(choiceLocation[key]==='profile')isSample=false;update();
   });
 }
 $('know-bf').addEventListener('change',()=>{
-  isSample=false;
-  if($('know-bf').checked) {
-    state.profile.bodyFatPercent=20;
-    state.profile.skeletalMuscleKg=null;
-    $('bodyfat').value='20';
-  } else {
+  if(!$('know-bf').checked) {
     state.profile.bodyFatPercent=null;state.profile.skeletalMuscleKg=null;
-    state.activity.restingModel='mifflin';
+    origins.profile.bodyFatPercent='unknown';origins.profile.skeletalMuscleKg='unknown';
+    state.activity.restingModel='mifflin';origins.activity.restingModel='fallback-default';
+    for(const id of ['bodyfat','smm']) {$(id).value='';invalidFields.delete(id);$(id).removeAttribute('aria-invalid');}
   }
   update();
 });
-$('edit-body').addEventListener('click',()=>toggleTab('body'));
-$('see-energy').addEventListener('click',()=>toggleTab('tdee'));
+$('edit-body').addEventListener('click',()=>toggleTab('body',true));
+$('see-energy').addEventListener('click',()=>toggleTab('tdee',true));
 $('export-json').addEventListener('click',()=>{
-  const result={input:state,output:evaluate(state)};
+  if(!validEstimate)return;
+  const result={input:state,inputOrigins:origins,output:evaluate(state)};
   const blob=new Blob([JSON.stringify(result,null,2)+'\n'],{type:'application/json'});
   const url=URL.createObjectURL(blob);
   const link=document.createElement('a');link.href=url;link.download='metron-estimate.json';link.click();setTimeout(()=>URL.revokeObjectURL(url),1000);

@@ -1,0 +1,10 @@
+{
+  "schemaVersion": "1.0.0",
+  "freezeCommit": "d5250bec8bfa29157c7e6eb0dd0a0a271750b561",
+  "originalFreezeCommit": "da1669b1cb813fb68ebd843654023f597336d14b",
+  "protocol": "protocol.v1.1.json",
+  "protocolSha256": "e0c522d5fb4e1ba02c1140c8afdaac4599079677ec1df3deffe983f86abfccdc",
+  "admission": "admission.json",
+  "admissionSha256": "ae1821f885b0e31b8421de93717be18ff69b9195afee8e90fb94aff057935ab6",
+  "sourceSha256": "c592369ac706c26e881b79aa2152df94d5117dad08a319d90eee56d00ab02262"
+}

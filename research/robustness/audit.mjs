@@ -6,6 +6,7 @@ import {auditH1} from './h1-audit.mjs';
 import {auditH2A} from './h2a/audit.mjs';
 import {auditH2B} from './h2b/audit.mjs';
 import {auditH2C} from './h2c/audit.mjs';
+import {auditReview} from './review-audit.mjs';
 import {createHash} from 'node:crypto';
 
 const root = fileURLToPath(new URL('../../', import.meta.url));
@@ -15,7 +16,7 @@ function dateValue(value) {
   const valueMs = Date.parse(value+'T00:00:00Z');
   return Number.isFinite(valueMs) && new Date(valueMs).toISOString().slice(0,10) === value ? valueMs : null;
 }
-export function auditProgram(plan, corpus, {asOf, pathExists = () => true, h1, h2a, h2b, h2c, fileDigest} = {}) {
+export function auditProgram(plan, corpus, {asOf, pathExists = () => true, h1, h2a, h2b, h2c, h2d, h2e, fileDigest} = {}) {
   const errors = [], warnings = [];
   const at = dateValue(asOf);
   if (at === null) errors.push('asOf must be a real YYYY-MM-DD date');
@@ -61,10 +62,16 @@ export function auditProgram(plan, corpus, {asOf, pathExists = () => true, h1, h
     errors.push(...auditH2C(corpus,h1?.matrix ?? {},plan,h2c,asOf));
     if(h2c?.review?.nextReviewBy && asOf>=h2c.review.nextReviewBy) warnings.push('H2-C bounded evidence review is due; do not infer currentness from prior completion');
   }
+  for(const [id,records] of [['H2-D',h2d],['H2-E',h2e]]) {
+    if(gateMap.get('H2')?.completedSlices?.includes(id)) {
+      errors.push(...auditReview(corpus,h1?.matrix ?? {},plan,records,asOf,id));
+      if(records?.review?.nextReviewBy && asOf>=records.review.nextReviewBy) warnings.push(id+' bounded evidence review is due; recheck before reuse');
+    }
+  }
   const overlays=new Set();
   for(const overlay of h1?.matrix?.reviewOverlays ?? []) {
     const key=[overlay.reviewId,overlay.claimId,overlay.contextId].join('/');
-    if(!['H2-A','H2-B','H2-C'].includes(overlay.reviewId) || !gateMap.get('H2')?.completedSlices?.includes(overlay.reviewId)) errors.push('Unknown or inactive review overlay '+key);
+    if(!['H2-A','H2-B','H2-C','H2-D','H2-E'].includes(overlay.reviewId) || !gateMap.get('H2')?.completedSlices?.includes(overlay.reviewId)) errors.push('Unknown or inactive review overlay '+key);
     if(overlays.has(key)) errors.push('Duplicate review overlay '+key);
     overlays.add(key);
   }
@@ -158,6 +165,8 @@ if (process.argv[1] && resolve(process.argv[1]) === fileURLToPath(import.meta.ur
       h2a:{review:read('research/robustness/h2a/review.json'),registry:read('research/robustness/h2a/sources.json'),searchLog:read('research/robustness/h2a/search-log.json'),queue:read('research/robustness/h2-review-queue.json')},
       h2b:{review:read('research/robustness/h2b/review.json'),registry:read('research/robustness/h2b/sources.json'),searchLog:read('research/robustness/h2b/search-log.json'),queue:read('research/robustness/h2-review-queue.json'),crosswalk:read('research/robustness/h2b/equation-crosswalk.json')},
       h2c:{review:read('research/robustness/h2c/review.json'),registry:read('research/robustness/h2c/sources.json'),searchLog:read('research/robustness/h2c/search-log.json'),queue:read('research/robustness/h2-review-queue.json'),crosswalk:read('research/robustness/h2c/measurement-crosswalk.json')},
+      h2d:{review:read('research/robustness/h2d/review.json'),registry:read('research/robustness/h2d/sources.json'),searchLog:read('research/robustness/h2d/search-log.json'),queue:read('research/robustness/h2-review-queue.json')},
+      h2e:{review:read('research/robustness/h2e/review.json'),registry:read('research/robustness/h2e/sources.json'),searchLog:read('research/robustness/h2e/search-log.json'),queue:read('research/robustness/h2-review-queue.json')},
       fileDigest:p=>createHash('sha256').update(readFileSync(resolve(root,p))).digest('hex')
     });
     console.log(JSON.stringify(result,null,2));

@@ -1,6 +1,6 @@
 {
   "name": "metron-energy-readiness",
-  "version": "0.2.0-alpha.3",
+  "version": "0.2.0-alpha.4",
   "private": true,
   "description": "Open, headless energy and recovery estimates with an inspectable mobile-first fitness instrument.",
   "type": "module",

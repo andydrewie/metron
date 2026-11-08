@@ -1,13 +1,13 @@
 /**
  * METRON — deterministic, dependency-free physiology estimates.
- * All outputs are estimates, not clinical decisions. API version: 0.1.0.
+ * All outputs are estimates, not clinical decisions. Numerical model: 0.1.0.
  * @module metron/core
  */
 export const MODEL_VERSION = '0.1.0';
 export const DEFAULTS = Object.freeze({
-  profile: { weightKg: 80, heightCm: 175, ageYears: 30, equationSex: 'male', bodyFatPercent: null, skeletalMuscleKg: null },
-  activity: { steps: 10000, workoutMinutes: 60, intensity: 'typical', restingModel: 'mifflin' },
-  recovery: { sleepHours: 7.5, energy: 'good', weekly: 'mixed', musculoskeletal: 'fine', usualMuscleSets: 14, focus: 'legs', usualSteps: 10000 }
+  profile: Object.freeze({ weightKg: 80, heightCm: 175, ageYears: 30, equationSex: 'male', bodyFatPercent: null, skeletalMuscleKg: null }),
+  activity: Object.freeze({ steps: 10000, workoutMinutes: 60, intensity: 'typical', restingModel: 'mifflin' }),
+  recovery: Object.freeze({ sleepHours: 7.5, energy: 'good', weekly: 'mixed', musculoskeletal: 'fine', usualMuscleSets: 14, focus: 'legs', usualSteps: 10000 })
 });
 const MET = Object.freeze({ light: 2.5, typical: 3.5, hard: 5 });
 const RANGES = Object.freeze({
@@ -26,16 +26,22 @@ function enumeration(name, value) {
   if (!enums[name]?.includes(value)) throw new TypeError(`${name} must be one of: ${enums[name]?.join(', ')}`);
   return value;
 }
+function dataRecord(value, label) {
+  if (value === null || typeof value !== 'object' || Array.isArray(value) || ![Object.prototype,null].includes(Object.getPrototypeOf(value))) throw new TypeError(label+' must be a plain data object');
+  for (const key of Reflect.ownKeys(value)) {
+    if (typeof key !== 'string' || (!Object.hasOwn(Object.getOwnPropertyDescriptor(value,key),'value')||!Object.getOwnPropertyDescriptor(value,key).enumerable)) throw new TypeError(label+' must contain data properties only');
+  }
+}
 /** Validate and normalize a complete or partial input object without mutating it. */
 export function normalizeInput(input = {}) {
-  if (input === null || typeof input !== 'object' || Array.isArray(input)) throw new TypeError('Input must be an object');
+  dataRecord(input,'Input');
   const allowedTop = ['profile','activity','recovery'];
-  for (const k of Object.keys(input)) if (!allowedTop.includes(k)) throw new TypeError(`Unknown top-level field: ${k}`);
+  for (const k of Reflect.ownKeys(input)) if (!allowedTop.includes(k)) throw new TypeError('Unknown top-level field');
   for (const [section,allowed] of Object.entries(DEFAULTS)) {
     const supplied=input[section];
-    if (supplied != null && (typeof supplied !== 'object' || Array.isArray(supplied))) throw new TypeError(`${section} must be an object`);
     if (supplied === null) throw new TypeError(`${section} must not be null`);
-    for (const k of Object.keys(supplied ?? {})) if (!(k in allowed)) throw new TypeError(`Unknown ${section} field: ${k}`);
+    if (supplied !== undefined) dataRecord(supplied,section);
+    for (const k of Reflect.ownKeys(supplied ?? {})) if (!Object.hasOwn(allowed,k)) throw new TypeError(`Unknown ${section} field`);
   }
   const profile = { ...DEFAULTS.profile, ...(input.profile ?? {}) };
   const activity = { ...DEFAULTS.activity, ...(input.activity ?? {}) };
@@ -47,6 +53,7 @@ export function normalizeInput(input = {}) {
   for (const field of ['restingModel','intensity']) activity[field] = enumeration(field,activity[field]);
   for (const field of ['sleepHours','usualMuscleSets','usualSteps']) recovery[field] = bounded(field,recovery[field]);
   for (const field of ['energy','weekly','musculoskeletal','focus']) recovery[field] = enumeration(field,recovery[field]);
+  if(profile.skeletalMuscleKg != null && profile.skeletalMuscleKg>profile.weightKg) throw new RangeError('skeletalMuscleKg cannot exceed body weight');
   if (profile.bodyFatPercent != null && profile.skeletalMuscleKg != null) {
     const ffm = profile.weightKg * (1-profile.bodyFatPercent/100);
     if (profile.skeletalMuscleKg > ffm) throw new RangeError('skeletalMuscleKg cannot exceed estimated fat-free mass');
@@ -56,14 +63,21 @@ export function normalizeInput(input = {}) {
   }
   return { profile,activity,recovery };
 }
-export function mifflinStJeor({weightKg,heightCm,ageYears,equationSex}) {
+export function mifflinStJeor(profile) {
+  dataRecord(profile,'Profile');
+  const weightKg=bounded('weightKg',profile.weightKg),heightCm=bounded('heightCm',profile.heightCm),ageYears=bounded('ageYears',profile.ageYears),equationSex=enumeration('equationSex',profile.equationSex);
   return 10 * weightKg + 6.25 * heightCm - 5 * ageYears + (equationSex === 'male' ? 5 : -161);
 }
-export function fatFreeMassKg({weightKg,bodyFatPercent}) {
+export function fatFreeMassKg(profile) {
+  dataRecord(profile,'Profile');
+  const weightKg=bounded('weightKg',profile.weightKg),bodyFatPercent=bounded('bodyFatPercent',profile.bodyFatPercent,true);
   if (bodyFatPercent == null) return null;
   return weightKg * (1 - bodyFatPercent / 100);
 }
-export function cunninghamRmr(ffmKg) { return 500 + 22 * ffmKg; }
+export function cunninghamRmr(ffmKg) {
+  if(typeof ffmKg!=='number'||!Number.isFinite(ffmKg)||ffmKg<=0||ffmKg>350) throw new RangeError('ffmKg must be a finite number greater than zero and at most 350');
+  return 500 + 22 * ffmKg;
+}
 /** Calculate an illustrative energy expenditure breakdown. Calorie units are kcal/day. */
 export function estimateEnergy(input = {}) {
   const { profile, activity } = normalizeInput(input);

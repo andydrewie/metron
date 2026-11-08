@@ -8,7 +8,7 @@
 
 **Program:** `METRON-ROBUST-001` · **Established:** 7 November 2026
 
-**Current gate:** H2. [H2-A readiness/action evidence](./h2a/README.md) is complete at its bounded scope; [H2-B resting-equation review](./h2b/README.md) is also complete at its bounded scope; [H2-C measurement/source review](./h2c/README.md) is complete at its bounded scope; H2-D combined energy and uncertainty is next. H0 and [H1](./H1_INVENTORY.md) are complete for their declared scope. Clinical evidence remains unreviewed.
+**Current checkpoint:** [all-gate execution record](CHECKPOINT.md). H0–H5 and H7 are complete at declared scope, and H6/H8 retain explicit evidence blockers. Clinical applicability remains unreviewed.
 
 **Tracker:** [issue #22](https://github.com/andydrewie/metron/issues/22)
 
@@ -28,19 +28,19 @@ H0 inventories the current source, advertised capabilities, research entrypoints
 | --- | --- | --- |
 | **H0 · Scope and weaknesses** | Inventory capability claims, inherited evidence, material gaps, owners and acceptance criteria; preserve completed G0–G4. | Complete for the defined baseline |
 | **H1 · Ontology and applicability** | Define quantities, observations, models, decisions and outcomes; map population, clinical state, method and time context to each claim. Enumerate reviewed and unreviewed coverage. | Complete for the finite repository inventory; clinical evidence unreviewed |
-| **H2 · Current evidence and contradictions** | Execute documented searches of primary studies and authoritative guidance; record dates, corrections/retractions, counterevidence, versions, rights and claim-level applicability. | H2-A/B/C complete at bounded scope; H2-D/E pending |
-| **H3 · Measurement and energy accounting** | Audit reference methods, input error, gross/net expenditure, baseline allocation, activity membership, missingness and incompatible wearable semantics. | Not started; prior research is input |
-| **H4 · External validity** | Admit relevant independent data; freeze endpoints, paired comparisons, subgroup harms and decision margins before analysis; reproduce results independently. | Not started; athlete candidate deferred here |
-| **H5 · Readiness and decision boundaries** | Define readiness/performance endpoints, audit current set recommendations, evaluate prospective predictive value, or explicitly retain/restrict unsupported guidance. | Not started |
-| **H6 · Uncertainty and individual value** | Separate cohort intervals, input sensitivity and individual prediction uncertainty; evaluate calibration forward in time and whether users understand the decision limits. | Not started |
-| **H7 · Software, privacy and accessibility** | Exercise public API/CLI/browser contracts, malformed inputs, privacy failures, dependency/build assumptions, keyboard/mobile and color-independent comprehension. | Not started; existing tests are baseline evidence |
-| **H8 · Reconstruction and maintenance** | Complete a clean-checkout reproduction and a separately recorded agent navigation/rebuild exercise; verify evidence update and supersession procedures while preserving open gaps. | Not started |
+| **H2 · Current evidence and contradictions** | Execute documented searches of primary studies and authoritative guidance; record dates, corrections/retractions, counterevidence, versions, rights and claim-level applicability. | All five slices complete at bounded scope |
+| **H3 · Measurement and energy accounting** | Audit reference methods, input error, gross/net expenditure, baseline allocation, activity membership, missingness and incompatible wearable semantics. | Complete as an audit with explicit no-go boundaries |
+| **H4 · External validity** | Admit relevant independent data; freeze endpoints, paired comparisons, subgroup harms and decision margins before analysis; reproduce results independently. | Complete for independent resting replication; TDEE accuracy no-go |
+| **H5 · Readiness and decision boundaries** | Define readiness/performance endpoints, audit current set recommendations, evaluate prospective predictive value, or explicitly retain/restrict unsupported guidance. | Complete through explicit restriction/no-go; no prospective outcome claim |
+| **H6 · Uncertainty and individual value** | Separate cohort intervals, input sensitivity and individual prediction uncertainty; evaluate calibration forward in time and whether users understand the decision limits. | Blocked on real-user comprehension and decision-value evidence |
+| **H7 · Software, privacy and accessibility** | Exercise public API/CLI/browser contracts, malformed inputs, privacy failures, dependency/build assumptions, keyboard/mobile and color-independent comprehension. | Complete at bounded software/browser review scope |
+| **H8 · Reconstruction and maintenance** | Complete a clean-checkout reproduction and a separately recorded agent navigation/rebuild exercise; verify evidence update and supersession procedures while preserving open gaps. | Blocked on genuinely fresh-agent recovery; scripted reproduction passed |
 
 Dependencies in `plan.json` are authoritative. H2 and H3 follow H1; H4 and H5 can then proceed independently. H7 can start after H1. H8 tests reconstruction once H1 and H7 are complete and must preserve the actual state of the other gates. H6 has separate RMR/TDEE and readiness tracks: only the applicable H4 or H5 track is a prerequisite. An unsupported readiness branch must not indefinitely block independent RMR work.
 
 Gate progress is claim- and domain-specific. Any partial passage must name its exact scope, evidence and outstanding criteria; it does not close the whole gate. `complete` means all declared acceptance criteria for that gate are reviewed, with evidence. Negative results and explicit no-go decisions can satisfy an investigation; they cannot be relabeled as successful physiological validation. The audit command never promotes a gate automatically.
 
-**Immediate next task:** execute H2-D from the [review queue](./h2-review-queue.json), covering combined energy and uncertainty. H2-C supplies the [measurement crosswalk](./h2c/measurement-crosswalk.json) for H3. H2-B preserves exact equation identities, source discrepancies and population limits in its [review record](./h2b/review.json). H2-A dispositions and proposed H5 wording changes are preserved in its [review record](./h2a/review.json). Prioritize claims that can directly influence calorie or training decisions, then unresolved measurement dependencies. The ten Haaf athlete dataset remains a candidate for H4 after the applicable H1–H3 work and a new analysis protocol. Its published results are already known and must be disclosed. Do not reopen or tune the frozen enable study.
+**Immediate next task:** execute the [H8 cold-start task](h8/COLD_START_TASK.md) in a genuinely new context. H6 needs real-user and longitudinal evidence; implementation or paperwork cannot substitute for it.
 
 ## A multidimensional applicability map
 
@@ -91,4 +91,4 @@ npm run release:check
 
 The offline audit checks references, gate dependencies, closure evidence and source review dates. It reports pending/stale source reviews and open weaknesses separately from structural errors. It does not fetch publications, assess medical correctness, establish exhaustive coverage or decide that the program is complete. Tests include broken references, false closure, dependency cycles and stale/future review dates.
 
-**Change control:** retain immutable source/protocol/result pins and old ADRs. Update current entrypoints when priorities change; link replacements instead of rewriting historical conclusions. The website, production equations and model/package versions do not change in this planning revision.
+**Change control:** retain immutable source/protocol/result pins and old ADRs. Update current entrypoints when priorities change; link replacements instead of rewriting historical conclusions. The current package changes interface/privacy boundaries while preserving numerical coefficients. Follow the checkpoint and ADR-0007 for current behavior.

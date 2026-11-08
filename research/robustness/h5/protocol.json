@@ -1,0 +1,27 @@
+{
+  "schemaVersion": "1.0.0",
+  "asOf": "2026-11-09",
+  "status": "proposed-not-run",
+  "dataCollected": false,
+  "resultsAvailable": false,
+  "target": "Next-session standardized performance in consenting adults familiar with resistance exercise; no injury-safe dose claim",
+  "predictorFreeze": "Freeze exact current heuristic and an explicit feature-only candidate before collecting outcomes. All predictors recorded before the session.",
+  "primaryOutcome": "Within-person change in standardized task performance from a prespecified familiarization baseline; fix task, load, order and timing before enrollment.",
+  "comparators": [
+    "No-change personal baseline",
+    "Previous-session performance",
+    "Sleep alone",
+    "Subjective energy alone",
+    "Combined current heuristic"
+  ],
+  "design": {
+    "participantSeparation": "Development and held-out people separated before fitting; report performance on entirely held-out people.",
+    "timeSeparation": "Within-person forward blocks; no random session split, future smoothing or outcome-derived baseline leakage.",
+    "confounding": "Prespecify task practice, training history, recent load, time of day, illness/medication and missingness; do not pool unmatched tasks.",
+    "uncertainty": "Participant-cluster intervals; choose sample size from clinically/research-relevant precision and pilot variance before enrollment, not a guessed power claim.",
+    "decisionValue": "Prediction is separate from benefit of acting on advice; any intervention needs a separately governed randomized comparison."
+  },
+  "adverseUse": "Exclude active pain/illness and clinical populations from this first performance study pending appropriate review. Do not instruct participants to follow set bands or override symptoms. Adverse events reviewed by qualified study personnel.",
+  "noGo": "No direct validation of exact thresholds/set bands currently available; retain only educational reflection and inspectable legacy arithmetic.",
+  "approvalAndRights": "No recruitment, contact, participant data collection or intervention has been performed. Appropriate consent, ethics and data rights required before enrollment."
+}

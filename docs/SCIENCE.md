@@ -71,7 +71,7 @@ METRON takes sleep hours, present energy, musculoskeletal comfort, and past-week
 
 **Important: These thresholds and set ranges are not validated clinical cutoffs, and do not quantify injury risk.** They are coaching-style prompts for self-reflection. Circumstances such as extreme sleepiness, dizziness, acute pain, medications, illness, or other health risks call for appropriate professional assessment, not an automated training recommendation.
 
-**H2-A evidence review (7 November 2026):** the [targeted review](../research/robustness/h2a/README.md) found indirect support for considering sleep and subjective state, but no direct validation of the exact 5/7-hour classifier, set-ratio table or 1.5-times step trigger in its bounded search. Habitual sleep guidance, chronic weekly training volume and different recovery endpoints cannot be converted directly into these rules. Clinical scope remains unreviewed. Proposed changes to the full-session and rest wording are recorded for H5 and have not shipped.
+**H2-A evidence review (7 November 2026):** the [targeted review](../research/robustness/h2a/README.md) found indirect support for considering sleep and subjective state, but no direct validation of the exact 5/7-hour classifier, set-ratio table or 1.5-times step trigger in its bounded search. Habitual sleep guidance, chronic weekly training volume and different recovery endpoints cannot be converted directly into these rules. Clinical scope remains unreviewed. H5 now restricts the browser to entered-signal reflection and an optional illustrative set-band disclosure; legacy arithmetic remains unvalidated.
 
 ## 5. Appropriate use and out-of-scope use
 
@@ -94,3 +94,5 @@ We welcome preregistered test protocols, confidence intervals, subgroup analysis
 - 2024 Adult Compendium of Physical Activities. [Activity classifications and MET codes](https://pacompendium.com/).
 
 *Every coefficient used in this project's default model can be found in [`core/model.js`](../core/model.js). Where evidence is not sufficient for a universal coefficient, we label the choice an assumption.*
+
+**H2-D/E and H3–H6 checkpoint (9 November 2026):** [combined-energy review](../research/robustness/h2d/README.md) preserves conflicting adaptation evidence without choosing a universal factor. [H4](../research/robustness/h4/README.md) adds the prespecified athlete-cohort resting comparison; it does not measure whole-day expenditure. [H6](../research/robustness/h6/README.md) separates sampling intervals, sensitivity, model disagreement and individual coverage. Allowance and calibration remain unimplemented. The current [checkpoint](../research/robustness/CHECKPOINT.md) supersedes historical next-task wording.

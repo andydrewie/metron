@@ -185,7 +185,8 @@
         "docs/adr/index.json",
         "docs/ROADMAP.md",
         "research/robustness/README.md",
-        "research/robustness/plan.json"
+        "research/robustness/plan.json",
+        "research/robustness/CHECKPOINT.md"
       ],
       "status": "documented"
     },
@@ -313,7 +314,16 @@
         "research/robustness/h2c/review.json",
         "research/robustness/h2c/sources.json",
         "research/robustness/h2c/search-log.json",
-        "research/robustness/h2c/measurement-crosswalk.json"
+        "research/robustness/h2c/measurement-crosswalk.json",
+        "research/robustness/CHECKPOINT.md",
+        "research/robustness/h2d/README.md",
+        "research/robustness/h2e/README.md",
+        "research/robustness/h3/README.md",
+        "research/robustness/h4/README.md",
+        "research/robustness/h5/README.md",
+        "research/robustness/h6/README.md",
+        "research/robustness/h7/README.md",
+        "research/robustness/h8/README.md"
       ],
       "status": "research-question"
     }

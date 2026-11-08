@@ -3120,6 +3120,16 @@
           "inspectedPortions": "Official research page, displayed review date and linked about page."
         }
       ]
+    },
+    {
+      "id": "h4-tenhaaf-s001",
+      "title": "ten Haaf and Weijs 2014 Dataset S1: admitted pinned supporting data",
+      "path": "research/robustness/h4/admission.json",
+      "url": "https://doi.org/10.1371/journal.pone.0108460.s001",
+      "freshnessClass": "active-empirical",
+      "sourceContentReviewedAt": "2026-11-09",
+      "reviewScope": "Exact bytes/codebook, published methods/rights, reference-unit discrepancy and aggregate replication.",
+      "rightsStatus": "Publisher CC-BY supporting data with attribution; original aggregates only in repository."
     }
   ],
   "claims": [
@@ -3144,7 +3154,8 @@
         "h2b-cai-2026",
         "h2b-dong-2026",
         "h2b-delbiondo-2026",
-        "h2b-xu-2026"
+        "h2b-xu-2026",
+        "h4-tenhaaf-s001"
       ],
       "gates": [
         "H2",
@@ -3166,6 +3177,13 @@
           "reviewedAt": "2026-11-09",
           "nextReviewBy": "2027-02-07",
           "scope": "Bounded source-specific equation/provenance and transfer review, not review of every patient, severity, treatment or intersection in these contexts."
+        }
+      ],
+      "evaluations": [
+        {
+          "studyId": "RMR-EXT-002",
+          "path": "research/robustness/h4/results.json",
+          "scope": "89 eligible recreational athletes; no clinical/TDEE/personal interval inference."
         }
       ]
     },
@@ -3193,7 +3211,8 @@
         "sordi-2024",
         "h2b-kfir-2023",
         "h2b-cai-2026",
-        "h2b-xu-2026"
+        "h2b-xu-2026",
+        "h4-tenhaaf-s001"
       ],
       "gates": [
         "H2",
@@ -3216,6 +3235,13 @@
           "reviewedAt": "2026-11-09",
           "nextReviewBy": "2027-02-07",
           "scope": "Bounded source-specific equation/provenance and transfer review, not review of every patient, severity, treatment or intersection in these contexts."
+        }
+      ],
+      "evaluations": [
+        {
+          "studyId": "RMR-EXT-002",
+          "path": "research/robustness/h4/results.json",
+          "scope": "89 eligible recreational athletes; no clinical/TDEE/personal interval inference."
         }
       ]
     },
@@ -3430,7 +3456,7 @@
     },
     {
       "id": "C08",
-      "statement": "Readiness thresholds and recommended working-set bands",
+      "statement": "Legacy readiness thresholds and illustrative working-set bands; browser interpretation restricted to reflection.",
       "kind": "heuristic",
       "concepts": [
         "readiness"
@@ -3470,6 +3496,13 @@
           "reviewedAt": "2026-11-07",
           "scope": "Bounded relevance/transfer review only; not all subpopulations or the complete clinical context.",
           "nextReviewBy": "2027-02-05"
+        }
+      ],
+      "implementationReviews": [
+        {
+          "path": "research/robustness/h7/change-record.json",
+          "asOf": "2026-11-09",
+          "clinicalApplicabilityEstablished": false
         }
       ]
     },
@@ -3718,6 +3751,13 @@
           "scope": "Bounded relevance/transfer review only; not all subpopulations or the complete clinical context.",
           "nextReviewBy": "2027-02-05"
         }
+      ],
+      "implementationReviews": [
+        {
+          "path": "research/robustness/h7/change-record.json",
+          "asOf": "2026-11-09",
+          "clinicalApplicabilityEstablished": false
+        }
       ]
     },
     {
@@ -3761,6 +3801,13 @@
           "reviewedAt": "2026-11-07",
           "scope": "Bounded relevance/transfer review only; not all subpopulations or the complete clinical context.",
           "nextReviewBy": "2027-02-05"
+        }
+      ],
+      "implementationReviews": [
+        {
+          "path": "research/robustness/h7/change-record.json",
+          "asOf": "2026-11-09",
+          "clinicalApplicabilityEstablished": false
         }
       ]
     },
@@ -3841,6 +3888,13 @@
           "reviewedAt": "2026-11-09",
           "path": "research/robustness/h2c/review.json",
           "scope": "Bounded method/source relevance and non-equivalence review only; clinical severity, treatment and intersection coverage is not established."
+        }
+      ],
+      "implementationReviews": [
+        {
+          "path": "research/robustness/h7/change-record.json",
+          "asOf": "2026-11-09",
+          "clinicalApplicabilityEstablished": false
         }
       ]
     },
@@ -4491,6 +4545,13 @@
           "scope": "Bounded source relevance and method distinction only; clinical severity, treatments and intersections remain unreviewed.",
           "nextReviewBy": "2027-02-07"
         }
+      ],
+      "implementationReviews": [
+        {
+          "path": "research/robustness/h7/change-record.json",
+          "asOf": "2026-11-09",
+          "clinicalApplicabilityEstablished": false
+        }
       ]
     },
     {
@@ -4534,6 +4595,13 @@
           "reviewedAt": "2026-11-07",
           "scope": "Bounded relevance/transfer review only; not all subpopulations or the complete clinical context.",
           "nextReviewBy": "2027-02-05"
+        }
+      ],
+      "implementationReviews": [
+        {
+          "path": "research/robustness/h7/change-record.json",
+          "asOf": "2026-11-09",
+          "clinicalApplicabilityEstablished": false
         }
       ]
     },

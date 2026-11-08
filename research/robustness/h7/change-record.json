@@ -1,0 +1,34 @@
+{
+  "schemaVersion": "1.0.0",
+  "asOf": "2026-11-09",
+  "documentType": "metron.interface-boundary-change",
+  "packageVersion": "0.2.0-alpha.4",
+  "modelVersion": "0.1.0",
+  "productionBehaviorChanged": true,
+  "numericalFormulaChanged": false,
+  "claimIds": [
+    "C08",
+    "C14",
+    "C15",
+    "C17",
+    "C33",
+    "C34"
+  ],
+  "surfaces": [
+    "core/model.js",
+    "core/model.d.ts",
+    "bin/metron.mjs",
+    "app.js",
+    "index.html",
+    "styles.css"
+  ],
+  "bodyFatOrigin": "Checkbox does not supply a number; blank remains null.",
+  "export": "Existing input/output wrapper now includes inputOrigins with example-default, user-entered, fallback-default or unknown for each field. Origin is not verification or a measurement-method contract.",
+  "readiness": "Legacy core output remains; browser signal labels and optional illustrative set-band disclosure restrict interpretation.",
+  "invalidation": "No derived results or export while any visible entry is invalid; invalid state persists across tabs/choices.",
+  "evidence": [
+    "research/robustness/h5/README.md",
+    "research/robustness/h7/README.md",
+    "docs/adr/0007-restrict-unvalidated-personal-decisions.md"
+  ]
+}

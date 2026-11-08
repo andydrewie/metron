@@ -66,7 +66,7 @@ The desktop image captures the entire browser viewport; open it full size to ins
 
 **Current measured-science workstream:** [Resting energy validation program](./research/ree-validation/README.md) · [GitHub tracking dashboard](https://github.com/andydrewie/metron/issues/9). **G0–G4 complete:** [454-person RMR results](./research/ree-validation/G3_RESULTS.md) and [the decision to retain the default with scoped guidance](./research/ree-validation/G4_DECISION.md) are published. This is one fixed-equation cohort reanalysis, not validation of the combined daily-energy or readiness estimator.
 
-**Current research priority:** [durable evidence and robustness](./research/robustness/README.md) · [tracker #22](https://github.com/andydrewie/metron/issues/22). Build a navigable, current, explicitly scoped corpus that remains reusable if the app is rebuilt. [H1 mapping is complete](./research/robustness/H1_INVENTORY.md); [H2-A readiness review is complete](./research/robustness/h2a/README.md) at its bounded scope; H2-B resting-equation and H2-C measurement/source reviews are also complete at their bounded scopes; H2-D combined energy and uncertainty is next. Clinical applicability remains unreviewed. [Resume in a new chat](./docs/CONTINUE.md).
+**Current robustness program:** [checkpoint](./research/robustness/CHECKPOINT.md) · [canonical gate/weakness state](./research/robustness/plan.json) · [tracker #22](https://github.com/andydrewie/metron/issues/22). H0–H5 are complete at declared scope; H7 is under verification. H6 human evidence and H8 fresh-agent recovery remain blocked. Research reuse through 7 November 2027 is independently valuable; clinical applicability remains unreviewed.
 
 **Research-only iPhone pilot:** [Read-only Apple HealthKit sample attribution](./research/apple-healthkit-pilot/README.md) (requires Xcode and your device's separate Health permission; not an existing web feature).
 
@@ -148,6 +148,6 @@ MIT-licensed and open to corrections. Share reproducible counterexamples, better
 
 **[Contributing](./CONTRIBUTING.md)** · **[Research questions](./research/README.md)** · **[Design tokens](./design/tokens.json)** · **[Deployment instructions](./docs/DEPLOYMENT.md)** · **[Release QA](./docs/QA.md)**
 
-**Publication status:** Public source repository. The live Pages URL is available only once deployment completes successfully. **Source package:** `0.2.0-alpha.3`; **underlying calculation model:** `0.1.0`.
+**Publication status:** Public source repository. The live Pages URL is available only once deployment completes successfully. **Source package:** `0.2.0-alpha.4`; **underlying calculation model:** `0.1.0`.
 
 <div align="center"><sub>Complexity in the engine. Clarity in the cockpit. · MIT</sub></div>

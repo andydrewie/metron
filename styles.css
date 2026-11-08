@@ -102,3 +102,10 @@ footer a{text-decoration:none}
 #minutes::-webkit-slider-thumb,#sets::-webkit-slider-thumb,#smm::-webkit-slider-thumb{background:var(--chart-workout);box-shadow:0 0 0 1px var(--chart-workout)}
 #steps::-moz-range-thumb,#usual-steps::-moz-range-thumb,#bodyfat::-moz-range-thumb{background:var(--chart-walk);box-shadow:0 0 0 1px var(--chart-walk)}
 #minutes::-moz-range-thumb,#sets::-moz-range-thumb,#smm::-moz-range-thumb{background:var(--chart-workout);box-shadow:0 0 0 1px var(--chart-workout)}
+
+/* Invalid entries suppress derived results across tabs; error remains visible. */
+.input-error{margin:14px 16px 0}
+[aria-invalid="true"]{outline:2px solid var(--chart-workout);outline-offset:2px}
+#composition-controls input[type="number"]{width:100%;min-height:44px;border:1px solid var(--border);border-radius:8px;padding:9px;color:var(--foreground);background:#fff}
+.rule-detail{margin:14px 0;font-size:12px;line-height:1.5}.rule-detail summary{cursor:pointer}.rule-detail .recovery-sets{margin-top:10px}
+button:disabled{cursor:not-allowed;opacity:.55}

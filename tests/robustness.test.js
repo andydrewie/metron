@@ -18,7 +18,7 @@ test('durable corpus resolves locally while exposing unreviewed sources and open
 });
 test('missing references, unsafe paths and false gate closure fail',()=>{
  const [p,c]=fixture();c.claims[0].sources.push('invented-source');c.sources[0].path='../outside';
- const gate=p.gates.find(g=>g.id==='H4');gate.state='complete';
+ const gate=p.gates.find(g=>g.id==='H4');gate.state='complete';gate.closure=null;p.gates.find(g=>g.id==='H3').state='in-progress';
  const r=auditProgram(p,c,options);
  assert.equal(r.valid,false);
  assert.ok(r.errors.some(e=>e.includes('invented-source')));
@@ -33,7 +33,7 @@ test('dependency cycles and unsupported completeness cannot pass',()=>{
  assert.ok(r.errors.some(e=>e.includes('unreviewed contexts')));
 });
 test('whole uncertainty gate cannot close while a required evaluation track remains open',()=>{
- const [p,c]=fixture();const gate=p.gates.find(g=>g.id==='H6');gate.state='complete';
+ const [p,c]=fixture();const gate=p.gates.find(g=>g.id==='H6');gate.state='complete';p.gates.find(g=>g.id==='H4').state='in-progress';p.gates.find(g=>g.id==='H5').state='in-progress';
  const r=auditProgram(p,c,options);
  assert.ok(r.errors.some(e=>e.includes('energy prerequisite H4')));
  assert.ok(r.errors.some(e=>e.includes('readiness prerequisite H5')));

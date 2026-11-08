@@ -309,10 +309,11 @@
   "displayContract": {
     "headline": "Rounded to nearest 50 kcal/day; no interval interpretation",
     "components": "Rounded to integer kcal; may not sum exactly to rounded headline",
-    "export": "Unrounded core result with input",
-    "bodyFatDefault": "20 percent when checkbox enabled, a placeholder rather than a measurement",
+    "export": "Unrounded core result, input and inputOrigins; entered/default/unknown is not device provenance.",
+    "bodyFatDefault": "No default on enable; blank remains unknown. Historical H2-C describes the earlier 20% placeholder.",
     "smmUnknown": "Unknown is preserved as null; zero-width display is not measured zero muscle",
-    "modelDisagreement": "Difference between equations is not calibrated individual uncertainty"
+    "modelDisagreement": "Difference between equations is not calibrated individual uncertainty",
+    "readiness": "Signal reflection; legacy set math only in explicit illustrative disclosure. No safe or optimal dose claim."
   },
   "inferenceBoundaries": [
     "Arithmetic agreement is not empirical accuracy.",
@@ -474,7 +475,10 @@
     "research/robustness/h2b/equation-crosswalk.json",
     "research/robustness/h2c/measurement-crosswalk.json",
     "research/robustness/h2d/review.json",
-    "research/robustness/h2e/review.json"
+    "research/robustness/h2e/review.json",
+    "research/robustness/h3/README.md",
+    "research/robustness/h4/results.json",
+    "research/robustness/h7/change-record.json"
   ],
   "equationIdentityRule": "A source equation name is not a coefficient fingerprint. Record exact arithmetic, mass construct (FFM/LBM/lean soft tissue/SMM), measured reference (BMR/RMR/REE), population and protocol before transferring performance. Unknown variants remain unknown. H2-B adds evidence qualification without changing the dated H1 API field inventory.",
   "measurementIdentityRule": "H2-C records required construct, method/reference, temporal and origin metadata. Same units, overlapping intervals and sample identities do not alone prove equivalence or aggregate contribution. The current API does not implement this proposed provenance contract."

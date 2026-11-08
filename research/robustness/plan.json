@@ -9,9 +9,9 @@
   "baselineCommit": "2a9cc6cc45832abcbe0ce57454562d605715fc49",
   "corpus": "research/robustness/corpus.json",
   "dashboard": "https://github.com/andydrewie/metron/issues/22",
-  "currentGate": "H4",
+  "currentGate": "H7",
   "completedStudy": "research/ree-validation/plan.json",
-  "coverage": "H1 and H2 finite inventory/relevance review complete. Clinical applicability remains unreviewed; H3–H8 execution authorized.",
+  "coverage": "H0–H5 complete at declared scope. H7 implementation under verification. H6 human comprehension and H8 independent cold-start evidence remain blocked. All clinical matrix cells remain unreviewed.",
   "scope": [
     "energy quantities and model assumptions",
     "clinical applicability and physiological states",
@@ -177,7 +177,7 @@
     {
       "id": "H4",
       "name": "External validity",
-      "state": "in-progress",
+      "state": "complete",
       "dependsOn": [
         "H2",
         "H3"
@@ -191,14 +191,23 @@
       ],
       "evidence": [
         "research/robustness/h4/admission.json",
-        "research/robustness/h4/protocol.v1.json"
+        "research/robustness/h4/protocol.v1.json",
+        "research/robustness/h4/protocol.v1.1.json",
+        "research/robustness/h4/AMENDMENT.md",
+        "research/robustness/h4/results.json",
+        "research/robustness/h4/README.md"
       ],
-      "closure": null
+      "closure": {
+        "reviewedAt": "2026-11-09",
+        "reviewerRole": "Maintaining agent; independent-person review not claimed",
+        "scope": "Fixed resting equations in 89 eligible independent-cohort records; all-record sensitivity and combined-TDEE no-go.",
+        "acceptanceReview": "Rights/codebook/measurement admission, pre-error freeze and disclosed amendment, paired intervals/subgroups, two numerical implementations and a versioned retain/no-go decision are recorded."
+      }
     },
     {
       "id": "H5",
       "name": "Readiness and decision boundaries",
-      "state": "not-started",
+      "state": "complete",
       "dependsOn": [
         "H2",
         "H3"
@@ -210,13 +219,23 @@
         "Evaluate incremental predictive/decision value or formally retain/restrict unsupported guidance with a justified no-go and unresolved evidence needs",
         "Separate educational reflection from prescriptions; no injury-safe or optimal-set claim without suitable evidence"
       ],
-      "evidence": [],
-      "closure": null
+      "evidence": [
+        "research/robustness/h5/README.md",
+        "research/robustness/h5/protocol.json",
+        "research/robustness/h2a/rule-audit.json",
+        "docs/adr/0007-restrict-unvalidated-personal-decisions.md"
+      ],
+      "closure": {
+        "reviewedAt": "2026-11-09",
+        "reviewerRole": "Maintaining agent; independent-person review not claimed",
+        "scope": "Readiness rule audit, prespecified prospective evaluation and restriction of unsupported prescriptions.",
+        "acceptanceReview": "All current rule families traced to H2-A; outcomes/comparators/isolation/adverse-use protocol recorded; no-go for prescription and bounded reflection labels adopted."
+      }
     },
     {
       "id": "H6",
       "name": "Uncertainty and individual value",
-      "state": "not-started",
+      "state": "blocked",
       "dependsOn": [
         "H2",
         "H3"
@@ -228,13 +247,21 @@
         "Evaluate personal calibration forward in time against a fixed baseline, accounting for intake error and fluid shifts; otherwise keep it unimplemented",
         "Test comprehension and decision usefulness without manufacturing validated ranges; report harmful interpretations and non-improvement"
       ],
-      "evidence": [],
-      "closure": null
+      "evidence": [
+        "research/robustness/h6/README.md",
+        "research/robustness/h6/evaluation-plan.json"
+      ],
+      "closure": null,
+      "blockedCriteria": [
+        4
+      ],
+      "blocker": "No real-user comprehension/decision-usefulness observations. Personal calibration also lacks an admitted longitudinal reference dataset and remains unimplemented.",
+      "completedWork": "Prerequisite results/no-go, uncertainty distinctions, forward-time evaluation plan and implementation restrictions."
     },
     {
       "id": "H7",
       "name": "Software privacy and accessibility",
-      "state": "not-started",
+      "state": "in-progress",
       "dependsOn": [
         "H1"
       ],
@@ -245,13 +272,17 @@
         "Verify keyboard, screen-reader labels, 320px layout and color-independent meaning with recorded methods and failures",
         "Resolve high-consequence defects or enforce scope restrictions before changing user-facing decisions"
       ],
-      "evidence": [],
+      "evidence": [
+        "research/robustness/h7/README.md",
+        "tests/interface-boundaries.test.js",
+        "research/robustness/h7/browser_check.py"
+      ],
       "closure": null
     },
     {
       "id": "H8",
       "name": "Reconstruction and maintenance",
-      "state": "not-started",
+      "state": "blocked",
       "dependsOn": [
         "H1",
         "H7"
@@ -263,8 +294,19 @@
         "Rebuild an equivalent bounded calculation from preserved specifications and compare reference outputs; distinguish this from simply running existing code",
         "Exercise a source update, contradiction, stale review and supersession scenario; preserve all unresolved H2–H6 limitations and record actual monitoring coverage"
       ],
-      "evidence": [],
-      "closure": null
+      "evidence": [
+        "research/robustness/h8/README.md",
+        "research/robustness/h8/COLD_START_TASK.md",
+        "research/robustness/h8/rebuild.py",
+        "research/robustness/h8/rehearse.mjs",
+        "research/robustness/h8/frozen-study.mjs"
+      ],
+      "closure": null,
+      "blockedCriteria": [
+        2
+      ],
+      "blocker": "No genuinely fresh agent has performed and recorded recovery; same-agent scripted rehearsal cannot establish it.",
+      "completedWork": "Bounded cross-language rebuild and historical replay; maintenance rehearsal; clean-checkout verification recorded separately."
     }
   ],
   "weaknesses": [
@@ -274,15 +316,17 @@
       "severity": "high",
       "gate": "H4",
       "ownerRole": "RMR validation lead",
-      "state": "open",
-      "finding": "G3 tests resting equations only; combined TDEE has no external accuracy evaluation.",
+      "state": "constrained",
+      "finding": "Two resting cohorts now evaluated; combined TDEE remains unvalidated.",
       "evidence": [
         "docs/SCIENCE.md",
         "research/ree-validation/G3_RESULTS.md"
       ],
-      "nextTest": "Map every energy output to an endpoint and independent reference method before choosing new data.",
-      "resolutionEvidence": [],
-      "residual": "Evidence work remains; no claim of closure."
+      "nextTest": "Admit matched whole-day reference and activity inputs under a frozen protocol.",
+      "resolutionEvidence": [
+        "research/robustness/h4/README.md"
+      ],
+      "residual": "Resting replication does not validate combined TDEE, clinical transfer or personal targets."
     },
     {
       "id": "W02",
@@ -291,20 +335,22 @@
       "gate": "H1",
       "ownerRole": "Applicability review lead",
       "state": "constrained",
-      "finding": "The finite repository claim/context inventory is complete; context-specific clinical evidence remains unreviewed.",
+      "finding": "Finite claim/context map and relevance reviews complete; clinical severity/treatment/intersection evidence remains unreviewed.",
       "evidence": [
         "docs/SCIENCE.md",
         "core/model.js"
       ],
-      "nextTest": "Complete H2-D/E, then separately scope clinical severity/treatment/intersection reviews; H2-C method overlays do not establish clinical eligibility.",
+      "nextTest": "Scope a consequential clinical-context review before clinical reuse.",
       "resolutionEvidence": [
         "research/robustness/H1_INVENTORY.md",
         "research/robustness/inventory.json",
         "research/robustness/corpus.json",
         "research/robustness/applicability.json",
-        "research/robustness/semantics.json"
+        "research/robustness/semantics.json",
+        "research/robustness/h2d/review.json",
+        "research/robustness/h2e/review.json"
       ],
-      "residual": "Mapping reduces ambiguity but does not establish clinical suitability or runtime exclusion detection."
+      "residual": "No runtime clinical eligibility detector or comprehensive pathological-spectrum validation."
     },
     {
       "id": "W03",
@@ -312,17 +358,20 @@
       "severity": "high",
       "gate": "H5",
       "ownerRole": "Readiness research lead",
-      "state": "open",
-      "finding": "H2-A found no direct validation for the exact readiness rules or set bands in its targeted review. Current full-session wording remains stronger than the evidence establishes.",
+      "state": "constrained",
+      "finding": "Prescriptive browser labels restricted; legacy set bands remain explicitly illustrative.",
       "evidence": [
         "core/model.js",
         "docs/SCIENCE.md",
         "research/protocol.json",
         "research/robustness/h2a/review.json"
       ],
-      "nextTest": "H5: review proposed wording restrictions, choose explicit endpoints/comparators and retain/restrict unsupported rules with a justified decision; respect H2/H3 dependencies.",
-      "resolutionEvidence": [],
-      "residual": "Evidence work remains; no claim of closure."
+      "nextTest": "Execute H5 prospective protocol before any predictive/decision claim.",
+      "resolutionEvidence": [
+        "research/robustness/h5/README.md",
+        "docs/adr/0007-restrict-unvalidated-personal-decisions.md"
+      ],
+      "residual": "No validated safe/optimal sets, injury prediction or decision benefit."
     },
     {
       "id": "W04",
@@ -330,17 +379,20 @@
       "severity": "high",
       "gate": "H3",
       "ownerRole": "Measurement research lead",
-      "state": "open",
-      "finding": "H2-C identifies baseline/PAL, step/stride, MET reference, composition/HRV constructs, defaults and provider-window/membership mismatches. Current production inputs lack the proposed provenance contract.",
+      "state": "constrained",
+      "finding": "Measurement and accounting assumptions audited; incompatible/unknown provenance remains non-identifiable.",
       "evidence": [
         "research/ree-validation/G4_DECISION.md",
         "research/energy-accounting/README.md",
         "research/provider-step-semantics/matrix.json",
         "research/robustness/h2c/measurement-crosswalk.json"
       ],
-      "nextTest": "Execute H3 mapping nextTest entries, beginning with baseline reference and input provenance; use synthetic temporal/missingness cases before optional provider records.",
-      "resolutionEvidence": [],
-      "residual": "Evidence work remains; no claim of closure."
+      "nextTest": "Collect lawful source-specific metadata before integration or reconciliation.",
+      "resolutionEvidence": [
+        "research/robustness/h3/README.md",
+        "tests/h3-measurement.test.js"
+      ],
+      "residual": "Production numeric schema still lacks device/time/measurement provenance; no automatic overlap correction."
     },
     {
       "id": "W05",
@@ -348,15 +400,17 @@
       "severity": "high",
       "gate": "H6",
       "ownerRole": "Uncertainty research lead",
-      "state": "open",
-      "finding": "Cohort intervals and synthetic sensitivity are not individual error bounds.",
+      "state": "constrained",
+      "finding": "Uncertainty categories clarified; personal calibration/ranges remain unimplemented.",
       "evidence": [
         "docs/SCIENCE.md",
         "metron.manifest.json"
       ],
-      "nextTest": "Define individual prediction target, observation horizon and a forward-time comparison before constructing a range.",
-      "resolutionEvidence": [],
-      "residual": "Evidence work remains; no claim of closure."
+      "nextTest": "Admit longitudinal reference data and freeze forward-time evaluation.",
+      "resolutionEvidence": [
+        "research/robustness/h6/evaluation-plan.json"
+      ],
+      "residual": "No individual coverage or benefit established."
     },
     {
       "id": "W06",
@@ -364,19 +418,21 @@
       "severity": "high",
       "gate": "H2",
       "ownerRole": "Evidence review lead",
-      "state": "open",
-      "finding": "H2-A/B/C record scoped source inspections and update-check limits; H2-D/E and clinical applicability remain open. H2-C provider review due 2026-12-09 or earlier before reuse.",
+      "state": "constrained",
+      "finding": "All finite H2 slices have dated source inspections, contrary evidence and review triggers.",
       "evidence": [
         "docs/SCIENCE.md",
         "research/ree-validation/G4_DECISION.md",
         "research/robustness/h2c/review.json"
       ],
-      "nextTest": "Complete H2-D/E and recheck due provider definitions before integration; preserve actual inspection dates.",
+      "nextTest": "Recheck provider definitions by 2026-12-09 and before consequential reuse.",
       "resolutionEvidence": [
         "research/robustness/h2a/review.json",
-        "research/robustness/h2b/review.json"
+        "research/robustness/h2b/review.json",
+        "research/robustness/h2d/review.json",
+        "research/robustness/h2e/review.json"
       ],
-      "residual": "Partial progress; no whole-H2 or comprehensive clinical closure."
+      "residual": "Manual monitoring only; targeted coverage cannot guarantee future currency."
     },
     {
       "id": "W07",
@@ -407,15 +463,17 @@
       "gate": "H8",
       "ownerRole": "Reconstruction reviewer",
       "state": "open",
-      "finding": "Agent pointers and fixtures exist; an independent reconstruction from specifications has not been demonstrated.",
+      "finding": "Spec-based Python rebuild and scripted navigation rehearsal completed; independent cold-start evidence missing.",
       "evidence": [
         "AGENTS.md",
         "docs/navigation.json",
         "docs/API.md"
       ],
-      "nextTest": "Define and execute a clean-checkout and later independent navigation/reimplementation exercise.",
-      "resolutionEvidence": [],
-      "residual": "Evidence work remains; no claim of closure."
+      "nextTest": "Run H8/COLD_START_TASK.md in a genuinely fresh agent context.",
+      "resolutionEvidence": [
+        "research/robustness/h8/README.md"
+      ],
+      "residual": "Same analyst cannot certify absence of prior context."
     },
     {
       "id": "W09",
@@ -424,15 +482,18 @@
       "gate": "H7",
       "ownerRole": "Software and accessibility reviewer",
       "state": "open",
-      "finding": "Existing tests and render checks do not establish full public-interface robustness, screen-reader access or privacy completeness.",
+      "finding": "API/CLI/privacy/browser defects fixed; hosted accessibility/browser verification pending.",
       "evidence": [
         "tests/model.test.js",
         "tests/metadata.test.js",
         "docs/QA.md"
       ],
-      "nextTest": "Audit direct exports, malformed inputs, defaults, sensitive errors and accessible interpretation with explicit test evidence.",
-      "resolutionEvidence": [],
-      "residual": "Evidence work remains; no claim of closure."
+      "nextTest": "Finish hosted browser checks and inspect screenshots.",
+      "resolutionEvidence": [
+        "research/robustness/h7/README.md",
+        "tests/interface-boundaries.test.js"
+      ],
+      "residual": "No exhaustive security or assistive-technology certification."
     },
     {
       "id": "W10",
@@ -441,20 +502,22 @@
       "gate": "H6",
       "ownerRole": "Human factors reviewer",
       "state": "open",
-      "finding": "A functioning UI and research results do not establish better individual decisions.",
+      "finding": "Misleading interpretations restricted and a human evaluation plan prepared; no participants evaluated.",
       "evidence": [
         "docs/INFORMATION_DESIGN.md",
         "docs/RESEARCH.md"
       ],
-      "nextTest": "Define comprehension and decision-usefulness questions; a reusable corpus remains valuable without a new feature.",
-      "resolutionEvidence": [],
-      "residual": "Evidence work remains; no claim of closure."
+      "nextTest": "Collect intended-user comprehension and decision-usefulness evidence with predefined scoring.",
+      "resolutionEvidence": [
+        "research/robustness/h6/evaluation-plan.json"
+      ],
+      "residual": "Synthetic assertions do not measure user understanding."
     }
   ],
   "nextTask": {
-    "gate": "H4",
-    "action": "Execute the frozen fixed-equation replication; then H5–H8 within the user-authorized program.",
-    "requiresSeparateFrozenProtocol": true
+    "gate": "H7",
+    "action": "Finish hosted browser verification and review; then hand H8 cold-start task to a genuinely new context. H6 remains blocked on real-user/longitudinal evidence.",
+    "userAuthorization": "Execute all remaining gates without per-gate reconfirmation; do not fabricate unavailable evidence."
   },
   "trackPrerequisites": {
     "H6": {

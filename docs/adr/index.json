@@ -92,6 +92,19 @@
       "softwareVerification": "tests-passed",
       "empiricalValidation": "not-applicable",
       "supersededBy": null
+    },
+    {
+      "id": "ADR-0007",
+      "title": "Restrict unvalidated personal decision claims",
+      "path": "docs/adr/0007-restrict-unvalidated-personal-decisions.md",
+      "status": "Accepted",
+      "decisionDate": "2026-11-09",
+      "domain": "scientific-method",
+      "decisionConfidence": "medium",
+      "confidenceKind": "qualitative-judgment",
+      "softwareVerification": "tests-passed",
+      "empiricalValidation": "none",
+      "supersededBy": null
     }
   ]
 }

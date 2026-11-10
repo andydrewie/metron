@@ -86,7 +86,9 @@
     "readinessRuleAudit": "./research/robustness/h2a/rule-audit.json",
     "robustnessCheckpoint": "./research/robustness/CHECKPOINT.md",
     "externalRmrReplication": "./research/robustness/h4/README.md",
-    "coldStartTask": "./research/robustness/h8/COLD_START_TASK.md"
+    "coldStartTask": "./research/robustness/h8/COLD_START_TASK.md",
+    "coldStartRecovery": "./research/robustness/h8/fresh-recovery-2026-11-10/RECOVERY.md",
+    "reconstructionAcceptance": "./research/robustness/h8/acceptance.json"
   },
   "implemented": {
     "energyEstimate": true,

@@ -1,0 +1,57 @@
+{
+  "status": "passed",
+  "kind": "scripted-rehearsal-not-independent-cold-start",
+  "entrypoints": [
+    "docs/CONTINUE.md",
+    "AGENTS.md",
+    "docs/navigation.json",
+    "metron.manifest.json"
+  ],
+  "recovered": {
+    "resumeRoute": "docs/CONTINUE.md",
+    "implemented": {
+      "energyEstimate": true,
+      "energyComponents": [
+        "baselineKcal",
+        "walkingKcal",
+        "workoutKcal"
+      ],
+      "restingModels": [
+        "mifflin",
+        "cunningham"
+      ],
+      "readinessHeuristic": true,
+      "bodyCompositionInputs": [
+        "bodyFatPercent",
+        "skeletalMuscleKg"
+      ],
+      "cliJson": true,
+      "esmSdk": true,
+      "interactiveStaticWeb": true,
+      "caloricAllowance": false,
+      "wearableParsers": false,
+      "wearableOAuth": false,
+      "bayesianCalibration": false,
+      "mcpServer": false,
+      "empiricallyValidatedReadiness": false,
+      "calibratedIndividualUncertainty": false,
+      "activityOverlapReconciliation": false
+    },
+    "currentGate": "H8",
+    "nextTask": {
+      "gate": "H8",
+      "action": "Execute H8/COLD_START_TASK.md in a genuinely new agent context and record actual recovery. H6 remains blocked on real-user evidence; calibration remains unimplemented.",
+      "userAuthorization": "Execute all remaining gates without per-gate reconfirmation; do not fabricate unavailable evidence."
+    },
+    "latestDecision": "ADR-0007",
+    "tdeeEmpiricalValidation": "none"
+  },
+  "drills": {
+    "staleReviewWarnings": 7,
+    "sourceVersionMismatchRejected": true,
+    "unadjudicatedContradictionRejected": true,
+    "missingSupersessionSuccessorRejected": true
+  },
+  "automaticMonitoringEnabled": false,
+  "independentAgentExercise": false
+}

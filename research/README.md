@@ -2,9 +2,9 @@
 
 This folder exists to make **falsifiable research a first-class contributor surface** rather than an ornamental "science" section in a commercial landing page.
 
-**Measured resting-equation results are published:** [G3](./ree-validation/G3_RESULTS.md) evaluated 454 adults; [G4](./ree-validation/G4_DECISION.md) records the separate model decision. This is limited resting-energy evidence. Combined TDEE, individual predictions and readiness remain unvalidated; no collected wearable research dataset is published here.
+**Measured resting-equation results are published:** [G3](./ree-validation/G3_RESULTS.md) evaluated 454 adults; [G4](./ree-validation/G4_DECISION.md) records the separate model decision. [H4](./robustness/h4/README.md) adds a separate cohort of 89 eligible recreational athletes. These are limited resting-energy results. Combined TDEE, individual predictions and readiness remain unvalidated; no collected wearable research dataset is published here.
 
-**Current robustness program:** [checkpoint](./robustness/CHECKPOINT.md) · [canonical gate/weakness state](./robustness/plan.json) · [tracker #22](https://github.com/andydrewie/metron/issues/22). H0–H5 are complete at declared scope; H7 is under verification. H6 human evidence and H8 fresh-agent recovery remain blocked. Research reuse through 7 November 2027 is independently valuable; clinical applicability remains unreviewed.
+**Current robustness program:** [checkpoint](./robustness/CHECKPOINT.md) · [canonical gate/weakness state](./robustness/plan.json) · [tracker #22](https://github.com/andydrewie/metron/issues/22). H0–H5, H7 and H8 are complete at declared scope: eight of nine gates. H6 remains blocked on actual-user comprehension and decision-usefulness evidence. Research reuse through 7 November 2027 is independently valuable; clinical applicability remains unreviewed.
 
 ## Open investigation: Energy accounting
 

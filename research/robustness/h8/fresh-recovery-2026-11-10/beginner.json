@@ -1,0 +1,54 @@
+{
+  "energy": {
+    "modelVersion": "0.1.0",
+    "units": "kcal/day",
+    "restingModel": "mifflin",
+    "components": {
+      "baselineKcal": 1732.8,
+      "walkingKcal": 146.412,
+      "workoutKcal": 51.4
+    },
+    "estimatedTdeeKcal": 1930.612,
+    "derived": {
+      "restingKcal": 1444,
+      "mifflinKcal": 1444,
+      "cunninghamKcal": null,
+      "fatFreeMassKg": null,
+      "strideMeters": 0.6971999999999999,
+      "incrementalSteps": 6000,
+      "incrementalWalkingKm": 4.1832,
+      "sessionMet": 2.5
+    },
+    "assumptions": {
+      "sedentaryMultiplier": 1.2,
+      "includedBaselineSteps": 2000,
+      "walkingNetKcalPerKgKm": 0.5,
+      "strideHeightRatio": 0.415,
+      "metPreset": "light"
+    },
+    "warnings": [
+      "This is an illustrative population-based estimate, not a measured calorie burn.",
+      "Step estimates assume level-ground walking, a height-derived stride and 2,000 steps within the sedentary baseline.",
+      "Avoid double counting workout steps (such as treadmill walking) in both activity fields.",
+      "Workout MET is a whole-session average that includes rest periods; presets are not individualized."
+    ]
+  },
+  "recovery": {
+    "modelVersion": "0.1.0",
+    "classification": {
+      "daily": "good",
+      "weekly": "fresh"
+    },
+    "status": "full-session",
+    "recommendation": {
+      "minSets": 13,
+      "maxSets": 14,
+      "unit": "working sets for one target muscle in this session",
+      "restRecommended": false
+    },
+    "notes": [
+      "Prioritize performance, alertness, and technique over hitting a rigid set quota."
+    ],
+    "disclaimer": "Illustrative coaching heuristics only; not validated to predict injury, readiness, or safe set counts."
+  }
+}

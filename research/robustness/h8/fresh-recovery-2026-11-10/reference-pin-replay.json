@@ -1,0 +1,216 @@
+{
+  "status": "passed",
+  "specificationSourceCommit": "16ceef3fb8e8a3bbcca9938d0d8331d7ba9c416f",
+  "referenceCoreGitBlob": "d36da7246aabbad91b92debb2a52011468a39ebb",
+  "referenceIdentityVerified": true,
+  "specifications": [
+    "docs/SCIENCE.md",
+    "docs/API.md"
+  ],
+  "scope": "Four valid synthetic energy cases; no empirical accuracy, uncertainty or readiness validation.",
+  "priorCodeExposure": "Existing H8 rebuild and core inspected during repository navigation; not blinded.",
+  "maximumDifferenceKcal": 2.842170943040401e-14,
+  "cases": [
+    {
+      "id": "documented-example",
+      "input": {
+        "profile": {
+          "weightKg": 80,
+          "heightCm": 175,
+          "ageYears": 30,
+          "equationSex": "male",
+          "bodyFatPercent": null
+        },
+        "activity": {
+          "steps": 10000,
+          "workoutMinutes": 60,
+          "intensity": "typical",
+          "restingModel": "mifflin"
+        }
+      },
+      "specificationDecimal": {
+        "restingKcal": "1748.75",
+        "baselineKcal": "2098.500",
+        "incrementalWalkingKm": "5.810",
+        "walkingKcal": "232.4000",
+        "gymGrossKcal": "280.0",
+        "gymBaselineKcal": "87.4375",
+        "workoutKcal": "192.5625",
+        "estimatedTdeeKcal": "2523.4625"
+      },
+      "reference": {
+        "baselineKcal": 2098.5,
+        "walkingKcal": 232.39999999999998,
+        "workoutKcal": 192.5625,
+        "estimatedTdeeKcal": 2523.4625,
+        "restingKcal": 1748.75,
+        "incrementalWalkingKm": 5.81
+      },
+      "absoluteDifferences": {
+        "baselineKcal": 0.0,
+        "walkingKcal": 2.842170943040401e-14,
+        "workoutKcal": 0.0,
+        "estimatedTdeeKcal": 0.0,
+        "restingKcal": 0.0,
+        "incrementalWalkingKm": 0.0
+      },
+      "referenceWarnings": [
+        "This is an illustrative population-based estimate, not a measured calorie burn.",
+        "Step estimates assume level-ground walking, a height-derived stride and 2,000 steps within the sedentary baseline.",
+        "Avoid double counting workout steps (such as treadmill walking) in both activity fields.",
+        "Workout MET is a whole-session average that includes rest periods; presets are not individualized."
+      ]
+    },
+    {
+      "id": "zero-step-no-workout",
+      "input": {
+        "profile": {
+          "weightKg": 80,
+          "heightCm": 175,
+          "ageYears": 30,
+          "equationSex": "male",
+          "bodyFatPercent": null
+        },
+        "activity": {
+          "steps": 0,
+          "workoutMinutes": 0,
+          "intensity": "typical",
+          "restingModel": "mifflin"
+        }
+      },
+      "specificationDecimal": {
+        "restingKcal": "1748.75",
+        "baselineKcal": "2098.500",
+        "incrementalWalkingKm": "0.000",
+        "walkingKcal": "0.0000",
+        "gymGrossKcal": "0.0",
+        "gymBaselineKcal": "0.0000",
+        "workoutKcal": "0",
+        "estimatedTdeeKcal": "2098.5000"
+      },
+      "reference": {
+        "baselineKcal": 2098.5,
+        "walkingKcal": 0,
+        "workoutKcal": 0,
+        "estimatedTdeeKcal": 2098.5,
+        "restingKcal": 1748.75,
+        "incrementalWalkingKm": 0
+      },
+      "absoluteDifferences": {
+        "baselineKcal": 0.0,
+        "walkingKcal": 0.0,
+        "workoutKcal": 0.0,
+        "estimatedTdeeKcal": 0.0,
+        "restingKcal": 0.0,
+        "incrementalWalkingKm": 0.0
+      },
+      "referenceWarnings": [
+        "This is an illustrative population-based estimate, not a measured calorie burn.",
+        "Step estimates assume level-ground walking, a height-derived stride and 2,000 steps within the sedentary baseline.",
+        "Avoid double counting workout steps (such as treadmill walking) in both activity fields.",
+        "Workout MET is a whole-session average that includes rest periods; presets are not individualized.",
+        "The sedentary baseline is not reduced when fewer than 2,000 steps are entered."
+      ]
+    },
+    {
+      "id": "baseline-step-no-workout",
+      "input": {
+        "profile": {
+          "weightKg": 80,
+          "heightCm": 175,
+          "ageYears": 30,
+          "equationSex": "male",
+          "bodyFatPercent": null
+        },
+        "activity": {
+          "steps": 2000,
+          "workoutMinutes": 0,
+          "intensity": "typical",
+          "restingModel": "mifflin"
+        }
+      },
+      "specificationDecimal": {
+        "restingKcal": "1748.75",
+        "baselineKcal": "2098.500",
+        "incrementalWalkingKm": "0.000",
+        "walkingKcal": "0.0000",
+        "gymGrossKcal": "0.0",
+        "gymBaselineKcal": "0.0000",
+        "workoutKcal": "0",
+        "estimatedTdeeKcal": "2098.5000"
+      },
+      "reference": {
+        "baselineKcal": 2098.5,
+        "walkingKcal": 0,
+        "workoutKcal": 0,
+        "estimatedTdeeKcal": 2098.5,
+        "restingKcal": 1748.75,
+        "incrementalWalkingKm": 0
+      },
+      "absoluteDifferences": {
+        "baselineKcal": 0.0,
+        "walkingKcal": 0.0,
+        "workoutKcal": 0.0,
+        "estimatedTdeeKcal": 0.0,
+        "restingKcal": 0.0,
+        "incrementalWalkingKm": 0.0
+      },
+      "referenceWarnings": [
+        "This is an illustrative population-based estimate, not a measured calorie burn.",
+        "Step estimates assume level-ground walking, a height-derived stride and 2,000 steps within the sedentary baseline.",
+        "Avoid double counting workout steps (such as treadmill walking) in both activity fields.",
+        "Workout MET is a whole-session average that includes rest periods; presets are not individualized."
+      ]
+    },
+    {
+      "id": "explicit-cunningham",
+      "input": {
+        "profile": {
+          "weightKg": 80,
+          "heightCm": 175,
+          "ageYears": 30,
+          "equationSex": "male",
+          "bodyFatPercent": 20
+        },
+        "activity": {
+          "steps": 10000,
+          "workoutMinutes": 60,
+          "intensity": "typical",
+          "restingModel": "cunningham"
+        }
+      },
+      "specificationDecimal": {
+        "restingKcal": "1908.0",
+        "baselineKcal": "2289.60",
+        "incrementalWalkingKm": "5.810",
+        "walkingKcal": "232.4000",
+        "gymGrossKcal": "280.0",
+        "gymBaselineKcal": "95.40",
+        "workoutKcal": "184.60",
+        "estimatedTdeeKcal": "2706.6000"
+      },
+      "reference": {
+        "baselineKcal": 2289.6,
+        "walkingKcal": 232.39999999999998,
+        "workoutKcal": 184.60000000000002,
+        "estimatedTdeeKcal": 2706.6,
+        "restingKcal": 1908,
+        "incrementalWalkingKm": 5.81
+      },
+      "absoluteDifferences": {
+        "baselineKcal": 0.0,
+        "walkingKcal": 2.842170943040401e-14,
+        "workoutKcal": 2.842170943040401e-14,
+        "estimatedTdeeKcal": 0.0,
+        "restingKcal": 0.0,
+        "incrementalWalkingKm": 0.0
+      },
+      "referenceWarnings": [
+        "This is an illustrative population-based estimate, not a measured calorie burn.",
+        "Step estimates assume level-ground walking, a height-derived stride and 2,000 steps within the sedentary baseline.",
+        "Avoid double counting workout steps (such as treadmill walking) in both activity fields.",
+        "Workout MET is a whole-session average that includes rest periods; presets are not individualized."
+      ]
+    }
+  ]
+}

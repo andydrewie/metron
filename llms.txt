@@ -35,4 +35,4 @@
 
 Note: llms.txt is an informal community proposal, not an official guarantee that any agent or search engine will read this file. This file is a curated pointer map; read linked source contracts for exact behavior.
 
-- [Current robustness checkpoint](./research/robustness/CHECKPOINT.md): all-gate execution, bounded resting replication, interface safeguards and explicit H6/H8 evidence blockers
+- [Current robustness checkpoint](./research/robustness/CHECKPOINT.md): all-gate execution, bounded resting replication, interface safeguards, completed fresh-agent recovery and the explicit H6 human-evidence blocker

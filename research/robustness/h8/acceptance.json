@@ -1,0 +1,226 @@
+{
+  "schemaVersion": "1.0.0",
+  "recordType": "metron.h8.acceptance-assessment",
+  "reviewedAt": "2026-11-10",
+  "decision": "accepted-at-declared-scope",
+  "assessor": "Maintaining agent, separate from recovery worker",
+  "sourceSnapshot": "16ceef3fb8e8a3bbcca9938d0d8331d7ba9c416f",
+  "contextIsolation": {
+    "worker": "/root/h8_fresh_recovery",
+    "launchMechanism": "collaboration.spawn_agent",
+    "fork_turns": "none",
+    "inheritedConversation": false,
+    "initialPrompt": "Repository: https://github.com/andydrewie/metron\n\nRecover Metron using its repository entrypoints. Identify current shipped capabilities, current and superseded decisions, the scientific meaning and limits of the energy output, all blocked gates and the next executable task. Locate the supporting evidence without assuming the chat history. Reproduce one preserved study fixture and a bounded calculation from the documented specification. Record paths followed, ambiguity, failed attempts, environment and any prior project knowledge. Do not modify formulas, lift clinical restrictions or claim that finding a file validates its science.",
+    "priorKnowledge": "None before this task. No previous Metron chat or prepared answer sheet was supplied. Repository implementation and existing H8 rebuild were inspected during this recovery, before the new bounded calculation; it is not blinded.",
+    "subsequentInstructions": [
+      {
+        "phase": "workspace discovery",
+        "text": "For workspace isolation, leave existing checkouts and recovery artifacts unchanged. Use a separate checkout for your run, and record this operational instruction alongside your actual discovery path. Continue deriving project answers only from the repository."
+      },
+      {
+        "phase": "after substantive recovery and reproduction",
+        "text": "Please finish your original recovery record and report its saved paths before any follow-up revision. I have begun repairing the reported documentation conflicts in the maintainer branch; your original pinned-main observations should remain unchanged. No need to rerun work already verified."
+      },
+      {
+        "phase": "parent review of drafted record",
+        "text": "I have read the draft recovery record; it preserves the required observations and limits. Before finalizing, make the calculation replay's pinned source identity explicit and verifiable: it currently prints a fixed sourceCommit even if run later against changed core bytes. Keep your original observed values, add an exact core-identity check or equally clear refusal for a changed reference, and record that as a post-discovery reproducibility clarification. Do not change equations or repeat unrelated checks."
+      },
+      {
+        "phase": "follow-up review after original recovery finalized",
+        "text": "Review the proposed H8 closure and documentation corrections in /workspace/scratch/ca8e9da4b453/metron (branch research/h8-fresh-agent-recovery). This is a follow-up review, not a second cold start. Read the diff from your pinned main for docs/SCIENCE.md, README.md, docs/RESEARCH.md, docs/ROADMAP.md, research/README.md, docs/CONTINUE.md, AGENTS.md, research/robustness/plan.json, h8/README.md, h8/COLD_START_TASK.md and h8/acceptance.json. Verify that your observed contradictions are repaired, original recovery artifacts are preserved, remaining H6/scientific limits remain accurate, and closure does not overstate context/implementation independence. Do not rerun unrelated tests or change the maintainer checkout. Save a concise separate FOLLOWUP_REVIEW.md in your own fresh-recovery-2026-11-10 folder and report any remaining substantive issue."
+      }
+    ],
+    "answersProvidedByParent": false,
+    "limits": [
+      "Same model family/provider and shared runtime, not independent personnel or organizational review.",
+      "Worker read existing core and rebuild during navigation before writing the Decimal transcription; not blinded.",
+      "Existing local Git objects were used after independently verifying remote main; not a fresh OS or network clone."
+    ]
+  },
+  "criteria": [
+    {
+      "number": 1,
+      "result": "met",
+      "evidence": [
+        "record.json",
+        "preserved-fixture.json",
+        "ci.log",
+        "release-check.log",
+        "python-privacy.log"
+      ],
+      "assessment": "Separate clean worktree at verified main reproduced the pinned historical synthetic fixture, CLI and 129 Node/8 Python tests with source rights and environment recorded. Prior dated verification.json additionally retains maintaining-agent H4 aggregate reproduction; fresh worker did not repeat measured-data analysis."
+    },
+    {
+      "number": 2,
+      "result": "met-after-documented-repairs",
+      "evidence": [
+        "RECOVERY.md",
+        "record.json",
+        "energy-claim.json",
+        "beginner.json"
+      ],
+      "assessment": "Actual 12-step navigation recovered implemented capabilities, all current accepted ADRs, absence of formal superseded ADRs, historical amendments, H6 evidence blocker, clinical/TDEE limits and manual monitoring. Initial stale/dirty checkout and current-document contradictions are retained; current summaries were reconciled before closure."
+    },
+    {
+      "number": 3,
+      "result": "met-at-bounded-scope",
+      "evidence": [
+        "spec-calculation.py",
+        "spec-calculation.json",
+        "reference-pin-replay.json",
+        "reference-pin-verification.json"
+      ],
+      "assessment": "New Decimal transcription of documented equations agrees with CLI on four synthetic cases within about 2.84e-14 kcal, including the zero/2000-step plateau and explicit Cunningham. Existing code exposure disclosed. Post-discovery identity guard refuses changed core bytes before results; original observed values remain unchanged."
+    },
+    {
+      "number": 4,
+      "result": "met",
+      "evidence": [
+        "maintenance.json",
+        "audit.json",
+        "RECOVERY.md"
+      ],
+      "assessment": "Source-update, unadjudicated contradiction, stale-review and missing-supersession-successor drills passed. Twenty unreviewed source entries, H6 actual-human evidence gap, clinical unknowns and no automatic monitoring remain explicit. Actual navigation drift was repaired rather than hidden."
+    }
+  ],
+  "repairs": [
+    {
+      "finding": "Current SCIENCE validation ladder denied completed independent-cohort replication and omitted bounded H7 review.",
+      "paths": [
+        "docs/SCIENCE.md"
+      ],
+      "resolution": "Link completed H4 and H7 with exact population/review limits; leave personal calibration, full assistive-technology testing and whole-day validation unestablished."
+    },
+    {
+      "finding": "H7 status stale in three current summaries; RESEARCH still called independent replication open.",
+      "paths": [
+        "docs/RESEARCH.md",
+        "docs/ROADMAP.md",
+        "research/README.md"
+      ],
+      "resolution": "Reconcile against plan and H4/H7 evidence without editing historical study records."
+    },
+    {
+      "finding": "README described entire research directory as unrun.",
+      "paths": [
+        "README.md"
+      ],
+      "resolution": "Distinguish published results, frozen studies and open protocols."
+    },
+    {
+      "finding": "Requiring a new visible user chat confused conversation isolation with interface location.",
+      "paths": [
+        "AGENTS.md",
+        "docs/CONTINUE.md",
+        "research/robustness/h8/COLD_START_TASK.md"
+      ],
+      "resolution": "Allow a separate no-history worker in the same thread; record provenance, instructions and limits. Verify remote main before selecting a clean snapshot."
+    },
+    {
+      "finding": "Test audit dates preceded new gate-closure date, coupling current-record tests to an old checkpoint.",
+      "paths": [
+        "tests/robustness.test.js",
+        "tests/h2b-review.test.js",
+        "tests/h2c-review.test.js"
+      ],
+      "resolution": "Use the canonical plan date for current-record audits and relative dates for review-age/future-date fixtures. Keep historical inspection dates unchanged."
+    }
+  ],
+  "remaining": {
+    "H6": "blocked on actual-user comprehension and decision-usefulness observations; calibration remains unimplemented without longitudinal reference admission",
+    "clinicalApplicability": "unreviewed",
+    "wholeDayAndPersonalTargets": "unvalidated",
+    "automaticMonitoring": false
+  },
+  "promotionBasis": "Manual criterion-by-criterion review of recorded observations and corrections; test passes alone do not promote H8.",
+  "recordPreservation": "Original worker artifacts copied byte-for-byte; hashes below capture the finalized discovery record and its explicitly appended reference-pin clarification. Source snapshot gate states remain historical.",
+  "artifacts": [
+    {
+      "path": "research/robustness/h8/fresh-recovery-2026-11-10/RECOVERY.md",
+      "sha256": "279865e881be7665b60170d805a66a492def8e669ad888e14ed8af9c17aa61aa"
+    },
+    {
+      "path": "research/robustness/h8/fresh-recovery-2026-11-10/audit.json",
+      "sha256": "eabd529ef286f168825b8ad4cc8bfae4d7daa1ef0a8f8c39658a0c86b44eddf0"
+    },
+    {
+      "path": "research/robustness/h8/fresh-recovery-2026-11-10/beginner.json",
+      "sha256": "7384cc39ea215db7d730a7fc52726bae30f7a66380c062df6630ddb93bbed628"
+    },
+    {
+      "path": "research/robustness/h8/fresh-recovery-2026-11-10/ci.log",
+      "sha256": "e76b3f4f777ddeb40767158a8bd4c00b2452a5c4818751e4ff6381ee57499c3f"
+    },
+    {
+      "path": "research/robustness/h8/fresh-recovery-2026-11-10/energy-claim.json",
+      "sha256": "801cba46d1faeaab025f20c33f2ccc3f40972d027374739d3cd40f18202c8d62"
+    },
+    {
+      "path": "research/robustness/h8/fresh-recovery-2026-11-10/maintenance.json",
+      "sha256": "ffd4454662c0da3d592a9255d6a37c3ab54233e886589b31874ed35237de7211"
+    },
+    {
+      "path": "research/robustness/h8/fresh-recovery-2026-11-10/preserved-fixture.json",
+      "sha256": "9bbb884c33892c55760eef6f91ab559af5ba7d03629ae865f6e059400e2cabfb"
+    },
+    {
+      "path": "research/robustness/h8/fresh-recovery-2026-11-10/python-privacy.log",
+      "sha256": "b6217b866b16389fd5c5c31dba8d1226a80b44f725eb7d695f9295edebd76288"
+    },
+    {
+      "path": "research/robustness/h8/fresh-recovery-2026-11-10/record.json",
+      "sha256": "03a5032a982751eb144983ee94493416867587167106d17dec9d127549414399"
+    },
+    {
+      "path": "research/robustness/h8/fresh-recovery-2026-11-10/reference-pin-replay.json",
+      "sha256": "8e978cfdb3a4b3463a097e8192078cef078b65eb986d9e3de2aab199e0a1303b"
+    },
+    {
+      "path": "research/robustness/h8/fresh-recovery-2026-11-10/reference-pin-verification.json",
+      "sha256": "e37b01792ce613557dcb7a13a890c96baa9be1ad1ba43bae15079b2d7047f79d"
+    },
+    {
+      "path": "research/robustness/h8/fresh-recovery-2026-11-10/release-check.log",
+      "sha256": "934a625597878c58019f7e18c80446abdf0ecd47970073f5727e75142904f2f1"
+    },
+    {
+      "path": "research/robustness/h8/fresh-recovery-2026-11-10/spec-calculation.json",
+      "sha256": "53197b97ff46f1910d3416b7a682599e78a18b88748880f94087ced28f595f45"
+    },
+    {
+      "path": "research/robustness/h8/fresh-recovery-2026-11-10/spec-calculation.py",
+      "sha256": "1ef06f6bfc93d59c3d63a489e549b6293c15361d4fb7a53f2b915c9c9648821e"
+    },
+    {
+      "path": "research/robustness/h8/fresh-recovery-2026-11-10/FOLLOWUP_REVIEW.md",
+      "sha256": "5c8c23d3a49da196f2024ce7c7cf7acf5102baa10bf64cd4f343cb9ec0c9bba0"
+    }
+  ],
+  "followupReview": {
+    "path": "research/robustness/h8/fresh-recovery-2026-11-10/FOLLOWUP_REVIEW.md",
+    "reviewer": "Original recovery worker, now in follow-up context",
+    "result": "No remaining substantive issue found within requested scope",
+    "secondColdStart": false,
+    "limitations": "Does not independently certify hidden runtime state or constitute independent personnel review. Applies to the inspected proposal before this administrative review attachment."
+  },
+  "maintainerVerification": {
+    "date": "2026-11-10",
+    "nodeTestsPassed": 129,
+    "pythonPrivacyTestsPassed": 8,
+    "releasePreflight": "passed; 67 manifest paths",
+    "programAudit": "valid; H6 is the only blocked gate and W10 the only open weakness",
+    "boundedReplay": "exactly matches recorded reference-pin replay",
+    "protectedPathsUnchanged": [
+      "core",
+      "app.js",
+      "index.html",
+      "styles.css",
+      "bin",
+      "schemas",
+      "package.json",
+      "research/ree-validation",
+      "research/robustness/h4"
+    ],
+    "scope": "Local proposed closure; hosted review and checks are recorded separately in its pull request."
+  }
+}

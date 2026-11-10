@@ -66,7 +66,7 @@ The desktop image captures the entire browser viewport; open it full size to ins
 
 **Current measured-science workstream:** [Resting energy validation program](./research/ree-validation/README.md) · [GitHub tracking dashboard](https://github.com/andydrewie/metron/issues/9). **G0–G4 complete:** [454-person RMR results](./research/ree-validation/G3_RESULTS.md) and [the decision to retain the default with scoped guidance](./research/ree-validation/G4_DECISION.md) are published. This is one fixed-equation cohort reanalysis, not validation of the combined daily-energy or readiness estimator.
 
-**Current robustness program:** [checkpoint](./research/robustness/CHECKPOINT.md) · [canonical gate/weakness state](./research/robustness/plan.json) · [tracker #22](https://github.com/andydrewie/metron/issues/22). H0–H5 and H7 are complete at declared scope: seven of nine gates. H6 human evidence and H8 fresh-agent recovery remain blocked. Research reuse through 7 November 2027 is independently valuable; clinical applicability remains unreviewed.
+**Current robustness program:** [checkpoint](./research/robustness/CHECKPOINT.md) · [canonical gate/weakness state](./research/robustness/plan.json) · [tracker #22](https://github.com/andydrewie/metron/issues/22). H0–H5, H7 and H8 are complete at declared scope: eight of nine gates. H6 remains blocked on actual-user comprehension and decision-usefulness evidence. Research reuse through 7 November 2027 is independently valuable; clinical applicability remains unreviewed.
 
 **Research-only iPhone pilot:** [Read-only Apple HealthKit sample attribution](./research/apple-healthkit-pilot/README.md) (requires Xcode and your device's separate Health permission; not an existing web feature).
 
@@ -135,7 +135,7 @@ metron/
 ├── index.html + app.js      # Static reference instrument
 ├── design/tokens.json       # Canonical design tokens → generated CSS
 ├── docs/assets/             # Real screenshots and editable SVG diagrams
-├── research/                # Explicitly prospective, unrun evaluation
+├── research/                # Published results, frozen studies and open protocols
 ├── .github/                 # CI, GitHub Pages and contribution templates
 └── docs/                    # Science, methods, design, research, deployment
 ```

@@ -1,26 +1,30 @@
-# Continue Metron in a new chat
+# Continue Metron
 
-**Read current main before relying on a shared chat.** The [robustness plan](../research/robustness/plan.json) owns gate status; the [checkpoint](../research/robustness/CHECKPOINT.md) explains the findings. This page is dated 9 November 2026 and may be superseded.
+**Eight of nine robustness gates are complete; H6 still needs actual-user evidence.** H8 now has a recorded recovery by a separate agent with no inherited conversation, performed within the existing user thread. Use current main and the [robustness plan](../research/robustness/plan.json) for status, and the [checkpoint](../research/robustness/CHECKPOINT.md) for findings. A shared chat is supplementary. This page is dated 10 November 2026 and may be superseded; it preserves current next work without claiming perfect continuity or clinical validation.
 
-Copy this into a new chat, optionally with the conversation link:
+---
 
-> Continue Metron from https://github.com/andydrewie/metron/blob/main/docs/CONTINUE.md. Read current main, AGENTS.md, the manifest, robustness plan and linked evidence. The user authorized execution of all remaining robustness gates. Perform the H8 fresh-agent recovery task in your genuinely new context and record your actual path, failures and prior knowledge. Preserve H6's missing human evidence and all scientific limits. If this checkpoint is superseded, follow current verified state. A shared chat is supplementary; do not assume perfect memory or access to it.
+Copy this into a future chat, optionally with the conversation link:
+
+> Continue Metron from https://github.com/andydrewie/metron/blob/main/docs/CONTINUE.md. Read current main, AGENTS.md, the manifest, robustness plan and linked evidence. The user authorized execution of the remaining robustness work. At this checkpoint eight of nine gates are complete, including H8's recorded fresh-context recovery. Continue the next executable H6 protocol work while preserving its missing actual-user evidence, unimplemented calibration and all scientific limits. If this checkpoint is superseded, follow current verified state. A shared chat is supplementary; do not assume perfect memory or access to it.
 
 ## Checkpoint
 
-There are nine main gates H0–H8; H2 has five evidence slices. H0–H5 are complete at declared scope. H7 input/privacy/interface fixes passed hosted verification. Seven of nine gates are complete. H6 remains blocked on real-user comprehension/decision-value evidence, with calibration unimplemented. H8 has historical replay, a bounded Python rebuild and maintenance drills; the genuinely fresh-agent exercise remains outstanding.
+There are nine main gates H0–H8; H2 has five evidence slices. H0–H5, H7 and H8 are complete at declared scope. **H6 remains blocked on actual-user comprehension and decision-usefulness evidence.** Personal calibration remains unimplemented without an admitted longitudinal reference dataset.
 
-H4 independently analyzes a different resting cohort: 89 eligible records, one transparently excluded under an existing BF bound. Cunningham's paired MAE difference is −104.5 kcal/day, 95% sampling interval −127.5 to −80.1. Published outcomes were already known; frozen protocol and amendment precede newly inspected errors. The general default stays Mifflin, Cunningham remains an explicit option. See H4 for source, preparation and population limits. Neither cohort validates combined TDEE, personal calorie targets, clinical use or readiness.
+H8 was executed within the existing user thread using a separate agent with no inherited conversation. Its [original recovery record](../research/robustness/h8/fresh-recovery-2026-11-10/RECOVERY.md) retains navigation, initial stale-checkout discovery, commands, calculations, ambiguity and prior-code exposure. The [acceptance record](../research/robustness/h8/acceptance.json) maps criteria and repairs. The worker recovered capabilities and decisions, replayed the historical synthetic fixture, and matched four documented energy cases. Current SCIENCE/RESEARCH/ROADMAP/README summaries were reconciled after the exercise exposed drift. This proves one bounded recovery, not perfect memory or universal agent success.
 
-Package 0.2.0-alpha.4 restricts browser readiness to signal reflection, labels set math as illustrative, leaves BF unknown until entered, suppresses stale estimates/exports and hardens input/privacy handling. Numerical model 0.1.0 remains. Original G0–G4 files are untouched; use H8's historical-core replay instead of editing old locks to match new code.
+H4 analyzed a separate resting cohort: 89 eligible records, one transparently excluded under an existing BF bound. Cunningham's paired MAE difference is −104.5 kcal/day, 95% sampling interval −127.5 to −80.1. Published outcomes were already known; frozen protocol and amendment preceded newly inspected errors. Mifflin stays the general default and Cunningham an explicit option. Neither cohort validates combined TDEE, personal calorie targets, clinical use or readiness.
 
-## Recover and verify
+Package 0.2.0-alpha.4 and numerical model 0.1.0 are unchanged by H8. Original G0–G4 and H4 evidence are preserved. Use H8's historical-core replay instead of editing old locks to match new code. H7's bounded browser/keyboard/label checks are not a screen-reader user study or clinical validation.
 
-1. Check current main, open PRs and [tracker #22](https://github.com/andydrewie/metron/issues/22).
+## Recover and act
+
+1. Verify remote main, the checked-out commit, open PRs and [tracker #22](https://github.com/andydrewie/metron/issues/22). A clean historical checkout can still be stale.
 2. Follow AGENTS.md, docs/navigation.json, metron.manifest.json and docs/adr/index.json.
-3. Read the claim/context entry and actual dated evidence. The H1 matrix still has 805 explicit cells across 35 claim families and 23 contexts; no comprehensive clinical review is claimed.
-4. Complete [H8/COLD_START_TASK.md](../research/robustness/h8/COLD_START_TASK.md) using this new context. Record failures and limits; do not silently promote a scripted rehearsal.
-5. Reconcile plan, checkpoint, current entrypoints and tracker after a reviewed change.
+3. Read the relevant claim/context and actual dated evidence. The H1 map has 805 cells across 35 claim families and 23 contexts; no comprehensive clinical review is claimed.
+4. For H6, finalize the [evaluation protocol](../research/robustness/h6/evaluation-plan.json): sample-size rationale, scoring rubric, practical improvement margins and review before actual consenting-user observations. Prepared protocol text is not completion evidence; do not invent participants or substitute agent responses for people.
+5. Reconcile plan, checkpoint, current status summaries and tracker after a reviewed change.
 
 ```bash
 node research/robustness/audit.mjs --as-of YYYY-MM-DD
@@ -31,4 +35,6 @@ python research/robustness/h8/rebuild.py
 node research/robustness/h8/rehearse.mjs
 ```
 
-Provider reviews are due 9 December 2026, H2-A by 5 February 2027 and other claim reviews by 7 February 2027, or earlier upon consequential reuse or new contrary evidence. Research reuse through 7 November 2027 is an objective, not guaranteed currency. No automatic monitoring is installed. Private email/account history belongs in the private handoff, not this repository.
+For a later repetition of H8, use the [cold-start task](../research/robustness/h8/COLD_START_TASK.md) with a separate context and no inherited chat or prepared answer sheet. A new visible chat is optional; record actual isolation and prior knowledge.
+
+Provider reviews are due 9 December 2026, H2-A by 5 February 2027 and other claim reviews by 7 February 2027, or earlier on consequential reuse/new evidence. Reuse through 7 November 2027 is an objective, not guaranteed currency. No automatic monitoring is installed. Private email/account history belongs in the private handoff, not this repository.

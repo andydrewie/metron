@@ -1,0 +1,13 @@
+{
+  "asOf": "2026-11-10T03:23:12.958719+00:00",
+  "positiveReferenceVerified": true,
+  "referenceCoreGitBlob": "d36da7246aabbad91b92debb2a52011468a39ebb",
+  "originalCaseValuesPreserved": true,
+  "maximumDifferenceKcal": 2.842170943040401e-14,
+  "counterexample": "Temporary isolated tree with the pinned core plus one comment; original repository core untouched.",
+  "counterexampleGitBlob": "dd8157a2d8cc33c1b9144046866aff103695626d",
+  "changedCoreExitCode": 1,
+  "changedCoreStdout": "",
+  "changedCoreStderr": "Refusing replay: core/model.js differs from the pinned reference core.",
+  "scope": "Only the new reference-identity guard and unchanged prior numeric results were rechecked."
+}

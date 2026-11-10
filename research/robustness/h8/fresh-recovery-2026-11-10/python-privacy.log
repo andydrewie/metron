@@ -1,0 +1,13 @@
+test_comma_delimited_file_with_tsv_extension_and_safe_eligibility (test_probe_zenodo.ProbeTests.test_comma_delimited_file_with_tsv_extension_and_safe_eligibility) ... ok
+test_mutable_manifest_md5_cannot_substitute_unreviewed_source_bytes (test_probe_zenodo.ProbeTests.test_mutable_manifest_md5_cannot_substitute_unreviewed_source_bytes) ... ok
+test_refuse_missing_license_without_attempting_to_fetch_rows (test_probe_zenodo.ProbeTests.test_refuse_missing_license_without_attempting_to_fetch_rows) ... ok
+test_tsv_only_emits_header_candidates_not_row_values (test_probe_zenodo.ProbeTests.test_tsv_only_emits_header_candidates_not_row_values) ... ok
+test_understand_record_level_license_only (test_probe_zenodo.ProbeTests.test_understand_record_level_license_only) ... ok
+test_unknown_header_and_xlsx_participant_string_never_leak (test_probe_zenodo.ProbeTests.test_unknown_header_and_xlsx_participant_string_never_leak) ... ok
+test_unrecognized_source_codes_are_not_echoed_from_field_quality (test_probe_zenodo.ProbeTests.test_unrecognized_source_codes_are_not_echoed_from_field_quality) ... ok
+test_xlsx_only_returns_first_row_text_and_no_participant_values (test_probe_zenodo.ProbeTests.test_xlsx_only_returns_first_row_text_and_no_participant_values) ... ok
+
+----------------------------------------------------------------------
+Ran 8 tests in 0.003s
+
+OK

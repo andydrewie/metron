@@ -1,0 +1,443 @@
+{
+  "asOf": "2026-11-10",
+  "valid": true,
+  "errors": [],
+  "warnings": [
+    "20 sources have no recorded current content review"
+  ],
+  "sourceReviews": [
+    {
+      "id": "science",
+      "state": "unreviewed",
+      "ageDays": null
+    },
+    {
+      "id": "core",
+      "state": "unreviewed",
+      "ageDays": null
+    },
+    {
+      "id": "g3",
+      "state": "within-policy-window",
+      "ageDays": 1
+    },
+    {
+      "id": "g4",
+      "state": "within-policy-window",
+      "ageDays": 1
+    },
+    {
+      "id": "accounting",
+      "state": "unreviewed",
+      "ageDays": null
+    },
+    {
+      "id": "events",
+      "state": "unreviewed",
+      "ageDays": null
+    },
+    {
+      "id": "providers",
+      "state": "unreviewed",
+      "ageDays": null
+    },
+    {
+      "id": "readiness-protocol",
+      "state": "unreviewed",
+      "ageDays": null
+    },
+    {
+      "id": "mifflin-1990",
+      "state": "within-policy-window",
+      "ageDays": 1
+    },
+    {
+      "id": "cunningham-1980",
+      "state": "within-policy-window",
+      "ageDays": 1
+    },
+    {
+      "id": "compendium",
+      "state": "within-policy-window",
+      "ageDays": 1
+    },
+    {
+      "id": "ten-haaf-2014",
+      "state": "within-policy-window",
+      "ageDays": 1
+    },
+    {
+      "id": "weijs-2008",
+      "state": "within-policy-window",
+      "ageDays": 1
+    },
+    {
+      "id": "tinsley-2019",
+      "state": "within-policy-window",
+      "ageDays": 1
+    },
+    {
+      "id": "sordi-2024",
+      "state": "within-policy-window",
+      "ageDays": 1
+    },
+    {
+      "id": "siedler-2023",
+      "state": "within-policy-window",
+      "ageDays": 1
+    },
+    {
+      "id": "who-classifications",
+      "state": "unreviewed",
+      "ageDays": null
+    },
+    {
+      "id": "who-icf",
+      "state": "unreviewed",
+      "ageDays": null
+    },
+    {
+      "id": "fair",
+      "state": "unreviewed",
+      "ageDays": null
+    },
+    {
+      "id": "prov-o",
+      "state": "unreviewed",
+      "ageDays": null
+    },
+    {
+      "id": "semantic-contract",
+      "state": "unreviewed",
+      "ageDays": null
+    },
+    {
+      "id": "ui",
+      "state": "unreviewed",
+      "ageDays": null
+    },
+    {
+      "id": "ui-copy",
+      "state": "unreviewed",
+      "ageDays": null
+    },
+    {
+      "id": "input-contract",
+      "state": "unreviewed",
+      "ageDays": null
+    },
+    {
+      "id": "output-contract",
+      "state": "unreviewed",
+      "ageDays": null
+    },
+    {
+      "id": "types",
+      "state": "unreviewed",
+      "ageDays": null
+    },
+    {
+      "id": "g3-data",
+      "state": "within-policy-window",
+      "ageDays": 1
+    },
+    {
+      "id": "g3-protocol",
+      "state": "within-policy-window",
+      "ageDays": 1
+    },
+    {
+      "id": "sensitivity",
+      "state": "unreviewed",
+      "ageDays": null
+    },
+    {
+      "id": "pilot",
+      "state": "unreviewed",
+      "ageDays": null
+    },
+    {
+      "id": "future",
+      "state": "unreviewed",
+      "ageDays": null
+    },
+    {
+      "id": "readiness-methods",
+      "state": "unreviewed",
+      "ageDays": null
+    },
+    {
+      "id": "h2a-aasm-2015",
+      "state": "within-policy-window",
+      "ageDays": 3
+    },
+    {
+      "id": "h2a-acsm-2026",
+      "state": "within-policy-window",
+      "ageDays": 3
+    },
+    {
+      "id": "h2a-delval-2026",
+      "state": "within-policy-window",
+      "ageDays": 3
+    },
+    {
+      "id": "h2a-knowles-2022",
+      "state": "within-policy-window",
+      "ageDays": 3
+    },
+    {
+      "id": "h2a-borba-2024",
+      "state": "within-policy-window",
+      "ageDays": 3
+    },
+    {
+      "id": "h2a-edwards-2025",
+      "state": "within-policy-window",
+      "ageDays": 3
+    },
+    {
+      "id": "h2a-schoenfeld-2019",
+      "state": "within-policy-window",
+      "ageDays": 3
+    },
+    {
+      "id": "h2a-laurent-2011",
+      "state": "within-policy-window",
+      "ageDays": 3
+    },
+    {
+      "id": "h2a-shattock-2022",
+      "state": "within-policy-window",
+      "ageDays": 3
+    },
+    {
+      "id": "h2a-silbernagel-2007",
+      "state": "within-policy-window",
+      "ageDays": 3
+    },
+    {
+      "id": "h2a-rothschild-2024",
+      "state": "within-policy-window",
+      "ageDays": 3
+    },
+    {
+      "id": "h2a-reforms-2024",
+      "state": "within-policy-window",
+      "ageDays": 3
+    },
+    {
+      "id": "h2a-sikorski-2013",
+      "state": "within-policy-window",
+      "ageDays": 3
+    },
+    {
+      "id": "h2b-cunningham-1991",
+      "state": "within-policy-window",
+      "ageDays": 1
+    },
+    {
+      "id": "h2b-brandl-2026",
+      "state": "within-policy-window",
+      "ageDays": 1
+    },
+    {
+      "id": "h2b-kfir-2023",
+      "state": "within-policy-window",
+      "ageDays": 1
+    },
+    {
+      "id": "h2b-cai-2026",
+      "state": "within-policy-window",
+      "ageDays": 1
+    },
+    {
+      "id": "h2b-dong-2026",
+      "state": "within-policy-window",
+      "ageDays": 1
+    },
+    {
+      "id": "h2b-delbiondo-2026",
+      "state": "within-policy-window",
+      "ageDays": 1
+    },
+    {
+      "id": "h2b-xu-2026",
+      "state": "within-policy-window",
+      "ageDays": 1
+    },
+    {
+      "id": "h2c-fao-2004",
+      "state": "within-policy-window",
+      "ageDays": 1
+    },
+    {
+      "id": "h2c-byrne-2005",
+      "state": "within-policy-window",
+      "ageDays": 1
+    },
+    {
+      "id": "h2c-ludlow-2016",
+      "state": "within-policy-window",
+      "ageDays": 1
+    },
+    {
+      "id": "h2c-han-2026",
+      "state": "within-policy-window",
+      "ageDays": 1
+    },
+    {
+      "id": "h2c-scherrenberg-2022",
+      "state": "within-policy-window",
+      "ageDays": 1
+    },
+    {
+      "id": "h2c-wang-1992",
+      "state": "within-policy-window",
+      "ageDays": 1
+    },
+    {
+      "id": "h2c-kyle-2004",
+      "state": "within-policy-window",
+      "ageDays": 1
+    },
+    {
+      "id": "h2c-carter-2026",
+      "state": "within-policy-window",
+      "ageDays": 1
+    },
+    {
+      "id": "h2c-apple-hrv",
+      "state": "within-policy-window",
+      "ageDays": 1
+    },
+    {
+      "id": "h2c-apple-queries",
+      "state": "within-policy-window",
+      "ageDays": 1
+    },
+    {
+      "id": "h2c-apple-auth",
+      "state": "within-policy-window",
+      "ageDays": 1
+    },
+    {
+      "id": "h2c-apple-condensed",
+      "state": "within-policy-window",
+      "ageDays": 1
+    },
+    {
+      "id": "h2c-whoop-cycle",
+      "state": "within-policy-window",
+      "ageDays": 1
+    },
+    {
+      "id": "h2c-whoop-recovery",
+      "state": "within-policy-window",
+      "ageDays": 1
+    },
+    {
+      "id": "h2c-garmin",
+      "state": "within-policy-window",
+      "ageDays": 1
+    },
+    {
+      "id": "h2d-careau-2021",
+      "state": "within-policy-window",
+      "ageDays": 1
+    },
+    {
+      "id": "h2d-howard-2025",
+      "state": "within-policy-window",
+      "ageDays": 1
+    },
+    {
+      "id": "h2d-yegian-2026",
+      "state": "within-policy-window",
+      "ageDays": 1
+    },
+    {
+      "id": "h2d-knaan-2026",
+      "state": "within-policy-window",
+      "ageDays": 1
+    },
+    {
+      "id": "h2d-nist-prediction",
+      "state": "within-policy-window",
+      "ageDays": 1
+    },
+    {
+      "id": "h2d-shcherbina-2017",
+      "state": "within-policy-window",
+      "ageDays": 1
+    },
+    {
+      "id": "h2e-hall-2011",
+      "state": "within-policy-window",
+      "ageDays": 1
+    },
+    {
+      "id": "h2e-hall-appendix",
+      "state": "within-policy-window",
+      "ageDays": 1
+    },
+    {
+      "id": "h2e-sanghvi-2015",
+      "state": "within-policy-window",
+      "ageDays": 1
+    },
+    {
+      "id": "h2e-niddk-planner",
+      "state": "within-policy-window",
+      "ageDays": 1
+    },
+    {
+      "id": "h4-tenhaaf-s001",
+      "state": "within-policy-window",
+      "ageDays": 1
+    }
+  ],
+  "gateStates": [
+    {
+      "id": "H0",
+      "state": "complete"
+    },
+    {
+      "id": "H1",
+      "state": "complete"
+    },
+    {
+      "id": "H2",
+      "state": "complete"
+    },
+    {
+      "id": "H3",
+      "state": "complete"
+    },
+    {
+      "id": "H4",
+      "state": "complete"
+    },
+    {
+      "id": "H5",
+      "state": "complete"
+    },
+    {
+      "id": "H6",
+      "state": "blocked"
+    },
+    {
+      "id": "H7",
+      "state": "complete"
+    },
+    {
+      "id": "H8",
+      "state": "blocked"
+    }
+  ],
+  "openWeaknesses": [
+    "W08",
+    "W10"
+  ],
+  "meaning": "Record integrity and review-age policy only; no scientific validity, independent reconstruction or exhaustive coverage established."
+}

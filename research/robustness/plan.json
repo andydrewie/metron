@@ -2,16 +2,16 @@
   "schemaVersion": "1.0.0",
   "documentType": "metron.robustness.execution-plan",
   "programId": "METRON-ROBUST-001",
-  "asOf": "2026-11-09",
+  "asOf": "2026-11-10",
   "status": "in-progress",
   "reuseHorizonThrough": "2027-11-07",
   "horizonMeaning": "Design and maintenance objective, not a guarantee of future scientific currency",
   "baselineCommit": "2a9cc6cc45832abcbe0ce57454562d605715fc49",
   "corpus": "research/robustness/corpus.json",
   "dashboard": "https://github.com/andydrewie/metron/issues/22",
-  "currentGate": "H8",
+  "currentGate": "H6",
   "completedStudy": "research/ree-validation/plan.json",
-  "coverage": "Seven of nine gates complete: H0–H5 and H7 at declared scope. H6 human comprehension and H8 independent cold-start evidence remain blocked. All clinical matrix cells remain unreviewed.",
+  "coverage": "Eight of nine gates complete at declared scope: H0–H5, H7 and H8. H6 remains blocked on actual-user comprehension and decision-usefulness evidence. Clinical applicability remains unreviewed.",
   "scope": [
     "energy quantities and model assumptions",
     "clinical applicability and physiological states",
@@ -288,7 +288,7 @@
     {
       "id": "H8",
       "name": "Reconstruction and maintenance",
-      "state": "blocked",
+      "state": "complete",
       "dependsOn": [
         "H1",
         "H7"
@@ -305,14 +305,18 @@
         "research/robustness/h8/COLD_START_TASK.md",
         "research/robustness/h8/rebuild.py",
         "research/robustness/h8/rehearse.mjs",
-        "research/robustness/h8/frozen-study.mjs"
+        "research/robustness/h8/frozen-study.mjs",
+        "research/robustness/h8/fresh-recovery-2026-11-10/RECOVERY.md",
+        "research/robustness/h8/fresh-recovery-2026-11-10/record.json",
+        "research/robustness/h8/acceptance.json"
       ],
-      "closure": null,
-      "blockedCriteria": [
-        2
-      ],
-      "blocker": "No genuinely fresh agent has performed and recorded recovery; same-agent scripted rehearsal cannot establish it.",
-      "completedWork": "Bounded cross-language rebuild and historical replay; maintenance rehearsal; clean-checkout verification recorded separately."
+      "closure": {
+        "reviewedAt": "2026-11-10",
+        "reviewerRole": "Maintaining agent assessing a separate worker launched without inherited conversation; not independent personnel certification",
+        "scope": "One fresh-context recovery of verified main, synthetic historical replay, bounded documented calculation and maintenance drills; observed navigation drift repaired.",
+        "acceptanceReview": "All four criteria reviewed in h8/acceptance.json. Actual navigation, initial stale checkout, ambiguities, commands and outputs retained. H6, clinical unknowns and manual-only evidence monitoring remain explicit."
+      },
+      "completedWork": "Separate fresh-context record, synthetic historical replay, four-case Decimal transcription, prior clean-checkout study reproduction and maintenance drills; original observations retained and current-entrypoint contradictions repaired."
     }
   ],
   "weaknesses": [
@@ -447,20 +451,23 @@
       "gate": "H0",
       "ownerRole": "Maintaining agent",
       "state": "resolved",
-      "finding": "research/README.md and llms.txt denied measured benchmark/results after G3; roadmap ordering needed reconciliation with the new priority.",
+      "finding": "Earlier source-status drift recurred after PR #28 in SCIENCE, RESEARCH, ROADMAP and research/README; H8 also found README calling the whole research directory unrun. Current summaries were reconciled against the canonical plan and retained study results.",
       "evidence": [
         "research/README.md",
         "docs/ROADMAP.md",
         "llms.txt"
       ],
-      "nextTest": "Reconcile current entrypoints and make the scoped baseline and future drift checks explicit.",
+      "nextTest": "Check current status summaries against the canonical plan at each consequential checkpoint; preserve dated historical evidence.",
       "resolutionEvidence": [
         "research/README.md",
         "docs/ROADMAP.md",
         "docs/navigation.json",
-        "llms.txt"
+        "llms.txt",
+        "docs/SCIENCE.md",
+        "docs/RESEARCH.md",
+        "research/robustness/h8/acceptance.json"
       ],
-      "residual": "Future documentation drift remains possible; H8 must exercise maintenance."
+      "residual": "Future drift remains possible; the separate recovery exposed the limits of link and structural tests."
     },
     {
       "id": "W08",
@@ -468,18 +475,20 @@
       "severity": "medium",
       "gate": "H8",
       "ownerRole": "Reconstruction reviewer",
-      "state": "open",
-      "finding": "Spec-based Python rebuild and scripted navigation rehearsal completed; independent cold-start evidence missing.",
+      "state": "resolved",
+      "finding": "A separate no-history worker recovered verified current main, capabilities, decisions, evidence limits and next work, with actual navigation and failures recorded.",
       "evidence": [
         "AGENTS.md",
         "docs/navigation.json",
         "docs/API.md"
       ],
-      "nextTest": "Run H8/COLD_START_TASK.md in a genuinely fresh agent context.",
+      "nextTest": "Repeat bounded recovery after consequential navigation or reconstruction changes; disclose context inheritance and prior implementation exposure.",
       "resolutionEvidence": [
-        "research/robustness/h8/README.md"
+        "research/robustness/h8/README.md",
+        "research/robustness/h8/fresh-recovery-2026-11-10/RECOVERY.md",
+        "research/robustness/h8/acceptance.json"
       ],
-      "residual": "Same analyst cannot certify absence of prior context."
+      "residual": "One same-model-family worker and shared runtime; not a universal agent success guarantee, independent personnel review or physiological validation."
     },
     {
       "id": "W09",
@@ -522,8 +531,8 @@
     }
   ],
   "nextTask": {
-    "gate": "H8",
-    "action": "Execute H8/COLD_START_TASK.md in a genuinely new agent context and record actual recovery. H6 remains blocked on real-user evidence; calibration remains unimplemented.",
+    "gate": "H6",
+    "action": "Finalize the H6 human-comprehension evaluation protocol (sample-size rationale, scoring rubric, practical margins and review), then obtain actual consenting-user observations. Personal calibration remains unimplemented without an admitted longitudinal reference dataset.",
     "userAuthorization": "Execute all remaining gates without per-gate reconfirmation; do not fabricate unavailable evidence."
   },
   "trackPrerequisites": {

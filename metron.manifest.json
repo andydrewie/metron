@@ -9,7 +9,7 @@
     "repositoryPublished": true,
     "pagesTarget": "https://andydrewie.github.io/metron/",
     "pagesVerifiedLive": true,
-    "packageVersion": "0.2.0-alpha.4",
+    "packageVersion": "0.2.0-alpha.5",
     "modelVersion": "0.1.0",
     "maturity": "public-exploratory-alpha"
   },
@@ -88,7 +88,9 @@
     "externalRmrReplication": "./research/robustness/h4/README.md",
     "coldStartTask": "./research/robustness/h8/COLD_START_TASK.md",
     "coldStartRecovery": "./research/robustness/h8/fresh-recovery-2026-11-10/RECOVERY.md",
-    "reconstructionAcceptance": "./research/robustness/h8/acceptance.json"
+    "reconstructionAcceptance": "./research/robustness/h8/acceptance.json",
+    "browserFormState": "./ui/form-state.js",
+    "evidenceFreshness": "./research/robustness/freshness.mjs"
   },
   "implemented": {
     "energyEstimate": true,

@@ -1,6 +1,6 @@
 # Headless API — implemented surface
 
-**Status:** executable today, zero runtime dependencies, Node >=20 for CLI scripts. This file describes `core/model.js`, not the proposed future Metron research APIs.
+**Status:** executable today, zero runtime dependencies, Node >=20 for CLI scripts. This file describes `core/model.js` and the separately identified browser/research adapters, not proposed future APIs.
 
 ## Exported functions
 
@@ -66,3 +66,9 @@ Plain data objects only; accessor and prototype-bearing class instances are reje
 CLI arguments are exact and errors use fixed messages without echoing inputs or file paths. Input is limited to 1 MiB. The browser disables stale results/exports on invalid entry and leaves optional BF blank. Its exported wrapper adds `inputOrigins` (example-default, user-entered, fallback-default, unknown); this is not a measurement/provenance adapter or a new core input field.
 
 Legacy `recommendation`, `restRecommended` and status names remain for compatibility and numerical-model identity. Treat them as illustrative rule outputs, never training clearance or safe/optimal dose. See ADR-0007 and H5. Numerical model version 0.1.0 is unchanged; the package version records validation and presentation changes.
+
+## Browser form contract in 0.2.0-alpha.5
+
+[`ui/form-state.js`](../ui/form-state.js) owns immutable drafts and their `ready` or `invalid` result. Controls and labels track every edit, even while estimates are unavailable. Disabling composition clears BF/SMM and any Cunningham selection together; hidden optional-field events cannot restore those values. Cross-field validation marks the related controls. Correcting any conflicting value reruns the core validation.
+
+Export copies the input, origins and output captured for the displayed result's revision. An invalid or mismatched revision has no export. The displayed estimate keeps its existing rounding; exported output retains full precision. The wrapper shape, SDK/CLI, numerical model and historical studies are unchanged. This browser module is internal, not an additional package export.

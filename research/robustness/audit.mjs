@@ -8,14 +8,9 @@ import {auditH2B} from './h2b/audit.mjs';
 import {auditH2C} from './h2c/audit.mjs';
 import {auditReview} from './review-audit.mjs';
 import {createHash} from 'node:crypto';
+import {dateValue,assessSourceFreshness} from './freshness.mjs';
 
 const root = fileURLToPath(new URL('../../', import.meta.url));
-const day = 86400000;
-function dateValue(value) {
-  if (typeof value !== 'string' || !/^\d{4}-\d{2}-\d{2}$/.test(value)) return null;
-  const valueMs = Date.parse(value+'T00:00:00Z');
-  return Number.isFinite(valueMs) && new Date(valueMs).toISOString().slice(0,10) === value ? valueMs : null;
-}
 export function auditProgram(plan, corpus, {asOf, pathExists = () => true, h1, h2a, h2b, h2c, h2d, h2e, fileDigest} = {}) {
   const errors = [], warnings = [];
   const at = dateValue(asOf);
@@ -133,15 +128,10 @@ export function auditProgram(plan, corpus, {asOf, pathExists = () => true, h1, h
     if (!source.path && !source.url) errors.push(source.id+' lacks locator');
     if (source.path) path(source.path,source.id);
     if (source.url && !/^https:\/\//.test(source.url)) errors.push(source.id+' invalid URL');
-    const window = plan.freshnessPolicy?.sourceReviewWindowsDays?.[source.freshnessClass];
-    if (!Number.isInteger(window) || window < 1) errors.push(source.id+' lacks review window');
-    let state='unreviewed', ageDays=null;
-    if (source.sourceContentReviewedAt !== null) {
-      const n=dated(source.sourceContentReviewedAt,source.id);
-      if (!source.reviewScope) errors.push(source.id+' review date lacks inspection scope');
-      if (n!==null && at!==null && n<=at) {ageDays=(at-n)/day; state=ageDays>=window?'due':'within-policy-window';}
-    }
-    sourceReviews.push({id:source.id,state,ageDays});
+    try {
+      const {id,state,ageDays}=assessSourceFreshness(source,plan.freshnessPolicy,asOf);
+      sourceReviews.push({id,state,ageDays});
+    } catch(error) {errors.push(error.message);sourceReviews.push({id:source.id,state:'unreviewed',ageDays:null});}
   }
   if (corpus.comprehensiveClinicalReviewCompleted && corpus.contexts.some(c=>c.clinicalEvidenceReview!=='reviewed')) errors.push('Comprehensive clinical review claimed with unreviewed contexts');
   const unreviewed=sourceReviews.filter(s=>s.state==='unreviewed').length;

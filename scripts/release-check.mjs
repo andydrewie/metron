@@ -29,7 +29,7 @@ for(const path of [
  'docs/assets/architecture.svg','docs/assets/evidence-loop.svg',
  '.github/workflows/ci.yml','.github/workflows/pages.yml','docs/DEPLOYMENT.md','LICENSE'
 ]) check(await exists(path),`required source artifact missing: ${path}`);
-for(const path of ['dist/index.html','dist/styles.css','dist/design/tokens.css','dist/app.js','dist/core/model.js','dist/og.png','dist/.nojekyll']) check(await exists(path),`Pages build missing: ${path}`);
+for(const path of ['dist/index.html','dist/styles.css','dist/design/tokens.css','dist/app.js','dist/ui/form-state.js','dist/core/model.js','dist/og.png','dist/.nojekyll']) check(await exists(path),`Pages build missing: ${path}`);
 const allText=[readme,agent,html,pages,await read('docs/DESIGN.md'),await read('docs/DEPLOYMENT.md')].join('\n').toLowerCase();
 check(!allText.includes(['set','state'].join('')),'retired project name appears in release-facing text');
 console.log(`Metron ${pkg.version} — release preflight PASS (${Object.keys(manifest.entrypoints).length} manifest paths, ${Object.keys(tokens.cssVariables).length} tokens, GitHub Pages build complete).`);

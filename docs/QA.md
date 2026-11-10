@@ -1,8 +1,10 @@
 # QA · Metron Research Instrument
 
-**Current alpha.4 checkpoint, 9 November 2026:** 129 Node tests, 8 Python privacy tests, release preflight and hosted Chromium checks passed. Keyboard navigation, accessible names/roles, invalid-state propagation, export provenance and 320px/1280px layouts were checked. Four current synthetic screenshots were visually inspected. Exact source/run, methods, failed attempts and limits are recorded in [H7 verification](../research/robustness/h7/verification.json).
+**Alpha.5 local checkpoint, 10 November 2026:** 141 Node tests, eight Python privacy tests and release preflight passed. New transition regressions cover edits during invalidity, composition clearing, cross-field errors, snapshot exports and dated freshness without rewriting evidence. The hosted browser job now tests the built `dist/` artifact, including those control sequences and related field labels; inspect its commit-specific Checks result before release. This does not add human-comprehension evidence or alter gate status.
 
-Current captures: [mobile](assets/mobile.png), [readiness](assets/recovery.png), [body](assets/body.png), [desktop](assets/desktop.png). They use the checked source served over localhost in hosted CI, not a live Pages session. Actual screen-reader use, broad device coverage, human comprehension and whole-product physiological accuracy remain unestablished. The archived narrow/tablet captures belong to earlier releases.
+**Historical alpha.4 checkpoint, 9 November 2026:** 129 Node tests, 8 Python privacy tests, release preflight and hosted Chromium checks passed. Keyboard navigation, accessible names/roles, invalid-state propagation, export provenance and 320px/1280px layouts were checked. Four synthetic screenshots were visually inspected. Exact source/run, methods, failed attempts and limits are recorded in [H7 verification](../research/robustness/h7/verification.json).
+
+Alpha.4 captures: [mobile](assets/mobile.png), [readiness](assets/recovery.png), [body](assets/body.png), [desktop](assets/desktop.png). They use the checked source served over localhost in hosted CI, not a live Pages session. Actual screen-reader use, broad device coverage, human comprehension and whole-product physiological accuracy remain unestablished. The archived narrow/tablet captures belong to earlier releases.
 
 ## Historical alpha.3 pre-publication record
 

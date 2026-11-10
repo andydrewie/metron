@@ -148,6 +148,6 @@ MIT-licensed and open to corrections. Share reproducible counterexamples, better
 
 **[Contributing](./CONTRIBUTING.md)** · **[Research questions](./research/README.md)** · **[Design tokens](./design/tokens.json)** · **[Deployment instructions](./docs/DEPLOYMENT.md)** · **[Release QA](./docs/QA.md)**
 
-**Publication status:** Public source repository. The live Pages URL is available only once deployment completes successfully. **Source package:** `0.2.0-alpha.4`; **underlying calculation model:** `0.1.0`.
+**Publication status:** Public source repository. The live Pages URL is available only once deployment completes successfully. **Source package:** `0.2.0-alpha.5`; **underlying calculation model:** `0.1.0`.
 
 <div align="center"><sub>Complexity in the engine. Clarity in the cockpit. · MIT</sub></div>

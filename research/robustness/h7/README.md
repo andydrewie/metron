@@ -14,7 +14,9 @@
 | Hidden-tab focus and unsupported action wording | Focus selected tab; signal labels, illustrative disclosure and adjacent limits | Keyboard/accessible-name and interpretation checks |
 | Frozen study depended on mutable current core bytes | Isolated replay with byte-pinned historical core | Historical benchmark tests and H8 reproduction |
 
-Numerical model 0.1.0 and existing accepted-input calculations remain unchanged. Package 0.2.0-alpha.4 versions the interface/validation changes. Readiness SDK names are legacy heuristic fields, not a prescription API. No wearable ingestion or calibration ships.
+Numerical model 0.1.0 and existing accepted-input calculations remain unchanged. Package 0.2.0-alpha.4 versions the original interface/validation changes. Readiness SDK names are legacy heuristic fields, not a prescription API. No wearable ingestion or calibration ships.
+
+Alpha.5 maintenance adds a pure form reducer and regressions for composition toggles/slider labels during invalid entry, affected-field marking and result-bound exports. The current browser script serves the built `dist/` artifact and captures the corrected composition state in addition to the original four views. [QA](../../../docs/QA.md) and current PR checks supply the later verification; the original verification record above remains dated and unchanged.
 
 CI uses Node 22 without application dependencies, plus an isolated Playwright 1.58.0 browser job pinned to Ubuntu 24.04. The first browser job on ubuntu-latest (26.04) failed at dependency setup because that Playwright release does not support the new image; no UI test ran in that attempt. Local Chromium could not start under this execution environment's process/socket restriction; hosted browser checks are the verification path. Screenshots use only synthetic defaults. DOM accessible names, tab roles, keyboard behavior, 320px/desktop overflow and color-independent text are checked. This is not a real screen-reader user session or an exhaustive WCAG audit; H6 comprehension evidence remains open.
 

@@ -16,7 +16,9 @@ H8 was executed within the existing user thread using a separate agent with no i
 
 H4 analyzed a separate resting cohort: 89 eligible records, one transparently excluded under an existing BF bound. Cunningham's paired MAE difference is −104.5 kcal/day, 95% sampling interval −127.5 to −80.1. Published outcomes were already known; frozen protocol and amendment preceded newly inspected errors. Mifflin stays the general default and Cunningham an explicit option. Neither cohort validates combined TDEE, personal calorie targets, clinical use or readiness.
 
-Package 0.2.0-alpha.4 and numerical model 0.1.0 are unchanged by H8. Original G0–G4 and H4 evidence are preserved. Use H8's historical-core replay instead of editing old locks to match new code. H7's bounded browser/keyboard/label checks are not a screen-reader user study or clinical validation.
+The subsequent package 0.2.0-alpha.5 fixes browser form/result/export coherence and adds explicit-date evidence freshness to claim lookup. Controls remain responsive during invalid edits; disabling composition clears its inputs and selection. Query-time freshness does not rewrite historical review completion or clinical applicability. See [API](API.md) and the [freshness contract](../research/robustness/README.md#dated-claim-lookup).
+
+Numerical model 0.1.0, original G0–G4 and H4 evidence are preserved. Use H8's historical-core replay instead of editing old locks to match new code. H7's bounded browser/keyboard/label checks are not a screen-reader user study or clinical validation.
 
 ## Recover and act
 
@@ -28,7 +30,7 @@ Package 0.2.0-alpha.4 and numerical model 0.1.0 are unchanged by H8. Original G0
 
 ```bash
 node research/robustness/audit.mjs --as-of YYYY-MM-DD
-node research/robustness/inspect.mjs --claim C03 --context general-adult
+node research/robustness/inspect.mjs --claim C03 --context general-adult --as-of YYYY-MM-DD
 npm run ci
 npm run release:check
 python research/robustness/h8/rebuild.py

@@ -4,5 +4,7 @@ for (const asset of ['index.html','styles.css','app.js','favicon.svg','og.svg','
 await mkdir(`${to}/design`,{recursive:true});
 await cp('design/tokens.css',`${to}/design/tokens.css`);
 await cp('core/model.js',`${to}/core/model.js`);
+await mkdir(`${to}/ui`,{recursive:true});
+await cp('ui/form-state.js',`${to}/ui/form-state.js`);
 await writeFile(`${to}/.nojekyll`,'');
 console.log('Built dependency-free static site in dist/');

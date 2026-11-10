@@ -553,5 +553,18 @@
     "No private participant records in repository",
     "No new dataset analysis before relevant scope/evidence/measurement gates",
     "Research is independently valuable even without a shipped feature"
-  ]
+  ],
+  "latestMaintenance": {
+    "asOf": "2026-11-10",
+    "packageVersion": "0.2.0-alpha.5",
+    "scope": "Browser form/result/export coherence and explicit-date claim freshness; no numerical, scientific-scope or gate promotion.",
+    "evidence": [
+      "docs/API.md",
+      "ui/form-state.js",
+      "tests/form-state.test.js",
+      "research/robustness/freshness.mjs",
+      "tests/freshness.test.js",
+      "research/robustness/h7/browser_check.py"
+    ]
+  }
 }

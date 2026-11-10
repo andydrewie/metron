@@ -9,7 +9,8 @@ flowchart TD
     Core[Pure core/model.js]
     Types[core/model.d.ts] --> Core
     Schema[schemas/*.schema.json] --> CLI
-    Core --> Web[app.js + index.html]
+    Core --> Form[ui/form-state.js]
+    Form --> Web[app.js + index.html]
     Core --> CLI[bin/metron.mjs]
     Core --> SDK[External ESM consumers]
     Tests[tests/] --> Core
@@ -20,11 +21,11 @@ flowchart TD
 
 `normalizeInput`, `mifflinStJeor`, `fatFreeMassKg`, `cunninghamRmr`, `estimateEnergy`, `evaluateRecovery`, and `evaluate`. See [API](./API.md). The core is ESM, has zero runtime dependencies, does not contact external services, and has deterministic outputs from fixed inputs.
 
-The browser holds a local in-memory `state` and imports `evaluate`; it does **not** repeat the equations. It provides tabs for **Energy**, **Readiness** (internally `recovery`) and **Body**. JavaScript and CSS are served as static files; no user account is necessary. The CLI reads JSON from stdin or `--file` and prints JSON for agents.
+The browser's pure `ui/form-state.js` reducer owns drafts, validation state and immutable result snapshots; it calls the shared `evaluate`. `app.js` projects controls on every edit and displays/exports only the current valid snapshot. It provides tabs for **Energy**, **Readiness** (internally `recovery`) and **Body**. JavaScript and CSS are served as static files; no user account is necessary. The CLI reads JSON from stdin or `--file` and prints JSON for agents.
 
 ## Current model version vs packaging
 
-The deterministic model reports `modelVersion: 0.1.0`; the rebranded repository package is `0.2.0-alpha.3`. Renaming a project does not magically validate its math. Numerical coefficient changes should receive independent tests, rationale and release notes even when API signatures don't change.
+The deterministic model reports `modelVersion: 0.1.0`; the repository package is `0.2.0-alpha.5`. Interface versions do not establish physiological validity. Numerical coefficient changes should receive independent tests, rationale and release notes even when API signatures don't change.
 
 ## Important current limitations
 

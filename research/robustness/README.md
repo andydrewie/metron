@@ -75,6 +75,24 @@ An unknown review date is `unreviewed`, never “fresh.” The seed's imported l
 
 Search records must include queries, sources searched, date range, inclusion rules, unavailable material and disagreements. “Current” means current to a stated search cutoff and scope, not all information in existence. Recheck high-consequence claims before reuse even within a nominal interval. During inactive periods, freshness expires visibly; there is **no background monitor or scheduled refresh installed by this program**. A later scheduled job must have explicit scope and report actual coverage rather than refresh timestamps without inspection.
 
+### Dated claim lookup
+
+```bash
+node research/robustness/inspect.mjs --claim C30 --context general-adult --as-of 2026-11-10
+node research/robustness/inspect.mjs --as-of 2026-12-10
+```
+
+Use the actual assessment date before reuse; the examples are fixed reproduction dates. `freshness.mjs` supplies one source-age rule to both audit and lookup. Claim and context output includes `freshness.asOf`, `state`, source/review assessments, reasons and a next action. The overview assesses the listed sources and bounded reviews, not every clinical context.
+
+| Freshness state | Meaning |
+| --- | --- |
+| `not-assessed` | No `--as-of` supplied; historical snapshot only |
+| `unreviewed` | A required source, bounded review or selected context has no recorded inspection |
+| `within-policy-window` | All listed requirements are within their review-age windows |
+| `review-due` | At least one source-age limit or bounded-review deadline has been reached; other unknowns remain listed |
+
+The deadline day is already due. Invalid/future review dates fail visibly. An all-context claim lookup lists unreviewed contexts; general-adult completion cannot certify them. `evidenceStatus`, source review dates and H2 completion records remain historical facts. Due does not mean false; within-window does not mean clinically valid or free of new contradictory evidence. An active `under-review` state is not claimed because no active-review workflow is recorded. No source fetch, automatic timestamp refresh or background monitoring occurs.
+
 ## Reconstruct without the conversation
 
 A future agent starts at `AGENTS.md` → `docs/navigation.json` → this program → the relevant claim/source/decision. The existing implementation remains a reference; frozen research is reproducible independently of its UI.
@@ -84,7 +102,7 @@ H8's recorded exercise must recover: (1) current and superseded decisions; (2) c
 ## Inspect program integrity
 
 ```bash
-node research/robustness/audit.mjs --as-of 2026-11-07
+node research/robustness/audit.mjs --as-of YYYY-MM-DD
 npm run ci
 npm run release:check
 ```

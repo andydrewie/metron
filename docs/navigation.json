@@ -130,7 +130,9 @@
       "entry": "docs/INFORMATION_DESIGN.md",
       "next": [
         "docs/DESIGN.md",
-        "design/tokens.json"
+        "design/tokens.json",
+        "ui/form-state.js",
+        "tests/form-state.test.js"
       ],
       "status": "documented"
     },
@@ -325,7 +327,9 @@
         "research/robustness/h7/README.md",
         "research/robustness/h8/README.md",
         "research/robustness/h8/fresh-recovery-2026-11-10/RECOVERY.md",
-        "research/robustness/h8/acceptance.json"
+        "research/robustness/h8/acceptance.json",
+        "research/robustness/freshness.mjs",
+        "tests/freshness.test.js"
       ],
       "status": "research-question"
     }

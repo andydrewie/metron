@@ -13,7 +13,7 @@
 | H7 | Complete: privacy/input fixes, 129 Node tests, 8 Python privacy tests, hosted browser checks and four screenshot reviews |
 | H8 | Complete: recorded fresh-context navigation, historical synthetic replay, four-case Decimal transcription, maintenance drills and repaired current-document contradictions |
 
-Read [H4](h4/README.md) for the protocol/amendment, cohort limits and independent numerical reconstruction. Read [ADR-0007](../../docs/adr/0007-restrict-unvalidated-personal-decisions.md) for the interpretation restrictions. Package 0.2.0-alpha.4 changes interfaces; numerical model 0.1.0 is preserved. Original G0–G4 files remain unchanged.
+Read [H4](h4/README.md) for the protocol/amendment, cohort limits and independent numerical reconstruction. Read [ADR-0007](../../docs/adr/0007-restrict-unvalidated-personal-decisions.md) for the interpretation restrictions. Package 0.2.0-alpha.5 adds coherent browser drafts/results/exports and [dated claim freshness](README.md#dated-claim-lookup). Controls update during invalid edits; clearing composition cannot leave a hidden input eligible for export. Freshness reports due/unknown evidence without changing historical completion or applicability. Numerical model 0.1.0 and original G0–G4/H4 files are preserved. No gate is newly closed by these maintenance fixes.
 
 Read the original [H8 recovery record](h8/fresh-recovery-2026-11-10/RECOVERY.md) and [acceptance assessment](h8/acceptance.json). They distinguish the initial source snapshot from later repairs, separate context from independent personnel, and documented reconstruction from physiological validation. The new calculation was not blinded to repository implementation.
 

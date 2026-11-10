@@ -48,7 +48,7 @@ For structured discovery, read `docs/navigation.json` (stable route IDs, exact r
 | `core/model.d.ts` | Static types for published JS exports. |
 | `schemas/input.schema.json`, `schemas/output.schema.json` | Current JSON contracts. |
 | `bin/metron.mjs` | Current agent/CLI I/O adapter. |
-| `app.js`, `index.html`, `styles.css` | Browser presentation; no duplicate physiology formulas. |
+| `ui/form-state.js`, `app.js`, `index.html`, `styles.css` | Browser draft/result contract and presentation; no duplicate physiology formulas. |
 | `metron.manifest.json` | Machine-readable features, maturity flags and paths; validate against reality. |
 | `design/tokens.json` | Canonical visual design tokens; CSS generated through `scripts/build-tokens.mjs`. |
 | `docs/SCIENCE.md` | Assumptions, citations, documented limits. |
@@ -65,7 +65,7 @@ For structured discovery, read `docs/navigation.json` (stable route IDs, exact r
 
 - Caloric Allowance calculations; wearable ingestion/OAuth; WHOOP/Garmin/Apple Health parsers; Bayesian personalization; MCP server; empirical error bounds; validated individualized training prescriptions.
 
-**Do not convert proposed functions, endpoints or data contracts into advertised features.** Model version (0.1.0) is intentionally distinct from repository package version (0.2.0-alpha.4).
+**Do not convert proposed functions, endpoints or data contracts into advertised features.** Model version (0.1.0) is intentionally distinct from repository package version (0.2.0-alpha.5).
 
 ## Invariants — protect these
 
@@ -110,3 +110,5 @@ Historical G0–G4 reproduction uses `research/robustness/h8/frozen-study.mjs` a
 For a fresh-agent recovery request, distinguish conversation isolation from the visible chat. A separately invoked agent with no inherited conversation may perform the task in the same user thread. Record its exact prompt, context setting, prior knowledge, source revision, navigation and any coaching; a new visible chat alone does not establish independence. If an isolated context is unavailable, keep the criterion open. Verify current remote main before choosing a clean checkout; a clean historical checkout can still be stale. Reconcile status summaries in README, SCIENCE, RESEARCH, ROADMAP and research/README against the canonical plan, preserving dated historical evidence. See the H8 recovery record for the observations behind this rule.
 
 When changing observation completeness, test actual interval coverage alongside history/access/cap flags. Include partial, disjoint, DST and fully covering counterexamples; a positive access flag cannot certify a complete day. This rule applies to admission diagnostics, not physiological accuracy. See H3 measurement tests and review correction.
+
+For form changes, project controls before suppressing invalid results; keep export bound to the displayed draft revision and test dependent controls while another field is invalid. For evidence reuse, supply an explicit assessment date to claim lookup; historical review completion never implies present freshness or reviewed clinical applicability. Preserve dated records and report missing context reviews independently.

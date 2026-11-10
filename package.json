@@ -1,6 +1,6 @@
 {
   "name": "metron-energy-readiness",
-  "version": "0.2.0-alpha.4",
+  "version": "0.2.0-alpha.5",
   "private": true,
   "description": "Open, headless energy and recovery estimates with an inspectable mobile-first fitness instrument.",
   "type": "module",
@@ -19,7 +19,7 @@
   },
   "scripts": {
     "test": "node --test",
-    "check": "node --check app.js && node --check core/model.js && node --check bin/metron.mjs",
+    "check": "node --check app.js && node --check ui/form-state.js && node --check core/model.js && node --check bin/metron.mjs",
     "build": "node scripts/build-tokens.mjs && node scripts/build-site.mjs",
     "dev": "node scripts/serve.mjs",
     "ci": "npm run check && npm test && npm run build",

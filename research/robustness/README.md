@@ -40,7 +40,7 @@ Dependencies in `plan.json` are authoritative. H2 and H3 follow H1; H4 and H5 ca
 
 Gate progress is claim- and domain-specific. Any partial passage must name its exact scope, evidence and outstanding criteria; it does not close the whole gate. `complete` means all declared acceptance criteria for that gate are reviewed, with evidence. Negative results and explicit no-go decisions can satisfy an investigation; they cannot be relabeled as successful physiological validation. The audit command never promotes a gate automatically.
 
-**Immediate next task:** finalize the [H6 evaluation protocol](h6/evaluation-plan.json) before actual consenting-user observations. H8 has a retained [fresh-context recovery record](h8/fresh-recovery-2026-11-10/RECOVERY.md); no further chat transfer is needed to close it. Human evidence and longitudinal calibration data cannot be replaced by implementation or paperwork.
+**Immediate next task:** obtain independent human methods/accessibility review and named study operation for the [prepared H6 protocol](h6/PROTOCOL.md), then collect consenting-user observations. The 40-person design, five tasks, rubric, margins and missingness/stop rules are specified; no participants have been recruited or evaluated. H8 has a retained [fresh-context recovery record](h8/fresh-recovery-2026-11-10/RECOVERY.md); no further chat transfer is needed to close it. Human evidence and longitudinal calibration data cannot be replaced by implementation or paperwork.
 
 ## A multidimensional applicability map
 

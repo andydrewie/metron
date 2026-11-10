@@ -6,7 +6,7 @@
 
 Copy this into a future chat, optionally with the conversation link:
 
-> Continue Metron from https://github.com/andydrewie/metron/blob/main/docs/CONTINUE.md. Read current main, AGENTS.md, the manifest, robustness plan and linked evidence. The user authorized execution of the remaining robustness work. At this checkpoint eight of nine gates are complete, including H8's recorded fresh-context recovery. Continue the next executable H6 protocol work while preserving its missing actual-user evidence, unimplemented calibration and all scientific limits. If this checkpoint is superseded, follow current verified state. A shared chat is supplementary; do not assume perfect memory or access to it.
+> Continue Metron from https://github.com/andydrewie/metron/blob/main/docs/CONTINUE.md. Read current main, AGENTS.md, the manifest, robustness plan and linked evidence. The user authorized execution of the remaining robustness work. At this checkpoint eight of nine gates are complete, including H8's recorded fresh-context recovery. H6 protocol v1 is prepared, not run. Continue with a named study lead and independent human methods/accessibility review before consenting-user sessions, preserving missing actual-user evidence, unimplemented calibration and all scientific limits. If this checkpoint is superseded, follow current verified state. A shared chat is supplementary; do not assume perfect memory or access to it.
 
 ## Checkpoint
 
@@ -25,10 +25,11 @@ Numerical model 0.1.0, original G0–G4 and H4 evidence are preserved. Use H8's 
 1. Verify remote main, the checked-out commit, open PRs and [tracker #22](https://github.com/andydrewie/metron/issues/22). A clean historical checkout can still be stale.
 2. Follow AGENTS.md, docs/navigation.json, metron.manifest.json and docs/adr/index.json.
 3. Read the relevant claim/context and actual dated evidence. The H1 map has 805 cells across 35 claim families and 23 contexts; no comprehensive clinical review is claimed.
-4. For H6, finalize the [evaluation protocol](../research/robustness/h6/evaluation-plan.json): sample-size rationale, scoring rubric, practical improvement margins and review before actual consenting-user observations. Prepared protocol text is not completion evidence; do not invent participants or substitute agent responses for people.
+4. For H6, use the prepared [evaluation protocol](../research/robustness/h6/PROTOCOL.md): 40 adults, parallel wording allocation, five tasks, fixed rubric/margins and missingness/stop rules. A named study lead must obtain independent human methods/accessibility review and complete the private run manifest before consenting-user sessions. The kit has zero observations; do not invent participants or substitute agent responses for people. No recruitment is authorized by an arithmetic check.
 5. Reconcile plan, checkpoint, current status summaries and tracker after a reviewed change.
 
 ```bash
+node research/robustness/h6/check.mjs
 node research/robustness/audit.mjs --as-of YYYY-MM-DD
 node research/robustness/inspect.mjs --claim C03 --context general-adult --as-of YYYY-MM-DD
 npm run ci

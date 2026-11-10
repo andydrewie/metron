@@ -90,7 +90,9 @@
     "coldStartRecovery": "./research/robustness/h8/fresh-recovery-2026-11-10/RECOVERY.md",
     "reconstructionAcceptance": "./research/robustness/h8/acceptance.json",
     "browserFormState": "./ui/form-state.js",
-    "evidenceFreshness": "./research/robustness/freshness.mjs"
+    "evidenceFreshness": "./research/robustness/freshness.mjs",
+    "comprehensionStudyProtocol": "./research/robustness/h6/PROTOCOL.md",
+    "comprehensionProtocolCheck": "./research/robustness/h6/check.mjs"
   },
   "implemented": {
     "energyEstimate": true,

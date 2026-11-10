@@ -1,0 +1,204 @@
+{
+  "protocolId": "METRON-H6-COMP-001",
+  "protocolVersion": "1.0.0",
+  "presentation": "Same neutral text-card format in each arm; no condition name or answer key shown. This tests selected wording, not full app layout or clinical outcomes.",
+  "tasks": [
+    {
+      "id": "T1",
+      "kind": "primary",
+      "claims": [
+        "C03",
+        "C09",
+        "C33"
+      ],
+      "title": "Daily energy",
+      "scenario": "Alex opens a calculator for a hypothetical day. The display reads: ESTIMATED DAILY EXPENDITURE · 2,500 kcal / day.",
+      "wording": {
+        "H": [
+          "An estimate, not a measurement"
+        ],
+        "R": [
+          "Illustrative estimate · Rounded to 50 kcal · Not an intake target"
+        ]
+      },
+      "sourceFiles": [
+        "index.html"
+      ],
+      "questions": [
+        "What does this number tell Alex, and what does it leave unanswered?",
+        "Alex wants to choose how much to eat tomorrow. What would you suggest Alex do with this number, and why?"
+      ],
+      "rubric": {
+        "comprehension2": "Identifies a model-based expenditure estimate and explicitly rejects measured personal burn or a prescribed intake target; rounding is display precision.",
+        "comprehension1": "Calls it an estimate but does not distinguish expenditure from an intake decision.",
+        "comprehension0": "Treats the number as measured burn, an exact personal quantity or an intake prescription, or provides no interpretable explanation.",
+        "decision2": "Uses it only as a rough expenditure reference, seeks goal/context and suitable additional evidence before selecting intake; does not infer a diet target from this alone.",
+        "decision1": "Expresses caution or requests more information without a usable boundary-aware next step.",
+        "decision0": "Prescribes intake from the displayed number alone or gives no interpretable action.",
+        "critical": "Explicitly says the display measures Alex’s actual burn or authorizes a personal calorie target. Mere uncertainty or an unanswered question is not a critical interpretation."
+      }
+    },
+    {
+      "id": "T2",
+      "kind": "primary",
+      "claims": [
+        "C01",
+        "C02",
+        "C10",
+        "C33"
+      ],
+      "title": "Two resting estimates",
+      "scenario": "For the same hypothetical profile, Mifflin–St Jeor displays 1,749 kcal/day and Cunningham displays 1,750 kcal/day.",
+      "syntheticInput": {
+        "profile": {
+          "weightKg": 80,
+          "heightCm": 175,
+          "ageYears": 30,
+          "equationSex": "male",
+          "bodyFatPercent": 28.98
+        }
+      },
+      "wording": {
+        "H": [
+          "Model disagreement represents estimation uncertainty—not a guaranteed metabolic advantage. Neither equation is universally accurate."
+        ],
+        "R": [
+          "The difference between equations is not a personal error range. Neither equation is universally accurate; body-composition method and population matter."
+        ]
+      },
+      "sourceFiles": [
+        "index.html"
+      ],
+      "questions": [
+        "What can Alex conclude from these two numbers being close?",
+        "Alex wants a personal error range. What would be a reasonable next step, and why?"
+      ],
+      "rubric": {
+        "comprehension2": "Explains agreement between models does not establish accuracy and their difference is not a personal error/prediction interval.",
+        "comprehension1": "Questions accuracy but omits the personal-range distinction, or vice versa.",
+        "comprehension0": "Claims agreement proves accuracy or bounds personal error, or gives no interpretable explanation.",
+        "decision2": "Retains uncertainty and seeks an appropriate independent reference/validated prediction evaluation; does not manufacture a range by subtraction or averaging.",
+        "decision1": "Declines to infer a range without explaining a relevant next source of evidence.",
+        "decision0": "Uses the one-kcal difference or midpoint as a validated personal range, or gives no interpretable action.",
+        "critical": "Explicitly treats agreement as proof of personal accuracy or the model gap as a calibrated personal interval."
+      }
+    },
+    {
+      "id": "T5",
+      "kind": "primary",
+      "claims": [
+        "C08",
+        "C14",
+        "C15",
+        "C35"
+      ],
+      "title": "Readiness wording",
+      "scenario": "Alex entered sleep 7.5 h, energy good, week fresh, muscles/joints fine, and usual sets 14. The display below was produced. Later Alex notices knee discomfort during a warm-up; the inputs have not been updated.",
+      "syntheticInput": {
+        "recovery": {
+          "sleepHours": 7.5,
+          "energy": "good",
+          "weekly": "fresh",
+          "musculoskeletal": "fine",
+          "usualMuscleSets": 14
+        }
+      },
+      "wording": {
+        "H": [
+          "TRAINING DECISION SUPPORT",
+          "GREEN DAY",
+          "Ready for your full session",
+          "13–14 working sets / target muscle",
+          "Heuristic guidance · Not medically validated"
+        ],
+        "R": [
+          "READINESS REFLECTION",
+          "FEWER SIGNALS",
+          "Fewer caution signals entered",
+          "13–14 illustrative sets / target muscle; not a training target",
+          "No validated training clearance, injury prediction or safe set target"
+        ]
+      },
+      "sourceFiles": [
+        "index.html",
+        "app.js"
+      ],
+      "questions": [
+        "What does this display establish about the session Alex should do?",
+        "How should Alex respond to the new information, and what role should the displayed set number play?"
+      ],
+      "rubric": {
+        "comprehension2": "Identifies reflection of entered signals and stale context, not validated training clearance, injury protection or an optimal/safe set dose.",
+        "comprehension1": "Mentions caution or stale inputs but leaves clearance/set-dose meaning ambiguous.",
+        "comprehension0": "Treats the label or set band as clearance, a safe dose or an injury guarantee, or gives no interpretable explanation.",
+        "decision2": "Does not use the label/set quota to justify pushing through discomfort; updates/reconsiders context and seeks appropriate human assessment when needed. No diagnosis or fixed exercise prescription required for credit.",
+        "decision1": "Would reduce or change activity but still relies on the numerical quota, or gives only vague caution.",
+        "decision0": "Would proceed because of the positive label or quota, or gives no interpretable action.",
+        "critical": "Explicitly uses the label or set band to justify ignoring new pain/discomfort or to claim safety/optimal dose."
+      }
+    },
+    {
+      "id": "T3",
+      "kind": "diagnostic",
+      "claims": [
+        "C10"
+      ],
+      "title": "A cohort interval",
+      "scenario": "A published Metron resting-equation comparison included 89 eligible records. Cunningham-minus-Mifflin mean absolute error difference was −104.5 kcal/day; its paired bootstrap 95% sampling interval was −127.5 to −80.1 kcal/day.",
+      "wording": {
+        "common": [
+          "These numbers describe that study’s paired comparison."
+        ]
+      },
+      "sourceFiles": [
+        "research/robustness/h4/README.md"
+      ],
+      "materialOrigin": "Protocol-authored card using the preserved H4 aggregate; identical in both arms.",
+      "questions": [
+        "Explain what the interval describes.",
+        "What, if anything, does it tell Alex about Alex’s personal calorie error?"
+      ],
+      "rubric": {
+        "comprehension2": "Identifies sampling uncertainty of a cohort-level paired MAE difference, not an interval for Alex’s expenditure or personal prediction error.",
+        "comprehension1": "Recognizes cohort information but cannot specify the statistic or distinction.",
+        "comprehension0": "Converts the interval to a personal burn/error range, or gives no interpretable explanation.",
+        "critical": "Explicitly treats the cohort interval as Alex’s personal prediction/error range."
+      }
+    },
+    {
+      "id": "T4",
+      "kind": "diagnostic",
+      "claims": [
+        "C17",
+        "C33"
+      ],
+      "title": "Defaults and an unfinished edit",
+      "scenario": "Open the pinned current Metron build with its example profile. Use only the fictional values below.",
+      "wording": {
+        "common": [
+          "Change body weight to 95 kg, leaving the other profile fields as supplied.",
+          "Explain which inputs are known about this fictional person and which still need checking.",
+          "Clear the weight field. On Energy, change daily steps to 20,000 and try to export. Describe what happens.",
+          "Restore weight to 95 kg, then export. Explain which draft the export represents."
+        ]
+      },
+      "sourceFiles": [
+        "ui/form-state.js",
+        "app.js",
+        "index.html"
+      ],
+      "materialOrigin": "Identical current-build interaction in both arms, after all primary answers.",
+      "questions": [
+        "What has the software measured by itself?",
+        "Which information would you check before interpreting this export?"
+      ],
+      "rubric": {
+        "comprehension2": "Identifies remaining example/default fields, unknown body composition, user-entered not automatically measured/verified, and export blocked until the current draft is valid.",
+        "comprehension1": "Recognizes some defaults or invalidity but misses at least one of these boundaries.",
+        "comprehension0": "Treats defaults as measurements or the invalid draft as a current valid estimate, or gives no interpretable explanation.",
+        "critical": "Explicitly treats remaining example values as measurements of the fictional person or invalid/stale output as current.",
+        "completion": "Four distinct observations: remaining defaults recognized; invalid draft cannot export; steps label updates during invalidity; restored export matches 95 kg and 20,000 steps. Record assistance and failures separately."
+      }
+    }
+  ]
+}

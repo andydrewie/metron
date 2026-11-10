@@ -1,0 +1,19 @@
+{
+  "protocolId": "METRON-H6-COMP-001",
+  "protocolVersion": "1.0.0",
+  "asOf": "2026-11-10",
+  "scope": "Material snapshot; not human review, enrollment, observations or H6 closure.",
+  "sourcePins": {
+    "historical": "9bb5aa1d47675255218c5e893fc88098fe7562c3",
+    "restricted": "3b82901a5350f3d966d98a0d8e2ea9837ee4b89b",
+    "runtimeForCommonTask": "3b82901a5350f3d966d98a0d8e2ea9837ee4b89b"
+  },
+  "sha256": {
+    "evaluation-plan.json": "aff85ba0534d2df547a9376b0c6757c14c3bb0e9a1d385d44594358a4c5a8a72",
+    "tasks.json": "72cfc1660007f736055cb7a7f4248836b58f9a0cd13dd87a517ce51d89a97875",
+    "PROTOCOL.md": "33a7fd6444fd180806d47cbc8aa96ca9518973d99c702cb1640020057f0eb08e",
+    "run-template.json": "52a6941db8407bea703e9274c0c3b4bc0a4b2897a7fa5402504d33c379c8a39e",
+    "analysis.mjs": "84a03066424965042c574305ab3fff812ca2db3aad6bcb3e531ed77c886d763c",
+    "packet.mjs": "672b1bcc39cad99abb8f85e14fbf68a287225bd7750189fe1099c2ad0885bf65"
+  }
+}

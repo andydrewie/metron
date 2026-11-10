@@ -1,8 +1,11 @@
 {
-  "schemaVersion": "1.0.0",
-  "asOf": "2026-11-09",
-  "status": "blocked-pending-new-observations",
+  "schemaVersion": "1.1.0",
+  "protocolId": "METRON-H6-COMP-001",
+  "protocolVersion": "1.0.0",
+  "asOf": "2026-11-10",
+  "status": "prepared-not-run",
   "implemented": false,
+  "previousDraftCommit": "3b82901a5350f3d966d98a0d8e2ea9837ee4b89b",
   "prerequisites": {
     "energy": "H4 resting result and combined-TDEE no-go",
     "readiness": "H5 prescription no-go"
@@ -18,21 +21,187 @@
   },
   "comprehension": {
     "status": "not-run",
-    "participants": "Consenting intended users including varied numeracy and assistive-technology use; recruitment not performed.",
-    "tasks": [
-      "Explain estimate versus measurement/intake target",
-      "Explain two equations agreeing versus being accurate",
-      "Interpret a bootstrap cohort interval versus a personal range",
-      "Recognize default/unknown values and invalid-input suppression",
-      "Respond to pain or a fewer-signals label without inferring training clearance"
+    "participantsEnrolled": 0,
+    "observationsCollected": 0,
+    "question": "Does restricted wording reduce high-consequence interpretation errors and improve scope-aware hypothetical choices compared with selected historical wording?",
+    "design": "Parallel, individually randomized, two-arm moderated pilot; one wording version per participant before all scored responses. Descriptive pilot, not a powered confirmatory trial.",
+    "changeFromDraft": "Replace crossover wording order with parallel allocation to avoid teaching/carryover. The three primary cards isolate wording in matched layouts; two common diagnostics run afterwards. This does not compare complete historical/current apps.",
+    "conditionIds": [
+      "H",
+      "R"
     ],
-    "comparators": "Randomized presentation order of old and restricted wording, with blinded scoring where feasible; no instruction to act on health outputs.",
-    "outcomes": "Count harmful interpretations, correct boundary explanations, task completion and decision usefulness; report denominators and uncertainty, including non-improvement.",
-    "successRule": "Any recurring high-consequence misinterpretation blocks the corresponding claim. Predefine sample size, coding rubric and practical improvement margin before recruitment; no post hoc success threshold."
+    "conditionMeaning": {
+      "H": "Selected historical wording",
+      "R": "Restricted wording"
+    },
+    "sourcePins": {
+      "historical": "9bb5aa1d47675255218c5e893fc88098fe7562c3",
+      "restricted": "3b82901a5350f3d966d98a0d8e2ea9837ee4b89b",
+      "runtimeForCommonTask": "3b82901a5350f3d966d98a0d8e2ea9837ee4b89b"
+    },
+    "sample": {
+      "targetRandomized": 40,
+      "perArm": 20,
+      "unit": "participant, not task response",
+      "sessionMinutes": 35,
+      "rationale": "Feasible bounded pilot of 20 per arm, with explicit precision limits rather than an unsupported power claim. See PROTOCOL.md and the executable planning calculations.",
+      "eligibility": [
+        "Adult aged 18 or above; willing and able to consent",
+        "Interested in using an exercise/energy calculator; no wearable required",
+        "Can use the frozen English materials with their usual accessibility support",
+        "No Metron implementation/review role or prior exposure to these test questions/answers"
+      ],
+      "quotaStrata": [
+        {
+          "id": "low-AT",
+          "numberConfidence": [
+            1,
+            2
+          ],
+          "usesAssistiveTechnology": true,
+          "target": 4
+        },
+        {
+          "id": "higher-AT",
+          "numberConfidence": [
+            3,
+            4,
+            5
+          ],
+          "usesAssistiveTechnology": true,
+          "target": 4
+        },
+        {
+          "id": "low-standard",
+          "numberConfidence": [
+            1,
+            2
+          ],
+          "usesAssistiveTechnology": false,
+          "target": 16
+        },
+        {
+          "id": "higher-standard",
+          "numberConfidence": [
+            3,
+            4,
+            5
+          ],
+          "usesAssistiveTechnology": false,
+          "target": 16
+        }
+      ],
+      "scope": "Purposive English-reading adult sample, not a population survey or accessibility certification. No diagnosis, body measurements, wearable data or personal health histories requested.",
+      "stopping": "Stop at 40 randomized people, 8 weeks after the run start, or a prespecified interpretation stop. No outcome-dependent replacement or sample-size extension. Report quota and completion shortfalls."
+    },
+    "allocation": {
+      "method": "Independently shuffled blocks of four with two H and two R in each quota stratum; coordinator conceals future allocations until consent/eligibility are complete.",
+      "generator": "packet.mjs --allocation; generate privately only after run prerequisites are met; never use a published seed or let recruiters choose the next arm.",
+      "blinding": "Participants are not told the preferred condition. Two scorers code independently using response text without condition labels; wording may reveal condition, so record suspected unblinding. A third human adjudicates disagreement before the arm key is released."
+    },
+    "taskOrder": [
+      "T1",
+      "T2",
+      "T5",
+      "T3",
+      "T4"
+    ],
+    "primaryTasks": [
+      "T1",
+      "T2",
+      "T5"
+    ],
+    "commonDiagnostics": [
+      "T3",
+      "T4"
+    ],
+    "outcomes": {
+      "primary": "Participant has at least one explicit high-consequence interpretation on T1/T2/T5. Reduction = H proportion minus R proportion.",
+      "decisionUsefulness": "Participant scores 2 on the hypothetical next-action rubric for every primary task, with no critical interpretation. Improvement = R proportion minus H proportion. This is a decision-proxy task, not actual behavior or health benefit.",
+      "secondary": [
+        "Full boundary explanation on each primary task and all three together",
+        "T3 uncertainty interpretation and T4 unassisted completion, reported separately",
+        "Item-level critical interpretations; missing/assisted responses; completion time",
+        "Usefulness rating 1–5 and reasons, reported as perception only",
+        "Raw independent-scorer agreement before adjudication; reasons for disagreement"
+      ],
+      "denominator": "All randomized participants in their assigned arm; withdrawn/unavailable outcomes remain unknown in aggregate accounting, never automatically successful. Complete-case estimates are sensitivity analyses only."
+    },
+    "analysis": {
+      "confidenceLevel": 0.95,
+      "proportionInterval": "Wilson score, two-sided",
+      "differenceInterval": "Agresti–Caffo adjusted Wald, two-sided; raw point difference and adjusted-centered interval labeled separately",
+      "missingness": "Report observed cases, unknown participants, denominator and best/worst bounds. A positive interpretation requires the missingness scenario least favorable to R, not just complete cases.",
+      "smallSample": "Intervals quantify sampling variation under the model, not representativeness or physiology. No subgroup benefit claim, p-value fishing, task-level pseudo-replication or optional stopping for success.",
+      "software": "analysis.mjs accepts aggregate counts only and never closes H6. Input labels cannot prove that records came from actual people."
+    },
+    "decisionRules": {
+      "kind": "Prespecified project judgments, not validated clinical thresholds",
+      "criticalReductionMargin": 0.2,
+      "decisionSuccessImprovementMargin": 0.1,
+      "criticalRecurrenceParticipants": 2,
+      "currentArmBoundaryTarget": 0.8,
+      "maximumUnknownFraction": 0.1,
+      "promisingSignal": "At full planned N with quotas met: H-minus-R critical reduction at least 20 percentage points and its 95% interval lower bound above zero; R-minus-H decision success at least 10 points and its lower bound above zero. Both must survive the least-favorable missingness scenario. R must meet the 80% boundary target on each primary task, unknowns count as not correct, no more than 10% unknown on either endpoint, and no recurring critical interpretation. This is only a pilot signal.",
+      "revise": "Any explicit critical interpretation is reviewed. Two distinct R participants showing a critical interpretation on the same primary task pause enrollment and block that wording/claim pending repair and a new protocol/material version. Do not weaken an existing restriction because H is worse.",
+      "otherResults": "Insufficient sample, quotas, completeness or unresolved coding => inconclusive. Adequate completed pilot that misses the margins => improvement not demonstrated. Report negative outcomes; no automatic rollback to historical wording.",
+      "gateClosure": "Only later criterion-by-criterion human review of actual observations and resulting restrictions can assess H6 criterion 4. Software checks, participant count or a promising label alone cannot close H6."
+    },
+    "operations": {
+      "ownerRole": "Study lead / data custodian",
+      "operatorAssigned": false,
+      "independentHumanMethodsReview": "pending",
+      "independentAccessibilityReview": "pending",
+      "runManifest": "run-template.json",
+      "actualHumanReviewRecorded": false,
+      "recruitmentPerformed": false,
+      "participantContactSent": false,
+      "dataLocation": "Private operator-controlled storage outside the repository; aggregate publication only.",
+      "consentAndRetention": "See PROTOCOL.md; named custodian/contact and retention dates are required before recruitment. No audio/video recording or external transcription in this protocol."
+    }
   },
+  "methodSources": [
+    {
+      "id": "lakens-2022",
+      "url": "https://doi.org/10.1525/collabra.33267",
+      "inspectedUrl": "https://research.tue.nl/p/en/research-outputs/sample-size-justification",
+      "reviewedAt": "2026-11-10",
+      "scope": "Institutional abstract: align sample-size justification with inferential goals; full article not claimed inspected.",
+      "supports": "Explicit resource/precision justification; does not prescribe N=40."
+    },
+    {
+      "id": "govuk-usability",
+      "url": "https://www.gov.uk/service-manual/user-research/using-moderated-usability-testing",
+      "reviewedAt": "2026-11-10",
+      "scope": "Tasks, discussion guides, moderation and assistive-technology sections.",
+      "supports": "Neutral tasks, consistent facilitation and accommodation; hypothetical data limit contextual inference."
+    },
+    {
+      "id": "govuk-consent",
+      "url": "https://www.gov.uk/service-manual/user-research/getting-users-consent-for-research",
+      "reviewedAt": "2026-11-10",
+      "scope": "Participant information, consent evidence, data handling and withdrawal.",
+      "supports": "Participant-process design; not a determination of law or institutional approval for Metron."
+    },
+    {
+      "id": "nist-wilson",
+      "url": "https://www.itl.nist.gov/div898/handbook/prc/section2/prc241.htm",
+      "reviewedAt": "2026-11-10",
+      "scope": "Wilson score formula and interval interpretation.",
+      "supports": "Binomial-proportion calculation."
+    },
+    {
+      "id": "nist-difference",
+      "url": "https://www.itl.nist.gov/div898/software/dataplot/refman1/auxillar/diffprop.htm",
+      "reviewedAt": "2026-11-10",
+      "scope": "Agresti–Caffo formula and worked numerical example.",
+      "supports": "Two independent proportion difference calculation."
+    }
+  ],
   "blockers": [
-    "No appropriate longitudinal calibration/reference dataset admitted.",
-    "No real-user comprehension or decision-usefulness observations collected."
+    "Independent human methods/accessibility review and named study operation are not yet recorded.",
+    "No real-user comprehension or decision-usefulness observations collected.",
+    "No appropriate longitudinal calibration/reference dataset admitted."
   ],
   "automaticGateClosure": false
 }

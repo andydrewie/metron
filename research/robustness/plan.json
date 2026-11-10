@@ -249,14 +249,18 @@
       ],
       "evidence": [
         "research/robustness/h6/README.md",
-        "research/robustness/h6/evaluation-plan.json"
+        "research/robustness/h6/evaluation-plan.json",
+        "research/robustness/h6/PROTOCOL.md",
+        "research/robustness/h6/tasks.json",
+        "research/robustness/h6/protocol-lock.json",
+        "tests/h6-protocol.test.js"
       ],
       "closure": null,
       "blockedCriteria": [
         4
       ],
-      "blocker": "No real-user comprehension/decision-usefulness observations. Personal calibration also lacks an admitted longitudinal reference dataset and remains unimplemented.",
-      "completedWork": "Prerequisite results/no-go, uncertainty distinctions, forward-time evaluation plan and implementation restrictions."
+      "blocker": "Independent human methods/accessibility review and named study operation are pending; no real-user comprehension/decision-usefulness observations. Personal calibration also lacks an admitted longitudinal reference dataset and remains unimplemented.",
+      "completedWork": "Prerequisite results/no-go, uncertainty distinctions, forward-time calibration evaluation plan and implementation restrictions; comprehension protocol v1 prepared with 40-person design, frozen wording, scoring, margins, missingness, stop rules and executable checks. Human review and observations are not completed."
     },
     {
       "id": "H7",
@@ -518,21 +522,23 @@
       "gate": "H6",
       "ownerRole": "Human factors reviewer",
       "state": "open",
-      "finding": "Misleading interpretations restricted and a human evaluation plan prepared; no participants evaluated.",
+      "finding": "Misleading interpretations restricted; 40-person comprehension protocol v1 specified with five tasks and frozen scoring/analysis. No participants evaluated.",
       "evidence": [
         "docs/INFORMATION_DESIGN.md",
         "docs/RESEARCH.md"
       ],
-      "nextTest": "Collect intended-user comprehension and decision-usefulness evidence with predefined scoring.",
+      "nextTest": "Obtain independent human methods/accessibility review and complete the private run manifest, then collect consenting intended-user observations under the frozen protocol.",
       "resolutionEvidence": [
-        "research/robustness/h6/evaluation-plan.json"
+        "research/robustness/h6/evaluation-plan.json",
+        "research/robustness/h6/PROTOCOL.md",
+        "research/robustness/h6/protocol-lock.json"
       ],
       "residual": "Synthetic assertions do not measure user understanding."
     }
   ],
   "nextTask": {
     "gate": "H6",
-    "action": "Finalize the H6 human-comprehension evaluation protocol (sample-size rationale, scoring rubric, practical margins and review), then obtain actual consenting-user observations. Personal calibration remains unimplemented without an admitted longitudinal reference dataset.",
+    "action": "Have a named study lead obtain independent human methods/accessibility review of the prepared H6 protocol, resolve findings and complete the private run manifest before consenting-user sessions. No participant contact is performed by protocol preparation. H6 stays blocked; calibration stays unimplemented without admitted longitudinal reference data.",
     "userAuthorization": "Execute all remaining gates without per-gate reconfirmation; do not fabricate unavailable evidence."
   },
   "trackPrerequisites": {
@@ -565,6 +571,20 @@
       "research/robustness/freshness.mjs",
       "tests/freshness.test.js",
       "research/robustness/h7/browser_check.py"
+    ]
+  },
+  "latestResearchPreparation": {
+    "asOf": "2026-11-10",
+    "protocolId": "METRON-H6-COMP-001",
+    "protocolVersion": "1.0.0",
+    "status": "prepared-not-run",
+    "participantsEnrolled": 0,
+    "observationsCollected": 0,
+    "gatePromotion": false,
+    "evidence": [
+      "research/robustness/h6/PROTOCOL.md",
+      "research/robustness/h6/evaluation-plan.json",
+      "research/robustness/h6/check.mjs"
     ]
   }
 }

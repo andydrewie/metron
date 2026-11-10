@@ -332,6 +332,29 @@
         "tests/freshness.test.js"
       ],
       "status": "research-question"
+    },
+    {
+      "id": "prepare-h6-comprehension-study",
+      "label": "Run the H6 comprehension pilot after human review",
+      "intent": "find frozen wording, task rubrics, consent and allocation instructions, aggregate calculations and unmet human-study prerequisites",
+      "audience": [
+        "human",
+        "researcher",
+        "agent"
+      ],
+      "entry": "research/robustness/h6/README.md",
+      "next": [
+        "research/robustness/h6/PROTOCOL.md",
+        "research/robustness/h6/evaluation-plan.json",
+        "research/robustness/h6/tasks.json",
+        "research/robustness/h6/run-template.json",
+        "research/robustness/h6/packet.mjs",
+        "research/robustness/h6/analysis.mjs",
+        "research/robustness/h6/check.mjs",
+        "research/robustness/h6/protocol-lock.json",
+        "tests/h6-protocol.test.js"
+      ],
+      "status": "documented"
     }
   ]
 }

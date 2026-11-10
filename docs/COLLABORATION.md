@@ -113,4 +113,4 @@ Further detail: [Vocabulary](./VOCABULARY.md) · [ADR index](./adr/README.md) ·
 
 ## Continuity checkpoints
 
-[CONTINUE.md](./CONTINUE.md) is the stable new-chat entrypoint. At each completed consequential task, reconcile its dated checkpoint with the authoritative plan and current tracker. Keep the next executable task, outstanding limitations and evidence locators concrete. A shared chat is supplementary; never imply perfect memory or successful link retrieval before reading it. Keep private email/account history out of the public repository. Independent reconstruction remains H8 work.
+[CONTINUE.md](./CONTINUE.md) is the stable new-chat entrypoint. At each completed consequential task, reconcile its dated checkpoint with the authoritative plan and current tracker. Keep the next executable task, outstanding limitations and evidence locators concrete. A shared chat is supplementary; never imply perfect memory or successful link retrieval before reading it. Keep private email/account history out of the public repository. H8 records one completed fresh-context recovery; repeat it after consequential continuity changes and retain the actual limitations.

@@ -323,7 +323,9 @@
         "research/robustness/h5/README.md",
         "research/robustness/h6/README.md",
         "research/robustness/h7/README.md",
-        "research/robustness/h8/README.md"
+        "research/robustness/h8/README.md",
+        "research/robustness/h8/fresh-recovery-2026-11-10/RECOVERY.md",
+        "research/robustness/h8/acceptance.json"
       ],
       "status": "research-question"
     }

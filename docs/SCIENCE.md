@@ -1,6 +1,6 @@
 # Science, provenance & limitations
 
-> **Status: exploratory whole-product modeling; limited external RMR evidence is published.** [G3](../research/ree-validation/G3_RESULTS.md) evaluated two fixed resting equations in one 454-person cohort. The combined daily-energy estimator and training-readiness heuristic remain unvalidated. Neither that cohort result nor software tests establish individual accuracy.
+> **Status: exploratory whole-product modeling; limited external RMR evidence is published.** [G3](../research/ree-validation/G3_RESULTS.md) evaluated two fixed resting equations in 454 eligible adults; [H4](../research/robustness/h4/README.md) replicated the comparison in a separate cohort of 89 eligible recreational athletes. The combined daily-energy estimator and training-readiness heuristic remain unvalidated. Neither cohort results nor software tests establish individual accuracy.
 
 **Coverage and currency:** the [claim/context corpus](../research/robustness/corpus.json) and [robustness program](../research/robustness/README.md) make unreviewed clinical contexts and evidence-refresh obligations explicit. [H1](../research/robustness/H1_INVENTORY.md) reconciles the finite repository inventory; clinical evidence is still unreviewed and intended use is unchanged.
 
@@ -80,8 +80,8 @@ Designed as an **educational adult fitness estimator** for generally healthy adu
 ## 6. Validation ladder
 
 1. **Mathematical tests — implemented:** Known-formula examples, boundary checks, invariants, and deterministic output.
-2. **Usability checks — initial prototype only:** Manual desktop/mobile rendering and interaction inspection. Formal accessibility testing is pending.
-3. **External resting-equation comparison — limited scope completed:** [G3](../research/ree-validation/G3_RESULTS.md) compares fixed equations with indirect-calorimetry RMR in one released cohort; [G4](../research/ree-validation/G4_DECISION.md) records the separate deployment decision. Independent cohort replication, prospective individual calibration and reference-instrument recalibration have not been performed by Metron.
+2. **Software and accessibility checks — bounded scope completed:** [H7](../research/robustness/h7/verification.json) records hosted keyboard navigation, accessible names/roles, invalid-input/export behavior, 320px/1280px layouts and visual inspection. Actual screen-reader user sessions, exhaustive accessibility certification and H6 human comprehension evidence remain outstanding.
+3. **External resting-equation comparison — limited scope completed:** [G3](../research/ree-validation/G3_RESULTS.md) compares fixed equations with indirect-calorimetry RMR in one released cohort; [G4](../research/ree-validation/G4_DECISION.md) records the separate deployment decision. [H4](../research/robustness/h4/README.md) completes an independent-cohort resting comparison under a frozen protocol and disclosed amendment. Independent cohort means a different source population, not independent reviewing personnel. Prospective individual calibration and reference-instrument recalibration have not been performed by Metron.
 4. **External outcomes — not done:** Compare multiweek weight/intake data with model predictions, accounting for water fluctuations and intake misreporting.
 5. **Recovery validation — not done:** The readiness heuristic requires prospective evaluation; claims about injury prediction or optimal sets are explicitly prohibited pending such evidence.
 

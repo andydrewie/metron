@@ -1,0 +1,7 @@
+npm warn Unknown env config "http-proxy". This will stop working in the next major version of npm.
+
+> metron-energy-readiness@0.2.0-alpha.4 release:check
+> node scripts/release-check.mjs
+
+Metron 0.2.0-alpha.4 — release preflight PASS (65 manifest paths, 41 tokens, GitHub Pages build complete).
+Manifest publication status checked locally; independently verify remote GitHub and Pages deployment.

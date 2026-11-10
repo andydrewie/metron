@@ -8,7 +8,7 @@
 
 **Program:** `METRON-ROBUST-001` · **Established:** 7 November 2026
 
-**Current checkpoint:** [all-gate execution record](CHECKPOINT.md). H0–H5 and H7 are complete at declared scope, and H6/H8 retain explicit evidence blockers. Clinical applicability remains unreviewed.
+**Current checkpoint:** [all-gate execution record](CHECKPOINT.md). H0–H5, H7 and H8 are complete at declared scope. H6 retains its actual-user evidence blocker. Clinical applicability remains unreviewed.
 
 **Tracker:** [issue #22](https://github.com/andydrewie/metron/issues/22)
 
@@ -34,13 +34,13 @@ H0 inventories the current source, advertised capabilities, research entrypoints
 | **H5 · Readiness and decision boundaries** | Define readiness/performance endpoints, audit current set recommendations, evaluate prospective predictive value, or explicitly retain/restrict unsupported guidance. | Complete through explicit restriction/no-go; no prospective outcome claim |
 | **H6 · Uncertainty and individual value** | Separate cohort intervals, input sensitivity and individual prediction uncertainty; evaluate calibration forward in time and whether users understand the decision limits. | Blocked on real-user comprehension and decision-value evidence |
 | **H7 · Software, privacy and accessibility** | Exercise public API/CLI/browser contracts, malformed inputs, privacy failures, dependency/build assumptions, keyboard/mobile and color-independent comprehension. | Complete at bounded software/browser review scope |
-| **H8 · Reconstruction and maintenance** | Complete a clean-checkout reproduction and a separately recorded agent navigation/rebuild exercise; verify evidence update and supersession procedures while preserving open gaps. | Blocked on genuinely fresh-agent recovery; scripted reproduction passed |
+| **H8 · Reconstruction and maintenance** | Complete a clean-checkout reproduction and a separately recorded agent navigation/rebuild exercise; verify evidence update and supersession procedures while preserving open gaps. | Complete after recorded fresh-context recovery and repair of observed navigation drift |
 
 Dependencies in `plan.json` are authoritative. H2 and H3 follow H1; H4 and H5 can then proceed independently. H7 can start after H1. H8 tests reconstruction once H1 and H7 are complete and must preserve the actual state of the other gates. H6 has separate RMR/TDEE and readiness tracks: only the applicable H4 or H5 track is a prerequisite. An unsupported readiness branch must not indefinitely block independent RMR work.
 
 Gate progress is claim- and domain-specific. Any partial passage must name its exact scope, evidence and outstanding criteria; it does not close the whole gate. `complete` means all declared acceptance criteria for that gate are reviewed, with evidence. Negative results and explicit no-go decisions can satisfy an investigation; they cannot be relabeled as successful physiological validation. The audit command never promotes a gate automatically.
 
-**Immediate next task:** execute the [H8 cold-start task](h8/COLD_START_TASK.md) in a genuinely new context. H6 needs real-user and longitudinal evidence; implementation or paperwork cannot substitute for it.
+**Immediate next task:** finalize the [H6 evaluation protocol](h6/evaluation-plan.json) before actual consenting-user observations. H8 has a retained [fresh-context recovery record](h8/fresh-recovery-2026-11-10/RECOVERY.md); no further chat transfer is needed to close it. Human evidence and longitudinal calibration data cannot be replaced by implementation or paperwork.
 
 ## A multidimensional applicability map
 

@@ -1,0 +1,225 @@
+{
+  "schemaVersion": "1.0.0",
+  "studyId": "RMR-EXT-001",
+  "protocolId": "RMR-EXT-001-G1-v1",
+  "engineVersion": "1.0.0",
+  "prng": "mulberry32-v1",
+  "evidenceType": "synthetic-engineering-only",
+  "empiricalValidation": "not-applicable-synthetic",
+  "endpoint": "RMR/REE",
+  "unit": "kcal/day",
+  "sourceSha256": "synthetic-fixture-not-real-source",
+  "frozenModelVersion": "0.1.0",
+  "cohortFlow": {
+    "rawRows": 5,
+    "excludedByFirstReason": {
+      "sex": 0,
+      "age": 1,
+      "height": 0,
+      "weight": 0,
+      "reference": 1
+    },
+    "invalidByReason": {
+      "sex": 0,
+      "age": 1,
+      "height": 0,
+      "weight": 0,
+      "reference": 1
+    },
+    "eligible": 3,
+    "pairedEligible": 2,
+    "pairedExcludedForFfm": 1,
+    "unknownSiteParticipants": 0
+  },
+  "fieldQuality": {
+    "SEX": {
+      "available": 5,
+      "invalidOrMissing": 0
+    },
+    "Alter, Jahre": {
+      "available": 4,
+      "invalidOrMissing": 1
+    },
+    "GROESSE, cm": {
+      "available": 5,
+      "invalidOrMissing": 0
+    },
+    "GEWICHt_SECA, kg": {
+      "available": 5,
+      "invalidOrMissing": 0
+    },
+    "RMR.KJ": {
+      "available": 4,
+      "invalidOrMissing": 1
+    },
+    "FFM_SECA,kg": {
+      "available": 4,
+      "invalidOrMissing": 1
+    }
+  },
+  "primary": {
+    "summary": {
+      "n": 3,
+      "mae": 210,
+      "bias": 143.33333333333334,
+      "rmse": 311.394712008195,
+      "medianAbsError": 100,
+      "within10Percent": 66.66666666666667
+    },
+    "ci95": {
+      "mae": {
+        "lower": 33.333333333333336,
+        "upper": 386.6666666666667
+      },
+      "bias": {
+        "lower": -33.333333333333336,
+        "upper": 320
+      },
+      "rmse": {
+        "lower": 57.735026918962575,
+        "upper": 436.5775990588615
+      },
+      "medianAbsError": {
+        "lower": 0,
+        "upper": 530
+      },
+      "within10Percent": {
+        "lower": 33.333333333333336,
+        "upper": 100
+      }
+    }
+  },
+  "paired": {
+    "n": 2,
+    "mifflin": {
+      "n": 2,
+      "mae": 50,
+      "bias": -50,
+      "rmse": 70.71067811865476,
+      "medianAbsError": 50,
+      "within10Percent": 100
+    },
+    "cunningham": {
+      "n": 2,
+      "mae": 70.5,
+      "bias": 70.5,
+      "rmse": 70.50398924883612,
+      "medianAbsError": 70.5,
+      "within10Percent": 100
+    },
+    "cunninghamMinusMifflinMae": 20.5,
+    "ci95": {
+      "mae": {
+        "lower": 50,
+        "upper": 50
+      },
+      "bias": {
+        "lower": -50,
+        "upper": -50
+      },
+      "rmse": {
+        "lower": 70.71067811865476,
+        "upper": 70.71067811865476
+      },
+      "medianAbsError": {
+        "lower": 50,
+        "upper": 50
+      },
+      "within10Percent": {
+        "lower": 100,
+        "upper": 100
+      },
+      "pairedMaeDelta": {
+        "lower": 20.5,
+        "upper": 20.5
+      }
+    }
+  },
+  "age19To78Sensitivity": {
+    "n": 3,
+    "status": "suppressed-small-n",
+    "metrics": null,
+    "ci95": null
+  },
+  "subgroups": {
+    "Site": {
+      "freising": {
+        "n": 2,
+        "status": "suppressed-small-n",
+        "metrics": null,
+        "ci95": null
+      },
+      "nuernber": {
+        "n": 1,
+        "status": "suppressed-small-n",
+        "metrics": null,
+        "ci95": null
+      }
+    },
+    "equationSex": {
+      "male": {
+        "n": 2,
+        "status": "suppressed-small-n",
+        "metrics": null,
+        "ci95": null
+      },
+      "female": {
+        "n": 1,
+        "status": "suppressed-small-n",
+        "metrics": null,
+        "ci95": null
+      }
+    },
+    "ageYears": {
+      "18-39": {
+        "n": 2,
+        "status": "suppressed-small-n",
+        "metrics": null,
+        "ci95": null
+      },
+      "40-59": {
+        "n": 1,
+        "status": "suppressed-small-n",
+        "metrics": null,
+        "ci95": null
+      },
+      "60-105": {
+        "n": 0,
+        "status": "suppressed-small-n",
+        "metrics": null,
+        "ci95": null
+      }
+    },
+    "BMI": {
+      "<25": {
+        "n": 1,
+        "status": "suppressed-small-n",
+        "metrics": null,
+        "ci95": null
+      },
+      "25-<30": {
+        "n": 2,
+        "status": "suppressed-small-n",
+        "metrics": null,
+        "ci95": null
+      },
+      ">=30": {
+        "n": 0,
+        "status": "suppressed-small-n",
+        "metrics": null,
+        "ci95": null
+      }
+    }
+  },
+  "provenance": {
+    "frozenG1Commit": "6028a80fb7070b354dec68feeb7153ce0a4cbef9",
+    "protocolGitBlobSha": "2a40beada8abfec0c778e1c64da256836ed735db",
+    "modelGitBlobSha": "228a8032b503f37d7b90b421f425b2225143226d",
+    "sourceVersion": "v1",
+    "sourceDoi": "10.5281/zenodo.17735477",
+    "modelReestimated": false,
+    "personalizedUncertainty": false,
+    "clinicalClaims": false,
+    "inferenceLimit": "Cohort-level resting-rate error only; never a TDEE or individual prediction interval."
+  }
+}

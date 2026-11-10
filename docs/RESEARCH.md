@@ -4,12 +4,12 @@
 
 ## Current cross-project execution program
 
-**Current robustness program:** [checkpoint](../research/robustness/CHECKPOINT.md) · [canonical gate/weakness state](../research/robustness/plan.json) · [tracker #22](https://github.com/andydrewie/metron/issues/22). H0–H5 are complete at declared scope; H7 is under verification. H6 human evidence and H8 fresh-agent recovery remain blocked. Research reuse through 7 November 2027 is independently valuable; clinical applicability remains unreviewed.
+**Current robustness program:** [checkpoint](../research/robustness/CHECKPOINT.md) · [canonical gate/weakness state](../research/robustness/plan.json) · [tracker #22](https://github.com/andydrewie/metron/issues/22). H0–H5, H7 and H8 are complete at declared scope: eight of nine gates. H6 remains blocked on actual-user comprehension and decision-usefulness evidence. Research reuse through 7 November 2027 is independently valuable; clinical applicability remains unreviewed.
 
 ## Research questions
 
 **R1 · REE equation performance**
-[Validated release admission](../research/ree-validation/G0_SOURCE_AUDIT.md) · [Frozen G1 protocol](../research/ree-validation/G1_FROZEN_PROTOCOL.md) · [Human dashboard](https://github.com/andydrewie/metron/issues/9) · [Agent-readable gates](../research/ree-validation/plan.json). **G0–G4 complete:** [G3](../research/ree-validation/G3_RESULTS.md) reports fixed-equation RMR errors in 454 adults; [G4](../research/ree-validation/G4_DECISION.md) retains the default with scoped guidance. Independent cohort replication remains open.
+[Validated release admission](../research/ree-validation/G0_SOURCE_AUDIT.md) · [Frozen G1 protocol](../research/ree-validation/G1_FROZEN_PROTOCOL.md) · [Human dashboard](https://github.com/andydrewie/metron/issues/9) · [Agent-readable gates](../research/ree-validation/plan.json). **G0–G4 complete:** [G3](../research/ree-validation/G3_RESULTS.md) reports fixed-equation RMR errors in 454 adults; [G4](../research/ree-validation/G4_DECISION.md) retains the default with scoped guidance. [H4](../research/robustness/h4/README.md) adds a separate cohort of 89 eligible recreational athletes. General-population transfer, combined TDEE and personal-target accuracy remain unestablished.
 
 Compare predicted resting metabolic rates (Mifflin–St Jeor and Cunningham) against indirect calorimetry measurements using an appropriately licensed, documented adult dataset. Report MAE, mean bias, 95% intervals, calibration plots, and subgroup performance. Report sample inclusion criteria; don't silently claim one equation wins for all users.
 

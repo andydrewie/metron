@@ -1,0 +1,299 @@
+{
+  "claim": {
+    "id": "C03",
+    "statement": "Combined daily-energy estimate",
+    "kind": "model-estimate",
+    "concepts": [
+      "tdee",
+      "baseline",
+      "walking",
+      "workout"
+    ],
+    "contexts": [
+      "general-adult"
+    ],
+    "sources": [
+      "core",
+      "science",
+      "h2d-careau-2021",
+      "h2d-howard-2025",
+      "h2d-yegian-2026",
+      "h2d-knaan-2026",
+      "h2d-shcherbina-2017"
+    ],
+    "gates": [
+      "H3",
+      "H4",
+      "H6"
+    ],
+    "empiricalValidation": "none",
+    "applicabilityMatrixStatus": "H1-explicit-all-contexts",
+    "evidenceDisposition": "combined-model-not-externally-validated",
+    "limitation": "No independent whole-model TDEE validation; RMR evidence does not transfer automatically.",
+    "contextsMeaning": "Salient origin or named discussion contexts only; complete cross-context coverage is in applicability.json.",
+    "semanticLevel": "model-or-method",
+    "temporalScope": "Source-specific window required; current use not established by inventory",
+    "measurementScope": "Source-specific protocol required; unrecorded method, device, treatment and preparation remain unknown",
+    "noPopulationPerformanceInference": false,
+    "evidenceReviews": [
+      {
+        "reviewId": "H2-D",
+        "path": "research/robustness/h2d/review.json",
+        "reviewedAt": "2026-11-09",
+        "scope": "Bounded source relevance and method distinction only; clinical severity, treatments and intersections remain unreviewed.",
+        "nextReviewBy": "2027-02-07"
+      }
+    ]
+  },
+  "sources": [
+    {
+      "id": "science",
+      "title": "Metron science and limitations",
+      "path": "docs/SCIENCE.md",
+      "url": null,
+      "freshnessClass": "foundational",
+      "sourceContentReviewedAt": null,
+      "reviewScope": null,
+      "rightsStatus": "repository-content-policy",
+      "importedFrom": null,
+      "status": "repository-pointer",
+      "note": "Review date intentionally absent until H2 source/version inspection is logged.",
+      "retrievedAt": null,
+      "inspectedPortions": [],
+      "versionOrPublicationDate": null
+    },
+    {
+      "id": "core",
+      "title": "Metron production calculation functions",
+      "path": "core/model.js",
+      "url": null,
+      "freshnessClass": "foundational",
+      "sourceContentReviewedAt": null,
+      "reviewScope": null,
+      "rightsStatus": "repository-content-policy",
+      "importedFrom": null,
+      "status": "repository-pointer",
+      "note": "Review date intentionally absent until H2 source/version inspection is logged.",
+      "retrievedAt": null,
+      "inspectedPortions": [],
+      "versionOrPublicationDate": null
+    },
+    {
+      "id": "h2d-careau-2021",
+      "title": "Energy compensation and adiposity in humans",
+      "path": "research/robustness/h2d/sources.json",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC8551017/",
+      "freshnessClass": "active-empirical",
+      "sourceContentReviewedAt": "2026-11-09",
+      "reviewScope": "Abstract, methods and data/code-availability sections.",
+      "rightsStatus": "Publisher terms; redistribution rights not assumed.",
+      "status": "reviewed-at-declared-scope",
+      "contentReviewHistory": [
+        {
+          "reviewId": "H2-D",
+          "registryPath": "research/robustness/h2d/sources.json",
+          "sourceContentReviewedAt": "2026-11-09",
+          "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC8551017/",
+          "inspectedPortions": "Abstract, methods and data/code-availability sections."
+        }
+      ]
+    },
+    {
+      "id": "h2d-howard-2025",
+      "title": "Physical activity is directly associated with total energy expenditure without evidence of constraint or compensation",
+      "path": "research/robustness/h2d/sources.json",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC12582307/",
+      "freshnessClass": "active-empirical",
+      "sourceContentReviewedAt": "2026-11-09",
+      "reviewScope": "Abstract, sample characteristics, article rights and identifiers.",
+      "rightsStatus": "CC BY-NC-ND 4.0 displayed; no source adaptation or data redistribution adopted.",
+      "status": "reviewed-at-declared-scope",
+      "contentReviewHistory": [
+        {
+          "reviewId": "H2-D",
+          "registryPath": "research/robustness/h2d/sources.json",
+          "sourceContentReviewedAt": "2026-11-09",
+          "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC12582307/",
+          "inspectedPortions": "Abstract, sample characteristics, article rights and identifiers."
+        }
+      ]
+    },
+    {
+      "id": "h2d-yegian-2026",
+      "title": "Longitudinal and cross-sectional evidence that daily resting and activity energy expenditures are independent in humans",
+      "path": "research/robustness/h2d/sources.json",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC13370726/",
+      "freshnessClass": "active-empirical",
+      "sourceContentReviewedAt": "2026-11-09",
+      "reviewScope": "Indexed full-text abstract, methods, results and limitations.",
+      "rightsStatus": "Publisher terms; redistribution rights not assumed.",
+      "status": "reviewed-at-declared-scope",
+      "contentReviewHistory": [
+        {
+          "reviewId": "H2-D",
+          "registryPath": "research/robustness/h2d/sources.json",
+          "sourceContentReviewedAt": "2026-11-09",
+          "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC13370726/",
+          "inspectedPortions": "Indexed full-text abstract, methods, results and limitations."
+        }
+      ]
+    },
+    {
+      "id": "h2d-knaan-2026",
+      "title": "Multilevel metabolic adaptation to exercise training",
+      "path": "research/robustness/h2d/sources.json",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC13111656/",
+      "freshnessClass": "active-empirical",
+      "sourceContentReviewedAt": "2026-11-09",
+      "reviewScope": "Abstract, recruitment/results, methods excerpts and rights.",
+      "rightsStatus": "CC BY-NC-ND 4.0 displayed; pointers and original critique only.",
+      "status": "reviewed-at-declared-scope",
+      "contentReviewHistory": [
+        {
+          "reviewId": "H2-D",
+          "registryPath": "research/robustness/h2d/sources.json",
+          "sourceContentReviewedAt": "2026-11-09",
+          "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC13111656/",
+          "inspectedPortions": "Abstract, recruitment/results, methods excerpts and rights."
+        }
+      ]
+    },
+    {
+      "id": "h2d-shcherbina-2017",
+      "title": "Accuracy in Wrist-Worn, Sensor-Based Measurements of Heart Rate and Energy Expenditure in a Diverse Cohort",
+      "path": "research/robustness/h2d/sources.json",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC5491979/",
+      "freshnessClass": "active-empirical",
+      "sourceContentReviewedAt": "2026-11-09",
+      "reviewScope": "Indexed abstract, methods overview and identifiers.",
+      "rightsStatus": "Publisher terms; redistribution rights not assumed.",
+      "status": "reviewed-at-declared-scope",
+      "contentReviewHistory": [
+        {
+          "reviewId": "H2-D",
+          "registryPath": "research/robustness/h2d/sources.json",
+          "sourceContentReviewedAt": "2026-11-09",
+          "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC5491979/",
+          "inspectedPortions": "Indexed abstract, methods overview and identifiers."
+        }
+      ]
+    }
+  ],
+  "contexts": [
+    {
+      "context": {
+        "id": "general-adult",
+        "axis": "population",
+        "label": "Generally healthy adults",
+        "currentProductDisposition": "educational-estimation-only",
+        "clinicalEvidenceReview": "unreviewed",
+        "externalMappings": [],
+        "requiredDimensions": [
+          "severity",
+          "duration",
+          "treatment",
+          "coexisting conditions",
+          "measurement protocol",
+          "time horizon"
+        ],
+        "reviewGate": "H2",
+        "dimensions": {
+          "severity": {
+            "state": "unreviewed",
+            "value": null
+          },
+          "duration": {
+            "state": "unreviewed",
+            "value": null
+          },
+          "treatment": {
+            "state": "unreviewed",
+            "value": null
+          },
+          "coexistingConditions": {
+            "state": "unreviewed",
+            "value": null
+          },
+          "measurementProtocol": {
+            "state": "unreviewed",
+            "value": null
+          },
+          "timeHorizon": {
+            "state": "unreviewed",
+            "value": null
+          }
+        },
+        "runtimeDetection": "not-implemented",
+        "dimensionMeaning": "Null is unknown or unassessed, never absent, normal, untreated or safe. Record source-specific strata in H2; intersecting contexts do not inherit evidence automatically."
+      },
+      "evidenceStatus": "unreviewed",
+      "useDisposition": "documented-educational-adult-use-only",
+      "evidenceRefs": [],
+      "evidenceReviews": [
+        {
+          "claimId": "C03",
+          "contextId": "general-adult",
+          "reviewId": "H2-D",
+          "reviewPath": "research/robustness/h2d/review.json",
+          "disposition": "combined-model-not-externally-validated",
+          "clinicalApplicabilityEstablished": false,
+          "details": {
+            "claimId": "C03",
+            "question": "Combined daily-energy estimate",
+            "disposition": "combined-model-not-externally-validated",
+            "sourceIds": [
+              "h2d-careau-2021",
+              "h2d-howard-2025",
+              "h2d-yegian-2026",
+              "h2d-knaan-2026",
+              "h2d-shcherbina-2017"
+            ],
+            "searchIds": [
+              "Q01",
+              "Q02",
+              "Q03",
+              "Q04",
+              "Q05",
+              "Q06",
+              "Q07",
+              "Q08",
+              "Q09",
+              "Q10",
+              "Q11",
+              "Q12",
+              "Q13",
+              "Q14",
+              "Q15",
+              "Q16",
+              "Q17",
+              "Q18",
+              "Q19",
+              "Q20",
+              "Q21",
+              "Q22",
+              "Q23",
+              "Q24"
+            ],
+            "finding": "The summed estimate remains unvalidated; differing compensation studies do not validate the specific baseline, walking or session mapping.",
+            "permittedInterpretation": "Retain an illustrative estimate; no universal compensation multiplier or daily intake target.",
+            "reviewedContextIds": [
+              "general-adult"
+            ],
+            "reviewScope": "Bounded source relevance and method distinction only; clinical severity, treatments and intersections remain unreviewed.",
+            "clinicalApplicabilityEstablished": false,
+            "directAlgorithmValidation": false,
+            "reviewedAt": "2026-11-09",
+            "nextReviewBy": "2027-02-07",
+            "nextGate": "H4",
+            "reversalTrigger": "New contrary evidence, changed methods/rights or consequential reuse; reopen the named downstream evaluation."
+          }
+        }
+      ]
+    }
+  ],
+  "reviewLayerMeaning": {
+    "baseCells": "H1 clinical-applicability classifications; not promoted by a targeted source relevance review.",
+    "overlays": "Bounded claim/context transfer reviews, with exact scope and no clinical clearance."
+  },
+  "meaning": "Inventory and documented boundaries only; not clinical advice or evidence of safety."
+}

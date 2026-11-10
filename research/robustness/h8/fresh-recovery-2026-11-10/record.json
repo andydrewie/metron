@@ -1,0 +1,279 @@
+{
+  "schemaVersion": "1.0.0",
+  "recordType": "observed-fresh-context-repository-recovery",
+  "observedAt": "2026-11-10T03:20:07.767655+00:00",
+  "sourceCommit": "16ceef3fb8e8a3bbcca9938d0d8331d7ba9c416f",
+  "repository": "https://github.com/andydrewie/metron",
+  "agentContext": "separate fresh task context /root/h8_fresh_recovery",
+  "priorProjectKnowledge": "None before this task. No previous Metron chat or prepared answer sheet was supplied. Repository implementation and existing H8 rebuild were inspected during this recovery, before the new bounded calculation; it is not blinded.",
+  "receivedTask": "Repository URL plus the instruction preserved in research/robustness/h8/COLD_START_TASK.md. A later operational instruction required a separate checkout and preservation of existing workspace artifacts.",
+  "environment": {
+    "os": "Linux-6.18.57-x86_64-with-glibc2.41",
+    "node": "v24.22.1",
+    "python": "3.12.14",
+    "git": "git version 2.52.0",
+    "npm": "11.9.0",
+    "timezone": "Etc/UTC",
+    "workingDirectory": "/workspace/scratch/ca8e9da4b453/recovery/h8-worker",
+    "cleanTrackedCheckoutBeforeExecution": true,
+    "installationPerformed": false,
+    "realParticipantDataRetrieved": false,
+    "cloudEnvironmentStatusToolAvailable": false,
+    "networkPolicyFile": "/etc/codex/network-policy.json absent",
+    "remoteAccess": "GitHub connector for repository metadata, current main, CONTINUE.md, issue #22 and open PR search; no git network fetch required because verified commit existed locally."
+  },
+  "snapshotComparison": {
+    "initialDetachedHead": "63349daf1c23976b2e0f46864465482299aa8f84",
+    "verifiedMain": "16ceef3fb8e8a3bbcca9938d0d8331d7ba9c416f",
+    "packageVersion": "0.2.0-alpha.4",
+    "modelVersion": "0.1.0",
+    "implemented": {
+      "energyEstimate": true,
+      "energyComponents": [
+        "baselineKcal",
+        "walkingKcal",
+        "workoutKcal"
+      ],
+      "restingModels": [
+        "mifflin",
+        "cunningham"
+      ],
+      "readinessHeuristic": true,
+      "bodyCompositionInputs": [
+        "bodyFatPercent",
+        "skeletalMuscleKg"
+      ],
+      "cliJson": true,
+      "esmSdk": true,
+      "interactiveStaticWeb": true,
+      "caloricAllowance": false,
+      "wearableParsers": false,
+      "wearableOAuth": false,
+      "bayesianCalibration": false,
+      "mcpServer": false,
+      "empiricallyValidatedReadiness": false,
+      "calibratedIndividualUncertainty": false,
+      "activityOverlapReconciliation": false
+    },
+    "gateStates": [
+      {
+        "id": "H0",
+        "state": "complete",
+        "blocker": null
+      },
+      {
+        "id": "H1",
+        "state": "complete",
+        "blocker": null
+      },
+      {
+        "id": "H2",
+        "state": "complete",
+        "blocker": null
+      },
+      {
+        "id": "H3",
+        "state": "complete",
+        "blocker": null
+      },
+      {
+        "id": "H4",
+        "state": "complete",
+        "blocker": null
+      },
+      {
+        "id": "H5",
+        "state": "complete",
+        "blocker": null
+      },
+      {
+        "id": "H6",
+        "state": "blocked",
+        "blocker": "No real-user comprehension/decision-usefulness observations. Personal calibration also lacks an admitted longitudinal reference dataset and remains unimplemented."
+      },
+      {
+        "id": "H7",
+        "state": "complete",
+        "blocker": null
+      },
+      {
+        "id": "H8",
+        "state": "blocked",
+        "blocker": "No genuinely fresh agent has performed and recorded recovery; same-agent scripted rehearsal cannot establish it."
+      }
+    ],
+    "nextTask": {
+      "gate": "H8",
+      "action": "Execute H8/COLD_START_TASK.md in a genuinely new agent context and record actual recovery. H6 remains blocked on real-user evidence; calibration remains unimplemented.",
+      "userAuthorization": "Execute all remaining gates without per-gate reconfirmation; do not fabricate unavailable evidence."
+    },
+    "adrStates": [
+      {
+        "id": "ADR-0001",
+        "status": "Accepted",
+        "supersededBy": null
+      },
+      {
+        "id": "ADR-0002",
+        "status": "Accepted",
+        "supersededBy": null
+      },
+      {
+        "id": "ADR-0003",
+        "status": "Accepted",
+        "supersededBy": null
+      },
+      {
+        "id": "ADR-0004",
+        "status": "Accepted",
+        "supersededBy": null
+      },
+      {
+        "id": "ADR-0005",
+        "status": "Accepted",
+        "supersededBy": null
+      },
+      {
+        "id": "ADR-0006",
+        "status": "Accepted",
+        "supersededBy": null
+      },
+      {
+        "id": "ADR-0007",
+        "status": "Accepted",
+        "supersededBy": null
+      }
+    ],
+    "claimFamilies": 35,
+    "contexts": 23,
+    "sources": 78,
+    "clinicalReviewCompleted": false
+  },
+  "identity": {
+    "currentCoreGitBlob": "d36da7246aabbad91b92debb2a52011468a39ebb",
+    "historicalCoreGitBlob": "228a8032b503f37d7b90b421f425b2225143226d",
+    "historicalProtocolGitBlob": "2a40beada8abfec0c778e1c64da256836ed735db",
+    "syntheticFixtureSha256": "2da6d774e6fe12e3c606975ece0f09b22b8707b5dbd5d5b7965343478a535032"
+  },
+  "verification": {
+    "nodeTestsPassed": 129,
+    "nodeTestsFailed": 0,
+    "pythonPrivacyTestsPassed": 8,
+    "ci": "passed",
+    "releaseCheck": "passed",
+    "browserTestPerformedInThisRun": false,
+    "referenceH7BrowserEvidence": "research/robustness/h7/verification.json",
+    "boundedSpecCases": 4,
+    "maximumDifferenceKcal": 2.842170943040401e-14,
+    "sourceReviewWarning": "20 sources have no recorded current content review",
+    "automaticMonitoringEnabled": false
+  },
+  "generatedBuildChangesBeforeCleanup": [
+    "dist/app.js",
+    "dist/core/model.js",
+    "dist/design/tokens.css",
+    "dist/index.html",
+    "dist/og.svg",
+    "dist/styles.css"
+  ],
+  "scope": "Fresh-context recovery and synthetic deterministic reproduction; no formula, clinical policy, gate status or historical study file edits. No claim of new physiological validation.",
+  "reviewDisposition": "Candidate H8 cold-start evidence. Consequential current-document ambiguities require correction and a separate acceptance review before closure; this record does not promote H8.",
+  "sourceRights": "Historical replay uses repository MIT code and a fictional synthetic fixture. No participant source was retrieved. External cohort data retain their separately recorded CC BY/publisher rights and are not relicensed as MIT.",
+  "navigationRecord": "RECOVERY.md, observed-navigation table: actual sequence, including initial wrong snapshot and its correction.",
+  "unresolvedCurrentDocumentAmbiguities": [
+    {
+      "path": "docs/ROADMAP.md",
+      "line": 17,
+      "finding": "H7 under verification contradicts canonical complete state."
+    },
+    {
+      "path": "docs/SCIENCE.md",
+      "line": 84,
+      "finding": "Denies independent replication despite H4 completion."
+    },
+    {
+      "path": "docs/SCIENCE.md",
+      "line": 83,
+      "finding": "Does not acknowledge bounded H7 review; comprehensive certification still unclaimed."
+    },
+    {
+      "path": "README.md",
+      "line": 138,
+      "finding": "Whole research directory described as unrun despite completed studies."
+    }
+  ],
+  "failedOrLimitedAttempts": [
+    "Initial h8-clean snapshot was stale and already dirty; left unchanged and isolated worktree corrected to verified main.",
+    "No environment-status tool exposed; /etc/codex/network-policy.json missing, ending the chained read before refs; refs then read separately.",
+    "Large GitHub commit response and some batched reads were truncated; targeted file reads recovered relevant sections.",
+    "A focused rg call included nonexistent test filenames and returned exit 2; actual workflow supplied the privacy-test command.",
+    "npm reported unknown http-proxy environment configuration; CI and preflight still succeeded."
+  ],
+  "cleanup": {
+    "at": "2026-11-10T03:21:50.420010+00:00",
+    "action": "Restored only the six build-generated tracked dist files in the isolated worktree from its pinned HEAD.",
+    "trackedDiffAfterCleanup": [],
+    "noSourceOrHistoricalEvidenceChanged": true
+  },
+  "commands": [
+    {
+      "command": "npm run ci",
+      "exitCode": 0,
+      "artifact": "ci.log"
+    },
+    {
+      "command": "npm run release:check",
+      "exitCode": 0,
+      "artifact": "release-check.log"
+    },
+    {
+      "command": "python3 -m unittest discover -s research/ree-validation/tools -p 'test_*.py' -v",
+      "exitCode": 0,
+      "artifact": "python-privacy.log"
+    },
+    {
+      "command": "python research/robustness/h8/fresh-recovery-2026-11-10/spec-calculation.py",
+      "exitCode": 0,
+      "artifact": "spec-calculation.json"
+    },
+    {
+      "command": "node research/robustness/audit.mjs --as-of 2026-11-10",
+      "exitCode": 0,
+      "artifact": "audit.json"
+    },
+    {
+      "command": "node research/robustness/inspect.mjs --claim C03 --context general-adult",
+      "exitCode": 0,
+      "artifact": "energy-claim.json"
+    },
+    {
+      "command": "node research/robustness/h8/rehearse.mjs",
+      "exitCode": 0,
+      "artifact": "maintenance.json"
+    },
+    {
+      "command": "node bin/metron.mjs --file examples/beginner.json",
+      "exitCode": 0,
+      "artifact": "beginner.json"
+    },
+    {
+      "command": "node --input-type=module <<'JS'\nimport {frozenStudy} from './research/robustness/h8/frozen-study.mjs';\nimport {spawnSync} from 'node:child_process';\nconst replay=frozenStudy();\ntry {\n const outcome=spawnSync(process.execPath,[replay.command,'--synthetic'],{encoding:'utf8'});\n if(outcome.status!==0)throw new Error(outcome.stderr);\n const data=JSON.parse(outcome.stdout);\n console.log(JSON.stringify(data,null,2));\n} finally { replay.cleanup(); }\nJS",
+      "exitCode": 0,
+      "artifact": "preserved-fixture.json"
+    }
+  ],
+  "postDiscoveryReproducibilityClarification": {
+    "at": "2026-11-10T03:23:12.958719+00:00",
+    "trigger": "Parent review noted the new replay printed a fixed sourceCommit without enforcing reference-core identity.",
+    "cause": "Fixed provenance metadata was not coupled to byte identity verification.",
+    "change": "Require the exact recorded core Git blob before invoking the CLI; label the fixed commit as specificationSourceCommit and emit the verified referenceCoreGitBlob.",
+    "originalObservationsPreserved": [
+      "spec-calculation.json",
+      "preserved-fixture.json",
+      "Original pinned-main navigation and ambiguity observations in RECOVERY.md"
+    ],
+    "affectedScope": "New spec-calculation.py only; the historical frozenStudy helper already verifies its pinned core. No formulas, production files or gate states changed.",
+    "verification": "reference-pin-verification.json",
+    "preventionRule": "When a replay labels a pinned reference, verify that reference identity before calculation or refuse changed bytes; do not treat a hardcoded commit label as verification."
+  }
+}
